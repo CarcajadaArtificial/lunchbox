@@ -1,5 +1,4 @@
-import { Input } from "../../islands.ts";
-import { Page } from "../../components.ts";
+import { Input, Page } from "../../mod.ts";
 
 export default function input() {
   return (
