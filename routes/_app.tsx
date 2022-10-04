@@ -6,6 +6,7 @@ export default function App({ Component }: AppProps) {
     <>
       <Head>
         <title>Ana UI</title>
+        <link rel="stylesheet" href="/twind.css" />
       </Head>
       <Component />
     </>

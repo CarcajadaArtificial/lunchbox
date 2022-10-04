@@ -1,0 +1,7 @@
+:root {
+  --red-700: #f87171
+}
+
+.placeholder\:text-red-700::placeholder {
+  color: var(--red-700);
+}
