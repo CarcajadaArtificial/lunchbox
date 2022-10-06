@@ -1,4 +1,4 @@
-import { Input, Page } from "../../mod.ts";
+import { Input, Page, TextArea } from "../../mod.ts";
 
 export default function input() {
   return (
@@ -137,6 +137,35 @@ export default function input() {
           <Input
             type="range"
             label="Range input with error message"
+            error="Error message."
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <p>Other Inputs</p>
+        <div class="grid gap-4">
+          <TextArea />
+          <TextArea label="TextArea with label" />
+          <TextArea
+            label="TextArea with placeholder"
+            placeholder="placeholder"
+          />
+          <TextArea label="Required input" placeholder="placeholder" required />
+          <TextArea
+            label="TextArea with error message"
+            placeholder="placeholder"
+            required
+            error="Error message."
+          />
+          <TextArea
+            label="Disabled input"
+            placeholder="placeholder"
+            disabled
+          />
+          <TextArea
+            label="Disbaled input with error message"
+            placeholder="placeholder"
+            disabled
             error="Error message."
           />
         </div>

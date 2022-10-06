@@ -1,14 +1,10 @@
 # Changelog
 
-## v0.0.2
+## v0.0.3
 
 ### Added
 
-- Module file
+- TextArea island
+  - `~/islands/TextArea.tsx`
+  - `~/routes/atoms/input.tsx`
   - `~/mod.ts`
-
-## Removed
-
-- Module pages for islands and components.
-  - `~/components.ts`
-  - `~/islands.ts`
