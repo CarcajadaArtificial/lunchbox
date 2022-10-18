@@ -1,9 +1,9 @@
-import { Input, Page, TextArea } from "../../mod.ts";
+import { Input, Layout, Page, TextArea } from "../../mod.ts";
 
 export default function input() {
   return (
     <Page title="Input">
-      <div class="grid grid-cols-2 gap-4 mt-8">
+      <Layout type="quarters">
         <p>Text Input States</p>
         <div class="grid gap-4">
           <Input />
@@ -29,8 +29,35 @@ export default function input() {
             value="value"
           />
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
+        <p>Textareas</p>
+        <div class="grid gap-4">
+          <TextArea />
+          <TextArea label="TextArea with label" />
+          <TextArea
+            label="TextArea with placeholder"
+            placeholder="placeholder"
+          />
+          <TextArea label="Required input" placeholder="placeholder" required />
+          <TextArea
+            label="TextArea with error message"
+            placeholder="placeholder"
+            required
+            error="Error message."
+          />
+          <TextArea
+            label="Disabled input"
+            placeholder="placeholder"
+            disabled
+          />
+          <TextArea
+            label="Disbaled input with error message"
+            placeholder="placeholder"
+            disabled
+            error="Error message."
+          />
+        </div>
+
         <p>Date and time inputs</p>
         <div class="grid gap-4">
           <Input label="Date" type="date" />
@@ -39,8 +66,7 @@ export default function input() {
           <Input label="Time" type="time" />
           <Input label="Week" type="week" />
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
         <p>Other text inputs</p>
         <div class="grid gap-4">
           <Input label="Number" type="number" />
@@ -50,8 +76,7 @@ export default function input() {
           <Input label="Email" type="email" />
           <Input label="Password" type="password" />
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
         <p>Checkbox options</p>
         <div class="grid gap-4">
           <Input label="Checkbox" type="checkbox"></Input>
@@ -70,8 +95,7 @@ export default function input() {
           >
           </Input>
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
         <p>Radio options</p>
         <div class="grid gap-4">
           <Input name="radio-fieldset" label="Radio" type="radio"></Input>
@@ -104,8 +128,7 @@ export default function input() {
           >
           </Input>
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
         <p>Button Inputs</p>
         <div class="grid gap-4">
           <Input type="button" value="button" />
@@ -136,8 +159,7 @@ export default function input() {
             error="Error message."
           />
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+
         <p>Other Inputs</p>
         <div class="grid gap-4">
           <Input type="color" label="Color input" />
@@ -155,36 +177,7 @@ export default function input() {
             error="Error message."
           />
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
-        <p>Other Inputs</p>
-        <div class="grid gap-4">
-          <TextArea />
-          <TextArea label="TextArea with label" />
-          <TextArea
-            label="TextArea with placeholder"
-            placeholder="placeholder"
-          />
-          <TextArea label="Required input" placeholder="placeholder" required />
-          <TextArea
-            label="TextArea with error message"
-            placeholder="placeholder"
-            required
-            error="Error message."
-          />
-          <TextArea
-            label="Disabled input"
-            placeholder="placeholder"
-            disabled
-          />
-          <TextArea
-            label="Disbaled input with error message"
-            placeholder="placeholder"
-            disabled
-            error="Error message."
-          />
-        </div>
-      </div>
+      </Layout>
     </Page>
   );
 }

@@ -15,7 +15,7 @@ export default function Page(props: Partial<Page>) {
   }, props);
   // Classes
   const c = {
-    main: cn("p-4 mx-auto max-w-screen-md"),
+    main: cn(""),
     wrapper: cn("page font-mono"),
   };
 

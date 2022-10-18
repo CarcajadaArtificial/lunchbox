@@ -5,6 +5,9 @@ export const Title = _Title;
 import _Page from './components/Page.tsx';
 export const Page = _Page;
 
+import _Layout from './components/Layout.tsx';
+export const Layout = _Layout;
+
 // Islands
 import _Input from './islands/Input.tsx';
 export const Input = _Input;

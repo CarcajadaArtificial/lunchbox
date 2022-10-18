@@ -6,7 +6,7 @@ const inputDefaults: iTextArea = {
   required: false,
 };
 
-export default (props: iTextArea) => {
+export default (props: Partial<iTextArea>) => {
   const p = applyDefaults<iTextArea>(inputDefaults, props);
 
   const inputClassnames = {

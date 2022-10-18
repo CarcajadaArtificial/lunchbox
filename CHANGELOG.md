@@ -1,15 +1,16 @@
 # Changelog
 
-## v0.0.4
+## v0.0.5
 
 ## Comming Soon (v1.0.0)
 
 ### Features
 
-- [ ] Published CSS.
+- [x] Published CSS.
+- [ ] Setup modules for `Page.tsx` and `Title.tsx`.
 
 - Components
-  - [ ] Page layout
+  - [x] Page layout
   - [ ] Navigation
   - [ ] Typographical components
   - [ ] Select
@@ -18,36 +19,34 @@
 
 ### Added
 
-- Compiled css map to gitignore.
-  - `~/.gitignore`
+- Twind extension scss module.
+  - `~/src/scss/twind.scss`
+  - `~/src/scss/styles.scss`
 
-- Deno task for compiling sass
-  - `~/deno.json`
-  - `~/src/scss/styles.json`
-  - `~/static/styles.css`
+- Layouts scss module.
+  - `~/src/scss/layouts.scss`
+  - `~/src/scss/styles.scss`
 
-- Compiled css to app route.
-  - `~/routes/_app.tsx`
+- Error and helper scss utility module.
+  - `~/src/scss/utils/error.scss`
+  - `~/src/scss/utils/helper.scss`
 
-- Extension for twind.css
-  - `~/static/twind.css`
+- Layout Component
+  - `~/components/Layout.tsx`
+  - `~/src/setup/Layout.ts`
+  - `~/src/types/props.ts`
+  - `~/mod.ts`
 
-- Theme colors.
-  - `~/src/scss/colors.json`
+- Partial prop fix in input and textarea setups.
+  - `~/src/setip/Input.ts`
+  - `~/src/setip/TextArea.ts`
 
-- Prop interfaces to the types directory.
-  - `~/src/types/props.ts`
-
-- Classes and default props to the setup directory.
-  - `~/src/setup/Input.ts`
-  - `~/src/setup/TextArea.ts`
-  - `~/src/setup/shared.ts`
-
-- More tests in input page.
-  - `~/routes/atoms/input`
+- Updated Input testing page to the new layout.
+  - `~/components/Page.tsx`
+  - `~/routes/atoms/input.tsx`
 
 ### Removed
 
-- Classes, default props and interfaces from islands.
-  - `~/islands/Input.tsx`
-  - `~/islands/TextArea.tsx`
+- Twind extension css.
+  - `~/static/twind.css`
+  - `~/routes/_app.tsx`

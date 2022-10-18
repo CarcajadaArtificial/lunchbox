@@ -1,4 +1,4 @@
-import { JSX } from 'preact';
+import { JSX, ComponentChildren } from 'preact';
 
 export interface iInput
   extends JSX.HTMLAttributes<HTMLInputElement>,
@@ -12,4 +12,18 @@ export interface iTextArea
     Partial<ARIAMixin> {
   label?: string;
   error?: string;
+}
+
+export interface iLayout {
+  children: ComponentChildren;
+  type:
+    | 'full'
+    | 'center'
+    | 'focus'
+    | 'halves'
+    | 'thirds'
+    | 'quarters'
+    | 'right'
+    | 'left';
+  margin: 'full' | 'single' | 'none';
 }

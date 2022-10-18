@@ -6,7 +6,7 @@ const inputDefaults: iInput = {
   required: false,
 };
 
-export default (props: iInput) => {
+export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(inputDefaults, props);
 
   const inputClassnames = {

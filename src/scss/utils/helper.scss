@@ -1,0 +1,43 @@
+//    _   _      _
+//   | | | | ___| |_ __   ___ _ __
+//   | |_| |/ _ \ | '_ \ / _ \ '__|
+//   |  _  |  __/ | |_) |  __/ |
+//   |_| |_|\___|_| .__/ \___|_|
+//                |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Dependencies
+// @import '...';
+// -----------------------------------------------------------------------------------------------------
+/// Turns the first letter of a word into uppercase.
+/// @param {string} $string [null] - The word that is going to be capitalized.
+/// @example scss - Sass
+///   p {
+///     &::after {
+///       content: capitalize(word);
+///     }
+///   }
+/// @example css - Compiled CSS
+///   p::after {
+///     content: "Word";
+///   }
+/// @group util_helper
+@function capitalize($string: null) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// -----------------------------------------------------------------------------------------------------
+@mixin no-select {
+  // sass-lint:disable property-sort-order
+  // sass-lint:disable no-vendor-prefixes
+  // sass-lint:disable no-misspelled-properties
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  // sass-lint:enable property-sort-order
+  // sass-lint:enable no-vendor-prefixes
+  // sass-lint:enable no-misspelled-properties
+}
