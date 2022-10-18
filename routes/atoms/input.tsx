@@ -26,6 +26,7 @@ export default function input() {
             placeholder="placeholder"
             disabled
             error="Error message."
+            value="value"
           />
         </div>
       </div>
@@ -108,7 +109,8 @@ export default function input() {
         <p>Button Inputs</p>
         <div class="grid gap-4">
           <Input type="button" value="button" />
-          <Input type="button" value="reset" />
+          <Input type="submit" value="submit" />
+          <Input type="reset" value="reset" />
           <Input
             type="image"
             value="image button"
@@ -119,6 +121,19 @@ export default function input() {
             value="button"
             error="Error message."
             label="Button with error message"
+          />
+          <Input
+            type="button"
+            value="button"
+            disabled
+            label="Disabled button"
+          />
+          <Input
+            type="button"
+            value="button"
+            disabled
+            label="Disabled button with error"
+            error="Error message."
           />
         </div>
       </div>

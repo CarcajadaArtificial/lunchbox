@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts"
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "sass": "sass -w src/scss/styles.scss static/styles.css"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {

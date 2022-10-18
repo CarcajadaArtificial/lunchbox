@@ -1,0 +1,78 @@
+:root {
+  --clr-nube: #dfd9ff;
+  --clr-vinca: #afbbfa;
+  --clr-cielo: #7aadf5;
+  --clr-detergente: #1f84cc;
+  --clr-cobalto: #1262b3;
+  --clr-lapis: #000066;
+  --clr-marino: #030f33;
+  --clr-jade: #0f474d;
+  --clr-cedro: #00806a;
+  --clr-limon: #089969;
+  --clr-mota: #12b362;
+  --clr-musgo: #9eed77;
+  --clr-wasabi: #d0fa7d;
+  --clr-mantequilla: #f7ff99;
+  --clr-arena: #fff7cc;
+  --clr-tortilla: #ffea80;
+  --clr-flan: #fabb64;
+  --clr-ambar: #f59149;
+  --clr-ladrillo: #cc5f29;
+  --clr-arandano: #66050d;
+  --clr-manzana: #b31b34;
+  --clr-fresa: #e62e4d;
+  --clr-chicle: #f7577f;
+  --clr-bombon: #fc7ea8;
+  --clr-pastel: #fa96c8;
+  --clr-kawaii: #e9abf5;
+  --clr-princesa: #d0bbfa;
+  --clr-magia: #a37af5;
+  --clr-lavanda: #6246eb;
+  --clr-uva: #380899;
+  --clr-turquesa: #088199;
+  --clr-menta: #1fcccc;
+  --clr-hielo: #7ae0f5;
+  --clr-cajeta: #b36b24;
+  --clr-vino: #400020;
+  --clr-pulpo: #660546;
+  --clr-pitahaya: #b3128a;
+  --clr-obsidiana: #0c0a0d;
+  --clr-chapopote: #241f26;
+  --clr-grafito: #3d3640;
+  --clr-hierro: #796c80;
+  --clr-acero: #aca1b3;
+  --clr-plata: #d5ced9;
+  --clr-papel: #eee6f2;
+}
+
+$colors: nube, vinca, cielo, detergente, cobalto, lapis, marino, jade, cedro,
+  limon, mota, musgo, wasabi, mantequilla, arena, tortilla, flan, ambar,
+  ladrillo, arandano, manzana, fresa, chicle, bombon, pastel, kawaii, princesa,
+  magia, lavanda, uva, turquesa, menta, hielo, cajeta, vino, pulpo, pitahaya,
+  obsidiana, chapopote, grafito, hierro, acero, plata, papel;
+
+@each $color in $colors {
+  .text-#{$color} {
+    color: var(--clr-#{$color});
+  }
+
+  .bg-#{$color} {
+    background-color: var(--clr-#{$color});
+  }
+
+  .border-#{$color} {
+    border-color: var(--clr-#{$color});
+  }
+
+  .outline-#{$color} {
+    outline-color: var(--clr-#{$color});
+  }
+
+  .focus-border-#{$color}:focus {
+    border-color: var(--clr-#{$color});
+  }
+
+  .placeholder-#{$color}::placeholder {
+    color: var(--clr-#{$color});
+  }
+}

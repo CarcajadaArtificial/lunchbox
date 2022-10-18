@@ -5,3 +5,7 @@
 .placeholder\:text-red-700::placeholder {
   color: var(--red-700);
 }
+
+.h-min {
+  height: min-content;
+}
