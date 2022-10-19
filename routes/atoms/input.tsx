@@ -1,8 +1,17 @@
-import { Input, Layout, Page, TextArea } from "../../mod.ts";
+import {
+  Header,
+  Input,
+  Layout,
+  Navigation,
+  Page,
+  TextArea,
+} from "../../mod.ts";
 
 export default function input() {
   return (
-    <Page title="Input">
+    <Page>
+      <Navigation title="Input" logo="Logo" />
+      <Header>{"Input"}</Header>
       <Layout type="quarters">
         <p>Text Input States</p>
         <div class="grid gap-4">

@@ -2,14 +2,14 @@ import { applyDefaults, cn } from '../../deps.ts';
 import { iInput } from '../types/props.ts';
 import { boxInput, nonboxInput, button } from './shared.ts';
 
-const inputDefaults: iInput = {
+const defaults: iInput = {
   required: false,
 };
 
 export default (props: Partial<iInput>) => {
-  const p = applyDefaults<iInput>(inputDefaults, props);
+  const p = applyDefaults<iInput>(defaults, props);
 
-  const inputClassnames = {
+  const classes = {
     input: cn(
       // Applies to all inputs
       'outline-cobalto',
@@ -32,5 +32,5 @@ export default (props: Partial<iInput>) => {
     container: cn('input'),
   };
 
-  return { c: inputClassnames, ...p };
+  return { c: classes, ...p };
 };

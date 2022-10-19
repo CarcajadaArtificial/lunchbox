@@ -2,14 +2,14 @@ import { applyDefaults, cn } from '../../deps.ts';
 import { iTextArea } from '../types/props.ts';
 import { boxInput } from './shared.ts';
 
-const inputDefaults: iTextArea = {
+const defaults: iTextArea = {
   required: false,
 };
 
 export default (props: Partial<iTextArea>) => {
-  const p = applyDefaults<iTextArea>(inputDefaults, props);
+  const p = applyDefaults<iTextArea>(defaults, props);
 
-  const inputClassnames = {
+  const classes = {
     input: cn(
       // Applies to all inputs
       'outline-cobalto',
@@ -27,5 +27,5 @@ export default (props: Partial<iTextArea>) => {
     container: cn('textarea'),
   };
 
-  return { c: inputClassnames, ...p };
+  return { c: classes, ...p };
 };

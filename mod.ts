@@ -14,3 +14,9 @@ export const Input = _Input;
 
 import _TextArea from './islands/TextArea.tsx';
 export const TextArea = _TextArea;
+
+import _Header from './islands/Header.tsx';
+export const Header = _Header;
+
+import _Navigation from './islands/Navigation.tsx';
+export const Navigation = _Navigation;

@@ -1,25 +1,12 @@
-import type { ComponentChildren, JSX } from "preact";
-import { applyDefaults, cn } from "../deps.ts";
+import { iTitle } from "../src/types/props.ts";
+import setup from "../src/setup/Title.ts";
 
-interface Title
-  extends JSX.HTMLAttributes<HTMLSpanElement>, Partial<ARIAMixin> {
-  children: ComponentChildren;
-}
-
-export default function Title(props: Partial<Title>) {
+export default function (props: Partial<iTitle>) {
   // Prop values
-  const { children, ...titleProps } = applyDefaults({
-    children: ["Title"],
-    role: "heading",
-    ariaLevel: "1",
-  }, props);
-  // Classes
-  const c = {
-    span: cn("text-7xl", "font-bold"),
-  };
+  const { c, children, ...p } = setup(props);
 
   return (
-    <span {...titleProps} class={c.span}>
+    <span {...p} class={c.span}>
       {children}
     </span>
   );

@@ -1,17 +1,19 @@
 # Changelog
 
-## v0.0.5
+## v0.0.6
 
 ## Comming Soon (v1.0.0)
 
 ### Features
 
 - [x] Published CSS.
-- [ ] Setup modules for `Page.tsx` and `Title.tsx`.
+- [x] Setup modules for `Page.tsx` and `Title.tsx`.
+- [ ] Animate Navigation and Header Islands.
 
 - Components
   - [x] Page layout
-  - [ ] Navigation
+  - [x] Navigation
+  - [ ] Header
   - [ ] Typographical components
   - [ ] Select
   - [ ] Footer
@@ -19,31 +21,34 @@
 
 ### Added
 
-- Twind extension scss module.
-  - `~/src/scss/twind.scss`
-  - `~/src/scss/styles.scss`
-
-- Layouts scss module.
-  - `~/src/scss/layouts.scss`
-  - `~/src/scss/styles.scss`
-
-- Error and helper scss utility module.
-  - `~/src/scss/utils/error.scss`
-  - `~/src/scss/utils/helper.scss`
-
-- Layout Component
-  - `~/components/Layout.tsx`
-  - `~/src/setup/Layout.ts`
+- Navigation module
+  - `~/islands/Navigation.tsx`
+  - `~/src/setup/Navigation.tsx`
   - `~/src/types/props.ts`
   - `~/mod.ts`
 
-- Partial prop fix in input and textarea setups.
-  - `~/src/setip/Input.ts`
-  - `~/src/setip/TextArea.ts`
+- Header module
+  - `~/islands/Header.tsx`
+  - `~/src/setup/Header.tsx`
+  - `~/src/types/props.ts`
+  - `~/mod.ts`
 
-- Updated Input testing page to the new layout.
+- Setup modules for `Page.tsx` and `Title.tsx`.
   - `~/components/Page.tsx`
+  - `~/components/Title.tsx`
+  - `~/src/setup/Page.ts`
+  - `~/src/setup/Title.ts`
+  - `~/src/types/props.ts`
+
+- Update Input page
   - `~/routes/atoms/input.tsx`
+
+- Better naming for setup and component modules.
+  - `~/components/Input.tsx`
+  - `~/components/TextArea.tsx`
+  - `~/src/setup/Input.ts`
+  - `~/src/setup/Textare.ts`
+  - `~/src/setup/Layout.ts`
 
 ### Removed
 

@@ -1,30 +1,12 @@
-import type { ComponentChildren } from "preact";
-import { applyDefaults, cn } from "../deps.ts";
-import Title from "./Title.tsx";
+import { iPage } from "../src/types/props.ts";
+import setup from "../src/setup/Page.ts";
 
-interface Page {
-  children: ComponentChildren;
-  title: string;
-}
-
-export default function Page(props: Partial<Page>) {
-  // Prop values
-  const { title, children } = applyDefaults({
-    children: ["Page Content"],
-    title: "Page Title",
-  }, props);
-  // Classes
-  const c = {
-    main: cn(""),
-    wrapper: cn("page font-mono"),
-  };
+export default function (props: Partial<iPage>) {
+  const { c, children } = setup(props);
 
   return (
     <div class={c.wrapper}>
-      <main class={c.main}>
-        <Title>{title}</Title>
-        {children}
-      </main>
+      {children}
     </div>
   );
 }
