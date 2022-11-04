@@ -11,7 +11,10 @@ import {
 export default function input() {
   return (
     <Page>
-      <Navigation logo={<Text>Ana Components</Text>} title="Input" />
+      <Navigation
+        logo={<Text inheritColor>Ana Components</Text>}
+        title="Input"
+      />
       <Header>
         <Text type="title">{"Input"}</Text>
         <Text type="paragraph">{"Input description."}</Text>

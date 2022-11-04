@@ -65,4 +65,12 @@ export interface iText
     | 'label'
     | 'small';
   children?: ComponentChildren;
+  inheritColor: boolean;
+}
+
+export interface iLink
+  extends JSX.HTMLAttributes<HTMLAnchorElement>,
+    Partial<ARIAMixin> {
+  children: ComponentChildren;
+  nostyle: boolean;
 }
