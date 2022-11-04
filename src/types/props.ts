@@ -74,3 +74,10 @@ export interface iLink
   children: ComponentChildren;
   nostyle: boolean;
 }
+
+export interface iFooter
+  extends JSX.HTMLAttributes<HTMLElement>,
+    Partial<ARIAMixin> {
+  madeWithFresh: boolean;
+  children: ComponentChildren;
+}

@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.0.8
+## v0.0.9
 
 ## Comming Soon (v1.0.0)
 
@@ -15,25 +15,18 @@
   - [x] Header (Component)
   - [x] Typographical components (Component)
   - [x] Link (Component)
-  - [ ] Footer (Component)
+  - [x] Footer (Component)
   - [ ] Navigation (Component)
     - [ ] Menu (Island)
   - [ ] Select (Component)
 
 ### Added
 
-- Link Component
-  - `~/components/Link.tsx`
-  - `~/src/setup/Link.ts`
+- Footer Component
+  - `~/components/Footer.tsx`
+  - `~/src/setup/Footer.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
-
-- InheritColor property to Text component
-  - `~/components/Text.tsx`
-  - `~/src/Text.ts`
-
-- Added a Link to the Navigation component
-  - `~/components/Navigation.tsx`
 
 - Updated Input page with new components.
   - `~/routes/atoms/input.tsx`

@@ -17,6 +17,9 @@ export const Navigation = _Navigation;
 import _Link from './components/Link.tsx';
 export const Link = _Link;
 
+import _Footer from './components/Footer.tsx';
+export const Footer = _Footer;
+
 // Islands
 import _Input from './islands/Input.tsx';
 export const Input = _Input;

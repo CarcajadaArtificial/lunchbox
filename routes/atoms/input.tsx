@@ -1,7 +1,9 @@
 import {
+  Footer,
   Header,
   Input,
   Layout,
+  Link,
   Navigation,
   Page,
   Text,
@@ -194,6 +196,14 @@ export default function input() {
           />
         </div>
       </Layout>
+      <Footer>
+        <Text>
+          Created by
+        </Text>
+        <Link href="https://github.com/CarcajadaArtificial">
+          Oscar Alfonso Guerrero
+        </Link>
+      </Footer>
     </Page>
   );
 }
