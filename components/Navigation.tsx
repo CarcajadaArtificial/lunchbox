@@ -1,17 +1,15 @@
 import { iNavigation } from "../src/types/props.ts";
 import setup from "../src/setup/Navigation.ts";
-import Layout from "../components/Layout.tsx";
+import Layout from "./Layout.tsx";
 
 export default function (props: Partial<iNavigation>) {
-  const { c, logo, title } = setup(props);
-
-  console.log(logo);
+  const { c, logo, title, ...p } = setup(props);
 
   return (
     <div class={c.wrapper}>
-      <nav class={c.nav}>
-        <Layout type="quarters">
-          <a href="">{logo}</a>
+      <nav {...p} class={c.nav}>
+        <Layout type="right">
+          <a href="/">{logo}</a>
           {title}
         </Layout>
       </nav>

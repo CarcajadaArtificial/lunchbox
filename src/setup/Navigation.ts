@@ -11,7 +11,7 @@ export default (props: Partial<iNavigation>) => {
 
   const classes = {
     wrapper: cn('h-10 relative z-10'),
-    nav: cn('h-10 pt-2 w-full bg-nube fixed'),
+    nav: cn('py-2 w-full bg-white fixed border-b-1 border-hierro'),
   };
 
   return { c: classes, ...p };

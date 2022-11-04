@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.0.6
+## v0.0.7
 
 ## Comming Soon (v1.0.0)
 
@@ -8,50 +8,52 @@
 
 - [x] Published CSS.
 - [x] Setup modules for `Page.tsx` and `Title.tsx`.
-- [ ] Animate Navigation and Header Islands.
+- [ ] Move `Input.tsx` and `TextArea.tsx` from islands to components.
 
-- Components
-  - [x] Page layout
-  - [x] Navigation
-  - [ ] Header
-  - [ ] Typographical components
-  - [ ] Select
-  - [ ] Footer
-  - [ ] Link
+- Components/Islands
+  - [x] Page layout (Component)
+  - [x] Header (Component)
+  - [x] Typographical components (Component)
+  - [ ] Link (Component)
+  - [ ] Footer (Component)
+  - [ ] Navigation (Component)
+    - [ ] Menu (Island)
+  - [ ] Select (Component)
+
 
 ### Added
 
-- Navigation module
-  - `~/islands/Navigation.tsx`
-  - `~/src/setup/Navigation.tsx`
+- Text Component
+  - `~/components/Text.tsx`
+  - `~/src/setup/Text.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
 
-- Header module
-  - `~/islands/Header.tsx`
-  - `~/src/setup/Header.tsx`
+- Navigation and Header Components
+  - `~/components/Navigation.tsx`
+  - `~/components/Header.tsx`
+  - `~/src/setup/Navigation.ts`
+  - `~/src/setup/Header.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
 
-- Setup modules for `Page.tsx` and `Title.tsx`.
+- Spread HTMLElement properties
+  - `~/components/Layout.tsx`
   - `~/components/Page.tsx`
-  - `~/components/Title.tsx`
-  - `~/src/setup/Page.ts`
-  - `~/src/setup/Title.ts`
   - `~/src/types/props.ts`
 
-- Update Input page
+- Updated Input page with new components.
   - `~/routes/atoms/input.tsx`
 
-- Better naming for setup and component modules.
-  - `~/components/Input.tsx`
-  - `~/components/TextArea.tsx`
-  - `~/src/setup/Input.ts`
-  - `~/src/setup/Textare.ts`
-  - `~/src/setup/Layout.ts`
+- Added color 'blanco'.
+  - `~/src/scss/colors.scss`
 
 ### Removed
 
-- Twind extension css.
-  - `~/static/twind.css`
-  - `~/routes/_app.tsx`
+- Header and Navigation islands in favor of them being components.
+  - `~/islands/Header.tsx`
+  - `~/islands/Navigation.tsx`
+
+- Title component in favor of the Text component.
+  - `~/components/Title.tsx`
+  - `~/src/setup/Title.ts`

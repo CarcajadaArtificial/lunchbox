@@ -4,14 +4,18 @@ import {
   Layout,
   Navigation,
   Page,
+  Text,
   TextArea,
 } from "../../mod.ts";
 
 export default function input() {
   return (
     <Page>
-      <Navigation title="Input" logo="Logo" />
-      <Header>{"Input"}</Header>
+      <Navigation logo={<Text>Ana Components</Text>} title="Input" />
+      <Header>
+        <Text type="title">{"Input"}</Text>
+        <Text type="paragraph">{"Input description."}</Text>
+      </Header>
       <Layout type="quarters">
         <p>Text Input States</p>
         <div class="grid gap-4">

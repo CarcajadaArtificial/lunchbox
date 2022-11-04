@@ -3,7 +3,6 @@ import { JSX, ComponentChildren, ComponentChild } from 'preact';
 
 export interface iInput
   extends JSX.HTMLAttributes<HTMLInputElement>,
-    Partial<ARIAMixin>,
     Partial<ARIAMixin> {
   label?: string;
   error?: string;
@@ -11,13 +10,14 @@ export interface iInput
 
 export interface iTextArea
   extends JSX.HTMLAttributes<HTMLTextAreaElement>,
-    Partial<ARIAMixin>,
     Partial<ARIAMixin> {
   label?: string;
   error?: string;
 }
 
-export interface iLayout {
+export interface iLayout
+  extends JSX.HTMLAttributes<HTMLDivElement>,
+    Partial<ARIAMixin> {
   children: ComponentChildren;
   type:
     | 'full'
@@ -31,27 +31,38 @@ export interface iLayout {
   margin: 'full' | 'single' | 'none';
 }
 
-export interface iNavigation {
-  title?: JSXInternal.Element | string;
-  logo?: JSXInternal.Element | string;
+export interface iNavigation
+  extends JSX.HTMLAttributes<HTMLElement>,
+    Partial<ARIAMixin> {
+  title?: string;
+  logo?: JSXInternal.Element;
 }
 
-export interface iPage {
+export interface iPage
+  extends JSX.HTMLAttributes<HTMLDivElement>,
+    Partial<ARIAMixin> {
   children?: ComponentChildren;
   navigation?: JSXInternal.Element;
   header?: JSXInternal.Element;
 }
 
-export interface iTitle
-  extends JSX.HTMLAttributes<HTMLSpanElement>,
-    Partial<ARIAMixin>,
+export interface iHeader
+  extends JSX.HTMLAttributes<HTMLElement>,
     Partial<ARIAMixin> {
   children?: ComponentChildren;
 }
 
-export interface iHeader
-  extends JSX.HTMLAttributes<HTMLHeadingElement>,
+export interface iText
+  extends JSX.HTMLAttributes<HTMLSpanElement>,
     Partial<ARIAMixin> {
-  vanishes?: 'logo' | 'title';
+  type:
+    | 'display'
+    | 'title'
+    | 'subtitle'
+    | 'heading'
+    | 'subheading'
+    | 'paragraph'
+    | 'label'
+    | 'small';
   children?: ComponentChildren;
 }
