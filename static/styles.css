@@ -43,6 +43,7 @@
   --clr-acero: #aca1b3;
   --clr-plata: #d5ced9;
   --clr-papel: #eee6f2;
+  --clr-blanco: #ffffff;
 }
 
 .text-nube {
@@ -1099,6 +1100,30 @@
 
 .placeholder-papel::placeholder {
   color: var(--clr-papel);
+}
+
+.text-blanco {
+  color: var(--clr-blanco);
+}
+
+.bg-blanco {
+  background-color: var(--clr-blanco);
+}
+
+.border-blanco {
+  border-color: var(--clr-blanco);
+}
+
+.outline-blanco {
+  outline-color: var(--clr-blanco);
+}
+
+.focus-border-blanco:focus {
+  border-color: var(--clr-blanco);
+}
+
+.placeholder-blanco::placeholder {
+  color: var(--clr-blanco);
 }
 
 @media (min-width: 320px) and (max-width: 599px) {

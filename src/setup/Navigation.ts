@@ -4,6 +4,7 @@ import { iNavigation } from '../types/props.ts';
 const defaults: iNavigation = {
   title: undefined,
   logo: undefined,
+  links: [],
 };
 
 export default (props: Partial<iNavigation>) => {
@@ -12,6 +13,7 @@ export default (props: Partial<iNavigation>) => {
   const classes = {
     wrapper: cn('h-10 relative z-10'),
     nav: cn('py-2 w-full bg-white fixed border-b-1 border-hierro'),
+    title: cn('flex justify-between'),
   };
 
   return { c: classes, ...p };

@@ -36,6 +36,7 @@ export interface iNavigation
     Partial<ARIAMixin> {
   title?: string;
   logo?: JSXInternal.Element;
+  links: { label: string; href: string }[] | [];
 }
 
 export interface iPage
@@ -80,4 +81,9 @@ export interface iFooter
     Partial<ARIAMixin> {
   madeWithFresh: boolean;
   children: ComponentChildren;
+}
+
+export interface iMenu {
+  children: ComponentChildren;
+  links: { label: string; href: string }[] | [];
 }

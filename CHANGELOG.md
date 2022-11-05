@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.0.9
+## v0.0.10
 
 ## Comming Soon (v1.0.0)
 
@@ -16,17 +16,24 @@
   - [x] Typographical components (Component)
   - [x] Link (Component)
   - [x] Footer (Component)
-  - [ ] Navigation (Component)
-    - [ ] Menu (Island)
+  - [x] Navigation (Component)
+    - [x] Menu (Island)
   - [ ] Select (Component)
 
 ### Added
 
-- Footer Component
-  - `~/components/Footer.tsx`
-  - `~/src/setup/Footer.ts`
+- Menu Island
+  - `~/island/Menu.tsx`
+  - `~/src/setup/Menu.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
 
+- Updated Navigation component with Menu island
+  - `~/components/Navigation.tsx`
+  - `~/src/setup/Navigation.ts`
+
 - Updated Input page with new components.
   - `~/routes/atoms/input.tsx`
+
+- Updated styles
+  - `~/static/styles.css`
