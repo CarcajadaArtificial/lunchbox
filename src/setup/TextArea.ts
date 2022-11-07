@@ -4,6 +4,7 @@ import { boxInput } from './shared.ts';
 
 const defaults: iTextArea = {
   required: false,
+  maxWidth: false,
 };
 
 export default (props: Partial<iTextArea>) => {
@@ -13,7 +14,7 @@ export default (props: Partial<iTextArea>) => {
     input: cn(
       // Applies to all inputs
       'outline-cobalto',
-      boxInput(p.disabled, p.error)
+      boxInput(p.maxWidth, p.disabled, p.error)
     ),
     span: cn('px-2 text-obsidiana w-full'),
     label: cn(

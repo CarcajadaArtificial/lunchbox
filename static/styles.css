@@ -1931,4 +1931,8 @@
   height: min-content;
 }
 
+.w-prose {
+  max-width: 90ch;
+}
+
 /*# sourceMappingURL=styles.css.map */

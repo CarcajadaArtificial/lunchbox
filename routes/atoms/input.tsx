@@ -16,16 +16,22 @@ export default function input() {
       <Navigation
         logo={<Text inheritColor>Ana Components</Text>}
         title="Input"
-        links={[{
-          label: "Input",
-          href: "/atoms/input",
-        }]}
+        links={[
+          {
+            label: "Input",
+            href: "/atoms/input",
+          },
+          {
+            label: "Text",
+            href: "/atoms/text",
+          },
+        ]}
       />
       <Header>
         <Text type="title">{"Input"}</Text>
         <Text type="paragraph">{"Input description."}</Text>
       </Header>
-      <Layout type="quarters">
+      <Layout type="right">
         <p>Text Input States</p>
         <div class="grid gap-4">
           <Input />

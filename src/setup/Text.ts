@@ -12,6 +12,7 @@ export default (props: Partial<iText>) => {
 
   const classes = {
     span: cn(
+      'break-word',
       p.inheritColor ? null : 'text-obsidiana',
       {
         display: 'block text-8xl font-bold',
@@ -19,7 +20,7 @@ export default (props: Partial<iText>) => {
         subtitle: 'block text-4xl',
         heading: 'block text-3xl font-bold',
         subheading: 'block text-2xl',
-        paragraph: 'block text-base',
+        paragraph: 'block text-base w-prose',
         label: 'text-base',
         small: 'text-sm',
       }[p.type]

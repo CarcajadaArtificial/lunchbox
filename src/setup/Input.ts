@@ -4,6 +4,7 @@ import { boxInput, nonboxInput, button } from './shared.ts';
 
 const defaults: iInput = {
   required: false,
+  maxWidth: false,
 };
 
 export default (props: Partial<iInput>) => {
@@ -18,7 +19,7 @@ export default (props: Partial<iInput>) => {
         ? button(p.disabled, p.error)
         : p.type === 'radio' || p.type === 'checkbox' || p.type === 'slider'
         ? nonboxInput(p.disabled)
-        : boxInput(p.disabled, p.error)
+        : boxInput(p.maxWidth, p.disabled, p.error)
     ),
     span: cn('px-2 text-obsidiana w-full'),
     label: cn(

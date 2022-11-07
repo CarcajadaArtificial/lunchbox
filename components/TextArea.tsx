@@ -1,8 +1,8 @@
-import { iInput } from "../src/types/props.ts";
-import setup from "../src/setup/Input.ts";
+import { iTextArea } from "../src/types/props.ts";
+import setup from "../src/setup/TextArea.ts";
 
-export default function Input(props: Partial<iInput>) {
-  const { c, label, error, ...p } = setup(props);
+export default function TextArea(props: Partial<iTextArea>) {
+  const { c, maxWidth, label, error, ...p } = setup(props);
 
   return (
     <div class={c.container}>
@@ -11,7 +11,7 @@ export default function Input(props: Partial<iInput>) {
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
         </span>
-        <input class={c.input} {...p} />
+        <textarea class={c.input} {...p} />
       </label>
       {error ? <span class={c.error}>{error}</span> : null}
     </div>

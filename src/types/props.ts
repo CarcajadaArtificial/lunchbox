@@ -6,6 +6,7 @@ export interface iInput
     Partial<ARIAMixin> {
   label?: string;
   error?: string;
+  maxWidth: boolean;
 }
 
 export interface iTextArea
@@ -13,6 +14,7 @@ export interface iTextArea
     Partial<ARIAMixin> {
   label?: string;
   error?: string;
+  maxWidth: boolean;
 }
 
 export interface iLayout
