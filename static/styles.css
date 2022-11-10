@@ -1126,6 +1126,10 @@
   color: var(--clr-blanco);
 }
 
+.color-square:hover::after {
+  content: "text";
+}
+
 @media (min-width: 320px) and (max-width: 599px) {
   .layout-full .layout-block {
     grid-column: span 3;
@@ -1933,6 +1937,10 @@
 
 .w-prose {
   max-width: 90ch;
+}
+
+.aspect-square {
+  aspect-ratio: 1/1;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,26 @@
 # Changelog
 
-## v0.0.11
+## v0.0.12
+
+### Added
+
+- File for constant information
+  - `~/src/const.ts`
+
+- Bottom margin to large texts
+  - `~/src/setup/Text.ts`
+
+- Temporary `color-square` for color documentation
+  - `~/src/scss/colors.scss`
+
+- `aspect-square` to the twind override module
+  - `~/src/scss/twind.scss`
+  - `~/static/styles.css`
+
+- Testing page for colors
+  - `~/routes/atoms/colors.ts`
+  - `~/routes/atoms/input.ts`
+  - `~/routes/atoms/text.ts`
 
 ## Comming Soon (v1.0.0)
 
@@ -9,6 +29,7 @@
 - [x] Published CSS.
 - [x] Setup modules for `Page.tsx` and `Title.tsx`.
 - [x] Move `Input.tsx` and `TextArea.tsx` from islands to components.
+- [ ] Move testing pages to another project.
 
 - Components/Islands
   - [x] Page layout (Component)
@@ -19,32 +40,6 @@
   - [x] Navigation (Component)
     - [x] Menu (Island)
   - [ ] Select (Component)
-
-### Added
-
-- Input and TextArea components
-  - `~/components/Input.tsx`
-  - `~/components/TextArea.tsx`
-
-- `maxWidth` property to the Input and TextArea components
-  - `~/src/setup/shared.ts`
-  - `~/src/setup/Input.ts`
-  - `~/src/setup/TextArea.ts`
-  - `~/src/types/props.ts`
-
-- `w-prose` to the twind override module
-  - `~/src/scss/twind.scss`
-  - `~/static/styles.css`
-  - `~/src/setup/Text.ts`
-
-- Testing page for texts
-  - `~/routes/atoms/text.ts`
-
-- Fixed layout on input testing page.
-  - `~/routes/atoms&input.tsx`
-
-### Removed
-
-- Input and TextArea islands
-  - `~/islands/Input.tsx`
-  - `~/islands/TextArea.tsx`
+  - [ ] Button (Component)
+  - [ ] Switch (Island)
+  - [ ] Chip (Component)

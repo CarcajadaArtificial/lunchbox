@@ -77,3 +77,7 @@ $colors: nube, vinca, cielo, detergente, cobalto, lapis, marino, jade, cedro,
     color: var(--clr-#{$color});
   }
 }
+
+.color-square:hover::after {
+  content: 'text';
+}

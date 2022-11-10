@@ -20,6 +20,9 @@ export default function text() {
         }, {
           label: "Text",
           href: "/atoms/text",
+        }, {
+          label: "Color",
+          href: "/atoms/color",
         }]}
       />
       <Header>

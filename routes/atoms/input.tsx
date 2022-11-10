@@ -16,16 +16,16 @@ export default function input() {
       <Navigation
         logo={<Text inheritColor>Ana Components</Text>}
         title="Input"
-        links={[
-          {
-            label: "Input",
-            href: "/atoms/input",
-          },
-          {
-            label: "Text",
-            href: "/atoms/text",
-          },
-        ]}
+        links={[{
+          label: "Input",
+          href: "/atoms/input",
+        }, {
+          label: "Text",
+          href: "/atoms/text",
+        }, {
+          label: "Color",
+          href: "/atoms/color",
+        }]}
       />
       <Header>
         <Text type="title">{"Input"}</Text>
