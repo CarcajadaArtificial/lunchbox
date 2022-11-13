@@ -1,15 +1,7 @@
-import {
-  Footer,
-  Header,
-  Layout,
-  Link,
-  Navigation,
-  Page,
-  Text,
-} from "../../mod.ts";
+import { Footer, Header, Layout, Link, Page, Text } from "../../mod.ts";
 import { graysDisplay, palette, paletteDisplay } from "../../src/const.ts";
 
-export default function text() {
+export default function () {
   for (const color in palette) {
     // console.log(`${color}: ${JSON.stringify(palette[color])},`);
     const r = palette[color].r / 255,
@@ -31,20 +23,6 @@ export default function text() {
   }
   return (
     <Page>
-      <Navigation
-        logo={<Text inheritColor>Ana Components</Text>}
-        title="Text"
-        links={[{
-          label: "Input",
-          href: "/atoms/input",
-        }, {
-          label: "Text",
-          href: "/atoms/text",
-        }, {
-          label: "Color",
-          href: "/atoms/color",
-        }]}
-      />
       <Header>
         <Text type="title">Color</Text>
         <Text type="paragraph">

@@ -1,15 +1,13 @@
-import { useState } from "preact/hooks";
 import { iMenu } from "../src/types/props.ts";
 import Link from "../components/Link.tsx";
 import setup from "../src/setup/Menu.ts";
 
 export default function (props: Partial<iMenu>) {
-  const { c, children, links, ...p } = setup(props);
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const { c, isOpen, children, links, ...p } = setup(props);
 
   return (
     <div class={c.wrapper}>
-      <div class={c.door} onClick={() => setOpen(!isOpen)}>
+      <div {...p} class={c.door}>
         {children}
       </div>
       {isOpen

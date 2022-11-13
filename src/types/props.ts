@@ -53,9 +53,7 @@ export interface iLayout
 export interface iNavigation
   extends JSX.HTMLAttributes<HTMLElement>,
     Partial<ARIAMixin> {
-  title?: string;
-  logo?: JSXInternal.Element;
-  links: { label: string; href: string }[] | [];
+  children: ComponentChildren;
 }
 
 export interface iPage
@@ -102,7 +100,8 @@ export interface iFooter
   children: ComponentChildren;
 }
 
-export interface iMenu {
+export interface iMenu extends Partial<GlobalEventHandlers> {
   children: ComponentChildren;
+  isOpen: boolean;
   links: { label: string; href: string }[] | [];
 }

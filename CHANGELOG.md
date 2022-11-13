@@ -1,17 +1,28 @@
 # Changelog
 
-## v0.0.13
+## v0.0.14
 
 ### Added
 
-- Select component
-  - `~/components/Select.tsx`
-  - `~/setup/Select.ts`
+- Menu component
+  - `~/components/Menu.tsx`
+  - `~/setup/Menu.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
 
-- Select component to input testing page
-  - `~/routes/atoms/input.ts`
+- Children property to Navigation component
+  - `~/components/Navigation.tsx`
+  - `~/setup/Navigation.ts`
+
+### Removed
+
+- Menu island
+  - `~/islands/Menu.tsx`
+
+- Navigation component from pages.
+  - `~/routes/atoms/color.tsx`
+  - `~/routes/atoms/input.tsx`
+  - `~/routes/atoms/text.tsx`
 
 ## Comming Soon (v1.0.0)
 
@@ -21,16 +32,19 @@
 - [x] Setup modules for `Page.tsx` and `Title.tsx`.
 - [x] Move `Input.tsx` and `TextArea.tsx` from islands to components.
 - [ ] Move testing pages to another project.
+- [x] Migrate all islands to components
+- [x] Remove navigation properties in favor of children.
+- [ ] Export library constants.
 
-- Components/Islands
-  - [x] Page layout (Component)
-  - [x] Header (Component)
-  - [x] Typographical components (Component)
-  - [x] Link (Component)
-  - [x] Footer (Component)
-  - [x] Navigation (Component)
-    - [x] Menu (Island)
-  - [x] Select (Component)
-  - [ ] Button (Component)
-  - [ ] Switch (Island)
-  - [ ] Chip (Component)
+- Components
+  - [x] Page layout
+  - [x] Header
+  - [x] Text
+  - [x] Link
+  - [x] Footer
+  - [x] Navigation
+    - [x] Menu
+  - [x] Select
+  - [ ] Button
+  - [ ] Switch
+  - [ ] Chip

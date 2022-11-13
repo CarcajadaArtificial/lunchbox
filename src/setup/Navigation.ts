@@ -2,9 +2,7 @@ import { applyDefaults, cn } from '../../deps.ts';
 import { iNavigation } from '../types/props.ts';
 
 const defaults: iNavigation = {
-  title: undefined,
-  logo: undefined,
-  links: [],
+  children: null,
 };
 
 export default (props: Partial<iNavigation>) => {

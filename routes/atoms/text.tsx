@@ -1,30 +1,8 @@
-import {
-  Footer,
-  Header,
-  Layout,
-  Link,
-  Navigation,
-  Page,
-  Text,
-} from "../../mod.ts";
+import { Footer, Header, Layout, Link, Page, Text } from "../../mod.ts";
 
-export default function text() {
+export default function () {
   return (
     <Page>
-      <Navigation
-        logo={<Text inheritColor>Ana Components</Text>}
-        title="Text"
-        links={[{
-          label: "Input",
-          href: "/atoms/input",
-        }, {
-          label: "Text",
-          href: "/atoms/text",
-        }, {
-          label: "Color",
-          href: "/atoms/color",
-        }]}
-      />
       <Header>
         <Text type="title">Text</Text>
         <Text type="paragraph">

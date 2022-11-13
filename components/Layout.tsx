@@ -1,7 +1,7 @@
 import { iLayout } from "../src/types/props.ts";
 import setup from "../src/setup/Layout.ts";
 
-export default function Input(props: Partial<iLayout>) {
+export default function (props: Partial<iLayout>) {
   const { c, type, margin, children, ...p } = setup(props);
 
   return (

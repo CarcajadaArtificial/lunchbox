@@ -1,4 +1,3 @@
-// Components
 import _Text from './components/Text.tsx';
 export const Text = _Text;
 
@@ -29,6 +28,5 @@ export const TextArea = _TextArea;
 import _Select from './components/Select.tsx';
 export const Select = _Select;
 
-// Islands
-import _Menu from './islands/Menu.tsx';
+import _Menu from './components/Menu.tsx';
 export const Menu = _Menu;

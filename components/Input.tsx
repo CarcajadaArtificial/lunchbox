@@ -1,7 +1,7 @@
 import { iInput } from "../src/types/props.ts";
 import setup from "../src/setup/Input.ts";
 
-export default function Input(props: Partial<iInput>) {
+export default function (props: Partial<iInput>) {
   const { c, maxWidth, label, error, ...p } = setup(props);
 
   return (

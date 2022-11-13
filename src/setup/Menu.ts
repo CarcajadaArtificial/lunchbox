@@ -3,8 +3,9 @@ import { iMenu } from '../types/props.ts';
 
 export default (props: Partial<iMenu>) => {
   const defaults: iMenu = {
-    children: undefined,
+    children: '☰',
     links: [],
+    isOpen: false,
   };
 
   const p = applyDefaults<iMenu>(defaults, props);
