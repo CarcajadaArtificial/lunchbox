@@ -26,6 +26,9 @@ export const Input = _Input;
 import _TextArea from './components/TextArea.tsx';
 export const TextArea = _TextArea;
 
+import _Select from './components/Select.tsx';
+export const Select = _Select;
+
 // Islands
 import _Menu from './islands/Menu.tsx';
 export const Menu = _Menu;

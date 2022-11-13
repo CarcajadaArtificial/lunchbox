@@ -1,26 +1,17 @@
 # Changelog
 
-## v0.0.12
+## v0.0.13
 
 ### Added
 
-- File for constant information
-  - `~/src/const.ts`
+- Select component
+  - `~/components/Select.tsx`
+  - `~/setup/Select.ts`
+  - `~/src/types/props.ts`
+  - `~/mod.ts`
 
-- Bottom margin to large texts
-  - `~/src/setup/Text.ts`
-
-- Temporary `color-square` for color documentation
-  - `~/src/scss/colors.scss`
-
-- `aspect-square` to the twind override module
-  - `~/src/scss/twind.scss`
-  - `~/static/styles.css`
-
-- Testing page for colors
-  - `~/routes/atoms/colors.ts`
+- Select component to input testing page
   - `~/routes/atoms/input.ts`
-  - `~/routes/atoms/text.ts`
 
 ## Comming Soon (v1.0.0)
 
@@ -39,7 +30,7 @@
   - [x] Footer (Component)
   - [x] Navigation (Component)
     - [x] Menu (Island)
-  - [ ] Select (Component)
+  - [x] Select (Component)
   - [ ] Button (Component)
   - [ ] Switch (Island)
   - [ ] Chip (Component)

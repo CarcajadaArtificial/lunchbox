@@ -17,6 +17,23 @@ export interface iTextArea
   maxWidth: boolean;
 }
 
+export interface iSelect
+  extends JSX.HTMLAttributes<HTMLSelectElement>,
+    Partial<ARIAMixin> {
+  label?: string;
+  error?: string;
+  placeholder: string;
+  maxWidth: boolean;
+  children: ComponentChildren;
+  options:
+    | {
+        value: string;
+        name: string;
+      }[]
+    | string[]
+    | [];
+}
+
 export interface iLayout
   extends JSX.HTMLAttributes<HTMLDivElement>,
     Partial<ARIAMixin> {

@@ -6,11 +6,14 @@ import {
   Link,
   Navigation,
   Page,
+  Select,
   Text,
   TextArea,
 } from "../../mod.ts";
 
-export default function input() {
+export default function () {
+  const selectOptions = ["Option one", "Option two", "Option three"];
+
   return (
     <Page>
       <Navigation
@@ -32,7 +35,7 @@ export default function input() {
         <Text type="paragraph">{"Input description."}</Text>
       </Header>
       <Layout type="right">
-        <p>Text Input States</p>
+        <Text>Text Input States</Text>
         <div class="grid gap-4">
           <Input />
           <Input label="Input with label" />
@@ -58,7 +61,7 @@ export default function input() {
           />
         </div>
 
-        <p>Textareas</p>
+        <Text>Textareas</Text>
         <div class="grid gap-4">
           <TextArea />
           <TextArea label="TextArea with label" />
@@ -86,7 +89,7 @@ export default function input() {
           />
         </div>
 
-        <p>Date and time inputs</p>
+        <Text>Date and time inputs</Text>
         <div class="grid gap-4">
           <Input label="Date" type="date" />
           <Input label="Datetime-local" type="datetime-local" />
@@ -95,7 +98,7 @@ export default function input() {
           <Input label="Week" type="week" />
         </div>
 
-        <p>Other text inputs</p>
+        <Text>Other text inputs</Text>
         <div class="grid gap-4">
           <Input label="Number" type="number" />
           <Input label="Search" type="search" />
@@ -105,7 +108,7 @@ export default function input() {
           <Input label="Password" type="password" />
         </div>
 
-        <p>Checkbox options</p>
+        <Text>Checkbox options</Text>
         <div class="grid gap-4">
           <Input label="Checkbox" type="checkbox"></Input>
           <Input label="Checkbox required" required type="checkbox"></Input>
@@ -124,7 +127,7 @@ export default function input() {
           </Input>
         </div>
 
-        <p>Radio options</p>
+        <Text>Radio options</Text>
         <div class="grid gap-4">
           <Input name="radio-fieldset" label="Radio" type="radio"></Input>
           <Input
@@ -157,7 +160,7 @@ export default function input() {
           </Input>
         </div>
 
-        <p>Button Inputs</p>
+        <Text>Button Inputs</Text>
         <div class="grid gap-4">
           <Input type="button" value="button" />
           <Input type="submit" value="submit" />
@@ -188,7 +191,7 @@ export default function input() {
           />
         </div>
 
-        <p>Other Inputs</p>
+        <Text>Other Inputs</Text>
         <div class="grid gap-4">
           <Input type="color" label="Color input" />
           <Input type="color" label="Disabled color input" disabled />
@@ -202,6 +205,43 @@ export default function input() {
           <Input
             type="range"
             label="Range input with error message"
+            error="Error message."
+          />
+        </div>
+
+        <Text>Select</Text>
+        <div class="grid gap-4">
+          <Select options={selectOptions} />
+          <Select options={selectOptions} label="Select with label" />
+          <Select
+            options={selectOptions}
+            label="Select with placeholder"
+            placeholder="placeholder"
+          />
+          <Select
+            options={selectOptions}
+            label="Required input"
+            placeholder="placeholder"
+            required
+          />
+          <Select
+            options={selectOptions}
+            label="Select with error message"
+            placeholder="placeholder"
+            required
+            error="Error message."
+          />
+          <Select
+            options={selectOptions}
+            label="Disabled input"
+            placeholder="placeholder"
+            disabled
+          />
+          <Select
+            options={selectOptions}
+            label="Disbaled input with error message"
+            placeholder="placeholder"
+            disabled
             error="Error message."
           />
         </div>
