@@ -4,18 +4,12 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/atoms/color.tsx";
-import * as $2 from "./routes/atoms/input.tsx";
-import * as $3 from "./routes/atoms/text.tsx";
-import * as $4 from "./routes/index.tsx";
+import * as $1 from "./routes/index.tsx";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/atoms/color.tsx": $1,
-    "./routes/atoms/input.tsx": $2,
-    "./routes/atoms/text.tsx": $3,
-    "./routes/index.tsx": $4,
+    "./routes/index.tsx": $1,
   },
   islands: {},
   baseUrl: import.meta.url,

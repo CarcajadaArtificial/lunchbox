@@ -62,10 +62,6 @@
   outline-color: var(--clr-nube);
 }
 
-.focus-border-nube:focus {
-  border-color: var(--clr-nube);
-}
-
 .placeholder-nube::placeholder {
   color: var(--clr-nube);
 }
@@ -84,10 +80,6 @@
 
 .outline-vinca {
   outline-color: var(--clr-vinca);
-}
-
-.focus-border-vinca:focus {
-  border-color: var(--clr-vinca);
 }
 
 .placeholder-vinca::placeholder {
@@ -110,10 +102,6 @@
   outline-color: var(--clr-cielo);
 }
 
-.focus-border-cielo:focus {
-  border-color: var(--clr-cielo);
-}
-
 .placeholder-cielo::placeholder {
   color: var(--clr-cielo);
 }
@@ -132,10 +120,6 @@
 
 .outline-detergente {
   outline-color: var(--clr-detergente);
-}
-
-.focus-border-detergente:focus {
-  border-color: var(--clr-detergente);
 }
 
 .placeholder-detergente::placeholder {
@@ -158,10 +142,6 @@
   outline-color: var(--clr-cobalto);
 }
 
-.focus-border-cobalto:focus {
-  border-color: var(--clr-cobalto);
-}
-
 .placeholder-cobalto::placeholder {
   color: var(--clr-cobalto);
 }
@@ -180,10 +160,6 @@
 
 .outline-lapis {
   outline-color: var(--clr-lapis);
-}
-
-.focus-border-lapis:focus {
-  border-color: var(--clr-lapis);
 }
 
 .placeholder-lapis::placeholder {
@@ -206,10 +182,6 @@
   outline-color: var(--clr-marino);
 }
 
-.focus-border-marino:focus {
-  border-color: var(--clr-marino);
-}
-
 .placeholder-marino::placeholder {
   color: var(--clr-marino);
 }
@@ -228,10 +200,6 @@
 
 .outline-jade {
   outline-color: var(--clr-jade);
-}
-
-.focus-border-jade:focus {
-  border-color: var(--clr-jade);
 }
 
 .placeholder-jade::placeholder {
@@ -254,10 +222,6 @@
   outline-color: var(--clr-cedro);
 }
 
-.focus-border-cedro:focus {
-  border-color: var(--clr-cedro);
-}
-
 .placeholder-cedro::placeholder {
   color: var(--clr-cedro);
 }
@@ -276,10 +240,6 @@
 
 .outline-limon {
   outline-color: var(--clr-limon);
-}
-
-.focus-border-limon:focus {
-  border-color: var(--clr-limon);
 }
 
 .placeholder-limon::placeholder {
@@ -302,10 +262,6 @@
   outline-color: var(--clr-mota);
 }
 
-.focus-border-mota:focus {
-  border-color: var(--clr-mota);
-}
-
 .placeholder-mota::placeholder {
   color: var(--clr-mota);
 }
@@ -324,10 +280,6 @@
 
 .outline-musgo {
   outline-color: var(--clr-musgo);
-}
-
-.focus-border-musgo:focus {
-  border-color: var(--clr-musgo);
 }
 
 .placeholder-musgo::placeholder {
@@ -350,10 +302,6 @@
   outline-color: var(--clr-wasabi);
 }
 
-.focus-border-wasabi:focus {
-  border-color: var(--clr-wasabi);
-}
-
 .placeholder-wasabi::placeholder {
   color: var(--clr-wasabi);
 }
@@ -372,10 +320,6 @@
 
 .outline-mantequilla {
   outline-color: var(--clr-mantequilla);
-}
-
-.focus-border-mantequilla:focus {
-  border-color: var(--clr-mantequilla);
 }
 
 .placeholder-mantequilla::placeholder {
@@ -398,10 +342,6 @@
   outline-color: var(--clr-arena);
 }
 
-.focus-border-arena:focus {
-  border-color: var(--clr-arena);
-}
-
 .placeholder-arena::placeholder {
   color: var(--clr-arena);
 }
@@ -420,10 +360,6 @@
 
 .outline-tortilla {
   outline-color: var(--clr-tortilla);
-}
-
-.focus-border-tortilla:focus {
-  border-color: var(--clr-tortilla);
 }
 
 .placeholder-tortilla::placeholder {
@@ -446,10 +382,6 @@
   outline-color: var(--clr-flan);
 }
 
-.focus-border-flan:focus {
-  border-color: var(--clr-flan);
-}
-
 .placeholder-flan::placeholder {
   color: var(--clr-flan);
 }
@@ -468,10 +400,6 @@
 
 .outline-ambar {
   outline-color: var(--clr-ambar);
-}
-
-.focus-border-ambar:focus {
-  border-color: var(--clr-ambar);
 }
 
 .placeholder-ambar::placeholder {
@@ -494,10 +422,6 @@
   outline-color: var(--clr-ladrillo);
 }
 
-.focus-border-ladrillo:focus {
-  border-color: var(--clr-ladrillo);
-}
-
 .placeholder-ladrillo::placeholder {
   color: var(--clr-ladrillo);
 }
@@ -516,10 +440,6 @@
 
 .outline-arandano {
   outline-color: var(--clr-arandano);
-}
-
-.focus-border-arandano:focus {
-  border-color: var(--clr-arandano);
 }
 
 .placeholder-arandano::placeholder {
@@ -542,10 +462,6 @@
   outline-color: var(--clr-manzana);
 }
 
-.focus-border-manzana:focus {
-  border-color: var(--clr-manzana);
-}
-
 .placeholder-manzana::placeholder {
   color: var(--clr-manzana);
 }
@@ -564,10 +480,6 @@
 
 .outline-fresa {
   outline-color: var(--clr-fresa);
-}
-
-.focus-border-fresa:focus {
-  border-color: var(--clr-fresa);
 }
 
 .placeholder-fresa::placeholder {
@@ -590,10 +502,6 @@
   outline-color: var(--clr-chicle);
 }
 
-.focus-border-chicle:focus {
-  border-color: var(--clr-chicle);
-}
-
 .placeholder-chicle::placeholder {
   color: var(--clr-chicle);
 }
@@ -612,10 +520,6 @@
 
 .outline-bombon {
   outline-color: var(--clr-bombon);
-}
-
-.focus-border-bombon:focus {
-  border-color: var(--clr-bombon);
 }
 
 .placeholder-bombon::placeholder {
@@ -638,10 +542,6 @@
   outline-color: var(--clr-pastel);
 }
 
-.focus-border-pastel:focus {
-  border-color: var(--clr-pastel);
-}
-
 .placeholder-pastel::placeholder {
   color: var(--clr-pastel);
 }
@@ -660,10 +560,6 @@
 
 .outline-kawaii {
   outline-color: var(--clr-kawaii);
-}
-
-.focus-border-kawaii:focus {
-  border-color: var(--clr-kawaii);
 }
 
 .placeholder-kawaii::placeholder {
@@ -686,10 +582,6 @@
   outline-color: var(--clr-princesa);
 }
 
-.focus-border-princesa:focus {
-  border-color: var(--clr-princesa);
-}
-
 .placeholder-princesa::placeholder {
   color: var(--clr-princesa);
 }
@@ -708,10 +600,6 @@
 
 .outline-magia {
   outline-color: var(--clr-magia);
-}
-
-.focus-border-magia:focus {
-  border-color: var(--clr-magia);
 }
 
 .placeholder-magia::placeholder {
@@ -734,10 +622,6 @@
   outline-color: var(--clr-lavanda);
 }
 
-.focus-border-lavanda:focus {
-  border-color: var(--clr-lavanda);
-}
-
 .placeholder-lavanda::placeholder {
   color: var(--clr-lavanda);
 }
@@ -756,10 +640,6 @@
 
 .outline-uva {
   outline-color: var(--clr-uva);
-}
-
-.focus-border-uva:focus {
-  border-color: var(--clr-uva);
 }
 
 .placeholder-uva::placeholder {
@@ -782,10 +662,6 @@
   outline-color: var(--clr-turquesa);
 }
 
-.focus-border-turquesa:focus {
-  border-color: var(--clr-turquesa);
-}
-
 .placeholder-turquesa::placeholder {
   color: var(--clr-turquesa);
 }
@@ -804,10 +680,6 @@
 
 .outline-menta {
   outline-color: var(--clr-menta);
-}
-
-.focus-border-menta:focus {
-  border-color: var(--clr-menta);
 }
 
 .placeholder-menta::placeholder {
@@ -830,10 +702,6 @@
   outline-color: var(--clr-hielo);
 }
 
-.focus-border-hielo:focus {
-  border-color: var(--clr-hielo);
-}
-
 .placeholder-hielo::placeholder {
   color: var(--clr-hielo);
 }
@@ -852,10 +720,6 @@
 
 .outline-cajeta {
   outline-color: var(--clr-cajeta);
-}
-
-.focus-border-cajeta:focus {
-  border-color: var(--clr-cajeta);
 }
 
 .placeholder-cajeta::placeholder {
@@ -878,10 +742,6 @@
   outline-color: var(--clr-vino);
 }
 
-.focus-border-vino:focus {
-  border-color: var(--clr-vino);
-}
-
 .placeholder-vino::placeholder {
   color: var(--clr-vino);
 }
@@ -900,10 +760,6 @@
 
 .outline-pulpo {
   outline-color: var(--clr-pulpo);
-}
-
-.focus-border-pulpo:focus {
-  border-color: var(--clr-pulpo);
 }
 
 .placeholder-pulpo::placeholder {
@@ -926,10 +782,6 @@
   outline-color: var(--clr-pitahaya);
 }
 
-.focus-border-pitahaya:focus {
-  border-color: var(--clr-pitahaya);
-}
-
 .placeholder-pitahaya::placeholder {
   color: var(--clr-pitahaya);
 }
@@ -948,10 +800,6 @@
 
 .outline-obsidiana {
   outline-color: var(--clr-obsidiana);
-}
-
-.focus-border-obsidiana:focus {
-  border-color: var(--clr-obsidiana);
 }
 
 .placeholder-obsidiana::placeholder {
@@ -974,10 +822,6 @@
   outline-color: var(--clr-chapopote);
 }
 
-.focus-border-chapopote:focus {
-  border-color: var(--clr-chapopote);
-}
-
 .placeholder-chapopote::placeholder {
   color: var(--clr-chapopote);
 }
@@ -996,10 +840,6 @@
 
 .outline-grafito {
   outline-color: var(--clr-grafito);
-}
-
-.focus-border-grafito:focus {
-  border-color: var(--clr-grafito);
 }
 
 .placeholder-grafito::placeholder {
@@ -1022,10 +862,6 @@
   outline-color: var(--clr-hierro);
 }
 
-.focus-border-hierro:focus {
-  border-color: var(--clr-hierro);
-}
-
 .placeholder-hierro::placeholder {
   color: var(--clr-hierro);
 }
@@ -1044,10 +880,6 @@
 
 .outline-acero {
   outline-color: var(--clr-acero);
-}
-
-.focus-border-acero:focus {
-  border-color: var(--clr-acero);
 }
 
 .placeholder-acero::placeholder {
@@ -1070,10 +902,6 @@
   outline-color: var(--clr-plata);
 }
 
-.focus-border-plata:focus {
-  border-color: var(--clr-plata);
-}
-
 .placeholder-plata::placeholder {
   color: var(--clr-plata);
 }
@@ -1094,10 +922,6 @@
   outline-color: var(--clr-papel);
 }
 
-.focus-border-papel:focus {
-  border-color: var(--clr-papel);
-}
-
 .placeholder-papel::placeholder {
   color: var(--clr-papel);
 }
@@ -1116,10 +940,6 @@
 
 .outline-blanco {
   outline-color: var(--clr-blanco);
-}
-
-.focus-border-blanco:focus {
-  border-color: var(--clr-blanco);
 }
 
 .placeholder-blanco::placeholder {

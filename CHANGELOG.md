@@ -1,16 +1,18 @@
 # Changelog
 
-## v0.0.15
+## v0.0.16
+
+### Added
+
+- Small fixes to Input and TextArea components
+  - `~/src/setup/Input.ts`
+  - `~/src/setup/TextArea.ts`
 
 ### Removed
 
-- Constants
-  - `~/src/const.ts`
-
-- Testing pages
-  - `~/routes/atoms/color.tsx`
-  - `~/routes/atoms/input.tsx`
-  - `~/routes/atoms/text.tsx`
+- `.focus-border-#{$color}` class from custom styles.
+  - `~/src/scss/colors.scss`
+  - `~/static/styles.css`
 
 ## Comming Soon (v0.1.0)
 
@@ -22,6 +24,7 @@
 - [x] Move testing pages to another project.
 - [x] Migrate all islands to components
 - [x] Remove navigation properties in favor of children.
+- [ ] Add standard htmlelement properties spreads in component interfaces. Things like `AriaMixins`, `JSX.HTMLAttributes<T>` and `GlobalEventHandlers`.
 
 - Components
   - [x] Page layout

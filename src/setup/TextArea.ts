@@ -16,13 +16,8 @@ export default (props: Partial<iTextArea>) => {
       'outline-cobalto',
       boxInput(p.maxWidth, p.disabled, p.error)
     ),
-    span: cn('px-2 text-obsidiana w-full'),
-    label: cn(
-      'flex',
-      p.type === 'radio' || p.type === 'checkbox'
-        ? 'flex-row-reverse justify-end'
-        : 'flex-col'
-    ),
+    span: cn('px-2 text-obsidiana w-full select-none'),
+    label: cn('flex flex-col select-none'),
     error: cn('px-2 text-xs text-chicle'),
     required: cn('text-chicle ml-1 mb-1'),
     container: cn('textarea'),

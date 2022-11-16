@@ -69,10 +69,6 @@ $colors: nube, vinca, cielo, detergente, cobalto, lapis, marino, jade, cedro,
     outline-color: var(--clr-#{$color});
   }
 
-  .focus-border-#{$color}:focus {
-    border-color: var(--clr-#{$color});
-  }
-
   .placeholder-#{$color}::placeholder {
     color: var(--clr-#{$color});
   }
