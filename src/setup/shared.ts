@@ -6,23 +6,23 @@ export const boxInput = (
   error?: string
 ) =>
   cn(
-    'px-2 py-1 rounded text-obsidiana',
+    'px-2 py-1 rounded clr-text',
     disabled
-      ? 'border-acero bg-acero placeholder-hierro cursor-not-allowed'
+      ? 'clr-disabled clr-placeholder cursor-not-allowed'
       : error
-      ? 'border-bombon bg-bombon placeholder-papel'
-      : 'border-papel bg-papel placeholder-hierro',
+      ? 'clr-error-bg clr-error-placeholder'
+      : 'clr-bg-secondary clr-placeholder',
     maxWidth ? 'w-full' : 'w-80'
   );
 
 export const button = (disabled?: boolean, error?: string) =>
   cn(
-    'w-max px-3 py-1 rounded',
+    'w-max px-3 py-1 rounded clr-text',
     disabled
-      ? 'bg-acero text-hierro cursor-not-allowed'
+      ? 'clr-disabled cursor-not-allowed'
       : error
-      ? 'bg-bombon text-papel'
-      : 'bg-papel text-obsidiana'
+      ? 'clr-error-bg'
+      : 'clr-bg-secondary'
   );
 
 export const nonboxInput = (disabled?: boolean) =>

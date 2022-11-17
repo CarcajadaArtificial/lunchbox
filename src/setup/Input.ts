@@ -21,15 +21,15 @@ export default (props: Partial<iInput>) => {
         ? nonboxInput(p.disabled)
         : boxInput(p.maxWidth, p.disabled, p.error)
     ),
-    span: cn('px-2 text-obsidiana w-full select-none'),
+    text: cn('px-2 select-none'),
     label: cn(
       'flex',
       p.type === 'radio' || p.type === 'checkbox'
         ? 'flex-row-reverse justify-end items-center'
         : 'flex-col'
     ),
-    error: cn('px-2 text-xs text-chicle'),
-    required: cn('text-chicle ml-1 mb-1'),
+    error: cn('px-2 clr-error-text'),
+    required: cn('clr-error-text ml-1'),
     container: cn('input'),
   };
 

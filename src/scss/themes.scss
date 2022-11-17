@@ -1,0 +1,114 @@
+@mixin createTheme(
+  $lightest,
+  $lighter,
+  $mid-light,
+  $mid-dark,
+  $darker,
+  $darkest,
+  $error,
+  $error-light,
+  $main,
+  $secondary
+) {
+  --clr-heading: var(--clr-#{$main});
+  --clr-link: var(--clr-#{$main});
+  --clr-outline: var(--clr-#{$secondary});
+  --clr-error: var(--clr-#{$error});
+  --clr-error-light: var(--clr-#{$error-light});
+
+  &.light {
+    --clr-text: var(--clr-#{$darkest});
+    --clr-border: var(--clr-#{$darkest});
+    --clr-bg-primary: var(--clr-#{$lightest});
+    --clr-bg-secondary: var(--clr-#{$lighter});
+    --clr-placeholder: var(--clr-#{$mid-dark});
+    --clr-disabled: var(--clr-#{$mid-light});
+  }
+
+  &.dark {
+    --clr-text: var(--clr-#{$lighter});
+    --clr-border: var(--clr-#{$lightest});
+    --clr-bg-primary: var(--clr-#{$darkest});
+    --clr-bg-secondary: var(--clr-#{$darker});
+    --clr-placeholder: var(--clr-#{$mid-light});
+    --clr-disabled: var(--clr-#{$mid-dark});
+  }
+
+  background-color: var(--clr-bg-primary);
+}
+
+.newspaper {
+  @include createTheme(
+    blanco,
+    papel,
+    acero,
+    hierro,
+    grafito,
+    obsidiana,
+    chicle,
+    bombon,
+    detergente,
+    cobalto
+  );
+}
+
+// Texts
+.clr-text {
+  color: var(--clr-text);
+}
+
+.clr-heading {
+  color: var(--clr-heading);
+}
+
+.clr-link {
+  color: var(--clr-link);
+}
+
+// Borders
+.clr-outline {
+  outline-color: var(--clr-outline);
+}
+
+.clr-border {
+  border-color: var(--clr-border);
+}
+
+// Inout
+.clr-disabled {
+  background-color: var(--clr-disabled);
+}
+
+.clr-placeholder::placeholder {
+  color: var(--clr-placeholder);
+}
+
+// Backgrounds
+.clr-bg-primary {
+  background-color: var(--clr-bg-primary);
+}
+
+.clr-bg-secondary {
+  background-color: var(--clr-bg-secondary);
+}
+
+// Errors
+.clr-error-text {
+  color: var(--clr-error);
+}
+
+.clr-error-bg {
+  background-color: var(--clr-error-light);
+}
+
+.clr-error-border {
+  border-color: var(--clr-error);
+}
+
+.clr-error-outline {
+  outline-color: var(--clr-error);
+}
+
+.clr-error-placeholder::placeholder {
+  color: var(--clr-text);
+}

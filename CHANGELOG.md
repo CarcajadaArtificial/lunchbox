@@ -1,15 +1,42 @@
 # Changelog
 
-## v0.0.17
+## v0.0.18
 
 ### Added
 
-- Todo documentation in components
-  - `~/src/components/Input.tsx`
-  - `~/src/components/Menu.tsx`
-  - `~/src/components/Select.tsx`
-  - `~/src/components/Text.tsx`
-  - `~/src/components/TextArea.tsx`
+- Theme support to the Page component
+  - `~/components/Page.tsx`
+  - `~/src/setup/Page.ts`
+  - `~/src/types/props.ts`
+
+- Text component to input components
+  - `~/components/Input.tsx`
+  - `~/components/Select.tsx`
+  - `~/components/TextArea.tsx`
+  - `~/src/setup/Input.ts`
+  - `~/src/setup/Select.ts`
+  - `~/src/setup/TextArea.ts`
+
+- Theme classes to components
+  - `~/src/scss/themes.scss`
+  - `~/src/scss/styles.scss`
+  - `~/src/setup/Footer.ts`
+  - `~/src/setup/Header.ts`
+  - `~/src/setup/Input.ts`
+  - `~/src/setup/Link.ts`
+  - `~/src/setup/Menu.ts`
+  - `~/src/setup/Navigation.ts`
+  - `~/src/setup/Select.ts`
+  - `~/src/setup/shared.ts`
+  - `~/src/setup/Text.ts`
+  - `~/src/setup/TextArea.ts`
+  - `~/static/styles.css`
+
+### Removed
+
+- Border, outline, placeholder, and text classes
+  - `~/src/scss/colors.scss`
+  - `~/static/styles.css`
 
 ## Comming Soon (v0.1.0)
 

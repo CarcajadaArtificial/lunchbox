@@ -9,7 +9,7 @@ export default (props: Partial<iHeader>) => {
   const p = applyDefaults<iHeader>(defaults, props);
 
   const classes = {
-    header: cn('mt-20 pb-10 mb-10 border-b-1 border-hierro'),
+    header: cn('mt-20 pb-10 mb-10 border-b-1 clr-border'),
   };
 
   return { c: classes, ...p };

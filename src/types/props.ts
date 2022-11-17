@@ -1,5 +1,5 @@
 import { JSXInternal } from 'https://esm.sh/v95/preact@10.11.0/src/jsx.d.ts';
-import { JSX, ComponentChildren, ComponentChild } from 'preact';
+import { JSX, ComponentChildren } from 'preact';
 
 export interface iInput
   extends JSX.HTMLAttributes<HTMLInputElement>,
@@ -60,8 +60,8 @@ export interface iPage
   extends JSX.HTMLAttributes<HTMLDivElement>,
     Partial<ARIAMixin> {
   children?: ComponentChildren;
-  navigation?: JSXInternal.Element;
-  header?: JSXInternal.Element;
+  theme?: 'newspaper';
+  darkMode?: boolean;
 }
 
 export interface iHeader

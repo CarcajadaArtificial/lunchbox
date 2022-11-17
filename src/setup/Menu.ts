@@ -14,10 +14,10 @@ export default (props: Partial<iMenu>) => {
     menu: cn(
       'w-80 p-2 mt-1',
       'absolute right-0',
-      'bg-blanco border-1 border-hierro',
+      'clr-bg-primary border-1 clr-border',
       'flex flex-col gap-1'
     ),
-    door: cn('px-1.5 pb-0.5 border-1 border-hierro rounded-sm cursor-pointer'),
+    door: cn('px-1.5 pb-0.5 border-1 clr-border rounded-sm cursor-pointer'),
     wrapper: cn('relative'),
   };
 

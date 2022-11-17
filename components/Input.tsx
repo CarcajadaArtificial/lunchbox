@@ -1,8 +1,9 @@
+import Text from "./Text.tsx";
 import { iInput } from "../src/types/props.ts";
 import setup from "../src/setup/Input.ts";
 
 /**
- * @todo Replace `<span>` with `<Text>`.
+ * @todo Add custom classes support
  */
 export default function (props: Partial<iInput>) {
   const { c, maxWidth, label, error, ...p } = setup(props);
@@ -10,13 +11,15 @@ export default function (props: Partial<iInput>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <span class={c.span}>
+        <Text type="label" class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
-        </span>
+        </Text>
         <input class={c.input} {...p} />
       </label>
-      {error ? <span class={c.error}>{error}</span> : null}
+      {error
+        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        : null}
     </div>
   );
 }

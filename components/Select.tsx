@@ -1,3 +1,4 @@
+import Text from "./Text.tsx";
 import { iSelect } from "../src/types/props.ts";
 import setup from "../src/setup/Select.ts";
 
@@ -11,10 +12,10 @@ export default function Select(props: Partial<iSelect>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <span class={c.span}>
+        <Text type="label" class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
-        </span>
+        </Text>
         <select class={c.input} {...p}>
           {children === null
             ? (
@@ -30,7 +31,9 @@ export default function Select(props: Partial<iSelect>) {
             : children}
         </select>
       </label>
-      {error ? <span class={c.error}>{error}</span> : null}
+      {error
+        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        : null}
     </div>
   );
 }

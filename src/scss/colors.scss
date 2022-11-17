@@ -53,27 +53,7 @@ $colors: nube, vinca, cielo, detergente, cobalto, lapis, marino, jade, cedro,
   obsidiana, chapopote, grafito, hierro, acero, plata, papel, blanco;
 
 @each $color in $colors {
-  .text-#{$color} {
-    color: var(--clr-#{$color});
-  }
-
   .bg-#{$color} {
     background-color: var(--clr-#{$color});
   }
-
-  .border-#{$color} {
-    border-color: var(--clr-#{$color});
-  }
-
-  .outline-#{$color} {
-    outline-color: var(--clr-#{$color});
-  }
-
-  .placeholder-#{$color}::placeholder {
-    color: var(--clr-#{$color});
-  }
-}
-
-.color-square:hover::after {
-  content: 'text';
 }

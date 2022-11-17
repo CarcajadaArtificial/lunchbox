@@ -1,3 +1,4 @@
+import Text from "./Text.tsx";
 import { iTextArea } from "../src/types/props.ts";
 import setup from "../src/setup/TextArea.ts";
 
@@ -10,13 +11,15 @@ export default function TextArea(props: Partial<iTextArea>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <span class={c.span}>
+        <Text type="label" class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
-        </span>
+        </Text>
         <textarea class={c.input} {...p} />
       </label>
-      {error ? <span class={c.error}>{error}</span> : null}
+      {error
+        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        : null}
     </div>
   );
 }

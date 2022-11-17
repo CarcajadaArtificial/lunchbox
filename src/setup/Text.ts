@@ -13,7 +13,7 @@ export default (props: Partial<iText>) => {
   const classes = {
     span: cn(
       'break-word',
-      p.inheritColor ? null : 'text-obsidiana',
+      p.inheritColor ? null : 'clr-text',
       {
         display: 'block text-8xl font-bold mb-4',
         title: 'block text-6xl font-bold mb-4',
@@ -23,7 +23,8 @@ export default (props: Partial<iText>) => {
         paragraph: 'block text-base w-prose',
         label: 'text-base',
         small: 'text-sm',
-      }[p.type]
+      }[p.type],
+      p.class
     ),
   };
 
