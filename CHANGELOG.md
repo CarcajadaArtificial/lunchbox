@@ -1,18 +1,15 @@
 # Changelog
 
-## v0.0.16
+## v0.0.17
 
 ### Added
 
-- Small fixes to Input and TextArea components
-  - `~/src/setup/Input.ts`
-  - `~/src/setup/TextArea.ts`
-
-### Removed
-
-- `.focus-border-#{$color}` class from custom styles.
-  - `~/src/scss/colors.scss`
-  - `~/static/styles.css`
+- Todo documentation in components
+  - `~/src/components/Input.tsx`
+  - `~/src/components/Menu.tsx`
+  - `~/src/components/Select.tsx`
+  - `~/src/components/Text.tsx`
+  - `~/src/components/TextArea.tsx`
 
 ## Comming Soon (v0.1.0)
 

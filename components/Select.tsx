@@ -1,6 +1,9 @@
 import { iSelect } from "../src/types/props.ts";
 import setup from "../src/setup/Select.ts";
 
+/**
+ * @todo Replace `<span>` with `<Text>`.
+ */
 export default function Select(props: Partial<iSelect>) {
   const { c, children, placeholder, options, maxWidth, label, error, ...p } =
     setup(props);

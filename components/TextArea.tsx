@@ -1,6 +1,9 @@
 import { iTextArea } from "../src/types/props.ts";
 import setup from "../src/setup/TextArea.ts";
 
+/**
+ * @todo Replace `<span>` with `<Text>`.
+ */
 export default function TextArea(props: Partial<iTextArea>) {
   const { c, maxWidth, label, error, ...p } = setup(props);
 

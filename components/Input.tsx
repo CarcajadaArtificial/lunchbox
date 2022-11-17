@@ -1,6 +1,9 @@
 import { iInput } from "../src/types/props.ts";
 import setup from "../src/setup/Input.ts";
 
+/**
+ * @todo Replace `<span>` with `<Text>`.
+ */
 export default function (props: Partial<iInput>) {
   const { c, maxWidth, label, error, ...p } = setup(props);
 
