@@ -226,6 +226,10 @@
   background-color: var(--clr-blanco);
 }
 
+.page {
+  min-height: 100vh;
+}
+
 @media (min-width: 320px) and (max-width: 599px) {
   .layout-full .layout-block {
     grid-column: span 3;

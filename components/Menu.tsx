@@ -1,5 +1,5 @@
 import { iMenu } from "../src/types/props.ts";
-import Link from "../components/Link.tsx";
+import Link from "./Link.tsx";
 import setup from "../src/setup/Menu.ts";
 
 /**
