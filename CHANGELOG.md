@@ -1,11 +1,11 @@
 # Changelog
 
-## v0.0.19
+## v0.0.20
 
 ### Added
 
-- Full height page
-  - `~/src/scss/components.scss`
+- CSS classes `txt-color`
+  - `~/src/scss/colors.scss`
   - `~/static/styles.css`
 
 ## Comming Soon (v0.1.0)

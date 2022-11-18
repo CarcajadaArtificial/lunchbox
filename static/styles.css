@@ -50,180 +50,360 @@
   background-color: var(--clr-nube);
 }
 
+.text-nube {
+  color: var(--clr-nube);
+}
+
 .bg-vinca {
   background-color: var(--clr-vinca);
+}
+
+.text-vinca {
+  color: var(--clr-vinca);
 }
 
 .bg-cielo {
   background-color: var(--clr-cielo);
 }
 
+.text-cielo {
+  color: var(--clr-cielo);
+}
+
 .bg-detergente {
   background-color: var(--clr-detergente);
+}
+
+.text-detergente {
+  color: var(--clr-detergente);
 }
 
 .bg-cobalto {
   background-color: var(--clr-cobalto);
 }
 
+.text-cobalto {
+  color: var(--clr-cobalto);
+}
+
 .bg-lapis {
   background-color: var(--clr-lapis);
+}
+
+.text-lapis {
+  color: var(--clr-lapis);
 }
 
 .bg-marino {
   background-color: var(--clr-marino);
 }
 
+.text-marino {
+  color: var(--clr-marino);
+}
+
 .bg-jade {
   background-color: var(--clr-jade);
+}
+
+.text-jade {
+  color: var(--clr-jade);
 }
 
 .bg-cedro {
   background-color: var(--clr-cedro);
 }
 
+.text-cedro {
+  color: var(--clr-cedro);
+}
+
 .bg-limon {
   background-color: var(--clr-limon);
+}
+
+.text-limon {
+  color: var(--clr-limon);
 }
 
 .bg-mota {
   background-color: var(--clr-mota);
 }
 
+.text-mota {
+  color: var(--clr-mota);
+}
+
 .bg-musgo {
   background-color: var(--clr-musgo);
+}
+
+.text-musgo {
+  color: var(--clr-musgo);
 }
 
 .bg-wasabi {
   background-color: var(--clr-wasabi);
 }
 
+.text-wasabi {
+  color: var(--clr-wasabi);
+}
+
 .bg-mantequilla {
   background-color: var(--clr-mantequilla);
+}
+
+.text-mantequilla {
+  color: var(--clr-mantequilla);
 }
 
 .bg-arena {
   background-color: var(--clr-arena);
 }
 
+.text-arena {
+  color: var(--clr-arena);
+}
+
 .bg-tortilla {
   background-color: var(--clr-tortilla);
+}
+
+.text-tortilla {
+  color: var(--clr-tortilla);
 }
 
 .bg-flan {
   background-color: var(--clr-flan);
 }
 
+.text-flan {
+  color: var(--clr-flan);
+}
+
 .bg-ambar {
   background-color: var(--clr-ambar);
+}
+
+.text-ambar {
+  color: var(--clr-ambar);
 }
 
 .bg-ladrillo {
   background-color: var(--clr-ladrillo);
 }
 
+.text-ladrillo {
+  color: var(--clr-ladrillo);
+}
+
 .bg-arandano {
   background-color: var(--clr-arandano);
+}
+
+.text-arandano {
+  color: var(--clr-arandano);
 }
 
 .bg-manzana {
   background-color: var(--clr-manzana);
 }
 
+.text-manzana {
+  color: var(--clr-manzana);
+}
+
 .bg-fresa {
   background-color: var(--clr-fresa);
+}
+
+.text-fresa {
+  color: var(--clr-fresa);
 }
 
 .bg-chicle {
   background-color: var(--clr-chicle);
 }
 
+.text-chicle {
+  color: var(--clr-chicle);
+}
+
 .bg-bombon {
   background-color: var(--clr-bombon);
+}
+
+.text-bombon {
+  color: var(--clr-bombon);
 }
 
 .bg-pastel {
   background-color: var(--clr-pastel);
 }
 
+.text-pastel {
+  color: var(--clr-pastel);
+}
+
 .bg-kawaii {
   background-color: var(--clr-kawaii);
+}
+
+.text-kawaii {
+  color: var(--clr-kawaii);
 }
 
 .bg-princesa {
   background-color: var(--clr-princesa);
 }
 
+.text-princesa {
+  color: var(--clr-princesa);
+}
+
 .bg-magia {
   background-color: var(--clr-magia);
+}
+
+.text-magia {
+  color: var(--clr-magia);
 }
 
 .bg-lavanda {
   background-color: var(--clr-lavanda);
 }
 
+.text-lavanda {
+  color: var(--clr-lavanda);
+}
+
 .bg-uva {
   background-color: var(--clr-uva);
+}
+
+.text-uva {
+  color: var(--clr-uva);
 }
 
 .bg-turquesa {
   background-color: var(--clr-turquesa);
 }
 
+.text-turquesa {
+  color: var(--clr-turquesa);
+}
+
 .bg-menta {
   background-color: var(--clr-menta);
+}
+
+.text-menta {
+  color: var(--clr-menta);
 }
 
 .bg-hielo {
   background-color: var(--clr-hielo);
 }
 
+.text-hielo {
+  color: var(--clr-hielo);
+}
+
 .bg-cajeta {
   background-color: var(--clr-cajeta);
+}
+
+.text-cajeta {
+  color: var(--clr-cajeta);
 }
 
 .bg-vino {
   background-color: var(--clr-vino);
 }
 
+.text-vino {
+  color: var(--clr-vino);
+}
+
 .bg-pulpo {
   background-color: var(--clr-pulpo);
+}
+
+.text-pulpo {
+  color: var(--clr-pulpo);
 }
 
 .bg-pitahaya {
   background-color: var(--clr-pitahaya);
 }
 
+.text-pitahaya {
+  color: var(--clr-pitahaya);
+}
+
 .bg-obsidiana {
   background-color: var(--clr-obsidiana);
+}
+
+.text-obsidiana {
+  color: var(--clr-obsidiana);
 }
 
 .bg-chapopote {
   background-color: var(--clr-chapopote);
 }
 
+.text-chapopote {
+  color: var(--clr-chapopote);
+}
+
 .bg-grafito {
   background-color: var(--clr-grafito);
+}
+
+.text-grafito {
+  color: var(--clr-grafito);
 }
 
 .bg-hierro {
   background-color: var(--clr-hierro);
 }
 
+.text-hierro {
+  color: var(--clr-hierro);
+}
+
 .bg-acero {
   background-color: var(--clr-acero);
+}
+
+.text-acero {
+  color: var(--clr-acero);
 }
 
 .bg-plata {
   background-color: var(--clr-plata);
 }
 
+.text-plata {
+  color: var(--clr-plata);
+}
+
 .bg-papel {
   background-color: var(--clr-papel);
 }
 
+.text-papel {
+  color: var(--clr-papel);
+}
+
 .bg-blanco {
   background-color: var(--clr-blanco);
+}
+
+.text-blanco {
+  color: var(--clr-blanco);
 }
 
 .page {
