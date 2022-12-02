@@ -54,6 +54,7 @@ export interface iNavigation
   extends JSX.HTMLAttributes<HTMLElement>,
     Partial<ARIAMixin> {
   children: ComponentChildren;
+  fixed: boolean;
 }
 
 export interface iPage
@@ -104,4 +105,16 @@ export interface iMenu extends Partial<GlobalEventHandlers> {
   children: ComponentChildren;
   isOpen: boolean;
   links: { label: string; href: string }[] | [];
+}
+
+export interface iCard
+  extends JSX.HTMLAttributes<HTMLDivElement>,
+    Partial<ARIAMixin> {
+  children: ComponentChildren;
+}
+
+export interface iMain
+  extends JSX.HTMLAttributes<HTMLElement>,
+    Partial<ARIAMixin> {
+  children: ComponentChildren;
 }

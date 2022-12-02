@@ -30,3 +30,9 @@ export const Select = _Select;
 
 import _Menu from './components/Menu.tsx';
 export const Menu = _Menu;
+
+import _Card from './components/Card.tsx';
+export const Card = _Card;
+
+import _Main from './components/Main.tsx';
+export const Main = _Main;

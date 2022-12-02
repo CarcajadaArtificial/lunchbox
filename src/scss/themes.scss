@@ -7,31 +7,39 @@
   $darkest,
   $error,
   $error-light,
-  $main,
-  $secondary
+  $main-light,
+  $main-dark
 ) {
-  --clr-heading: var(--clr-#{$main});
-  --clr-link: var(--clr-#{$main});
-  --clr-outline: var(--clr-#{$secondary});
-  --clr-error: var(--clr-#{$error});
-  --clr-error-light: var(--clr-#{$error-light});
-
   &.light {
     --clr-text: var(--clr-#{$darkest});
     --clr-border: var(--clr-#{$darkest});
-    --clr-bg-primary: var(--clr-#{$lightest});
-    --clr-bg-secondary: var(--clr-#{$lighter});
+    --clr-bg-primary: var(--clr-#{$lighter});
+    --clr-bg-secondary: var(--clr-#{$lightest});
+    --clr-bg-tertiary: var(--clr-#{$mid-light});
+    --clr-bg-main: var(--clr-#{$main-light});
     --clr-placeholder: var(--clr-#{$mid-dark});
-    --clr-disabled: var(--clr-#{$mid-light});
+    --clr-disabled: var(--clr-#{$mid-dark});
+    --clr-heading: var(--clr-#{$main-dark});
+    --clr-link: var(--clr-#{$main-dark});
+    --clr-outline: var(--clr-#{$main-dark});
+    --clr-error: var(--clr-#{$error});
+    --clr-error-light: var(--clr-#{$error-light});
   }
 
   &.dark {
     --clr-text: var(--clr-#{$lighter});
     --clr-border: var(--clr-#{$lightest});
-    --clr-bg-primary: var(--clr-#{$darkest});
-    --clr-bg-secondary: var(--clr-#{$darker});
+    --clr-bg-primary: var(--clr-#{$darker});
+    --clr-bg-secondary: var(--clr-#{$darkest});
+    --clr-bg-tertiary: var(--clr-#{$mid-dark});
+    --clr-bg-main: var(--clr-#{$main-dark});
     --clr-placeholder: var(--clr-#{$mid-light});
-    --clr-disabled: var(--clr-#{$mid-dark});
+    --clr-disabled: var(--clr-#{$mid-light});
+    --clr-heading: var(--clr-#{$main-light});
+    --clr-link: var(--clr-#{$main-light});
+    --clr-outline: var(--clr-#{$main-light});
+    --clr-error: var(--clr-#{$error-light});
+    --clr-error-light: var(--clr-#{$error});
   }
 
   background-color: var(--clr-bg-primary);
@@ -44,11 +52,26 @@
     acero,
     hierro,
     grafito,
-    obsidiana,
+    chapopote,
     chicle,
     bombon,
-    detergente,
-    cobalto
+    blanco,
+    obsidiana
+  );
+}
+
+.candyland {
+  @include createTheme(
+    blanco,
+    nube,
+    magia,
+    lavanda,
+    marino,
+    obsidiana,
+    pulpo,
+    borrador,
+    magia,
+    uva
   );
 }
 
@@ -90,6 +113,14 @@
 
 .clr-bg-secondary {
   background-color: var(--clr-bg-secondary);
+}
+
+.clr-bg-tertiary {
+  background-color: var(--clr-bg-tertiary);
+}
+
+.clr-bg-main {
+  background-color: var(--clr-bg-main);
 }
 
 // Errors

@@ -1,7 +1,8 @@
 {
   "tasks": {
     "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "sass": "sass -w src/scss/styles.scss static/styles.css"
+    "sass": "sass -w src/scss/styles.scss static/styles.css",
+    "sass-out": "sass -w src/scss/styles.scss ../ana-components-docs/static/styles.css"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {

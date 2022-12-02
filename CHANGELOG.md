@@ -1,10 +1,27 @@
 # Changelog
 
-## v0.0.20
+## v0.0.21
 
 ### Added
 
-- CSS classes `txt-color`
+- Main component
+  - `~/src/setup/Main.ts`
+  - `~/components/Main.tsx`
+  - `~/src/types/props.ts`
+
+- Card component
+  - `~/src/setup/Card.ts`
+  - `~/components/Card.tsx`
+  - `~/src/types/props.ts`
+
+- `sass-out` script
+  - `~/deno.json`
+
+- Better theme logic
+  - `~/src/scss/colors.scss`
+  - `~/static/styles.css`
+
+- The color `borrador`
   - `~/src/scss/colors.scss`
   - `~/static/styles.css`
 
@@ -30,5 +47,17 @@
     - [x] Menu
   - [x] Select
   - [ ] Button
-  - [ ] Switch
+  - [ ] Fieldset
   - [ ] Chip
+  - [x] Card
+  - [x] Main
+  - [ ] Linkmap
+
+- Documentation
+  - [ ] Project README.md
+  - [ ] CONTRIBUTING.md
+  - Components
+    - [ ] Interfaces
+    - [ ] Render functions
+    - [ ] Documentation site
+  - [ ] Sass code
