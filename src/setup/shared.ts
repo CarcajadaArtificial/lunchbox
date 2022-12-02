@@ -11,8 +11,8 @@ export const boxInput = (
       ? 'clr-disabled clr-placeholder cursor-not-allowed'
       : error
       ? 'clr-error-bg clr-error-placeholder'
-      : 'clr-bg-secondary clr-placeholder',
-    maxWidth ? 'w-full' : 'w-80'
+      : 'clr-bg-tertiary clr-placeholder',
+    maxWidth ? 'w-full' : 'max-w-xs'
   );
 
 export const button = (disabled?: boolean, error?: string) =>
@@ -22,7 +22,7 @@ export const button = (disabled?: boolean, error?: string) =>
       ? 'clr-disabled cursor-not-allowed'
       : error
       ? 'clr-error-bg'
-      : 'clr-bg-secondary'
+      : 'clr-bg-tertiary'
   );
 
 export const nonboxInput = (disabled?: boolean) =>

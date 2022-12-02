@@ -6,10 +6,12 @@ export default function (props: Partial<iHeader>) {
   const { c, children, ...p } = setup(props);
 
   return (
-    <header {...p} class={c.header}>
-      <Layout>
-        {children}
-      </Layout>
-    </header>
+    <div class={c.container}>
+      <header {...p} class={c.header}>
+        <Layout>
+          {children}
+        </Layout>
+      </header>
+    </div>
   );
 }

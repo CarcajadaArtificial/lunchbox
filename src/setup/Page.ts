@@ -11,7 +11,11 @@ export default (props: Partial<iPage>) => {
   const p = applyDefaults<iPage>(defaults, props);
 
   const classes = {
-    wrapper: cn('page font-mono', p.darkMode ? 'dark' : 'light', p.theme),
+    wrapper: cn(
+      'page font-mono flex flex-col',
+      p.darkMode ? 'dark' : 'light',
+      p.theme
+    ),
   };
 
   return { c: classes, ...p };

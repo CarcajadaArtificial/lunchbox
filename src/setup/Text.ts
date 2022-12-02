@@ -13,7 +13,11 @@ export default (props: Partial<iText>) => {
   const classes = {
     span: cn(
       'break-word',
-      p.inheritColor ? null : 'clr-text',
+      p.inheritColor
+        ? null
+        : ['display', 'title', 'heading'].includes(p.type)
+        ? 'clr-heading'
+        : 'clr-text',
       {
         display: 'block text-8xl font-bold mb-4',
         title: 'block text-6xl font-bold mb-4',

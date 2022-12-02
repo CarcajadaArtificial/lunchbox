@@ -1,29 +1,23 @@
 # Changelog
 
-## v0.0.21
+## v0.0.22
 
 ### Added
 
-- Main component
-  - `~/src/setup/Main.ts`
-  - `~/components/Main.tsx`
+- Page column structure fix
+  - `~/src/setup/Page.ts`
+
+- `fixed` prop to Navigation
+  - `~/src/setup/Navigation.ts`
   - `~/src/types/props.ts`
 
-- Card component
-  - `~/src/setup/Card.ts`
-  - `~/components/Card.tsx`
-  - `~/src/types/props.ts`
-
-- `sass-out` script
-  - `~/deno.json`
-
-- Better theme logic
-  - `~/src/scss/colors.scss`
-  - `~/static/styles.css`
-
-- The color `borrador`
-  - `~/src/scss/colors.scss`
-  - `~/static/styles.css`
+- Theme fixes
+  - `~/components/Header.tsx`
+  - `~/src/setup/Header.ts`
+  - `~/src/setup/Footer.ts`
+  - `~/src/setup/Navigation.ts`
+  - `~/src/setup/Text.ts`
+  - `~/src/setup/shared.ts`
 
 ## Comming Soon (v0.1.0)
 
