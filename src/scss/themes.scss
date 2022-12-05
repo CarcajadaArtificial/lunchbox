@@ -75,6 +75,21 @@
   );
 }
 
+.dusthorizon {
+  @include createTheme(
+    blanco,
+    arena,
+    flan,
+    ladrillo,
+    vino,
+    obsidiana,
+    chicle,
+    bombon,
+    tortilla,
+    cajeta
+  );
+}
+
 // Texts
 .clr-text {
   color: var(--clr-text);

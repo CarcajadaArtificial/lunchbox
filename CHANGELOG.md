@@ -1,23 +1,14 @@
 # Changelog
 
-## v0.0.22
+## v0.0.23
 
 ### Added
 
-- Page column structure fix
-  - `~/src/setup/Page.ts`
+- Dusthorizon theme
+  - `~/src/scss/themes.scss`
 
-- `fixed` prop to Navigation
-  - `~/src/setup/Navigation.ts`
-  - `~/src/types/props.ts`
-
-- Theme fixes
-  - `~/components/Header.tsx`
-  - `~/src/setup/Header.ts`
-  - `~/src/setup/Footer.ts`
-  - `~/src/setup/Navigation.ts`
-  - `~/src/setup/Text.ts`
-  - `~/src/setup/shared.ts`
+- Adjustment to color `borrador`
+  - `~/src/scss/colors.scss`
 
 ## Comming Soon (v0.1.0)
 
