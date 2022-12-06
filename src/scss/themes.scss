@@ -18,7 +18,7 @@
     --clr-bg-tertiary: var(--clr-#{$mid-light});
     --clr-bg-main: var(--clr-#{$main-light});
     --clr-placeholder: var(--clr-#{$mid-dark});
-    --clr-disabled: var(--clr-#{$mid-dark});
+    --clr-bg-disabled: var(--clr-#{$mid-dark});
     --clr-heading: var(--clr-#{$main-dark});
     --clr-link: var(--clr-#{$main-dark});
     --clr-outline: var(--clr-#{$main-dark});
@@ -34,7 +34,7 @@
     --clr-bg-tertiary: var(--clr-#{$mid-dark});
     --clr-bg-main: var(--clr-#{$main-dark});
     --clr-placeholder: var(--clr-#{$mid-light});
-    --clr-disabled: var(--clr-#{$mid-light});
+    --clr-bg-disabled: var(--clr-#{$mid-light});
     --clr-heading: var(--clr-#{$main-light});
     --clr-link: var(--clr-#{$main-light});
     --clr-outline: var(--clr-#{$main-light});
@@ -43,6 +43,10 @@
   }
 
   background-color: var(--clr-bg-primary);
+
+  *:focus {
+    outline-color: var(--clr-outline);
+  }
 }
 
 .newspaper {
@@ -55,8 +59,8 @@
     chapopote,
     chicle,
     bombon,
-    blanco,
-    obsidiana
+    mota,
+    jade
   );
 }
 
@@ -113,8 +117,8 @@
 }
 
 // Inout
-.clr-disabled {
-  background-color: var(--clr-disabled);
+.clr-bg-disabled {
+  background-color: var(--clr-bg-disabled);
 }
 
 .clr-placeholder::placeholder {

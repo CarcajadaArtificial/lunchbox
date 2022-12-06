@@ -14,11 +14,7 @@ export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
   const classes = {
-    input: cn(
-      // Applies to all inputs
-      'outline-cobalto',
-      boxInput(p.maxWidth, p.disabled, p.error)
-    ),
+    input: cn(boxInput(p.maxWidth, p.disabled, p.error)),
     text: cn('px-2'),
     label: cn(
       'flex',
@@ -28,7 +24,7 @@ export default (props: Partial<iSelect>) => {
     ),
     error: cn('px-2 clr-error-text'),
     required: cn('clr-error-text ml-1 mb-1'),
-    container: cn('select'),
+    container: cn(p.maxWidth ? 'w-full' : 'max-w-sm'),
   };
 
   return { c: classes, ...p };

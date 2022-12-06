@@ -17,7 +17,7 @@ export default (props: Partial<iMenu>) => {
       'clr-bg-primary border-1 clr-border',
       'flex flex-col gap-1'
     ),
-    door: cn('px-1.5 pb-0.5 border-1 clr-border rounded-sm cursor-pointer'),
+    door: cn('menu-door'),
     wrapper: cn('relative'),
   };
 

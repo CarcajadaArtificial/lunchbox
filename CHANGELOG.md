@@ -1,18 +1,35 @@
 # Changelog
 
-## v0.0.24
+## v0.0.25
 
 ### Added
 
-- Documentation for component properties
+- Button component
+  - `~/components/Button.tsx`
+  - `~/src/setup/Button.ts`
   - `~/src/types/props.ts`
 
-- Sandard HMLElement properties.
-  - `~/src/types/props.ts`
-  - `~/src/types/element.ts`
+- Adjusted styles for inputs in general.
+  - `~/components/Input.tsx`
+  - `~/src/setup/Input.ts`
+  - `~/components/Select.tsx`
+  - `~/src/setup/Select.ts`
+  - `~/components/TextArea.tsx`
+  - `~/src/setup/TextArea.ts`
+  - `~/src/setup/shared.ts`
 
-- CSS Normalization
-  - `~/src/scss/styles.scss`
+- Updated menu with a Button component door.
+  - `~/components/Menu.tsx`
+  - `~/src/setup/Menu.ts`
+
+- Union string for component prop's types.
+  - `~/src/types/unionStrings.ts`
+
+- Hover and focus states for inputs and buttons.
+  - `~/src/scss/components.scss`
+
+- Adjusted theming border and outline logic.
+  - `~/src/scss/themes.scss`
 
 ## Comming Soon (v0.1.0)
 
@@ -35,7 +52,7 @@
   - [x] Navigation
     - [x] Menu
   - [x] Select
-  - [ ] Button
+  - [x] Button
   - [ ] Fieldset
   - [ ] Chip
   - [x] Card

@@ -12,11 +12,8 @@ export default (props: Partial<iInput>) => {
 
   const classes = {
     input: cn(
-      // Applies to all inputs
-      'outline-cobalto',
-      // Box types vs non-box types vs button types
       p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? button(p.disabled, p.error)
+        ? button(p.error ? 'error' : p.disabled ? 'disabled' : 'main', true)
         : p.type === 'radio' || p.type === 'checkbox' || p.type === 'slider'
         ? nonboxInput(p.disabled)
         : boxInput(p.maxWidth, p.disabled, p.error)
@@ -25,12 +22,20 @@ export default (props: Partial<iInput>) => {
     label: cn(
       'flex',
       p.type === 'radio' || p.type === 'checkbox'
-        ? 'flex-row-reverse justify-end items-center'
+        ? 'flex-row-reverse justify-end items-center w-max'
+        : p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+        ? 'flex-col w-max'
         : 'flex-col'
     ),
     error: cn('px-2 clr-error-text'),
     required: cn('clr-error-text ml-1'),
-    container: cn('input'),
+    container: cn(
+      p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+        ? 'w-min'
+        : p.maxWidth
+        ? 'w-full'
+        : 'max-w-sm'
+    ),
   };
 
   return { c: classes, ...p };

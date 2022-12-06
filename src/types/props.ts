@@ -10,11 +10,17 @@
  */
 
 import { iExtendedElement } from './element.ts';
+import {
+  ButtonColors,
+  ButtonTypes,
+  LayoutMargins,
+  LayoutTypes,
+  PageTheme,
+  TextTypes,
+} from './unionStrings.ts';
 
 /**
- * Input component's type that extends the `<input>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+ * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
  */
 export type iInput = iExtendedElement<HTMLInputElement> & {
   label?: string;
@@ -23,9 +29,7 @@ export type iInput = iExtendedElement<HTMLInputElement> & {
 };
 
 /**
- * Textarea component's type that extends the `<textarea>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+ * Textarea component's type that extends the `<textarea>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
  */
 export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
   label?: string;
@@ -34,9 +38,7 @@ export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
 };
 
 /**
- * Select component's type that extends the `<select>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+ * Select component's type that extends the `<select>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
  */
 export type iSelect = iExtendedElement<HTMLSelectElement> & {
   label?: string;
@@ -53,82 +55,62 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
 };
 
 /**
- * Layout component's type that extends the `<div>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
-export type iLayout = iExtendedElement<HTMLDivElement> & {
-  type:
-    | 'full'
-    | 'center'
-    | 'focus'
-    | 'halves'
-    | 'thirds'
-    | 'quarters'
-    | 'right'
-    | 'left';
-  margin: 'full' | 'single' | 'none';
+export type iButton = iExtendedElement<HTMLButtonElement> & {
+  type: ButtonTypes;
+  color: ButtonColors;
+  outline: boolean;
+  maxWidth: boolean;
 };
 
 /**
- * Navigation component's type that extends the generic `HTMLElement`.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ * Layout component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
+ */
+export type iLayout = iExtendedElement<HTMLDivElement> & {
+  type: LayoutTypes;
+  margin: LayoutMargins;
+};
+
+/**
+ * Navigation component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iNavigation = iExtendedElement & {
   fixed: boolean;
 };
 
 /**
- * Page component's type that extends the `<div>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ * Page component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
 export type iPage = iExtendedElement<HTMLDivElement> & {
-  theme?: 'newspaper';
+  theme?: PageTheme;
   darkMode?: boolean;
 };
 
 /**
- * Text component's type that extends the `<span>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+ * Text component's type that extends the `<span>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span).
  */
 export type iText = iExtendedElement<HTMLSpanElement> & {
-  type:
-    | 'display'
-    | 'title'
-    | 'subtitle'
-    | 'heading'
-    | 'subheading'
-    | 'paragraph'
-    | 'label'
-    | 'small';
+  type: TextTypes;
   inheritColor: boolean;
 };
 
 /**
- * Link component's type that extends the `<a>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+ * Link component's type that extends the `<a>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
  */
 export type iLink = iExtendedElement<HTMLAnchorElement> & {
   nostyle: boolean;
 };
 
 /**
- * Footer component's type that extends the generic `HTMLElement`.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ * Footer component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iFooter = iExtendedElement & {
   madeWithFresh: boolean;
 };
 
 /**
- * Menu component's type that extends the `<div>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ * Menu component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
 export type iMenu = iExtendedElement<HTMLDivElement> & {
   isOpen: boolean;
@@ -136,22 +118,16 @@ export type iMenu = iExtendedElement<HTMLDivElement> & {
 };
 
 /**
- * Card component's type that extends the `<div>` element.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
 export type iCard = iExtendedElement<HTMLDivElement>;
 
 /**
- * Main component's type that extends the generic `HTMLElement`.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ * Main component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iMain = iExtendedElement;
 
 /**
- * Header component's type that extends the generic `HTMLElement`.
- *
- * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ * Header component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iHeader = iExtendedElement;

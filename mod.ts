@@ -36,3 +36,6 @@ export const Card = _Card;
 
 import _Main from './components/Main.tsx';
 export const Main = _Main;
+
+import _Button from './components/Button.tsx';
+export const Button = _Button;
