@@ -1,3 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
 :root {
   --clr-nube: #dfd9ff;
   --clr-vinca: #afbbfa;
@@ -496,7 +518,7 @@
 }
 @media (min-width: 1200px) and (max-width: 3000px) {
   .layout-center .layout-block {
-    grid-column: 3 / span 8;
+    grid-column: 3/span 8;
   }
 }
 @media (min-width: 320px) and (max-width: 599px) {
@@ -556,12 +578,12 @@
 }
 @media (min-width: 600px) and (max-width: 1199px) {
   .layout-focus .layout-block {
-    grid-column: 2 / span 4;
+    grid-column: 2/span 4;
   }
 }
 @media (min-width: 1200px) and (max-width: 3000px) {
   .layout-focus .layout-block {
-    grid-column: 4 / span 6;
+    grid-column: 4/span 6;
   }
 }
 @media (min-width: 320px) and (max-width: 599px) {
@@ -1288,38 +1310,38 @@
   --clr-error-light: var(--clr-pulpo);
 }
 
-.test {
+.dusthorizon {
   background-color: var(--clr-bg-primary);
 }
-.test.light {
+.dusthorizon.light {
   --clr-text: var(--clr-obsidiana);
   --clr-border: var(--clr-obsidiana);
-  --clr-bg-primary: var(--clr-nube);
+  --clr-bg-primary: var(--clr-arena);
   --clr-bg-secondary: var(--clr-blanco);
-  --clr-bg-tertiary: var(--clr-magia);
-  --clr-bg-main: var(--clr-magia);
-  --clr-placeholder: var(--clr-lavanda);
-  --clr-disabled: var(--clr-lavanda);
-  --clr-heading: var(--clr-uva);
-  --clr-link: var(--clr-uva);
-  --clr-outline: var(--clr-uva);
-  --clr-error: var(--clr-pulpo);
-  --clr-error-light: var(--clr-borrador);
+  --clr-bg-tertiary: var(--clr-flan);
+  --clr-bg-main: var(--clr-tortilla);
+  --clr-placeholder: var(--clr-ladrillo);
+  --clr-disabled: var(--clr-ladrillo);
+  --clr-heading: var(--clr-cajeta);
+  --clr-link: var(--clr-cajeta);
+  --clr-outline: var(--clr-cajeta);
+  --clr-error: var(--clr-chicle);
+  --clr-error-light: var(--clr-bombon);
 }
-.test.dark {
-  --clr-text: var(--clr-nube);
+.dusthorizon.dark {
+  --clr-text: var(--clr-arena);
   --clr-border: var(--clr-blanco);
-  --clr-bg-primary: var(--clr-marino);
+  --clr-bg-primary: var(--clr-vino);
   --clr-bg-secondary: var(--clr-obsidiana);
-  --clr-bg-tertiary: var(--clr-lavanda);
-  --clr-bg-main: var(--clr-uva);
-  --clr-placeholder: var(--clr-magia);
-  --clr-disabled: var(--clr-magia);
-  --clr-heading: var(--clr-magia);
-  --clr-link: var(--clr-magia);
-  --clr-outline: var(--clr-magia);
-  --clr-error: var(--clr-borrador);
-  --clr-error-light: var(--clr-pulpo);
+  --clr-bg-tertiary: var(--clr-ladrillo);
+  --clr-bg-main: var(--clr-cajeta);
+  --clr-placeholder: var(--clr-flan);
+  --clr-disabled: var(--clr-flan);
+  --clr-heading: var(--clr-tortilla);
+  --clr-link: var(--clr-tortilla);
+  --clr-outline: var(--clr-tortilla);
+  --clr-error: var(--clr-bombon);
+  --clr-error-light: var(--clr-chicle);
 }
 
 .clr-text {

@@ -1,30 +1,48 @@
-import { JSXInternal } from 'https://esm.sh/v95/preact@10.11.0/src/jsx.d.ts';
-import { JSX, ComponentChildren } from 'preact';
+//   ___
+//  | _ \_ _ ___ _ __ ___
+//  |  _/ '_/ _ \ '_ (_-<
+//  |_| |_| \___/ .__/__/
+//              |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the types for all of the components in the library.
+ * @module
+ */
 
-export interface iInput
-  extends JSX.HTMLAttributes<HTMLInputElement>,
-    Partial<ARIAMixin> {
+import { iExtendedElement } from './element.ts';
+
+/**
+ * Input component's type that extends the `<input>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+ */
+export type iInput = iExtendedElement<HTMLInputElement> & {
   label?: string;
   error?: string;
   maxWidth: boolean;
-}
+};
 
-export interface iTextArea
-  extends JSX.HTMLAttributes<HTMLTextAreaElement>,
-    Partial<ARIAMixin> {
+/**
+ * Textarea component's type that extends the `<textarea>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+ */
+export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
   label?: string;
   error?: string;
   maxWidth: boolean;
-}
+};
 
-export interface iSelect
-  extends JSX.HTMLAttributes<HTMLSelectElement>,
-    Partial<ARIAMixin> {
+/**
+ * Select component's type that extends the `<select>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+ */
+export type iSelect = iExtendedElement<HTMLSelectElement> & {
   label?: string;
   error?: string;
   placeholder: string;
   maxWidth: boolean;
-  children: ComponentChildren;
   options:
     | {
         value: string;
@@ -32,12 +50,14 @@ export interface iSelect
       }[]
     | string[]
     | [];
-}
+};
 
-export interface iLayout
-  extends JSX.HTMLAttributes<HTMLDivElement>,
-    Partial<ARIAMixin> {
-  children: ComponentChildren;
+/**
+ * Layout component's type that extends the `<div>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ */
+export type iLayout = iExtendedElement<HTMLDivElement> & {
   type:
     | 'full'
     | 'center'
@@ -48,32 +68,33 @@ export interface iLayout
     | 'right'
     | 'left';
   margin: 'full' | 'single' | 'none';
-}
+};
 
-export interface iNavigation
-  extends JSX.HTMLAttributes<HTMLElement>,
-    Partial<ARIAMixin> {
-  children: ComponentChildren;
+/**
+ * Navigation component's type that extends the generic `HTMLElement`.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ */
+export type iNavigation = iExtendedElement & {
   fixed: boolean;
-}
+};
 
-export interface iPage
-  extends JSX.HTMLAttributes<HTMLDivElement>,
-    Partial<ARIAMixin> {
-  children?: ComponentChildren;
+/**
+ * Page component's type that extends the `<div>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ */
+export type iPage = iExtendedElement<HTMLDivElement> & {
   theme?: 'newspaper';
   darkMode?: boolean;
-}
+};
 
-export interface iHeader
-  extends JSX.HTMLAttributes<HTMLElement>,
-    Partial<ARIAMixin> {
-  children?: ComponentChildren;
-}
-
-export interface iText
-  extends JSX.HTMLAttributes<HTMLSpanElement>,
-    Partial<ARIAMixin> {
+/**
+ * Text component's type that extends the `<span>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+ */
+export type iText = iExtendedElement<HTMLSpanElement> & {
   type:
     | 'display'
     | 'title'
@@ -83,38 +104,54 @@ export interface iText
     | 'paragraph'
     | 'label'
     | 'small';
-  children?: ComponentChildren;
   inheritColor: boolean;
-}
+};
 
-export interface iLink
-  extends JSX.HTMLAttributes<HTMLAnchorElement>,
-    Partial<ARIAMixin> {
-  children: ComponentChildren;
+/**
+ * Link component's type that extends the `<a>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+ */
+export type iLink = iExtendedElement<HTMLAnchorElement> & {
   nostyle: boolean;
-}
+};
 
-export interface iFooter
-  extends JSX.HTMLAttributes<HTMLElement>,
-    Partial<ARIAMixin> {
+/**
+ * Footer component's type that extends the generic `HTMLElement`.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ */
+export type iFooter = iExtendedElement & {
   madeWithFresh: boolean;
-  children: ComponentChildren;
-}
+};
 
-export interface iMenu extends Partial<GlobalEventHandlers> {
-  children: ComponentChildren;
+/**
+ * Menu component's type that extends the `<div>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ */
+export type iMenu = iExtendedElement<HTMLDivElement> & {
   isOpen: boolean;
   links: { label: string; href: string }[] | [];
-}
+};
 
-export interface iCard
-  extends JSX.HTMLAttributes<HTMLDivElement>,
-    Partial<ARIAMixin> {
-  children: ComponentChildren;
-}
+/**
+ * Card component's type that extends the `<div>` element.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+ */
+export type iCard = iExtendedElement<HTMLDivElement>;
 
-export interface iMain
-  extends JSX.HTMLAttributes<HTMLElement>,
-    Partial<ARIAMixin> {
-  children: ComponentChildren;
-}
+/**
+ * Main component's type that extends the generic `HTMLElement`.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ */
+export type iMain = iExtendedElement;
+
+/**
+ * Header component's type that extends the generic `HTMLElement`.
+ *
+ * - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+ */
+export type iHeader = iExtendedElement;

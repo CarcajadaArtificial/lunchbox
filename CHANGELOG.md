@@ -1,14 +1,18 @@
 # Changelog
 
-## v0.0.23
+## v0.0.24
 
 ### Added
 
-- Dusthorizon theme
-  - `~/src/scss/themes.scss`
+- Documentation for component properties
+  - `~/src/types/props.ts`
 
-- Adjustment to color `borrador`
-  - `~/src/scss/colors.scss`
+- Sandard HMLElement properties.
+  - `~/src/types/props.ts`
+  - `~/src/types/element.ts`
+
+- CSS Normalization
+  - `~/src/scss/styles.scss`
 
 ## Comming Soon (v0.1.0)
 
@@ -20,7 +24,7 @@
 - [x] Move testing pages to another project.
 - [x] Migrate all islands to components
 - [x] Remove navigation properties in favor of children.
-- [ ] Add standard htmlelement properties spreads in component interfaces. Things like `AriaMixins`, `JSX.HTMLAttributes<T>` and `GlobalEventHandlers`.
+- [x] Add standard htmlelement properties spreads in component interfaces. Things like `AriaMixins`, `JSX.HTMLAttributes<T>` and `GlobalEventHandlers`.
 
 - Components
   - [x] Page layout
@@ -42,7 +46,9 @@
   - [ ] Project README.md
   - [ ] CONTRIBUTING.md
   - Components
-    - [ ] Interfaces
-    - [ ] Render functions
-    - [ ] Documentation site
+    - [x] Types
+      - [ ] Properties
+    - [ ] Setup functions (First document the component setup process)
+    - [ ] Render functions (Gradually as the components are visually documented in ana-components-docs)
+    - [ ] Documentation site ()
   - [ ] Sass code
