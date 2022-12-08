@@ -1,0 +1,25 @@
+.light {
+  input,
+  button {
+    &:hover,
+    &:focus {
+      filter: brightness(0.8);
+    }
+    &:active {
+      filter: brightness(0.6);
+    }
+  }
+}
+
+.dark {
+  input,
+  button {
+    &:hover,
+    &:focus {
+      filter: brightness(1.2);
+    }
+    &:active {
+      filter: brightness(1.4);
+    }
+  }
+}

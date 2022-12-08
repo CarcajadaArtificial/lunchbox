@@ -30,6 +30,7 @@ export default (props: Partial<iInput>) => {
     error: cn('px-2 clr-error-text'),
     required: cn('clr-error-text ml-1'),
     container: cn(
+      'mb-4',
       p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
         ? 'w-min'
         : p.maxWidth

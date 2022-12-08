@@ -11,14 +11,14 @@ export default function (props: Partial<iInput>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <Text type="label" class={c.text}>
+        <Text noMargins class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
         </Text>
         <input class={c.input} {...p} />
       </label>
       {error
-        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        ? <Text type="small" inheritColor class={c.error}>{error}</Text>
         : null}
     </div>
   );

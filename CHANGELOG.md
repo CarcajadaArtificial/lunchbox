@@ -1,35 +1,32 @@
 # Changelog
 
-## v0.0.25
+## v0.0.26
 
 ### Added
 
-- Button component
-  - `~/components/Button.tsx`
-  - `~/src/setup/Button.ts`
+- isCompressed, isLabel, noMargins, indent properties to Text
   - `~/src/types/props.ts`
+  - `~/src/setup/Text.ts`
 
-- Adjusted styles for inputs in general.
+- Component scss files
+  - `~/src/scss/components.scss`
+  - `~/src/scss/components/input.scss`
+  - `~/src/scss/components/page.scss`
+  - `~/src/scss/components/text.scss`
+
+- Typography scss module for all things related to any type of text
+  - `~/src/scss/utils/type.scss`
+
+- Updated Page, Header and Input components to the latest Text features
+  - `~/components/Header.tsx`
   - `~/components/Input.tsx`
   - `~/src/setup/Input.ts`
-  - `~/components/Select.tsx`
-  - `~/src/setup/Select.ts`
-  - `~/components/TextArea.tsx`
-  - `~/src/setup/TextArea.ts`
-  - `~/src/setup/shared.ts`
+  - `~/src/setup/Page.ts`
 
-- Updated menu with a Button component door.
-  - `~/components/Menu.tsx`
-  - `~/src/setup/Menu.ts`
+### Removed
 
-- Union string for component prop's types.
+- Subtitle and label text types
   - `~/src/types/unionStrings.ts`
-
-- Hover and focus states for inputs and buttons.
-  - `~/src/scss/components.scss`
-
-- Adjusted theming border and outline logic.
-  - `~/src/scss/themes.scss`
 
 ## Comming Soon (v0.1.0)
 

@@ -34,11 +34,9 @@ export type LayoutMargins = 'full' | 'single' | 'none';
 export type TextTypes =
   | 'display'
   | 'title'
-  | 'subtitle'
   | 'heading'
   | 'subheading'
   | 'paragraph'
-  | 'label'
   | 'small';
 
 export type PageTheme = 'newspaper' | 'candyland' | 'dusthorizon';

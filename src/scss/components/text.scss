@@ -1,0 +1,39 @@
+@import '../utils/type.scss';
+
+@mixin textTypeBuilder($type, $weight) {
+  span + span.#{$type}:not(.no-margins) {
+    margin-top: get($margin-top, $type);
+  }
+  span.#{$type} {
+    font-size: get($font-size, $type);
+    line-height: get($line-height, $type);
+    font-weight: get($font-weight, $weight);
+    &:not(.no-margins) {
+      margin-bottom: get($margin-bottom, $type);
+    }
+  }
+}
+
+* {
+  font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+@include textTypeBuilder('small', 'regular');
+@include textTypeBuilder('paragraph', 'regular');
+@include textTypeBuilder('subheading', 'regular');
+@include textTypeBuilder('heading', 'bold');
+@include textTypeBuilder('title', 'bold');
+@include textTypeBuilder('display', 'bold');
+
+input,
+textarea,
+select {
+  font-size: font-size('paragraph');
+  line-height: line-height('paragraph');
+  font-weight: font-weight('regular');
+}
+
+.indent {
+  text-indent: 2rem;
+}
