@@ -42,3 +42,6 @@ export const Button = _Button;
 
 import _Code from './components/Code.tsx';
 export const Code = _Code;
+
+import _Separator from './components/Separator.tsx';
+export const Separator = _Separator;

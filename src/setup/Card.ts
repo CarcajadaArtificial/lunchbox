@@ -9,7 +9,7 @@ export default (props: Partial<iCard>) => {
   const p = applyDefaults<iCard>(defaults, props);
 
   const classes = {
-    card: cn('clr-bg-secondary p-10 border border-1 clr-border'),
+    card: cn('card clr-bg-secondary p-10 border border-1 clr-border'),
   };
 
   return { c: classes, ...p };

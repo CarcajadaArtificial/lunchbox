@@ -1,16 +1,16 @@
 # Changelog
 
-## v0.0.27
+## v0.0.28
 
 ### Added
 
-- Code component
-  - `~/components/Code.tsx`
-  - `~/src/setup/Code.ts`
+- Separator component
+  - `~/components/Separator.tsx`
+  - `~/src/setup/Separator.ts`
   - `~/src/types/props.ts`
   - `~/mod.ts`
   - `~/src/scss/components.scss`
-  - `~/src/scss/components/code.scss`
+  - `~/src/scss/components/separator.scss`
 
 ## Comming Soon (v0.1.0)
 
