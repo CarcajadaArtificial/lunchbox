@@ -1,12 +1,16 @@
 # Changelog
 
-## v0.0.29
+## v0.0.30
 
 ### Added
 
-- Width fix to Code component
+- Width fix to Text linebreaks
   - `~/src/scss/components/code.scss`
-  - `~/src/setup/Code.ts`
+  - `~/src/scss/components/text.scss`
+  - `~/src/setup/Text.ts`
+
+- Exports of stringUnions
+  - `~/mod.ts`
 
 ## Comming Soon (v0.1.0)
 

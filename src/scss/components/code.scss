@@ -2,6 +2,10 @@ code {
   white-space: nowrap;
   overflow: scroll;
   max-width: min-content;
+
+  .paragraph {
+    width: max-content;
+  }
 }
 
 .code-wrapper {

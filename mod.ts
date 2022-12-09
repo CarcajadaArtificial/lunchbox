@@ -45,3 +45,12 @@ export const Code = _Code;
 
 import _Separator from './components/Separator.tsx';
 export const Separator = _Separator;
+
+export type {
+  ButtonTypes,
+  ButtonColors,
+  LayoutTypes,
+  LayoutMargins,
+  TextTypes,
+  PageTheme,
+} from './src/types/unionStrings.ts';

@@ -15,7 +15,7 @@ export default (props: Partial<iText>) => {
 
   const classes = {
     span: cn(
-      'break-word block',
+      'break-any block',
       p.inheritColor
         ? null
         : ['display', 'title', 'heading'].includes(p.type)
