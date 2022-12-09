@@ -39,3 +39,6 @@ export const Main = _Main;
 
 import _Button from './components/Button.tsx';
 export const Button = _Button;
+
+import _Code from './components/Code.tsx';
+export const Code = _Code;

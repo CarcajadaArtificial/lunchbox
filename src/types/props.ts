@@ -127,6 +127,11 @@ export type iMenu = iExtendedElement<HTMLDivElement> & {
 export type iCard = iExtendedElement<HTMLDivElement>;
 
 /**
+ * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
+ */
+export type iCode = iExtendedElement;
+
+/**
  * Main component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iMain = iExtendedElement;

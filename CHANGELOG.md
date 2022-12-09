@@ -1,32 +1,16 @@
 # Changelog
 
-## v0.0.26
+## v0.0.27
 
 ### Added
 
-- isCompressed, isLabel, noMargins, indent properties to Text
+- Code component
+  - `~/components/Code.tsx`
+  - `~/src/setup/Code.ts`
   - `~/src/types/props.ts`
-  - `~/src/setup/Text.ts`
-
-- Component scss files
+  - `~/mod.ts`
   - `~/src/scss/components.scss`
-  - `~/src/scss/components/input.scss`
-  - `~/src/scss/components/page.scss`
-  - `~/src/scss/components/text.scss`
-
-- Typography scss module for all things related to any type of text
-  - `~/src/scss/utils/type.scss`
-
-- Updated Page, Header and Input components to the latest Text features
-  - `~/components/Header.tsx`
-  - `~/components/Input.tsx`
-  - `~/src/setup/Input.ts`
-  - `~/src/setup/Page.ts`
-
-### Removed
-
-- Subtitle and label text types
-  - `~/src/types/unionStrings.ts`
+  - `~/src/scss/components/code.scss`
 
 ## Comming Soon (v0.1.0)
 
