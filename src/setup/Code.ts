@@ -10,7 +10,7 @@ export default (props: Partial<iCode>) => {
 
   const classes = {
     code: cn(
-      'block clr-bg-primary px-4 pt-2 pb-3 clr-heading rounded border-b-2 clr-border w-min'
+      'block clr-bg-primary px-4 pt-2 pb-3 clr-heading rounded border-b-2 clr-border'
     ),
     wrapper: cn('code-wrapper grid py-4'),
   };

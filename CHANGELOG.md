@@ -1,16 +1,12 @@
 # Changelog
 
-## v0.0.28
+## v0.0.29
 
 ### Added
 
-- Separator component
-  - `~/components/Separator.tsx`
-  - `~/src/setup/Separator.ts`
-  - `~/src/types/props.ts`
-  - `~/mod.ts`
-  - `~/src/scss/components.scss`
-  - `~/src/scss/components/separator.scss`
+- Width fix to Code component
+  - `~/src/scss/components/code.scss`
+  - `~/src/setup/Code.ts`
 
 ## Comming Soon (v0.1.0)
 
