@@ -10,6 +10,7 @@
  */
 
 import { iExtendedElement } from './element.ts';
+import { Ref } from 'preact';
 import {
   ButtonColors,
   ButtonTypes,
@@ -23,6 +24,7 @@ import {
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
  */
 export type iInput = iExtendedElement<HTMLInputElement> & {
+  refInput?: Ref<HTMLInputElement>;
   label?: string;
   error?: string;
   maxWidth: boolean;
@@ -32,6 +34,7 @@ export type iInput = iExtendedElement<HTMLInputElement> & {
  * Textarea component's type that extends the `<textarea>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
  */
 export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
+  refTextArea?: Ref<HTMLTextAreaElement>;
   label?: string;
   error?: string;
   maxWidth: boolean;

@@ -6,16 +6,16 @@ import setup from "../src/setup/TextArea.ts";
  * @todo Choose a standard color for placeholders.
  */
 export default function TextArea(props: Partial<iTextArea>) {
-  const { c, maxWidth, label, error, ...p } = setup(props);
+  const { c, refTextArea, maxWidth, label, error, ...p } = setup(props);
 
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <Text type="label" class={c.text}>
+        <Text class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
         </Text>
-        <textarea class={c.input} {...p} />
+        <textarea ref={refTextArea} class={c.input} {...p} />
       </label>
       {error
         ? <Text inheritColor type="small" class={c.error}>{error}</Text>

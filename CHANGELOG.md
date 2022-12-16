@@ -1,16 +1,13 @@
 # Changelog
 
-## v0.0.30
+## v0.0.31
 
 ### Added
 
-- Width fix to Text linebreaks
-  - `~/src/scss/components/code.scss`
-  - `~/src/scss/components/text.scss`
-  - `~/src/setup/Text.ts`
-
-- Exports of stringUnions
-  - `~/mod.ts`
+- Reference to the Input component's `<input/>` element and to the TextArea component's `<textarea />` element.
+  - `~/components/Input.tsx`
+  - `~/components/TextArea.tsx`
+  - `~/src/types/props.ts`
 
 ## Comming Soon (v0.1.0)
 
@@ -23,6 +20,11 @@
 - [x] Migrate all islands to components
 - [x] Remove navigation properties in favor of children.
 - [x] Add standard htmlelement properties spreads in component interfaces. Things like `AriaMixins`, `JSX.HTMLAttributes<T>` and `GlobalEventHandlers`.
+- Identify all HTMLElements in all components as an individual "part".
+  - [ ] Name each part a unique css class.
+  - [ ] Use that name to connect the classnames dictionary with the component.
+  - [ ] Add an optional forwarded reference to very part.
+- Create a library of common functions for components when turning them into islands.
 
 - Components
   - [x] Page layout
@@ -39,6 +41,8 @@
   - [x] Card
   - [x] Main
   - [ ] Linkmap
+  - [x] Separator
+  - [ ] Spinner
 
 - Documentation
   - [ ] Project README.md

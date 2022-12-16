@@ -9,7 +9,7 @@ export default function Select(props: Partial<iSelect>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <Text type="label" class={c.text}>
+        <Text class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
         </Text>

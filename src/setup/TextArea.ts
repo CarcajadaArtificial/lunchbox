@@ -16,7 +16,7 @@ export default (props: Partial<iTextArea>) => {
     label: cn('flex flex-col select-none'),
     error: cn('px-2 clr-error-text'),
     required: cn('clr-error-text ml-1'),
-    container: cn(p.maxWidth ? 'w-full' : 'max-w-sm'),
+    container: cn('mb-4', p.maxWidth ? 'w-full' : 'max-w-sm'),
   };
 
   return { c: classes, ...p };
