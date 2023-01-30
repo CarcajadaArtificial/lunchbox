@@ -40,7 +40,7 @@ $font-size: (
 /// @group util_type
 $line-height: (
   'small': 0.9rem,
-  'paragraph': 1.3rem,
+  'paragraph': 1.6rem,
   'subheading': 2.1rem,
   'heading': 2.5rem,
   'title': 3rem,
@@ -74,6 +74,8 @@ $margin-top: (
 );
 
 // -----------------------------------------------------------------------------------------------------
+/// @todo Pass this function to the helper.scss module.
+/// @todo Add a description.
 @function get($map, $value) {
   @if (map-has-key($map, $value)) {
     @return map-get($map, $value);

@@ -1,13 +1,13 @@
 # Changelog
 
-## v0.0.31
+## v0.0.32
 
 ### Added
 
-- Reference to the Input component's `<input/>` element and to the TextArea component's `<textarea />` element.
-  - `~/components/Input.tsx`
-  - `~/components/TextArea.tsx`
-  - `~/src/types/props.ts`
+- Markdown style integration
+  - `~/src/scss/prose.scss`
+  - `~/src/scss/styles.scss`
+  - `~/src/scss/utils/type.scss`
 
 ## Comming Soon (v0.1.0)
 
@@ -20,6 +20,7 @@
 - [x] Migrate all islands to components
 - [x] Remove navigation properties in favor of children.
 - [x] Add standard htmlelement properties spreads in component interfaces. Things like `AriaMixins`, `JSX.HTMLAttributes<T>` and `GlobalEventHandlers`.
+- [x] Markdown styles integration.
 - Identify all HTMLElements in all components as an individual "part".
   - [ ] Name each part a unique css class.
   - [ ] Use that name to connect the classnames dictionary with the component.

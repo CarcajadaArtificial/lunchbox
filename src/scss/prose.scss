@@ -1,0 +1,164 @@
+@import 'utils/type.scss';
+
+/* Markdown elements */
+.markdown-prose {
+  p,
+  li {
+    color: var(--clr-text);
+    font-size: get($font-size, 'paragraph');
+    line-height: get($line-height, 'paragraph');
+    margin-bottom: get($margin-bottom, 'paragraph');
+    font-weight: get($font-weight, 'regular');
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Inline code */
+  code {
+    background-color: var(--clr-bg-secondary);
+    color: var(--clr-heading);
+    padding: 0 12px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  blockquote p {
+    font-size: get($font-size, 'subheading');
+    line-height: get($line-height, 'subheading');
+    padding: 12px 24px;
+    border-width: 1px 1px 1px 4px;
+    border-radius: 4px;
+    background-color: var(--clr-bg-secondary);
+  }
+
+  /* Code block */
+  pre {
+    color: var(--clr-text);
+    overflow-x: scroll;
+  }
+
+  /* Separator */
+  hr {
+    margin-bottom: get($margin-bottom, 'paragraph');
+    margin-top: get($margin-top, 'paragraph');
+  }
+
+  /* Link */
+  a {
+    color: var(--clr-link);
+    text-decoration: underline;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  h1 {
+    color: var(--clr-heading);
+    font-size: get($font-size, 'display');
+    line-height: get($line-height, 'display');
+    margin-bottom: get($margin-bottom, 'display');
+    font-weight: get($font-weight, 'bold');
+  }
+
+  h2 {
+    color: var(--clr-heading);
+    font-size: get($font-size, 'title');
+    line-height: get($line-height, 'title');
+    margin-bottom: get($margin-bottom, 'title');
+    font-weight: get($font-weight, 'bold');
+  }
+
+  h3 {
+    color: var(--clr-heading);
+    font-size: get($font-size, 'heading');
+    line-height: get($line-height, 'heading');
+    margin-bottom: get($margin-bottom, 'heading');
+    font-weight: get($font-weight, 'bold');
+  }
+
+  h4 {
+    color: var(--clr-text);
+    font-size: get($font-size, 'subheading');
+    line-height: get($line-height, 'subheading');
+    margin-bottom: get($margin-bottom, 'subheading');
+    font-weight: get($font-weight, 'bold');
+  }
+}
+
+/* Line Breaks */
+.markdown-prose {
+  p,
+  blockquote {
+    line-break: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-break: auto;
+    a svg {
+      display: none;
+    }
+  }
+
+  h5,
+  h6 {
+    display: none;
+  }
+}
+
+/* Syntax Highlighting */
+.markdown-prose .highlight {
+  background-color: var(--clr-bg-secondary);
+  padding: 16px;
+  border-radius: 4px;
+
+  .token {
+    &.punctuation {
+      color: var(--clr-acero);
+    }
+
+    &.keyword {
+      color: var(--clr-flan);
+    }
+
+    &.operator,
+    &.number,
+    &.boolean {
+      color: var(--clr-papel);
+    }
+
+    &.function {
+      color: var(--clr-menta);
+    }
+
+    &.string {
+      color: var(--clr-vinca);
+    }
+
+    &.comment {
+      color: var(--clr-limon);
+    }
+
+    &.class-name {
+      color: var(--clr-cielo);
+    }
+
+    &.regex {
+      color: var(--clr-bombon);
+    }
+
+    &.regex .regex-delimiter {
+      color: var(--clr-pitahaya);
+    }
+  }
+}
