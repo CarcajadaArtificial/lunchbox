@@ -466,9 +466,19 @@ code {
   overflow: scroll;
   max-width: min-content;
 }
+code .paragraph {
+  width: max-content;
+}
 
 .code-wrapper {
   overflow-x: auto;
+}
+
+span.paragraph, span.small {
+  line-break: auto;
+}
+span.subheading, span.heading, span.title, span.display {
+  line-break: anywhere;
 }
 
 * {
@@ -494,7 +504,7 @@ span + span.paragraph:not(.no-margins) {
 
 span.paragraph {
   font-size: 1rem;
-  line-height: 1.3rem;
+  line-height: 1.6rem;
   font-weight: 400;
 }
 span.paragraph:not(.no-margins) {
@@ -1556,6 +1566,143 @@ select {
 
 .aspect-square {
   aspect-ratio: 1/1;
+}
+
+/* Markdown elements */
+.markdown-prose {
+  /* Inline code */
+  /* Code block */
+  /* Separator */
+  /* Link */
+}
+.markdown-prose p,
+.markdown-prose li {
+  color: var(--clr-text);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.markdown-prose em {
+  font-style: italic;
+}
+.markdown-prose code {
+  background-color: var(--clr-bg-secondary);
+  color: var(--clr-heading);
+  padding: 0 12px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.markdown-prose blockquote p {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  padding: 12px 24px;
+  border-width: 1px 1px 1px 4px;
+  border-radius: 4px;
+  background-color: var(--clr-bg-secondary);
+}
+.markdown-prose pre {
+  color: var(--clr-text);
+  overflow-x: scroll;
+}
+.markdown-prose hr {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.markdown-prose a {
+  color: var(--clr-link);
+  text-decoration: underline;
+}
+.markdown-prose ul li {
+  list-style-type: disc;
+}
+.markdown-prose ol li {
+  list-style-type: decimal;
+}
+.markdown-prose h1 {
+  color: var(--clr-heading);
+  font-size: 3.8rem;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.markdown-prose h2 {
+  color: var(--clr-heading);
+  font-size: 2.8rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.markdown-prose h3 {
+  color: var(--clr-heading);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.markdown-prose h4 {
+  color: var(--clr-text);
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Line Breaks */
+.markdown-prose p,
+.markdown-prose blockquote {
+  line-break: auto;
+}
+.markdown-prose h1,
+.markdown-prose h2,
+.markdown-prose h3,
+.markdown-prose h4 {
+  line-break: auto;
+}
+.markdown-prose h1 a svg,
+.markdown-prose h2 a svg,
+.markdown-prose h3 a svg,
+.markdown-prose h4 a svg {
+  display: none;
+}
+.markdown-prose h5,
+.markdown-prose h6 {
+  display: none;
+}
+
+/* Syntax Highlighting */
+.markdown-prose .highlight {
+  background-color: var(--clr-bg-secondary);
+  padding: 16px;
+  border-radius: 4px;
+}
+.markdown-prose .highlight .token.punctuation {
+  color: var(--clr-acero);
+}
+.markdown-prose .highlight .token.keyword {
+  color: var(--clr-flan);
+}
+.markdown-prose .highlight .token.operator, .markdown-prose .highlight .token.number, .markdown-prose .highlight .token.boolean {
+  color: var(--clr-papel);
+}
+.markdown-prose .highlight .token.function {
+  color: var(--clr-menta);
+}
+.markdown-prose .highlight .token.string {
+  color: var(--clr-vinca);
+}
+.markdown-prose .highlight .token.comment {
+  color: var(--clr-limon);
+}
+.markdown-prose .highlight .token.class-name {
+  color: var(--clr-cielo);
+}
+.markdown-prose .highlight .token.regex {
+  color: var(--clr-bombon);
+}
+.markdown-prose .highlight .token.regex .regex-delimiter {
+  color: var(--clr-pitahaya);
 }
 
 /*# sourceMappingURL=styles.css.map */

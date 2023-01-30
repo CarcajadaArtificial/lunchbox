@@ -1,13 +1,11 @@
 # Changelog
 
-## v0.0.32
+## v0.0.33
 
 ### Added
 
-- Markdown style integration
-  - `~/src/scss/prose.scss`
-  - `~/src/scss/styles.scss`
-  - `~/src/scss/utils/type.scss`
+- Updated css
+  - `static/styles.css`
 
 ## Comming Soon (v0.1.0)
 
