@@ -1,11 +1,9 @@
 # Changelog
 
-## v0.0.33
+## v0.0.34
 
-### Added
-
-- Updated css
-  - `static/styles.css`
+### Added a to-do
+  - `~/CHANGELOG.md`
 
 ## Comming Soon (v0.1.0)
 
@@ -22,8 +20,22 @@
 - Identify all HTMLElements in all components as an individual "part".
   - [ ] Name each part a unique css class.
   - [ ] Use that name to connect the classnames dictionary with the component.
-  - [ ] Add an optional forwarded reference to very part.
+  - [ ] Add an optional forwarded reference to every part.
 - Create a library of common functions for components when turning them into islands.
+
+- To-do
+  - [ ] Change `unionStrings.ts` to enums
+  - [ ] Make the header and footer have variable layouts types
+  - [ ] Some input types have different styles in safari.
+  - [ ] Prose syntax highlighting missing tokens for scss and html.
+    - [ ] Add a stoke to code blocks.
+    - [ ] Add scroll-padding-top to headings
+  - Text component
+    - [ ] Add a `compact` property for smaller line heights.
+    - [ ] Add a `indent` property for literal prose.
+  - [ ] Add typographical theming.
+  - [ ] Create media query classes for viewport sizes.
+  - [ ] Limit `Code` component to only inline codes inside Text components.
 
 - Components
   - [x] Page layout
