@@ -2,13 +2,15 @@ import { iFooter } from "../src/types/props.ts";
 import setup from "../src/setup/Footer.ts";
 import Layout from "./Layout.tsx";
 import Link from "./Link.tsx";
+import { LAYOUT_TYPES } from "../mod.ts";
 
 export default function (props: Partial<iFooter>) {
   const { c, children, madeWithFresh, ...p } = setup(props);
 
   return (
     <footer {...p} class={c.footer}>
-      <Layout type="right">
+      <Layout type={LAYOUT_TYPES.LEFT}>
+        {children}
         {madeWithFresh
           ? (
             <Link href="https://fresh.deno.dev">
@@ -21,7 +23,6 @@ export default function (props: Partial<iFooter>) {
             </Link>
           )
           : null}
-        {children}
       </Layout>
     </footer>
   );

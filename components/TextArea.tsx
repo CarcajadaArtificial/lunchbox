@@ -1,6 +1,7 @@
 import Text from "./Text.tsx";
 import { iTextArea } from "../src/types/props.ts";
 import setup from "../src/setup/TextArea.ts";
+import { TEXT_TYPES } from "../mod.ts";
 
 /**
  * @todo Choose a standard color for placeholders.
@@ -18,7 +19,11 @@ export default function TextArea(props: Partial<iTextArea>) {
         <textarea ref={refTextArea} class={c.input} {...p} />
       </label>
       {error
-        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        ? (
+          <Text inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
+            {error}
+          </Text>
+        )
         : null}
     </div>
   );

@@ -1,9 +1,32 @@
 # Changelog
 
-## v0.0.34
+## v0.0.35
 
-### Added a to-do
-  - `~/CHANGELOG.md`
+### Changed `unionStrings.ts` to `enums.ts`
+  - `~/src/types/enums.ts`
+  - `~/src/types/props.ts`
+  - `~/mod.ts`
+
+### Updated Layout types and margins
+  - `~/components/Footer.tsx`
+  - `~/components/Navigation.tsx`
+  - `~/src/setup/Layout.tsx`
+
+### Updated Text types
+  - `~/components/Input.tsx`
+  - `~/src/setup/Text.tsx`
+
+### Updated Page themes
+  - `~/src/setup/Page.tsx`
+
+### Updated Button colors and types
+  - `~/components/Menu.tsx`
+  - `~/components/Select.tsx`
+  - `~/components/TextArea.tsx`
+  - `~/src/setup/Button.tsx`
+  - `~/src/setup/Button.tsx`
+  - `~/src/setup/Input.tsx`
+  - `~/src/setup/shared.tsx`
 
 ## Comming Soon (v0.1.0)
 
@@ -24,7 +47,7 @@
 - Create a library of common functions for components when turning them into islands.
 
 - To-do
-  - [ ] Change `unionStrings.ts` to enums
+  - [x] Change `unionStrings.ts` to enums
   - [ ] Make the header and footer have variable layouts types
   - [ ] Some input types have different styles in safari.
   - [ ] Prose syntax highlighting missing tokens for scss and html.
@@ -36,6 +59,7 @@
   - [ ] Add typographical theming.
   - [ ] Create media query classes for viewport sizes.
   - [ ] Limit `Code` component to only inline codes inside Text components.
+  - [ ] Find the best way to export components, functions and types to other projects.
 
 - Components
   - [x] Page layout

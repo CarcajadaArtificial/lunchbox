@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { ButtonColors, ButtonTypes } from '../types/unionStrings.ts';
+import { BUTTON_COLORS } from '../types/enums.ts';
 
 export const boxInput = (
   _maxWidth: boolean,
@@ -15,12 +15,12 @@ export const boxInput = (
       : 'clr-bg-tertiary clr-placeholder'
   );
 
-export const button = (color?: ButtonColors, outline?: boolean) =>
+export const button = (color?: BUTTON_COLORS, outline?: boolean) =>
   cn(
     'w-max px-3 py-1 rounded clr-text',
-    color === 'error' ? 'clr-error-bg' : `clr-bg-${color}`,
+    color === BUTTON_COLORS.ERROR ? 'clr-error-bg' : `clr-bg-${color}`,
     outline ? 'border border-1 clr-border' : '',
-    color === 'disabled' ? 'cursor-not-allowed' : 'cursor-pointer'
+    color === BUTTON_COLORS.DISABLED ? 'cursor-not-allowed' : 'cursor-pointer'
   );
 
 export const nonboxInput = (disabled?: boolean) =>

@@ -1,9 +1,10 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { iText } from '../types/props.ts';
+import { TEXT_TYPES } from '../types/enums.ts';
 
 export default (props: Partial<iText>) => {
   const defaults: iText = {
-    type: 'paragraph',
+    type: TEXT_TYPES.PARAGRAPH,
     inheritColor: false,
     isCompressed: false,
     isLabel: false,

@@ -1,9 +1,10 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { iLayout } from '../types/props.ts';
+import { LAYOUT_MARGINS, LAYOUT_TYPES } from '../types/enums.ts';
 
 const defaults: iLayout = {
-  type: 'full',
-  margin: 'full',
+  type: LAYOUT_TYPES.FULL,
+  margin: LAYOUT_MARGINS.FULL,
   children: [],
 };
 

@@ -12,13 +12,13 @@
 import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
 import {
-  ButtonColors,
-  ButtonTypes,
-  LayoutMargins,
-  LayoutTypes,
-  PageTheme,
-  TextTypes,
-} from './unionStrings.ts';
+  BUTTON_COLORS,
+  BUTTON_TYPES,
+  LAYOUT_MARGINS,
+  LAYOUT_TYPES,
+  PAGE_THEME,
+  TEXT_TYPES,
+} from './enums.ts';
 
 /**
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
@@ -61,8 +61,8 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
  * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
 export type iButton = iExtendedElement<HTMLButtonElement> & {
-  type: ButtonTypes;
-  color: ButtonColors;
+  type: BUTTON_TYPES;
+  color: BUTTON_COLORS;
   outline: boolean;
   maxWidth: boolean;
 };
@@ -71,8 +71,8 @@ export type iButton = iExtendedElement<HTMLButtonElement> & {
  * Layout component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
 export type iLayout = iExtendedElement<HTMLDivElement> & {
-  type: LayoutTypes;
-  margin: LayoutMargins;
+  type: LAYOUT_TYPES;
+  margin: LAYOUT_MARGINS;
 };
 
 /**
@@ -86,7 +86,7 @@ export type iNavigation = iExtendedElement & {
  * Page component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
 export type iPage = iExtendedElement<HTMLDivElement> & {
-  theme?: PageTheme;
+  theme?: PAGE_THEME;
   darkMode?: boolean;
 };
 
@@ -94,7 +94,7 @@ export type iPage = iExtendedElement<HTMLDivElement> & {
  * Text component's type that extends the `<span>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span).
  */
 export type iText = iExtendedElement<HTMLSpanElement> & {
-  type: TextTypes;
+  type: TEXT_TYPES;
   inheritColor: boolean;
   isCompressed: boolean;
   isLabel: boolean;

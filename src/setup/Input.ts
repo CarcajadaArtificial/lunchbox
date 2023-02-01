@@ -1,4 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
+import { BUTTON_COLORS } from '../types/enums.ts';
 import { iInput } from '../types/props.ts';
 import { boxInput, nonboxInput, button } from './shared.ts';
 
@@ -13,7 +14,14 @@ export default (props: Partial<iInput>) => {
   const classes = {
     input: cn(
       p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? button(p.error ? 'error' : p.disabled ? 'disabled' : 'main', true)
+        ? button(
+            p.error
+              ? BUTTON_COLORS.ERROR
+              : p.disabled
+              ? BUTTON_COLORS.DISABLED
+              : BUTTON_COLORS.MAIN,
+            true
+          )
         : p.type === 'radio' || p.type === 'checkbox' || p.type === 'slider'
         ? nonboxInput(p.disabled)
         : boxInput(p.maxWidth, p.disabled, p.error)

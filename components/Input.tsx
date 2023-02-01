@@ -1,6 +1,7 @@
 import Text from "./Text.tsx";
 import { iInput } from "../src/types/props.ts";
 import setup from "../src/setup/Input.ts";
+import { TEXT_TYPES } from "../mod.ts";
 
 /**
  * @todo Choose a standard color for placeholders.
@@ -18,7 +19,11 @@ export default function (props: Partial<iInput>) {
         <input ref={refInput} class={c.input} {...p} />
       </label>
       {error
-        ? <Text type="small" inheritColor class={c.error}>{error}</Text>
+        ? (
+          <Text type={TEXT_TYPES.SMALL} inheritColor class={c.error}>
+            {error}
+          </Text>
+        )
         : null}
     </div>
   );

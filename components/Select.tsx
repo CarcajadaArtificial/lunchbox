@@ -1,6 +1,7 @@
 import Text from "./Text.tsx";
 import { iSelect } from "../src/types/props.ts";
 import setup from "../src/setup/Select.ts";
+import { TEXT_TYPES } from "../mod.ts";
 
 export default function Select(props: Partial<iSelect>) {
   const { c, children, placeholder, options, maxWidth, label, error, ...p } =
@@ -29,7 +30,11 @@ export default function Select(props: Partial<iSelect>) {
         </select>
       </label>
       {error
-        ? <Text inheritColor type="small" class={c.error}>{error}</Text>
+        ? (
+          <Text inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
+            {error}
+          </Text>
+        )
         : null}
     </div>
   );

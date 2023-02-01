@@ -1,11 +1,12 @@
 import { applyDefaults, cn } from '../../deps.ts';
+import { BUTTON_COLORS, BUTTON_TYPES } from '../types/enums.ts';
 import { iButton } from '../types/props.ts';
 import { button } from './shared.ts';
 
 const defaults: iButton = {
   maxWidth: false,
-  type: 'default',
-  color: 'primary',
+  type: BUTTON_TYPES.DEFAULT,
+  color: BUTTON_COLORS.PRIMARY,
   outline: true,
 };
 
