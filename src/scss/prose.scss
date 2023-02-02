@@ -23,6 +23,7 @@
     border-radius: 4px;
     display: inline-block;
     vertical-align: middle;
+    border: 1px solid var(--clr-border);
   }
 
   blockquote p {
@@ -122,13 +123,17 @@
   padding: 16px;
   border-radius: 4px;
   display: grid;
+  border: 1px solid var(--clr-border);
 
   .token {
+    color: var(--clr-flan);
+
     &.punctuation {
       color: var(--clr-acero);
     }
 
-    &.keyword {
+    &.keyword,
+    &.attr-name {
       color: var(--clr-flan);
     }
 
@@ -142,7 +147,8 @@
       color: var(--clr-menta);
     }
 
-    &.string {
+    &.string,
+    &.tag {
       color: var(--clr-vinca);
     }
 
@@ -154,7 +160,9 @@
       color: var(--clr-cielo);
     }
 
-    &.regex {
+    &.regex .token,
+    &.attr-name + .token:not(.attr-name, .punctuation),
+    &.property {
       color: var(--clr-bombon);
     }
 

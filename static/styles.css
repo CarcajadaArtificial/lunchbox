@@ -1593,6 +1593,7 @@ select {
   border-radius: 4px;
   display: inline-block;
   vertical-align: middle;
+  border: 1px solid var(--clr-border);
 }
 .markdown-prose blockquote p {
   font-size: 1.8rem;
@@ -1677,11 +1678,15 @@ select {
   padding: 16px;
   border-radius: 4px;
   display: grid;
+  border: 1px solid var(--clr-border);
+}
+.markdown-prose .highlight .token {
+  color: var(--clr-flan);
 }
 .markdown-prose .highlight .token.punctuation {
   color: var(--clr-acero);
 }
-.markdown-prose .highlight .token.keyword {
+.markdown-prose .highlight .token.keyword, .markdown-prose .highlight .token.attr-name {
   color: var(--clr-flan);
 }
 .markdown-prose .highlight .token.operator, .markdown-prose .highlight .token.number, .markdown-prose .highlight .token.boolean {
@@ -1690,7 +1695,7 @@ select {
 .markdown-prose .highlight .token.function {
   color: var(--clr-menta);
 }
-.markdown-prose .highlight .token.string {
+.markdown-prose .highlight .token.string, .markdown-prose .highlight .token.tag {
   color: var(--clr-vinca);
 }
 .markdown-prose .highlight .token.comment {
@@ -1699,7 +1704,7 @@ select {
 .markdown-prose .highlight .token.class-name {
   color: var(--clr-cielo);
 }
-.markdown-prose .highlight .token.regex {
+.markdown-prose .highlight .token.regex .token, .markdown-prose .highlight .token.attr-name + .token:not(.attr-name, .punctuation), .markdown-prose .highlight .token.property {
   color: var(--clr-bombon);
 }
 .markdown-prose .highlight .token.regex .regex-delimiter {

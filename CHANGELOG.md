@@ -1,15 +1,8 @@
 # Changelog
 
-## v0.0.36
+## v0.0.37
 
-### Added `layout_type` property to the Footer and Header components
-  - `~/components/Footer.tsx`
-  - `~/components/Header.tsx`
-  - `~/src/setup/Footer.tsx`
-  - `~/src/setup/Header.tsx`
-  - `~/src/types/props.tsx`
-
-### Fixed the unresponsiveness of code blocks in markdown inserts.
+### Added fix for syntax highlighting on CSS and HTML code.
   - `~/src/scss/prose.scss`
   - `~/static/styles.css`
 
@@ -35,8 +28,8 @@
   - [x] Change `unionStrings.ts` to enums.
   - [x] Make the header and footer have variable layouts types.
   - [ ] Some input types have different styles in safari.
-  - [ ] Prose syntax highlighting missing tokens for scss and html.
-    - [ ] Add a stoke to code blocks.
+  - [x] Prose syntax highlighting missing tokens for scss and html.
+    - [x] Add a stoke to code blocks.
     - [ ] Add scroll-padding-top to headings.
   - Text component
     - [ ] Add a `compact` property for smaller line heights.
