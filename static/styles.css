@@ -1676,6 +1676,7 @@ select {
   background-color: var(--clr-bg-secondary);
   padding: 16px;
   border-radius: 4px;
+  display: grid;
 }
 .markdown-prose .highlight .token.punctuation {
   color: var(--clr-acero);

@@ -121,6 +121,7 @@
   background-color: var(--clr-bg-secondary);
   padding: 16px;
   border-radius: 4px;
+  display: grid;
 
   .token {
     &.punctuation {

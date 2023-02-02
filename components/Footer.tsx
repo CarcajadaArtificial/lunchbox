@@ -2,14 +2,13 @@ import { iFooter } from "../src/types/props.ts";
 import setup from "../src/setup/Footer.ts";
 import Layout from "./Layout.tsx";
 import Link from "./Link.tsx";
-import { LAYOUT_TYPES } from "../mod.ts";
 
 export default function (props: Partial<iFooter>) {
-  const { c, children, madeWithFresh, ...p } = setup(props);
+  const { c, children, layout_type, madeWithFresh, ...p } = setup(props);
 
   return (
     <footer {...p} class={c.footer}>
-      <Layout type={LAYOUT_TYPES.LEFT}>
+      <Layout type={layout_type}>
         {children}
         {madeWithFresh
           ? (

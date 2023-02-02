@@ -1,9 +1,11 @@
 import { applyDefaults, cn } from '../../deps.ts';
+import { LAYOUT_TYPES } from '../types/enums.ts';
 import { iHeader } from '../types/props.ts';
 
 export default (props: Partial<iHeader>) => {
   const defaults: iHeader = {
-    type: undefined,
+    children: undefined,
+    layout_type: LAYOUT_TYPES.LEFT,
   };
 
   const p = applyDefaults<iHeader>(defaults, props);
