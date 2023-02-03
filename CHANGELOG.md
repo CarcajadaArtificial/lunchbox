@@ -1,9 +1,12 @@
 # Changelog
 
-## v0.0.37
+## v0.0.38
 
-### Added fix for syntax highlighting on CSS and HTML code.
-  - `~/src/scss/prose.scss`
+### Added the `compact` property to the Text component.
+  - `~/components/Text.tsx`
+  - `~/src/setup/Text.ts`
+  - `~/src/types/props.ts`
+  - `~/src/scss/components/text.scss`
   - `~/static/styles.css`
 
 ## Comming Soon (v0.1.0)
@@ -31,9 +34,11 @@
   - [x] Prose syntax highlighting missing tokens for scss and html.
     - [x] Add a stoke to code blocks.
     - [ ] Add scroll-padding-top to headings.
+    - [ ] Include syntax highlighting on theming.
   - Text component
-    - [ ] Add a `compact` property for smaller line heights.
+    - [x] Add a `compact` property for smaller line heights.
     - [ ] Add a `indent` property for literal prose.
+    - [ ] Add a `single` property for single lines overflown with ellipsis.
   - [ ] Add typographical theming.
   - [ ] Create media query classes for viewport sizes.
   - [ ] Limit `Code` component to only inline codes inside Text components.

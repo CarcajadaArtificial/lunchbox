@@ -474,40 +474,44 @@ code .paragraph {
   overflow-x: auto;
 }
 
-span.paragraph, span.small {
-  line-break: auto;
+span.small {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  font-weight: 400;
+  color: var(--clr-text);
 }
-span.subheading, span.heading, span.title, span.display {
-  line-break: anywhere;
-}
-
-* {
-  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+span.small:not(.no-margins) {
+  margin-bottom: 0.5rem;
 }
 
 span + span.small:not(.no-margins) {
   margin-top: 0;
 }
 
-span.small {
-  font-size: 0.7rem;
-  line-height: 0.9rem;
+span.paragraph {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.6rem;
   font-weight: 400;
+  color: var(--clr-text);
 }
-span.small:not(.no-margins) {
-  margin-bottom: 0.5rem;
+span.paragraph:not(.no-margins) {
+  margin-bottom: 1rem;
 }
 
 span + span.paragraph:not(.no-margins) {
   margin-top: 0.5rem;
 }
 
-span.paragraph {
-  font-size: 1rem;
-  line-height: 1.6rem;
+span.subheading {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
   font-weight: 400;
+  color: var(--clr-text);
 }
-span.paragraph:not(.no-margins) {
+span.subheading:not(.no-margins) {
   margin-bottom: 1rem;
 }
 
@@ -515,12 +519,14 @@ span + span.subheading:not(.no-margins) {
   margin-top: 2rem;
 }
 
-span.subheading {
-  font-size: 1.8rem;
-  line-height: 2.1rem;
-  font-weight: 400;
+span.heading {
+  display: block;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: var(--clr-heading);
 }
-span.subheading:not(.no-margins) {
+span.heading:not(.no-margins) {
   margin-bottom: 1rem;
 }
 
@@ -528,12 +534,14 @@ span + span.heading:not(.no-margins) {
   margin-top: 2rem;
 }
 
-span.heading {
-  font-size: 2rem;
-  line-height: 2.5rem;
+span.title {
+  display: block;
+  font-size: 2.8rem;
+  line-height: 3rem;
   font-weight: 600;
+  color: var(--clr-heading);
 }
-span.heading:not(.no-margins) {
+span.title:not(.no-margins) {
   margin-bottom: 1rem;
 }
 
@@ -541,12 +549,14 @@ span + span.title:not(.no-margins) {
   margin-top: 2rem;
 }
 
-span.title {
-  font-size: 2.8rem;
-  line-height: 3rem;
+span.display {
+  display: block;
+  font-size: 3.8rem;
+  line-height: 4rem;
   font-weight: 600;
+  color: var(--clr-heading);
 }
-span.title:not(.no-margins) {
+span.display:not(.no-margins) {
   margin-bottom: 1rem;
 }
 
@@ -554,13 +564,8 @@ span + span.display:not(.no-margins) {
   margin-top: 2rem;
 }
 
-span.display {
-  font-size: 3.8rem;
-  line-height: 4rem;
-  font-weight: 600;
-}
-span.display:not(.no-margins) {
-  margin-bottom: 1rem;
+* {
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 input,
@@ -573,6 +578,10 @@ select {
 
 .indent {
   text-indent: 2rem;
+}
+
+span.paragraph.compact {
+  line-height: normal;
 }
 
 .card .separator {

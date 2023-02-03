@@ -96,8 +96,8 @@ export type iPage = iExtendedElement<HTMLDivElement> & {
 export type iText = iExtendedElement<HTMLSpanElement> & {
   type: TEXT_TYPES;
   inheritColor: boolean;
-  isCompressed: boolean;
-  isLabel: boolean;
+  compact: boolean;
+  single: boolean;
   noMargins: boolean;
   indent: boolean;
 };

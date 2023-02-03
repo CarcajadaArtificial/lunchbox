@@ -1,44 +1,32 @@
 @import '../utils/type.scss';
 
-@mixin textTypeBuilder($type, $weight) {
-  span + span.#{$type}:not(.no-margins) {
-    margin-top: get($margin-top, $type);
-  }
+@mixin textTypeBuilder($type, $weight, $color) {
   span.#{$type} {
+    display: block;
     font-size: get($font-size, $type);
     line-height: get($line-height, $type);
     font-weight: get($font-weight, $weight);
+    color: $color;
     &:not(.no-margins) {
       margin-bottom: get($margin-bottom, $type);
     }
   }
-}
-
-span {
-  &.paragraph,
-  &.small {
-    line-break: auto;
-  }
-
-  &.subheading,
-  &.heading,
-  &.title,
-  &.display {
-    line-break: anywhere;
+  span + span.#{$type}:not(.no-margins) {
+    margin-top: get($margin-top, $type);
   }
 }
+
+@include textTypeBuilder('small', 'regular', var(--clr-text));
+@include textTypeBuilder('paragraph', 'regular', var(--clr-text));
+@include textTypeBuilder('subheading', 'regular', var(--clr-text));
+@include textTypeBuilder('heading', 'bold', var(--clr-heading));
+@include textTypeBuilder('title', 'bold', var(--clr-heading));
+@include textTypeBuilder('display', 'bold', var(--clr-heading));
 
 * {
   font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
-
-@include textTypeBuilder('small', 'regular');
-@include textTypeBuilder('paragraph', 'regular');
-@include textTypeBuilder('subheading', 'regular');
-@include textTypeBuilder('heading', 'bold');
-@include textTypeBuilder('title', 'bold');
-@include textTypeBuilder('display', 'bold');
 
 input,
 textarea,
@@ -50,4 +38,9 @@ select {
 
 .indent {
   text-indent: 2rem;
+}
+
+/// @todo Include compact versions of all text types that reduce line-height and margins.
+span.paragraph.compact {
+  line-height: normal;
 }
