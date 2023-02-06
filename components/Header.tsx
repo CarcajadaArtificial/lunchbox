@@ -9,9 +9,7 @@ export default function (props: Partial<iHeader>) {
     <div class={c.container}>
       <header {...p} class={c.header}>
         <Layout type={layout_type}>
-          <div>
-            {children}
-          </div>
+          {children}
         </Layout>
       </header>
     </div>

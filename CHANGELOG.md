@@ -1,13 +1,22 @@
 # Changelog
 
-## v0.0.38
+## v0.0.39
 
-### Added the `compact` property to the Text component.
-  - `~/components/Text.tsx`
-  - `~/src/setup/Text.ts`
-  - `~/src/types/props.ts`
-  - `~/src/scss/components/text.scss`
-  - `~/static/styles.css`
+### Added the `linkmap` component
+ - `~/mod.ts`
+ - `~/components/Linkmap.tsx`
+ - `~/src/setup/Linkmap.ts`
+ - `~/src/types/utils.ts`
+ - `~/src/types/props.ts`
+
+### Removed the `type` property from the `button` component
+ - `~/sec/setup/Button.ts`
+ - `~/src/types/props.ts`
+ - `~/src/types/enums.ts`
+
+### Small fixes
+ - `~/components/Header.tsx`
+
 
 ## Comming Soon (v0.1.0)
 
@@ -44,6 +53,10 @@
   - [ ] Limit `Code` component to only inline codes inside Text components.
   - [ ] Find the best way to export components, functions and types to other projects.
   - [x] Fix the unresponsive code blocks inside `.markdown-prose` element.
+  - [ ] Fix the background naming dilemama regarding hierarchy.
+    - [ ] Rename theming colors for no light/dark mode.
+    - [ ] Rename background colors and remove precedence (primary, secondary, tertiary).
+    - [ ] Rename button colors to this new mode.
 
 - Components
   - [x] Page layout

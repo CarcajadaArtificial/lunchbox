@@ -35,11 +35,6 @@ export enum TEXT_TYPES {
   SMALL = 'small',
 }
 
-export enum BUTTON_TYPES {
-  DEFAULT = 'default',
-  OUTLINE = 'outline',
-}
-
 export enum BUTTON_COLORS {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',

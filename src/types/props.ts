@@ -13,12 +13,12 @@ import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
 import {
   BUTTON_COLORS,
-  BUTTON_TYPES,
   LAYOUT_MARGINS,
   LAYOUT_TYPES,
   PAGE_THEME,
   TEXT_TYPES,
 } from './enums.ts';
+import { ItemLink } from './utils.ts';
 
 /**
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
@@ -61,7 +61,6 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
  * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
 export type iButton = iExtendedElement<HTMLButtonElement> & {
-  type: BUTTON_TYPES;
   color: BUTTON_COLORS;
   outline: boolean;
   maxWidth: boolean;
@@ -151,3 +150,10 @@ export type iCode = iExtendedElement;
  * Main component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iMain = iExtendedElement;
+
+/**
+ * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
+ */
+export type iLinkmap = iExtendedElement<HTMLDivElement> & {
+  links: ItemLink[] | [];
+};
