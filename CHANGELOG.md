@@ -1,22 +1,28 @@
 # Changelog
 
-## v0.0.39
+## v0.0.41
 
-### Added the `linkmap` component
+### Added the `panel` component
  - `~/mod.ts`
- - `~/components/Linkmap.tsx`
- - `~/src/setup/Linkmap.ts`
- - `~/src/types/utils.ts`
+ - `~/components/Panel.tsx`
+ - `~/src/setup/Panel.ts`
  - `~/src/types/props.ts`
+ - `~/src/scs/components/panel.scss`
 
-### Removed the `type` property from the `button` component
- - `~/sec/setup/Button.ts`
- - `~/src/types/props.ts`
- - `~/src/types/enums.ts`
+### Implemented the `panel` into all components that use it.
+ - `~/components/Card.tsx`
+ - `~/components/Footer.tsx`
+ - `~/components/Header.tsx`
+ - `~/components/Navigation.tsx`
+ - `~/src/setup/Card.ts`
+ - `~/src/setup/Footer.ts`
+ - `~/src/setup/Header.ts`
+ - `~/src/setup/Navigation.ts`
 
 ### Small fixes
- - `~/components/Header.tsx`
-
+ - `~/src/setup/Page.ts`
+ - `~/src/setup/Main.ts`
+ - `~/src/setup/Text.ts`
 
 ## Comming Soon (v0.1.0)
 
@@ -48,7 +54,10 @@
     - [x] Add a `compact` property for smaller line heights.
     - [ ] Add a `indent` property for literal prose.
     - [ ] Add a `single` property for single lines overflown with ellipsis.
-  - [ ] Add typographical theming.
+  - [ ] Theme.
+    - [ ] Add theming system without light/dark mode.
+    - [ ] Add typographical theming.
+    - [ ] Add syntax highlighting theming. (After creating inhouse syntax highlighting)
   - [ ] Create media query classes for viewport sizes.
   - [ ] Limit `Code` component to only inline codes inside Text components.
   - [ ] Find the best way to export components, functions and types to other projects.
