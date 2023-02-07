@@ -12,7 +12,7 @@ export default (props: Partial<iLayout>) => {
   const p = applyDefaults<iLayout>(defaults, props);
 
   const classes = {
-    layout: cn(`h-full layout-${p.type} layout-margin-${p.margin}`),
+    layout: cn(`layout-${p.type} layout-margin-${p.margin}`),
     blocks: cn('layout-block'),
   };
 

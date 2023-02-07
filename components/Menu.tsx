@@ -2,7 +2,7 @@ import { iMenu } from "../src/types/props.ts";
 import Link from "./Link.tsx";
 import Button from "./Button.tsx";
 import setup from "../src/setup/Menu.ts";
-import { BUTTON_COLORS } from "../mod.ts";
+import { BUTTON_TYPES } from "../mod.ts";
 
 /**
  * @todo Add event listener that closes the menu when clicking on the body.
@@ -16,7 +16,7 @@ export default function (props: Partial<iMenu>) {
   return (
     <div class={c.wrapper}>
       <div {...p} class={c.door}>
-        <Button color={BUTTON_COLORS.SECONDARY}>
+        <Button color={BUTTON_TYPES.INVISIBLE}>
           {children}
         </Button>
       </div>

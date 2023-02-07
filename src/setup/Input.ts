@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { BUTTON_COLORS } from '../types/enums.ts';
+import { BUTTON_TYPES } from '../types/enums.ts';
 import { iInput } from '../types/props.ts';
 import { boxInput, nonboxInput, button } from './shared.ts';
 
@@ -16,11 +16,10 @@ export default (props: Partial<iInput>) => {
       p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
         ? button(
             p.error
-              ? BUTTON_COLORS.ERROR
+              ? BUTTON_TYPES.ERROR
               : p.disabled
-              ? BUTTON_COLORS.DISABLED
-              : BUTTON_COLORS.MAIN,
-            true
+              ? BUTTON_TYPES.DISABLED
+              : BUTTON_TYPES.CONTRAST
           )
         : p.type === 'radio' || p.type === 'checkbox' || p.type === 'slider'
         ? nonboxInput(p.disabled)
@@ -35,8 +34,8 @@ export default (props: Partial<iInput>) => {
         ? 'flex-col w-max'
         : 'flex-col'
     ),
-    error: cn('px-2 clr-error-text'),
-    required: cn('clr-error-text ml-1'),
+    error: cn('px-2 clr-txt-error'),
+    required: cn('clr-txt-error ml-1'),
     container: cn(
       'mb-4',
       p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)

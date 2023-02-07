@@ -1,164 +1,68 @@
-@mixin createTheme(
-  $lightest,
-  $lighter,
-  $mid-light,
-  $mid-dark,
-  $darker,
-  $darkest,
-  $error,
-  $error-light,
-  $main-light,
-  $main-dark
-) {
-  &.light {
-    --clr-text: var(--clr-#{$darkest});
-    --clr-border: var(--clr-#{$darkest});
-    --clr-bg-primary: var(--clr-#{$lighter});
-    --clr-bg-secondary: var(--clr-#{$lightest});
-    --clr-bg-tertiary: var(--clr-#{$mid-light});
-    --clr-bg-main: var(--clr-#{$main-light});
-    --clr-placeholder: var(--clr-#{$mid-dark});
-    --clr-bg-disabled: var(--clr-#{$mid-dark});
-    --clr-heading: var(--clr-#{$main-dark});
-    --clr-link: var(--clr-#{$main-dark});
-    --clr-outline: var(--clr-#{$main-dark});
-    --clr-error: var(--clr-#{$error});
-    --clr-error-light: var(--clr-#{$error-light});
-  }
-
-  &.dark {
-    --clr-text: var(--clr-#{$lighter});
-    --clr-border: var(--clr-#{$lightest});
-    --clr-bg-primary: var(--clr-#{$darker});
-    --clr-bg-secondary: var(--clr-#{$darkest});
-    --clr-bg-tertiary: var(--clr-#{$mid-dark});
-    --clr-bg-main: var(--clr-#{$main-dark});
-    --clr-placeholder: var(--clr-#{$mid-light});
-    --clr-bg-disabled: var(--clr-#{$mid-light});
-    --clr-heading: var(--clr-#{$main-light});
-    --clr-link: var(--clr-#{$main-light});
-    --clr-outline: var(--clr-#{$main-light});
-    --clr-error: var(--clr-#{$error-light});
-    --clr-error-light: var(--clr-#{$error});
-  }
-
-  background-color: var(--clr-bg-primary);
-
-  *:focus {
-    outline-color: var(--clr-outline);
-  }
+.test {
+  // Text
+  --clr-txt-base: var(--clr-papel);
+  --clr-txt-contrast: var(--clr-mota);
+  // Background
+  --clr-bg-page: var(--clr-grafito);
+  --clr-bg-panel: var(--clr-chapopote);
+  --clr-bg-input: var(--clr-cedro);
+  --clr-bg-contrast: var(--clr-jade);
+  // Stroke
+  --clr-border: var(--clr-papel);
+  // Disabled
+  --clr-txt-disabled: var(--clr-plata);
+  --clr-bg-disabled: var(--clr-acero);
+  // Error
+  --clr-txt-error: var(--clr-bombon);
+  --clr-bg-error: var(--clr-chicle);
 }
 
-.newspaper {
-  @include createTheme(
-    blanco,
-    papel,
-    acero,
-    hierro,
-    grafito,
-    chapopote,
-    chicle,
-    bombon,
-    mota,
-    jade
-  );
+// Text
+.clr-txt-base {
+  color: var(--clr-txt-base);
 }
 
-.candyland {
-  @include createTheme(
-    blanco,
-    nube,
-    magia,
-    lavanda,
-    marino,
-    obsidiana,
-    pulpo,
-    borrador,
-    magia,
-    uva
-  );
+.clr-txt-contrast {
+  color: var(--clr-txt-contrast);
 }
 
-.dusthorizon {
-  @include createTheme(
-    blanco,
-    arena,
-    flan,
-    ladrillo,
-    vino,
-    obsidiana,
-    chicle,
-    bombon,
-    tortilla,
-    cajeta
-  );
+// Background
+.clr-bg-page {
+  background-color: var(--clr-bg-page);
+}
+.clr-bg-panel {
+  background-color: var(--clr-bg-panel);
+}
+.clr-bg-input {
+  background-color: var(--clr-bg-input);
+}
+.clr-bg-contrast {
+  background-color: var(--clr-bg-contrast);
 }
 
-// Texts
-.clr-text {
-  color: var(--clr-text);
+// Stroke
+*:focus {
+  outline-color: var(--clr-border);
+  outline-width: 4px;
+  outline-style: solid;
+  border-radius: 4px;
 }
-
-.clr-heading {
-  color: var(--clr-heading);
-}
-
-.clr-link {
-  color: var(--clr-link);
-}
-
-// Borders
-.clr-outline {
-  outline-color: var(--clr-outline);
-}
-
 .clr-border {
   border-color: var(--clr-border);
 }
 
-// Inout
+// Disabled
+.clr-txt-disabled {
+  color: var(--clr-txt-disabled);
+}
 .clr-bg-disabled {
   background-color: var(--clr-bg-disabled);
 }
 
-.clr-placeholder::placeholder {
-  color: var(--clr-placeholder);
+// Error
+.clr-txt-error {
+  color: var(--clr-txt-error);
 }
-
-// Backgrounds
-.clr-bg-primary {
-  background-color: var(--clr-bg-primary);
-}
-
-.clr-bg-secondary {
-  background-color: var(--clr-bg-secondary);
-}
-
-.clr-bg-tertiary {
-  background-color: var(--clr-bg-tertiary);
-}
-
-.clr-bg-main {
-  background-color: var(--clr-bg-main);
-}
-
-// Errors
-.clr-error-text {
-  color: var(--clr-error);
-}
-
-.clr-error-bg {
-  background-color: var(--clr-error-light);
-}
-
-.clr-error-border {
-  border-color: var(--clr-error);
-}
-
-.clr-error-outline {
-  outline-color: var(--clr-error);
-}
-
-.clr-error-placeholder::placeholder {
-  color: var(--clr-text);
+.clr-bg-error {
+  background-color: var(--clr-bg-error);
 }

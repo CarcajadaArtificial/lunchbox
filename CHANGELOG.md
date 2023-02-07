@@ -1,28 +1,34 @@
 # Changelog
 
-## v0.0.41
+## v0.0.42
 
-### Added the `panel` component
- - `~/mod.ts`
+### Changed the `color` property to `type` inside the `button` component
+ - `~/src/scss/components/button.scss`
+ - `~/src/setup/Button.ts`
  - `~/components/Panel.tsx`
- - `~/src/setup/Panel.ts`
- - `~/src/types/props.ts`
- - `~/src/scs/components/panel.scss`
+ - `~/src/types/enums.ts`
 
-### Implemented the `panel` into all components that use it.
- - `~/components/Card.tsx`
- - `~/components/Footer.tsx`
- - `~/components/Header.tsx`
- - `~/components/Navigation.tsx`
- - `~/src/setup/Card.ts`
- - `~/src/setup/Footer.ts`
- - `~/src/setup/Header.ts`
- - `~/src/setup/Navigation.ts`
+### Implemented the new `type` property into all `button` components that use it.
+ - `~/components/Menu.tsx`
+ - `~/src/setup/Input.ts`
+ - `~/src/setup/shared.ts`
 
-### Small fixes
- - `~/src/setup/Page.ts`
- - `~/src/setup/Main.ts`
- - `~/src/setup/Text.ts`
+### Revamped the whole theming engine
+  - `~/src/scss/themes.scss`
+
+### Updated components to new theme scheme
+  - `~/src/scss/prose.scss`
+  - `~/src/scss/components/input.scss`
+  - `~/src/scss/components/page.scss`
+  - `~/src/scss/components/text.scss`
+  - `~/src/setup/Link.ts`
+  - `~/src/setup/Select.ts`
+  - `~/src/setup/Textarea.ts`
+
+### Minor updates and fixes
+ - `~/src/scss/components.scss`
+ - `~/src/setup/Layouts.ts`
+ - `~/static/styles.css`
 
 ## Comming Soon (v0.1.0)
 
@@ -84,6 +90,7 @@
   - [ ] Linkmap
   - [x] Separator
   - [ ] Spinner
+  - [x] Panel
 
 - Documentation
   - [ ] Project README.md

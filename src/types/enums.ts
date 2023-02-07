@@ -35,17 +35,17 @@ export enum TEXT_TYPES {
   SMALL = 'small',
 }
 
-export enum BUTTON_COLORS {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  TERTIARY = 'tertiary',
-  MAIN = 'main',
+export enum BUTTON_TYPES {
   ERROR = 'error',
   DISABLED = 'disabled',
+  CONTRAST = 'contrast',
+  PANEL = 'panel',
+  INVISIBLE = 'invisible',
 }
 
 export enum PAGE_THEME {
   NEWSPAPER = 'newspaper',
   CANDYLAND = 'candyland',
   DUSTHORIZON = 'dusthorizon',
+  TEST = 'test',
 }

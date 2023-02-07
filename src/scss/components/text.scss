@@ -6,7 +6,9 @@
     font-size: get($font-size, $type);
     line-height: get($line-height, $type);
     font-weight: get($font-weight, $weight);
-    color: $color;
+    &:not(.inherit-color) {
+      color: $color;
+    }
     &:not(.no-margins) {
       margin-bottom: get($margin-bottom, $type);
     }
@@ -16,12 +18,12 @@
   }
 }
 
-@include textTypeBuilder('small', 'regular', var(--clr-text));
-@include textTypeBuilder('paragraph', 'regular', var(--clr-text));
-@include textTypeBuilder('subheading', 'regular', var(--clr-text));
-@include textTypeBuilder('heading', 'bold', var(--clr-heading));
-@include textTypeBuilder('title', 'bold', var(--clr-heading));
-@include textTypeBuilder('display', 'bold', var(--clr-heading));
+@include textTypeBuilder('small', 'regular', var(--clr-txt-base));
+@include textTypeBuilder('paragraph', 'regular', var(--clr-txt-base));
+@include textTypeBuilder('subheading', 'regular', var(--clr-txt-base));
+@include textTypeBuilder('heading', 'bold', var(--clr-txt-contrast));
+@include textTypeBuilder('title', 'bold', var(--clr-txt-contrast));
+@include textTypeBuilder('display', 'bold', var(--clr-txt-contrast));
 
 * {
   font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,

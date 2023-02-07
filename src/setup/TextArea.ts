@@ -14,8 +14,8 @@ export default (props: Partial<iTextArea>) => {
     input: cn(boxInput(p.maxWidth, p.disabled, p.error)),
     text: cn('px-2 w-full select-none'),
     label: cn('flex flex-col select-none'),
-    error: cn('px-2 clr-error-text'),
-    required: cn('clr-error-text ml-1'),
+    error: cn('px-2 clr-txt-error'),
+    required: cn('clr-txt-error ml-1'),
     container: cn('mb-4', p.maxWidth ? 'w-full' : 'max-w-sm'),
   };
 

@@ -10,7 +10,7 @@ export default (props: Partial<iLink>) => {
   const p = applyDefaults<iLink>(defaults, props);
 
   const classes = {
-    link: cn(p.nostyle ? null : 'clr-link underline'),
+    link: cn(p.nostyle ? null : 'clr-txt-contrast underline'),
   };
 
   return { c: classes, ...p };

@@ -4,7 +4,7 @@
 .markdown-prose {
   p,
   li {
-    color: var(--clr-text);
+    color: var(--clr-txt-base);
     font-size: get($font-size, 'paragraph');
     line-height: get($line-height, 'paragraph');
     margin-bottom: get($margin-bottom, 'paragraph');
@@ -17,8 +17,8 @@
 
   /* Inline code */
   code {
-    background-color: var(--clr-bg-secondary);
-    color: var(--clr-heading);
+    background-color: var(--clr-bg-panel);
+    color: var(--clr-txt-contrast);
     padding: 0 12px;
     border-radius: 4px;
     display: inline-block;
@@ -32,12 +32,12 @@
     padding: 12px 24px;
     border-width: 1px 1px 1px 4px;
     border-radius: 4px;
-    background-color: var(--clr-bg-secondary);
+    background-color: var(--clr-bg-panel);
   }
 
   /* Code block */
   pre {
-    color: var(--clr-text);
+    color: var(--clr-txt-base);
     overflow-x: scroll;
   }
 
@@ -62,7 +62,7 @@
   }
 
   h1 {
-    color: var(--clr-heading);
+    color: var(--clr-txt-contrast);
     font-size: get($font-size, 'display');
     line-height: get($line-height, 'display');
     margin-bottom: get($margin-bottom, 'display');
@@ -70,7 +70,7 @@
   }
 
   h2 {
-    color: var(--clr-heading);
+    color: var(--clr-txt-contrast);
     font-size: get($font-size, 'title');
     line-height: get($line-height, 'title');
     margin-bottom: get($margin-bottom, 'title');
@@ -78,7 +78,7 @@
   }
 
   h3 {
-    color: var(--clr-heading);
+    color: var(--clr-txt-contrast);
     font-size: get($font-size, 'heading');
     line-height: get($line-height, 'heading');
     margin-bottom: get($margin-bottom, 'heading');
@@ -86,7 +86,7 @@
   }
 
   h4 {
-    color: var(--clr-text);
+    color: var(--clr-txt-base);
     font-size: get($font-size, 'subheading');
     line-height: get($line-height, 'subheading');
     margin-bottom: get($margin-bottom, 'subheading');
@@ -119,7 +119,7 @@
 
 /* Syntax Highlighting */
 .markdown-prose .highlight {
-  background-color: var(--clr-bg-secondary);
+  background-color: var(--clr-bg-panel);
   padding: 16px;
   border-radius: 4px;
   display: grid;

@@ -22,8 +22,8 @@ export default (props: Partial<iSelect>) => {
         ? 'flex-row-reverse justify-end'
         : 'flex-col'
     ),
-    error: cn('px-2 clr-error-text'),
-    required: cn('clr-error-text ml-1 mb-1'),
+    error: cn('px-2 clr-txt-error'),
+    required: cn('clr-txt-error ml-1 mb-1'),
     container: cn('mb-4', p.maxWidth ? 'w-full' : 'max-w-sm'),
   };
 

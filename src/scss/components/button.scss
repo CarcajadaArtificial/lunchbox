@@ -1,0 +1,36 @@
+.btn {
+  color: var(--clr-txt-base);
+  background-color: var(--clr-bg-contrast);
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+
+  width: -moz-max-content;
+  width: max-content;
+
+  &-error {
+    background-color: var(--clr-bg-error);
+  }
+
+  &-disabled {
+    background-color: var(--clr-bg-disabled);
+  }
+
+  &-panel {
+    background-color: var(--clr-bg-panel);
+  }
+
+  &-invisible {
+    background-color: var(--clr-bg-page);
+  }
+}
+
+.panel .btn {
+  &-panel {
+    background-color: var(--clr-bg-page);
+  }
+
+  &-invisible {
+    background-color: var(--clr-bg-panel);
+  }
+}
