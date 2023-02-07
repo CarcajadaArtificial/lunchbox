@@ -12,7 +12,7 @@
 import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
 import {
-  BUTTON_COLORS,
+  BUTTON_TYPES,
   LAYOUT_MARGINS,
   LAYOUT_TYPES,
   PAGE_THEME,
@@ -61,7 +61,7 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
  * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
 export type iButton = iExtendedElement<HTMLButtonElement> & {
-  color: BUTTON_COLORS;
+  color: BUTTON_TYPES;
   outline: boolean;
   maxWidth: boolean;
 };
@@ -156,4 +156,14 @@ export type iMain = iExtendedElement;
  */
 export type iLinkmap = iExtendedElement<HTMLDivElement> & {
   links: ItemLink[] | [];
+};
+
+/**
+ * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
+ */
+export type iPanel = iExtendedElement<HTMLDivElement> & {
+  onlyTop: boolean;
+  onlyBottom: boolean;
+  doubleLeft: boolean;
+  doubleRight: boolean;
 };

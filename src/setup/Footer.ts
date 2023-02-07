@@ -12,7 +12,7 @@ export default (props: Partial<iFooter>) => {
   const p = applyDefaults<iFooter>(defaults, props);
 
   const classes = {
-    footer: cn('pt-4 pb-4 clr-bg-secondary border-t-1 clr-border'),
+    footer: cn('pt-4 pb-4'),
   };
 
   return { c: classes, ...p };

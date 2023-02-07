@@ -21,6 +21,7 @@ export default (props: Partial<iText>) => {
       p.single ? 'single' : null,
       p.noMargins ? 'no-margins' : null,
       p.indent ? 'indent' : null,
+      p.inheritColor ? 'inherit-color' : null,
       p.class
     ),
   };

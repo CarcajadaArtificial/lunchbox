@@ -10,11 +10,8 @@ export default (props: Partial<iNavigation>) => {
   const p = applyDefaults<iNavigation>(defaults, props);
 
   const classes = {
-    wrapper: cn('h-10 clr-bg-secondary relative', p.fixed ? 'z-10' : ''),
-    nav: cn(
-      'py-2 w-full clr-bg-secondary border-b-1 clr-border',
-      p.fixed ? 'fixed' : ''
-    ),
+    wrapper: cn('h-10 relative', p.fixed ? 'z-10' : ''),
+    nav: cn('py-2 w-full', p.fixed ? 'fixed' : ''),
     title: cn('flex justify-between'),
   };
 

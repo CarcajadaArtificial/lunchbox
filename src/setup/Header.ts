@@ -11,8 +11,7 @@ export default (props: Partial<iHeader>) => {
   const p = applyDefaults<iHeader>(defaults, props);
 
   const classes = {
-    header: cn('pt-20 pb-10 border-b-1 clr-border'),
-    container: cn('clr-bg-secondary'),
+    header: cn('pt-20 pb-10'),
   };
 
   return { c: classes, ...p };

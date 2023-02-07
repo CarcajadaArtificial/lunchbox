@@ -49,5 +49,8 @@ export const Separator = _Separator;
 import _Linkmap from './components/Linkmap.tsx';
 export const Linkmap = _Linkmap;
 
+import _Panel from './components/Panel.tsx';
+export const Panel = _Panel;
+
 export * from './src/types/enums.ts';
 export * from './src/types/utils.ts';

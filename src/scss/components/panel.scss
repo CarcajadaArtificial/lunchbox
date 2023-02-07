@@ -1,0 +1,28 @@
+.panel {
+  background-color: var(--clr-bg-panel);
+  border-color: var(--clr-border);
+
+  &.onlyBottom {
+    border-bottom-width: 1px;
+    border-style: solid;
+  }
+
+  &.onlyTop {
+    border-top-width: 1px;
+    border-style: solid;
+  }
+
+  &:not(.onlyBottom, .onlyTop) {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+  }
+
+  .doubleLeft {
+    border-left-width: 4px;
+  }
+
+  .doubleRight {
+    border-right-width: 4px;
+  }
+}
