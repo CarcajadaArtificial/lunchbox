@@ -1,35 +1,10 @@
 # Changelog
 
-## v0.0.42
+## v0.0.43
 
-### Changed the `color` property to `type` inside the `button` component
- - `~/src/scss/components/button.scss`
- - `~/src/setup/Button.ts`
- - `~/components/Panel.tsx`
- - `~/src/types/enums.ts`
-
-### Implemented the new `type` property into all `button` components that use it.
- - `~/components/Menu.tsx`
- - `~/src/setup/Input.ts`
- - `~/src/setup/shared.ts`
-
-### Revamped the whole theming engine
-  - `~/src/scss/themes.scss`
-
-### Updated components to new theme scheme
-  - `~/src/scss/prose.scss`
-  - `~/src/scss/components/input.scss`
-  - `~/src/scss/components/page.scss`
-  - `~/src/scss/components/text.scss`
-  - `~/src/setup/Link.ts`
-  - `~/src/setup/Select.ts`
-  - `~/src/setup/Textarea.ts`
-
-### Minor updates and fixes
- - `~/src/scss/components.scss`
- - `~/src/setup/Layouts.ts`
+### Renamed the color `wasabi` to `alien`
+ - `~/src/scss/colors.scss`
  - `~/static/styles.css`
-
 ## Comming Soon (v0.1.0)
 
 ### Features

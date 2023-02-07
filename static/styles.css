@@ -33,7 +33,7 @@ video {
   --clr-limon: #089969;
   --clr-mota: #12b362;
   --clr-musgo: #9eed77;
-  --clr-wasabi: #d0fa7d;
+  --clr-alien: #d0fa7d;
   --clr-mantequilla: #f7ff99;
   --clr-arena: #fff7cc;
   --clr-tortilla: #ffea80;
@@ -73,7 +73,7 @@ video {
   background-color: var(--clr-nube);
 }
 
-.text-nube {
+.txt-nube {
   color: var(--clr-nube);
 }
 
@@ -81,7 +81,7 @@ video {
   background-color: var(--clr-vinca);
 }
 
-.text-vinca {
+.txt-vinca {
   color: var(--clr-vinca);
 }
 
@@ -89,7 +89,7 @@ video {
   background-color: var(--clr-cielo);
 }
 
-.text-cielo {
+.txt-cielo {
   color: var(--clr-cielo);
 }
 
@@ -97,7 +97,7 @@ video {
   background-color: var(--clr-detergente);
 }
 
-.text-detergente {
+.txt-detergente {
   color: var(--clr-detergente);
 }
 
@@ -105,7 +105,7 @@ video {
   background-color: var(--clr-cobalto);
 }
 
-.text-cobalto {
+.txt-cobalto {
   color: var(--clr-cobalto);
 }
 
@@ -113,7 +113,7 @@ video {
   background-color: var(--clr-lapis);
 }
 
-.text-lapis {
+.txt-lapis {
   color: var(--clr-lapis);
 }
 
@@ -121,7 +121,7 @@ video {
   background-color: var(--clr-marino);
 }
 
-.text-marino {
+.txt-marino {
   color: var(--clr-marino);
 }
 
@@ -129,7 +129,7 @@ video {
   background-color: var(--clr-jade);
 }
 
-.text-jade {
+.txt-jade {
   color: var(--clr-jade);
 }
 
@@ -137,7 +137,7 @@ video {
   background-color: var(--clr-cedro);
 }
 
-.text-cedro {
+.txt-cedro {
   color: var(--clr-cedro);
 }
 
@@ -145,7 +145,7 @@ video {
   background-color: var(--clr-limon);
 }
 
-.text-limon {
+.txt-limon {
   color: var(--clr-limon);
 }
 
@@ -153,7 +153,7 @@ video {
   background-color: var(--clr-mota);
 }
 
-.text-mota {
+.txt-mota {
   color: var(--clr-mota);
 }
 
@@ -161,23 +161,23 @@ video {
   background-color: var(--clr-musgo);
 }
 
-.text-musgo {
+.txt-musgo {
   color: var(--clr-musgo);
 }
 
-.bg-wasabi {
-  background-color: var(--clr-wasabi);
+.bg-alien {
+  background-color: var(--clr-alien);
 }
 
-.text-wasabi {
-  color: var(--clr-wasabi);
+.txt-alien {
+  color: var(--clr-alien);
 }
 
 .bg-mantequilla {
   background-color: var(--clr-mantequilla);
 }
 
-.text-mantequilla {
+.txt-mantequilla {
   color: var(--clr-mantequilla);
 }
 
@@ -185,7 +185,7 @@ video {
   background-color: var(--clr-arena);
 }
 
-.text-arena {
+.txt-arena {
   color: var(--clr-arena);
 }
 
@@ -193,7 +193,7 @@ video {
   background-color: var(--clr-tortilla);
 }
 
-.text-tortilla {
+.txt-tortilla {
   color: var(--clr-tortilla);
 }
 
@@ -201,7 +201,7 @@ video {
   background-color: var(--clr-flan);
 }
 
-.text-flan {
+.txt-flan {
   color: var(--clr-flan);
 }
 
@@ -209,7 +209,7 @@ video {
   background-color: var(--clr-ambar);
 }
 
-.text-ambar {
+.txt-ambar {
   color: var(--clr-ambar);
 }
 
@@ -217,7 +217,7 @@ video {
   background-color: var(--clr-ladrillo);
 }
 
-.text-ladrillo {
+.txt-ladrillo {
   color: var(--clr-ladrillo);
 }
 
@@ -225,7 +225,7 @@ video {
   background-color: var(--clr-arandano);
 }
 
-.text-arandano {
+.txt-arandano {
   color: var(--clr-arandano);
 }
 
@@ -233,7 +233,7 @@ video {
   background-color: var(--clr-manzana);
 }
 
-.text-manzana {
+.txt-manzana {
   color: var(--clr-manzana);
 }
 
@@ -241,7 +241,7 @@ video {
   background-color: var(--clr-fresa);
 }
 
-.text-fresa {
+.txt-fresa {
   color: var(--clr-fresa);
 }
 
@@ -249,7 +249,7 @@ video {
   background-color: var(--clr-chicle);
 }
 
-.text-chicle {
+.txt-chicle {
   color: var(--clr-chicle);
 }
 
@@ -257,7 +257,7 @@ video {
   background-color: var(--clr-bombon);
 }
 
-.text-bombon {
+.txt-bombon {
   color: var(--clr-bombon);
 }
 
@@ -265,7 +265,7 @@ video {
   background-color: var(--clr-pastel);
 }
 
-.text-pastel {
+.txt-pastel {
   color: var(--clr-pastel);
 }
 
@@ -273,7 +273,7 @@ video {
   background-color: var(--clr-kawaii);
 }
 
-.text-kawaii {
+.txt-kawaii {
   color: var(--clr-kawaii);
 }
 
@@ -281,7 +281,7 @@ video {
   background-color: var(--clr-princesa);
 }
 
-.text-princesa {
+.txt-princesa {
   color: var(--clr-princesa);
 }
 
@@ -289,7 +289,7 @@ video {
   background-color: var(--clr-magia);
 }
 
-.text-magia {
+.txt-magia {
   color: var(--clr-magia);
 }
 
@@ -297,7 +297,7 @@ video {
   background-color: var(--clr-lavanda);
 }
 
-.text-lavanda {
+.txt-lavanda {
   color: var(--clr-lavanda);
 }
 
@@ -305,7 +305,7 @@ video {
   background-color: var(--clr-uva);
 }
 
-.text-uva {
+.txt-uva {
   color: var(--clr-uva);
 }
 
@@ -313,7 +313,7 @@ video {
   background-color: var(--clr-turquesa);
 }
 
-.text-turquesa {
+.txt-turquesa {
   color: var(--clr-turquesa);
 }
 
@@ -321,7 +321,7 @@ video {
   background-color: var(--clr-menta);
 }
 
-.text-menta {
+.txt-menta {
   color: var(--clr-menta);
 }
 
@@ -329,7 +329,7 @@ video {
   background-color: var(--clr-hielo);
 }
 
-.text-hielo {
+.txt-hielo {
   color: var(--clr-hielo);
 }
 
@@ -337,7 +337,7 @@ video {
   background-color: var(--clr-cajeta);
 }
 
-.text-cajeta {
+.txt-cajeta {
   color: var(--clr-cajeta);
 }
 
@@ -345,7 +345,7 @@ video {
   background-color: var(--clr-vino);
 }
 
-.text-vino {
+.txt-vino {
   color: var(--clr-vino);
 }
 
@@ -353,7 +353,7 @@ video {
   background-color: var(--clr-pulpo);
 }
 
-.text-pulpo {
+.txt-pulpo {
   color: var(--clr-pulpo);
 }
 
@@ -361,7 +361,7 @@ video {
   background-color: var(--clr-pitahaya);
 }
 
-.text-pitahaya {
+.txt-pitahaya {
   color: var(--clr-pitahaya);
 }
 
@@ -369,7 +369,7 @@ video {
   background-color: var(--clr-borrador);
 }
 
-.text-borrador {
+.txt-borrador {
   color: var(--clr-borrador);
 }
 
@@ -377,7 +377,7 @@ video {
   background-color: var(--clr-obsidiana);
 }
 
-.text-obsidiana {
+.txt-obsidiana {
   color: var(--clr-obsidiana);
 }
 
@@ -385,7 +385,7 @@ video {
   background-color: var(--clr-chapopote);
 }
 
-.text-chapopote {
+.txt-chapopote {
   color: var(--clr-chapopote);
 }
 
@@ -393,7 +393,7 @@ video {
   background-color: var(--clr-grafito);
 }
 
-.text-grafito {
+.txt-grafito {
   color: var(--clr-grafito);
 }
 
@@ -401,7 +401,7 @@ video {
   background-color: var(--clr-hierro);
 }
 
-.text-hierro {
+.txt-hierro {
   color: var(--clr-hierro);
 }
 
@@ -409,7 +409,7 @@ video {
   background-color: var(--clr-acero);
 }
 
-.text-acero {
+.txt-acero {
   color: var(--clr-acero);
 }
 
@@ -417,7 +417,7 @@ video {
   background-color: var(--clr-plata);
 }
 
-.text-plata {
+.txt-plata {
   color: var(--clr-plata);
 }
 
@@ -425,7 +425,7 @@ video {
   background-color: var(--clr-papel);
 }
 
-.text-papel {
+.txt-papel {
   color: var(--clr-papel);
 }
 
@@ -433,7 +433,7 @@ video {
   background-color: var(--clr-blanco);
 }
 
-.text-blanco {
+.txt-blanco {
   color: var(--clr-blanco);
 }
 

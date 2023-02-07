@@ -11,7 +11,7 @@
   --clr-limon: #089969;
   --clr-mota: #12b362;
   --clr-musgo: #9eed77;
-  --clr-wasabi: #d0fa7d;
+  --clr-alien: #d0fa7d;
   --clr-mantequilla: #f7ff99;
   --clr-arena: #fff7cc;
   --clr-tortilla: #ffea80;
@@ -48,17 +48,17 @@
 }
 
 $colors: nube, vinca, cielo, detergente, cobalto, lapis, marino, jade, cedro,
-  limon, mota, musgo, wasabi, mantequilla, arena, tortilla, flan, ambar,
-  ladrillo, arandano, manzana, fresa, chicle, bombon, pastel, kawaii, princesa,
-  magia, lavanda, uva, turquesa, menta, hielo, cajeta, vino, pulpo, pitahaya,
-  borrador, obsidiana, chapopote, grafito, hierro, acero, plata, papel, blanco;
+  limon, mota, musgo, alien, mantequilla, arena, tortilla, flan, ambar, ladrillo,
+  arandano, manzana, fresa, chicle, bombon, pastel, kawaii, princesa, magia,
+  lavanda, uva, turquesa, menta, hielo, cajeta, vino, pulpo, pitahaya, borrador,
+  obsidiana, chapopote, grafito, hierro, acero, plata, papel, blanco;
 
 @each $color in $colors {
   .bg-#{$color} {
     background-color: var(--clr-#{$color});
   }
 
-  .text-#{$color} {
+  .txt-#{$color} {
     color: var(--clr-#{$color});
   }
 }
