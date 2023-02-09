@@ -46,3 +46,9 @@ select {
 span.paragraph.compact {
   line-height: normal;
 }
+
+.single {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

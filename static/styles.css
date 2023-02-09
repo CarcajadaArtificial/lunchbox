@@ -624,6 +624,12 @@ span.paragraph.compact {
   line-height: normal;
 }
 
+.single {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .panel {
   background-color: var(--clr-bg-panel);
   border-color: var(--clr-border);
@@ -1535,6 +1541,7 @@ span.paragraph.compact {
 .markdown-prose {
   /* Inline code */
   /* Code block */
+  /* Code block title*/
   /* Separator */
   /* Link */
 }
@@ -1570,12 +1577,37 @@ span.paragraph.compact {
   color: var(--clr-txt-base);
   overflow-x: scroll;
 }
+.markdown-prose h4:has(+ .highlight) {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  font-weight: 400;
+  padding: 5px 7px 4px 5px;
+  border-radius: 4px 4px 0 0;
+  border-width: 1px 1px 0 1px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: fit-content;
+  background-color: var(--clr-bg-panel);
+}
+.markdown-prose h4:has(+ .highlight) > a:first-child {
+  display: none;
+}
+.markdown-prose h4:has(+ .highlight) code {
+  padding: 0 2px;
+  line-height: 0.9rem;
+  border: 0;
+  padding: 0;
+}
 .markdown-prose hr {
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 }
 .markdown-prose a {
-  color: var(--clr-link);
+  color: var(--clr-txt-contrast);
   text-decoration: underline;
 }
 .markdown-prose ul li {
@@ -1642,6 +1674,9 @@ span.paragraph.compact {
   border-radius: 4px;
   display: grid;
   border: 1px solid var(--clr-border);
+}
+.markdown-prose .highlight:not(:last-child) {
+  margin-bottom: 16px;
 }
 .markdown-prose .highlight .token {
   color: var(--clr-flan);

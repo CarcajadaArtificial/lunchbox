@@ -1,9 +1,12 @@
 # Changelog
 
-## v0.0.44
+## v0.0.45
 
-### Minor updates
- - `components/Layout.tsx`
+### Added a code block title inside the prose component. It uses the unused h4 heading
+ - `/src/scss/prose.scss`
+
+### Added the `.single` class for the Text component property
+ - `/src/scss/components/text.scss`
 
 ## Comming Soon (v0.1.0)
 

@@ -41,6 +41,35 @@
     overflow-x: scroll;
   }
 
+  /* Code block title*/
+  h4:has(+ .highlight) {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    font-weight: 400;
+    padding: 5px 7px 4px 5px;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px 1px 0 1px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: fit-content;
+    background-color: var(--clr-bg-panel);
+
+    > a:first-child {
+      display: none;
+    }
+
+    code {
+      padding: 0 2px;
+      line-height: 0.9rem;
+      border: 0;
+      padding: 0;
+    }
+  }
+
   /* Separator */
   hr {
     margin-bottom: get($margin-bottom, 'paragraph');
@@ -49,7 +78,7 @@
 
   /* Link */
   a {
-    color: var(--clr-link);
+    color: var(--clr-txt-contrast);
     text-decoration: underline;
   }
 
@@ -124,6 +153,10 @@
   border-radius: 4px;
   display: grid;
   border: 1px solid var(--clr-border);
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
   .token {
     color: var(--clr-flan);
