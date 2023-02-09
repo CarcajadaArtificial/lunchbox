@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.0.43
+## v0.0.44
 
-### Renamed the color `wasabi` to `alien`
- - `~/src/scss/colors.scss`
- - `~/static/styles.css`
+### Minor updates
+ - `components/Layout.tsx`
+
 ## Comming Soon (v0.1.0)
 
 ### Features
