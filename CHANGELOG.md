@@ -1,12 +1,9 @@
 # Changelog
 
-## v0.0.45
+## v0.0.46
 
-### Added a code block title inside the prose component. It uses the unused h4 heading
- - `/src/scss/prose.scss`
-
-### Added the `.single` class for the Text component property
- - `/src/scss/components/text.scss`
+### Updated CHANGELOG
+ - `CHANGELOG.md`
 
 ## Comming Soon (v0.1.0)
 
@@ -37,7 +34,7 @@
   - Text component
     - [x] Add a `compact` property for smaller line heights.
     - [ ] Add a `indent` property for literal prose.
-    - [ ] Add a `single` property for single lines overflown with ellipsis.
+    - [x] Add a `single` property for single lines overflown with ellipsis.
   - [ ] Theme.
     - [ ] Add theming system without light/dark mode.
     - [ ] Add typographical theming.
@@ -46,10 +43,10 @@
   - [ ] Limit `Code` component to only inline codes inside Text components.
   - [ ] Find the best way to export components, functions and types to other projects.
   - [x] Fix the unresponsive code blocks inside `.markdown-prose` element.
-  - [ ] Fix the background naming dilemama regarding hierarchy.
-    - [ ] Rename theming colors for no light/dark mode.
-    - [ ] Rename background colors and remove precedence (primary, secondary, tertiary).
-    - [ ] Rename button colors to this new mode.
+  - [x] Fix the background naming dilemama regarding hierarchy.
+    - [x] Rename theming colors for no light/dark mode.
+    - [x] Rename background colors and remove precedence (primary, secondary, tertiary).
+    - [x] Rename button colors to this new mode.
 
 - Components
   - [x] Page layout
