@@ -1,9 +1,13 @@
 # Changelog
 
-## v0.0.46
+## v0.0.47
 
-### Updated CHANGELOG
- - `CHANGELOG.md`
+### Changed color from `detergente` to `azulejo` and `kawaii` to `ajolote`
+  - `src/scss/colors.scss`
+  - `static/styles.css`
+
+### Updated gitignore
+ - `.gitignore`
 
 ## Comming Soon (v0.1.0)
 

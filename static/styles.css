@@ -4,7 +4,8 @@
   padding: 0;
   font: inherit;
 }
-*:before, *:after {
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -24,7 +25,7 @@ video {
   --clr-nube: #dfd9ff;
   --clr-vinca: #afbbfa;
   --clr-cielo: #7aadf5;
-  --clr-detergente: #1f84cc;
+  --clr-azulejo: #1f84cc;
   --clr-cobalto: #1262b3;
   --clr-lapis: #000066;
   --clr-marino: #030f33;
@@ -46,7 +47,7 @@ video {
   --clr-chicle: #f7577f;
   --clr-bombon: #fc7ea8;
   --clr-pastel: #fa96c8;
-  --clr-kawaii: #e9abf5;
+  --clr-ajolote: #e9abf5;
   --clr-princesa: #d0bbfa;
   --clr-magia: #a37af5;
   --clr-lavanda: #6246eb;
@@ -93,12 +94,12 @@ video {
   color: var(--clr-cielo);
 }
 
-.bg-detergente {
-  background-color: var(--clr-detergente);
+.bg-azulejo {
+  background-color: var(--clr-azulejo);
 }
 
-.txt-detergente {
-  color: var(--clr-detergente);
+.txt-azulejo {
+  color: var(--clr-azulejo);
 }
 
 .bg-cobalto {
@@ -269,12 +270,12 @@ video {
   color: var(--clr-pastel);
 }
 
-.bg-kawaii {
-  background-color: var(--clr-kawaii);
+.bg-ajolote {
+  background-color: var(--clr-ajolote);
 }
 
-.txt-kawaii {
-  color: var(--clr-kawaii);
+.txt-ajolote {
+  color: var(--clr-ajolote);
 }
 
 .bg-princesa {
@@ -474,7 +475,8 @@ body {
   background-color: var(--clr-bg-panel);
 }
 
-input:hover, input:focus,
+input:hover,
+input:focus,
 button:hover,
 button:focus {
   filter: brightness(1.2);
@@ -483,7 +485,8 @@ input:active,
 button:active {
   filter: brightness(1.4);
 }
-input[disabled], input::placeholder,
+input[disabled],
+input::placeholder,
 button[disabled],
 button::placeholder {
   color: var(--clr-txt-disabled);
@@ -605,15 +608,16 @@ span + span.display:not(.no-margins) {
 }
 
 * {
-  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 input,
 textarea,
 select {
-  font-size: font-size("paragraph");
-  line-height: line-height("paragraph");
-  font-weight: font-weight("regular");
+  font-size: font-size('paragraph');
+  line-height: line-height('paragraph');
+  font-weight: font-weight('regular');
 }
 
 .indent {
@@ -736,7 +740,7 @@ span.paragraph.compact {
 }
 @media (min-width: 1200px) and (max-width: 3000px) {
   .layout-center .layout-block {
-    grid-column: 3/span 8;
+    grid-column: 3 / span 8;
   }
 }
 @media (min-width: 320px) and (max-width: 599px) {
@@ -796,12 +800,12 @@ span.paragraph.compact {
 }
 @media (min-width: 600px) and (max-width: 1199px) {
   .layout-focus .layout-block {
-    grid-column: 2/span 4;
+    grid-column: 2 / span 4;
   }
 }
 @media (min-width: 1200px) and (max-width: 3000px) {
   .layout-focus .layout-block {
-    grid-column: 4/span 6;
+    grid-column: 4 / span 6;
   }
 }
 @media (min-width: 320px) and (max-width: 599px) {
@@ -1684,16 +1688,20 @@ span.paragraph.compact {
 .markdown-prose .highlight .token.punctuation {
   color: var(--clr-acero);
 }
-.markdown-prose .highlight .token.keyword, .markdown-prose .highlight .token.attr-name {
+.markdown-prose .highlight .token.keyword,
+.markdown-prose .highlight .token.attr-name {
   color: var(--clr-flan);
 }
-.markdown-prose .highlight .token.operator, .markdown-prose .highlight .token.number, .markdown-prose .highlight .token.boolean {
+.markdown-prose .highlight .token.operator,
+.markdown-prose .highlight .token.number,
+.markdown-prose .highlight .token.boolean {
   color: var(--clr-papel);
 }
 .markdown-prose .highlight .token.function {
   color: var(--clr-menta);
 }
-.markdown-prose .highlight .token.string, .markdown-prose .highlight .token.tag {
+.markdown-prose .highlight .token.string,
+.markdown-prose .highlight .token.tag {
   color: var(--clr-vinca);
 }
 .markdown-prose .highlight .token.comment {
@@ -1702,7 +1710,12 @@ span.paragraph.compact {
 .markdown-prose .highlight .token.class-name {
   color: var(--clr-cielo);
 }
-.markdown-prose .highlight .token.regex .token, .markdown-prose .highlight .token.attr-name + .token:not(.attr-name, .punctuation), .markdown-prose .highlight .token.property {
+.markdown-prose .highlight .token.regex .token,
+.markdown-prose
+  .highlight
+  .token.attr-name
+  + .token:not(.attr-name, .punctuation),
+.markdown-prose .highlight .token.property {
   color: var(--clr-bombon);
 }
 .markdown-prose .highlight .token.regex .regex-delimiter {
