@@ -1,13 +1,10 @@
 # Changelog
 
-## v0.0.47
+## v0.0.48
 
-### Changed color from `detergente` to `azulejo` and `kawaii` to `ajolote`
-  - `src/scss/colors.scss`
+### Added `.h-inherit` to global classes
+  - `src/scss/twind.scss`
   - `static/styles.css`
-
-### Updated gitignore
- - `.gitignore`
 
 ## Comming Soon (v0.1.0)
 
@@ -51,6 +48,7 @@
     - [x] Rename theming colors for no light/dark mode.
     - [x] Rename background colors and remove precedence (primary, secondary, tertiary).
     - [x] Rename button colors to this new mode.
+  - Fix Markdown Parser. Use h5 instead of h4 for code block headings.
 
 - Components
   - [x] Page layout

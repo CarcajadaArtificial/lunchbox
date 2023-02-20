@@ -1,5 +1,10 @@
-.h-min {
-  height: min-content;
+.h {
+  &-min {
+    height: min-content;
+  }
+  &-inherit {
+    height: inherit;
+  }
 }
 
 .w-prose {
