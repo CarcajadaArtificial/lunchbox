@@ -1,10 +1,11 @@
 # Changelog
 
-## v0.0.48
+## v0.0.49
 
-### Added `.h-inherit` to global classes
-  - `src/scss/twind.scss`
-  - `static/styles.css`
+### Added `noMargins` to labels and errors in input components.
+  - `components/Input.tsx`
+  - `components/Select.tsx`
+  - `components/TextArea.tsx`
 
 ## Comming Soon (v0.1.0)
 

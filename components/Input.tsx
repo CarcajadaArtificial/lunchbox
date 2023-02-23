@@ -20,7 +20,7 @@ export default function (props: Partial<iInput>) {
       </label>
       {error
         ? (
-          <Text type={TEXT_TYPES.SMALL} inheritColor class={c.error}>
+          <Text noMargins type={TEXT_TYPES.SMALL} inheritColor class={c.error}>
             {error}
           </Text>
         )

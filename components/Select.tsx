@@ -10,7 +10,7 @@ export default function Select(props: Partial<iSelect>) {
   return (
     <div class={c.container}>
       <label class={c.label}>
-        <Text class={c.text}>
+        <Text noMargins class={c.text}>
           {label}
           {p.required ? <sup title="Required" class={c.required}>*</sup> : null}
         </Text>
@@ -31,7 +31,7 @@ export default function Select(props: Partial<iSelect>) {
       </label>
       {error
         ? (
-          <Text inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
+          <Text noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
             {error}
           </Text>
         )
