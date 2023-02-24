@@ -6,7 +6,6 @@ import { button } from './shared.ts';
 const defaults: iButton = {
   maxWidth: false,
   color: BUTTON_TYPES.CONTRAST,
-  outline: true,
 };
 
 export default (props: Partial<iButton>) => {

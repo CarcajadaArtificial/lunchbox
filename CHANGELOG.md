@@ -1,12 +1,10 @@
 # Changelog
 
-## v0.0.50
+## v0.0.51
 
-### Added `noReize` property to the `TextArea` component.
-  - `src/setup/TextArea.ts`
+### Removed the deprecated `outline` property of the Button component
+  - `src/setup/Button.ts`
   - `src/types/props.ts`
-  - `src/scss/prose.scss`
-  - `static/styles.css`
 
 ## Comming Soon (v0.1.0)
 

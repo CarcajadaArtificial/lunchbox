@@ -63,7 +63,6 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
  */
 export type iButton = iExtendedElement<HTMLButtonElement> & {
   color: BUTTON_TYPES;
-  outline: boolean;
   maxWidth: boolean;
 };
 
