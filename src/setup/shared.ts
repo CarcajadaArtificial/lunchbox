@@ -15,8 +15,8 @@ export const boxInput = (
       : 'clr-bg-input'
   );
 
-export const button = (color?: BUTTON_TYPES) =>
-  cn('btn', color === BUTTON_TYPES.CONTRAST ? null : `btn-${color}`);
+export const button = (type?: BUTTON_TYPES) =>
+  cn('btn', type === BUTTON_TYPES.CONTRAST ? null : `btn-${type}`);
 
 export const nonboxInput = (disabled?: boolean) =>
   cn(disabled ? 'cursor-not-allowed' : 'h-min');

@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.0.51
+## v0.0.52
 
-### Removed the deprecated `outline` property of the Button component
+### Fixed Button type naming issue.
   - `src/setup/Button.ts`
+  - `src/setup/shared.ts`
   - `src/types/props.ts`
 
 ## Comming Soon (v0.1.0)

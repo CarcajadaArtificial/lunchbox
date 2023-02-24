@@ -62,7 +62,7 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
  * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
 export type iButton = iExtendedElement<HTMLButtonElement> & {
-  color: BUTTON_TYPES;
+  type: BUTTON_TYPES;
   maxWidth: boolean;
 };
 
