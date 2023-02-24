@@ -38,6 +38,7 @@ export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
   label?: string;
   error?: string;
   maxWidth: boolean;
+  noResize: boolean;
 };
 
 /**

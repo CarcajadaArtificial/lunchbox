@@ -1567,6 +1567,7 @@ span.paragraph.compact {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid var(--clr-border);
+  margin-top: -1px;
 }
 .markdown-prose blockquote p {
   font-size: 1.8rem;

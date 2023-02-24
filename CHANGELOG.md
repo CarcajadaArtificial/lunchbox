@@ -1,11 +1,12 @@
 # Changelog
 
-## v0.0.49
+## v0.0.50
 
-### Added `noMargins` to labels and errors in input components.
-  - `components/Input.tsx`
-  - `components/Select.tsx`
-  - `components/TextArea.tsx`
+### Added `noReize` property to the `TextArea` component.
+  - `src/setup/TextArea.ts`
+  - `src/types/props.ts`
+  - `src/scss/prose.scss`
+  - `static/styles.css`
 
 ## Comming Soon (v0.1.0)
 

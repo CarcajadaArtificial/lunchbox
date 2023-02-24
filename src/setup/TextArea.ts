@@ -5,13 +5,17 @@ import { boxInput } from './shared.ts';
 const defaults: iTextArea = {
   required: false,
   maxWidth: false,
+  noResize: false,
 };
 
 export default (props: Partial<iTextArea>) => {
   const p = applyDefaults<iTextArea>(defaults, props);
 
   const classes = {
-    input: cn(boxInput(p.maxWidth, p.disabled, p.error)),
+    input: cn(
+      boxInput(p.maxWidth, p.disabled, p.error),
+      p.noResize ? 'resize-none' : null
+    ),
     text: cn('px-2 w-full select-none'),
     label: cn('flex flex-col select-none'),
     error: cn('px-2 clr-txt-error'),
