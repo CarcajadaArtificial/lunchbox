@@ -1,13 +1,10 @@
 # Changelog
 
-## v0.0.53
+## v0.0.54
 
-### Added GarliCSS git submodule
-  - `/lib/garlicss`
+### Added Sass-Door git submodule
+  - `/lib/sass-door`
   - `/.gitmodules`
-
-### Minor updates
-  - `/.gitignore`
 
 ## Comming Soon (v0.1.0)
 
