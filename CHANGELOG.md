@@ -1,11 +1,13 @@
 # Changelog
 
-## v0.0.52
+## v0.0.53
 
-### Fixed Button type naming issue.
-  - `src/setup/Button.ts`
-  - `src/setup/shared.ts`
-  - `src/types/props.ts`
+### Added GarliCSS git submodule
+  - `/lib/garlicss`
+  - `/.gitmodules`
+
+### Minor updates
+  - `/.gitignore`
 
 ## Comming Soon (v0.1.0)
 

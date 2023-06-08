@@ -1,0 +1,3 @@
+[submodule "lib/garlicss"]
+	path = lib/garlicss
+	url = https://github.com/CarcajadaArtificial/garlicss.git
