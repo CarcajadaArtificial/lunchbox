@@ -1,25 +1,9 @@
 # Changelog
 
-## v0.0.57
-
-### Removed design system configurable data
-  - `/src/scss/colors.scss`
-  - `/src/scss/layouts.scss`
-  - `/src/scss/prose.scss`
-  - `/src/scss/styles.scss`
-  - `/src/scss/themes.scss`
-
-### Added Garlicss default configurable data
-  - `/src/scss/_basics.scss`
-  - `/src/scss/_color.scss`
-  - `/src/scss/_grid.scss`
-  - `/src/scss/_media-queries.scss`
-  - `/src/scss/_reset.scss`
-  - `/src/scss/index.scss`
+## v0.0.58
 
 ### Minor updates
-  - `/static/style.css`
-  - `/deno.json`
+  - `/routes/_app.tsx`
 
 ## Comming Soon (v0.1.0)
 

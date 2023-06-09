@@ -5,8 +5,8 @@ export default function App({ Component }: AppProps) {
   return (
     <>
       <Head>
-        <title>Ana UI</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <title>Fresh Garlic - Playground</title>
+        <link rel="stylesheet" href="/style.css" />
       </Head>
       <Component />
     </>
