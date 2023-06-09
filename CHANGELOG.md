@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.0.58
+## v0.0.59
 
-### Minor updates
-  - `/routes/_app.tsx`
+### Updated GarliCSS module to point to its `lib` branch
+  - `/.gitmodules`
+  - `/lib/garlicss/`
 
 ## Comming Soon (v0.1.0)
 
