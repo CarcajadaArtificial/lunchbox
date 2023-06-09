@@ -4,14 +4,12 @@
 //  |___/\___|_| \__,_|\_,_|_|\__| \__\___/_||_|_| |_\__, |\_,_|_| \__,_|\__|_\___/_||_|
 //                                                   |___/
 // =====================================================================================================
+@use 'sass:map';
 @use './lib/sassdoor.scss' as *;
 @use './lib/garlicss.scss' as *;
 @use 'color' as *;
 @use 'media-queries' as *;
 @use 'grid' as *;
-@use 'reset' as *;
-@use 'basics' as *;
-@use 'sass:map';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // CSS Building
@@ -26,8 +24,5 @@
     @include build-sizes(0, 6, 1rem, 'minor-third');
   }
 }
-@include build-grid($grid-schemas);
-@include build-layout(map.get($layout-schemas, 'focus'));
-@include build-semantic-elements();
-@include build-type-elements();
-@include build-input-elements();
+@include build-grid($grid-schemas, true);
+@include build-all-layouts($layout-schemas);

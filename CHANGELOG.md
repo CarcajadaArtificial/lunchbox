@@ -1,10 +1,17 @@
 # Changelog
 
-## v0.0.59
+## v0.0.60
 
-### Updated GarliCSS module to point to its `lib` branch
-  - `/.gitmodules`
-  - `/lib/garlicss/`
+### Removed basics and reset submodules
+  - `/src/scss/_basics.scss`
+  - `/src/scss/_reset.scss`
+
+### Minor updates
+  - `/src/scss/_color.scss`
+  - `/src/scss/_grid.scss`
+  - `/src/scss/_media-queries.scss`
+  - `/src/scss/index.scss`
+  - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 

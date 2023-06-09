@@ -103,11 +103,11 @@ button {
   }
 }
 
-section {
+.grid {
   display: grid;
 }
 @media screen and (max-width: 39.9375em) {
-  section {
+  .grid {
     gap: 0 0.8503100088rem;
     width: auto;
     margin: 0 0.8503100088rem;
@@ -115,7 +115,7 @@ section {
   }
 }
 @media screen and (min-width: 40em) and (max-width: 99.9375em) {
-  section {
+  .grid {
     gap: 0 2.1257750221%;
     width: auto;
     margin: 0 calc(23.13871222% - 134.488008342px);
@@ -123,7 +123,7 @@ section {
   }
 }
 @media screen and (min-width: 100em) {
-  section {
+  .grid {
     gap: 0 1.5rem;
     width: min-content;
     margin: 0 auto;
@@ -131,226 +131,87 @@ section {
   }
 }
 
-section > article {
+.layout-empty section > article {
+  grid-column: span 1;
+}
+
+.layout-full section > article {
+  grid-column: span 12;
+}
+@media screen and (max-width: 39.9375em) {
+  .layout-full section > article {
+    grid-column: span 6;
+  }
+}
+
+.layout-center section > article {
+  grid-column: 2/span 10;
+}
+@media screen and (max-width: 39.9375em) {
+  .layout-center section > article {
+    grid-column: span 6;
+  }
+}
+
+.layout-focus section > article {
   grid-column: 3/span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  section > article {
+  .layout-focus section > article {
     grid-column: 2/span 4;
   }
 }
 
-body {
-  background-color: var(--clr-bg-panel);
-  color: var(--clr-txt-base);
-  font-size: var(--fs0);
-  line-height: var(--lh0);
+.layout-halves section > article {
+  grid-column: span 6;
+}
+@media screen and (max-width: 39.9375em) {
+  .layout-halves section > article {
+    grid-column: span 3;
+  }
 }
 
-main {
-  background-color: var(--clr-bg-page);
+.layout-thirds section > article {
+  grid-column: span 4;
 }
-main > header,
-main > footer {
-  background-color: var(--clr-bg-panel);
-  padding: var(--s-triple) 0 var(--s-one-and-half) 0;
-}
-main header {
-  margin-bottom: var(--s-one-and-half);
-}
-main footer {
-  margin-top: var(--s-one-and-half);
+@media screen and (max-width: 39.9375em) {
+  .layout-thirds section > article {
+    grid-column: span 2;
+  }
 }
 
-em {
-  font-style: italic;
+.layout-right section > article {
+  grid-column: span 4;
+}
+.layout-right section > article:nth-child(even) {
+  grid-column: span 8;
+}
+@media screen and (max-width: 39.9375em) {
+  .layout-right section > article {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  .layout-right section > article:nth-child(even) {
+    grid-column: span 4;
+  }
 }
 
-ul,
-ol {
-  margin: var(--s-one-and-half) 0;
+.layout-left section > article {
+  grid-column: span 4;
 }
-ul > ul,
-ul > ol,
-ol > ul,
-ol > ol {
-  margin: 0 0 0 var(--s-single);
+.layout-left section > article:nth-child(odd) {
+  grid-column: span 8;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--clr-txt-personality);
-  margin-bottom: 1.5rem;
+@media screen and (max-width: 39.9375em) {
+  .layout-left section > article {
+    grid-column: span 2;
+  }
 }
-
-a {
-  color: var(--clr-txt-personality);
-  cursor: pointer;
-}
-a:hover {
-  color: var(--clr-txt-personality);
-}
-
-code {
-  color: var(--clr-txt-personality);
-}
-
-p {
-  font-size: var(--fs0);
-  line-height: var(--lh0);
-}
-p + h2,
-p + h3,
-p + h4,
-p + h5,
-p + h6 {
-  margin-top: var(--s-triple);
-}
-p + p {
-  margin-top: var(--s-one-and-half);
-}
-
-h6 {
-  font-size: var(--fs1);
-  line-height: var(--lh1);
-}
-
-h5 {
-  font-size: var(--fs2);
-  line-height: var(--lh2);
-}
-
-h4 {
-  font-size: var(--fs3);
-  line-height: var(--lh3);
-}
-
-h3 {
-  font-size: var(--fs4);
-  line-height: var(--lh4);
-  font-weight: 600;
-}
-
-h2 {
-  font-size: var(--fs5);
-  line-height: var(--lh5);
-  font-weight: 600;
-}
-
-h1 {
-  font-size: var(--fs6);
-  line-height: var(--lh6);
-  font-weight: 600;
-}
-
-input,
-select,
-textarea {
-  display: inline-block;
-  width: calc(100% - var(--s-two-thirds));
-  max-width: var(--s-fifteen);
-  background-color: var(--clr-bg-input);
-  border: none;
-  padding: var(--s-quarter) var(--s-third);
-  border-radius: var(--s-eighth);
-  height: var(--s-one-and-half);
-  vertical-align: middle;
-  box-sizing: content-box;
-  font-size: var(--fs-1);
-  outline: 0;
-}
-input:invalid,
-select:invalid,
-textarea:invalid {
-  background-color: var(--clr-bg-error);
-}
-input:hover,
-select:hover,
-textarea:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-}
-input:focus,
-select:focus,
-textarea:focus {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-}
-
-input {
-  -webkit-text-fill-color: var(--clr-txt-base);
-}
-input::-webkit-datetime-edit {
-  line-height: 1;
-  padding: 0;
-  margin-bottom: -1px;
-}
-input[type=date], input[type=time] {
-  height: calc(var(--s-one-and-half) + 0.1671875rem);
-  padding: var(--s-third) var(--s-third) 0 var(--s-third);
-}
-input[type=range] {
-  vertical-align: middle;
-}
-input[type=checkbox], input[type=radio] {
-  all: revert;
-  width: min-content;
-  margin: 0;
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin-bottom: var(--s-one-and-half);
-}
-
-input[type=button],
-input[type=image],
-input[type=reset],
-input[type=submit],
-button {
-  max-width: max-content;
-  cursor: pointer;
-  background-color: var(--clr-bg-input);
-  padding: var(--s-quarter) var(--s-five-eights);
-  border-radius: var(--s-eighth);
-  margin: var(--s-third) 0 var(--s-two-thirds) 0;
-}
-
-select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-select:disabled {
-  opacity: 1;
-}
-
-label {
-  display: block;
-}
-label > span + input,
-label > span + select,
-label > span + textarea {
-  margin-bottom: var(--s-two-thirds);
-}
-label > span > i {
-  color: var(--clr-txt-error);
-}
-label > span:first-child {
-  margin-bottom: var(--s-third);
-  display: block;
-}
-
-input:disabled,
-select:disabled,
-textarea:disabled,
-button:disabled {
-  background-color: var(--clr-bg-disabled);
-  cursor: not-allowed;
-  color: inherit;
+@media screen and (max-width: 39.9375em) {
+  .layout-left section > article:nth-child(odd) {
+    grid-column: span 4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
