@@ -1,16 +1,10 @@
 # Changelog
 
-## v0.0.55
-
-### Added SCSS library forwarders.
-  - `/src/scss/lib/garlicss.scss`
-  - `/src/scss/lib/sassdoor.scss`
+## v0.0.56
 
 ### Minor Updates
   - `/lib/garlicss`
-  - `/.gitignore`
-  - `/components/Button.tsx`
-  - `/components/Menu.tsx`
+  - `/src/scss/lib/garlicss.scss`
 
 ## Comming Soon (v0.1.0)
 
