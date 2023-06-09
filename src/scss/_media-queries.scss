@@ -1,0 +1,27 @@
+// =====================================================================================================
+// Media queries default configuration
+// =====================================================================================================
+@use './lib/garlicss.scss' as *;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/// The $breakpoints variable is a Sass map containing the screen sizes for different devices.
+///
+/// @type {[key]: em}
+///
+/// @group media-queries
+$breakpoints: (
+  sm: 0em,
+  md: 40em,
+  lg: 100em,
+);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/// The $query-map variable is a Sass map containing common media query strings.
+///
+/// @type {[key]: string}
+///
+/// @group media-queries
+///
+$query-map: (
+  only-sm: only-on($breakpoints, sm),
+);

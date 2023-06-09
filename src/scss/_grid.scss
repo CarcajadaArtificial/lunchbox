@@ -1,0 +1,166 @@
+// =====================================================================================================
+// Grid default configuration
+// =====================================================================================================
+@use './lib/garlicss.scss' as *;
+@use 'media-queries' as *;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/// This list contains the schematics of the design system grid. Every schematic will be a map that must comply the following structure.
+/// - `cols {unitless}`: This property determines how many repetitions are set in the style `grid-template-columns: repeat($cols, ...)`.
+/// - `gutter [length/percentage]`: This property determines the grid's `gap` style.
+/// - `colwidth [length/percentage]`: This property determines the value set in the style `grid-template-columns: repeat(cols, minmax(colwidth, 1fr))`, and changes to `minmax($colwidth, $colwidth)` when the property `fixedcol` is true.
+/// - `fixedcol [bool] {false}`: This property determines whether the grid's columns have a fixed width if true and flexible if false. When the value is true, it ignores the properties: `width` and `margin`, and assumes a reasonable and fixed `colwidth` length value.
+/// - `width [length/percentage/keyword] {min-content}` This property determines the grid's width, which normally should be set to "auto" for a responsive layout. The default value is forced when the property `fixedcol` is true.
+/// - `margin [length/percentage/auto] {auto}` This property determines the grid's horizontal margins value in the style `margin: 0 $margin`.
+/// - `mq [string]`: This property is used to set the grids styles to a particular media query.
+///
+/// @type list
+///
+/// @group grid
+///
+///
+$grid-schemas: (
+    cols: 6,
+    gutter: 0.8503100088rem,
+    colwidth: 0,
+    width: auto,
+    margin: 0.8503100088rem,
+    fixedcol: false,
+    mq: only-on($breakpoints, sm),
+  ),
+  (
+    cols: 12,
+    gutter: 2.1257750221%,
+    colwidth: 0,
+    width: auto,
+    margin: calc(23.13871222% - 134.488008342px),
+    fixedcol: false,
+    mq: only-on($breakpoints, md),
+  ),
+  (
+    cols: 12,
+    gutter: 1.5rem,
+    colwidth: 4.5rem,
+    fixedcol: true,
+    mq: only-on($breakpoints, lg),
+  );
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/// This map contains the schematis of the designed layouts for the grid. Every schematic will be a map that must comply the following structure:
+/// - `_key {string}`: The key of the $layout-schemas map will be used as the name of the layout's class `.layout-#{$name}`.
+/// - `span {unitless}`: Number of columns the modules will span.
+/// - `offset {unitless}`: Number of columns the modules will skip.
+/// - `variations {list}`: This list contains maps similar to this layout schema. Variations have two additional properties:
+///   - `mq {string}`: Optional media query that affects this layout's variation.
+///   - `pseudo {string}`: Optional pseudoclass that aids in spanning of layout module, e.g. `:nth-child(even)`
+///
+/// @type map
+///
+/// @group grid
+///
+$layout-schemas: (
+  empty: (
+    span: 1,
+    offset: 0,
+    variations: (),
+  ),
+  full: (
+    span: 12,
+    offset: 0,
+    variations: (
+      (
+        mq: only-on($breakpoints, sm),
+        span: 6,
+        offset: 0,
+      ),
+    ),
+  ),
+  center: (
+    span: 10,
+    offset: 2,
+    variations: (
+      (
+        mq: only-on($breakpoints, sm),
+        span: 6,
+        offset: 0,
+      ),
+    ),
+  ),
+  focus: (
+    span: 8,
+    offset: 3,
+    variations: (
+      (
+        mq: only-on($breakpoints, sm),
+        span: 4,
+        offset: 2,
+      ),
+    ),
+  ),
+  halves: (
+    span: 6,
+    offset: 0,
+    variations: (
+      (
+        mq: only-on($breakpoints, sm),
+        span: 3,
+        offset: 0,
+      ),
+    ),
+  ),
+  thirds: (
+    span: 4,
+    offset: 0,
+    variations: (
+      (
+        mq: only-on($breakpoints, sm),
+        span: 2,
+        offset: 0,
+      ),
+    ),
+  ),
+  right: (
+    span: 4,
+    offset: 0,
+    variations: (
+      (
+        pseudo: ':nth-child(even)',
+        span: 8,
+        offset: 0,
+      ),
+      (
+        mq: only-on($breakpoints, sm),
+        span: 2,
+        offset: 0,
+      ),
+      (
+        pseudo: ':nth-child(even)',
+        mq: only-on($breakpoints, sm),
+        span: 4,
+        offset: 0,
+      ),
+    ),
+  ),
+  left: (
+    span: 4,
+    offset: 0,
+    variations: (
+      (
+        pseudo: ':nth-child(odd)',
+        span: 8,
+        offset: 0,
+      ),
+      (
+        mq: only-on($breakpoints, sm),
+        span: 2,
+        offset: 0,
+      ),
+      (
+        pseudo: ':nth-child(odd)',
+        mq: only-on($breakpoints, sm),
+        span: 4,
+        offset: 0,
+      ),
+    ),
+  ),
+);
