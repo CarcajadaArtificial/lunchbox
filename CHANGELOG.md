@@ -1,10 +1,16 @@
 # Changelog
 
-## v0.0.54
+## v0.0.55
 
-### Added Sass-Door git submodule
-  - `/lib/sass-door`
-  - `/.gitmodules`
+### Added SCSS library forwarders.
+  - `/src/scss/lib/garlicss.scss`
+  - `/src/scss/lib/sassdoor.scss`
+
+### Minor Updates
+  - `/lib/garlicss`
+  - `/.gitignore`
+  - `/components/Button.tsx`
+  - `/components/Menu.tsx`
 
 ## Comming Soon (v0.1.0)
 

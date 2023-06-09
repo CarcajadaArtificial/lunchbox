@@ -16,7 +16,7 @@ export default function (props: Partial<iMenu>) {
   return (
     <div class={c.wrapper}>
       <div {...p} class={c.door}>
-        <Button color={BUTTON_TYPES.INVISIBLE}>
+        <Button>
           {children}
         </Button>
       </div>
