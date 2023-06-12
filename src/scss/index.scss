@@ -1,28 +1,19 @@
-//   ___       __           _ _                  __ _                    _   _
-//  |   \ ___ / _|__ _ _  _| | |_   __ ___ _ _  / _(_)__ _ _  _ _ _ __ _| |_(_)___ _ _
-//  | |) / -_)  _/ _` | || | |  _| / _/ _ \ ' \|  _| / _` | || | '_/ _` |  _| / _ \ ' \
-//  |___/\___|_| \__,_|\_,_|_|\__| \__\___/_||_|_| |_\__, |\_,_|_| \__,_|\__|_\___/_||_|
-//                                                   |___/
-// =====================================================================================================
 @use 'sass:map';
 @use './lib/sassdoor.scss' as *;
 @use './lib/garlicss.scss' as *;
 @use 'color' as *;
 @use 'media-queries' as *;
 @use 'grid' as *;
+@use 'size' as *;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// CSS Building
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// CSS Building using this library has important order implications.
 @include build-reset();
-:root {
-  @include build-dual-theme($palette, 'limon', 'obsidiana', 'papel');
-  @include build-sizes(0, 6, 1rem, 'major-third');
-  @include build-box-spaces();
-  @media #{map.get($query-map, 'only-sm')} {
-    @include build-sizes(0, 6, 1rem, 'minor-third');
-  }
-}
+// root
+@include build-box-spaces();
+@include build-size-schema(create-size-schema($type-schema, 1rem, 'major-third'));
+@include build-size-schema(create-size-schema($type-schema, 1rem, 'minor-third'), 'print');
+@include build-fonts($fonts);
+// Utility classes
+@include build-dual-theme($palette, 'limon', 'obsidiana', 'papel', true);
+@include build-typography-classes($font-schema);
 @include build-grid($grid-schemas, true);
 @include build-all-layouts($layout-schemas);

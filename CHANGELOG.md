@@ -1,13 +1,16 @@
 # Changelog
 
-## v0.0.61
+## v0.0.62
 
-### Removed scss utils
-  - `/src/scss/utils/`
+### Added and configured GarliCSS
+  - `/src/scss/_size.scss`
+  - `/src/scss/index.scss`
 
-### Removed scss text component
-  - `/src/scss/components.scss`
-  - `/src/scss/components/text.scss`
+### Minor updates
+  - `/lib/garlicss`
+  - `/lib/sass-door`
+  - `/routes/_app.tsx`
+  - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 
