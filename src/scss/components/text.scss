@@ -1,54 +1,52 @@
-@import '../utils/type.scss';
+// @mixin textTypeBuilder($type, $weight, $color) {
+//   span.#{$type} {
+//     display: block;
+//     font-size: get($font-size, $type);
+//     line-height: get($line-height, $type);
+//     font-weight: get($font-weight, $weight);
+//     &:not(.inherit-color) {
+//       color: $color;
+//     }
+//     &:not(.no-margins) {
+//       margin-bottom: get($margin-bottom, $type);
+//     }
+//   }
+//   span + span.#{$type}:not(.no-margins) {
+//     margin-top: get($margin-top, $type);
+//   }
+// }
 
-@mixin textTypeBuilder($type, $weight, $color) {
-  span.#{$type} {
-    display: block;
-    font-size: get($font-size, $type);
-    line-height: get($line-height, $type);
-    font-weight: get($font-weight, $weight);
-    &:not(.inherit-color) {
-      color: $color;
-    }
-    &:not(.no-margins) {
-      margin-bottom: get($margin-bottom, $type);
-    }
-  }
-  span + span.#{$type}:not(.no-margins) {
-    margin-top: get($margin-top, $type);
-  }
-}
+// @include textTypeBuilder('small', 'regular', var(--clr-txt-base));
+// @include textTypeBuilder('paragraph', 'regular', var(--clr-txt-base));
+// @include textTypeBuilder('subheading', 'regular', var(--clr-txt-base));
+// @include textTypeBuilder('heading', 'bold', var(--clr-txt-contrast));
+// @include textTypeBuilder('title', 'bold', var(--clr-txt-contrast));
+// @include textTypeBuilder('display', 'bold', var(--clr-txt-contrast));
 
-@include textTypeBuilder('small', 'regular', var(--clr-txt-base));
-@include textTypeBuilder('paragraph', 'regular', var(--clr-txt-base));
-@include textTypeBuilder('subheading', 'regular', var(--clr-txt-base));
-@include textTypeBuilder('heading', 'bold', var(--clr-txt-contrast));
-@include textTypeBuilder('title', 'bold', var(--clr-txt-contrast));
-@include textTypeBuilder('display', 'bold', var(--clr-txt-contrast));
+// * {
+//   font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
+//     Consolas, 'Liberation Mono', 'Courier New', monospace;
+// }
 
-* {
-  font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
-}
+// input,
+// textarea,
+// select {
+//   font-size: font-size('paragraph');
+//   line-height: line-height('paragraph');
+//   font-weight: font-weight('regular');
+// }
 
-input,
-textarea,
-select {
-  font-size: font-size('paragraph');
-  line-height: line-height('paragraph');
-  font-weight: font-weight('regular');
-}
+// .indent {
+//   text-indent: 2rem;
+// }
 
-.indent {
-  text-indent: 2rem;
-}
+// /// @todo Include compact versions of all text types that reduce line-height and margins.
+// span.paragraph.compact {
+//   line-height: normal;
+// }
 
-/// @todo Include compact versions of all text types that reduce line-height and margins.
-span.paragraph.compact {
-  line-height: normal;
-}
-
-.single {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// .single {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }

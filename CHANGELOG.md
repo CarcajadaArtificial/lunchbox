@@ -1,17 +1,13 @@
 # Changelog
 
-## v0.0.60
+## v0.0.61
 
-### Removed basics and reset submodules
-  - `/src/scss/_basics.scss`
-  - `/src/scss/_reset.scss`
+### Removed scss utils
+  - `/src/scss/utils/`
 
-### Minor updates
-  - `/src/scss/_color.scss`
-  - `/src/scss/_grid.scss`
-  - `/src/scss/_media-queries.scss`
-  - `/src/scss/index.scss`
-  - `/static/style.css`
+### Removed scss text component
+  - `/src/scss/components.scss`
+  - `/src/scss/components/text.scss`
 
 ## Comming Soon (v0.1.0)
 
