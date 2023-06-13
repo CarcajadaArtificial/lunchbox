@@ -1,3 +1,7 @@
+.comp-header {
+  padding: var(--s-triple) 0 var(--s-one-and-half) 0;
+}
+
 *,
 *::before,
 *::after {
@@ -198,85 +202,85 @@ button {
   }
 }
 
-.layout-empty section > article {
+.layout-empty .layout-module {
   grid-column: span 1;
 }
 
-.layout-full section > article {
+.layout-full .layout-module {
   grid-column: span 12;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-full section > article {
+  .layout-full .layout-module {
     grid-column: span 6;
   }
 }
 
-.layout-center section > article {
+.layout-center .layout-module {
   grid-column: 2/span 10;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-center section > article {
+  .layout-center .layout-module {
     grid-column: span 6;
   }
 }
 
-.layout-focus section > article {
+.layout-focus .layout-module {
   grid-column: 3/span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-focus section > article {
+  .layout-focus .layout-module {
     grid-column: 2/span 4;
   }
 }
 
-.layout-halves section > article {
+.layout-halves .layout-module {
   grid-column: span 6;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-halves section > article {
+  .layout-halves .layout-module {
     grid-column: span 3;
   }
 }
 
-.layout-thirds section > article {
+.layout-thirds .layout-module {
   grid-column: span 4;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-thirds section > article {
+  .layout-thirds .layout-module {
     grid-column: span 2;
   }
 }
 
-.layout-right section > article {
+.layout-right .layout-module {
   grid-column: span 4;
 }
-.layout-right section > article:nth-child(even) {
+.layout-right .layout-module:nth-child(even) {
   grid-column: span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-right section > article {
+  .layout-right .layout-module {
     grid-column: span 2;
   }
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-right section > article:nth-child(even) {
+  .layout-right .layout-module:nth-child(even) {
     grid-column: span 4;
   }
 }
 
-.layout-left section > article {
+.layout-left .layout-module {
   grid-column: span 4;
 }
-.layout-left section > article:nth-child(odd) {
+.layout-left .layout-module:nth-child(odd) {
   grid-column: span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-left section > article {
+  .layout-left .layout-module {
     grid-column: span 2;
   }
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-left section > article:nth-child(odd) {
+  .layout-left .layout-module:nth-child(odd) {
     grid-column: span 4;
   }
 }

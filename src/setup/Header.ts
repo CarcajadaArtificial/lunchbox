@@ -11,7 +11,7 @@ export default (props: Partial<iHeader>) => {
   const p = applyDefaults<iHeader>(defaults, props);
 
   const classes = {
-    header: cn('pt-20 pb-10'),
+    header: cn('comp-header'),
   };
 
   return { c: classes, ...p };

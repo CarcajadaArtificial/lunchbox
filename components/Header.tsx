@@ -7,7 +7,7 @@ export default function (props: Partial<iHeader>) {
   const { c, children, layout_type, ...p } = setup(props);
 
   return (
-    <Panel onlyBottom>
+    <Panel>
       <header {...p} class={c.header}>
         <Layout type={layout_type}>
           {children}

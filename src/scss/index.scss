@@ -5,6 +5,7 @@
 @use 'media-queries' as *;
 @use 'grid' as *;
 @use 'size' as *;
+@use 'components' as *;
 
 @include build-reset();
 // root
@@ -16,4 +17,4 @@
 @include build-dual-theme($palette, 'limon', 'obsidiana', 'papel', true);
 @include build-typography-classes($font-schema);
 @include build-grid($grid-schemas, true);
-@include build-all-layouts($layout-schemas);
+@include build-all-layouts($layout-schemas, true);

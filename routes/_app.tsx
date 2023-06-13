@@ -8,7 +8,7 @@ export default function App({ Component }: AppProps) {
         <title>Fresh Garlic - Playground</title>
         <link rel="stylesheet" href="/style.css" />
       </Head>
-      <body class="clr-bg-panel clr-txt-personality txt-display">
+      <body class="clr-bg-panel clr-txt-base txt-paragraph">
         <Component />
       </body>
     </>

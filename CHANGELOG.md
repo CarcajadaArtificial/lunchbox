@@ -1,15 +1,21 @@
 # Changelog
 
-## v0.0.62
+## v0.0.63
 
-### Added and configured GarliCSS
-  - `/src/scss/_size.scss`
-  - `/src/scss/index.scss`
+### Updated setups
+  - `/src/setup/Header.ts`
+  - `/src/setup/Layout.ts`
+  - `/src/setup/Panel.ts`
+  - `/src/setup/Text.ts`
+  - `/src/types/props.ts`
 
 ### Minor updates
   - `/lib/garlicss`
-  - `/lib/sass-door`
   - `/routes/_app.tsx`
+  - `/routes/index.tsx`
+  - `/components/Header.tsx`
+  - `/src/scss/components.scss`
+  - `/src/scss/index.scss`
   - `/static/style.css`
 
 ## Comming Soon (v0.1.0)

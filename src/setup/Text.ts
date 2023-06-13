@@ -16,7 +16,7 @@ export default (props: Partial<iText>) => {
 
   const classes = {
     span: cn(
-      p.type,
+      `txt-${p.type}`,
       p.compact ? 'compact' : null,
       p.single ? 'single' : null,
       p.noMargins ? 'no-margins' : null,

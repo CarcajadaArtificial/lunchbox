@@ -11,13 +11,7 @@
 
 import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
-import {
-  BUTTON_TYPES,
-  LAYOUT_MARGINS,
-  LAYOUT_TYPES,
-  PAGE_THEME,
-  TEXT_TYPES,
-} from './enums.ts';
+import { BUTTON_TYPES, LAYOUT_MARGINS, LAYOUT_TYPES, PAGE_THEME, TEXT_TYPES } from './enums.ts';
 import { ItemLink } from './utils.ts';
 
 /**
@@ -71,7 +65,6 @@ export type iButton = iExtendedElement<HTMLButtonElement> & {
  */
 export type iLayout = iExtendedElement<HTMLDivElement> & {
   type: LAYOUT_TYPES;
-  margin: LAYOUT_MARGINS;
 };
 
 /**
@@ -161,9 +154,4 @@ export type iLinkmap = iExtendedElement<HTMLDivElement> & {
 /**
  * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iPanel = iExtendedElement<HTMLDivElement> & {
-  onlyTop: boolean;
-  onlyBottom: boolean;
-  doubleLeft: boolean;
-  doubleRight: boolean;
-};
+export type iPanel = iExtendedElement<HTMLDivElement>;
