@@ -2,22 +2,84 @@ import Header from "../components/Header.tsx";
 import Layout from "../components/Layout.tsx";
 import Main from "../components/Main.tsx";
 import Text from "../components/Text.tsx";
-import { TEXT_TYPES } from "../src/types/enums.ts";
+import { LAYOUT_TYPES, TEXT_TYPES } from "../src/types/enums.ts";
 
 export default function Home() {
   return (
     <div>
       <Header>
-        <Text type={TEXT_TYPES.PARAGRAPH}>asdf</Text>
+        <div>
+          <Text type={TEXT_TYPES.TITLE}>Fresh Lunchbox</Text>
+          <Text type={TEXT_TYPES.PARAGRAPH}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+            laudantium error pariatur similique, iure voluptatum ea ipsam velit,
+            accusamus quam consectetur dolores quaerat facere aliquam soluta?
+            Dolorem iure hic corporis?
+          </Text>
+        </div>
       </Header>
       <Main>
-        <Layout>
-          <Text type={TEXT_TYPES.SMALL}>asdf</Text>
-          <Text type={TEXT_TYPES.PARAGRAPH}>asdf</Text>
-          <Text type={TEXT_TYPES.SUBHEADING}>asdf</Text>
-          <Text type={TEXT_TYPES.HEADING}>asdf</Text>
-          <Text type={TEXT_TYPES.TITLE}>asdf</Text>
-          <Text type={TEXT_TYPES.DISPLAY}>asdf</Text>
+        <Layout type={LAYOUT_TYPES.LEFT}>
+          <div>
+            <Text type={TEXT_TYPES.DISPLAY}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.TITLE}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.HEADING}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.SUBHEADING}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+            <Text type={TEXT_TYPES.SMALL}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias laudantium error pariatur similique, iure voluptatum ea
+              ipsam velit, accusamus quam consectetur dolores quaerat facere
+              aliquam soluta? Dolorem iure hic corporis?
+            </Text>
+          </div>
         </Layout>
       </Main>
     </div>

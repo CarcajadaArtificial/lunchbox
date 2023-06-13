@@ -1,7 +1,3 @@
-.comp-header {
-  padding: var(--s-triple) 0 var(--s-one-and-half) 0;
-}
-
 *,
 *::before,
 *::after {
@@ -57,8 +53,8 @@ button {
   --txt-small: 0.64rem / 1.5rem;
   --txt-paragraph: 1rem / 1.5rem;
   --txt-subheading: 1.5625rem / 3rem;
-  --txt-heading: 1.953125rem / 3rem;
-  --txt-title: 2.44140625rem / 3rem;
+  --txt-heading: 2.44140625rem / 3rem;
+  --txt-title: 3.0517578125rem / 4.5rem;
   --txt-display: 3.8146972656rem / 4.5rem;
 }
 
@@ -67,8 +63,8 @@ button {
     --txt-small: 0.6944444444rem / 1.5rem;
     --txt-paragraph: 1rem / 1.5rem;
     --txt-subheading: 1.44rem / 3rem;
-    --txt-heading: 1.728rem / 3rem;
-    --txt-title: 2.0736rem / 3rem;
+    --txt-heading: 2.0736rem / 3rem;
+    --txt-title: 2.48832rem / 3rem;
     --txt-display: 2.985984rem / 4.5rem;
   }
 }
@@ -283,6 +279,29 @@ button {
   .layout-left .layout-module:nth-child(odd) {
     grid-column: span 4;
   }
+}
+
+.comp-header {
+  padding: var(--s-triple) 0 var(--s-one-and-half) 0;
+}
+
+.comp-text {
+  display: block;
+}
+.comp-text:not(.no-margins).txt-display, .comp-text:not(.no-margins).txt-title, .comp-text:not(.no-margins).txt-heading, .comp-text:not(.no-margins).txt-subheading {
+  margin-bottom: var(--s-one-and-half);
+}
+.comp-text:not(.no-margins).txt-paragraph + .txt-display,
+.comp-text:not(.no-margins).txt-paragraph + .txt-title,
+.comp-text:not(.no-margins).txt-paragraph + .txt-heading,
+.comp-text:not(.no-margins).txt-paragraph + .txt-subheading {
+  margin-top: var(--s-triple);
+}
+.comp-text:not(.no-margins).txt-paragraph + .txt-paragraph {
+  margin-top: var(--s-one-and-half);
+}
+.comp-text:not(.no-margins).txt-small {
+  margin: var(--s-one-and-half) 0;
 }
 
 /*# sourceMappingURL=style.css.map */

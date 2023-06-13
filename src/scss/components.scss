@@ -1,3 +1,33 @@
 .comp-header {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
 }
+
+.comp-text {
+  display: block;
+
+  &:not(.no-margins) {
+    &.txt-display,
+    &.txt-title,
+    &.txt-heading,
+    &.txt-subheading {
+      margin-bottom: var(--s-one-and-half);
+    }
+
+    &.txt-paragraph {
+      + .txt-display,
+      + .txt-title,
+      + .txt-heading,
+      + .txt-subheading {
+        margin-top: var(--s-triple);
+      }
+
+      + .txt-paragraph {
+        margin-top: var(--s-one-and-half);
+      }
+    }
+
+    &.txt-small {
+      margin: var(--s-one-and-half) 0;
+    }
+  }
+}

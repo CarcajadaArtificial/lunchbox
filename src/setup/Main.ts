@@ -9,7 +9,7 @@ export default (props: Partial<iMain>) => {
   const p = applyDefaults<iMain>(defaults, props);
 
   const classes = {
-    main: cn('flex-1 flex flex-col gap-8 py-8 clr-bg-page'),
+    main: cn('clr-bg-page'),
   };
 
   return { c: classes, ...p };

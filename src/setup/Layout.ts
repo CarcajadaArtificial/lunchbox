@@ -12,7 +12,7 @@ export default (props: Partial<iLayout>) => {
 
   const classes = {
     layout: cn(`grid layout-${p.type}`),
-    blocks: cn('layout-mdoule'),
+    module: cn('layout-module'),
   };
 
   return { c: classes, ...p };

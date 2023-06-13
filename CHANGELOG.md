@@ -1,22 +1,23 @@
 # Changelog
 
-## v0.0.63
+## v0.0.64
 
-### Updated setups
-  - `/src/setup/Header.ts`
+### Updated Layout, Main, and Text component to GarliCSS.
+  - `/components/Layout.tsx`
   - `/src/setup/Layout.ts`
-  - `/src/setup/Panel.ts`
+  - `/src/setup/Main.ts`
   - `/src/setup/Text.ts`
-  - `/src/types/props.ts`
+  - `/src/scss/components.scss`
+
+### Renamed `src/scss/index.scss` to `system.scss`
+  - `/src/scss/index.scss`
+  - `/src/scss/system.scss`
 
 ### Minor updates
   - `/lib/garlicss`
-  - `/routes/_app.tsx`
   - `/routes/index.tsx`
-  - `/components/Header.tsx`
-  - `/src/scss/components.scss`
-  - `/src/scss/index.scss`
   - `/static/style.css`
+  - `/src/scss/_size.scss`
 
 ## Comming Soon (v0.1.0)
 
