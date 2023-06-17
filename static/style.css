@@ -304,4 +304,8 @@ button {
   margin: var(--s-one-and-half) 0;
 }
 
+.comp-navigation {
+  padding: var(--s-three-quarters) 0;
+}
+
 /*# sourceMappingURL=style.css.map */

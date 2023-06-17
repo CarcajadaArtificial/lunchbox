@@ -1,23 +1,16 @@
 # Changelog
 
-## v0.0.64
+## v0.0.65
 
-### Updated Layout, Main, and Text component to GarliCSS.
-  - `/components/Layout.tsx`
-  - `/src/setup/Layout.ts`
-  - `/src/setup/Main.ts`
-  - `/src/setup/Text.ts`
+### Updated Navigation component to GarliCSS.
+  - `/components/Navigation.tsx`
+  - `/components/Panel.tsx`
+  - `/src/setup/Navigation.ts`
+  - `/routes/index.tsx`
   - `/src/scss/components.scss`
 
-### Renamed `src/scss/index.scss` to `system.scss`
-  - `/src/scss/index.scss`
-  - `/src/scss/system.scss`
-
 ### Minor updates
-  - `/lib/garlicss`
-  - `/routes/index.tsx`
   - `/static/style.css`
-  - `/src/scss/_size.scss`
 
 ## Comming Soon (v0.1.0)
 
