@@ -1,15 +1,21 @@
 # Changelog
 
-## v0.0.65
+## v0.0.66
 
-### Updated Navigation component to GarliCSS.
-  - `/components/Navigation.tsx`
-  - `/components/Panel.tsx`
-  - `/src/setup/Navigation.ts`
-  - `/routes/index.tsx`
+### Updated Footer and Button components to GarliCSS.
+  - `/components/Footer.tsx`
+  - `/components/Button.tsx`
+  - `/src/setup/shared.ts`
+  - `/src/setup/Footer.ts`
   - `/src/scss/components.scss`
+  - `/routes/index.tsx`
 
 ### Minor updates
+  - `/src/types/props.ts`
+  - `/src/setup/Link.ts`
+  - `/src/setup/Main.ts`
+  - `/src/scss/system.scss`
+  - `/src/scss/index.scss`
   - `/static/style.css`
 
 ## Comming Soon (v0.1.0)

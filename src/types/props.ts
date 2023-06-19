@@ -11,7 +11,7 @@
 
 import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
-import { BUTTON_TYPES, LAYOUT_MARGINS, LAYOUT_TYPES, PAGE_THEME, TEXT_TYPES } from './enums.ts';
+import { BUTTON_TYPES, LAYOUT_TYPES, PAGE_THEME, TEXT_TYPES } from './enums.ts';
 import { ItemLink } from './utils.ts';
 
 /**

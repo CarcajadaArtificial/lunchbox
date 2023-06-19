@@ -13,7 +13,7 @@
 @include build-size-schema(create-size-schema($type-schema, 1rem, 'minor-third'), 'print');
 @include build-fonts($fonts);
 // Utility classes
-@include build-dual-theme($palette, 'limon', 'obsidiana', 'papel', true);
+@include build-dual-theme($palette, 'limon', 'grafito', 'papel', true);
 @include build-typography-classes($font-schema);
 @include build-grid($grid-schemas, true);
 @include build-all-layouts($layout-schemas, true);

@@ -9,7 +9,7 @@ export default (props: Partial<iMain>) => {
   const p = applyDefaults<iMain>(defaults, props);
 
   const classes = {
-    main: cn('clr-bg-page'),
+    main: cn('comp-main clr-bg-page'),
   };
 
   return { c: classes, ...p };

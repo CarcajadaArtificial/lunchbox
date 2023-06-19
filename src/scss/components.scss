@@ -1,5 +1,26 @@
+@use './lib/garlicss.scss' as *;
+@use './lib/sassdoor.scss' as *;
+@use 'media-queries.scss' as *;
+
 .comp-header {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
+}
+
+.comp-main {
+  padding-top: var(--s-triple);
+}
+
+.comp-footer {
+  @include quick-mq('(prefers-color-scheme: dark)') {
+    .fresh-badge-light {
+      display: none;
+    }
+  }
+  @include quick-mq('(prefers-color-scheme: light)') {
+    .fresh-badge-dark {
+      display: none;
+    }
+  }
 }
 
 .comp-text {
@@ -34,4 +55,12 @@
 
 .comp-navigation {
   padding: var(--s-three-quarters) 0;
+}
+
+.comp-button {
+  padding: var(--s-quarter) var(--s-five-eights);
+  margin: var(--s-third) 0 var(--s-two-thirds) 0;
+  max-width: max-content;
+  cursor: pointer;
+  border-radius: var(--s-eighth);
 }

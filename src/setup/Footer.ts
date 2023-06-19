@@ -12,7 +12,7 @@ export default (props: Partial<iFooter>) => {
   const p = applyDefaults<iFooter>(defaults, props);
 
   const classes = {
-    footer: cn('pt-4 pb-4'),
+    footer: cn('comp-footer'),
   };
 
   return { c: classes, ...p };

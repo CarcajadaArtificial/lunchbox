@@ -3,13 +3,20 @@ import Layout from '../components/Layout.tsx';
 import Main from '../components/Main.tsx';
 import Text from '../components/Text.tsx';
 import Navigation from '../components/Navigation.tsx';
-import { LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
+import Button from '../components/Button.tsx';
+import Footer from '../components/Footer.tsx';
+import { LAYOUT_TYPES, TEXT_TYPES, BUTTON_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
   return (
     <div>
       <Navigation>
-        <Text type={TEXT_TYPES.PARAGRAPH}>Test</Text>
+        <Text type={TEXT_TYPES.PARAGRAPH}>
+          Test Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Text>
+        <div class="flex justify-end">
+          <Button>Button</Button>
+        </div>
       </Navigation>
       <Header>
         <div>
@@ -76,6 +83,7 @@ export default function Home() {
           </div>
         </Layout>
       </Main>
+      <Footer madeWithFresh>Powered by myself</Footer>
     </div>
   );
 }
