@@ -11,14 +11,19 @@
 }
 
 .comp-footer {
-  @include quick-mq('(prefers-color-scheme: dark)') {
-    .fresh-badge-light {
-      display: none;
+  padding: var(--s-one-and-half) 0;
+  .fresh-badge {
+    margin: var(--s-third) 0;
+
+    @include quick-mq('(prefers-color-scheme: dark)') {
+      &.light {
+        display: none;
+      }
     }
-  }
-  @include quick-mq('(prefers-color-scheme: light)') {
-    .fresh-badge-dark {
-      display: none;
+    @include quick-mq('(prefers-color-scheme: light)') {
+      &.dark {
+        display: none;
+      }
     }
   }
 }

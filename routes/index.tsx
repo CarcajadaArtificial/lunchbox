@@ -83,7 +83,14 @@ export default function Home() {
           </div>
         </Layout>
       </Main>
-      <Footer madeWithFresh>Powered by myself</Footer>
+      <Footer madeWithFresh>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur porro aut ad praesentium
+          placeat itaque reiciendis, perferendis molestiae alias, impedit sed amet blanditiis illum! Saepe
+          vitae perferendis nulla quisquam quibusdam.
+        </p>
+        <p>Powered by myself</p>
+      </Footer>
     </div>
   );
 }

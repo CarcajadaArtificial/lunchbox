@@ -289,13 +289,19 @@ button {
   padding-top: var(--s-triple);
 }
 
+.comp-footer {
+  padding: var(--s-one-and-half) 0;
+}
+.comp-footer .fresh-badge {
+  margin: var(--s-third) 0;
+}
 @media (prefers-color-scheme: dark) {
-  .comp-footer .fresh-badge-light {
+  .comp-footer .fresh-badge.light {
     display: none;
   }
 }
 @media (prefers-color-scheme: light) {
-  .comp-footer .fresh-badge-dark {
+  .comp-footer .fresh-badge.dark {
     display: none;
   }
 }

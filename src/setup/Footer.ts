@@ -5,7 +5,7 @@ import { iFooter } from '../types/props.ts';
 export default (props: Partial<iFooter>) => {
   const defaults: iFooter = {
     children: undefined,
-    madeWithFresh: true,
+    madeWithFresh: false,
     layout_type: LAYOUT_TYPES.LEFT,
   };
 
