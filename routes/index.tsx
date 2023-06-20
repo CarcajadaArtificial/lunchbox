@@ -5,6 +5,7 @@ import Text from '../components/Text.tsx';
 import Navigation from '../components/Navigation.tsx';
 import Button from '../components/Button.tsx';
 import Footer from '../components/Footer.tsx';
+import Link from '../components/Link.tsx';
 import { LAYOUT_TYPES, TEXT_TYPES, BUTTON_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
@@ -89,7 +90,11 @@ export default function Home() {
           placeat itaque reiciendis, perferendis molestiae alias, impedit sed amet blanditiis illum! Saepe
           vitae perferendis nulla quisquam quibusdam.
         </p>
-        <p>Powered by myself</p>
+        <p>
+          Powered by&nbsp;
+          <Link href="https://github.com/CarcajadaArtificial">myself</Link>. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit.
+        </p>
       </Footer>
     </div>
   );

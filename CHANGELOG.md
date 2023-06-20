@@ -1,11 +1,10 @@
 # Changelog
 
-## v0.0.67
+## v0.0.68
 
-### Updated Footer components.
-  - `/components/Footer.tsx`
+### Updated Link components.
   - `/routes/index.tsx`
-  - `/src/setup/Footer.ts`
+  - `/src/setup/Link.ts`
   - `/src/scss/components.scss`
 
 ### Minor updates

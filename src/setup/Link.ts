@@ -10,7 +10,7 @@ export default (props: Partial<iLink>) => {
   const p = applyDefaults<iLink>(defaults, props);
 
   const classes = {
-    link: cn(p.nostyle ? null : 'clr-txt-personality', p.class),
+    link: cn(p.nostyle ? null : 'comp-link clr-txt-personality', p.class),
   };
 
   return { c: classes, ...p };
