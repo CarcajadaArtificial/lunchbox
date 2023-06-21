@@ -1,10 +1,11 @@
 # Changelog
 
-## v0.0.69
+## v0.0.71
 
-### Updated the Card component to GarliCSS.
+### Updated the Linkmap component to GarliCSS.
   - `/routes/index.tsx`
-  - `/src/setup/Card.ts`
+  - `/src/setup/Linkmap.ts`
+  - `/components/Linkmap.tsx`
   - `/src/scss/components.scss`
 
 ### Minor updates
@@ -78,7 +79,7 @@
   - [ ] Update all components to GarliCSS and display on index route.
     - [x] Button
     - [x] Card
-    - [ ] Code
+    - [x] Code
     - [x] Footer
     - [x] Header
     - [ ] Input

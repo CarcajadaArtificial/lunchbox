@@ -6,7 +6,7 @@ import Header from '../components/Header.tsx';
 // import Input from '../components/Input.tsx';
 import Layout from '../components/Layout.tsx';
 import Link from '../components/Link.tsx';
-// import Linkmap from '../components/Linkmap.tsx';
+import Linkmap from '../components/Linkmap.tsx';
 import Main from '../components/Main.tsx';
 // import Menu from '../components/Menu.tsx';
 import Navigation from '../components/Navigation.tsx';
@@ -44,6 +44,22 @@ export default function Home() {
           <div>
             <Text type={TEXT_TYPES.DISPLAY}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.TITLE}>asdfghjkl</Text>
+            <Linkmap
+              links={[
+                { name: 'asdfghjkl', url: './' },
+                { name: 'asdfghjkl' },
+                {
+                  name: 'asdfghjkl',
+                  url: './',
+                  children: [
+                    { name: 'asdfghjkl', url: './' },
+                    { name: 'asdfghjkl', url: './', children: [{ name: 'asdfghjkl', url: './' }] },
+                    { name: 'asdfghjkl' },
+                  ],
+                },
+                { name: 'asdfghjkl', url: './' },
+              ]}
+            />
             <Text type={TEXT_TYPES.HEADING}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.SUBHEADING}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.PARAGRAPH}>
@@ -56,15 +72,15 @@ export default function Home() {
               pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores
               quaerat facere aliquam soluta? Dolorem iure hic corporis?
             </Text>
+            <Card>
+              <Text type={TEXT_TYPES.HEADING}>Example Card</Text>
+              <Text type={TEXT_TYPES.PARAGRAPH}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error
+                pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores
+                quaerat facere aliquam soluta? Dolorem iure hic corporis?
+              </Text>
+            </Card>
           </div>
-          <Card>
-            <Text type={TEXT_TYPES.HEADING}>Example Card</Text>
-            <Text type={TEXT_TYPES.PARAGRAPH}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error
-              pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores
-              quaerat facere aliquam soluta? Dolorem iure hic corporis?
-            </Text>
-          </Card>
         </Layout>
       </Main>
       <Footer layout_type={LAYOUT_TYPES.CENTER} madeWithFresh>

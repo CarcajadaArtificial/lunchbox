@@ -316,7 +316,7 @@ button {
 }
 .comp-code_wrapper {
   display: inline;
-  padding: var(--s-eighth) 1ch;
+  padding: 3px 1ch 1px 1ch;
   margin: 0 1ch;
 }
 
@@ -357,6 +357,10 @@ button {
   max-width: max-content;
   cursor: pointer;
   border-radius: var(--s-eighth);
+}
+
+.comp-linkmap {
+  margin-bottom: var(--s-one-and-half);
 }
 
 .h-min {
