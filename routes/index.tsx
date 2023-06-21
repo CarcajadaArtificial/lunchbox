@@ -31,19 +31,12 @@ export default function Home() {
       </Navigation>
       <Header layout_type={LAYOUT_TYPES.CENTER}>
         <div>
-          <Text type={TEXT_TYPES.TITLE}>Fresh Lunchbox</Text>
-          <Text type={TEXT_TYPES.PARAGRAPH}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error pariatur
-            similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores quaerat facere
-            aliquam soluta? Dolorem iure hic corporis?
-          </Text>
+          <Text type={TEXT_TYPES.DISPLAY}>Fresh Lunchbox</Text>
         </div>
       </Header>
       <Main>
         <Layout type={LAYOUT_TYPES.CENTER}>
           <div>
-            <Text type={TEXT_TYPES.DISPLAY}>asdfghjkl</Text>
-            <Text type={TEXT_TYPES.TITLE}>asdfghjkl</Text>
             <Linkmap
               links={[
                 { name: 'asdfghjkl', url: './' },
@@ -60,20 +53,20 @@ export default function Home() {
                 { name: 'asdfghjkl', url: './' },
               ]}
             />
-            <Text type={TEXT_TYPES.HEADING}>asdfghjkl</Text>
-            <Text type={TEXT_TYPES.SUBHEADING}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.TITLE}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.PARAGRAPH}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               <Code>Molestias laudantium error pariatur similique, iure voluptatum ea ipsam velit,</Code>
               accusamus quam consectetur dolores quaerat facere aliquam soluta? Dolorem iure hic corporis?
             </Text>
+            <Text type={TEXT_TYPES.HEADING}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.SMALL}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error
               pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores
               quaerat facere aliquam soluta? Dolorem iure hic corporis?
             </Text>
             <Card>
-              <Text type={TEXT_TYPES.HEADING}>Example Card</Text>
+              <Text type={TEXT_TYPES.SUBHEADING}>Example Card</Text>
               <Text type={TEXT_TYPES.PARAGRAPH}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error
                 pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores

@@ -1,0 +1,22 @@
+.screen::after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 300vh;
+  background-size: 100vw 1.5rem;
+  background-repeat: repeat;
+  background-image: linear-gradient(to top, #eee6f2 0.1vh, #0c0a0d 0.1vh, #0c0a0d 100%);
+  filter: opacity(0.3);
+}
+.screen * {
+  filter: opacity(0.9);
+}
+.screen .layout-module {
+  border-color: #eee6f2;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+/*# sourceMappingURL=playground.css.map */

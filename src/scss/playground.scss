@@ -1,0 +1,33 @@
+// Do not include in index.scss, it is meant for playrgound testing only.
+@use 'color' as *;
+@use 'sass:map';
+
+.screen {
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 300vh;
+    background-size: 100vw 1.5rem;
+    background-repeat: repeat;
+    background-image: linear-gradient(
+      to top,
+      map-get($palette, papel) 0.1vh,
+      map-get($palette, obsidiana) 0.1vh,
+      map-get($palette, obsidiana) 100%
+    );
+    filter: opacity(0.3);
+  }
+
+  * {
+    filter: opacity(0.9);
+  }
+
+  .layout-module {
+    border-color: map-get($palette, papel);
+    border-left: 1px solid;
+    border-right: 1px solid;
+  }
+}

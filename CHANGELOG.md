@@ -1,14 +1,16 @@
 # Changelog
 
-## v0.0.71
+## v0.0.72
 
-### Updated the Linkmap component to GarliCSS.
+### Added a testing playground with a vertical rythm screen
+  - `/deno.json`
   - `/routes/index.tsx`
-  - `/src/setup/Linkmap.ts`
-  - `/components/Linkmap.tsx`
-  - `/src/scss/components.scss`
+  - `/routes/_app.tsx`
+  - `/static/playground.css`
+  - `/src/scss/playground.scss`
 
 ### Minor updates
+  - `/src/scss/components.scss`
   - `/static/style.css`
 
 ## Comming Soon (v0.1.0)

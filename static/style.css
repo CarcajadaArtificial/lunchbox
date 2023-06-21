@@ -326,6 +326,7 @@ button {
   position: relative;
   right: var(--s-one-and-half);
   margin-bottom: var(--s-one-and-half);
+  border-radius: var(--s-quarter);
 }
 
 .comp-text {
