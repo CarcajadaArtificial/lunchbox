@@ -1,6 +1,6 @@
 import Button from '../components/Button.tsx';
 import Card from '../components/Card.tsx';
-// import Code from '../components/Code.tsx';
+import Code from '../components/Code.tsx';
 import Footer from '../components/Footer.tsx';
 import Header from '../components/Header.tsx';
 // import Input from '../components/Input.tsx';
@@ -46,6 +46,11 @@ export default function Home() {
             <Text type={TEXT_TYPES.TITLE}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.HEADING}>asdfghjkl</Text>
             <Text type={TEXT_TYPES.SUBHEADING}>asdfghjkl</Text>
+            <Text type={TEXT_TYPES.PARAGRAPH}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <Code>Molestias laudantium error pariatur similique, iure voluptatum ea ipsam velit,</Code>
+              accusamus quam consectetur dolores quaerat facere aliquam soluta? Dolorem iure hic corporis?
+            </Text>
             <Text type={TEXT_TYPES.SMALL}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium error
               pariatur similique, iure voluptatum ea ipsam velit, accusamus quam consectetur dolores

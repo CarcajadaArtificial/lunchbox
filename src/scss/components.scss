@@ -33,6 +33,16 @@
   cursor: pointer;
 }
 
+.comp-code {
+  line-break: strict;
+
+  &_wrapper {
+    display: inline;
+    padding: var(--s-eighth) 1ch;
+    margin: 0 1ch;
+  }
+}
+
 /// @todo For cards inside a center layout, include a better padding and width on sm screens.
 .comp-card {
   padding: var(--s-one-and-half);

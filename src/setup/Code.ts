@@ -9,10 +9,8 @@ export default (props: Partial<iCode>) => {
   const p = applyDefaults<iCode>(defaults, props);
 
   const classes = {
-    code: cn(
-      'block clr-bg-primary px-4 pt-2 pb-3 clr-heading rounded border-b-2 clr-border'
-    ),
-    wrapper: cn('code-wrapper grid py-4'),
+    code: cn('comp-code clr-txt-personality'),
+    wrapper: cn('comp-code_wrapper clr-bg-panel'),
   };
 
   return { c: classes, ...p };
