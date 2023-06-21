@@ -15,12 +15,12 @@
   .fresh-badge {
     margin: var(--s-third) 0;
 
-    @include quick-mq('(prefers-color-scheme: dark)') {
+    @media (prefers-color-scheme: dark) {
       &.light {
         display: none;
       }
     }
-    @include quick-mq('(prefers-color-scheme: light)') {
+    @media (prefers-color-scheme: light) {
       &.dark {
         display: none;
       }
@@ -31,6 +31,15 @@
 .comp-link {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/// @todo For cards inside a center layout, include a better padding and width on sm screens.
+.comp-card {
+  padding: var(--s-one-and-half);
+  width: calc(100% + var(--s-triple));
+  position: relative;
+  right: var(--s-one-and-half);
+  margin-bottom: var(--s-one-and-half);
 }
 
 .comp-text {

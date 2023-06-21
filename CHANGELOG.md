@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.0.68
+## v0.0.69
 
-### Updated Link components.
+### Updated the Card component to GarliCSS.
   - `/routes/index.tsx`
-  - `/src/setup/Link.ts`
+  - `/src/setup/Card.ts`
   - `/src/scss/components.scss`
 
 ### Minor updates
@@ -55,23 +55,10 @@
   - Fix Markdown Parser. Use h5 instead of h4 for code block headings.
 
 - Components
-  - [x] Page layout
-  - [x] Header
-  - [x] Text
-  - [x] Link
-  - [x] Footer
-  - [x] Navigation
-    - [x] Menu
-  - [x] Select
-  - [x] Button
   - [ ] Fieldset
   - [ ] Chip
-  - [x] Card
-  - [x] Main
   - [ ] Linkmap
-  - [x] Separator
   - [ ] Spinner
-  - [x] Panel
 
 - Documentation
   - [ ] Project README.md
@@ -83,3 +70,43 @@
     - [ ] Render functions (Gradually as the components are visually documented in ana-components-docs)
     - [ ] Documentation site ()
   - [ ] Sass code
+
+### Roadmap
+
+#### v0.1
+
+  - [ ] Update all components to GarliCSS and display on index route.
+    - [x] Button
+    - [x] Card
+    - [ ] Code
+    - [x] Footer
+    - [x] Header
+    - [ ] Input
+    - [x] Layout
+    - [x] Link
+    - [ ] Linkmap
+    - [x] Main
+    - [ ] Menu
+    - [x] Navigation
+    - [ ] Page
+    - [ ] Panel
+    - [ ] Select
+    - [ ] Separator
+    - [x] Text
+    - [ ] TextArea
+  - [ ] Document all needed fixes and upgrades possible using this structure:
+    - Add a comment where the fix should be added using the `@todo`.
+    - Grade the fix using one to three `!`s.
+      - `!!!`: Urgent
+      - `!!`: Before next version.
+      - `!`: After next version.
+      - ` `: Whenever
+      - `?`: Possible fix, question it later.
+    - Substitue the `Features` section of this document to a list of every feature with its pending.
+  - [ ] Finish all components.
+  - [ ] Fix `!!`s and `!!!`s.
+  - [ ] Do a documentation cleanup.
+
+#### v0.2
+
+  - [ ] Update components to GarliCSS animations.

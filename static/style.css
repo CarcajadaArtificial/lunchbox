@@ -311,6 +311,14 @@ button {
   cursor: pointer;
 }
 
+.comp-card {
+  padding: var(--s-one-and-half);
+  width: calc(100% + var(--s-triple));
+  position: relative;
+  right: var(--s-one-and-half);
+  margin-bottom: var(--s-one-and-half);
+}
+
 .comp-text {
   display: block;
 }
