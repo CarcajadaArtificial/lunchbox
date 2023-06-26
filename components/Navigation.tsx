@@ -9,8 +9,8 @@ export default function (props: Partial<iNavigation>) {
 
   return (
     <div class={c.wrapper}>
-      <Panel class={c.nav}>
-        <nav {...p}>
+      <Panel>
+        <nav class={c.nav} {...p}>
           <Layout type={LAYOUT_TYPES.RIGHT}>{children}</Layout>
         </nav>
       </Panel>

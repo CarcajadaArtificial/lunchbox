@@ -10,6 +10,7 @@ export default (props: Partial<iLinkmap>) => {
 
   const classes = {
     component: cn('comp-linkmap'),
+    list: cn('comp-linkmap_list'),
   };
 
   return { c: classes, ...p };

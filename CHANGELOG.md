@@ -1,17 +1,26 @@
 # Changelog
 
-## v0.0.72
+## v0.0.73
 
-### Added a testing playground with a vertical rythm screen
-  - `/deno.json`
+### Added a local component scheme to the playground page
   - `/routes/index.tsx`
-  - `/routes/_app.tsx`
-  - `/static/playground.css`
-  - `/src/scss/playground.scss`
+
+### Updated the Separator component to GarliCSS
+  - `/components/Separator.tsx`
+  - `/src/types/props.ts`
+
+### Fixed vertical rythm issues
+  - `/components/Linkmap.tsx`
+  - `/components/Navigation.tsx`
+  - `/src/setup/Linkmap.ts`
+  - `/src/setup/Navigation.ts`
 
 ### Minor updates
+  - `/src/setup/Panel.ts`
   - `/src/scss/components.scss`
+  - `/src/scss/playground.scss`
   - `/static/style.css`
+  - `/static/playground.css`
 
 ## Comming Soon (v0.1.0)
 
@@ -87,14 +96,14 @@
     - [ ] Input
     - [x] Layout
     - [x] Link
-    - [ ] Linkmap
+    - [x] Linkmap
     - [x] Main
     - [ ] Menu
     - [x] Navigation
     - [ ] Page
-    - [ ] Panel
+    - [x] Panel
     - [ ] Select
-    - [ ] Separator
+    - [x] Separator
     - [x] Text
     - [ ] TextArea
   - [ ] Document all needed fixes and upgrades possible using this structure:

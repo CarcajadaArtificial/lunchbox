@@ -8,7 +8,7 @@ export default function (props: Partial<iLinkmap>) {
   const { c, links, ...p } = setup(props);
 
   const renderRecursiveLinks = (links: ItemLink[]) => (
-    <ul class="pl-4">
+    <ul class={c.list}>
       {links.map((link) => (
         <li>
           {link.url ? <Link href={link.url}>{link.name}</Link> : <Text noMargins>{link.name}</Text>}

@@ -313,20 +313,28 @@ button {
 
 .comp-code {
   line-break: strict;
+  line-height: calc(100% - 1px);
 }
 .comp-code_wrapper {
   display: inline;
-  padding: 3px 1ch 1px 1ch;
-  margin: 0 1ch;
+  padding: 3px 0.5ch 1px 0.5ch;
+  margin: 0 0.5ch;
 }
 
 .comp-card {
-  padding: var(--s-one-and-half);
-  width: calc(100% + var(--s-triple));
   position: relative;
-  right: var(--s-one-and-half);
   margin-bottom: var(--s-one-and-half);
   border-radius: var(--s-quarter);
+  padding: var(--s-one-and-half);
+  width: calc(100% + var(--s-triple));
+  right: var(--s-one-and-half);
+}
+@media screen and (max-width: 39.9375em) {
+  .comp-card {
+    padding: var(--s-half);
+    width: calc(100% + var(--s-single));
+    right: var(--s-half);
+  }
 }
 
 .comp-text {
@@ -348,10 +356,6 @@ button {
   margin: var(--s-one-and-half) 0;
 }
 
-.comp-navigation {
-  padding: var(--s-three-quarters) 0;
-}
-
 .comp-button {
   padding: var(--s-quarter) var(--s-five-eights);
   margin: var(--s-third) 0 var(--s-two-thirds) 0;
@@ -362,6 +366,18 @@ button {
 
 .comp-linkmap {
   margin-bottom: var(--s-one-and-half);
+}
+.comp-linkmap_list:not(.comp-linkmap > .comp-linkmap_list) {
+  margin-left: var(--s-single);
+}
+
+.comp-separator {
+  margin-top: calc(var(--s-one-and-half) - 1px);
+  height: var(--s-one-and-half);
+}
+
+.comp-text.txt-paragraph + .comp-separator {
+  margin-top: var(--s-one-and-half);
 }
 
 .h-min {

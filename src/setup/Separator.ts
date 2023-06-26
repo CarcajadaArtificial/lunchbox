@@ -9,7 +9,7 @@ export default (props: Partial<iSeparator>) => {
   const p = applyDefaults<iSeparator>(defaults, props);
 
   const classes = {
-    separator: cn('separator border-b-1 clr-border mt-8 mb-10'),
+    separator: cn('comp-separator'),
   };
 
   return { c: classes, ...p };

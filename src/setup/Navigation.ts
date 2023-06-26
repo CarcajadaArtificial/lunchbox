@@ -10,9 +10,8 @@ export default (props: Partial<iNavigation>) => {
   const p = applyDefaults<iNavigation>(defaults, props);
 
   const classes = {
-    wrapper: cn('comp-navigation relative', p.fixed ? 'z-10' : ''),
-    nav: cn('w-full', p.fixed ? 'fixed' : ''),
-    title: cn('flex justify-between'),
+    wrapper: cn('comp-navigation_wrapper'),
+    nav: cn('comp-navigation'),
   };
 
   return { c: classes, ...p };

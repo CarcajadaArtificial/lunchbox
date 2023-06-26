@@ -35,22 +35,30 @@
 
 .comp-code {
   line-break: strict;
+  line-height: calc(100% - 1px);
 
   &_wrapper {
     display: inline;
-    padding: 3px 1ch 1px 1ch;
-    margin: 0 1ch;
+    padding: 3px 0.5ch 1px 0.5ch;
+    margin: 0 0.5ch;
   }
 }
 
 /// @todo For cards inside a center layout, include a better padding and width on sm screens.
 .comp-card {
-  padding: var(--s-one-and-half);
-  width: calc(100% + var(--s-triple));
   position: relative;
-  right: var(--s-one-and-half);
   margin-bottom: var(--s-one-and-half);
   border-radius: var(--s-quarter);
+
+  padding: var(--s-one-and-half);
+  width: calc(100% + var(--s-triple));
+  right: var(--s-one-and-half);
+
+  @include media(only-on($breakpoints, sm)) {
+    padding: var(--s-half);
+    width: calc(100% + var(--s-single));
+    right: var(--s-half);
+  }
 }
 
 .comp-text {
@@ -83,10 +91,6 @@
   }
 }
 
-.comp-navigation {
-  padding: var(--s-three-quarters) 0;
-}
-
 .comp-button {
   padding: var(--s-quarter) var(--s-five-eights);
   margin: var(--s-third) 0 var(--s-two-thirds) 0;
@@ -97,4 +101,17 @@
 
 .comp-linkmap {
   margin-bottom: var(--s-one-and-half);
+
+  &_list:not(.comp-linkmap > .comp-linkmap_list) {
+    margin-left: var(--s-single);
+  }
+}
+
+.comp-separator {
+  margin-top: calc(var(--s-one-and-half) - 1px);
+  height: var(--s-one-and-half);
+}
+
+.comp-text.txt-paragraph + .comp-separator {
+  margin-top: var(--s-one-and-half);
 }

@@ -127,7 +127,7 @@ export type iMenu = iExtendedElement<HTMLDivElement> & {
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iSeparator = iExtendedElement<HTMLDivElement>;
+export type iSeparator = iExtendedElement<HTMLHRElement>;
 
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
