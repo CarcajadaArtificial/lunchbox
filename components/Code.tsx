@@ -1,8 +1,8 @@
-import { iCode } from "../src/types/props.ts";
-import setup from "../src/setup/Code.ts";
+import { iCode } from '../src/types/props.ts';
+import setup from '../src/setup/Code.ts';
 
 /**
- * @todo Click to copy to clipboard.
+ * @todo [] Click to copy to clipboard.
  */
 export default function (props: Partial<iCode>) {
   const { c, children, ...p } = setup(props);

@@ -1,17 +1,16 @@
 # Changelog
 
-## v0.0.74
+## v0.0.75
 
-### Updated the Page component to GarliCSS
-  - `/components/Page.tsx`
-  - `/src/setup/Page.ts`
-  - `/src/types/props.ts`
-  - `/routes/index.tsx`
-
-### Minor updates
+### Updated todos
+  - `/components/Button.tsx`
+  - `/components/Code.tsx`
   - `/components/Footer.tsx`
   - `/components/Header.tsx`
   - `/components/Main.tsx`
+  - `/components/Menu.tsx`
+  - `/components/TextArea.tsx`
+  - `/src/scss/components.scss`
 
 ## Comming Soon (v0.1.0)
 

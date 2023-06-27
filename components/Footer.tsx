@@ -4,8 +4,11 @@ import Layout from './Layout.tsx';
 import Panel from './Panel.tsx';
 import Link from './Link.tsx';
 
-/// @todo Lazy load the `made-with-fresh` images. Maybe replace an src image with an inline SVG.
-/// @todo change the prop "layout_type" to be optional, and places no layout when undefined
+/**
+ * @todo [!!] change the prop "layout_type" to be optional, and places no layout when undefined
+ * @todo [ ] Lazy load the `made-with-fresh` images.
+ * @todo [?] Replace an src image with an inline SVG.
+ */
 export default function (props: Partial<iFooter>) {
   const { c, children, layout_type, madeWithFresh, ...p } = setup(props);
 
