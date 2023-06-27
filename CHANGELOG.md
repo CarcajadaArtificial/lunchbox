@@ -1,26 +1,17 @@
 # Changelog
 
-## v0.0.73
+## v0.0.74
 
-### Added a local component scheme to the playground page
+### Updated the Page component to GarliCSS
+  - `/components/Page.tsx`
+  - `/src/setup/Page.ts`
+  - `/src/types/props.ts`
   - `/routes/index.tsx`
 
-### Updated the Separator component to GarliCSS
-  - `/components/Separator.tsx`
-  - `/src/types/props.ts`
-
-### Fixed vertical rythm issues
-  - `/components/Linkmap.tsx`
-  - `/components/Navigation.tsx`
-  - `/src/setup/Linkmap.ts`
-  - `/src/setup/Navigation.ts`
-
 ### Minor updates
-  - `/src/setup/Panel.ts`
-  - `/src/scss/components.scss`
-  - `/src/scss/playground.scss`
-  - `/static/style.css`
-  - `/static/playground.css`
+  - `/components/Footer.tsx`
+  - `/components/Header.tsx`
+  - `/components/Main.tsx`
 
 ## Comming Soon (v0.1.0)
 

@@ -11,7 +11,7 @@
 
 import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
-import { BUTTON_TYPES, LAYOUT_TYPES, PAGE_THEME, TEXT_TYPES } from './enums.ts';
+import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from './enums.ts';
 import { ItemLink } from './utils.ts';
 
 /**
@@ -77,10 +77,7 @@ export type iNavigation = iExtendedElement & {
 /**
  * Page component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iPage = iExtendedElement<HTMLDivElement> & {
-  theme?: PAGE_THEME;
-  darkMode?: boolean;
-};
+export type iPage = iExtendedElement<HTMLDivElement>;
 
 /**
  * Text component's type that extends the `<span>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span).

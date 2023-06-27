@@ -10,8 +10,7 @@ import Linkmap from '../components/Linkmap.tsx';
 import Main from '../components/Main.tsx';
 // import Menu from '../components/Menu.tsx';
 import Navigation from '../components/Navigation.tsx';
-// import Page from '../components/Page.tsx';
-// import Panel from '../components/Panel.tsx';
+import Page from '../components/Page.tsx';
 // import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
@@ -63,18 +62,17 @@ export default function Home() {
   );
 
   return (
-    <div>
-      <Navigation fixed>
+    <Page>
+      <Navigation>
         {TestTinyText(TEXT_TYPES.PARAGRAPH)}
         <div class="flex justify-end">
           <Button>Button</Button>
         </div>
       </Navigation>
       <Header layout_type={LAYOUT_TYPES.LEFT}>
-        <div>
-          {TestTinyText(TEXT_TYPES.TITLE)}
-          {TestLargeText(TEXT_TYPES.PARAGRAPH)}
-        </div>
+        {TestTinyText(TEXT_TYPES.TITLE)}
+        <div></div>
+        {TestLargeText(TEXT_TYPES.PARAGRAPH)}
         <TestLinkmap />
       </Header>
       <Main>
@@ -104,6 +102,6 @@ export default function Home() {
         </Text>
         {TestLargeText(TEXT_TYPES.PARAGRAPH)}
       </Footer>
-    </div>
+    </Page>
   );
 }
