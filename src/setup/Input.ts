@@ -1,7 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { BUTTON_TYPES } from '../types/enums.ts';
 import { iInput } from '../types/props.ts';
-import { boxInput, nonboxInput, button } from './shared.ts';
 
 const defaults: iInput = {
   required: false,
@@ -12,37 +10,22 @@ export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
   const classes = {
-    input: cn(
-      p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? button(
-            p.error
-              ? BUTTON_TYPES.ERROR
-              : p.disabled
-              ? BUTTON_TYPES.DISABLED
-              : BUTTON_TYPES.CONTRAST
-          )
-        : p.type === 'radio' || p.type === 'checkbox' || p.type === 'slider'
-        ? nonboxInput(p.disabled)
-        : boxInput(p.maxWidth, p.disabled, p.error)
-    ),
-    text: cn('px-2 select-none'),
-    label: cn(
-      'flex',
-      p.type === 'radio' || p.type === 'checkbox'
-        ? 'flex-row-reverse justify-end items-center w-max'
-        : p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? 'flex-col w-max'
-        : 'flex-col'
-    ),
-    error: cn('px-2 clr-txt-error'),
-    required: cn('clr-txt-error ml-1'),
+    input: cn('comp-input', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
+    text: cn('select-none'),
+    label: cn('comp-input_label'),
+    error: cn('comp-input_error clr-txt-error'),
+    required: cn('comp-input_required clr-txt-error'),
     container: cn(
-      'mb-4',
-      p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? 'w-min'
-        : p.maxWidth
+      'comp-input_container',
+      p.maxWidth
         ? 'w-full'
-        : 'max-w-sm'
+        : p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+        ? 'comp-input_button'
+        : p.type && ['radio', 'checkbox'].includes(p.type)
+        ? 'comp-input_bool'
+        : p.type && ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
+        ? 'comp-input_date'
+        : 'comp-input_box'
     ),
   };
 

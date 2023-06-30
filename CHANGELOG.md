@@ -1,16 +1,15 @@
 # Changelog
 
-## v0.0.75
+## v0.0.76
 
-### Updated todos
-  - `/components/Button.tsx`
-  - `/components/Code.tsx`
-  - `/components/Footer.tsx`
-  - `/components/Header.tsx`
-  - `/components/Main.tsx`
-  - `/components/Menu.tsx`
-  - `/components/TextArea.tsx`
+### Updated the Input component to GarliCSS
+  - `/routes/index.tsx`
   - `/src/scss/components.scss`
+  - `/src/setup/Input.ts`
+
+### Minor updates
+  - `/components/Footer.tsx`
+  - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 
@@ -83,7 +82,7 @@
     - [x] Code
     - [x] Footer
     - [x] Header
-    - [ ] Input
+    - [x] Input
     - [x] Layout
     - [x] Link
     - [x] Linkmap

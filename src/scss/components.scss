@@ -2,14 +2,20 @@
 @use './lib/sassdoor.scss' as *;
 @use 'media-queries.scss' as *;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Header
 .comp-header {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Main
 .comp-main {
   padding-top: var(--s-triple);
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Footer
 .comp-footer {
   padding: var(--s-one-and-half) 0;
   .fresh-badge {
@@ -28,11 +34,15 @@
   }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Link
 .comp-link {
   text-decoration: underline;
   cursor: pointer;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Code
 .comp-code {
   line-break: strict;
   line-height: calc(100% - 1px);
@@ -44,6 +54,8 @@
   }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Card
 .comp-card {
   position: relative;
   margin-bottom: var(--s-one-and-half);
@@ -60,8 +72,17 @@
   }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Text
 .comp-text {
   display: block;
+
+  &.txt-display,
+  &.txt-title,
+  &.txt-heading,
+  &.txt-subheading {
+    font-weight: 600;
+  }
 
   &:not(.no-margins) {
     &.txt-display,
@@ -90,6 +111,8 @@
   }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Button
 .comp-button {
   padding: var(--s-quarter) var(--s-five-eights);
   margin: var(--s-third) 0 var(--s-two-thirds) 0;
@@ -98,6 +121,8 @@
   border-radius: var(--s-eighth);
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Linkmap
 .comp-linkmap {
   margin-bottom: var(--s-one-and-half);
 
@@ -106,6 +131,8 @@
   }
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Separator
 .comp-separator {
   margin-top: calc(var(--s-one-and-half) - 1px);
   height: var(--s-one-and-half);
@@ -113,4 +140,98 @@
 
 .comp-text.txt-paragraph + .comp-separator {
   margin-top: var(--s-one-and-half);
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Input
+.comp-input {
+  border-radius: var(--s-quarter);
+
+  &_container {
+    max-width: 24rem;
+  }
+
+  &_required {
+    padding-left: var(--s-quarter);
+  }
+
+  &_error {
+    position: relative;
+    bottom: var(--s-eighth);
+  }
+
+  &_label {
+    display: flex;
+  }
+}
+
+.comp-input_container {
+  // - - - - - - - - - - - - - - - - - - - - - - - -
+  &.comp-input_box .comp-input {
+    padding: 1px var(--s-half);
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - -
+  /// @todo [!!] Align input icon in Chrome.
+  /// @todo [!!] Fix vertical rythm in Safari.
+  &.comp-input_date .comp-input {
+    padding: 0 var(--s-half);
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - -
+  &.comp-input_box,
+  &.comp-input_date {
+    padding-bottom: calc(var(--s-single) + var(--s-three-eights));
+
+    .comp-input {
+      position: relative;
+      right: var(--s-half);
+      bottom: 1px;
+    }
+    .comp-input_label {
+      flex-direction: column;
+    }
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - -
+  &.comp-input_bool {
+    .comp-input {
+      width: var(--s-single);
+      height: var(--s-single);
+      margin-right: var(--s-half);
+      display: grid;
+      place-content: center;
+
+      &[type='radio'] {
+        border-radius: 50%;
+      }
+
+      &:checked::before {
+        content: '●';
+      }
+    }
+
+    .comp-input_label {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      width: max-content;
+    }
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - -
+  &.comp-input_button {
+    padding-bottom: calc(var(--s-single));
+
+    .comp-input {
+      padding: var(--s-quarter) var(--s-five-eights);
+      border-radius: var(--s-eighth);
+      cursor: pointer;
+    }
+
+    .comp-input_label {
+      flex-direction: column;
+      width: max-content;
+    }
+  }
 }

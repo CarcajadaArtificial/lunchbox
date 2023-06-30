@@ -5,6 +5,7 @@ import Panel from './Panel.tsx';
 import Link from './Link.tsx';
 
 /**
+ * @todo [!!!] Move arrayChildren to `setup/Footer.ts` and make it replace the default children prop.
  * @todo [!!] change the prop "layout_type" to be optional, and places no layout when undefined
  * @todo [ ] Lazy load the `made-with-fresh` images.
  * @todo [?] Replace an src image with an inline SVG.

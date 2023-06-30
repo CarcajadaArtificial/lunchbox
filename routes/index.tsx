@@ -3,7 +3,7 @@ import Card from '../components/Card.tsx';
 import Code from '../components/Code.tsx';
 import Footer from '../components/Footer.tsx';
 import Header from '../components/Header.tsx';
-// import Input from '../components/Input.tsx';
+import Input from '../components/Input.tsx';
 import Layout from '../components/Layout.tsx';
 import Link from '../components/Link.tsx';
 import Linkmap from '../components/Linkmap.tsx';
@@ -77,7 +77,7 @@ export default function Home() {
       </Header>
       <Main>
         <Layout type={LAYOUT_TYPES.CENTER}>
-          <div>
+          <>
             {TestTinyText(TEXT_TYPES.PARAGRAPH)}
             <Separator />
             {TestTinyText(TEXT_TYPES.SUBHEADING)}
@@ -91,7 +91,33 @@ export default function Home() {
               {TestSmallText(TEXT_TYPES.SUBHEADING)}
               {TestLargeText(TEXT_TYPES.PARAGRAPH)}
             </Card>
-          </div>
+            <Input type="text" value="test" label="Wgjpqy" error="error" required />
+            <Input type="datetime-local" value="test" label="Wgjpqy" required />
+            <Input type="date" value="test" label="Wgjpqy" required disabled />
+            <Input
+              type="month"
+              value="test"
+              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem expedita numquam assumenda, nesciunt necessitatibus officia et distinctio corporis, ea voluptatibus explicabo beatae. Qui eius doloribus soluta sequi. Magnam, omnis."
+              error="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem expedita numquam assumenda, nesciunt necessitatibus officia et distinctio corporis, ea voluptatibus explicabo beatae. Qui eius doloribus soluta sequi. Magnam, omnis."
+              required
+            />
+            <Input type="week" value="test" label="Wgjpqy" required />
+            <Input type="time" value="test" label="Wgjpqy" required />
+            <Input type="number" value="test" label="Wgjpqy" disabled required />
+            <Input type="email" value="test" label="Wgjpqy" required />
+            <Input type="password" value="test" label="Wgjpqy" required />
+            <Input type="search" value="test" label="Wgjpqy" required />
+            <Input type="tel" value="test" label="Wgjpqy" required />
+            <Input type="url" value="test" label="Wgjpqy" required />
+            <div>
+              <Input type="button" value="Wgjpqy" label="Wgjpqy" error="error" />
+              <Input type="button" value="Wgjpqy" label="Wgjpqy" />
+              <Input type="submit" value="Wgjpqy" label="Wgjpqy" />
+              <Input type="reset" value="Wgjpqy" label="Wgjpqy" disabled />
+              <Input type="image" value="Wgjpqy" label="Wgjpqy" />
+            </div>
+            <Separator />
+          </>
         </Layout>
       </Main>
       <Footer layout_type={LAYOUT_TYPES.LEFT} madeWithFresh>
