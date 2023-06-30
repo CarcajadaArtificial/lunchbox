@@ -151,7 +151,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Input
 .comp-input,
-.comp-textarea {
+.comp-textarea,
+.comp-select {
   border-radius: var(--s-quarter);
 
   &_container {
@@ -179,6 +180,10 @@
   .comp-textarea {
     padding: 1px var(--s-half);
   }
+
+  .comp-select {
+    padding: var(--s-eighth) var(--s-half);
+  }
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - -
@@ -194,14 +199,15 @@
   padding-bottom: calc(var(--s-single) + var(--s-three-eights));
 
   .comp-input,
-  .comp-textarea {
+  .comp-textarea,
+  .comp-select {
     position: relative;
     right: var(--s-half);
     bottom: 1px;
-  }
-  .comp-input_label,
-  .comp-textarea_label {
-    flex-direction: column;
+
+    &_label {
+      flex-direction: column;
+    }
   }
 }
 

@@ -11,7 +11,7 @@ import Main from '../components/Main.tsx';
 // import Menu from '../components/Menu.tsx';
 import Navigation from '../components/Navigation.tsx';
 import Page from '../components/Page.tsx';
-// import Select from '../components/Select.tsx';
+import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
 import Textarea from '../components/Textarea.tsx';
@@ -63,7 +63,6 @@ export default function Home() {
 
   const TestInputs = () => (
     <>
-      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
       <Input
         type="text"
         value="test"
@@ -78,6 +77,8 @@ export default function Home() {
       <Input type="month" value="test" label="Lorem ipsum" required />
       <Input type="week" value="test" label="Lorem ipsum" required />
       <Input type="time" value="test" label="Lorem ipsum" required />
+      <Select options={['a', 'b', 'c']} placeholder="test" label="select" />
+      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
       <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
       <Input type="button" value="disabled" disabled />
       <Input type="image" value="Lorem ipsum" />

@@ -1,6 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { iSelect } from '../types/props.ts';
-import { boxInput } from './shared.ts';
 
 const defaults: iSelect = {
   required: false,
@@ -14,17 +13,12 @@ export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
   const classes = {
-    input: cn(boxInput(p.maxWidth, p.disabled, p.error)),
-    text: cn('px-2'),
-    label: cn(
-      'flex',
-      p.type === 'radio' || p.type === 'checkbox'
-        ? 'flex-row-reverse justify-end'
-        : 'flex-col'
-    ),
-    error: cn('px-2 clr-txt-error'),
-    required: cn('clr-txt-error ml-1 mb-1'),
-    container: cn('mb-4', p.maxWidth ? 'w-full' : 'max-w-sm'),
+    input: cn('comp-select', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
+    text: cn(''),
+    label: cn('comp-select_label'),
+    error: cn('comp-select_error clr-txt-error'),
+    required: cn('comp-select_required'),
+    container: cn('comp-select_container comp-input_box', p.maxWidth ? 'w-full' : null),
   };
 
   return { c: classes, ...p };

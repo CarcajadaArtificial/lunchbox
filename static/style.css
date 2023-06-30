@@ -385,33 +385,41 @@ button {
 }
 
 .comp-input,
-.comp-textarea {
+.comp-textarea,
+.comp-select {
   border-radius: var(--s-quarter);
 }
 .comp-input_container,
-.comp-textarea_container {
+.comp-textarea_container,
+.comp-select_container {
   max-width: 24rem;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 .comp-input_required,
-.comp-textarea_required {
+.comp-textarea_required,
+.comp-select_required {
   padding-left: var(--s-quarter);
 }
 .comp-input_error,
-.comp-textarea_error {
+.comp-textarea_error,
+.comp-select_error {
   position: relative;
   bottom: var(--s-eighth);
 }
 .comp-input_label,
-.comp-textarea_label {
+.comp-textarea_label,
+.comp-select_label {
   display: flex;
 }
 
 .comp-input_box .comp-input,
 .comp-input_box .comp-textarea {
   padding: 1px var(--s-half);
+}
+.comp-input_box .comp-select {
+  padding: var(--s-eighth) var(--s-half);
 }
 
 .comp-input_date .comp-input {
@@ -424,16 +432,20 @@ button {
 }
 .comp-input_box .comp-input,
 .comp-input_box .comp-textarea,
+.comp-input_box .comp-select,
 .comp-input_date .comp-input,
-.comp-input_date .comp-textarea {
+.comp-input_date .comp-textarea,
+.comp-input_date .comp-select {
   position: relative;
   right: var(--s-half);
   bottom: 1px;
 }
 .comp-input_box .comp-input_label,
 .comp-input_box .comp-textarea_label,
+.comp-input_box .comp-select_label,
 .comp-input_date .comp-input_label,
-.comp-input_date .comp-textarea_label {
+.comp-input_date .comp-textarea_label,
+.comp-input_date .comp-select_label {
   flex-direction: column;
 }
 

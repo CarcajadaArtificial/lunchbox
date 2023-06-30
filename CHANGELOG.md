@@ -1,14 +1,11 @@
 # Changelog
 
-## v0.0.77
+## v0.0.78
 
-### Updated the Textarea component to GarliCSS
+### Updated the Select component to GarliCSS
   - `/routes/index.tsx`
   - `/src/scss/components.scss`
-  - `/src/setup/Textarea.ts`
-  - `/components/Textarea.tsx`
-  - `/src/types/props.ts`
-  - `/mod.ts`
+  - `/src/setup/Select.ts`
 
 ### Minor updates
   - `/static/style.css`
