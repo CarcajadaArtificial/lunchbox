@@ -22,8 +22,8 @@ export const Footer = _Footer;
 import _Input from './components/Input.tsx';
 export const Input = _Input;
 
-import _TextArea from './components/TextArea.tsx';
-export const TextArea = _TextArea;
+import _Textarea from './components/Textarea.tsx';
+export const Textarea = _Textarea;
 
 import _Select from './components/Select.tsx';
 export const Select = _Select;

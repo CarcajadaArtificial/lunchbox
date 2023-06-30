@@ -1,14 +1,16 @@
 # Changelog
 
-## v0.0.76
+## v0.0.77
 
-### Updated the Input component to GarliCSS
+### Updated the Textarea component to GarliCSS
   - `/routes/index.tsx`
   - `/src/scss/components.scss`
-  - `/src/setup/Input.ts`
+  - `/src/setup/Textarea.ts`
+  - `/components/Textarea.tsx`
+  - `/src/types/props.ts`
+  - `/mod.ts`
 
 ### Minor updates
-  - `/components/Footer.tsx`
   - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
@@ -17,7 +19,7 @@
 
 - [x] Published CSS.
 - [x] Setup modules for `Page.tsx` and `Title.tsx`.
-- [x] Move `Input.tsx` and `TextArea.tsx` from islands to components.
+- [x] Move `Input.tsx` and `Textarea.tsx` from islands to components.
 - [x] Move testing pages to another project.
 - [x] Migrate all islands to components
 - [x] Remove navigation properties in favor of children.
@@ -94,7 +96,7 @@
     - [ ] Select
     - [x] Separator
     - [x] Text
-    - [ ] TextArea
+    - [x] Textarea
   - [ ] Document all needed fixes and upgrades possible using this structure:
     - Add a comment where the fix should be added using the `@todo`.
     - Grade the fix using one to three `!`s.

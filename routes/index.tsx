@@ -14,7 +14,7 @@ import Page from '../components/Page.tsx';
 // import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
-// import TextArea from '../components/TextArea.tsx';
+import Textarea from '../components/Textarea.tsx';
 import { LAYOUT_TYPES, TEXT_TYPES, BUTTON_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
@@ -61,6 +61,29 @@ export default function Home() {
     />
   );
 
+  const TestInputs = () => (
+    <>
+      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
+      <Input
+        type="text"
+        value="test"
+        label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        error="Deserunt excepturi fugiat sapiente.
+            Sed quod eos nihil, itaque aliquid numquam placeat quia laudantium recusandae."
+        required
+      />
+      <Input type="text" value="disabled" disabled />
+      <Input type="datetime-local" value="test" label="Lorem ipsum" required />
+      <Input type="date" value="test" label="Lorem ipsum" required />
+      <Input type="month" value="test" label="Lorem ipsum" required />
+      <Input type="week" value="test" label="Lorem ipsum" required />
+      <Input type="time" value="test" label="Lorem ipsum" required />
+      <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
+      <Input type="button" value="disabled" disabled />
+      <Input type="image" value="Lorem ipsum" />
+    </>
+  );
+
   return (
     <Page>
       <Navigation>
@@ -91,31 +114,7 @@ export default function Home() {
               {TestSmallText(TEXT_TYPES.SUBHEADING)}
               {TestLargeText(TEXT_TYPES.PARAGRAPH)}
             </Card>
-            <Input type="text" value="test" label="Wgjpqy" error="error" required />
-            <Input type="datetime-local" value="test" label="Wgjpqy" required />
-            <Input type="date" value="test" label="Wgjpqy" required disabled />
-            <Input
-              type="month"
-              value="test"
-              label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem expedita numquam assumenda, nesciunt necessitatibus officia et distinctio corporis, ea voluptatibus explicabo beatae. Qui eius doloribus soluta sequi. Magnam, omnis."
-              error="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem expedita numquam assumenda, nesciunt necessitatibus officia et distinctio corporis, ea voluptatibus explicabo beatae. Qui eius doloribus soluta sequi. Magnam, omnis."
-              required
-            />
-            <Input type="week" value="test" label="Wgjpqy" required />
-            <Input type="time" value="test" label="Wgjpqy" required />
-            <Input type="number" value="test" label="Wgjpqy" disabled required />
-            <Input type="email" value="test" label="Wgjpqy" required />
-            <Input type="password" value="test" label="Wgjpqy" required />
-            <Input type="search" value="test" label="Wgjpqy" required />
-            <Input type="tel" value="test" label="Wgjpqy" required />
-            <Input type="url" value="test" label="Wgjpqy" required />
-            <div>
-              <Input type="button" value="Wgjpqy" label="Wgjpqy" error="error" />
-              <Input type="button" value="Wgjpqy" label="Wgjpqy" />
-              <Input type="submit" value="Wgjpqy" label="Wgjpqy" />
-              <Input type="reset" value="Wgjpqy" label="Wgjpqy" disabled />
-              <Input type="image" value="Wgjpqy" label="Wgjpqy" />
-            </div>
+            {TestInputs()}
             <Separator />
           </>
         </Layout>

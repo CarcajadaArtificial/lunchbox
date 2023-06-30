@@ -1,26 +1,26 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iTextArea } from '../types/props.ts';
-import { boxInput } from './shared.ts';
+import { iTextarea } from '../types/props.ts';
 
-const defaults: iTextArea = {
+const defaults: iTextarea = {
   required: false,
   maxWidth: false,
   noResize: false,
 };
 
-export default (props: Partial<iTextArea>) => {
-  const p = applyDefaults<iTextArea>(defaults, props);
+export default (props: Partial<iTextarea>) => {
+  const p = applyDefaults<iTextarea>(defaults, props);
 
   const classes = {
     input: cn(
-      boxInput(p.maxWidth, p.disabled, p.error),
-      p.noResize ? 'resize-none' : null
+      'comp-textarea',
+      p.noResize ? 'resize-none' : null,
+      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'
     ),
-    text: cn('px-2 w-full select-none'),
-    label: cn('flex flex-col select-none'),
-    error: cn('px-2 clr-txt-error'),
-    required: cn('clr-txt-error ml-1'),
-    container: cn('mb-4', p.maxWidth ? 'w-full' : 'max-w-sm'),
+    text: cn(''),
+    label: cn('comp-textarea_label'),
+    error: cn('comp-textarea_error clr-txt-error'),
+    required: cn('comp-textarea_required clr-txt-error'),
+    container: cn('comp-textarea_container comp-input_box', p.maxWidth ? 'w-full' : null),
   };
 
   return { c: classes, ...p };

@@ -2,6 +2,12 @@
 @use './lib/sassdoor.scss' as *;
 @use 'media-queries.scss' as *;
 
+@mixin select-none {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Header
 .comp-header {
@@ -144,11 +150,13 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Input
-.comp-input {
+.comp-input,
+.comp-textarea {
   border-radius: var(--s-quarter);
 
   &_container {
     max-width: 24rem;
+    @include select-none;
   }
 
   &_required {
@@ -165,73 +173,76 @@
   }
 }
 
-.comp-input_container {
-  // - - - - - - - - - - - - - - - - - - - - - - - -
-  &.comp-input_box .comp-input {
+// - - - - - - - - - - - - - - - - - - - - - - - -
+.comp-input_box {
+  .comp-input,
+  .comp-textarea {
     padding: 1px var(--s-half);
   }
+}
 
-  // - - - - - - - - - - - - - - - - - - - - - - - -
-  /// @todo [!!] Align input icon in Chrome.
-  /// @todo [!!] Fix vertical rythm in Safari.
-  &.comp-input_date .comp-input {
-    padding: 0 var(--s-half);
+// - - - - - - - - - - - - - - - - - - - - - - - -
+/// @todo [!!] Align input icon in Chrome.
+/// @todo [!!] Fix vertical rythm in Safari.
+.comp-input_date .comp-input {
+  padding: 0 var(--s-half);
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+.comp-input_box,
+.comp-input_date {
+  padding-bottom: calc(var(--s-single) + var(--s-three-eights));
+
+  .comp-input,
+  .comp-textarea {
+    position: relative;
+    right: var(--s-half);
+    bottom: 1px;
   }
-
-  // - - - - - - - - - - - - - - - - - - - - - - - -
-  &.comp-input_box,
-  &.comp-input_date {
-    padding-bottom: calc(var(--s-single) + var(--s-three-eights));
-
-    .comp-input {
-      position: relative;
-      right: var(--s-half);
-      bottom: 1px;
-    }
-    .comp-input_label {
-      flex-direction: column;
-    }
+  .comp-input_label,
+  .comp-textarea_label {
+    flex-direction: column;
   }
+}
 
-  // - - - - - - - - - - - - - - - - - - - - - - - -
-  &.comp-input_bool {
-    .comp-input {
-      width: var(--s-single);
-      height: var(--s-single);
-      margin-right: var(--s-half);
-      display: grid;
-      place-content: center;
+// - - - - - - - - - - - - - - - - - - - - - - - -
+.comp-input_bool {
+  .comp-input {
+    width: var(--s-single);
+    height: var(--s-single);
+    margin-right: var(--s-half);
+    display: grid;
+    place-content: center;
 
-      &[type='radio'] {
-        border-radius: 50%;
-      }
-
-      &:checked::before {
-        content: '●';
-      }
+    &[type='radio'] {
+      border-radius: 50%;
     }
 
-    .comp-input_label {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      align-items: center;
-      width: max-content;
+    &:checked::before {
+      content: '●';
     }
   }
 
-  // - - - - - - - - - - - - - - - - - - - - - - - -
-  &.comp-input_button {
-    padding-bottom: calc(var(--s-single));
+  .comp-input_label {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: max-content;
+  }
+}
 
-    .comp-input {
-      padding: var(--s-quarter) var(--s-five-eights);
-      border-radius: var(--s-eighth);
-      cursor: pointer;
-    }
+// - - - - - - - - - - - - - - - - - - - - - - - -
+.comp-input_button {
+  padding-bottom: calc(var(--s-single));
 
-    .comp-input_label {
-      flex-direction: column;
-      width: max-content;
-    }
+  .comp-input {
+    padding: var(--s-quarter) var(--s-five-eights);
+    border-radius: var(--s-eighth);
+    cursor: pointer;
+  }
+
+  .comp-input_label {
+    flex-direction: column;
+    width: max-content;
   }
 }
