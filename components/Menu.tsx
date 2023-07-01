@@ -5,8 +5,9 @@ import setup from '../src/setup/Menu.ts';
 import { BUTTON_TYPES } from '../mod.ts';
 
 /**
- * @todo [!!] Add event listener that closes the menu when clicking on the body.
- * @todo [!!] Remove link schema, make the children the interior of the menu and add a prop for the button.
+ * @todo [!] Update to GarliCSS
+ * @todo [!] Add event listener that closes the menu when clicking on the body.
+ * @todo [!] Remove link schema, make the children the interior of the menu and add a prop for the button.
  * @todo [] Add `<nav>` and `<ul>` elements to the list.
  */
 export default function (props: Partial<iMenu>) {

@@ -1,9 +1,6 @@
 import _Text from './components/Text.tsx';
 export const Text = _Text;
 
-import _Page from './components/Page.tsx';
-export const Page = _Page;
-
 import _Layout from './components/Layout.tsx';
 export const Layout = _Layout;
 
@@ -28,8 +25,8 @@ export const Textarea = _Textarea;
 import _Select from './components/Select.tsx';
 export const Select = _Select;
 
-import _Menu from './components/Menu.tsx';
-export const Menu = _Menu;
+// import _Menu from './components/Menu.tsx';
+// export const Menu = _Menu;
 
 import _Card from './components/Card.tsx';
 export const Card = _Card;

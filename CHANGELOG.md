@@ -1,14 +1,24 @@
 # Changelog
 
-## v0.0.78
+## v0.0.79
 
-### Updated the Select component to GarliCSS
-  - `/routes/index.tsx`
-  - `/src/scss/components.scss`
-  - `/src/setup/Select.ts`
+### Added `@todo`s.
+  - `/components/Button.tsx`
+  - `/components/Input.tsx`
+  - `/components/Link.tsx`
+  - `/components/Main.tsx`
+  - `/components/Navigation.tsx`
+  - `/components/Separator.tsx`
+
+### Removed the `Page` component.
+  - `/mod.ts`
+
+### Removed `shared.ts`.
+  - `/src/setup/Button.ts`
 
 ### Minor updates
-  - `/static/style.css`
+  - `/src/types/props.ts`
+  - `/routes/index.tsx`
 
 ## Comming Soon (v0.1.0)
 
@@ -75,7 +85,7 @@
 
 #### v0.1
 
-  - [ ] Update all components to GarliCSS and display on index route.
+  - [x] Update all components to GarliCSS and display on index route.
     - [x] Button
     - [x] Card
     - [x] Code
@@ -86,11 +96,9 @@
     - [x] Link
     - [x] Linkmap
     - [x] Main
-    - [ ] Menu
     - [x] Navigation
-    - [ ] Page
     - [x] Panel
-    - [ ] Select
+    - [x] Select
     - [x] Separator
     - [x] Text
     - [x] Textarea
@@ -109,4 +117,7 @@
 
 #### v0.2
 
+  - [ ] Add components
+    - [ ] Menu
+    - [ ] Page
   - [ ] Update components to GarliCSS animations.

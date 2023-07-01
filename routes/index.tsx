@@ -8,14 +8,13 @@ import Layout from '../components/Layout.tsx';
 import Link from '../components/Link.tsx';
 import Linkmap from '../components/Linkmap.tsx';
 import Main from '../components/Main.tsx';
-// import Menu from '../components/Menu.tsx';
 import Navigation from '../components/Navigation.tsx';
 import Page from '../components/Page.tsx';
 import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
 import Textarea from '../components/Textarea.tsx';
-import { LAYOUT_TYPES, TEXT_TYPES, BUTTON_TYPES } from '../src/types/enums.ts';
+import { LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
   const TestTinyText = (type: TEXT_TYPES) => (
@@ -72,11 +71,11 @@ export default function Home() {
         required
       />
       <Input type="text" value="disabled" disabled />
-      <Input type="datetime-local" value="test" label="Lorem ipsum" required />
-      <Input type="date" value="test" label="Lorem ipsum" required />
-      <Input type="month" value="test" label="Lorem ipsum" required />
-      <Input type="week" value="test" label="Lorem ipsum" required />
-      <Input type="time" value="test" label="Lorem ipsum" required />
+      <Input type="datetime-local" label="Lorem ipsum" required />
+      <Input type="date" label="Lorem ipsum" required />
+      <Input type="month" label="Lorem ipsum" required />
+      <Input type="week" label="Lorem ipsum" required />
+      <Input type="time" label="Lorem ipsum" required />
       <Select options={['a', 'b', 'c']} placeholder="test" label="select" />
       <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
       <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />

@@ -1,7 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { BUTTON_TYPES } from '../types/enums.ts';
 import { iButton } from '../types/props.ts';
-import { button } from './shared.ts';
 
 const defaults: iButton = {
   maxWidth: false,
@@ -12,7 +11,15 @@ export default (props: Partial<iButton>) => {
   const p = applyDefaults<iButton>(defaults, props);
 
   const classes = {
-    button: cn(button(p.type), props.class),
+    button: cn(
+      'comp-button',
+      props.type === BUTTON_TYPES.CONTRAST
+        ? 'clr-bg-input'
+        : props.type === BUTTON_TYPES.ERROR
+        ? 'clr-bg-error'
+        : null,
+      props.class
+    ),
   };
 
   return { c: classes, ...p };

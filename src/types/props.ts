@@ -27,8 +27,8 @@ export type iInput = iExtendedElement<HTMLInputElement> & {
 /**
  * Textarea component's type that extends the `<textarea>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
  */
-export type iTextarea = iExtendedElement<HTMLTextareaElement> & {
-  refTextarea?: Ref<HTMLTextareaElement>;
+export type iTextarea = iExtendedElement<HTMLTextAreaElement> & {
+  refTextarea?: Ref<HTMLTextAreaElement>;
   label?: string;
   error?: string;
   maxWidth: boolean;
