@@ -1,15 +1,9 @@
 # Changelog
 
-## v0.0.80
+## v0.0.81
 
-## Added the `type` property to the Button component.
-  - `/routes/index.tsx`
-  - `/components/Button.tsx`
-  - `/src/setup/Button.ts`
-  - `/src/scss/components.scss`
-
-### Minor updates
-  - `/static/style.css`
+## Updated GarliCSS library
+  - `/lib/garlicss`
 
 ## Comming Soon (v0.1.0)
 
