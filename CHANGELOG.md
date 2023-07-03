@@ -1,24 +1,15 @@
 # Changelog
 
-## v0.0.79
+## v0.0.80
 
-### Added `@todo`s.
+## Added the `type` property to the Button component.
+  - `/routes/index.tsx`
   - `/components/Button.tsx`
-  - `/components/Input.tsx`
-  - `/components/Link.tsx`
-  - `/components/Main.tsx`
-  - `/components/Navigation.tsx`
-  - `/components/Separator.tsx`
-
-### Removed the `Page` component.
-  - `/mod.ts`
-
-### Removed `shared.ts`.
   - `/src/setup/Button.ts`
+  - `/src/scss/components.scss`
 
 ### Minor updates
-  - `/src/types/props.ts`
-  - `/routes/index.tsx`
+  - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 

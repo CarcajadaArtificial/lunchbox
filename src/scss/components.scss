@@ -127,6 +127,14 @@
   border-radius: var(--s-eighth);
 }
 
+.comp-button_panel {
+  background-color: var(--clr-bg-panel);
+}
+
+.comp-panel .comp-button_panel {
+  background-color: var(--clr-bg-page);
+}
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Linkmap
 .comp-linkmap {

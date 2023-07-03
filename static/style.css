@@ -75,6 +75,31 @@ button {
   --font-heading: Alice, Baskerville, Palatino, Georgia, Times New Roman, serif;
 }
 
+:root {
+  --clr-personality: #089969;
+  --clr-bg-page: #3d3640;
+  --clr-bg-panel: #241f26;
+  --clr-txt-base: #eee6f2;
+  --clr-txt-error: #fa96c8;
+  --clr-txt-personality: #9eed77;
+  --clr-bg-input: #1d7159;
+  --clr-bg-disabled: #8d8590;
+  --clr-bg-error: #41122c;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-personality: #089969;
+    --clr-bg-page: #eee6f2;
+    --clr-bg-panel: #d5ced9;
+    --clr-txt-base: #0c0a0d;
+    --clr-txt-error: #66050d;
+    --clr-txt-personality: #0f474d;
+    --clr-bg-input: #5fb69d;
+    --clr-bg-disabled: #847f86;
+    --clr-bg-error: #f7bdc6;
+  }
+}
+
 .clr-bg-page {
   background-color: #3d3640;
 }
@@ -366,6 +391,14 @@ button {
   max-width: max-content;
   cursor: pointer;
   border-radius: var(--s-eighth);
+}
+
+.comp-button_panel {
+  background-color: var(--clr-bg-panel);
+}
+
+.comp-panel .comp-button_panel {
+  background-color: var(--clr-bg-page);
 }
 
 .comp-linkmap {

@@ -13,11 +13,17 @@ export default (props: Partial<iButton>) => {
   const classes = {
     button: cn(
       'comp-button',
-      props.type === BUTTON_TYPES.CONTRAST
-        ? 'clr-bg-input'
+      props.type === BUTTON_TYPES.DISABLED
+        ? 'clr-bg-disabled'
         : props.type === BUTTON_TYPES.ERROR
         ? 'clr-bg-error'
-        : null,
+        : props.type === BUTTON_TYPES.INVISIBLE
+        ? null
+        : props.type === BUTTON_TYPES.PANEL
+        ? 'comp-button_panel'
+        : props.type === BUTTON_TYPES.CONTRAST
+        ? 'clr-bg-input'
+        : 'clr-bg-input',
       props.class
     ),
   };

@@ -9,12 +9,11 @@ import Link from '../components/Link.tsx';
 import Linkmap from '../components/Linkmap.tsx';
 import Main from '../components/Main.tsx';
 import Navigation from '../components/Navigation.tsx';
-import Page from '../components/Page.tsx';
 import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
 import Textarea from '../components/Textarea.tsx';
-import { LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
+import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
   const TestTinyText = (type: TEXT_TYPES) => (
@@ -62,6 +61,7 @@ export default function Home() {
 
   const TestInputs = () => (
     <>
+      <Text>Input</Text>
       <Input
         type="text"
         value="test"
@@ -76,20 +76,29 @@ export default function Home() {
       <Input type="month" label="Lorem ipsum" required />
       <Input type="week" label="Lorem ipsum" required />
       <Input type="time" label="Lorem ipsum" required />
-      <Select options={['a', 'b', 'c']} placeholder="test" label="select" />
-      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
+      <Text>Input Buttons</Text>
       <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
       <Input type="button" value="disabled" disabled />
       <Input type="image" value="Lorem ipsum" />
+      <Text>Textarea</Text>
+      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
+      <Text>Select</Text>
+      <Select options={['Value 1', 'Value 2', 'Value 3']} placeholder="placeholder" label="Lorem ipsum" />
+      <Text>Buttons</Text>
+      <Button>Contrast</Button>
+      <Button type={BUTTON_TYPES.INVISIBLE}>Invisible</Button>
+      <Button type={BUTTON_TYPES.PANEL}>Panel</Button>
+      <Button type={BUTTON_TYPES.DISABLED}>Disabled</Button>
+      <Button type={BUTTON_TYPES.ERROR}>Error</Button>
     </>
   );
 
   return (
-    <Page>
+    <div>
       <Navigation>
         {TestTinyText(TEXT_TYPES.PARAGRAPH)}
         <div class="flex justify-end">
-          <Button>Button</Button>
+          <Button type={BUTTON_TYPES.PANEL}>Button</Button>
         </div>
       </Navigation>
       <Header layout_type={LAYOUT_TYPES.LEFT}>
@@ -127,6 +136,6 @@ export default function Home() {
         </Text>
         {TestLargeText(TEXT_TYPES.PARAGRAPH)}
       </Footer>
-    </Page>
+    </div>
   );
 }
