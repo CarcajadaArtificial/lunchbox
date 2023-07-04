@@ -1,9 +1,19 @@
 # Changelog
 
-## v0.0.81
+## v0.0.82
 
-## Updated GarliCSS library
-  - `/lib/garlicss`
+### Fixed urgent issues in the Footer and Input components
+  - `/components/Footer.tsx`
+  - `/src/setup/Footer.ts`
+  - `/components/Input.tsx`
+  - `/routes/index.tsx`
+  - `/src/scss/components`
+
+### Updated export module
+  - `/mod.ts`
+
+### Minor updates
+ - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 
@@ -35,25 +45,15 @@
     - [x] Add a `compact` property for smaller line heights.
     - [ ] Add a `indent` property for literal prose.
     - [x] Add a `single` property for single lines overflown with ellipsis.
-  - [ ] Theme.
-    - [ ] Add theming system without light/dark mode.
-    - [ ] Add typographical theming.
-    - [ ] Add syntax highlighting theming. (After creating inhouse syntax highlighting)
   - [ ] Create media query classes for viewport sizes.
-  - [ ] Limit `Code` component to only inline codes inside Text components.
-  - [ ] Find the best way to export components, functions and types to other projects.
+  - [x] Limit `Code` component to only inline codes inside Text components.
+  - [x] Find the best way to export components, functions and types to other projects.
   - [x] Fix the unresponsive code blocks inside `.markdown-prose` element.
   - [x] Fix the background naming dilemama regarding hierarchy.
     - [x] Rename theming colors for no light/dark mode.
     - [x] Rename background colors and remove precedence (primary, secondary, tertiary).
     - [x] Rename button colors to this new mode.
   - Fix Markdown Parser. Use h5 instead of h4 for code block headings.
-
-- Components
-  - [ ] Fieldset
-  - [ ] Chip
-  - [ ] Linkmap
-  - [ ] Spinner
 
 - Documentation
   - [ ] Project README.md
@@ -87,7 +87,7 @@
     - [x] Separator
     - [x] Text
     - [x] Textarea
-  - [ ] Document all needed fixes and upgrades possible using this structure:
+  - [x] Document all needed fixes and upgrades possible using this structure:
     - Add a comment where the fix should be added using the `@todo`.
     - Grade the fix using one to three `!`s.
       - `!!!`: Urgent
@@ -96,13 +96,28 @@
       - ` `: Whenever
       - `?`: Possible fix, question it later.
     - Substitue the `Features` section of this document to a list of every feature with its pending.
-  - [ ] Finish all components.
   - [ ] Fix `!!`s and `!!!`s.
+    - [ ] Button            2!!
+    - [ ] Footer            1!!
+    - [ ] Header            1!!
+    - [ ] Main              1!!
+    - [ ] Textarea          1!!
+    - [ ] components.scss   1!!
   - [ ] Do a documentation cleanup.
 
 #### v0.2
 
-  - [ ] Add components
-    - [ ] Menu
-    - [ ] Page
   - [ ] Update components to GarliCSS animations.
+    - [ ] Button
+    - [ ] Navigation
+    - [ ] Separator
+    - [ ] Input
+    - [ ] Select
+    - [ ] Textarea
+  - [ ] Add components
+    - [ ] Menu (Update to GarliCSS)
+    - [ ] Page
+    - [ ] Fieldset
+    - [ ] Chip
+    - [ ] Linkmap
+    - [ ] Spinner

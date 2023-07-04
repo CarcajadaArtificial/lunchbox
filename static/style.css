@@ -451,6 +451,11 @@ button {
 .comp-input_box .comp-textarea {
   padding: 1px var(--s-half);
 }
+.comp-input_box .comp-input::placeholder,
+.comp-input_box .comp-textarea::placeholder {
+  color: var(--clr-txt-base);
+  opacity: 0.75;
+}
 .comp-input_box .comp-select {
   padding: var(--s-eighth) var(--s-half);
 }

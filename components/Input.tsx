@@ -3,9 +3,6 @@ import { iInput } from '../src/types/props.ts';
 import setup from '../src/setup/Input.ts';
 import { TEXT_TYPES } from '../mod.ts';
 
-/**
- * @todo [!!!] Choose a standard color for placeholders.
- */
 export default function (props: Partial<iInput>) {
   const { c, refInput, maxWidth, label, error, ...p } = setup(props);
 

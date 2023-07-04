@@ -64,10 +64,10 @@ export default function Home() {
       <Text>Input</Text>
       <Input
         type="text"
-        value="test"
+        placeholder="test"
         label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-        error="Deserunt excepturi fugiat sapiente.
-            Sed quod eos nihil, itaque aliquid numquam placeat quia laudantium recusandae."
+        // error="Deserunt excepturi fugiat sapiente.
+        //     Sed quod eos nihil, itaque aliquid numquam placeat quia laudantium recusandae."
         required
       />
       <Input type="text" value="disabled" disabled />

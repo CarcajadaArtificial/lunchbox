@@ -1,53 +1,19 @@
-import _Text from './components/Text.tsx';
-export const Text = _Text;
-
-import _Layout from './components/Layout.tsx';
-export const Layout = _Layout;
-
-import _Header from './components/Header.tsx';
-export const Header = _Header;
-
-import _Navigation from './components/Navigation.tsx';
-export const Navigation = _Navigation;
-
-import _Link from './components/Link.tsx';
-export const Link = _Link;
-
-import _Footer from './components/Footer.tsx';
-export const Footer = _Footer;
-
-import _Input from './components/Input.tsx';
-export const Input = _Input;
-
-import _Textarea from './components/Textarea.tsx';
-export const Textarea = _Textarea;
-
-import _Select from './components/Select.tsx';
-export const Select = _Select;
-
-// import _Menu from './components/Menu.tsx';
-// export const Menu = _Menu;
-
-import _Card from './components/Card.tsx';
-export const Card = _Card;
-
-import _Main from './components/Main.tsx';
-export const Main = _Main;
-
-import _Button from './components/Button.tsx';
-export const Button = _Button;
-
-import _Code from './components/Code.tsx';
-export const Code = _Code;
-
-import _Separator from './components/Separator.tsx';
-export const Separator = _Separator;
-
-import _Linkmap from './components/Linkmap.tsx';
-export const Linkmap = _Linkmap;
-
-import _Panel from './components/Panel.tsx';
-export const Panel = _Panel;
-
+export { default as Text } from './components/Text.tsx';
+export { default as Layout } from './components/Layout.tsx';
+export { default as Header } from './components/Header.tsx';
+export { default as Navigation } from './components/Navigation.tsx';
+export { default as Link } from './components/Link.tsx';
+export { default as Footer } from './components/Footer.tsx';
+export { default as Input } from './components/Input.tsx';
+export { default as Textarea } from './components/Textarea.tsx';
+export { default as Select } from './components/Select.tsx';
+// export { default as Menu } from './components/Menu.tsx';
+export { default as Card } from './components/Card.tsx';
+export { default as Main } from './components/Main.tsx';
+export { default as Button } from './components/Button.tsx';
+export { default as Code } from './components/Code.tsx';
+export { default as Separator } from './components/Separator.tsx';
+export { default as Linkmap } from './components/Linkmap.tsx';
+export { default as Panel } from './components/Panel.tsx';
 export * from './src/types/enums.ts';
 export * from './src/types/utils.ts';

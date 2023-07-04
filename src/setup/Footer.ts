@@ -9,6 +9,12 @@ export default (props: Partial<iFooter>) => {
     layout_type: LAYOUT_TYPES.LEFT,
   };
 
+  props.children = props.children
+    ? Array.isArray(props.children)
+      ? props.children
+      : [props.children]
+    : [];
+
   const p = applyDefaults<iFooter>(defaults, props);
 
   const classes = {

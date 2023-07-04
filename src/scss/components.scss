@@ -187,6 +187,11 @@
   .comp-input,
   .comp-textarea {
     padding: 1px var(--s-half);
+
+    &::placeholder {
+      color: var(--clr-txt-base);
+      opacity: 0.75;
+    }
   }
 
   .comp-select {
