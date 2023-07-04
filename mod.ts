@@ -5,7 +5,7 @@ export { default as Navigation } from './components/Navigation.tsx';
 export { default as Link } from './components/Link.tsx';
 export { default as Footer } from './components/Footer.tsx';
 export { default as Input } from './components/Input.tsx';
-export { default as Textarea } from './components/Textarea.tsx';
+export { default as TextArea } from './components/TextArea.tsx';
 export { default as Select } from './components/Select.tsx';
 export { default as Card } from './components/Card.tsx';
 export { default as Main } from './components/Main.tsx';

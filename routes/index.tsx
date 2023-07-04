@@ -12,7 +12,7 @@ import Navigation from '../components/Navigation.tsx';
 import Select from '../components/Select.tsx';
 import Separator from '../components/Separator.tsx';
 import Text from '../components/Text.tsx';
-import Textarea from '../components/Textarea.tsx';
+import TextArea from '../components/TextArea.tsx';
 import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
 
 export default function Home() {
@@ -80,8 +80,8 @@ export default function Home() {
       <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
       <Input type="button" value="disabled" disabled />
       <Input type="image" value="Lorem ipsum" />
-      <Text>Textarea</Text>
-      <Textarea label="Lorem ipsum" error="lorem ipsum"></Textarea>
+      <Text>TextArea</Text>
+      <TextArea label="Lorem ipsum" error="lorem ipsum"></TextArea>
       <Text>Select</Text>
       <Select options={['Value 1', 'Value 2', 'Value 3']} placeholder="placeholder" label="Lorem ipsum" />
       <Text>Buttons</Text>

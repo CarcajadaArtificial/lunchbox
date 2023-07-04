@@ -1,9 +1,13 @@
 # Changelog
 
-## v0.0.84
+## v0.0.85
 
-### Updated export hotfix
+### Renamed Textarea back to TextArea
   - `/mod.ts`
+  - `/components/TextArea.tsx`
+  - `/routes/index.tsx`
+  - `/src/setup/TextArea.ts`
+  - `/src/types/props.ts`
 
 ## Comming Soon (v0.1.0)
 

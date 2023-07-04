@@ -1,13 +1,13 @@
 import Text from './Text.tsx';
-import { iTextarea } from '../src/types/props.ts';
-import setup from '../src/setup/Textarea.ts';
+import { iTextArea } from '../src/types/props.ts';
+import setup from '../src/setup/TextArea.ts';
 import { TEXT_TYPES } from '../mod.ts';
 
 /**
  * @todo [!!] Choose a standard color for placeholders.
  */
-export default function Textarea(props: Partial<iTextarea>) {
-  const { c, refTextarea, maxWidth, label, error, ...p } = setup(props);
+export default function TextArea(props: Partial<iTextArea>) {
+  const { c, refTextArea, maxWidth, label, error, ...p } = setup(props);
 
   return (
     <div class={c.container}>
@@ -20,7 +20,7 @@ export default function Textarea(props: Partial<iTextarea>) {
             </sup>
           ) : null}
         </Text>
-        <textarea ref={refTextarea} class={c.input} {...p} />
+        <textarea ref={refTextArea} class={c.input} {...p} />
       </label>
       {error ? (
         <Text noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>

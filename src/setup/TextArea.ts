@@ -1,14 +1,14 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iTextarea } from '../types/props.ts';
+import { iTextArea } from '../types/props.ts';
 
-const defaults: iTextarea = {
+const defaults: iTextArea = {
   required: false,
   maxWidth: false,
   noResize: false,
 };
 
-export default (props: Partial<iTextarea>) => {
-  const p = applyDefaults<iTextarea>(defaults, props);
+export default (props: Partial<iTextArea>) => {
+  const p = applyDefaults<iTextArea>(defaults, props);
 
   const classes = {
     input: cn(
