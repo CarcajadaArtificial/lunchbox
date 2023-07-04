@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.0.83
+## v0.0.84
 
 ### Updated export hotfix
   - `/mod.ts`
