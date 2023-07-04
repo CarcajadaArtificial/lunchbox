@@ -1,19 +1,9 @@
 # Changelog
 
-## v0.0.82
+## v0.0.83
 
-### Fixed urgent issues in the Footer and Input components
-  - `/components/Footer.tsx`
-  - `/src/setup/Footer.ts`
-  - `/components/Input.tsx`
-  - `/routes/index.tsx`
-  - `/src/scss/components`
-
-### Updated export module
+### Updated export hotfix
   - `/mod.ts`
-
-### Minor updates
- - `/static/style.css`
 
 ## Comming Soon (v0.1.0)
 
