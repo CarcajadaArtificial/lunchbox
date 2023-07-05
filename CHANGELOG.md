@@ -1,13 +1,18 @@
 # Changelog
 
-## v0.0.85
+## v0.0.86
 
-### Renamed Textarea back to TextArea
-  - `/mod.ts`
-  - `/components/TextArea.tsx`
-  - `/routes/index.tsx`
-  - `/src/setup/TextArea.ts`
+### Added fwd and fref to Input.tsx
+  - `/components/Input.tsx`
+  - `/src/setup/Input.ts`
   - `/src/types/props.ts`
+  - `/src/types/element.ts`
+
+### Added fref to single element components
+  - `/components/Button.tsx`
+  - `/components/Panel.tsx`
+  - `/components/Separator.tsx`
+  - `/components/Text.tsx`
 
 ## Comming Soon (v0.1.0)
 
@@ -97,6 +102,20 @@
     - [ ] Main              1!!
     - [ ] Textarea          1!!
     - [ ] components.scss   1!!
+  - [ ] Fix the fwd ref problem.
+    - [ ] Component
+      - [ ] Card
+      - [ ] Code
+      - [ ] Footer
+      - [ ] Header
+      - [x] Input
+      - [ ] Layout
+      - [ ] Linkmap
+      - [ ] Main*
+      - [ ] Navigation
+      - [ ] Select
+      - [ ] Textarea
+      
   - [ ] Do a documentation cleanup.
 
 #### v0.2

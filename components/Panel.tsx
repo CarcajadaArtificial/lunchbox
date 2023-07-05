@@ -2,10 +2,10 @@ import { iPanel } from '../src/types/props.ts';
 import setup from '../src/setup/Panel.ts';
 
 export default function (props: Partial<iPanel>) {
-  const { c, children, ...p } = setup(props);
+  const { c, fref, children, ...p } = setup(props);
 
   return (
-    <div {...p} class={c.panel}>
+    <div ref={fref} class={c.panel} {...p}>
       {children}
     </div>
   );

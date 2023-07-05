@@ -4,6 +4,7 @@ import { iInput } from '../types/props.ts';
 const defaults: iInput = {
   required: false,
   maxWidth: false,
+  fwd: {},
 };
 
 export default (props: Partial<iInput>) => {

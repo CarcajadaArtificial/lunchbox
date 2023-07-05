@@ -9,10 +9,18 @@
  * @module
  */
 
-import { JSX } from 'preact';
+import { JSX, Ref } from 'preact';
 
 /**
  * This type is a shorthand for an extension of `JSX.HTMLAttributes<T>`, `Partial<ARIAMixin>`, and ` Partial<GlobalEventHandlers>`.
  */
-export type iExtendedElement<T extends EventTarget = HTMLElement> =
-  JSX.HTMLAttributes<T> & Partial<ARIAMixin> & Partial<GlobalEventHandlers>;
+export type iExtendedElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
+  Partial<ARIAMixin> &
+  Partial<GlobalEventHandlers> & {
+    fref: Ref<T>;
+  };
+
+export type iFwd<T extends EventTarget = HTMLElement> = {
+  ref?: Ref<T>;
+  class?: string;
+};

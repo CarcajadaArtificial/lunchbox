@@ -9,7 +9,7 @@
  * @module
  */
 
-import { iExtendedElement } from './element.ts';
+import { iExtendedElement, iFwd } from './element.ts';
 import { Ref } from 'preact';
 import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from './enums.ts';
 import { ItemLink } from './utils.ts';
@@ -18,10 +18,16 @@ import { ItemLink } from './utils.ts';
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
  */
 export type iInput = iExtendedElement<HTMLInputElement> & {
-  refInput?: Ref<HTMLInputElement>;
   label?: string;
   error?: string;
   maxWidth: boolean;
+  fwd: {
+    text?: iFwd<HTMLSpanElement>;
+    label?: iFwd<HTMLLabelElement>;
+    error?: iFwd<HTMLSpanElement>;
+    required?: iFwd;
+    container?: iFwd<HTMLDivElement>;
+  };
 };
 
 /**
