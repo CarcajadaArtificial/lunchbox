@@ -1,13 +1,13 @@
-import { iCard } from "../src/types/props.ts";
-import setup from "../src/setup/Card.ts";
-import Panel from "./Panel.tsx";
+import { iCard } from '../src/types/props.ts';
+import setup from '../src/setup/Card.ts';
+import Panel from './Panel.tsx';
 
 export default function (props: Partial<iCard>) {
-  const { c, children, ...p } = setup(props);
+  const { c, fref, fwd, children, ...p } = setup(props);
 
   return (
-    <Panel>
-      <div {...p} class={c.card}>
+    <Panel fref={fwd?.panel?.fref!}>
+      <div ref={fref} class={c.card} {...p}>
         {children}
       </div>
     </Panel>

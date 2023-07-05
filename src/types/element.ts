@@ -17,10 +17,9 @@ import { JSX, Ref } from 'preact';
 export type iExtendedElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
   Partial<ARIAMixin> &
   Partial<GlobalEventHandlers> & {
-    fref: Ref<T>;
+    fref?: Ref<T>;
   };
 
-export type iFwd<T extends EventTarget = HTMLElement> = {
+export type iFwd<T extends EventTarget = HTMLElement> = iExtendedElement<T> & {
   ref?: Ref<T>;
-  class?: string;
 };

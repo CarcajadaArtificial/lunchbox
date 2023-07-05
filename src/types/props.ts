@@ -21,13 +21,13 @@ export type iInput = iExtendedElement<HTMLInputElement> & {
   label?: string;
   error?: string;
   maxWidth: boolean;
-  fwd: {
-    text?: iFwd<HTMLSpanElement>;
-    label?: iFwd<HTMLLabelElement>;
-    error?: iFwd<HTMLSpanElement>;
-    required?: iFwd;
-    container?: iFwd<HTMLDivElement>;
-  };
+  fwd: Partial<{
+    text: iFwd<HTMLSpanElement>;
+    label: iFwd<HTMLLabelElement>;
+    error: iFwd<HTMLSpanElement>;
+    required: iFwd;
+    container: iFwd<HTMLDivElement>;
+  }>;
 };
 
 /**
@@ -135,7 +135,11 @@ export type iSeparator = iExtendedElement<HTMLHRElement>;
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iCard = iExtendedElement<HTMLDivElement>;
+export type iCard = iExtendedElement<HTMLDivElement> & {
+  fwd?: Partial<{
+    panel: iFwd<HTMLDivElement>;
+  }>;
+};
 
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
