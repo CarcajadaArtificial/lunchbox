@@ -409,7 +409,7 @@ button {
 }
 
 .comp-separator {
-  margin-top: calc(var(--s-one-and-half) - 1px);
+  margin-top: var(--s-one-and-half);
   height: var(--s-one-and-half);
 }
 
@@ -458,10 +458,25 @@ button {
 }
 .comp-input_box .comp-select {
   padding: var(--s-eighth) var(--s-half);
+  height: var(--s-one-and-half);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.comp-input_box .comp-select:disabled {
+  opacity: 1;
 }
 
 .comp-input_date .comp-input {
   padding: 0 var(--s-half);
+  align-items: center;
+  height: 26px;
+  -webkit-text-fill-color: var(--clr-txt-base);
+}
+.comp-input_date .comp-input::-webkit-datetime-edit {
+  font: var(--txt-paragraph);
+  padding: 0;
+  height: 21px;
 }
 
 .comp-input_box,
@@ -514,6 +529,9 @@ button {
   padding: var(--s-quarter) var(--s-five-eights);
   border-radius: var(--s-eighth);
   cursor: pointer;
+}
+.comp-input_button .comp-input[type=image] {
+  height: var(--s-one-and-half);
 }
 .comp-input_button .comp-input_label {
   flex-direction: column;

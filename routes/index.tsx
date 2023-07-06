@@ -71,19 +71,29 @@ export default function Home() {
         required
       />
       <Input type="text" value="disabled" disabled />
+      <Separator />
       <Input type="datetime-local" label="Lorem ipsum" required />
       <Input type="date" label="Lorem ipsum" required />
       <Input type="month" label="Lorem ipsum" required />
       <Input type="week" label="Lorem ipsum" required />
       <Input type="time" label="Lorem ipsum" required />
+      <Separator />
       <Text>Input Buttons</Text>
       <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
       <Input type="button" value="disabled" disabled />
       <Input type="image" value="Lorem ipsum" />
+      <Separator />
       <Text>TextArea</Text>
       <TextArea label="Lorem ipsum" error="lorem ipsum"></TextArea>
+      <Separator />
       <Text>Select</Text>
-      <Select options={['Value 1', 'Value 2', 'Value 3']} placeholder="placeholder" label="Lorem ipsum" />
+      <Select
+        disabled
+        options={['Value 1', 'Value 2', 'Value 3']}
+        placeholder="placeholder"
+        label="Lorem ipsum"
+      />
+      <Separator />
       <Text>Buttons</Text>
       <Button>Contrast</Button>
       <Button type={BUTTON_TYPES.INVISIBLE}>Invisible</Button>
