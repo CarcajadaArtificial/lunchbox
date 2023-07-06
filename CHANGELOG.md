@@ -1,12 +1,19 @@
 # Changelog
 
-## v0.0.87
+## v0.0.88
 
-### Added fwd and fref to Card.tsx
-  - `/components/Card.tsx`
-  - `/src/setup/Card.ts`
+### Added an optional layout_type prop to the Footer, Header and Main components
   - `/src/types/props.ts`
-  - `/src/types/element.ts`
+  - `/src/setup/Footer.ts`
+  - `/src/setup/Header.ts`
+  - `/components/Footer.tsx`
+  - `/components/Header.tsx`
+  - `/components/Main.tsx`
+
+### Minor updates
+  - `/components/Button.tsx`
+  - `/components/TextArea.tsx`
+  - `/routes/index.tsx`
 
 ## Comming Soon (v0.1.0)
 
@@ -90,11 +97,10 @@
       - `?`: Possible fix, question it later.
     - Substitue the `Features` section of this document to a list of every feature with its pending.
   - [ ] Fix `!!`s and `!!!`s.
-    - [ ] Button            2!!
-    - [ ] Footer            1!!
-    - [ ] Header            1!!
-    - [ ] Main              1!!
-    - [ ] Textarea          1!!
+    - [x] Footer
+    - [x] Header
+    - [x] Main
+    - [x] Textarea
     - [ ] components.scss   1!!
   - [ ] Fix the fwd ref problem.
     - [x] Card

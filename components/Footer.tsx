@@ -6,7 +6,6 @@ import Panel from './Panel.tsx';
 import Link from './Link.tsx';
 
 /**
- * @todo [!!] change the prop "layout_type" to be optional, and places no layout when undefined
  * @todo [ ] Lazy load the `made-with-fresh` images.
  * @todo [?] Replace an src image with an inline SVG.
  */
@@ -37,7 +36,7 @@ export default function (props: Partial<iFooter>) {
   return (
     <Panel>
       <footer {...p} class={c.footer}>
-        <Layout type={layout_type}>{children}</Layout>
+        {layout_type ? <Layout type={layout_type}>{children}</Layout> : <>{children}</>}
       </footer>
     </Panel>
   );

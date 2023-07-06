@@ -107,26 +107,24 @@ export default function Home() {
         {TestLargeText(TEXT_TYPES.PARAGRAPH)}
         <TestLinkmap />
       </Header>
-      <Main>
-        <Layout type={LAYOUT_TYPES.CENTER}>
-          <>
-            {TestTinyText(TEXT_TYPES.PARAGRAPH)}
-            <Separator />
-            {TestTinyText(TEXT_TYPES.SUBHEADING)}
-            <Separator />
-            {TestTinyText(TEXT_TYPES.HEADING)}
-            <Separator />
-            {TestTinyText(TEXT_TYPES.TITLE)}
-            <Separator />
-            {TestTinyText(TEXT_TYPES.DISPLAY)}
-            <Card>
-              {TestSmallText(TEXT_TYPES.SUBHEADING)}
-              {TestLargeText(TEXT_TYPES.PARAGRAPH)}
-            </Card>
-            {TestInputs()}
-            <Separator />
-          </>
-        </Layout>
+      <Main layout_type={LAYOUT_TYPES.CENTER}>
+        <>
+          {TestTinyText(TEXT_TYPES.PARAGRAPH)}
+          <Separator />
+          {TestTinyText(TEXT_TYPES.SUBHEADING)}
+          <Separator />
+          {TestTinyText(TEXT_TYPES.HEADING)}
+          <Separator />
+          {TestTinyText(TEXT_TYPES.TITLE)}
+          <Separator />
+          {TestTinyText(TEXT_TYPES.DISPLAY)}
+          <Card>
+            {TestSmallText(TEXT_TYPES.SUBHEADING)}
+            {TestLargeText(TEXT_TYPES.PARAGRAPH)}
+          </Card>
+          {TestInputs()}
+          <Separator />
+        </>
       </Main>
       <Footer layout_type={LAYOUT_TYPES.LEFT} madeWithFresh>
         {TestTinyText(TEXT_TYPES.SUBHEADING)}

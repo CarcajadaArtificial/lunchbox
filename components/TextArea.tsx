@@ -3,9 +3,6 @@ import { iTextArea } from '../src/types/props.ts';
 import setup from '../src/setup/TextArea.ts';
 import { TEXT_TYPES } from '../mod.ts';
 
-/**
- * @todo [!!] Choose a standard color for placeholders.
- */
 export default function TextArea(props: Partial<iTextArea>) {
   const { c, refTextArea, maxWidth, label, error, ...p } = setup(props);
 

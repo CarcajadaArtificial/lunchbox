@@ -109,14 +109,14 @@ export type iLink = iExtendedElement<HTMLAnchorElement> & {
  */
 export type iFooter = iExtendedElement & {
   madeWithFresh: boolean;
-  layout_type: LAYOUT_TYPES;
+  layout_type?: LAYOUT_TYPES;
 };
 
 /**
  * Header component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
 export type iHeader = iExtendedElement & {
-  layout_type: LAYOUT_TYPES;
+  layout_type?: LAYOUT_TYPES;
 };
 
 /**
@@ -149,7 +149,9 @@ export type iCode = iExtendedElement;
 /**
  * Main component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
-export type iMain = iExtendedElement;
+export type iMain = iExtendedElement & {
+  layout_type?: LAYOUT_TYPES;
+};
 
 /**
  * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
