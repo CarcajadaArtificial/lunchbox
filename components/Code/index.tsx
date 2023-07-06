@@ -1,5 +1,5 @@
-import { iCode } from '../src/types/props.ts';
-import setup from '../src/setup/Code.ts';
+import { iCode } from '../../src/props.ts';
+import setup from './setup.ts';
 
 /**
  * @todo [] Click to copy to clipboard.

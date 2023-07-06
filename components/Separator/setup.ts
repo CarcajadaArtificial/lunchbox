@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iSeparator } from '../types/props.ts';
+import { iSeparator } from '../../src/props.ts';
 
 export default (props: Partial<iSeparator>) => {
   const defaults: iSeparator = {

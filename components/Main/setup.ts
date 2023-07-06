@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iMain } from '../types/props.ts';
+import { iMain } from '../../src/props.ts';
 
 export default (props: Partial<iMain>) => {
   const defaults: iMain = {

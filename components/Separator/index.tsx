@@ -1,5 +1,5 @@
-import { iSeparator } from '../src/types/props.ts';
-import setup from '../src/setup/Separator.ts';
+import { iSeparator } from '../../src/props.ts';
+import setup from './setup.ts';
 
 /**
  * @todo [!] Add a gradient property that creates a custom gradient separator.

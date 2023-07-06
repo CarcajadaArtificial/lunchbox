@@ -1,22 +1,24 @@
 # Changelog
 
-## v0.0.91
+## v0.0.92
 
-### Reorganized the Card, Panel, Header, Footer and Navigation components
-  - `/components/Card/index.tsx`
-  - `/components/Footer/index.tsx`
-  - `/components/Header/index.tsx`
-  - `/components/Panel/index.tsx`
-  - `/components/Navigation/index.tsx`
-  - `/components/Card/setup.ts`
-  - `/components/Footer/setup.ts`
-  - `/components/Header/setup.ts`
-  - `/components/Panel/setup.ts`
-  - `/components/Navigation/setup.ts`
+### Reorganized the Layout, Main, Code and Separator components
+  - `/components/Layout/index.tsx`
+  - `/components/Main/index.tsx`
+  - `/components/Code/index.tsx`
+  - `/components/Separator/index.tsx`
+  - `/components/Layout/setup.ts`
+  - `/components/Main/setup.ts`
+  - `/components/Code/setup.ts`
+  - `/components/Separator/setup.ts`
 
 ### Updated to the new component directory schema
-  - `/routes/index.tsx`
   - `/mod.ts`
+
+### Updated Layout in Footer, Header and Navigation
+  - `/components/Header/index.tsx`
+  - `/components/Footer/index.tsx`
+  - `/components/Navigation/index.tsx`
 
 ## Roadmap
 

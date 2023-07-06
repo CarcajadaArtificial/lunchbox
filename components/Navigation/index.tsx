@@ -1,6 +1,6 @@
 import { iNavigation } from '../../src/props.ts';
 import setup from './setup.ts';
-import Layout from '../Layout.tsx';
+import Layout from '../Layout/index.tsx';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 import Panel from '../Panel/index.tsx';
 

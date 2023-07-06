@@ -1,6 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iLayout } from '../types/props.ts';
-import { LAYOUT_TYPES } from '../types/enums.ts';
+import { iLayout } from '../../src/props.ts';
+import { LAYOUT_TYPES } from '../../src/enums.ts';
 
 const defaults: iLayout = {
   type: LAYOUT_TYPES.FULL,
