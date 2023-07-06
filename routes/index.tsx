@@ -1,4 +1,4 @@
-import Button from '../components/Button.tsx';
+import Button from '../components/Button/index.tsx';
 import Card from '../components/Card.tsx';
 import Code from '../components/Code.tsx';
 import Footer from '../components/Footer.tsx';

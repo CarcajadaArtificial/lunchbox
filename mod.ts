@@ -9,7 +9,7 @@ export { default as TextArea } from './components/TextArea.tsx';
 export { default as Select } from './components/Select.tsx';
 export { default as Card } from './components/Card.tsx';
 export { default as Main } from './components/Main.tsx';
-export { default as Button } from './components/Button.tsx';
+export { default as Button } from './components/Button/index.tsx';
 export { default as Code } from './components/Code.tsx';
 export { default as Separator } from './components/Separator.tsx';
 export { default as Linkmap } from './components/Linkmap.tsx';

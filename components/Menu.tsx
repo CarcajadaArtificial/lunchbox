@@ -1,6 +1,6 @@
 import { iMenu } from '../src/types/props.ts';
 import Link from './Link.tsx';
-import Button from './Button.tsx';
+// import Button from '.';
 import setup from '../src/setup/Menu.ts';
 import { BUTTON_TYPES } from '../mod.ts';
 
@@ -16,7 +16,7 @@ export default function (props: Partial<iMenu>) {
   return (
     <div class={c.wrapper}>
       <div {...p} class={c.door}>
-        <Button>{children}</Button>
+        {/* <Button>{children}</Button> */}
       </div>
       {isOpen ? (
         <div class={c.menu}>

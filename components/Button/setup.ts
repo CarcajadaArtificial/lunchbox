@@ -1,6 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { BUTTON_TYPES } from '../types/enums.ts';
-import { iButton } from '../types/props.ts';
+import { BUTTON_TYPES } from '../../src/enums.ts';
+import { iButton } from '../../src/props.ts';
 
 const defaults: iButton = {
   maxWidth: false,

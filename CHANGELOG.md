@@ -1,14 +1,25 @@
 # Changelog
 
-## v0.0.89
+## v0.0.90
 
-### Fixed Input, TextArea and Select issues width Chrome's icons and Safari's vertical rythmn.
-  - `/src/scss/components.scss`
+### Reorganized the Button component
+  - `/components/Button/index.tsx`
+  - `/components/Button/setup.ts`
+
+### Updated to the new component directory schema
+  - `/routes/index.tsx`
+  - `/mod.ts`
+
+### Duplicated the `type` directoy content.
+  - The type and setup directory will be removed for the new component directory schema.
+  - `/src/element.ts`
+  - `/src/enums.ts`
+  - `/src/props.ts`
+  - `/src/utils.ts`
 
 ### Minor updates
-  - `/routes/index.tsx`
   - `/static/style.css`
-  - `/components/Text.tsx`
+  - `/components/Menu.tsx`
 
 ## Roadmap
 

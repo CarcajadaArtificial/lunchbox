@@ -1,5 +1,5 @@
-import { iButton } from '../src/types/props.ts';
-import setup from '../src/setup/Button.ts';
+import { iButton } from '../../src/types/props.ts';
+import setup from './setup.ts';
 
 /**
  * @todo [!] Add a boolean property for icon buttons, these have different paddings.
