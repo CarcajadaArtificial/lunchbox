@@ -1,7 +1,7 @@
-import Text from './Text.tsx';
-import { iInput } from '../src/types/props.ts';
-import setup from '../src/setup/Input.ts';
-import { TEXT_TYPES } from '../mod.ts';
+import Text from '../Text/index.tsx';
+import { iInput } from '../../src/props.ts';
+import setup from './setup.ts';
+import { TEXT_TYPES } from '../../src/enums.ts';
 
 export default function (props: Partial<iInput>) {
   const { c, fref, fwd, maxWidth, label, error, ...p } = setup(props);

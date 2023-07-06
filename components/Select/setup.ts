@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iSelect } from '../types/props.ts';
+import { iSelect } from '../../src/props.ts';
 
 const defaults: iSelect = {
   required: false,

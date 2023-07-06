@@ -1,5 +1,5 @@
-import { iText } from '../src/types/props.ts';
-import setup from '../src/setup/Text.ts';
+import { iText } from '../../src/props.ts';
+import setup from './setup.ts';
 
 /**
  * @todo [!] Add scroll-padding-top to headings.

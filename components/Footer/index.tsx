@@ -3,7 +3,7 @@ import { iFooter } from '../../src/props.ts';
 import setup from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
-import Link from '../Link.tsx';
+import Link from '../Link/index.tsx';
 
 /**
  * @todo [ ] Lazy load the `made-with-fresh` images.

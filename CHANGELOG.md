@@ -1,24 +1,28 @@
 # Changelog
 
-## v0.0.92
+## v0.0.93
 
-### Reorganized the Layout, Main, Code and Separator components
-  - `/components/Layout/index.tsx`
-  - `/components/Main/index.tsx`
-  - `/components/Code/index.tsx`
-  - `/components/Separator/index.tsx`
-  - `/components/Layout/setup.ts`
-  - `/components/Main/setup.ts`
-  - `/components/Code/setup.ts`
-  - `/components/Separator/setup.ts`
+### Reorganized the Input, Link, Linkmap, Text, TextArea and Select components
+  - `/components/Input/index.tsx`
+  - `/components/Link/index.tsx`
+  - `/components/Linkmap/index.tsx`
+  - `/components/Select/index.tsx`
+  - `/components/Text/index.tsx`
+  - `/components/TextArea/index.tsx`
+  - `/components/Input/setup.ts`
+  - `/components/Link/setup.ts`
+  - `/components/Linkmap/setup.ts`
+  - `/components/Select/setup.ts`
+  - `/components/Text/setup.ts`
+  - `/components/TextArea/setup.ts`
 
 ### Updated to the new component directory schema
   - `/mod.ts`
 
-### Updated Layout in Footer, Header and Navigation
-  - `/components/Header/index.tsx`
-  - `/components/Footer/index.tsx`
-  - `/components/Navigation/index.tsx`
+### Minor updates
+  - Removed the menu component
+  - `/src/props.ts`
+  - `/routes/index.tsx`
 
 ## Roadmap
 

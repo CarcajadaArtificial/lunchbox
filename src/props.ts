@@ -44,18 +44,20 @@ export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
 /**
  * Select component's type that extends the `<select>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
  */
+export type iOption =
+  | string
+  | {
+      value: string;
+      name: string;
+    }
+  | iExtendedElement<HTMLOptionElement>;
+
 export type iSelect = iExtendedElement<HTMLSelectElement> & {
   label?: string;
   error?: string;
   placeholder: string;
   maxWidth: boolean;
-  options:
-    | {
-        value: string;
-        name: string;
-      }[]
-    | string[]
-    | [];
+  options: iOption[] | [];
 };
 
 /**

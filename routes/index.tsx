@@ -91,12 +91,7 @@ export default function Home() {
       <TextArea label="Lorem ipsum" error="lorem ipsum"></TextArea>
       <Separator />
       <Text>Select</Text>
-      <Select
-        disabled
-        options={['Value 1', 'Value 2', 'Value 3']}
-        placeholder="placeholder"
-        label="Lorem ipsum"
-      />
+      <Select options={['Value 1', 'Value 2', 'Value 3']} placeholder="placeholder" label="Lorem ipsum" />
       <Separator />
       <Text>Buttons</Text>
       <Button>Contrast</Button>

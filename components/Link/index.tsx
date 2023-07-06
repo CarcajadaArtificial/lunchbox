@@ -1,5 +1,5 @@
-import { iLink } from '../src/types/props.ts';
-import setup from '../src/setup/Link.ts';
+import { iLink } from '../../src/props.ts';
+import setup from './setup.ts';
 
 /**
  * @todo [!] Add hover animation.

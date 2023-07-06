@@ -1,8 +1,8 @@
-import { ItemLink } from '../src/types/utils.ts';
-import { iLinkmap } from '../src/types/props.ts';
-import setup from '../src/setup/Linkmap.ts';
-import Link from './Link.tsx';
-import Text from './Text.tsx';
+import { ItemLink } from '../../src/utils.ts';
+import { iLinkmap } from '../../src/props.ts';
+import setup from './setup.ts';
+import Link from '../Link/index.tsx';
+import Text from '../Text/index.tsx';
 
 export default function (props: Partial<iLinkmap>) {
   const { c, links, ...p } = setup(props);

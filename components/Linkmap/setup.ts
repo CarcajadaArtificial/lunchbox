@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iLinkmap } from '../types/props.ts';
+import { iLinkmap } from '../../src/props.ts';
 
 export default (props: Partial<iLinkmap>) => {
   const defaults: iLinkmap = {

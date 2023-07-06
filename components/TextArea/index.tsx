@@ -1,7 +1,7 @@
-import Text from './Text.tsx';
-import { iTextArea } from '../src/types/props.ts';
-import setup from '../src/setup/TextArea.ts';
-import { TEXT_TYPES } from '../mod.ts';
+import Text from '../Text/index.tsx';
+import { iTextArea } from '../../src/props.ts';
+import { TEXT_TYPES } from '../../src/enums.ts';
+import setup from './setup.ts';
 
 export default function TextArea(props: Partial<iTextArea>) {
   const { c, refTextArea, maxWidth, label, error, ...p } = setup(props);

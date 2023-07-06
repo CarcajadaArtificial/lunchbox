@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iInput } from '../types/props.ts';
+import { iInput } from '../../src/props.ts';
 
 const defaults: iInput = {
   required: false,

@@ -1,6 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { TEXT_TYPES } from '../types/enums.ts';
-import { iText } from '../types/props.ts';
+import { TEXT_TYPES } from '../../src/enums.ts';
+import { iText } from '../../src/props.ts';
 
 const defaults: iText = {
   type: TEXT_TYPES.PARAGRAPH,

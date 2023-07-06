@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iLink } from '../types/props.ts';
+import { iLink } from '../../src/props.ts';
 
 export default (props: Partial<iLink>) => {
   const defaults: iLink = {

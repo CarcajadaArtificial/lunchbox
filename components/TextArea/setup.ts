@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iTextArea } from '../types/props.ts';
+import { iTextArea } from '../../src/props.ts';
 
 const defaults: iTextArea = {
   required: false,
