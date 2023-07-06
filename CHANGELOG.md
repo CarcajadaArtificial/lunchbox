@@ -1,28 +1,10 @@
 # Changelog
 
-## v0.0.93
+## v0.0.94
 
-### Reorganized the Input, Link, Linkmap, Text, TextArea and Select components
-  - `/components/Input/index.tsx`
-  - `/components/Link/index.tsx`
-  - `/components/Linkmap/index.tsx`
-  - `/components/Select/index.tsx`
-  - `/components/Text/index.tsx`
-  - `/components/TextArea/index.tsx`
-  - `/components/Input/setup.ts`
-  - `/components/Link/setup.ts`
-  - `/components/Linkmap/setup.ts`
-  - `/components/Select/setup.ts`
-  - `/components/Text/setup.ts`
-  - `/components/TextArea/setup.ts`
-
-### Updated to the new component directory schema
+### Removed original /type files
   - `/mod.ts`
-
-### Minor updates
-  - Removed the menu component
-  - `/src/props.ts`
-  - `/routes/index.tsx`
+  - `/components/Button/index.tsx`
 
 ## Roadmap
 

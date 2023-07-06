@@ -1,4 +1,4 @@
-import { iButton } from '../../src/types/props.ts';
+import { iButton } from '../../src/props.ts';
 import setup from './setup.ts';
 
 /**
