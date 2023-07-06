@@ -1,19 +1,23 @@
-import Button from '../components/Button/index.tsx';
-import Card from '../components/Card.tsx';
-import Code from '../components/Code.tsx';
-import Footer from '../components/Footer.tsx';
-import Header from '../components/Header.tsx';
-import Input from '../components/Input.tsx';
-import Layout from '../components/Layout.tsx';
-import Link from '../components/Link.tsx';
-import Linkmap from '../components/Linkmap.tsx';
-import Main from '../components/Main.tsx';
-import Navigation from '../components/Navigation.tsx';
-import Select from '../components/Select.tsx';
-import Separator from '../components/Separator.tsx';
-import Text from '../components/Text.tsx';
-import TextArea from '../components/TextArea.tsx';
-import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from '../src/types/enums.ts';
+import {
+  Button,
+  Card,
+  Code,
+  Footer,
+  Header,
+  Input,
+  Layout,
+  Link,
+  Linkmap,
+  Main,
+  Navigation,
+  Select,
+  Separator,
+  Text,
+  TextArea,
+  BUTTON_TYPES,
+  LAYOUT_TYPES,
+  TEXT_TYPES,
+} from '../mod.ts';
 
 export default function Home() {
   const TestTinyText = (type: TEXT_TYPES) => (

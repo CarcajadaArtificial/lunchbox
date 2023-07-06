@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iFooter } from '../types/props.ts';
+import { iFooter } from '../../src/props.ts';
 
 export default (props: Partial<iFooter>) => {
   const defaults: iFooter = {

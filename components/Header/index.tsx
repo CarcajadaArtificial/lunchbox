@@ -1,7 +1,7 @@
-import { iHeader } from '../src/types/props.ts';
-import setup from '../src/setup/Header.ts';
-import Layout from './Layout.tsx';
-import Panel from './Panel.tsx';
+import { iHeader } from '../../src/props.ts';
+import setup from './setup.ts';
+import Layout from '../Layout.tsx';
+import Panel from '../Panel/index.tsx';
 
 export default function (props: Partial<iHeader>) {
   const { c, children, layout_type, ...p } = setup(props);

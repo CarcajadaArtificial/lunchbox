@@ -1,8 +1,8 @@
-import { iNavigation } from '../src/types/props.ts';
-import setup from '../src/setup/Navigation.ts';
-import Layout from './Layout.tsx';
-import { LAYOUT_TYPES } from '../mod.ts';
-import Panel from './Panel.tsx';
+import { iNavigation } from '../../src/props.ts';
+import setup from './setup.ts';
+import Layout from '../Layout.tsx';
+import { LAYOUT_TYPES } from '../../src/enums.ts';
+import Panel from '../Panel/index.tsx';
 
 /**
  * @todo [!] Add a property `scroll-height` that makes the menu appear after scrolling until that height.

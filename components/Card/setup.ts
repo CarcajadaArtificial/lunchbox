@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iCard } from '../types/props.ts';
+import { iCard } from '../../src/props.ts';
 
 export default (props: Partial<iCard>) => {
   const defaults: iCard = {

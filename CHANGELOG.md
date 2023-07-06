@@ -1,25 +1,22 @@
 # Changelog
 
-## v0.0.90
+## v0.0.91
 
-### Reorganized the Button component
-  - `/components/Button/index.tsx`
-  - `/components/Button/setup.ts`
+### Reorganized the Card, Panel, Header, Footer and Navigation components
+  - `/components/Card/index.tsx`
+  - `/components/Footer/index.tsx`
+  - `/components/Header/index.tsx`
+  - `/components/Panel/index.tsx`
+  - `/components/Navigation/index.tsx`
+  - `/components/Card/setup.ts`
+  - `/components/Footer/setup.ts`
+  - `/components/Header/setup.ts`
+  - `/components/Panel/setup.ts`
+  - `/components/Navigation/setup.ts`
 
 ### Updated to the new component directory schema
   - `/routes/index.tsx`
   - `/mod.ts`
-
-### Duplicated the `type` directoy content.
-  - The type and setup directory will be removed for the new component directory schema.
-  - `/src/element.ts`
-  - `/src/enums.ts`
-  - `/src/props.ts`
-  - `/src/utils.ts`
-
-### Minor updates
-  - `/static/style.css`
-  - `/components/Menu.tsx`
 
 ## Roadmap
 

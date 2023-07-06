@@ -1,5 +1,5 @@
-import { iPanel } from '../src/types/props.ts';
-import setup from '../src/setup/Panel.ts';
+import { iPanel } from '../../src/props.ts';
+import setup from './setup.ts';
 
 export default function (props: Partial<iPanel>) {
   const { c, fref, children, ...p } = setup(props);

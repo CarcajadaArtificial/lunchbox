@@ -1,9 +1,9 @@
 import { ComponentChild } from 'preact';
-import { iFooter } from '../src/types/props.ts';
-import setup from '../src/setup/Footer.ts';
-import Layout from './Layout.tsx';
-import Panel from './Panel.tsx';
-import Link from './Link.tsx';
+import { iFooter } from '../../src/props.ts';
+import setup from './setup.ts';
+import Layout from '../Layout.tsx';
+import Panel from '../Panel/index.tsx';
+import Link from '../Link.tsx';
 
 /**
  * @todo [ ] Lazy load the `made-with-fresh` images.

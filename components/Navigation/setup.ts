@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iNavigation } from '../types/props.ts';
+import { iNavigation } from '../../src/props.ts';
 
 const defaults: iNavigation = {
   children: null,

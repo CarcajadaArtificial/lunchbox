@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { iPanel } from '../types/props.ts';
+import { iPanel } from '../../src/props.ts';
 
 export default (props: Partial<iPanel>) => {
   const p = props;

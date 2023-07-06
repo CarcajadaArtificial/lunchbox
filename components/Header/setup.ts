@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iHeader } from '../types/props.ts';
+import { iHeader } from '../../src/props.ts';
 
 export default (props: Partial<iHeader>) => {
   const defaults: iHeader = {
