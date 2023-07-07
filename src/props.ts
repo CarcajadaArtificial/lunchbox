@@ -17,18 +17,18 @@ import { ItemLink } from './utils.ts';
 /**
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
  */
-export type iInput = iExtendedElement<HTMLInputElement> & {
-  label?: string;
-  error?: string;
-  maxWidth: boolean;
-  fwd: Partial<{
-    text: iFwd<HTMLSpanElement>;
-    label: iFwd<HTMLLabelElement>;
-    error: iFwd<HTMLSpanElement>;
-    required: iFwd;
-    container: iFwd<HTMLDivElement>;
-  }>;
-};
+// export type iInput = iExtendedElement<HTMLInputElement> & {
+//   label?: string;
+//   error?: string;
+//   maxWidth: boolean;
+//   fwd: Partial<{
+//     text: iFwd<HTMLSpanElement>;
+//     label: iFwd<HTMLLabelElement>;
+//     error: iFwd<HTMLSpanElement>;
+//     required: iFwd;
+//     container: iFwd<HTMLDivElement>;
+//   }>;
+// };
 
 /**
  * TextArea component's type that extends the `<textarea>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
@@ -102,24 +102,24 @@ export type iText = iExtendedElement<HTMLSpanElement> & {
 /**
  * Link component's type that extends the `<a>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
  */
-export type iLink = iExtendedElement<HTMLAnchorElement> & {
-  nostyle: boolean;
-};
+// export type iLink = iExtendedElement<HTMLAnchorElement> & {
+//   nostyle: boolean;
+// };
 
 /**
  * Footer component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
-export type iFooter = iExtendedElement & {
-  madeWithFresh: boolean;
-  layout_type?: LAYOUT_TYPES;
-};
+// export type iFooter = iExtendedElement & {
+//   madeWithFresh: boolean;
+//   layout_type?: LAYOUT_TYPES;
+// };
 
 /**
  * Header component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
  */
-export type iHeader = iExtendedElement & {
-  layout_type?: LAYOUT_TYPES;
-};
+// export type iHeader = iExtendedElement & {
+//   layout_type?: LAYOUT_TYPES;
+// };
 
 /**
  * Menu component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).

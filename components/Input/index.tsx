@@ -1,6 +1,5 @@
 import Text from '../Text/index.tsx';
-import { iInput } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iInput } from './setup.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 
 export default function (props: Partial<iInput>) {

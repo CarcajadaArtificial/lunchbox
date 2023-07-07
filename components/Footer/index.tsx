@@ -1,6 +1,5 @@
 import { ComponentChild } from 'preact';
-import { iFooter } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iFooter } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
 import Link from '../Link/index.tsx';

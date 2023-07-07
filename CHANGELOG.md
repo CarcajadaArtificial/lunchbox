@@ -1,15 +1,21 @@
 # Changelog
 
-## v0.0.95
+## v0.0.96
 
-### Ordered the prop types of the Button, Card and Code components
-  - `/components/Button/index.tsx`
-  - `/components/Card/index.tsx`
-  - `/components/Code/index.tsx`
-  - `/components/Button/setup.ts`
+### Ordered the prop types of the Footer, Header, Input, and Link components
+  - `/components/Footer/index.tsx`
+  - `/components/Header/index.tsx`
+  - `/components/Input/index.tsx`
+  - `/components/Link/index.tsx`
+  - `/components/Footer/setup.ts`
+  - `/components/Header/setup.ts`
+  - `/components/Input/setup.ts`
+  - `/components/Link/setup.ts`
+  - `/src/props.ts`
+
+### Minor updates
   - `/components/Card/setup.ts`
   - `/components/Code/setup.ts`
-  - `/src/props.ts`
 
 ## Roadmap
 
@@ -30,6 +36,8 @@
     - [x] Every component has its own directory.
     - [x] Every component directory contains a setup file.
     - [ ] Every setup file contains the prop type (`iComponent`).
+    - [ ] Every value inside a prop type (`iComponent`) must not be optional
+      - Use a default value of null instead of undefined, in types where undefined is a useful option.
   - [ ] Fix the fwd ref problem.
     - [x] Card
     - [ ] Code

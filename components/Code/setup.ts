@@ -3,11 +3,11 @@ import { iExtendedElement } from '../../src/element.ts';
 
 export type iCode = iExtendedElement;
 
-export default (props: Partial<iCode>) => {
-  const defaults: iCode = {
-    children: undefined,
-  };
+const defaults: iCode = {
+  children: undefined,
+};
 
+export default (props: Partial<iCode>) => {
   const p = applyDefaults<iCode>(defaults, props);
 
   const classes = {

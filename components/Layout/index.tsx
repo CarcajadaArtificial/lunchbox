@@ -1,5 +1,4 @@
-import { iLayout } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iLayout } from './setup.ts';
 import { ComponentChild } from 'preact';
 
 export default function (props: Partial<iLayout>) {

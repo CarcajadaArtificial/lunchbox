@@ -1,6 +1,10 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iLayout } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
+
+export type iLayout = iExtendedElement<HTMLDivElement> & {
+  type: LAYOUT_TYPES;
+};
 
 const defaults: iLayout = {
   type: LAYOUT_TYPES.FULL,

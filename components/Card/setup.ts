@@ -7,12 +7,12 @@ export type iCard = iExtendedElement<HTMLDivElement> & {
   }>;
 };
 
-export default (props: Partial<iCard>) => {
-  const defaults: iCard = {
-    children: undefined,
-    fwd: {},
-  };
+const defaults: iCard = {
+  children: undefined,
+  fwd: {},
+};
 
+export default (props: Partial<iCard>) => {
   const p = applyDefaults<iCard>(defaults, props);
 
   const classes = {

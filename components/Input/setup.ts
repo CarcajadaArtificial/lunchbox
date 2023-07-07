@@ -1,5 +1,18 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iInput } from '../../src/props.ts';
+import { iExtendedElement, iFwd } from '../../src/element.ts';
+
+export type iInput = iExtendedElement<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+  maxWidth: boolean;
+  fwd: Partial<{
+    text: iFwd<HTMLSpanElement>;
+    label: iFwd<HTMLLabelElement>;
+    error: iFwd<HTMLSpanElement>;
+    required: iFwd;
+    container: iFwd<HTMLDivElement>;
+  }>;
+};
 
 const defaults: iInput = {
   required: false,
