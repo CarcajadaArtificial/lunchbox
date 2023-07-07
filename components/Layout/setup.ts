@@ -8,7 +8,6 @@ export type iLayout = iExtendedElement<HTMLDivElement> & {
 
 const defaults: iLayout = {
   type: LAYOUT_TYPES.FULL,
-  children: [],
 };
 
 export default (props: Partial<iLayout>) => {

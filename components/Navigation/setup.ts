@@ -6,7 +6,6 @@ export type iNavigation = iExtendedElement & {
 };
 
 const defaults: iNavigation = {
-  children: null,
   fixed: false,
 };
 

@@ -3,11 +3,11 @@ import { iExtendedElement } from '../../src/element.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
 export type iHeader = iExtendedElement & {
-  layout_type?: LAYOUT_TYPES;
+  layout_type: LAYOUT_TYPES | null;
 };
 
 const defaults: iHeader = {
-  children: undefined,
+  layout_type: null,
 };
 
 export default (props: Partial<iHeader>) => {

@@ -6,7 +6,6 @@ export type iLink = iExtendedElement<HTMLAnchorElement> & {
 };
 
 const defaults: iLink = {
-  children: undefined,
   nostyle: false,
 };
 

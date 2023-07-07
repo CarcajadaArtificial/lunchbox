@@ -2,13 +2,15 @@ import { applyDefaults, cn } from '../../deps.ts';
 import { iExtendedElement } from '../../src/element.ts';
 
 export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
-  label?: string;
-  error?: string;
+  label: string;
+  error: string | null;
   maxWidth: boolean;
   noResize: boolean;
 };
 
 const defaults: iTextArea = {
+  label: '',
+  error: null,
   required: false,
   maxWidth: false,
   noResize: false,

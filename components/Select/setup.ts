@@ -10,19 +10,20 @@ export type iOption =
   | iExtendedElement<HTMLOptionElement>;
 
 export type iSelect = iExtendedElement<HTMLSelectElement> & {
-  label?: string;
-  error?: string;
+  label: string;
+  error: string | null;
   placeholder: string;
   maxWidth: boolean;
   options: iOption[] | [];
 };
 
 const defaults: iSelect = {
+  label: '',
+  error: null,
   required: false,
   maxWidth: false,
   placeholder: '',
   options: [],
-  children: null,
 };
 
 export default (props: Partial<iSelect>) => {

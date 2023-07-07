@@ -11,11 +11,11 @@ export type iLinkmap = iExtendedElement<HTMLDivElement> & {
   links: iLinkmapitem[] | [];
 };
 
-export default (props: Partial<iLinkmap>) => {
-  const defaults: iLinkmap = {
-    links: [],
-  };
+const defaults: iLinkmap = {
+  links: [],
+};
 
+export default (props: Partial<iLinkmap>) => {
   const p = applyDefaults<iLinkmap>(defaults, props);
 
   const classes = {

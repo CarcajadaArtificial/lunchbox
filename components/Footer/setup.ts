@@ -4,12 +4,12 @@ import { LAYOUT_TYPES } from '../../src/enums.ts';
 
 export type iFooter = iExtendedElement & {
   madeWithFresh: boolean;
-  layout_type?: LAYOUT_TYPES;
+  layout_type: LAYOUT_TYPES | null;
 };
 
 const defaults: iFooter = {
-  children: undefined,
   madeWithFresh: false,
+  layout_type: null,
 };
 
 export default (props: Partial<iFooter>) => {

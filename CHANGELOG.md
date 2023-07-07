@@ -1,22 +1,24 @@
 # Changelog
 
-## v0.0.98
+## v0.0.99
 
-### Ordered the prop types of the Main, Navigation, Panel, Select, Separator, Text and TextArea components
+### Removed optionality from all component's props.
   - Removed `/src/props.ts`
-  - `/components/Main/index.tsx`
-  - `/components/Navigation/index.tsx`
-  - `/components/Panel/index.tsx`
+  - `/components/Card/index.tsx`
+  - `/components/Input/index.tsx`
   - `/components/Select/index.tsx`
-  - `/components/Separator/index.tsx`
-  - `/components/Text/index.tsx`
-  - `/components/TextArea/index.tsx`
+  - `/components/Card/setup.ts`
+  - `/components/Footer/setup.ts`
+  - `/components/Header/setup.ts`
+  - `/components/Input/setup.ts`
+  - `/components/Layout/setup.ts`
+  - `/components/Link/setup.ts`
+  - `/components/Linkmap/setup.ts`
   - `/components/Main/setup.ts`
   - `/components/Navigation/setup.ts`
   - `/components/Panel/setup.ts`
   - `/components/Select/setup.ts`
   - `/components/Separator/setup.ts`
-  - `/components/Text/setup.ts`
   - `/components/TextArea/setup.ts`
 
 ## Roadmap
@@ -37,7 +39,7 @@
   - [ ] Reorganize project structure
     - [x] Every component has its own directory.
     - [x] Every component directory contains a setup file.
-    - [ ] Every setup file contains the prop type (`iComponent`).
+    - [x] Every setup file contains the prop type (`iComponent`).
     - [ ] Every value inside a prop type (`iComponent`) must not be optional
       - Use a default value of null instead of undefined, in types where undefined is a useful option.
   - [ ] Fix the fwd ref problem.
