@@ -2,11 +2,17 @@ import setup, { iMain } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 
 export default function (props: Partial<iMain>) {
-  const { c, children, layout_type, ...p } = setup(props);
+  const { c, fref, fwd, children, layout_type, ...p } = setup(props);
 
   return (
-    <main {...p} class={c.main}>
-      {layout_type ? <Layout type={layout_type}>{children}</Layout> : <>{children}</>}
+    <main ref={fref} {...p} class={c.main}>
+      {layout_type ? (
+        <Layout type={layout_type} class={c.layout} fref={fwd.layout?.ref}>
+          {children}
+        </Layout>
+      ) : (
+        <>{children}</>
+      )}
     </main>
   );
 }

@@ -3,32 +3,36 @@ import { TEXT_TYPES } from '../../src/enums.ts';
 import Text from '../Text/index.tsx';
 
 export default function Select(props: Partial<iSelect>) {
-  const { c, children, placeholder, options, maxWidth, label, error, ...p } = setup(props);
+  const { c, fref, fwd, children, placeholder, options, maxWidth, label, error, ...p } = setup(props);
 
   return (
-    <div class={c.container}>
-      <label class={c.label}>
+    <div ref={fwd.container?.ref} class={c.container}>
+      <label ref={fwd.label?.ref} class={c.label}>
         {label === '' ? null : (
-          <Text noMargins class={c.text}>
+          <Text fref={fwd.text?.ref} noMargins class={c.text}>
             {label}
             {p.required ? (
-              <sup title="Required" class={c.required}>
+              <sup ref={fwd.required?.ref} title="Required" class={c.required}>
                 *
               </sup>
             ) : null}
           </Text>
         )}
-        <select class={c.input} {...p}>
+        <select ref={fref} class={c.input} {...p}>
           {children === null ? (
             <>
-              <option value="" selected hidden>
+              <option ref={fwd.option?.ref} class={c.option} value="" selected hidden>
                 {placeholder}
               </option>
               {options.map((option) =>
                 typeof option === 'string' ? (
-                  <option value={option}>{option}</option>
+                  <option ref={fwd.option?.ref} class={c.option} value={option}>
+                    {option}
+                  </option>
                 ) : option.value && option.name ? (
-                  <option value={option.value}>{option.name}</option>
+                  <option ref={fwd.option?.ref} class={c.option} value={option.value}>
+                    {option.name}
+                  </option>
                 ) : (
                   { option }
                 )
@@ -40,7 +44,7 @@ export default function Select(props: Partial<iSelect>) {
         </select>
       </label>
       {error ? (
-        <Text noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
+        <Text fref={fwd.error?.ref} noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
           {error}
         </Text>
       ) : null}

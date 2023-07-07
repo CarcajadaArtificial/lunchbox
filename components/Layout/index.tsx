@@ -2,14 +2,22 @@ import setup, { iLayout } from './setup.ts';
 import { ComponentChild } from 'preact';
 
 export default function (props: Partial<iLayout>) {
-  const { c, type, children, ...p } = setup(props);
+  const { c, fref, fwd, type, children, ...p } = setup(props);
 
   return (
-    <div {...p} class={c.layout}>
+    <div ref={fref} {...p} class={c.layout}>
       {Array.isArray(children) ? (
-        children.map((child: ComponentChild) => (child ? <div class={c.module}>{child}</div> : null))
+        children.map((child: ComponentChild) =>
+          child ? (
+            <div ref={fwd.module?.ref} class={c.module}>
+              {child}
+            </div>
+          ) : null
+        )
       ) : children ? (
-        <div class={c.module}>{children}</div>
+        <div ref={fwd.module?.ref} class={c.module}>
+          {children}
+        </div>
       ) : null}
     </div>
   );

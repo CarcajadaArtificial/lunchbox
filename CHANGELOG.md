@@ -1,16 +1,18 @@
 # Changelog
 
-## v0.0.100
+## v0.0.101
 
-### Added fref and fwd to the Card, Code, Footer and Header components
-  - `/components/Card/index.tsx`
-  - `/components/Code/index.tsx`
-  - `/components/Footer/index.tsx`
-  - `/components/Header/index.tsx`
-  - `/components/Card/setup.ts`
-  - `/components/Code/setup.ts`
-  - `/components/Footer/setup.ts`
-  - `/components/Header/setup.ts`
+### Added fref and fwd to the Layout, Linkmap, Main, Select and Navigation components
+  - `/components/Layout/index.tsx`
+  - `/components/Linkmap/index.tsx`
+  - `/components/Main/index.tsx`
+  - `/components/Select/index.tsx`
+  - `/components/Navigation/index.tsx`
+  - `/components/Layout/setup.ts`
+  - `/components/Linkmap/setup.ts`
+  - `/components/Main/setup.ts`
+  - `/components/Select/setup.ts`
+  - `/components/Navigation/setup.ts`
 
 ## Roadmap
 
@@ -27,11 +29,11 @@
       - `?`: Possible fix, question it later.
     - Substitue the `Features` section of this document to a list of every feature with its pending.
   - [x] Fix `!!`s and `!!!`s.
-  - [ ] Reorganize project structure
+  - [x] Reorganize project structure
     - [x] Every component has its own directory.
     - [x] Every component directory contains a setup file.
     - [x] Every setup file contains the prop type (`iComponent`).
-    - [ ] Every value inside a prop type (`iComponent`) must not be optional
+    - [x] Every value inside a prop type (`iComponent`) must not be optional
       - Use a default value of null instead of undefined, in types where undefined is a useful option.
   - [ ] Fix the fwd ref problem.
     - [x] Card
@@ -39,13 +41,21 @@
     - [x] Footer
     - [x] Header
     - [x] Input
-    - [ ] Layout
-    - [ ] Linkmap
-    - [ ] Main*
-    - [ ] Navigation
-    - [ ] Select
+    - [x] Layout
+    - [x] Linkmap
+    - [x] Main
+    - [x] Navigation
+    - [x] Select
     - [ ] Textarea
   - [ ] Do a documentation cleanup.
+    - [ ] Contributing.md
+      - [ ] How the 
+      - [ ] Standard component structure
+  - [ ] Minor Fixes
+    - [ ] Rename element.ts to types.ts
+    - [ ] Move system scss modules to its own directory
+    - [ ] Removed the components scss directory
+    - [ ] Rename all root src scss modules to _module.scss
 
 ### v0.2
 
@@ -55,12 +65,12 @@
     - [ ] Separator
     - [ ] Input
     - [ ] Select
-    - [ ] Textarea
+    - [ ] TextArea
+    - [ ] Link
   - [ ] Create an organized collection of island functions
   - [ ] Add components
-    - [ ] Menu (Update to GarliCSS)
+    - [ ] Menu
     - [ ] Page
     - [ ] Fieldset
     - [ ] Chip
-    - [ ] Linkmap
     - [ ] Spinner

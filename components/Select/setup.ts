@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iExtendedElement } from '../../src/element.ts';
+import { iExtendedElement, iFwd } from '../../src/element.ts';
 
 export type iOption =
   | string
@@ -15,6 +15,14 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
   placeholder: string;
   maxWidth: boolean;
   options: iOption[] | [];
+  fwd: Partial<{
+    text: iFwd<HTMLSpanElement>;
+    label: iFwd<HTMLLabelElement>;
+    error: iFwd<HTMLSpanElement>;
+    required: iFwd;
+    container: iFwd<HTMLDivElement>;
+    option: iFwd<HTMLOptionElement>;
+  }>;
 };
 
 const defaults: iSelect = {
@@ -24,18 +32,28 @@ const defaults: iSelect = {
   maxWidth: false,
   placeholder: '',
   options: [],
+  fwd: {},
 };
 
 export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
   const classes = {
-    input: cn('comp-select', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
-    text: cn(''),
-    label: cn('comp-select_label'),
-    error: cn('comp-select_error clr-txt-error'),
-    required: cn('comp-select_required'),
-    container: cn('comp-select_container comp-input_box', p.maxWidth ? 'w-full' : null),
+    input: cn(
+      'comp-select',
+      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
+      p.class
+    ),
+    text: cn('', p.fwd.text?.class),
+    option: cn('', p.fwd.option?.class),
+    label: cn('comp-select_label', p.fwd.label?.class),
+    error: cn('comp-select_error clr-txt-error', p.fwd.error?.class),
+    required: cn('comp-select_required', p.fwd.required?.class),
+    container: cn(
+      'comp-select_container comp-input_box',
+      p.maxWidth ? 'w-full' : null,
+      p.fwd.container?.class
+    ),
   };
 
   return { c: classes, ...p };
