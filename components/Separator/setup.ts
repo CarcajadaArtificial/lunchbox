@@ -1,5 +1,7 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iSeparator } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iSeparator = iExtendedElement<HTMLHRElement>;
 
 export default (props: Partial<iSeparator>) => {
   const defaults: iSeparator = {

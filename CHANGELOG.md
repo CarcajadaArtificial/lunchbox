@@ -1,13 +1,23 @@
 # Changelog
 
-## v0.0.97
+## v0.0.98
 
-### Ordered the prop types of the Linkmap component
-  - Removed `/src/utils.ts`
-  - `/components/Linkmap/index.tsx`
-  - `/components/Linkmap/setup.ts`
-  - `/src/props.ts`
-  - `/mod.ts`
+### Ordered the prop types of the Main, Navigation, Panel, Select, Separator, Text and TextArea components
+  - Removed `/src/props.ts`
+  - `/components/Main/index.tsx`
+  - `/components/Navigation/index.tsx`
+  - `/components/Panel/index.tsx`
+  - `/components/Select/index.tsx`
+  - `/components/Separator/index.tsx`
+  - `/components/Text/index.tsx`
+  - `/components/TextArea/index.tsx`
+  - `/components/Main/setup.ts`
+  - `/components/Navigation/setup.ts`
+  - `/components/Panel/setup.ts`
+  - `/components/Select/setup.ts`
+  - `/components/Separator/setup.ts`
+  - `/components/Text/setup.ts`
+  - `/components/TextArea/setup.ts`
 
 ## Roadmap
 

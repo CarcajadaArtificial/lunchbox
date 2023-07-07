@@ -1,5 +1,9 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iNavigation } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iNavigation = iExtendedElement & {
+  fixed: boolean;
+};
 
 const defaults: iNavigation = {
   children: null,

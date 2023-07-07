@@ -1,5 +1,10 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iMain } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+import { LAYOUT_TYPES } from '../../src/enums.ts';
+
+export type iMain = iExtendedElement & {
+  layout_type?: LAYOUT_TYPES;
+};
 
 export default (props: Partial<iMain>) => {
   const defaults: iMain = {

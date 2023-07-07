@@ -1,7 +1,6 @@
-import Text from '../Text/index.tsx';
-import { iSelect } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iSelect } from './setup.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
+import Text from '../Text/index.tsx';
 
 export default function Select(props: Partial<iSelect>) {
   const { c, children, placeholder, options, maxWidth, label, error, ...p } = setup(props);

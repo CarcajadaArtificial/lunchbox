@@ -1,5 +1,21 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iSelect } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iOption =
+  | string
+  | {
+      value: string;
+      name: string;
+    }
+  | iExtendedElement<HTMLOptionElement>;
+
+export type iSelect = iExtendedElement<HTMLSelectElement> & {
+  label?: string;
+  error?: string;
+  placeholder: string;
+  maxWidth: boolean;
+  options: iOption[] | [];
+};
 
 const defaults: iSelect = {
   required: false,

@@ -1,5 +1,12 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iTextArea } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
+  label?: string;
+  error?: string;
+  maxWidth: boolean;
+  noResize: boolean;
+};
 
 const defaults: iTextArea = {
   required: false,

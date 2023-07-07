@@ -1,6 +1,15 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
-import { iText } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iText = iExtendedElement<HTMLSpanElement> & {
+  type: TEXT_TYPES;
+  inheritColor: boolean;
+  compact: boolean;
+  single: boolean;
+  noMargins: boolean;
+  indent: boolean;
+};
 
 const defaults: iText = {
   type: TEXT_TYPES.PARAGRAPH,

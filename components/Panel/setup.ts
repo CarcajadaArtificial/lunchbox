@@ -1,5 +1,7 @@
 import { cn } from '../../deps.ts';
-import { iPanel } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iPanel = iExtendedElement<HTMLDivElement>;
 
 export default (props: Partial<iPanel>) => {
   const p = props;

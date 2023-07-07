@@ -1,10 +1,9 @@
-import Text from '../Text/index.tsx';
-import { iTextArea } from '../../src/props.ts';
+import setup, { iTextArea } from './setup.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
-import setup from './setup.ts';
+import Text from '../Text/index.tsx';
 
 export default function TextArea(props: Partial<iTextArea>) {
-  const { c, refTextArea, maxWidth, label, error, ...p } = setup(props);
+  const { c, maxWidth, label, error, ...p } = setup(props);
 
   return (
     <div class={c.container}>
@@ -17,7 +16,7 @@ export default function TextArea(props: Partial<iTextArea>) {
             </sup>
           ) : null}
         </Text>
-        <textarea ref={refTextArea} class={c.input} {...p} />
+        <textarea class={c.input} {...p} />
       </label>
       {error ? (
         <Text noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
