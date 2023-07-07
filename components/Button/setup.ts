@@ -1,6 +1,11 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
-import { iButton } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iButton = iExtendedElement<HTMLButtonElement> & {
+  type: BUTTON_TYPES;
+  maxWidth: boolean;
+};
 
 const defaults: iButton = {
   maxWidth: false,

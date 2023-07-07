@@ -1,5 +1,11 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iCard } from '../../src/props.ts';
+import { iExtendedElement, iFwd } from '../../src/element.ts';
+
+export type iCard = iExtendedElement<HTMLDivElement> & {
+  fwd?: Partial<{
+    panel: iFwd<HTMLDivElement>;
+  }>;
+};
 
 export default (props: Partial<iCard>) => {
   const defaults: iCard = {

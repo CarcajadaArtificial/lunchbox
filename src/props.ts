@@ -63,10 +63,10 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
 /**
  * Button component's type that extends the `<button>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button).
  */
-export type iButton = iExtendedElement<HTMLButtonElement> & {
-  type: BUTTON_TYPES;
-  maxWidth: boolean;
-};
+// export type iButton = iExtendedElement<HTMLButtonElement> & {
+//   type: BUTTON_TYPES;
+//   maxWidth: boolean;
+// };
 
 /**
  * Layout component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
@@ -137,16 +137,16 @@ export type iSeparator = iExtendedElement<HTMLHRElement>;
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iCard = iExtendedElement<HTMLDivElement> & {
-  fwd?: Partial<{
-    panel: iFwd<HTMLDivElement>;
-  }>;
-};
+// export type iCard = iExtendedElement<HTMLDivElement> & {
+//   fwd?: Partial<{
+//     panel: iFwd<HTMLDivElement>;
+//   }>;
+// };
 
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iCode = iExtendedElement;
+// export type iCode = iExtendedElement;
 
 /**
  * Main component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).

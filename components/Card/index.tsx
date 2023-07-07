@@ -1,5 +1,4 @@
-import { iCard } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iCard } from './setup.ts';
 import Panel from '../Panel/index.tsx';
 
 export default function (props: Partial<iCard>) {

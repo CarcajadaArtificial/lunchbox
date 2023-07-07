@@ -1,5 +1,7 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iCode } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iCode = iExtendedElement;
 
 export default (props: Partial<iCode>) => {
   const defaults: iCode = {
