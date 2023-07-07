@@ -15,4 +15,3 @@ export { default as Separator } from './components/Separator/index.tsx';
 export { default as Linkmap } from './components/Linkmap/index.tsx';
 export { default as Panel } from './components/Panel/index.tsx';
 export * from './src/enums.ts';
-export * from './src/utils.ts';

@@ -1,13 +1,11 @@
-import { ItemLink } from '../../src/utils.ts';
-import { iLinkmap } from '../../src/props.ts';
-import setup from './setup.ts';
+import setup, { iLinkmapitem, iLinkmap } from './setup.ts';
 import Link from '../Link/index.tsx';
 import Text from '../Text/index.tsx';
 
 export default function (props: Partial<iLinkmap>) {
   const { c, links, ...p } = setup(props);
 
-  const renderRecursiveLinks = (links: ItemLink[]) => (
+  const renderRecursiveLinks = (links: iLinkmapitem[]) => (
     <ul class={c.list}>
       {links.map((link) => (
         <li>

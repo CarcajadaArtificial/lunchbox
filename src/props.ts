@@ -9,10 +9,9 @@
  * @module
  */
 
-import { iExtendedElement, iFwd } from './element.ts';
+import { iExtendedElement } from './element.ts';
 import { Ref } from 'preact';
-import { BUTTON_TYPES, LAYOUT_TYPES, TEXT_TYPES } from './enums.ts';
-import { ItemLink } from './utils.ts';
+import { LAYOUT_TYPES, TEXT_TYPES } from './enums.ts';
 
 /**
  * Input component's type that extends the `<input>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
@@ -71,9 +70,9 @@ export type iSelect = iExtendedElement<HTMLSelectElement> & {
 /**
  * Layout component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iLayout = iExtendedElement<HTMLDivElement> & {
-  type: LAYOUT_TYPES;
-};
+// export type iLayout = iExtendedElement<HTMLDivElement> & {
+//   type: LAYOUT_TYPES;
+// };
 
 /**
  * Navigation component's type that extends the generic `HTMLElement` [Read more](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement).
@@ -85,7 +84,7 @@ export type iNavigation = iExtendedElement & {
 /**
  * Page component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iPage = iExtendedElement<HTMLDivElement>;
+// export type iPage = iExtendedElement<HTMLDivElement>;
 
 /**
  * Text component's type that extends the `<span>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span).
@@ -124,10 +123,10 @@ export type iText = iExtendedElement<HTMLSpanElement> & {
 /**
  * Menu component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iMenu = iExtendedElement<HTMLDivElement> & {
-  isOpen: boolean;
-  links: { label: string; href: string }[] | [];
-};
+// export type iMenu = iExtendedElement<HTMLDivElement> & {
+//   isOpen: boolean;
+//   links: { label: string; href: string }[] | [];
+// };
 
 /**
  * Card component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
@@ -158,9 +157,15 @@ export type iMain = iExtendedElement & {
 /**
  * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
  */
-export type iLinkmap = iExtendedElement<HTMLDivElement> & {
-  links: ItemLink[] | [];
-};
+// export type iLinkmapitem = {
+//   name: string;
+//   url?: string;
+//   children?: iLinkmapitem[];
+// };
+
+// export type iLinkmap = iExtendedElement<HTMLDivElement> & {
+//   links: iLinkmapitem[] | [];
+// };
 
 /**
  * Linkmap component's type that extends the `<div>` element [Read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).

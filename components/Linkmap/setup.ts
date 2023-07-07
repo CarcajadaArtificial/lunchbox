@@ -1,5 +1,15 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iLinkmap } from '../../src/props.ts';
+import { iExtendedElement } from '../../src/element.ts';
+
+export type iLinkmapitem = {
+  name: string;
+  url?: string;
+  children?: iLinkmapitem[];
+};
+
+export type iLinkmap = iExtendedElement<HTMLDivElement> & {
+  links: iLinkmapitem[] | [];
+};
 
 export default (props: Partial<iLinkmap>) => {
   const defaults: iLinkmap = {

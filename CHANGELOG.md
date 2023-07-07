@@ -1,21 +1,13 @@
 # Changelog
 
-## v0.0.96
+## v0.0.97
 
-### Ordered the prop types of the Footer, Header, Input, and Link components
-  - `/components/Footer/index.tsx`
-  - `/components/Header/index.tsx`
-  - `/components/Input/index.tsx`
-  - `/components/Link/index.tsx`
-  - `/components/Footer/setup.ts`
-  - `/components/Header/setup.ts`
-  - `/components/Input/setup.ts`
-  - `/components/Link/setup.ts`
+### Ordered the prop types of the Linkmap component
+  - Removed `/src/utils.ts`
+  - `/components/Linkmap/index.tsx`
+  - `/components/Linkmap/setup.ts`
   - `/src/props.ts`
-
-### Minor updates
-  - `/components/Card/setup.ts`
-  - `/components/Code/setup.ts`
+  - `/mod.ts`
 
 ## Roadmap
 
