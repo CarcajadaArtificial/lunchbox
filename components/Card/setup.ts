@@ -15,8 +15,8 @@ export default (props: Partial<iCard>) => {
   const p = applyDefaults<iCard>(defaults, props);
 
   const classes = {
-    card: cn('comp-card clr-bg-panel', props.class),
-    panel: cn('', props.fwd?.panel?.class),
+    card: cn('comp-card clr-bg-panel', p.class),
+    panel: cn('', p.fwd.panel?.class),
   };
 
   return { c: classes, ...p };

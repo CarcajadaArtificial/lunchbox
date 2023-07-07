@@ -1,25 +1,16 @@
 # Changelog
 
-## v0.0.99
+## v0.0.100
 
-### Removed optionality from all component's props.
-  - Removed `/src/props.ts`
+### Added fref and fwd to the Card, Code, Footer and Header components
   - `/components/Card/index.tsx`
-  - `/components/Input/index.tsx`
-  - `/components/Select/index.tsx`
+  - `/components/Code/index.tsx`
+  - `/components/Footer/index.tsx`
+  - `/components/Header/index.tsx`
   - `/components/Card/setup.ts`
+  - `/components/Code/setup.ts`
   - `/components/Footer/setup.ts`
   - `/components/Header/setup.ts`
-  - `/components/Input/setup.ts`
-  - `/components/Layout/setup.ts`
-  - `/components/Link/setup.ts`
-  - `/components/Linkmap/setup.ts`
-  - `/components/Main/setup.ts`
-  - `/components/Navigation/setup.ts`
-  - `/components/Panel/setup.ts`
-  - `/components/Select/setup.ts`
-  - `/components/Separator/setup.ts`
-  - `/components/TextArea/setup.ts`
 
 ## Roadmap
 
@@ -44,9 +35,9 @@
       - Use a default value of null instead of undefined, in types where undefined is a useful option.
   - [ ] Fix the fwd ref problem.
     - [x] Card
-    - [ ] Code
-    - [ ] Footer
-    - [ ] Header
+    - [x] Code
+    - [x] Footer
+    - [x] Header
     - [x] Input
     - [ ] Layout
     - [ ] Linkmap
