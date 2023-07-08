@@ -1,21 +1,12 @@
 # Changelog
 
-## v0.0.101
+## v0.0.102
 
-### Added fref and fwd to the Layout, Linkmap, Main, Select and Navigation components
-  - `/components/Layout/index.tsx`
-  - `/components/Linkmap/index.tsx`
-  - `/components/Main/index.tsx`
-  - `/components/Select/index.tsx`
-  - `/components/Navigation/index.tsx`
-  - `/components/Layout/setup.ts`
-  - `/components/Linkmap/setup.ts`
-  - `/components/Main/setup.ts`
-  - `/components/Select/setup.ts`
-  - `/components/Navigation/setup.ts`
+### Added fref and fwd to the TextArea component
+  - `/components/TextArea/index.tsx`
+  - `/components/TextArea/setup.ts`
 
 ## Roadmap
-
 ### v0.1
 
   - [x] Update all components to GarliCSS and display on index route.
@@ -35,7 +26,7 @@
     - [x] Every setup file contains the prop type (`iComponent`).
     - [x] Every value inside a prop type (`iComponent`) must not be optional
       - Use a default value of null instead of undefined, in types where undefined is a useful option.
-  - [ ] Fix the fwd ref problem.
+  - [x] Fix the fwd ref problem.
     - [x] Card
     - [x] Code
     - [x] Footer
@@ -46,11 +37,15 @@
     - [x] Main
     - [x] Navigation
     - [x] Select
-    - [ ] Textarea
+    - [x] Textarea
   - [ ] Do a documentation cleanup.
     - [ ] Contributing.md
       - [ ] How the 
       - [ ] Standard component structure
+    - [ ] Readme.md
+      - [ ] What is this, features
+      - [ ] Installation guide
+      - [ ] Usage guide
   - [ ] Minor Fixes
     - [ ] Rename element.ts to types.ts
     - [ ] Move system scss modules to its own directory
