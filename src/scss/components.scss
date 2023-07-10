@@ -18,12 +18,16 @@
 // Header
 .comp-header {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
+
+  &_banner {
+    height: 100vh;
+  }
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Main
 .comp-main {
-  padding-top: var(--s-triple);
+  padding: var(--s-triple) 0;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -172,6 +176,10 @@
   &_container {
     max-width: 24rem;
     @include select-none;
+
+    &.comp-input_maxwidth {
+      max-width: 100%;
+    }
   }
 
   &_required {

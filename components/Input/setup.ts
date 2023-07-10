@@ -26,22 +26,26 @@ export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
   const classes = {
-    input: cn('comp-input', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
-    text: cn('select-none'),
-    label: cn('comp-input_label'),
-    error: cn('comp-input_error clr-txt-error'),
-    required: cn('comp-input_required clr-txt-error'),
+    input: cn(
+      'comp-input',
+      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
+      p.class
+    ),
+    text: cn('select-none', p.fwd.text?.class),
+    label: cn('comp-input_label', p.fwd.label?.class),
+    error: cn('comp-input_error clr-txt-error', p.fwd.error?.class),
+    required: cn('comp-input_required clr-txt-error', p.fwd.text?.class),
     container: cn(
       'comp-input_container',
-      p.maxWidth
-        ? 'w-full'
-        : p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+      p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
         ? 'comp-input_button'
         : p.type && ['radio', 'checkbox'].includes(p.type)
         ? 'comp-input_bool'
         : p.type && ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
         ? 'comp-input_date'
-        : 'comp-input_box'
+        : 'comp-input_box',
+      p.maxWidth ? 'comp-input_maxwidth' : null,
+      p.fwd.container?.class
     ),
   };
 

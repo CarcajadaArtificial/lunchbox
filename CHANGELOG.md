@@ -1,12 +1,20 @@
 # Changelog
 
-## v0.0.102
+## v0.0.103
 
-### Added fref and fwd to the TextArea component
-  - `/components/TextArea/index.tsx`
-  - `/components/TextArea/setup.ts`
+### Minor component fixes and adjustments
+  - `/src/scss/components.scss`
+  - `/components/Header/setup.ts`
+  - `/components/Index/setup.ts`
+  - `/components/Index/index.tsx`
+  - `/components/Select/index.tsx`
+
+### Minor updates
+  - `/static/style.css`
+  - `/routes/index.tsx`
 
 ## Roadmap
+
 ### v0.1
 
   - [x] Update all components to GarliCSS and display on index route.

@@ -310,9 +310,12 @@ button {
 .comp-header {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
 }
+.comp-header_banner {
+  height: 100vh;
+}
 
 .comp-main {
-  padding-top: var(--s-triple);
+  padding: var(--s-triple) 0;
 }
 
 .comp-footer {
@@ -429,6 +432,11 @@ button {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.comp-input_container.comp-input_maxwidth,
+.comp-textarea_container.comp-input_maxwidth,
+.comp-select_container.comp-input_maxwidth {
+  max-width: 100%;
 }
 .comp-input_required,
 .comp-textarea_required,

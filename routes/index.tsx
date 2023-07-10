@@ -132,7 +132,6 @@ export default function Home() {
             {TestLargeText(TEXT_TYPES.PARAGRAPH)}
           </Card>
           {TestInputs()}
-          <Separator />
         </>
       </Main>
       <Footer layout_type={LAYOUT_TYPES.LEFT} madeWithFresh>

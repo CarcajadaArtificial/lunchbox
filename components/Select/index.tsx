@@ -5,6 +5,22 @@ import Text from '../Text/index.tsx';
 export default function Select(props: Partial<iSelect>) {
   const { c, fref, fwd, children, placeholder, options, maxWidth, label, error, ...p } = setup(props);
 
+  const optionPlaceholder = placeholder ? (
+    <option value="" selected hidden>
+      {placeholder}
+    </option>
+  ) : null;
+
+  const optionComponents = options.map((option) => {
+    return typeof option === 'string' ? (
+      <option value={option}>{option}</option>
+    ) : option.value && option.name ? (
+      <option value={option.value}>{option.name}</option>
+    ) : (
+      { option }
+    );
+  });
+
   return (
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
@@ -19,28 +35,9 @@ export default function Select(props: Partial<iSelect>) {
           </Text>
         )}
         <select ref={fref} class={c.input} {...p}>
-          {children === null ? (
-            <>
-              <option ref={fwd.option?.ref} class={c.option} value="" selected hidden>
-                {placeholder}
-              </option>
-              {options.map((option) =>
-                typeof option === 'string' ? (
-                  <option ref={fwd.option?.ref} class={c.option} value={option}>
-                    {option}
-                  </option>
-                ) : option.value && option.name ? (
-                  <option ref={fwd.option?.ref} class={c.option} value={option.value}>
-                    {option.name}
-                  </option>
-                ) : (
-                  { option }
-                )
-              )}
-            </>
-          ) : (
-            children
-          )}
+          {optionPlaceholder}
+          {optionComponents}
+          {children}
         </select>
       </label>
       {error ? (

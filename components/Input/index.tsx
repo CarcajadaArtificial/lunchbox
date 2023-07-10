@@ -2,6 +2,9 @@ import Text from '../Text/index.tsx';
 import setup, { iInput } from './setup.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 
+/**
+ * @todo [!!!] Fix maxWidth = true.
+ */
 export default function (props: Partial<iInput>) {
   const { c, fref, fwd, maxWidth, label, error, ...p } = setup(props);
 
