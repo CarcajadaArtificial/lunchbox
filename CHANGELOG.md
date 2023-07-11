@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.1.2
+## v0.1.3
 
-### Removed vscode config files
+### Updated gitignore
 
 ## Roadmap
 
