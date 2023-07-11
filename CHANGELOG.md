@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.1.3
+## v0.1.5
 
-### Updated gitignore
+### Removed git submodules and added installation scripts
+  - `/.gitignore`
+  - `/deno.json`
 
 ## Roadmap
 

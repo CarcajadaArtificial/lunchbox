@@ -3,7 +3,9 @@
     "start": "deno run -A --watch=static/,routes/ dev.ts",
     "sass": "sass -w src/scss/index.scss static/style.css",
     "sass-playground": "sass -w src/scss/playground.scss static/playground.css",
-    "sass-out": "sass -w src/scss/styles.scss ../ana-components-docs/static/styles.css"
+    "sass-out": "sass -w src/scss/styles.scss ../ana-components-docs/static/styles.css",
+    "install-garlicss": "git submodule add https://github.com/CarcajadaArtificial/garlicss.git .github/dep/garlicss",
+    "install-sassdoor": "git submodule add https://github.com/CarcajadaArtificial/sass-door.git .github/dep/sassdoor"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
