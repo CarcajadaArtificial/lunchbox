@@ -1,11 +1,14 @@
 # Changelog
 
-## v0.1.6
+## v0.1.7
 
 ### Readded git submodules, because git subtree sucked
+  - Removed Sass Door because now it lives inside the Garlicss repo.
   - `/.gitignore`
   - `/.gitmodules`
-  - `/deno.json`
+  - `/src/scss/components.scss`
+  - `/src/scss/system.scss`
+  - `/src/scss/lib/garlicss.scss`
 
 ## Roadmap
 

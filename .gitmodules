@@ -4,8 +4,3 @@
 	path = .github/dep/garlicss
 	url = https://github.com/CarcajadaArtificial/garlicss.git
 	ignore = dirty
-
-[submodule ".github/dep/sassdoor"]
-	path = .github/dep/sassdoor
-	url = https://github.com/CarcajadaArtificial/sass-door.git
-	ignore = dirty

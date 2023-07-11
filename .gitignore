@@ -4,4 +4,3 @@ deno.lock
 .vscode
 .github/dep/
 .github/dep/garlicss/
-.github/dep/sassdoor/
