@@ -1,11 +1,16 @@
 # Changelog
 
-## v0.0.105
+## v0.0.106
 
-### Renamed elements.ts to types.ts
-  - `/src/types.ts`
-  - `/mod.ts`
-  - `/components/*/setup.ts`
+### Removed scss/components
+
+### Moved the system scss modules to its own directory
+  - `/src/scss/system/color.scss`
+  - `/src/scss/system/grid.scss`
+  - `/src/scss/system/media-queries.scss`
+  - `/src/scss/system/size.scss`
+  - `/src/scss/components.scss`
+  - `/src/scss/system.scss`
 
 ## Roadmap
 
@@ -45,11 +50,10 @@
       - [ ] What is this, features
       - [ ] Installation guide
       - [ ] Usage guide
-  - [ ] Minor Fixes
+  - [x] Minor Fixes
     - [x] Rename elements.ts to types.ts
-    - [ ] Move system scss modules to its own directory
-    - [ ] Removed the components scss directory
-    - [ ] Rename all root src scss modules to _module.scss
+    - [x] Move system scss modules to its own directory
+    - [x] Removed the components scss directory
 
 ### v0.2
 
