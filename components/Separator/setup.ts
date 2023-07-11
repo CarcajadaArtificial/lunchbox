@@ -1,6 +1,6 @@
 // import { applyDefaults, cn } from '../../deps.ts';
 import { cn } from '../../deps.ts';
-import { iExtendedElement } from '../../src/element.ts';
+import { iExtendedElement } from '../../src/types.ts';
 
 export type iSeparator = iExtendedElement<HTMLHRElement>;
 

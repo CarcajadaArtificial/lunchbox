@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iExtendedElement } from '../../src/element.ts';
+import { iExtendedElement } from '../../src/types.ts';
 
 export type iLink = iExtendedElement<HTMLAnchorElement> & {
   nostyle: boolean;

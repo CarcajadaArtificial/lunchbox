@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iExtendedElement, iFwd } from '../../src/element.ts';
+import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iNavigation = iExtendedElement & {
   fixed: boolean;

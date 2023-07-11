@@ -1,6 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
-import { iExtendedElement } from '../../src/element.ts';
+import { iExtendedElement } from '../../src/types.ts';
 
 export type iText = iExtendedElement<HTMLSpanElement> & {
   type: TEXT_TYPES;

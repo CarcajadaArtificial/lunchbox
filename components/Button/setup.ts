@@ -1,6 +1,6 @@
 import { applyDefaults, cn } from '../../deps.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
-import { iExtendedElement } from '../../src/element.ts';
+import { iExtendedElement } from '../../src/types.ts';
 
 export type iButton = iExtendedElement<HTMLButtonElement> & {
   type: BUTTON_TYPES;

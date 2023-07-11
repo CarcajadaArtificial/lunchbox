@@ -1,12 +1,11 @@
 # Changelog
 
-## v0.0.104
+## v0.0.105
 
-### Minor updates
-  - `/components/Layout/setup.ts`
-  - `/static/style.css`
-  - `/src/scss/components.scss`
-  - `/src/scss/lib/garlicss.scss`
+### Renamed elements.ts to types.ts
+  - `/src/types.ts`
+  - `/mod.ts`
+  - `/components/*/setup.ts`
 
 ## Roadmap
 
@@ -42,15 +41,12 @@
     - [x] Select
     - [x] Textarea
   - [ ] Do a documentation cleanup.
-    - [ ] Contributing.md
-      - [ ] How the 
-      - [ ] Standard component structure
     - [ ] Readme.md
       - [ ] What is this, features
       - [ ] Installation guide
       - [ ] Usage guide
   - [ ] Minor Fixes
-    - [ ] Rename element.ts to types.ts
+    - [x] Rename elements.ts to types.ts
     - [ ] Move system scss modules to its own directory
     - [ ] Removed the components scss directory
     - [ ] Rename all root src scss modules to _module.scss

@@ -1,5 +1,5 @@
 import { applyDefaults, cn } from '../../deps.ts';
-import { iExtendedElement, iFwd } from '../../src/element.ts';
+import { iExtendedElement, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
 export type iFooter = iExtendedElement & {
