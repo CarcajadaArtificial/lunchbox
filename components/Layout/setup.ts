@@ -18,8 +18,8 @@ export default (props: Partial<iLayout>) => {
   const p = applyDefaults<iLayout>(defaults, props);
 
   const classes = {
-    layout: cn(`grid layout-${p.type}`, p.class),
-    module: cn('layout-module', p.fwd.module?.class),
+    layout: cn(`comp-grid comp-layout-${p.type}`, p.class),
+    module: cn('comp-layout-module', p.fwd.module?.class),
   };
 
   return { c: classes, ...p };

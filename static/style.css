@@ -196,11 +196,11 @@ button {
   font: var(--txt-display) var(--font-heading);
 }
 
-.grid {
+.comp-grid {
   display: grid;
 }
 @media screen and (max-width: 39.9375em) {
-  .grid {
+  .comp-grid {
     gap: 0 0.8503100088rem;
     width: auto;
     margin: 0 0.8503100088rem;
@@ -208,7 +208,7 @@ button {
   }
 }
 @media screen and (min-width: 40em) and (max-width: 99.9375em) {
-  .grid {
+  .comp-grid {
     gap: 0 2.1257750221%;
     width: auto;
     margin: 0 calc(23.13871222% - 134.488008342px);
@@ -216,7 +216,7 @@ button {
   }
 }
 @media screen and (min-width: 100em) {
-  .grid {
+  .comp-grid {
     gap: 0 1.5rem;
     width: min-content;
     margin: 0 auto;
@@ -224,85 +224,85 @@ button {
   }
 }
 
-.layout-empty .layout-module {
+.comp-layout-empty .comp-layout-module {
   grid-column: span 1;
 }
 
-.layout-full .layout-module {
+.comp-layout-full .comp-layout-module {
   grid-column: span 12;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-full .layout-module {
+  .comp-layout-full .comp-layout-module {
     grid-column: span 6;
   }
 }
 
-.layout-center .layout-module {
+.comp-layout-center .comp-layout-module {
   grid-column: 2/span 10;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-center .layout-module {
+  .comp-layout-center .comp-layout-module {
     grid-column: span 6;
   }
 }
 
-.layout-focus .layout-module {
+.comp-layout-focus .comp-layout-module {
   grid-column: 3/span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-focus .layout-module {
+  .comp-layout-focus .comp-layout-module {
     grid-column: 2/span 4;
   }
 }
 
-.layout-halves .layout-module {
+.comp-layout-halves .comp-layout-module {
   grid-column: span 6;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-halves .layout-module {
+  .comp-layout-halves .comp-layout-module {
     grid-column: span 3;
   }
 }
 
-.layout-thirds .layout-module {
+.comp-layout-thirds .comp-layout-module {
   grid-column: span 4;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-thirds .layout-module {
+  .comp-layout-thirds .comp-layout-module {
     grid-column: span 2;
   }
 }
 
-.layout-right .layout-module {
+.comp-layout-right .comp-layout-module {
   grid-column: span 4;
 }
-.layout-right .layout-module:nth-child(even) {
+.comp-layout-right .comp-layout-module:nth-child(even) {
   grid-column: span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-right .layout-module {
+  .comp-layout-right .comp-layout-module {
     grid-column: span 2;
   }
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-right .layout-module:nth-child(even) {
+  .comp-layout-right .comp-layout-module:nth-child(even) {
     grid-column: span 4;
   }
 }
 
-.layout-left .layout-module {
+.comp-layout-left .comp-layout-module {
   grid-column: span 4;
 }
-.layout-left .layout-module:nth-child(odd) {
+.comp-layout-left .comp-layout-module:nth-child(odd) {
   grid-column: span 8;
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-left .layout-module {
+  .comp-layout-left .comp-layout-module {
     grid-column: span 2;
   }
 }
 @media screen and (max-width: 39.9375em) {
-  .layout-left .layout-module:nth-child(odd) {
+  .comp-layout-left .comp-layout-module:nth-child(odd) {
     grid-column: span 4;
   }
 }

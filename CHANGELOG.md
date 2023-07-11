@@ -1,17 +1,12 @@
 # Changelog
 
-## v0.0.103
-
-### Minor component fixes and adjustments
-  - `/src/scss/components.scss`
-  - `/components/Header/setup.ts`
-  - `/components/Index/setup.ts`
-  - `/components/Index/index.tsx`
-  - `/components/Select/index.tsx`
+## v0.0.104
 
 ### Minor updates
+  - `/components/Layout/setup.ts`
   - `/static/style.css`
-  - `/routes/index.tsx`
+  - `/src/scss/components.scss`
+  - `/src/scss/lib/garlicss.scss`
 
 ## Roadmap
 
