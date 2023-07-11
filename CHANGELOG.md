@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.1.5
+## v0.1.6
 
-### Removed git submodules and added installation scripts
+### Readded git submodules, because git subtree sucked
   - `/.gitignore`
+  - `/.gitmodules`
   - `/deno.json`
 
 ## Roadmap

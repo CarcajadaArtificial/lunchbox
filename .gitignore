@@ -3,6 +3,5 @@ deno.lock
 .DS_Store
 .vscode
 .github/dep/
-.gitmodules
 .github/dep/garlicss/
 .github/dep/sassdoor/
