@@ -1,0 +1,16 @@
+.h {
+  &-min {
+    height: min-content;
+  }
+  &-inherit {
+    height: inherit;
+  }
+}
+
+.w-prose {
+  max-width: 90ch;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}

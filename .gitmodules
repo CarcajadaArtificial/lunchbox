@@ -1,0 +1,7 @@
+[submodule "lib/garlicss"]
+	path = lib/garlicss
+	url = https://github.com/CarcajadaArtificial/garlicss.git
+	branch = lib
+[submodule "lib/sass-door"]
+	path = lib/sass-door
+	url = https://github.com/CarcajadaArtificial/sass-door.git
