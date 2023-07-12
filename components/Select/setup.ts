@@ -1,4 +1,5 @@
-import { applyDefaults, cn } from '../../deps.ts';
+import { cn } from '../../deps.ts';
+import { applyDefaults } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iOption =

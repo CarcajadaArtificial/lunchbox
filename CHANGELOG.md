@@ -1,6 +1,13 @@
 # Changelog
 
-## v0.1.7
+## v0.1.8
+
+### Removed Ana-Utils library due to deprecation
+  - `/deps.ts`
+
+### Added the utility functions to this project.
+  - `/src/utils.ts`
+  - `/components/**/setup.ts`
 
 ### Readded git submodules, because git subtree sucked
   - Removed Sass Door because now it lives inside the Garlicss repo.

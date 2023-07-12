@@ -1,4 +1,5 @@
-import { applyDefaults, cn } from '../../deps.ts';
+import { cn } from '../../deps.ts';
+import { applyDefaults } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
