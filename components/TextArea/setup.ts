@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
@@ -28,13 +28,13 @@ const defaults: iTextArea = {
 export default (props: Partial<iTextArea>) => {
   const p = applyDefaults<iTextArea>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     input: cn(
       'comp-textarea',
       p.noResize ? 'resize-none' : null,
       p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'
     ),
-    text: cn('', p.fwd.text?.class),
+    text: cn(p.fwd.text?.class),
     label: cn('comp-textarea_label', p.fwd.label?.class),
     error: cn('comp-textarea_error clr-txt-error', p.fwd.error?.class),
     required: cn('comp-textarea_required clr-txt-error', p.fwd.required?.class),
@@ -43,7 +43,8 @@ export default (props: Partial<iTextArea>) => {
       p.maxWidth ? 'w-full' : null,
       p.fwd.container?.class
     ),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

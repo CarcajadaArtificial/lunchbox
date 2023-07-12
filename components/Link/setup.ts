@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
 export type iLink = iExtendedElement<HTMLAnchorElement> & {
@@ -13,9 +13,10 @@ const defaults: iLink = {
 export default (props: Partial<iLink>) => {
   const p = applyDefaults<iLink>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     link: cn(p.nostyle ? null : 'comp-link clr-txt-personality', p.class),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

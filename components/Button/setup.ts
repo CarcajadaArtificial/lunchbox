@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
@@ -16,7 +16,7 @@ const defaults: iButton = {
 export default (props: Partial<iButton>) => {
   const p = applyDefaults<iButton>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     button: cn(
       'comp-button',
       props.type === BUTTON_TYPES.DISABLED
@@ -32,7 +32,8 @@ export default (props: Partial<iButton>) => {
         : 'clr-bg-input',
       props.class
     ),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

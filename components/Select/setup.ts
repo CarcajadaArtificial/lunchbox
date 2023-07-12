@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iOption =
@@ -39,14 +39,14 @@ const defaults: iSelect = {
 export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     input: cn(
       'comp-select',
       p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
       p.class
     ),
-    text: cn('', p.fwd.text?.class),
-    option: cn('', p.fwd.option?.class),
+    text: cn(p.fwd.text?.class),
+    option: cn(p.fwd.option?.class),
     label: cn('comp-select_label', p.fwd.label?.class),
     error: cn('comp-select_error clr-txt-error', p.fwd.error?.class),
     required: cn('comp-select_required', p.fwd.required?.class),
@@ -55,7 +55,8 @@ export default (props: Partial<iSelect>) => {
       p.maxWidth ? 'w-full' : null,
       p.fwd.container?.class
     ),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

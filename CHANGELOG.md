@@ -1,11 +1,10 @@
 # Changelog
 
-## v0.1.9
+## v0.1.10
 
-### Minor updates
-  - `/components/Input/index.tsx`
-  - `/mod.ts`
+### Added the `partializeClasses()` function and implemented it all components
   - `/src/utils.ts`
+  - `/components/**/setup.ts`
 
 ## Roadmap
 

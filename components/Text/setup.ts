@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
@@ -24,7 +24,7 @@ const defaults: iText = {
 export default (props: Partial<iText>) => {
   const p = applyDefaults<iText>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     span: cn(
       'comp-text',
       `txt-${p.type}`,
@@ -38,7 +38,8 @@ export default (props: Partial<iText>) => {
       p.inheritColor ? 'inherit-color' : null,
       p.class
     ),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

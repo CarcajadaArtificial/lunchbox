@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iCard = iExtendedElement<HTMLDivElement> & {
@@ -15,10 +15,11 @@ const defaults: iCard = {
 export default (props: Partial<iCard>) => {
   const p = applyDefaults<iCard>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     card: cn('comp-card clr-bg-panel', p.class),
-    panel: cn('', p.fwd.panel?.class),
-  };
+    panel: cn(p.fwd.panel?.class),
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

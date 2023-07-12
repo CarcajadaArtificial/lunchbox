@@ -1,3 +1,14 @@
+//   _   _ _   _ _
+//  | | | | |_(_) |___
+//  | |_| |  _| | (_-<
+//   \___/ \__|_|_/__/
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains various utility functions.
+ * @module
+ */
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * @todo [!!] Complete documentation
@@ -13,7 +24,8 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * This function uses an object that stores the default values for an interface `T`. It uses an input object of type Partial<T> with new values to replace matching properties.
+ * This function uses an object that stores the default values for an interface `T`. It uses an input
+ * object of type Partial<T> with new values to replace matching properties.
  *
  * @param {T} d
  *  Default values for non-optional values in interface `T`.
@@ -39,6 +51,13 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
 /**
  * @todo [!!] Complete documentation
  */
+export const partializeClasses = (classes: { [key: string]: string }) =>
+  dMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * @todo [!!] Complete documentation
+ */
 export const bring = async <ResponseObject>(
   url: string,
   method?: 'GET' | 'POST',
@@ -50,3 +69,34 @@ export const bring = async <ResponseObject>(
   }).then(async (res) => {
     return await res.json();
   })) as ResponseObject;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * @todo [!!] Complete documentation
+ */
+export type Dictionary<EntryType> = { [key: string]: EntryType };
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * This function emulates the behavior of `Array.prototype.map()` in Dictionaries. It calls a function
+ * passing each entry of the dictionary as an argument.
+ *
+ * @param {Dictionary<T>} dictionary
+ *  The dictionary to be mapped.
+ *
+ * @param {function} callback
+ *  The function that will map the entries of the dictionary.
+ *
+ * @returns {Dictionary<T>}
+ *  A new dictionary with each entry mapped to the function.
+ */
+export function dMap<T>(
+  dictionary: Dictionary<T>,
+  callback: (entry: T, key?: string) => T
+): Dictionary<T> {
+  const newDictionary: Dictionary<T> = {};
+  Object.keys(dictionary).forEach((key: string) => {
+    newDictionary[key] = callback(dictionary[key], key);
+  });
+  return newDictionary;
+}

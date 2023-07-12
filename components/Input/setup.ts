@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iInput = iExtendedElement<HTMLInputElement> & {
@@ -26,7 +26,7 @@ const defaults: iInput = {
 export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     input: cn(
       'comp-input',
       p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
@@ -48,7 +48,8 @@ export default (props: Partial<iInput>) => {
       p.maxWidth ? 'comp-input_maxwidth' : null,
       p.fwd.container?.class
     ),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

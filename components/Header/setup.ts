@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
@@ -21,11 +21,12 @@ const defaults: iHeader = {
 export default (props: Partial<iHeader>) => {
   const p = applyDefaults<iHeader>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     header: cn('comp-header', p.class),
     layout: cn(p.fwd.layout?.class),
     panel: cn(p.banner ? 'comp-header_banner' : null, p.fwd.panel?.class),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };

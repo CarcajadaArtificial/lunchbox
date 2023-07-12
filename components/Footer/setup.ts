@@ -1,5 +1,5 @@
 import { cn } from '../../deps.ts';
-import { applyDefaults } from '../../src/utils.ts';
+import { applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
@@ -30,14 +30,15 @@ export default (props: Partial<iFooter>) => {
 
   const p = applyDefaults<iFooter>(defaults, props);
 
-  const classes = {
+  const classes = partializeClasses({
     footer: cn('comp-footer', p.class),
-    layout: cn('', p.fwd.layout?.class),
-    panel: cn('', p.fwd.panel?.class),
+    layout: cn(p.fwd.layout?.class),
+    panel: cn(p.fwd.panel?.class),
     badge_link: cn('made-with-fresh', p.fwd.badge_link?.class),
     badge_light: cn('fresh-badge light', p.fwd.badge_light?.class),
     badge_dark: cn('fresh-badge dark', p.fwd.badge_dark?.class),
-  };
+  });
 
+  delete p.class;
   return { c: classes, ...p };
 };
