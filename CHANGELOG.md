@@ -1,21 +1,11 @@
 # Changelog
 
-## v0.1.8
+## v0.1.9
 
-### Removed Ana-Utils library due to deprecation
-  - `/deps.ts`
-
-### Added the utility functions to this project.
+### Minor updates
+  - `/components/Input/index.tsx`
+  - `/mod.ts`
   - `/src/utils.ts`
-  - `/components/**/setup.ts`
-
-### Readded git submodules, because git subtree sucked
-  - Removed Sass Door because now it lives inside the Garlicss repo.
-  - `/.gitignore`
-  - `/.gitmodules`
-  - `/src/scss/components.scss`
-  - `/src/scss/system.scss`
-  - `/src/scss/lib/garlicss.scss`
 
 ## Roadmap
 
@@ -52,7 +42,10 @@
     - [x] Textarea
   - [ ] Do a documentation cleanup.
     - [ ] Readme.md
-      - [ ] What is this, features
+      - [ ] Features
+        - [ ] List of components.
+        - [ ] Component configuration example.
+        - [ ] Utilities
       - [ ] Installation guide
       - [ ] Usage guide
   - [x] Minor Fixes

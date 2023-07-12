@@ -16,3 +16,4 @@ export { default as Linkmap } from './components/Linkmap/index.tsx';
 export { default as Panel } from './components/Panel/index.tsx';
 export * from './src/enums.ts';
 export * from './src/types.ts';
+export * from './src/utils.ts';

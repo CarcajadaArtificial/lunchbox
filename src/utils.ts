@@ -1,3 +1,4 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * @todo [!!] Complete documentation
  */
@@ -10,24 +11,18 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
   return doc;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This function uses an object that stores the default values for an interface `T`. It uses an input object of type Partial<T> with new values to replace matching properties.
  *
- * @param d Default values for non-optional values in interface `T`.
- * @param i New values recieved with type `Partial<T>`
+ * @param {T} d
+ *  Default values for non-optional values in interface `T`.
  *
- * @returns An object of type `T` that contains the default `d` values and the new input `i` values.
+ * @param {Partial<T>} i
+ *  New values recieved with type `Partial<T>`
  *
- * @example ```Typescript
-  interface Example {
-    foo: string
-    bar?: string
-  }
-
-  function doSomething(props: Partial<Example>) {
-    const { foo, bar } = applyDefaults({foo: 'foo'}, props)
-  }
-  ```
+ * @returns {T}
+ *  An object of type `T` that contains the default `d` values and the new input `i` values.
  */
 export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
@@ -40,7 +35,7 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   return { ...d, ...i };
 }
 
-//  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * @todo [!!] Complete documentation
  */
