@@ -1,14 +1,9 @@
 # Changelog
 
-## v0.1.12
+## v0.1.13
 
-### Updated the `TEXT_TYPES` and `BUTTON_TYPES` enums.
-  - `/src/enums.ts`
-  - `/components/Input/index.ts`
-  - `/components/Select/index.ts`
-  - `/components/Text/setup.ts`
-  - `/components/TextArea/index.ts`
-  - `/routes/index.tsx`
+### Fixed an issue with `BUTTON_TYPES`.
+  - `/components/Button/setup.ts`
 
 ## Roadmap
 

@@ -10,7 +10,7 @@ export type iButton = iExtendedElement<HTMLButtonElement> & {
 
 const defaults: iButton = {
   maxWidth: false,
-  type: BUTTON_TYPES.CONTRAST,
+  type: 'contrast',
 };
 
 export default (props: Partial<iButton>) => {
@@ -19,15 +19,15 @@ export default (props: Partial<iButton>) => {
   const classes = partializeClasses({
     button: cn(
       'comp-button',
-      props.type === BUTTON_TYPES.DISABLED
+      props.type === 'disabled'
         ? 'clr-bg-disabled'
-        : props.type === BUTTON_TYPES.ERROR
+        : props.type === 'error'
         ? 'clr-bg-error'
-        : props.type === BUTTON_TYPES.INVISIBLE
+        : props.type === 'invisible'
         ? null
-        : props.type === BUTTON_TYPES.PANEL
+        : props.type === 'panel'
         ? 'comp-button_panel'
-        : props.type === BUTTON_TYPES.CONTRAST
+        : props.type === 'contrast'
         ? 'clr-bg-input'
         : 'clr-bg-input',
       props.class
