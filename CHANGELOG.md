@@ -1,16 +1,14 @@
 # Changelog
 
-## v0.1.11
+## v0.1.12
 
-### Updated the `LAYOUT_TYPES` enum
+### Updated the `TEXT_TYPES` and `BUTTON_TYPES` enums.
   - `/src/enums.ts`
-  - `/components/Layout/setup.ts`
-  - `/components/Navigation/setup.ts`
+  - `/components/Input/index.ts`
+  - `/components/Select/index.ts`
+  - `/components/Text/setup.ts`
+  - `/components/TextArea/index.ts`
   - `/routes/index.tsx`
-
-### Added the `EmptyObject` utility type
-  - `/src/types.ts`
-  - `/src/utils.ts`
 
 ## Roadmap
 
@@ -57,7 +55,7 @@
     - [x] Rename elements.ts to types.ts
     - [x] Move system scss modules to its own directory
     - [x] Removed the components scss directory
-    - [ ] Take back enums structure and change it to string union types.
+    - [x] Take back enums structure and change it to string union types.
     - [ ] Globalize the prop 'nostyle' on all components.
 
 ### v0.2

@@ -19,19 +19,6 @@ export type LAYOUT_TYPES =
   | 'right'
   | 'left';
 
-export enum TEXT_TYPES {
-  DISPLAY = 'display',
-  TITLE = 'title',
-  HEADING = 'heading',
-  SUBHEADING = 'subheading',
-  PARAGRAPH = 'paragraph',
-  SMALL = 'small',
-}
+export type TEXT_TYPES = 'display' | 'title' | 'heading' | 'subheading' | 'paragraph' | 'small';
 
-export enum BUTTON_TYPES {
-  ERROR = 'error',
-  DISABLED = 'disabled',
-  CONTRAST = 'contrast',
-  PANEL = 'panel',
-  INVISIBLE = 'invisible',
-}
+export type BUTTON_TYPES = 'error' | 'disabled' | 'contrast' | 'panel' | 'invisible';

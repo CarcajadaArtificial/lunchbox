@@ -13,7 +13,7 @@ export type iText = iExtendedElement<HTMLSpanElement> & {
 };
 
 const defaults: iText = {
-  type: TEXT_TYPES.PARAGRAPH,
+  type: 'paragraph',
   inheritColor: false,
   compact: false,
   single: false,
@@ -28,9 +28,7 @@ export default (props: Partial<iText>) => {
     span: cn(
       'comp-text',
       `txt-${p.type}`,
-      [TEXT_TYPES.DISPLAY, TEXT_TYPES.TITLE, TEXT_TYPES.HEADING].includes(p.type)
-        ? 'clr-txt-personality'
-        : null,
+      ['display', 'title', 'heading'].includes(p.type) ? 'clr-txt-personality' : null,
       p.compact ? 'compact' : null,
       p.single ? 'single' : null,
       p.noMargins ? 'no-margins' : null,

@@ -5,7 +5,6 @@ import {
   Footer,
   Header,
   Input,
-  Layout,
   Link,
   Linkmap,
   Main,
@@ -14,7 +13,6 @@ import {
   Separator,
   Text,
   TextArea,
-  BUTTON_TYPES,
   TEXT_TYPES,
 } from '../mod.ts';
 
@@ -94,52 +92,52 @@ export default function Home() {
       <Separator />
       <Text>Buttons</Text>
       <Button>Contrast</Button>
-      <Button type={BUTTON_TYPES.INVISIBLE}>Invisible</Button>
-      <Button type={BUTTON_TYPES.PANEL}>Panel</Button>
-      <Button type={BUTTON_TYPES.DISABLED}>Disabled</Button>
-      <Button type={BUTTON_TYPES.ERROR}>Error</Button>
+      <Button type={'invisible'}>Invisible</Button>
+      <Button type={'panel'}>Panel</Button>
+      <Button type={'disabled'}>Disabled</Button>
+      <Button type={'error'}>Error</Button>
     </>
   );
 
   return (
     <div>
       <Navigation>
-        {TestTinyText(TEXT_TYPES.PARAGRAPH)}
+        {TestTinyText('paragraph')}
         <div class="flex justify-end">
-          <Button type={BUTTON_TYPES.PANEL}>Button</Button>
+          <Button type={'panel'}>Button</Button>
         </div>
       </Navigation>
       <Header layout_type="left">
-        {TestTinyText(TEXT_TYPES.TITLE)}
+        {TestTinyText('title')}
         <div></div>
-        {TestLargeText(TEXT_TYPES.PARAGRAPH)}
+        {TestLargeText('paragraph')}
         <TestLinkmap />
       </Header>
       <Main layout_type="center">
         <>
-          {TestTinyText(TEXT_TYPES.PARAGRAPH)}
+          {TestTinyText('paragraph')}
           <Separator />
-          {TestTinyText(TEXT_TYPES.SUBHEADING)}
+          {TestTinyText('subheading')}
           <Separator />
-          {TestTinyText(TEXT_TYPES.HEADING)}
+          {TestTinyText('heading')}
           <Separator />
-          {TestTinyText(TEXT_TYPES.TITLE)}
+          {TestTinyText('title')}
           <Separator />
-          {TestTinyText(TEXT_TYPES.DISPLAY)}
+          {TestTinyText('display')}
           <Card>
-            {TestSmallText(TEXT_TYPES.SUBHEADING)}
-            {TestLargeText(TEXT_TYPES.PARAGRAPH)}
+            {TestSmallText('subheading')}
+            {TestLargeText('paragraph')}
           </Card>
           {TestInputs()}
         </>
       </Main>
       <Footer layout_type="left" madeWithFresh>
-        {TestTinyText(TEXT_TYPES.SUBHEADING)}
+        {TestTinyText('subheading')}
         <Text>
           Powered by&nbsp;
           <Link href="https://github.com/CarcajadaArtificial">myself</Link>.
         </Text>
-        {TestLargeText(TEXT_TYPES.PARAGRAPH)}
+        {TestLargeText('paragraph')}
       </Footer>
     </div>
   );

@@ -1,5 +1,4 @@
 import setup, { iSelect } from './setup.ts';
-import { TEXT_TYPES } from '../../src/enums.ts';
 import Text from '../Text/index.tsx';
 
 export default function Select(props: Partial<iSelect>) {
@@ -41,7 +40,7 @@ export default function Select(props: Partial<iSelect>) {
         </select>
       </label>
       {error ? (
-        <Text fref={fwd.error?.ref} noMargins inheritColor type={TEXT_TYPES.SMALL} class={c.error}>
+        <Text fref={fwd.error?.ref} noMargins inheritColor type="small" class={c.error}>
           {error}
         </Text>
       ) : null}
