@@ -15,7 +15,6 @@ import {
   Text,
   TextArea,
   BUTTON_TYPES,
-  LAYOUT_TYPES,
   TEXT_TYPES,
 } from '../mod.ts';
 
@@ -110,13 +109,13 @@ export default function Home() {
           <Button type={BUTTON_TYPES.PANEL}>Button</Button>
         </div>
       </Navigation>
-      <Header layout_type={LAYOUT_TYPES.LEFT}>
+      <Header layout_type="left">
         {TestTinyText(TEXT_TYPES.TITLE)}
         <div></div>
         {TestLargeText(TEXT_TYPES.PARAGRAPH)}
         <TestLinkmap />
       </Header>
-      <Main layout_type={LAYOUT_TYPES.CENTER}>
+      <Main layout_type="center">
         <>
           {TestTinyText(TEXT_TYPES.PARAGRAPH)}
           <Separator />
@@ -134,7 +133,7 @@ export default function Home() {
           {TestInputs()}
         </>
       </Main>
-      <Footer layout_type={LAYOUT_TYPES.LEFT} madeWithFresh>
+      <Footer layout_type="left" madeWithFresh>
         {TestTinyText(TEXT_TYPES.SUBHEADING)}
         <Text>
           Powered by&nbsp;

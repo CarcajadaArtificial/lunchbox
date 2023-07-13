@@ -1,10 +1,16 @@
 # Changelog
 
-## v0.1.10
+## v0.1.11
 
-### Added the `partializeClasses()` function and implemented it all components
+### Updated the `LAYOUT_TYPES` enum
+  - `/src/enums.ts`
+  - `/components/Layout/setup.ts`
+  - `/components/Navigation/setup.ts`
+  - `/routes/index.tsx`
+
+### Added the `EmptyObject` utility type
+  - `/src/types.ts`
   - `/src/utils.ts`
-  - `/components/**/setup.ts`
 
 ## Roadmap
 
@@ -51,6 +57,8 @@
     - [x] Rename elements.ts to types.ts
     - [x] Move system scss modules to its own directory
     - [x] Removed the components scss directory
+    - [ ] Take back enums structure and change it to string union types.
+    - [ ] Globalize the prop 'nostyle' on all components.
 
 ### v0.2
 

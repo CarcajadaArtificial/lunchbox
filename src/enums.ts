@@ -9,22 +9,15 @@
  * @module
  */
 
-export enum LAYOUT_TYPES {
-  FULL = 'full',
-  CENTER = 'center',
-  FOCUS = 'focus',
-  HALVES = 'halves',
-  THIRDS = 'thirds',
-  QUARTERS = 'quarters',
-  RIGHT = 'right',
-  LEFT = 'left',
-}
-
-export enum LAYOUT_MARGINS {
-  FULL = 'full',
-  SINGLE = 'single',
-  NONE = 'none',
-}
+export type LAYOUT_TYPES =
+  | 'full'
+  | 'center'
+  | 'focus'
+  | 'halves'
+  | 'thirds'
+  | 'quarters'
+  | 'right'
+  | 'left';
 
 export enum TEXT_TYPES {
   DISPLAY = 'display',
@@ -41,11 +34,4 @@ export enum BUTTON_TYPES {
   CONTRAST = 'contrast',
   PANEL = 'panel',
   INVISIBLE = 'invisible',
-}
-
-export enum PAGE_THEME {
-  NEWSPAPER = 'newspaper',
-  CANDYLAND = 'candyland',
-  DUSTHORIZON = 'dusthorizon',
-  TEST = 'test',
 }

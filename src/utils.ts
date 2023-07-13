@@ -9,6 +9,8 @@
  * @module
  */
 
+import { EmptyObject } from './types.ts';
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * @todo [!!] Complete documentation
@@ -36,6 +38,8 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
  * @returns {T}
  *  An object of type `T` that contains the default `d` values and the new input `i` values.
  */
+// Disabled linter in this line because I couldn't find a way to adapt the component type schema to support EmptyObject.
+// deno-lint-ignore ban-types
 export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
     throw new Error(
@@ -51,7 +55,7 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
 /**
  * @todo [!!] Complete documentation
  */
-export const partializeClasses = (classes: { [key: string]: string }) =>
+export const partializeClasses = (classes: Record<string, string>) =>
   dMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -72,17 +76,11 @@ export const bring = async <ResponseObject>(
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * @todo [!!] Complete documentation
- */
-export type Dictionary<EntryType> = { [key: string]: EntryType };
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * This function emulates the behavior of `Array.prototype.map()` in Dictionaries. It calls a function
- * passing each entry of the dictionary as an argument.
+ * This function emulates the behavior of `Array.prototype.map()` in Records. It calls a function
+ * passing each entry of the record as an argument.
  *
- * @param {Dictionary<T>} dictionary
- *  The dictionary to be mapped.
+ * @param {Dictionary<T>} record
+ *  The record to be mapped.
  *
  * @param {function} callback
  *  The function that will map the entries of the dictionary.
@@ -91,12 +89,12 @@ export type Dictionary<EntryType> = { [key: string]: EntryType };
  *  A new dictionary with each entry mapped to the function.
  */
 export function dMap<T>(
-  dictionary: Dictionary<T>,
+  record: Record<string, T>,
   callback: (entry: T, key?: string) => T
-): Dictionary<T> {
-  const newDictionary: Dictionary<T> = {};
-  Object.keys(dictionary).forEach((key: string) => {
-    newDictionary[key] = callback(dictionary[key], key);
+): Record<string, T> {
+  const newRecord: Record<string, T> | EmptyObject = {};
+  Object.keys(record).forEach((key) => {
+    newRecord[key] = callback(record[key], key);
   });
-  return newDictionary;
+  return newRecord;
 }

@@ -20,6 +20,14 @@ export type iExtendedElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttr
     fref?: Ref<T>;
   };
 
+/**
+ *  @todo [!!] Complete documentation
+ */
 export type iFwd<T extends EventTarget = HTMLElement> = iExtendedElement<T> & {
   ref?: Ref<T>;
 };
+
+/**
+ *  @todo [!!] Complete documentation
+ */
+export type EmptyObject = Record<string | number | symbol, never>;

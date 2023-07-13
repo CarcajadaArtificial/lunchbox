@@ -11,7 +11,7 @@ export type iLayout = iExtendedElement<HTMLDivElement> & {
 };
 
 const defaults: iLayout = {
-  type: LAYOUT_TYPES.FULL,
+  type: 'full',
   fwd: {},
 };
 
