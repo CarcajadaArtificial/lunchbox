@@ -1,9 +1,8 @@
 # Changelog
 
-## v0.1.13
+## v0.1.14
 
-### Fixed an issue with `BUTTON_TYPES`.
-  - `/components/Button/setup.ts`
+### Updated `README.md`
 
 ## Roadmap
 
@@ -46,6 +45,9 @@
         - [ ] Utilities
       - [ ] Installation guide
       - [ ] Usage guide
+    - [ ] Contributing.md
+      - [ ] Component template
+      - [ ] Dependencies
   - [x] Minor Fixes
     - [x] Rename elements.ts to types.ts
     - [x] Move system scss modules to its own directory
@@ -65,6 +67,8 @@
     - [ ] Link
   - [ ] Create an organized collection of island functions
   - [ ] Add components
+    - [ ] Time
+    - [ ] Markdown
     - [ ] Menu
     - [ ] Page
     - [ ] Fieldset
