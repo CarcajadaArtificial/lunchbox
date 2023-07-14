@@ -46,13 +46,13 @@ Also, additional classes can be appended simply by adding a class to the compone
 
 Every HTML Element and framework component that make up a particular component will be called a _"piece"_. Every piece of every component can be referenced using the universal component `fwd`. This is an oversimplified html code for the `<Input />` component:
 ```html
-									<!-- Piece name: -->
-<div>							<!-- wrapper     -->
-	<label>					<!-- label 			 -->
-		<span></span>	<!-- text        -->
-		<input />			<!-- input 		(default target of the fref and class props) -->
-	</label>
-	<span></span>		<!-- error       -->
+                  <!-- Piece name: -->
+<div>             <!-- wrapper     -->
+  <label>         <!-- label       -->
+    <span></span>	<!-- text        -->
+    <input />     <!-- input       (default target of the fref and class props) -->
+  </label>
+  <span></span>  <!-- error       -->
 </div>
 ```
 The piece name is used in the CSS classes (`comp-#NAME#_#PIECE#`) and in the `fwd` prop (`<Input fwd={{ label: {class: 'x'} }}` will add the class `'x'` to the piece "label").
@@ -65,9 +65,9 @@ import { Button } from 'https://deno.land/x/lunchbox@vX.X.X/mod.ts'
 But let's be reasonable, almost nobody would do something like this, you would have to update multiple files and imports whenever the module updates. Personally, I'm more of an `import_map.json`.
 ```json
 {
-	"imports": {
-		"lunchbox": "https://deno.land/x/lunchbox@v0.1.13/mod.ts"
-	}
+  "imports": {
+    "lunchbox": "https://deno.land/x/lunchbox@v0.1.13/mod.ts"
+  }
 }
 ```
 This way, the usage would be really clean and easier to maintain:
@@ -75,6 +75,6 @@ This way, the usage would be really clean and easier to maintain:
 import { Button } from 'lunchbox';
 
 export default function() {
-	return <Button>Click Me!</Button>
+  return <Button>Click Me!</Button>
 }
 ```
