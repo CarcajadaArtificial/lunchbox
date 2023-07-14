@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.14
+## v0.1.15
 
 ### Updated `README.md`
 
@@ -37,17 +37,14 @@
     - [x] Navigation
     - [x] Select
     - [x] Textarea
-  - [ ] Do a documentation cleanup.
-    - [ ] Readme.md
-      - [ ] Features
-        - [ ] List of components.
-        - [ ] Component configuration example.
-        - [ ] Utilities
-      - [ ] Installation guide
-      - [ ] Usage guide
-    - [ ] Contributing.md
-      - [ ] Component template
-      - [ ] Dependencies
+  - [x] Do a documentation cleanup.
+    - [x] Readme.md
+      - [x] Features
+        - [x] List of components.
+        - [x] Component configuration example.
+        - [x] Utilities
+      - [x] Installation guide
+      - [x] Usage guide
   - [x] Minor Fixes
     - [x] Rename elements.ts to types.ts
     - [x] Move system scss modules to its own directory
@@ -74,3 +71,5 @@
     - [ ] Fieldset
     - [ ] Chip
     - [ ] Spinner
+    - [ ] Screen
+    - [ ] Dialog
