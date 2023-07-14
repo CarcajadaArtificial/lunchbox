@@ -49,7 +49,7 @@ Every HTML Element and framework component that make up a particular component w
                   <!-- Piece name: -->
 <div>             <!-- wrapper     -->
   <label>         <!-- label       -->
-    <span></span>	<!-- text        -->
+    <span></span> <!-- text        -->
     <input />     <!-- input       (default target of the fref and class props) -->
   </label>
   <span></span>  <!-- error       -->
@@ -66,7 +66,7 @@ But let's be reasonable, almost nobody would do something like this, you would h
 ```json
 {
   "imports": {
-    "lunchbox": "https://deno.land/x/lunchbox@v0.1.13/mod.ts"
+    "lunchbox": "https://deno.land/x/lunchbox@vX.X.X/mod.ts"
   }
 }
 ```

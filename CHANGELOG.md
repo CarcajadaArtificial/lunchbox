@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.17
+## v0.1.18
 
 ### Updated `README.md`
 
