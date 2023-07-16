@@ -1,8 +1,11 @@
 # Changelog
 
-## v0.1.19
+## v0.1.20
 
-### Minor updates
+### Added focus interaction on focusable elements
+  - `/src/scss/animation.scss`
+  - `/src/scss/components.scss`
+  - `/src/scss/index.scss`
 
 ## Roadmap
 

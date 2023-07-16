@@ -395,11 +395,6 @@ button {
   cursor: pointer;
   border-radius: var(--s-eighth);
   margin-right: var(--s-eighth);
-  transition: outline 0.1s ease-in-out;
-  outline: none;
-}
-.comp-button:hover, .comp-button:focus {
-  outline: 2px solid var(--clr-txt-base);
 }
 
 .comp-button_panel,
@@ -432,15 +427,6 @@ button {
 .comp-textarea,
 .comp-select {
   border-radius: var(--s-quarter);
-  transition: outline 0.1s ease-in-out;
-  outline: none;
-}
-.comp-input:hover, .comp-input:focus,
-.comp-textarea:hover,
-.comp-textarea:focus,
-.comp-select:hover,
-.comp-select:focus {
-  outline: 2px solid var(--clr-txt-base);
 }
 .comp-input_container,
 .comp-textarea_container,
@@ -561,6 +547,31 @@ button {
 .comp-input_button .comp-input_label {
   flex-direction: column;
   width: max-content;
+}
+
+.comp-link,
+.comp-button,
+.comp-input,
+.comp-select,
+.comp-textarea {
+  transition: outline 0.1s ease-in-out;
+  outline: none;
+}
+.comp-link:hover, .comp-link:focus,
+.comp-button:hover,
+.comp-button:focus,
+.comp-input:hover,
+.comp-input:focus,
+.comp-select:hover,
+.comp-select:focus,
+.comp-textarea:hover,
+.comp-textarea:focus {
+  outline: 2px solid var(--clr-txt-base);
+}
+
+.comp-link {
+  outline-offset: var(--s-eighth);
+  border-radius: var(--s-eighth);
 }
 
 .h-min {

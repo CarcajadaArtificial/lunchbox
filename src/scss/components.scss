@@ -13,16 +13,6 @@
   -webkit-appearance: none;
 }
 
-@mixin transition-outline {
-  transition: outline 0.1s ease-in-out;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    outline: 2px solid var(--clr-txt-base);
-  }
-}
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Header
 .comp-header {
@@ -145,7 +135,6 @@
   cursor: pointer;
   border-radius: var(--s-eighth);
   margin-right: var(--s-eighth);
-  @include transition-outline;
 }
 
 .comp-button_panel,
@@ -186,7 +175,6 @@
 .comp-textarea,
 .comp-select {
   border-radius: var(--s-quarter);
-  @include transition-outline;
 
   &_container {
     max-width: 24rem;

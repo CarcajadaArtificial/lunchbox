@@ -1,0 +1,18 @@
+.comp-link,
+.comp-button,
+.comp-input,
+.comp-select,
+.comp-textarea {
+  transition: outline 0.1s ease-in-out;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid var(--clr-txt-base);
+  }
+}
+
+.comp-link {
+  outline-offset: var(--s-eighth);
+  border-radius: var(--s-eighth);
+}
