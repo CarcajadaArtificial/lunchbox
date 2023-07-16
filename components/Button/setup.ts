@@ -24,7 +24,7 @@ export default (props: Partial<iButton>) => {
         : props.type === 'error'
         ? 'clr-bg-error'
         : props.type === 'invisible'
-        ? null
+        ? 'comp-button_invisible'
         : props.type === 'panel'
         ? 'comp-button_panel'
         : props.type === 'contrast'

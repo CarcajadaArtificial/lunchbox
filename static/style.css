@@ -394,13 +394,21 @@ button {
   max-width: max-content;
   cursor: pointer;
   border-radius: var(--s-eighth);
+  margin-right: var(--s-eighth);
+  transition: outline 0.1s ease-in-out;
+  outline: none;
+}
+.comp-button:hover, .comp-button:focus {
+  outline: 2px solid var(--clr-txt-base);
 }
 
-.comp-button_panel {
+.comp-button_panel,
+.comp-panel .comp-button_invisible {
   background-color: var(--clr-bg-panel);
 }
 
-.comp-panel .comp-button_panel {
+.comp-panel .comp-button_panel,
+.comp-button_invisible {
   background-color: var(--clr-bg-page);
 }
 
@@ -424,6 +432,15 @@ button {
 .comp-textarea,
 .comp-select {
   border-radius: var(--s-quarter);
+  transition: outline 0.1s ease-in-out;
+  outline: none;
+}
+.comp-input:hover, .comp-input:focus,
+.comp-textarea:hover,
+.comp-textarea:focus,
+.comp-select:hover,
+.comp-select:focus {
+  outline: 2px solid var(--clr-txt-base);
 }
 .comp-input_container,
 .comp-textarea_container,
