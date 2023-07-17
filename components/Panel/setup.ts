@@ -1,7 +1,7 @@
 import { cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 
-export type iPanel = iExtendedElement<HTMLDivElement>;
+export type iPanel = iComponent<HTMLDivElement>;
 
 export default (props: Partial<iPanel>) => {
   const p = props;

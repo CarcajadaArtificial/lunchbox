@@ -6,10 +6,10 @@ export default function (props: Partial<iHeader>) {
   const { c, fref, fwd, children, layout_type, ...p } = setup(props);
 
   return (
-    <Panel fref={fwd.panel?.ref} class={c.panel}>
+    <Panel fref={fwd.panel?.fref} class={c.panel}>
       <header ref={fref} {...p} class={c.header}>
         {layout_type ? (
-          <Layout fref={fwd.layout?.ref} type={layout_type} class={c.layout}>
+          <Layout fref={fwd.layout?.fref} type={layout_type} class={c.layout}>
             {children}
           </Layout>
         ) : (

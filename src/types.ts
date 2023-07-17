@@ -11,21 +11,23 @@
 
 import { JSX, Ref } from 'preact';
 
+export type iComponent<T extends EventTarget = HTMLElement> = iElement<T> & {
+  fref?: Ref<T>;
+  nostyle?: boolean;
+};
+
 /**
  * This type is a shorthand for an extension of `JSX.HTMLAttributes<T>`, `Partial<ARIAMixin>`, and ` Partial<GlobalEventHandlers>`.
  */
-export type iExtendedElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
+export type iElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
   Partial<ARIAMixin> &
-  Partial<GlobalEventHandlers> & {
-    nostyle?: boolean;
-    fref?: Ref<T>;
-  };
-
+  Partial<GlobalEventHandlers>;
 /**
  *  This type is a shorthand that helps in forwarding props and references to a component's part.
  */
-export type iFwd<T extends EventTarget = HTMLElement> = iExtendedElement<T> & {
+export type iFwd<T extends EventTarget = HTMLElement> = iElement<T> & {
   ref?: Ref<T>;
+  nostyle?: boolean;
 };
 
 /**

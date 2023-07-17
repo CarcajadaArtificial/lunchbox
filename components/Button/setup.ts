@@ -1,8 +1,8 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
-import { iExtendedElement } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 
-export type iButton = iExtendedElement<HTMLButtonElement> & {
+export type iButton = iComponent<HTMLButtonElement> & {
   type: BUTTON_TYPES;
   maxWidth: boolean;
 };

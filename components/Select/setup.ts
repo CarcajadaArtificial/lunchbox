@@ -1,5 +1,5 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
 
 export type iOption =
   | string
@@ -7,9 +7,9 @@ export type iOption =
       value: string;
       name: string;
     }
-  | iExtendedElement<HTMLOptionElement>;
+  | iComponent<HTMLOptionElement>;
 
-export type iSelect = iExtendedElement<HTMLSelectElement> & {
+export type iSelect = iComponent<HTMLSelectElement> & {
   label: string;
   error: string | null;
   placeholder: string;

@@ -10,11 +10,11 @@ export default function (props: Partial<iLinkmap>) {
       {links.map((link) => (
         <li ref={fwd.item?.ref} class={c.item}>
           {link.url ? (
-            <Link fref={fwd.link?.ref} href={link.url} class={c.link}>
+            <Link fref={fwd.link?.fref} href={link.url} class={c.link}>
               {link.name}
             </Link>
           ) : (
-            <Text fref={fwd.text?.ref} noMargins class={c.text}>
+            <Text fref={fwd.text?.fref} noMargins class={c.text}>
               {link.name}
             </Text>
           )}

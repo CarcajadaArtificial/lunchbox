@@ -1,7 +1,7 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
 
-export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
+export type iTextArea = iComponent<HTMLTextAreaElement> & {
   label: string;
   error: string | null;
   maxWidth: boolean;

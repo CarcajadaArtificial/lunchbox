@@ -1,13 +1,15 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
+import { iLayout } from '../Layout/setup.ts';
+import { iPanel } from '../Panel/setup.ts';
 
-export type iHeader = iExtendedElement & {
+export type iHeader = iComponent & {
   layout_type: LAYOUT_TYPES | null;
   banner: boolean;
   fwd: Partial<{
-    layout: iFwd<HTMLDivElement>;
-    panel: iFwd<HTMLDivElement>;
+    layout: iLayout;
+    panel: iPanel;
   }>;
 };
 

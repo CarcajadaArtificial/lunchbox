@@ -1,9 +1,10 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
+import { iPanel } from '../Panel/setup.ts';
 
-export type iCard = iExtendedElement<HTMLDivElement> & {
+export type iCard = iComponent<HTMLDivElement> & {
   fwd: Partial<{
-    panel: iFwd<HTMLDivElement>;
+    panel: iPanel;
   }>;
 };
 

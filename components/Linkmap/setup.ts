@@ -1,5 +1,7 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
+import { iLink } from '../Link/setup.ts';
+import { iText } from '../Text/setup.ts';
 
 export type iLinkmapitem = {
   name: string;
@@ -7,13 +9,13 @@ export type iLinkmapitem = {
   children?: iLinkmapitem[];
 };
 
-export type iLinkmap = iExtendedElement<HTMLDivElement> & {
+export type iLinkmap = iComponent<HTMLDivElement> & {
   links: iLinkmapitem[] | [];
   fwd: Partial<{
     list: iFwd<HTMLUListElement>;
     item: iFwd<HTMLLIElement>;
-    link: iFwd<HTMLAnchorElement>;
-    text: iFwd<HTMLSpanElement>;
+    link: iLink;
+    text: iText;
   }>;
 };
 

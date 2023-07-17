@@ -1,7 +1,7 @@
 import { cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 
-export type iSeparator = iExtendedElement<HTMLHRElement>;
+export type iSeparator = iComponent<HTMLHRElement>;
 
 export default (props: Partial<iSeparator>) => {
   const p = props;

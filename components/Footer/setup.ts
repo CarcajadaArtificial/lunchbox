@@ -1,14 +1,17 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
+import { iPanel } from '../Panel/setup.ts';
+import { iLayout } from '../Layout/setup.ts';
+import { iLink } from '../Link/setup.ts';
 
-export type iFooter = iExtendedElement & {
+export type iFooter = iComponent & {
   madeWithFresh: boolean;
   layout_type: LAYOUT_TYPES | null;
   fwd: Partial<{
-    layout: iFwd<HTMLDivElement>;
-    panel: iFwd<HTMLDivElement>;
-    badge_link: iFwd<HTMLAnchorElement>;
+    layout: iLayout;
+    panel: iPanel;
+    badge_link: iLink;
     badge_light: iFwd<HTMLImageElement>;
     badge_dark: iFwd<HTMLImageElement>;
   }>;

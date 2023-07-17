@@ -1,12 +1,14 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
+import { iPanel } from '../Panel/setup.ts';
+import { iLayout } from '../Layout/setup.ts';
 
-export type iNavigation = iExtendedElement & {
+export type iNavigation = iComponent & {
   fixed: boolean;
   fwd: Partial<{
     wrapper: iFwd<HTMLDivElement>;
-    panel: iFwd<HTMLDivElement>;
-    layout: iFwd<HTMLDivElement>;
+    panel: iPanel;
+    layout: iLayout;
   }>;
 };
 

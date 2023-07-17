@@ -1,14 +1,15 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
+import { iText } from '../Text/setup.ts';
 
-export type iInput = iExtendedElement<HTMLInputElement> & {
+export type iInput = iComponent<HTMLInputElement> & {
   label: string;
   error: string | null;
   maxWidth: boolean;
   fwd: Partial<{
-    text: iFwd<HTMLSpanElement>;
+    text: iText;
     label: iFwd<HTMLLabelElement>;
-    error: iFwd<HTMLSpanElement>;
+    error: iText;
     required: iFwd;
     container: iFwd<HTMLDivElement>;
   }>;

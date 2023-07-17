@@ -8,7 +8,7 @@ export default function (props: Partial<iInput>) {
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
         {label === '' ? null : (
-          <Text fref={fwd.text?.ref} noMargins class={c.text}>
+          <Text fref={fwd.text?.fref} noMargins class={c.text}>
             {label}
             {p.required ? (
               <sup ref={fwd.required?.ref} title="Required" class={c.required}>
@@ -20,7 +20,7 @@ export default function (props: Partial<iInput>) {
         <input ref={fref} class={c.input} {...p} />
       </label>
       {error ? (
-        <Text fref={fwd.error?.ref} noMargins type="small" inheritColor class={c.error}>
+        <Text fref={fwd.error?.fref} noMargins type="small" inheritColor class={c.error}>
           {error}
         </Text>
       ) : null}

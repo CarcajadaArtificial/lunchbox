@@ -12,9 +12,9 @@ export default function (props: Partial<iNavigation>) {
 
   return (
     <div ref={fwd.wrapper?.ref} class={c.wrapper}>
-      <Panel fref={fwd.panel?.ref} class={c.panel}>
+      <Panel fref={fwd.panel?.fref} class={c.panel}>
         <nav ref={fref} class={c.nav} {...p}>
-          <Layout fref={fwd.layout?.ref} type="right" class={c.layout}>
+          <Layout fref={fwd.layout?.fref} type="right" class={c.layout}>
             {children}
           </Layout>
         </nav>

@@ -1,17 +1,20 @@
 # Changelog
 
-## v0.2.0
+## v0.2.0-beta.1
 
-### Added the universal prop `nostyle` and added the functions `cn()` and `opt()` that make it work.
-  - Removed `/deps.ts`
-  - `/src/types.ts`
-  - `/src/utils.ts`
+### Added the Type `iComponent` and added component parts their own type
   - `/components/**/setup.ts`
+  - `/components/Footer/index.tsx`
+  - `/components/Header/index.tsx`
+  - `/components/Input/index.tsx`
+  - `/components/Linkmap/index.tsx`
+  - `/components/Main/index.tsx`
+  - `/components/Navigation/index.tsx`
+  - `/src/types.ts`
 
-### Minor updates
-  - `/import_map.json`
-  - `/src/scss/components.scss`
-  - `/static/style.css`
+## Changes so far
+
+- Added the `ìComponent` type.
 
 ## Roadmap
 

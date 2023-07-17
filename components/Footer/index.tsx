@@ -13,7 +13,7 @@ export default function (props: Partial<iFooter>) {
 
   if (madeWithFresh) {
     (children as [ComponentChild]).push(
-      <Link fref={fwd.badge_link?.ref} class={c.badge_link} href="https://fresh.deno.dev">
+      <Link fref={fwd.badge_link?.fref} class={c.badge_link} href="https://fresh.deno.dev">
         <img
           width="197"
           height="37"
@@ -35,10 +35,10 @@ export default function (props: Partial<iFooter>) {
   }
 
   return (
-    <Panel fref={fwd.panel?.ref} class={c.panel}>
+    <Panel fref={fwd.panel?.fref} class={c.panel}>
       <footer ref={fref} {...p} class={c.footer}>
         {layout_type ? (
-          <Layout fref={fwd.layout?.ref} type={layout_type} class={c.layout}>
+          <Layout fref={fwd.layout?.fref} type={layout_type} class={c.layout}>
             {children}
           </Layout>
         ) : (

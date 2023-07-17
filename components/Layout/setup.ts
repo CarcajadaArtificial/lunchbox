@@ -1,8 +1,8 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement, iFwd } from '../../src/types.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
-export type iLayout = iExtendedElement<HTMLDivElement> & {
+export type iLayout = iComponent<HTMLDivElement> & {
   type: LAYOUT_TYPES;
   fwd: Partial<{
     module: iFwd<HTMLDivElement>;

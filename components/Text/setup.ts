@@ -1,8 +1,8 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
-import { iExtendedElement } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 
-export type iText = iExtendedElement<HTMLSpanElement> & {
+export type iText = iComponent<HTMLSpanElement> & {
   type: TEXT_TYPES;
   inheritColor: boolean;
   compact: boolean;

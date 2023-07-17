@@ -1,7 +1,7 @@
 import { cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iExtendedElement } from '../../src/types.ts';
+import { iComponent } from '../../src/types.ts';
 
-export type iLink = iExtendedElement<HTMLAnchorElement>;
+export type iLink = iComponent<HTMLAnchorElement>;
 
 export default (props: Partial<iLink>) => {
   const p = props;
