@@ -468,7 +468,7 @@ button {
   opacity: 0.75;
 }
 .comp-input_box .comp-select {
-  padding: var(--s-eighth) var(--s-half);
+  padding: 0 var(--s-half);
   height: var(--s-one-and-half);
   appearance: none;
   -moz-appearance: none;

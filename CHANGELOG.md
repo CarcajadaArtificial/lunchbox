@@ -1,59 +1,19 @@
 # Changelog
 
-## v0.1.20
+## v0.2.0
 
-### Added focus interaction on focusable elements
-  - `/src/scss/animation.scss`
+### Added the universal prop `nostyle` and added the functions `cn()` and `opt()` that make it work.
+  - Removed `/deps.ts`
+  - `/src/types.ts`
+  - `/src/utils.ts`
+  - `/components/**/setup.ts`
+
+### Minor updates
+  - `/import_map.json`
   - `/src/scss/components.scss`
-  - `/src/scss/index.scss`
+  - `/static/style.css`
 
 ## Roadmap
-
-### v0.1
-
-  - [x] Update all components to GarliCSS and display on index route.
-  - [x] Document all needed fixes and upgrades possible using this structure:
-    - Add a comment where the fix should be added using the `@todo`.
-    - Grade the fix using one to three `!`s.
-      - `!!!`: Urgent
-      - `!!`: Before next version.
-      - `!`: After next version.
-      - ` `: Whenever
-      - `?`: Possible fix, question it later.
-    - Substitue the `Features` section of this document to a list of every feature with its pending.
-  - [x] Fix `!!`s and `!!!`s.
-  - [x] Reorganize project structure
-    - [x] Every component has its own directory.
-    - [x] Every component directory contains a setup file.
-    - [x] Every setup file contains the prop type (`iComponent`).
-    - [x] Every value inside a prop type (`iComponent`) must not be optional
-      - Use a default value of null instead of undefined, in types where undefined is a useful option.
-  - [x] Fix the fwd ref problem.
-    - [x] Card
-    - [x] Code
-    - [x] Footer
-    - [x] Header
-    - [x] Input
-    - [x] Layout
-    - [x] Linkmap
-    - [x] Main
-    - [x] Navigation
-    - [x] Select
-    - [x] Textarea
-  - [x] Do a documentation cleanup.
-    - [x] Readme.md
-      - [x] Features
-        - [x] List of components.
-        - [x] Component configuration example.
-        - [x] Utilities
-      - [x] Installation guide
-      - [x] Usage guide
-  - [x] Minor Fixes
-    - [x] Rename elements.ts to types.ts
-    - [x] Move system scss modules to its own directory
-    - [x] Removed the components scss directory
-    - [x] Take back enums structure and change it to string union types.
-    - [ ] Globalize the prop 'nostyle' on all components.
 
 ### v0.2
 

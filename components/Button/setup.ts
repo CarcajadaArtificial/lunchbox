@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
@@ -17,20 +16,23 @@ export default (props: Partial<iButton>) => {
   const p = applyDefaults<iButton>(defaults, props);
 
   const classes = partializeClasses({
-    button: cn(
-      'comp-button',
-      props.type === 'disabled'
-        ? 'clr-bg-disabled'
-        : props.type === 'error'
-        ? 'clr-bg-error'
-        : props.type === 'invisible'
-        ? 'comp-button_invisible'
-        : props.type === 'panel'
-        ? 'comp-button_panel'
-        : props.type === 'contrast'
-        ? 'clr-bg-input'
-        : 'clr-bg-input',
-      props.class
+    button: opt(
+      cn(
+        'comp-button',
+        props.type === 'disabled'
+          ? 'clr-bg-disabled'
+          : props.type === 'error'
+          ? 'clr-bg-error'
+          : props.type === 'invisible'
+          ? 'comp-button_invisible'
+          : props.type === 'panel'
+          ? 'comp-button_panel'
+          : props.type === 'contrast'
+          ? 'clr-bg-input'
+          : 'clr-bg-input'
+      ),
+      p.class,
+      p.nostyle
     ),
   });
 

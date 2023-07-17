@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
@@ -18,9 +17,11 @@ const defaults: iMain = {
 export default (props: Partial<iMain>) => {
   const p = applyDefaults<iMain>(defaults, props);
 
+  const { layout } = p.fwd;
+
   const classes = partializeClasses({
-    main: cn('comp-main clr-bg-page', p.class),
-    layout: cn(p.fwd.layout?.class),
+    main: opt(cn('comp-main clr-bg-page'), p.class, p.nostyle),
+    layout: cn(layout?.class),
   });
 
   delete p.class;

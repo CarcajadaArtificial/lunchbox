@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iLinkmapitem = {
@@ -26,9 +25,11 @@ const defaults: iLinkmap = {
 export default (props: Partial<iLinkmap>) => {
   const p = applyDefaults<iLinkmap>(defaults, props);
 
+  const { list } = p.fwd;
+
   const classes = partializeClasses({
-    linkmap: cn('comp-linkmap', p.class),
-    list: cn('comp-linkmap_list', p.fwd.list?.class),
+    linkmap: opt(cn('comp-linkmap'), p.class, p.nostyle),
+    list: opt(cn('comp-linkmap_list'), list?.class, list?.nostyle),
     item: cn(p.fwd.item?.class),
     link: cn(p.fwd.link?.class),
     text: cn(p.fwd.text?.class),

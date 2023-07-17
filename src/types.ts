@@ -17,17 +17,18 @@ import { JSX, Ref } from 'preact';
 export type iExtendedElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
   Partial<ARIAMixin> &
   Partial<GlobalEventHandlers> & {
+    nostyle?: boolean;
     fref?: Ref<T>;
   };
 
 /**
- *  @todo [!!] Complete documentation
+ *  This type is a shorthand that helps in forwarding props and references to a component's part.
  */
 export type iFwd<T extends EventTarget = HTMLElement> = iExtendedElement<T> & {
   ref?: Ref<T>;
 };
 
 /**
- *  @todo [!!] Complete documentation
+ * This type is a shorthand of `Record<string | number | symbol, never>` that `deno-lint(ban-types) recommends as the correct way to express the type of an empty object.`.
  */
 export type EmptyObject = Record<string | number | symbol, never>;

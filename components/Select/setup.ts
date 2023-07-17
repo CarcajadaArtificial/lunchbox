@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iOption =
@@ -39,21 +38,23 @@ const defaults: iSelect = {
 export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
+  const { text, label, option, error, required, container } = p.fwd;
+
   const classes = partializeClasses({
-    input: cn(
-      'comp-select',
-      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
-      p.class
+    input: opt(
+      cn('comp-select', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
+      p.class,
+      p.nostyle
     ),
-    text: cn(p.fwd.text?.class),
-    option: cn(p.fwd.option?.class),
-    label: cn('comp-select_label', p.fwd.label?.class),
-    error: cn('comp-select_error clr-txt-error', p.fwd.error?.class),
-    required: cn('comp-select_required', p.fwd.required?.class),
-    container: cn(
-      'comp-select_container comp-input_box',
-      p.maxWidth ? 'w-full' : null,
-      p.fwd.container?.class
+    text: cn(text?.class),
+    option: cn(option?.class),
+    label: opt(cn('comp-select_label'), label?.class, label?.nostyle),
+    error: opt(cn('comp-select_error clr-txt-error'), error?.class, error?.nostyle),
+    required: opt(cn('comp-select_required'), required?.class, required?.nostyle),
+    container: opt(
+      cn('comp-select_container comp-input_box', p.maxWidth ? 'w-full' : null),
+      container?.class,
+      container?.nostyle
     ),
   });
 

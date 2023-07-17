@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iNavigation = iExtendedElement & {
@@ -19,11 +18,13 @@ const defaults: iNavigation = {
 export default (props: Partial<iNavigation>) => {
   const p = applyDefaults<iNavigation>(defaults, props);
 
+  const { wrapper, panel, layout } = p.fwd;
+
   const classes = partializeClasses({
-    nav: cn('comp-navigation', p.class),
-    wrapper: cn('comp-navigation_wrapper', p.fwd.wrapper?.class),
-    panel: cn(p.fwd.panel?.class),
-    layout: cn(p.fwd.layout?.class),
+    nav: opt(cn('comp-navigation'), p.class, p.nostyle),
+    wrapper: opt(cn('comp-navigation_wrapper'), wrapper?.class, wrapper?.nostyle),
+    panel: cn(panel?.class),
+    layout: cn(layout?.class),
   });
 
   delete p.class;

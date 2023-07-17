@@ -170,7 +170,6 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Input
-/// @todo [!!!] `<Select />` innert text is slightly lower than it should be.
 .comp-input,
 .comp-textarea,
 .comp-select {
@@ -212,7 +211,7 @@
   }
 
   .comp-select {
-    padding: var(--s-eighth) var(--s-half);
+    padding: 0 var(--s-half);
     height: var(--s-one-and-half);
     @include appearance-none;
 

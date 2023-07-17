@@ -9,11 +9,40 @@
  * @module
  */
 
+import * as classNames from 'classnames';
 import { EmptyObject } from './types.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * @todo [!!] Complete documentation
+ * This function is a shorthand for `classNames.default(...classNames: any[]): string`
+ * @param {any[]} classNames
+ * @returns {string}
+ */
+export const cn = classNames.default;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * This function makes final `classNames` (the result of the `cn()` function) optional and allows a
+ * custom class to be appended or to override it altogether.
+ *
+ * @param {string} className
+ *  The library's assigned final `className` string, created using the `cn()` function.
+ *
+ * @param {string | undefined} customClassName
+ *  It is to be appended to or replace the library's `className`.
+ *
+ * @param {boolean | undefined} nostyle
+ *  True if the `className` string should be ignored.
+ *
+ * @returns {string}
+ *  `"${nostyle ? '' : className} ${customClassName}"`
+ */
+export const opt = (className: string, customClassName?: string, nostyle?: boolean) =>
+  `${nostyle ? '' : className} ${customClassName}`;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * @todo [!] Complete documentation
  */
 export function getDocumentation(relativeUrl: string, fileNames: string[]) {
   const doc: { [key: string]: string } = {};
@@ -53,42 +82,32 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * @todo [!!] Complete documentation
+ * When adding class to an element, say: `<div class={x} />` and `x`'s value ends up being an empty string (`''`), the element will render `<div class />` and end up with tons of empty `class` attributes. This function simplifies the code that replaces parts that end up having an empty string and makes them have `undefined` value.
+ *
+ * @param {Record<string, string>}
+ *  The record of parts that might contain empty string values.
+ *
+ * @returns {Record<string, string | undefined>}
+ *  A new record of the same parts but an `undefined` value replaced empty string values.
  */
-export const partializeClasses = (classes: Record<string, string>) =>
-  dMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * @todo [!!] Complete documentation
- */
-export const bring = async <ResponseObject>(
-  url: string,
-  method?: 'GET' | 'POST',
-  body?: BodyInit | null
-): Promise<ResponseObject> =>
-  (await fetch(url, {
-    method: method,
-    body: body,
-  }).then(async (res) => {
-    return await res.json();
-  })) as ResponseObject;
+export const partializeClasses = (classes: Record<string, string>): Record<string, string | undefined> =>
+  rMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This function emulates the behavior of `Array.prototype.map()` in Records. It calls a function
  * passing each entry of the record as an argument.
  *
- * @param {Dictionary<T>} record
+ * @param {Record<T>} record
  *  The record to be mapped.
  *
  * @param {function} callback
- *  The function that will map the entries of the dictionary.
+ *  The function that will map the entries of the record.
  *
- * @returns {Dictionary<T>}
- *  A new dictionary with each entry mapped to the function.
+ * @returns {Record<T>}
+ *  A new cord with each entry mapped to the function.
  */
-export function dMap<T>(
+export function rMap<T>(
   record: Record<string, T>,
   callback: (entry: T, key?: string) => T
 ): Record<string, T> {

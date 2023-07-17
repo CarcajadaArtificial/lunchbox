@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 
@@ -30,13 +29,15 @@ export default (props: Partial<iFooter>) => {
 
   const p = applyDefaults<iFooter>(defaults, props);
 
+  const { layout, panel, badge_link, badge_dark, badge_light } = p.fwd;
+
   const classes = partializeClasses({
-    footer: cn('comp-footer', p.class),
-    layout: cn(p.fwd.layout?.class),
-    panel: cn(p.fwd.panel?.class),
-    badge_link: cn('made-with-fresh', p.fwd.badge_link?.class),
-    badge_light: cn('fresh-badge light', p.fwd.badge_light?.class),
-    badge_dark: cn('fresh-badge dark', p.fwd.badge_dark?.class),
+    footer: opt(cn('comp-footer'), p.class, p.nostyle),
+    layout: cn(layout?.class),
+    panel: cn(panel?.class),
+    badge_link: opt(cn('made-with-fresh'), badge_link?.class, badge_link?.nostyle),
+    badge_light: opt(cn('fresh-badge light'), badge_light?.class, badge_light?.nostyle),
+    badge_dark: opt(cn('fresh-badge dark'), badge_dark?.class, badge_dark?.nostyle),
   });
 
   delete p.class;

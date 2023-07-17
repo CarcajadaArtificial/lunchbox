@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iExtendedElement } from '../../src/types.ts';
 
@@ -25,16 +24,19 @@ export default (props: Partial<iText>) => {
   const p = applyDefaults<iText>(defaults, props);
 
   const classes = partializeClasses({
-    span: cn(
-      'comp-text',
-      `txt-${p.type}`,
-      ['display', 'title', 'heading'].includes(p.type) ? 'clr-txt-personality' : null,
-      p.compact ? 'compact' : null,
-      p.single ? 'single' : null,
-      p.noMargins ? 'no-margins' : null,
-      p.indent ? 'indent' : null,
-      p.inheritColor ? 'inherit-color' : null,
-      p.class
+    span: opt(
+      cn(
+        'comp-text',
+        `txt-${p.type}`,
+        ['display', 'title', 'heading'].includes(p.type) ? 'clr-txt-personality' : null,
+        p.compact ? 'compact' : null,
+        p.single ? 'single' : null,
+        p.noMargins ? 'no-margins' : null,
+        p.indent ? 'indent' : null,
+        p.inheritColor ? 'inherit-color' : null
+      ),
+      p.class,
+      p.nostyle
     ),
   });
 

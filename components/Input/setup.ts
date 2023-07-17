@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iInput = iExtendedElement<HTMLInputElement> & {
@@ -26,27 +25,32 @@ const defaults: iInput = {
 export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
+  const { text, label, error, required, container } = p.fwd;
+
   const classes = partializeClasses({
-    input: cn(
-      'comp-input',
-      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input',
-      p.class
+    input: opt(
+      cn('comp-input', p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'),
+      p.class,
+      p.nostyle
     ),
-    text: cn('select-none', p.fwd.text?.class),
-    label: cn('comp-input_label', p.fwd.label?.class),
-    error: cn('comp-input_error clr-txt-error', p.fwd.error?.class),
-    required: cn('comp-input_required clr-txt-error', p.fwd.text?.class),
-    container: cn(
-      'comp-input_container',
-      p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
-        ? 'comp-input_button'
-        : p.type && ['radio', 'checkbox'].includes(p.type)
-        ? 'comp-input_bool'
-        : p.type && ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
-        ? 'comp-input_date'
-        : 'comp-input_box',
-      p.maxWidth ? 'comp-input_maxwidth' : null,
-      p.fwd.container?.class
+    text: opt(cn('select-none'), text?.class, text?.nostyle),
+    label: opt(cn('comp-input_label'), label?.class, label?.nostyle),
+    error: opt(cn('comp-input_error clr-txt-error'), error?.class, error?.nostyle),
+    required: opt(cn('comp-input_required clr-txt-error'), required?.class, required?.nostyle),
+    container: opt(
+      cn(
+        'comp-input_container',
+        p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+          ? 'comp-input_button'
+          : p.type && ['radio', 'checkbox'].includes(p.type)
+          ? 'comp-input_bool'
+          : p.type && ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
+          ? 'comp-input_date'
+          : 'comp-input_box',
+        p.maxWidth ? 'comp-input_maxwidth' : null
+      ),
+      container?.class,
+      container?.nostyle
     ),
   });
 

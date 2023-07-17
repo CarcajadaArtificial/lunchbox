@@ -1,5 +1,4 @@
-import { cn } from '../../deps.ts';
-import { applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iExtendedElement, iFwd } from '../../src/types.ts';
 
 export type iTextArea = iExtendedElement<HTMLTextAreaElement> & {
@@ -28,20 +27,26 @@ const defaults: iTextArea = {
 export default (props: Partial<iTextArea>) => {
   const p = applyDefaults<iTextArea>(defaults, props);
 
+  const { text, label, error, required, container } = p.fwd;
+
   const classes = partializeClasses({
-    input: cn(
-      'comp-textarea',
-      p.noResize ? 'resize-none' : null,
-      p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'
+    input: opt(
+      cn(
+        'comp-textarea',
+        p.noResize ? 'resize-none' : null,
+        p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'
+      ),
+      p.class,
+      p.nostyle
     ),
-    text: cn(p.fwd.text?.class),
-    label: cn('comp-textarea_label', p.fwd.label?.class),
-    error: cn('comp-textarea_error clr-txt-error', p.fwd.error?.class),
-    required: cn('comp-textarea_required clr-txt-error', p.fwd.required?.class),
-    container: cn(
-      'comp-textarea_container comp-input_box',
-      p.maxWidth ? 'w-full' : null,
-      p.fwd.container?.class
+    text: cn(text?.class),
+    label: opt(cn('comp-textarea_label'), label?.class, label?.nostyle),
+    error: opt(cn('comp-textarea_error clr-txt-error'), error?.class, error?.nostyle),
+    required: opt(cn('comp-textarea_required clr-txt-error'), required?.class, required?.nostyle),
+    container: opt(
+      cn('comp-textarea_container comp-input_box', p.maxWidth ? 'w-full' : null),
+      container?.class,
+      container?.nostyle
     ),
   });
 
