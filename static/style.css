@@ -311,7 +311,7 @@ button {
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
 }
 .comp-header_banner {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .comp-main {
@@ -351,19 +351,34 @@ button {
 }
 
 .comp-card {
-  position: relative;
-  margin-bottom: var(--s-one-and-half);
   border-radius: var(--s-quarter);
   padding: var(--s-one-and-half);
+}
+.comp-card_wrapper {
+  margin-bottom: var(--s-one-and-half);
+}
+
+.comp-card,
+.comp-card_gradient {
   width: calc(100% + var(--s-triple));
   right: var(--s-one-and-half);
+  position: relative;
 }
 @media screen and (max-width: 39.9375em) {
-  .comp-card {
+  .comp-card,
+.comp-card_gradient {
     padding: var(--s-half);
     width: calc(100% + var(--s-single));
     right: var(--s-half);
   }
+}
+
+.comp-card:has(+ .comp-card_gradient) {
+  border-radius: var(--s-quarter) var(--s-quarter) 0 0;
+}
+
+.comp-card_gradient + .comp-card {
+  border-radius: 0 0 var(--s-quarter) var(--s-quarter);
 }
 
 .comp-text {
@@ -572,6 +587,25 @@ button {
 .comp-link {
   outline-offset: var(--s-eighth);
   border-radius: var(--s-eighth);
+}
+
+.comp-gradient {
+  min-height: var(--s-triple);
+}
+.comp-gradient_cloud {
+  background: linear-gradient(var(--clr-bg-panel) 50%, transparent 0) 0 0, radial-gradient(circle closest-side, var(--clr-bg-panel) 53%, transparent 0) 0 0, radial-gradient(circle closest-side, var(--clr-bg-panel) 50%, transparent 0) 2.5em 0 var(--clr-bg-page);
+  background-size: 5em 5em;
+  background-position-y: -2.5em;
+  background-repeat: repeat-x;
+}
+.comp-gradient_zigzag {
+  background: linear-gradient(135deg, var(--clr-bg-panel) 25%, transparent 25%) -1em 0, linear-gradient(225deg, var(--clr-bg-panel) 25%, transparent 25%) -1em 0, linear-gradient(315deg, var(--clr-bg-panel) 25%, transparent 25%), linear-gradient(45deg, var(--clr-bg-panel) 25%, transparent 25%);
+  background-size: 2em 2em;
+  background-color: var(--clr-bg-page);
+}
+.comp-gradient_wave {
+  background: radial-gradient(37.5% 12.5% at 62.5% 100%, transparent 32%, var(--clr-bg-panel) 34% 99%, transparent 101%) 0em -1.5em, radial-gradient(37.5% 12.5% at 62.5% 0, transparent 32%, var(--clr-bg-panel) 34% 99%, transparent 101%) 0em 1.5em, radial-gradient(37.5% 12.5% at 62.5% 100%, transparent 32%, var(--clr-bg-page) 34% 99%, transparent 101%) 1em 1.5em, radial-gradient(37.5% 12.5% at 62.5% 0, transparent 32%, var(--clr-bg-page) 34% 99%, transparent 101%) 1em 4.5em, radial-gradient(37.5% 12.5% at 62.5% 100%, transparent 32%, var(--clr-bg-panel) 34% 99%, transparent 101%) 2em 4.5em, radial-gradient(37.5% 12.5% at 62.5% 0, transparent 32%, var(--clr-bg-panel) 34% 99%, transparent 101%) 2em 7.5em, radial-gradient(37.5% 12.5% at 62.5% 100%, transparent 32%, var(--clr-bg-page) 34% 99%, transparent 101%) 3em 7.5em, radial-gradient(37.5% 12.5% at 62.5% 0, transparent 32%, var(--clr-bg-page) 34% 99%, transparent 101%) 3em -1.5em, linear-gradient(var(--clr-bg-panel) 0 12.5%, var(--clr-bg-page) 0 37.5%, var(--clr-bg-panel) 0 62.5%, var(--clr-bg-page) 0 87.5%, var(--clr-bg-panel) 0 100%);
+  background-size: 4em 12em;
 }
 
 .h-min {

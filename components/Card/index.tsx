@@ -5,10 +5,11 @@ export default function (props: Partial<iCard>) {
   const { c, fref, fwd, children, ...p } = setup(props);
 
   return (
-    <Panel fref={fwd.panel?.fref!} class={c.panel}>
-      <div ref={fref} class={c.card} {...p}>
+    <div ref={fwd.wrapper?.ref!} class={c.wrapper}>
+      <Panel fref={fref} class={c.card} {...p}>
         {children}
-      </div>
-    </Panel>
+      </Panel>
+      {/* <div ref={fwd.gradient?.ref!} class={c.gradient} /> */}
+    </div>
   );
 }

@@ -38,7 +38,7 @@ export const cn = classNames.default;
  *  `"${nostyle ? '' : className} ${customClassName}"`
  */
 export const opt = (className: string, customClassName?: string, nostyle?: boolean) =>
-  `${nostyle ? '' : className} ${customClassName}`;
+  cn(nostyle ? '' : className, customClassName);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

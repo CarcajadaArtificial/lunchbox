@@ -19,7 +19,7 @@
   padding: var(--s-triple) 0 var(--s-one-and-half) 0;
 
   &_banner {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -72,19 +72,33 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Card
 .comp-card {
-  position: relative;
-  margin-bottom: var(--s-one-and-half);
   border-radius: var(--s-quarter);
-
   padding: var(--s-one-and-half);
+
+  &_wrapper {
+    margin-bottom: var(--s-one-and-half);
+  }
+}
+
+.comp-card,
+.comp-card_gradient {
   width: calc(100% + var(--s-triple));
   right: var(--s-one-and-half);
+  position: relative;
 
   @include media(only-on($breakpoints, sm)) {
     padding: var(--s-half);
     width: calc(100% + var(--s-single));
     right: var(--s-half);
   }
+}
+
+.comp-card:has(+ .comp-card_gradient) {
+  border-radius: var(--s-quarter) var(--s-quarter) 0 0;
+}
+
+.comp-card_gradient + .comp-card {
+  border-radius: 0 0 var(--s-quarter) var(--s-quarter);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
