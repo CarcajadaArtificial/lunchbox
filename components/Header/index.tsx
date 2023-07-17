@@ -1,9 +1,10 @@
 import setup, { iHeader } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
+import Gradient from '../Gradient/index.tsx';
 
 export default function (props: Partial<iHeader>) {
-  const { c, fref, fwd, children, layout_type, ...p } = setup(props);
+  const { c, fref, fwd, children, gradient_pattern, layout_type, ...p } = setup(props);
 
   return (
     <div>
@@ -18,7 +19,9 @@ export default function (props: Partial<iHeader>) {
           )}
         </header>
       </Panel>
-      {/* <div class="comp-gradient comp-gradient_zigzag" /> */}
+      {gradient_pattern ? (
+        <Gradient fref={fwd.gradient?.fref} class={c.gradient} gradient_pattern={gradient_pattern} />
+      ) : null}
     </div>
   );
 }

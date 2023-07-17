@@ -1,12 +1,16 @@
 # Changelog
 
-## v0.2.0-beta.2
+## v0.2.0-beta.3
 
-### Added gradient styles
-  - `/src/scss/components.scss`
-  - `/src/scss/gradient.scss`
-  - `/src/scss/index.scss`
-  - `/static/style.css`
+### Added the `Gradient` component
+  - `/components/Gradient/index.tsx`
+  - `/components/Footer/index.tsx`
+  - `/components/Header/index.tsx`
+  - `/components/Gradient/setup.tsx`
+  - `/components/Footer/setup.tsx`
+  - `/components/Header/setup.tsx`
+  - `/routes/index.tsx`
+  - `/src/enums.ts`
 
 ### Prepared the `Card` and `Header` componets for the `Gradient` compoennt.
   - `/components/Card/index.tsx`
@@ -14,14 +18,21 @@
   - `/components/Header/index.tsx`
 
 ### Minor updates
-  - `/src/utils.ts`
+  - `/src/scss/twind.scss`
+  - `/static/style.css`
 
 ## Changes so far
 
 - Added the `ìComponent` type.
 
-Components:
-- ⏳ Gradient
+### New features, existing components:
+  - **Header**
+    - Added a `Gradient` component for decoration.
+  - **Footer**
+    - Added a `Gradient` component for decoration.
+
+### New components:
+  - ✅ Gradient
 
 ## Roadmap
 
@@ -41,7 +52,7 @@ Components:
     - [ ] **Navigation**: Add appear/disappear when scrolling interaction on a fixed navigation.
     - [ ] **Code**: Add copy to clipboard.
     - [ ] **Separator**: Add gradient separators.
-    - [ ] **Header**, **Footer**: Add spacers with gradients that change.
+    - [x] **Header**, **Footer**: Add spacers with gradients that change.
   - [ ] Add components
     - [ ] Time
     - [ ] Markdown
@@ -53,7 +64,7 @@ Components:
     - [ ] Screen
     - [ ] Dialog
     - [ ] Image
-    - [ ] Gradient
+    - [x] Gradient
   - [ ] Minor updates
     - [ ] Add scss variables containing the css root variables.
 

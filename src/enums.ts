@@ -22,3 +22,5 @@ export type LAYOUT_TYPES =
 export type TEXT_TYPES = 'display' | 'title' | 'heading' | 'subheading' | 'paragraph' | 'small';
 
 export type BUTTON_TYPES = 'error' | 'disabled' | 'contrast' | 'panel' | 'invisible';
+
+export type GRADIENT_PATTERNS = 'cloud' | 'zigzag' | 'wave';

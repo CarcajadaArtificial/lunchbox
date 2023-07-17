@@ -14,3 +14,7 @@
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+
+.y-flip {
+  transform: scaleY(-1);
+}

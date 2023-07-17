@@ -3,13 +3,14 @@ import setup, { iFooter } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
 import Link from '../Link/index.tsx';
+import Gradient from '../Gradient/index.tsx';
 
 /**
  * @todo [ ] Lazy load the `made-with-fresh` images.
  * @todo [?] Replace an src image with an inline SVG.
  */
 export default function (props: Partial<iFooter>) {
-  const { c, fref, fwd, children, layout_type, madeWithFresh, ...p } = setup(props);
+  const { c, fref, fwd, children, gradient_pattern, layout_type, madeWithFresh, ...p } = setup(props);
 
   if (madeWithFresh) {
     (children as [ComponentChild]).push(
@@ -35,16 +36,26 @@ export default function (props: Partial<iFooter>) {
   }
 
   return (
-    <Panel fref={fwd.panel?.fref} class={c.panel}>
-      <footer ref={fref} {...p} class={c.footer}>
-        {layout_type ? (
-          <Layout fref={fwd.layout?.fref} type={layout_type} class={c.layout}>
-            {children}
-          </Layout>
-        ) : (
-          <>{children}</>
-        )}
-      </footer>
-    </Panel>
+    <div ref={fwd.wrapper?.ref} class={c.wrapper}>
+      {gradient_pattern ? (
+        <Gradient
+          fref={fwd.gradient?.fref}
+          class={c.gradient}
+          flip
+          gradient_pattern={gradient_pattern}
+        />
+      ) : null}
+      <Panel fref={fwd.panel?.fref} class={c.panel}>
+        <footer ref={fref} {...p} class={c.footer}>
+          {layout_type ? (
+            <Layout fref={fwd.layout?.fref} type={layout_type} class={c.layout}>
+              {children}
+            </Layout>
+          ) : (
+            <>{children}</>
+          )}
+        </footer>
+      </Panel>
+    </div>
   );
 }

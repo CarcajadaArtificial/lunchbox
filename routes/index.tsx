@@ -31,13 +31,13 @@ export default function Home() {
 
   const TestLargeText = (type: TEXT_TYPES) => (
     <Text type={type}>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque ipsa
-      laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at quisquam,
-      natus alias molestiae accusantium!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque
+      ipsa laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at
+      quisquam, natus alias molestiae accusantium!
       <Code>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Code>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque ipsa
-      laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at quisquam,
-      natus alias molestiae accusantium!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque
+      ipsa laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at
+      quisquam, natus alias molestiae accusantium!
     </Text>
   );
 
@@ -88,7 +88,11 @@ export default function Home() {
       <TextArea label="Lorem ipsum" error="lorem ipsum"></TextArea>
       <Separator />
       <Text>Select</Text>
-      <Select options={['Value 1', 'Value 2', 'Value 3']} placeholder="placeholder" label="Lorem ipsum" />
+      <Select
+        options={['Value 1', 'Value 2', 'Value 3']}
+        placeholder="placeholder"
+        label="Lorem ipsum"
+      />
       <Separator />
       <Text>Buttons</Text>
       <Button>Contrast</Button>
@@ -107,7 +111,7 @@ export default function Home() {
           <Button type={'panel'}>Button</Button>
         </div>
       </Navigation>
-      <Header layout_type="left">
+      <Header gradient_pattern="wave" layout_type="left">
         {TestTinyText('title')}
         <div></div>
         {TestLargeText('paragraph')}
@@ -131,7 +135,7 @@ export default function Home() {
           {TestInputs()}
         </>
       </Main>
-      <Footer layout_type="left" madeWithFresh>
+      <Footer gradient_pattern="wave" layout_type="left" madeWithFresh>
         {TestTinyText('subheading')}
         <Text>
           Powered by&nbsp;

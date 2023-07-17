@@ -623,4 +623,8 @@ button {
   aspect-ratio: 1/1;
 }
 
+.y-flip {
+  transform: scaleY(-1);
+}
+
 /*# sourceMappingURL=style.css.map */
