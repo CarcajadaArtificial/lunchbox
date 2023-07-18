@@ -1,13 +1,6 @@
 # Changelog
 
-## v0.2.0-beta.5
-
-### Added a title to the `Card` component.
-  - `/components/Card/index.tsx`
-  - `/components/Card/setup.tsx`
-  - `/routes/index.tsx`
-
-## Changes so far
+## v0.2.1
 
 - Added the `ìComponent` type.
 
