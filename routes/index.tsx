@@ -128,8 +128,10 @@ export default function Home() {
           {TestTinyText('title')}
           <Separator />
           {TestTinyText('display')}
-          <Card top_gradient_pattern="cloud" bottom_gradient_pattern="cloud">
-            {TestSmallText('subheading')}
+          <Card
+            card_title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            bottom_gradient_pattern="cloud"
+          >
             {TestLargeText('paragraph')}
           </Card>
           {TestInputs()}

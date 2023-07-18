@@ -1,9 +1,10 @@
 import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { iGradient } from '../Gradient/setup.ts';
 import { GRADIENT_PATTERNS } from '../../src/enums.ts';
+import { iGradient } from '../Gradient/setup.ts';
 
 export type iCard = iComponent<HTMLDivElement> & {
+  card_title: string | null;
   top_gradient_pattern: GRADIENT_PATTERNS | null;
   bottom_gradient_pattern: GRADIENT_PATTERNS | null;
   fwd: Partial<{
@@ -15,6 +16,7 @@ export type iCard = iComponent<HTMLDivElement> & {
 };
 
 const defaults: iCard = {
+  card_title: null,
   top_gradient_pattern: null,
   bottom_gradient_pattern: null,
   fwd: {},

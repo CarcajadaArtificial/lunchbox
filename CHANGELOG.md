@@ -1,17 +1,11 @@
 # Changelog
 
-## v0.2.0-beta.4
+## v0.2.0-beta.5
 
-### Added the `Gradient` component to the `Card`` component
+### Added a title to the `Card` component.
   - `/components/Card/index.tsx`
-  - `/components/Gradient/setup.tsx`
   - `/components/Card/setup.tsx`
   - `/routes/index.tsx`
-
-### Minor updates
-  - `/src/scss/components.scss`
-  - `/src/scss/twind.scss`
-  - `/static/style.css`
 
 ## Changes so far
 
@@ -23,6 +17,7 @@
   - **Footer**
     - Added a `Gradient` component for decoration.
   - **Card**
+    - Added a `card_title` prop.
     - Added a `Gradient` component for decoration.
 
 ### New components:
@@ -42,7 +37,7 @@
     - [ ] Link
   - [ ] Create an organized collection of island functions
   - [ ] Update component features
-    - [ ] **Card**: Add text, image, gradient spacers, and linkmap feature.
+    - [ ] **Card**: Add text, image, gradient spacers, and chips feature.
     - [ ] **Navigation**: Add appear/disappear when scrolling interaction on a fixed navigation.
     - [ ] **Code**: Add copy to clipboard.
     - [ ] **Separator**: Add gradient separators.
