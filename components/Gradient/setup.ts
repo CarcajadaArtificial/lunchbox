@@ -20,7 +20,7 @@ export default (props: Partial<iGradient>) => {
       cn(
         'comp-gradient',
         p.gradient_pattern ? `comp-gradient_${p.gradient_pattern}` : null,
-        p.flip ? 'y-flip' : null
+        p.flip ? 'flip' : null
       ),
       p.class,
       p.nostyle

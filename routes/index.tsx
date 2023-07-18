@@ -111,7 +111,7 @@ export default function Home() {
           <Button type={'panel'}>Button</Button>
         </div>
       </Navigation>
-      <Header gradient_pattern="wave" layout_type="left">
+      <Header gradient_pattern="cloud" layout_type="left">
         {TestTinyText('title')}
         <div></div>
         {TestLargeText('paragraph')}
@@ -128,14 +128,14 @@ export default function Home() {
           {TestTinyText('title')}
           <Separator />
           {TestTinyText('display')}
-          <Card>
+          <Card top_gradient_pattern="cloud" bottom_gradient_pattern="cloud">
             {TestSmallText('subheading')}
             {TestLargeText('paragraph')}
           </Card>
           {TestInputs()}
         </>
       </Main>
-      <Footer gradient_pattern="wave" layout_type="left" madeWithFresh>
+      <Footer gradient_pattern="cloud" layout_type="left" madeWithFresh>
         {TestTinyText('subheading')}
         <Text>
           Powered by&nbsp;

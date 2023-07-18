@@ -1,23 +1,15 @@
 # Changelog
 
-## v0.2.0-beta.3
+## v0.2.0-beta.4
 
-### Added the `Gradient` component
-  - `/components/Gradient/index.tsx`
-  - `/components/Footer/index.tsx`
-  - `/components/Header/index.tsx`
-  - `/components/Gradient/setup.tsx`
-  - `/components/Footer/setup.tsx`
-  - `/components/Header/setup.tsx`
-  - `/routes/index.tsx`
-  - `/src/enums.ts`
-
-### Prepared the `Card` and `Header` componets for the `Gradient` compoennt.
+### Added the `Gradient` component to the `Card`` component
   - `/components/Card/index.tsx`
-  - `/components/Card/setup.ts`
-  - `/components/Header/index.tsx`
+  - `/components/Gradient/setup.tsx`
+  - `/components/Card/setup.tsx`
+  - `/routes/index.tsx`
 
 ### Minor updates
+  - `/src/scss/components.scss`
   - `/src/scss/twind.scss`
   - `/static/style.css`
 
@@ -29,6 +21,8 @@
   - **Header**
     - Added a `Gradient` component for decoration.
   - **Footer**
+    - Added a `Gradient` component for decoration.
+  - **Card**
     - Added a `Gradient` component for decoration.
 
 ### New components:

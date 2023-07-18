@@ -94,11 +94,13 @@
 }
 
 .comp-card:has(+ .comp-card_gradient) {
-  border-radius: var(--s-quarter) var(--s-quarter) 0 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .comp-card_gradient + .comp-card {
-  border-radius: 0 0 var(--s-quarter) var(--s-quarter);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
