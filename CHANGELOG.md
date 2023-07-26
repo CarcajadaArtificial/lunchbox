@@ -1,33 +1,15 @@
 # Changelog
 
-## v0.2.1-beta.1
+## v0.2.1-beta.2
 
-### Added incomplete Markdown funcitonalities:
+### Updated `deno.json` to support standard scripts for fmt and linting.
 
-- `/fresh.gen.ts`
-- `/static/test.txt`
-- `/static/content.md`
-- `/routes/md.tsx`
-
-### Added `.vscode` configuration.
-
-- `/.vscode/*`
-- `/.gitignore`
-
-### Turned off `/routes/index.tsx` local components
-
-- `/routes/index.tsx`
-
-### Minor updates
-
-- `/import_map.json`
-- `/static/style.css`
-- `/src/scss/animation.scss`
-- `/src/utils.ts`
+- `/deno.json`
 
 ## Changes so far
 
 - ⏳ Markdown component
+- Better task scripts.
 
 ## Roadmap
 
