@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';

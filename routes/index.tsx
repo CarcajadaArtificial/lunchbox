@@ -12,8 +12,8 @@ import {
   Select,
   Separator,
   Text,
-  TextArea,
   TEXT_TYPES,
+  TextArea,
 } from '../mod.ts';
 
 export default function Home() {
@@ -31,13 +31,15 @@ export default function Home() {
 
   const TestLargeText = (type: TEXT_TYPES) => (
     <Text type={type}>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque
-      ipsa laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at
-      quisquam, natus alias molestiae accusantium!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
+      saepe consectetur eaque ipsa laborum similique totam aspernatur cupiditate
+      iusto nobis esse facere consequatur quia at quisquam, natus alias
+      molestiae accusantium!
       <Code>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Code>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit saepe consectetur eaque
-      ipsa laborum similique totam aspernatur cupiditate iusto nobis esse facere consequatur quia at
-      quisquam, natus alias molestiae accusantium!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
+      saepe consectetur eaque ipsa laborum similique totam aspernatur cupiditate
+      iusto nobis esse facere consequatur quia at quisquam, natus alias
+      molestiae accusantium!
     </Text>
   );
 
@@ -51,7 +53,11 @@ export default function Home() {
           url: './',
           children: [
             { name: 'asdfghjkl', url: './' },
-            { name: 'asdfghjkl', url: './', children: [{ name: 'asdfghjkl', url: './' }] },
+            {
+              name: 'asdfghjkl',
+              url: './',
+              children: [{ name: 'asdfghjkl', url: './' }],
+            },
             { name: 'asdfghjkl' },
           ],
         },
@@ -64,34 +70,39 @@ export default function Home() {
     <>
       <Text>Input</Text>
       <Input
-        type="text"
-        placeholder="test"
-        label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        type='text'
+        placeholder='test'
+        label='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         // error="Deserunt excepturi fugiat sapiente.
         //     Sed quod eos nihil, itaque aliquid numquam placeat quia laudantium recusandae."
         required
       />
-      <Input type="text" value="disabled" disabled />
+      <Input type='text' value='disabled' disabled />
       <Separator />
-      <Input type="datetime-local" label="Lorem ipsum" required />
-      <Input type="date" label="Lorem ipsum" required />
-      <Input type="month" label="Lorem ipsum" required />
-      <Input type="week" label="Lorem ipsum" required />
-      <Input type="time" label="Lorem ipsum" required />
+      <Input type='datetime-local' label='Lorem ipsum' required />
+      <Input type='date' label='Lorem ipsum' required />
+      <Input type='month' label='Lorem ipsum' required />
+      <Input type='week' label='Lorem ipsum' required />
+      <Input type='time' label='Lorem ipsum' required />
       <Separator />
       <Text>Input Buttons</Text>
-      <Input type="button" value="Lorem ipsum" label="Lorem ipsum" error="error" />
-      <Input type="button" value="disabled" disabled />
-      <Input type="image" value="Lorem ipsum" />
+      <Input
+        type='button'
+        value='Lorem ipsum'
+        label='Lorem ipsum'
+        error='error'
+      />
+      <Input type='button' value='disabled' disabled />
+      <Input type='image' value='Lorem ipsum' />
       <Separator />
       <Text>TextArea</Text>
-      <TextArea label="Lorem ipsum" error="lorem ipsum"></TextArea>
+      <TextArea label='Lorem ipsum' error='lorem ipsum'></TextArea>
       <Separator />
       <Text>Select</Text>
       <Select
         options={['Value 1', 'Value 2', 'Value 3']}
-        placeholder="placeholder"
-        label="Lorem ipsum"
+        placeholder='placeholder'
+        label='Lorem ipsum'
       />
       <Separator />
       <Text>Buttons</Text>
@@ -107,17 +118,17 @@ export default function Home() {
     <div>
       <Navigation>
         {/* {TestTinyText('paragraph')} */}
-        <div class="flex justify-end">
+        <div class='flex justify-end'>
           <Button type={'panel'}>Button</Button>
         </div>
       </Navigation>
-      <Header gradient_pattern="cloud" layout_type="left">
+      <Header gradient_pattern='cloud' layout_type='left'>
         {/* {TestTinyText('title')} */}
         <div></div>
         {/* {TestLargeText('paragraph')} */}
         <TestLinkmap />
       </Header>
-      <Main layout_type="center">
+      <Main layout_type='center'>
         <>
           {/* {TestTinyText('paragraph')} */}
           <Separator />
@@ -129,19 +140,21 @@ export default function Home() {
           <Separator />
           {/* {TestTinyText('display')} */}
           <Card
-            card_title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            bottom_gradient_pattern="cloud"
+            card_title='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+            bottom_gradient_pattern='cloud'
           >
             {/* {TestLargeText('paragraph')} */}
           </Card>
           {/* {TestInputs()} */}
         </>
       </Main>
-      <Footer gradient_pattern="cloud" layout_type="left" madeWithFresh>
+      <Footer gradient_pattern='cloud' layout_type='left' madeWithFresh>
         {/* {TestTinyText('subheading')} */}
         <Text>
-          {/* Powered by&nbsp;
-          <Link href="https://github.com/CarcajadaArtificial">myself</Link>. */}
+          {
+            /* Powered by&nbsp;
+          <Link href="https://github.com/CarcajadaArtificial">myself</Link>. */
+          }
         </Text>
         {/* {TestLargeText('paragraph')} */}
       </Footer>

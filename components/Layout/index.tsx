@@ -6,19 +6,25 @@ export default function (props: Partial<iLayout>) {
 
   return (
     <div ref={fref} {...p} class={c.layout}>
-      {Array.isArray(children) ? (
-        children.map((child: ComponentChild) =>
-          child ? (
-            <div ref={fwd.module?.ref} class={c.module}>
-              {child}
-            </div>
-          ) : null
+      {Array.isArray(children)
+        ? (
+          children.map((child: ComponentChild) =>
+            child
+              ? (
+                <div ref={fwd.module?.ref} class={c.module}>
+                  {child}
+                </div>
+              )
+              : null
+          )
         )
-      ) : children ? (
-        <div ref={fwd.module?.ref} class={c.module}>
-          {children}
-        </div>
-      ) : null}
+        : children
+        ? (
+          <div ref={fwd.module?.ref} class={c.module}>
+            {children}
+          </div>
+        )
+        : null}
     </div>
   );
 }

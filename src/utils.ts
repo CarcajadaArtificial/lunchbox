@@ -37,8 +37,11 @@ export const cn = classNames.default;
  * @returns {string}
  *  `"${nostyle ? '' : className} ${customClassName}"`
  */
-export const opt = (className: string, customClassName?: string, nostyle?: boolean) =>
-  cn(nostyle ? '' : className, customClassName);
+export const opt = (
+  className: string,
+  customClassName?: string,
+  nostyle?: boolean,
+) => cn(nostyle ? '' : className, customClassName);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -72,7 +75,7 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
 export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
     throw new Error(
-      'Error in applyDefaults(): If there are no default values, this function must be avoided.'
+      'Error in applyDefaults(): If there are no default values, this function must be avoided.',
     );
   } else if (Object.keys(i).length === 0) {
     return d;
@@ -90,8 +93,13 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
  * @returns {Record<string, string | undefined>}
  *  A new record of the same parts but an `undefined` value replaced empty string values.
  */
-export function partializeClasses(classes: Record<string, string>): Record<string, string | undefined>{
-  return rMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
+export function partializeClasses(
+  classes: Record<string, string>,
+): Record<string, string | undefined> {
+  return rMap<string | undefined>(
+    classes,
+    (entry) => (entry === '' ? undefined : entry),
+  );
 }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -109,7 +117,7 @@ export function partializeClasses(classes: Record<string, string>): Record<strin
  */
 export function rMap<T>(
   record: Record<string, T>,
-  callback: (entry: T, key?: string) => T
+  callback: (entry: T, key?: string) => T,
 ): Record<string, T> {
   const newRecord: Record<string, T> | EmptyObject = {};
   Object.keys(record).forEach((key) => {

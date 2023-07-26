@@ -16,6 +16,7 @@
     "exclude": [".github/dep"]
   },
   "fmt": {
-    "exclude": [".github/dep"]
+    "exclude": [".github/dep"],
+    "singleQuote": true
   }
 }

@@ -9,8 +9,18 @@ import setup, { iText } from './setup.ts';
  * @todo [!] Impleent the prop `inheritColor`.
  */
 export default function (props: Partial<iText>) {
-  const { c, fref, type, compact, single, indent, noMargins, children, inheritColor, ...p } =
-    setup(props);
+  const {
+    c,
+    fref,
+    type,
+    compact,
+    single,
+    indent,
+    noMargins,
+    children,
+    inheritColor,
+    ...p
+  } = setup(props);
 
   return (
     <span ref={fref} class={c.span} {...p}>

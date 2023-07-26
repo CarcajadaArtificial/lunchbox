@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 
@@ -29,10 +29,10 @@ export default (props: Partial<iButton>) => {
           ? 'comp-button_panel'
           : props.type === 'contrast'
           ? 'clr-bg-input'
-          : 'clr-bg-input'
+          : 'clr-bg-input',
       ),
       p.class,
-      p.nostyle
+      p.nostyle,
     ),
   });
 

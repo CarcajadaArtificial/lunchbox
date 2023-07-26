@@ -19,9 +19,10 @@ export type iComponent<T extends EventTarget = HTMLElement> = iElement<T> & {
 /**
  * This type is a shorthand for an extension of `JSX.HTMLAttributes<T>`, `Partial<ARIAMixin>`, and ` Partial<GlobalEventHandlers>`.
  */
-export type iElement<T extends EventTarget = HTMLElement> = JSX.HTMLAttributes<T> &
-  Partial<ARIAMixin> &
-  Partial<GlobalEventHandlers>;
+export type iElement<T extends EventTarget = HTMLElement> =
+  & JSX.HTMLAttributes<T>
+  & Partial<ARIAMixin>
+  & Partial<GlobalEventHandlers>;
 /**
  *  This type is a shorthand that helps in forwarding props and references to a component's part.
  */

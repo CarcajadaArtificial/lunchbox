@@ -14,15 +14,15 @@
 - Buildscript
 
 ```ts
-import { build } from "https://deno.land/x/esbuild/mod.ts";
-import sassPlugin from "https://deno.land/x/esbuild_plugin_sass_deno/mod.ts";
+import { build } from 'https://deno.land/x/esbuild/mod.ts';
+import sassPlugin from 'https://deno.land/x/esbuild_plugin_sass_deno/mod.ts';
 
 build({
   entryPoints: [
-    "example/in.ts",
+    'example/in.ts',
   ],
   bundle: true,
-  outfile: "example/out.js",
+  outfile: 'example/out.js',
   plugins: [sassPlugin()],
 });
 ```
@@ -30,9 +30,9 @@ build({
 - Main Entrypoint File:
 
 ```ts
-import styles from "./styles.scss";
+import styles from './styles.scss';
 
-document.getElementsByTagName("head")[0].innerHTML +=
+document.getElementsByTagName('head')[0].innerHTML +=
   `<style>${styles}</style>`;
 ```
 
@@ -143,7 +143,7 @@ Or a more complex one:
 
 ```ts
 const listener = Deno.listen({ port: 8000 });
-console.log("http://localhost:8000/");
+console.log('http://localhost:8000/');
 
 for await (const conn of listener) {
   serve(conn);
@@ -151,7 +151,7 @@ for await (const conn of listener) {
 
 async function serve(conn: Deno.Conn) {
   for await (const { respondWith } of Deno.serveHttp(conn)) {
-    respondWith(new Response("Hello world"));
+    respondWith(new Response('Hello world'));
   }
 }
 ```
@@ -178,7 +178,7 @@ To contribute, please read our
 
 ```tsx
 /** @jsx h */
-import { h, IS_BROWSER, useState } from "../deps.ts";
+import { h, IS_BROWSER, useState } from '../deps.ts';
 
 export default function Home() {
   return (
@@ -188,7 +188,7 @@ export default function Home() {
         file, and refresh.
       </p>
       <Counter />
-      <p>{IS_BROWSER ? "Viewing browser render." : "Viewing JIT render."}</p>
+      <p>{IS_BROWSER ? 'Viewing browser render.' : 'Viewing JIT render.'}</p>
     </div>
   );
 }

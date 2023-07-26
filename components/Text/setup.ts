@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 
@@ -28,15 +28,17 @@ export default (props: Partial<iText>) => {
       cn(
         'comp-text',
         `txt-${p.type}`,
-        ['display', 'title', 'heading'].includes(p.type) ? 'clr-txt-personality' : null,
+        ['display', 'title', 'heading'].includes(p.type)
+          ? 'clr-txt-personality'
+          : null,
         p.compact ? 'compact' : null,
         p.single ? 'single' : null,
         p.noMargins ? 'no-margins' : null,
         p.indent ? 'indent' : null,
-        p.inheritColor ? 'inherit-color' : null
+        p.inheritColor ? 'inherit-color' : null,
       ),
       p.class,
-      p.nostyle
+      p.nostyle,
     ),
   });
 

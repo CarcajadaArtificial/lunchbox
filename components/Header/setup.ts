@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { GRADIENT_PATTERNS, LAYOUT_TYPES } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
@@ -34,7 +34,11 @@ export default (props: Partial<iHeader>) => {
     layout: cn(layout?.class),
     wrapper: cn(wrapper?.class),
     gradient: cn(gradient?.class),
-    panel: opt(cn(p.banner ? 'comp-header_banner' : null), panel?.class, panel?.nostyle),
+    panel: opt(
+      cn(p.banner ? 'comp-header_banner' : null),
+      panel?.class,
+      panel?.nostyle,
+    ),
   });
 
   delete p.class;

@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { GRADIENT_PATTERNS, LAYOUT_TYPES } from '../../src/enums.ts';
 import { iPanel } from '../Panel/setup.ts';
@@ -30,9 +30,7 @@ const defaults: iFooter = {
 
 export default (props: Partial<iFooter>) => {
   props.children = props.children
-    ? Array.isArray(props.children)
-      ? props.children
-      : [props.children]
+    ? Array.isArray(props.children) ? props.children : [props.children]
     : [];
 
   const p = applyDefaults<iFooter>(defaults, props);
@@ -45,9 +43,21 @@ export default (props: Partial<iFooter>) => {
     layout: cn(layout?.class),
     panel: cn(panel?.class),
     gradient: cn(panel?.class),
-    badge_link: opt(cn('made-with-fresh'), badge_link?.class, badge_link?.nostyle),
-    badge_light: opt(cn('fresh-badge light'), badge_light?.class, badge_light?.nostyle),
-    badge_dark: opt(cn('fresh-badge dark'), badge_dark?.class, badge_dark?.nostyle),
+    badge_link: opt(
+      cn('made-with-fresh'),
+      badge_link?.class,
+      badge_link?.nostyle,
+    ),
+    badge_light: opt(
+      cn('fresh-badge light'),
+      badge_light?.class,
+      badge_light?.nostyle,
+    ),
+    badge_dark: opt(
+      cn('fresh-badge dark'),
+      badge_dark?.class,
+      badge_dark?.nostyle,
+    ),
   });
 
   delete p.class;

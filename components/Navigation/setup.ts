@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
@@ -24,7 +24,11 @@ export default (props: Partial<iNavigation>) => {
 
   const classes = partializeClasses({
     nav: opt(cn('comp-navigation'), p.class, p.nostyle),
-    wrapper: opt(cn('comp-navigation_wrapper'), wrapper?.class, wrapper?.nostyle),
+    wrapper: opt(
+      cn('comp-navigation_wrapper'),
+      wrapper?.class,
+      wrapper?.nostyle,
+    ),
     panel: cn(panel?.class),
     layout: cn(layout?.class),
   });

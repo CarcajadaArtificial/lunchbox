@@ -1,4 +1,4 @@
-import { cn, opt, applyDefaults, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 
 export type iTextArea = iComponent<HTMLTextAreaElement> & {
@@ -34,19 +34,34 @@ export default (props: Partial<iTextArea>) => {
       cn(
         'comp-textarea',
         p.noResize ? 'resize-none' : null,
-        p.error ? 'clr-bg-error' : p.disabled ? 'clr-bg-disabled' : 'clr-bg-input'
+        p.error
+          ? 'clr-bg-error'
+          : p.disabled
+          ? 'clr-bg-disabled'
+          : 'clr-bg-input',
       ),
       p.class,
-      p.nostyle
+      p.nostyle,
     ),
     text: cn(text?.class),
     label: opt(cn('comp-textarea_label'), label?.class, label?.nostyle),
-    error: opt(cn('comp-textarea_error clr-txt-error'), error?.class, error?.nostyle),
-    required: opt(cn('comp-textarea_required clr-txt-error'), required?.class, required?.nostyle),
+    error: opt(
+      cn('comp-textarea_error clr-txt-error'),
+      error?.class,
+      error?.nostyle,
+    ),
+    required: opt(
+      cn('comp-textarea_required clr-txt-error'),
+      required?.class,
+      required?.nostyle,
+    ),
     container: opt(
-      cn('comp-textarea_container comp-input_box', p.maxWidth ? 'w-full' : null),
+      cn(
+        'comp-textarea_container comp-input_box',
+        p.maxWidth ? 'w-full' : null,
+      ),
       container?.class,
-      container?.nostyle
+      container?.nostyle,
     ),
   });
 
