@@ -90,9 +90,9 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
  * @returns {Record<string, string | undefined>}
  *  A new record of the same parts but an `undefined` value replaced empty string values.
  */
-export const partializeClasses = (classes: Record<string, string>): Record<string, string | undefined> =>
-  rMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
-
+export function partializeClasses(classes: Record<string, string>): Record<string, string | undefined>{
+  return rMap<string | undefined>(classes, (entry) => (entry === '' ? undefined : entry));
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This function emulates the behavior of `Array.prototype.map()` in Records. It calls a function

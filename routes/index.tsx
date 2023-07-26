@@ -106,44 +106,44 @@ export default function Home() {
   return (
     <div>
       <Navigation>
-        {TestTinyText('paragraph')}
+        {/* {TestTinyText('paragraph')} */}
         <div class="flex justify-end">
           <Button type={'panel'}>Button</Button>
         </div>
       </Navigation>
       <Header gradient_pattern="cloud" layout_type="left">
-        {TestTinyText('title')}
+        {/* {TestTinyText('title')} */}
         <div></div>
-        {TestLargeText('paragraph')}
+        {/* {TestLargeText('paragraph')} */}
         <TestLinkmap />
       </Header>
       <Main layout_type="center">
         <>
-          {TestTinyText('paragraph')}
+          {/* {TestTinyText('paragraph')} */}
           <Separator />
-          {TestTinyText('subheading')}
+          {/* {TestTinyText('subheading')} */}
           <Separator />
-          {TestTinyText('heading')}
+          {/* {TestTinyText('heading')} */}
           <Separator />
-          {TestTinyText('title')}
+          {/* {TestTinyText('title')} */}
           <Separator />
-          {TestTinyText('display')}
+          {/* {TestTinyText('display')} */}
           <Card
             card_title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             bottom_gradient_pattern="cloud"
           >
-            {TestLargeText('paragraph')}
+            {/* {TestLargeText('paragraph')} */}
           </Card>
-          {TestInputs()}
+          {/* {TestInputs()} */}
         </>
       </Main>
       <Footer gradient_pattern="cloud" layout_type="left" madeWithFresh>
-        {TestTinyText('subheading')}
+        {/* {TestTinyText('subheading')} */}
         <Text>
-          Powered by&nbsp;
-          <Link href="https://github.com/CarcajadaArtificial">myself</Link>.
+          {/* Powered by&nbsp;
+          <Link href="https://github.com/CarcajadaArtificial">myself</Link>. */}
         </Text>
-        {TestLargeText('paragraph')}
+        {/* {TestLargeText('paragraph')} */}
       </Footer>
     </div>
   );

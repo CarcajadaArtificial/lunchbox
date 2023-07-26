@@ -1,0 +1,141 @@
+<pre><code>{
+  "json": {
+    "name": "Deno"
+  }
+}</code></pre><pre><code>- hello
++ world</code></pre><ul>
+<li>Buildscript</li>
+</ul>
+<pre><code>import { build } from "https://deno.land/x/esbuild/mod.ts";
+import sassPlugin from "https://deno.land/x/esbuild_plugin_sass_deno/mod.ts";
+
+build({
+  entryPoints: [
+    "example/in.ts",
+  ],
+  bundle: true,
+  outfile: "example/out.js",
+  plugins: [sassPlugin()],
+});</code></pre><ul>
+<li>Main Entrypoint File:</li>
+</ul>
+<pre><code>import styles from "./styles.scss";
+
+document.getElementsByTagName("head")[0].innerHTML +=
+  `&lt;style&gt;${styles}&lt;/style&gt;`;</code></pre><p><del>Some strikethrough <code>text</code></del></p>
+<details>
+  <summary>Summary</summary>
+  <p>Some Details
+
+</p><p><strong>even more details</strong></p>
+<p></p>
+</details>
+
+<h2 id="math-rendering"><a class="anchor" aria-hidden="true" tabindex="-1" href="#math-rendering"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Math rendering</h2><p>We support code blocks with the "math" type!</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mrow><mi>μ</mi><mi>v</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>8</mn><mi>π</mi><mi>G</mi></mrow><msup><mi>c</mi><mn>4</mn></msup></mfrac><msub><mi>T</mi><mrow><mi>μ</mi><mi>v</mi></mrow></msub></mrow><annotation encoding="application/x-tex">G_{\mu v} = \frac{8 \pi G}{c^4} T_{\mu v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em"></span><span><span class="mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3"><span><span class="mathnormal" style="margin-right:0.03588em">μv</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em"></span><span>=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em"></span><span><span class="nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span><span><span class="mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3"><span>4</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span><span>8</span><span class="mathnormal" style="margin-right:0.03588em">π</span><span class="mathnormal">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="nulldelimiter"></span></span><span><span class="mathnormal" style="margin-right:0.13889em">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3"><span><span class="mathnormal" style="margin-right:0.03588em">μv</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em"><span></span></span></span></span></span></span></span></span></span></span><p>We also support math blocks and inline math blocks as well!</p>
+<p>When <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \ne 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mathnormal">a</span><span class="mspace" style="margin-right:0.2778em"></span><span><span><span class="vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="inner"><span><span></span></span></span><span class="fix"></span></span></span></span></span><span>=</span></span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:0.6444em"></span><span>0</span></span></span></span>, there are two solutions to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>(</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>=</mo><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(ax^2 + bx + c = 0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em"></span><span>(</span><span class="mathnormal">a</span><span><span class="mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3"><span>2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span>+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em"></span><span class="mathnormal">b</span><span class="mathnormal">x</span><span class="mspace" style="margin-right:0.2222em"></span><span>+</span><span class="mspace" style="margin-right:0.2222em"></span></span><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mathnormal">c</span><span class="mspace" style="margin-right:0.2778em"></span><span>=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span>0</span><span>)</span></span></span></span> and they are</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mathnormal">x</span><span class="mspace" style="margin-right:0.2778em"></span><span>=</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:2.2764em;vertical-align:-0.686em"></span><span><span><span class="nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5904em"><span style="top:-2.314em"><span class="pstrut" style="height:3em"></span><span><span>2</span><span class="mathnormal">a</span></span></span><span style="top:-3.23em"><span class="pstrut" style="height:3em"></span><span class="frac-line" style="border-bottom-width:0.04em"></span></span><span style="top:-3.677em"><span class="pstrut" style="height:3em"></span><span><span>−</span><span class="mathnormal">b</span><span class="mspace" style="margin-right:0.2222em"></span><span>±</span><span class="mspace" style="margin-right:0.2222em"></span><span class="sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9134em"><span class="svg-align" style="top:-3em"><span class="pstrut" style="height:3em"></span><span style="padding-left:0.833em"><span><span class="mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em"><span style="top:-2.989em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3"><span>2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em"></span><span>−</span><span class="mspace" style="margin-right:0.2222em"></span><span>4</span><span class="mathnormal">a</span><span class="mathnormal">c</span></span></span><span style="top:-2.8734em"><span class="pstrut" style="height:3em"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1266em"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em"><span></span></span></span></span></span><span class="nulldelimiter"></span></span></span></span></span></span></span></p>
+<p>You can even typeset individual letters or whole sentences inline just like <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mathnormal">x</span></span></span></span>
+or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mi>u</mi><mi>a</mi><mi>d</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>c</mi><mtext>  </mtext><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>u</mi><mi>l</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">Quadratic ; formula</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em"></span><span class="mathnormal">Q</span><span class="mathnormal">u</span><span class="mathnormal">a</span><span class="mathnormal">d</span><span class="mathnormal" style="margin-right:0.02778em">r</span><span class="mathnormal">a</span><span class="mathnormal">t</span><span class="mathnormal">i</span><span class="mathnormal">c</span><span class="mspace" style="margin-right:0.2778em"></span><span class="mathnormal" style="margin-right:0.10764em">f</span><span class="mathnormal" style="margin-right:0.02778em">or</span><span class="mathnormal">m</span><span class="mathnormal">u</span><span class="mathnormal" style="margin-right:0.01968em">l</span><span class="mathnormal">a</span></span></span></span>. You can also use math blocks to typeset whole
+equations with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em"></span><span><span class="textrm">L</span><span class="mspace" style="margin-right:-0.36em"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em"><span style="top:-2.905em"><span class="pstrut" style="height:2.7em"></span><span><span class="textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em"></span><span><span class="textrm">T</span><span class="mspace" style="margin-right:-0.1667em"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em"><span style="top:-2.7845em"><span class="pstrut" style="height:3em"></span><span><span class="textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em"></span><span class="textrm">X</span></span></span></span></span></span>:
+ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation encoding="application/x-tex"></annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span> \begin{aligned} \dot{x} &amp; = \sigma(y-x) \ \dot{y} &amp; = \rho x - y - xz \
+\dot{z} &amp; = -\beta z + xy \end{aligned} <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation encoding="application/x-tex"></annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<h1 id="deno"><a class="anchor" aria-hidden="true" tabindex="-1" href="#deno"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Deno</h1><p><a href="https://github.com/denoland/deno/actions" rel="noopener noreferrer"><img src="https://github.com/denoland/deno/workflows/ci/badge.svg?branch=main&amp;event=push" alt="Build Status - Cirrus" /></a> <a href="https://twitter.com/intent/follow?screen_name=deno_land" rel="noopener noreferrer"><img src="https://img.shields.io/twitter/follow/deno_land.svg?style=social&amp;label=Follow" alt="Twitter handle" /></a>
+<a href="https://discord.gg/deno" rel="noopener noreferrer"><img src="https://img.shields.io/discord/684898665143206084?logo=discord&amp;style=social" alt="Discord Chat" /></a></p>
+<img align="right" src="https://deno.land/logo.svg" height="150px" alt="the deno mascot dinosaur standing in the rain" />
+
+<p>Deno is a <em>simple</em>, <em>modern</em> and <em>secure</em> runtime for <strong>JavaScript</strong> and
+<strong>TypeScript</strong> that uses V8 and is built in Rust.</p>
+<h3 id="features"><a class="anchor" aria-hidden="true" tabindex="-1" href="#features"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Features</h3><ul>
+<li>Secure by default. No file, network, or environment access, unless explicitly
+enabled.</li>
+<li>Supports TypeScript out of the box.</li>
+<li>Ships only a single executable file.</li>
+<li>Built-in utilities like a dependency inspector (deno info) and a code
+formatter (deno fmt).</li>
+<li>Set of reviewed standard modules that are guaranteed to work with
+<a href="https://deno.land/std/" rel="noopener noreferrer">Deno</a>.</li>
+</ul>
+<h3 id="install"><a class="anchor" aria-hidden="true" tabindex="-1" href="#install"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Install</h3><p>Shell (Mac, Linux):</p>
+<pre><code>curl -fsSL https://deno.land/x/install/install.sh | sh</code></pre><p>PowerShell (Windows):</p>
+<pre><code>iwr https://deno.land/x/install/install.ps1 -useb | iex</code></pre><p><a href="https://formulae.brew.sh/formula/deno" rel="noopener noreferrer">Homebrew</a> (Mac):</p>
+<pre><code>brew install deno</code></pre><p><a href="https://chocolatey.org/packages/deno" rel="noopener noreferrer">Chocolatey</a> (Windows):</p>
+<pre><code>choco install deno</code></pre><p><a href="https://scoop.sh/" rel="noopener noreferrer">Scoop</a> (Windows):</p>
+<pre><code>scoop install deno</code></pre><p>Build and install from source using <a href="https://crates.io/crates/deno" rel="noopener noreferrer">Cargo</a>:</p>
+<pre><code>cargo install deno --locked</code></pre><p>See
+<a href="https://github.com/denoland/deno_install/blob/master/README.md" rel="noopener noreferrer">deno_install</a>
+and <a href="https://github.com/denoland/deno/releases" rel="noopener noreferrer">releases</a> for other options.</p>
+<h3 id="getting-started"><a class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Getting Started</h3><p>Try running a simple program:</p>
+<pre><code>deno run https://deno.land/std/examples/welcome.ts</code></pre><p>Or a more complex one:</p>
+<pre><code>const listener = Deno.listen({ port: 8000 });
+console.log("http://localhost:8000/");
+
+for await (const conn of listener) {
+  serve(conn);
+}
+
+async function serve(conn: Deno.Conn) {
+  for await (const { respondWith } of Deno.serveHttp(conn)) {
+    respondWith(new Response("Hello world"));
+  }
+}</code></pre><p>You can find a deeper introduction, examples, and environment setup guides in
+the <a href="https://deno.land/manual" rel="noopener noreferrer">manual</a>.</p>
+<iframe width="100%" height="600" src="https://embed.deno.com/playground/urlpattern?layout=both"></iframe>
+
+<p>The complete API reference is available at the runtime
+<a href="https://doc.deno.land" rel="noopener noreferrer">documentation</a>.</p>
+<h3 id="contributing"><a class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Contributing</h3><p>We appreciate your help!</p>
+<p>To contribute, please read our
+<a href="https://deno.land/manual/contributing" rel="noopener noreferrer">contributing instructions</a>.</p>
+<pre><code>/** @jsx h */
+import { h, IS_BROWSER, useState } from "../deps.ts";
+
+export default function Home() {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Welcome to `fresh`. Try update this message in the ./pages/index.tsx
+        file, and refresh.
+      &lt;/p&gt;
+      &lt;Counter /&gt;
+      &lt;p&gt;{IS_BROWSER ? "Viewing browser render." : "Viewing JIT render."}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{count}&lt;/p&gt;
+      &lt;button
+        onClick={() =&gt; setCount(count - 1)}
+        disabled={!IS_BROWSER}
+      &gt;
+        -1
+      &lt;/button&gt;
+      &lt;button
+        onClick={() =&gt; setCount(count + 1)}
+        disabled={!IS_BROWSER}
+      &gt;
+        +1
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export const config: PageConfig = { runtimeJS: true };</code></pre><figure>
+  <img src="https://deno.land/logo.svg" />
+  <figcaption><b>Figure 1.</b> The deno mascot dinosaur standing in the rain.</figcaption>
+</figure>
