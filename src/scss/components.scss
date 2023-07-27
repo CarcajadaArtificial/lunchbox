@@ -314,3 +314,120 @@
     width: max-content;
   }
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Markdown
+.comp-markdown {
+  .keyword,
+  .function,
+  .property {
+    color: var(--clr-txt-personality);
+  }
+
+  .class-name,
+  .tag,
+  .script {
+    color: var(--clr-txt-base);
+  }
+
+  .punctuation,
+  .operator,
+  .script-punctuation {
+    color: var(--clr-bg-disabled);
+  }
+
+  .number,
+  .boolean,
+  .string,
+  .regex,
+  .attr-name {
+    color: var(--clr-txt-error);
+  }
+
+  .regex-delimiter {
+    color: var(--clr-bg-error);
+  }
+
+  h1.comp-text {
+    font: var(--txt-title) var(--font-heading);
+    color: var(--clr-txt-personality);
+
+    svg {
+      fill: var(--clr-txt-personality);
+    }
+  }
+
+  h2.comp-text {
+    font: var(--txt-heading) var(--font-heading);
+    color: var(--clr-txt-personality);
+
+    svg {
+      fill: var(--clr-txt-personality);
+    }
+  }
+
+  h3.comp-text {
+    font: var(--txt-subheading) var(--font-base);
+
+    svg {
+      fill: var(--clr-txt-base);
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    &.comp-text {
+      font-weight: 600;
+      margin-bottom: var(--s-one-and-half);
+      margin-top: var(--s-triple);
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      a {
+        position: absolute;
+        left: calc(var(--s-double) * -1);
+        display: none;
+        padding-right: var(--s-half);
+
+        svg {
+          width: var(--s-one-and-half);
+          height: var(--s-one-and-half);
+        }
+      }
+
+      &:hover {
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+
+  h4,
+  h5,
+  h6 {
+    &.comp-text {
+      a {
+        display: none;
+      }
+    }
+  }
+
+  .comp-code_wrapper pre {
+    background-color: var(--clr-bg-panel);
+    border-radius: var(--s-quarter);
+    padding: var(--s-one-and-half);
+    width: calc(100% + var(--s-triple));
+    right: var(--s-one-and-half);
+    position: relative;
+    overflow-x: scroll;
+
+    @include media(only-on($breakpoints, sm)) {
+      padding: var(--s-half);
+      width: calc(100% + var(--s-single));
+      right: var(--s-half);
+    }
+  }
+}

@@ -566,6 +566,102 @@ button {
   width: max-content;
 }
 
+.comp-markdown .keyword,
+.comp-markdown .function,
+.comp-markdown .property {
+  color: var(--clr-txt-personality);
+}
+.comp-markdown .class-name,
+.comp-markdown .tag,
+.comp-markdown .script {
+  color: var(--clr-txt-base);
+}
+.comp-markdown .punctuation,
+.comp-markdown .operator,
+.comp-markdown .script-punctuation {
+  color: var(--clr-bg-disabled);
+}
+.comp-markdown .number,
+.comp-markdown .boolean,
+.comp-markdown .string,
+.comp-markdown .regex,
+.comp-markdown .attr-name {
+  color: var(--clr-txt-error);
+}
+.comp-markdown .regex-delimiter {
+  color: var(--clr-bg-error);
+}
+.comp-markdown h1.comp-text {
+  font: var(--txt-title) var(--font-heading);
+  color: var(--clr-txt-personality);
+}
+.comp-markdown h1.comp-text svg {
+  fill: var(--clr-txt-personality);
+}
+.comp-markdown h2.comp-text {
+  font: var(--txt-heading) var(--font-heading);
+  color: var(--clr-txt-personality);
+}
+.comp-markdown h2.comp-text svg {
+  fill: var(--clr-txt-personality);
+}
+.comp-markdown h3.comp-text {
+  font: var(--txt-subheading) var(--font-base);
+}
+.comp-markdown h3.comp-text svg {
+  fill: var(--clr-txt-base);
+}
+.comp-markdown h1.comp-text,
+.comp-markdown h2.comp-text,
+.comp-markdown h3.comp-text {
+  font-weight: 600;
+  margin-bottom: var(--s-one-and-half);
+  margin-top: var(--s-triple);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.comp-markdown h1.comp-text a,
+.comp-markdown h2.comp-text a,
+.comp-markdown h3.comp-text a {
+  position: absolute;
+  left: calc(var(--s-double) * -1);
+  display: none;
+  padding-right: var(--s-half);
+}
+.comp-markdown h1.comp-text a svg,
+.comp-markdown h2.comp-text a svg,
+.comp-markdown h3.comp-text a svg {
+  width: var(--s-one-and-half);
+  height: var(--s-one-and-half);
+}
+.comp-markdown h1.comp-text:hover a,
+.comp-markdown h2.comp-text:hover a,
+.comp-markdown h3.comp-text:hover a {
+  display: block;
+}
+.comp-markdown h4.comp-text a,
+.comp-markdown h5.comp-text a,
+.comp-markdown h6.comp-text a {
+  display: none;
+}
+.comp-markdown .comp-code_wrapper pre {
+  background-color: var(--clr-bg-panel);
+  border-radius: var(--s-quarter);
+  padding: var(--s-one-and-half);
+  width: calc(100% + var(--s-triple));
+  right: var(--s-one-and-half);
+  position: relative;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 39.9375em) {
+  .comp-markdown .comp-code_wrapper pre {
+    padding: var(--s-half);
+    width: calc(100% + var(--s-single));
+    right: var(--s-half);
+  }
+}
+
 .comp-button,
 .comp-input,
 .comp-select,

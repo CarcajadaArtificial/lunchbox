@@ -1,22 +1,23 @@
-import { render } from '../../deno-gfm/mod.ts';
-
-const CONTENT_PATH = new URL('../static/content.md', import.meta.url);
-const TEST_PATH = new URL('../static/test.txt', import.meta.url);
+import { Main, Markdown } from '@/mod.ts';
+import 'https://esm.sh/prismjs@1.29.0';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-jsx?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-typescript?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-tsx?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-bash?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-powershell?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-json?no-check&pin=v57';
+import 'https://esm.sh/prismjs@1.29.0/components/prism-diff?no-check&pin=v57';
 
 export default async function Md() {
-  const markdown = await (await fetch(CONTENT_PATH)).text();
-  const test = await (await fetch(TEST_PATH)).text();
+  const markdown =
+    await (await fetch(new URL('../static/content.md', import.meta.url)))
+      .text();
 
-  const body = render(markdown, {
-    allowIframes: true,
-    allowMath: true,
-    customClasses: {
-      // list: ['asdf'],
-    },
-  });
-
-  console.log(test === body ? 'good' : 'bad');
-
-  // return <div dangerouslySetInnerHTML={{ __html: body }}></div>;
-  return <div>{body}</div>;
+  return (
+    <div>
+      <Main layout_type='center'>
+        <Markdown markdown_content={markdown} />
+      </Main>
+    </div>
+  );
 }

@@ -1,3 +1,13 @@
+# Heading 1
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+---
+
 ```JSON
 {
   "json": {
@@ -18,9 +28,7 @@ import { build } from 'https://deno.land/x/esbuild/mod.ts';
 import sassPlugin from 'https://deno.land/x/esbuild_plugin_sass_deno/mod.ts';
 
 build({
-  entryPoints: [
-    'example/in.ts',
-  ],
+  entryPoints: ['example/in.ts'],
   bundle: true,
   outfile: 'example/out.js',
   plugins: [sassPlugin()],
@@ -32,8 +40,7 @@ build({
 ```ts
 import styles from './styles.scss';
 
-document.getElementsByTagName('head')[0].innerHTML +=
-  `<style>${styles}</style>`;
+document.getElementsByTagName('head')[0].innerHTML += `<style>${styles}</style>`;
 ```
 
 ~~Some strikethrough `text`~~
@@ -65,8 +72,10 @@ You can even typeset individual letters or whole sentences inline just like $x$
 or $Quadratic \; formula$. You can also use math blocks to typeset whole
 equations with $\LaTeX$:
 
-$$ \begin{aligned} \dot{x} & = \sigma(y-x) \\ \dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy \end{aligned} $$
+$$
+\begin{aligned} \dot{x} & = \sigma(y-x) \\ \dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy \end{aligned}
+$$
 
 # Deno
 
@@ -183,10 +192,7 @@ import { h, IS_BROWSER, useState } from '../deps.ts';
 export default function Home() {
   return (
     <div>
-      <p>
-        Welcome to `fresh`. Try update this message in the ./pages/index.tsx
-        file, and refresh.
-      </p>
+      <p>Welcome to `fresh`. Try update this message in the ./pages/index.tsx file, and refresh.</p>
       <Counter />
       <p>{IS_BROWSER ? 'Viewing browser render.' : 'Viewing JIT render.'}</p>
     </div>
@@ -198,16 +204,10 @@ function Counter() {
   return (
     <div>
       <p>{count}</p>
-      <button
-        onClick={() => setCount(count - 1)}
-        disabled={!IS_BROWSER}
-      >
+      <button onClick={() => setCount(count - 1)} disabled={!IS_BROWSER}>
         -1
       </button>
-      <button
-        onClick={() => setCount(count + 1)}
-        disabled={!IS_BROWSER}
-      >
+      <button onClick={() => setCount(count + 1)} disabled={!IS_BROWSER}>
         +1
       </button>
     </div>

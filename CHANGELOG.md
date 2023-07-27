@@ -1,12 +1,29 @@
 # Changelog
 
-## v0.2.1-beta.3
+## v0.2.2
 
-### Updated project using `deno fmt`
+### Added the `Markdown` component
+
+- `/components/Markdown/index.tsx`
+- `/components/Markdown/setup.ts`
+- `/routes/md.tsx`
+- `/mod.ts`
+- `/src/scss/components.scss`
+
+### Added `deno-gfm` project adapted to this case.
+
+- `/src/katex.ts`
+- `/src/markdown.ts`
+
+### Minor updates
+
+- Removed `/static/test.txt`
+- `/static/content.md`
+- `/import_map.json`
 
 ## Changes so far
 
-- ⏳ Markdown component
+- ✅ Markdown component
 - Better task scripts.
 
 ## Roadmap
@@ -20,6 +37,7 @@
   - [x] Select (focus)
   - [x] TextArea (focus)
   - [x] Link (focus, hover)
+  - [ ] Markdown (heading link hover)
 - [ ] Create an organized collection of island functions
 - [ ] Update component features
   - [ ] **Card**: Add text, image, gradient spacers, and chips feature.
@@ -30,7 +48,7 @@
   - [x] **Header**, **Footer**: Add spacers with gradients that change.
 - [ ] Add components
   - [ ] Time
-  - [ ] Markdown
+  - [x] Markdown
   - [ ] Menu
   - [ ] Page
   - [ ] Fieldset
