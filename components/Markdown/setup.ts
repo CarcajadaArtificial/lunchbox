@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { RenderOptions } from '@/src/markdown.ts';
-import { render } from '@/src/markdown.ts';
+import { RenderOptions } from '../../src/markdown.ts';
+import { render } from '../../src/markdown.ts';
 
 export type iMarkdown = iComponent<HTMLDivElement> & {
   markdown_content: string;

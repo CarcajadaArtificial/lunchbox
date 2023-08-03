@@ -1,4 +1,4 @@
-import { Main, Markdown } from '@/mod.ts';
+import { Main, Markdown } from '../mod.ts';
 import 'https://esm.sh/prismjs@1.29.0';
 import 'https://esm.sh/prismjs@1.29.0/components/prism-jsx?no-check&pin=v57';
 import 'https://esm.sh/prismjs@1.29.0/components/prism-typescript?no-check&pin=v57';

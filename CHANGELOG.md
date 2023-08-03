@@ -1,25 +1,17 @@
 # Changelog
 
-## v0.2.2
+## v0.2.2-beta.1
 
-### Added the `Markdown` component
+### Removed `@/` route
 
-- `/components/Markdown/index.tsx`
-- `/components/Markdown/setup.ts`
+- `/import_map.json`
 - `/routes/md.tsx`
-- `/mod.ts`
-- `/src/scss/components.scss`
-
-### Added `deno-gfm` project adapted to this case.
-
-- `/src/katex.ts`
-- `/src/markdown.ts`
+- `/components/Markdown/setup.ts`
 
 ### Minor updates
 
-- Removed `/static/test.txt`
 - `/static/content.md`
-- `/import_map.json`
+- `/src/utils.ts`
 
 ## Changes so far
 
@@ -60,6 +52,9 @@
   - [x] Gradient
 - [ ] Minor updates
   - [ ] Add scss variables containing the css root variables.
+  - [ ] Optional don't use a label element in imput components if the label param is undefined.
+  - [ ] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
+  - [ ] Ignore .md files in the .vscode settings for deno fmt.
 
 ### v0.3
 
