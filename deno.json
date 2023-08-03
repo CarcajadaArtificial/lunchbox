@@ -16,7 +16,7 @@
     "exclude": [".github/dep"]
   },
   "fmt": {
-    "exclude": [".github/dep"],
+    "exclude": [".github/dep", "*.md"],
     "singleQuote": true
   }
 }

@@ -1,17 +1,11 @@
 # Changelog
 
-## v0.2.2-beta.1
+## v0.2.2-beta.2
 
-### Removed `@/` route
+### Added configuration to ignore .md file formatting
 
-- `/import_map.json`
-- `/routes/md.tsx`
-- `/components/Markdown/setup.ts`
-
-### Minor updates
-
-- `/static/content.md`
-- `/src/utils.ts`
+- `/deno.json`
+- `/.vscode/settings.json`
 
 ## Changes so far
 
@@ -54,7 +48,7 @@
   - [ ] Add scss variables containing the css root variables.
   - [ ] Optional don't use a label element in imput components if the label param is undefined.
   - [ ] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
-  - [ ] Ignore .md files in the .vscode settings for deno fmt.
+  - [x] Ignore .md files in the .vscode settings for deno fmt.
 
 ### v0.3
 

@@ -2,17 +2,9 @@
   "deno.enable": true,
   "deno.lint": true,
   "editor.formatOnSave": true,
+  "deno.config": "./deno.json",
   "editor.defaultFormatter": "denoland.vscode-deno",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+  "[markdown]": {
+    "editor.formatOnSave": false
   }
 }
