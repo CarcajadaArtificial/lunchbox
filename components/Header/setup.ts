@@ -30,14 +30,14 @@ export default (props: Partial<iHeader>) => {
   const { layout, panel, wrapper, gradient } = p.fwd;
 
   const classes = partializeClasses({
-    header: opt(cn('comp-header'), p.class, p.nostyle),
+    header: opt(cn('comp-header'), p.class, p.nostyle || p.nostyleAll),
     layout: cn(layout?.class),
     wrapper: cn(wrapper?.class),
     gradient: cn(gradient?.class),
     panel: opt(
       cn(p.banner ? 'comp-header_banner' : null),
       panel?.class,
-      panel?.nostyle,
+      panel?.nostyle || p.nostyleAll,
     ),
   });
 

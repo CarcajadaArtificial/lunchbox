@@ -1,11 +1,11 @@
 # Changelog
 
-## v0.2.2-beta.3
+## v0.2.2-beta.4
 
-### Minor changes
+### Added the nostyleAll to all components
 
-- `/routes/index.tsx`
-- `/.vscode/settings.json`
+- `/components/**/setup.tsx`
+- `/src/types.ts`
 
 ## Changes so far
 
@@ -45,9 +45,10 @@
   - [ ] Image
   - [x] Gradient
 - [ ] Minor updates
+  - [ ] Spread scss 
   - [ ] Add scss variables containing the css root variables.
   - [ ] Optional don't use a label element in imput components if the label param is undefined.
-  - [ ] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
+  - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
 
 ### v0.3

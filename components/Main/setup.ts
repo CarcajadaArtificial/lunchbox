@@ -21,7 +21,7 @@ export default (props: Partial<iMain>) => {
   const { layout } = p.fwd;
 
   const classes = partializeClasses({
-    main: opt(cn('comp-main clr-bg-page'), p.class, p.nostyle),
+    main: opt(cn('comp-main clr-bg-page'), p.class, p.nostyle || p.nostyleAll),
     layout: cn(layout?.class),
   });
 

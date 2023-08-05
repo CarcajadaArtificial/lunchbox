@@ -7,7 +7,11 @@ export default (props: Partial<iLink>) => {
   const p = props;
 
   const classes = partializeClasses({
-    link: opt(cn('comp-link clr-txt-personality'), p.class, p.nostyle),
+    link: opt(
+      cn('comp-link clr-txt-personality'),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
   });
 
   delete p.class;

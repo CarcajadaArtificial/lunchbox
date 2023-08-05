@@ -38,7 +38,7 @@ export default (props: Partial<iFooter>) => {
   const { layout, wrapper, panel, badge_link, badge_dark, badge_light } = p.fwd;
 
   const classes = partializeClasses({
-    footer: opt(cn('comp-footer'), p.class, p.nostyle),
+    footer: opt(cn('comp-footer'), p.class, p.nostyle || p.nostyleAll),
     wrapper: cn(wrapper?.class),
     layout: cn(layout?.class),
     panel: cn(panel?.class),
@@ -46,17 +46,17 @@ export default (props: Partial<iFooter>) => {
     badge_link: opt(
       cn('made-with-fresh'),
       badge_link?.class,
-      badge_link?.nostyle,
+      badge_link?.nostyle || p.nostyleAll,
     ),
     badge_light: opt(
       cn('fresh-badge light'),
       badge_light?.class,
-      badge_light?.nostyle,
+      badge_light?.nostyle || p.nostyleAll,
     ),
     badge_dark: opt(
       cn('fresh-badge dark'),
       badge_dark?.class,
-      badge_dark?.nostyle,
+      badge_dark?.nostyle || p.nostyleAll,
     ),
   });
 

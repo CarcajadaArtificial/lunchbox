@@ -32,7 +32,7 @@ export default (props: Partial<iButton>) => {
           : 'clr-bg-input',
       ),
       p.class,
-      p.nostyle,
+      p.nostyle || p.nostyleAll,
     ),
   });
 

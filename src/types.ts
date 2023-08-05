@@ -14,6 +14,7 @@ import { JSX, Ref } from 'preact';
 export type iComponent<T extends EventTarget = HTMLElement> = iElement<T> & {
   fref?: Ref<T>;
   nostyle?: boolean;
+  nostyleAll?: boolean;
 };
 
 /**

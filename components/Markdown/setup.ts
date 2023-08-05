@@ -28,7 +28,7 @@ export default (props: Partial<iMarkdown>) => {
   const p = applyDefaults<iMarkdown>(defaults, props);
 
   const classes = partializeClasses({
-    markdown: opt(cn('comp-markdown'), p.class, p.nostyle),
+    markdown: opt(cn('comp-markdown'), p.class, p.nostyle || p.nostyleAll),
   });
 
   p.markdown_content = render(p.markdown_content, p.renderOptions);

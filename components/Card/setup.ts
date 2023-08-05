@@ -28,22 +28,26 @@ export default (props: Partial<iCard>) => {
   const { wrapper, gradient, top_gradient, bottom_gradient } = p.fwd;
 
   const classes = partializeClasses({
-    card: opt(cn('comp-card clr-bg-panel'), p.class, p.nostyle),
-    wrapper: opt(cn('comp-card_wrapper'), wrapper?.class, wrapper?.nostyle),
+    card: opt(cn('comp-card clr-bg-panel'), p.class, p.nostyle || p.nostyleAll),
+    wrapper: opt(
+      cn('comp-card_wrapper'),
+      wrapper?.class,
+      wrapper?.nostyle || p.nostyleAll,
+    ),
     top_gradient: opt(
       cn('comp-card_gradient'),
       top_gradient?.class,
-      top_gradient?.nostyle,
+      top_gradient?.nostyle || p.nostyleAll,
     ),
     bottom_gradient: opt(
       cn('comp-card_gradient'),
       bottom_gradient?.class,
-      bottom_gradient?.nostyle,
+      bottom_gradient?.nostyle || p.nostyleAll,
     ),
     gradient: opt(
       cn('comp-card_gradient comp-gradient comp-gradient_zigzag'),
       gradient?.class,
-      gradient?.nostyle,
+      gradient?.nostyle || p.nostyleAll,
     ),
   });
 

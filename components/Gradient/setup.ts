@@ -23,7 +23,7 @@ export default (props: Partial<iGradient>) => {
         p.flip ? 'flip' : null,
       ),
       p.class,
-      p.nostyle,
+      p.nostyle || p.nostyleAll,
     ),
   });
 

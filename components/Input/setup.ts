@@ -39,19 +39,23 @@ export default (props: Partial<iInput>) => {
           : 'clr-bg-input',
       ),
       p.class,
-      p.nostyle,
+      p.nostyle || p.nostyleAll,
     ),
-    text: opt(cn('select-none'), text?.class, text?.nostyle),
-    label: opt(cn('comp-input_label'), label?.class, label?.nostyle),
+    text: opt(cn('select-none'), text?.class, text?.nostyle || p.nostyleAll),
+    label: opt(
+      cn('comp-input_label'),
+      label?.class,
+      label?.nostyle || p.nostyleAll,
+    ),
     error: opt(
       cn('comp-input_error clr-txt-error'),
       error?.class,
-      error?.nostyle,
+      error?.nostyle || p.nostyleAll,
     ),
     required: opt(
       cn('comp-input_required clr-txt-error'),
       required?.class,
-      required?.nostyle,
+      required?.nostyle || p.nostyleAll,
     ),
     container: opt(
       cn(
@@ -69,7 +73,7 @@ export default (props: Partial<iInput>) => {
         p.maxWidth ? 'comp-input_maxwidth' : null,
       ),
       container?.class,
-      container?.nostyle,
+      container?.nostyle || p.nostyleAll,
     ),
   });
 

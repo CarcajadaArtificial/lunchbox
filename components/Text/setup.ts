@@ -38,7 +38,7 @@ export default (props: Partial<iText>) => {
         p.inheritColor ? 'inherit-color' : null,
       ),
       p.class,
-      p.nostyle,
+      p.nostyle || p.nostyleAll,
     ),
   });
 

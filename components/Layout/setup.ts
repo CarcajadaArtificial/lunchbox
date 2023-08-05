@@ -20,8 +20,16 @@ export default (props: Partial<iLayout>) => {
   const { module } = p.fwd;
 
   const classes = partializeClasses({
-    layout: opt(cn(`comp-grid comp-layout-${p.type}`), p.class, p.nostyle),
-    module: opt(cn('comp-layout-module'), module?.class, module?.nostyle),
+    layout: opt(
+      cn(`comp-grid comp-layout-${p.type}`),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
+    module: opt(
+      cn('comp-layout-module'),
+      module?.class,
+      module?.nostyle || p.nostyleAll,
+    ),
   });
 
   delete p.class;

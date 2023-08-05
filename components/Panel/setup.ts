@@ -7,7 +7,11 @@ export default (props: Partial<iPanel>) => {
   const p = props;
 
   const classes = partializeClasses({
-    panel: opt(cn('comp-panel clr-bg-panel'), p.class, p.nostyle),
+    panel: opt(
+      cn('comp-panel clr-bg-panel'),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
   });
 
   delete p.class;

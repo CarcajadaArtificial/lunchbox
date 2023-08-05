@@ -30,8 +30,12 @@ export default (props: Partial<iLinkmap>) => {
   const { list } = p.fwd;
 
   const classes = partializeClasses({
-    linkmap: opt(cn('comp-linkmap'), p.class, p.nostyle),
-    list: opt(cn('comp-linkmap_list'), list?.class, list?.nostyle),
+    linkmap: opt(cn('comp-linkmap'), p.class, p.nostyle || p.nostyleAll),
+    list: opt(
+      cn('comp-linkmap_list'),
+      list?.class,
+      list?.nostyle || p.nostyleAll,
+    ),
     item: cn(p.fwd.item?.class),
     link: cn(p.fwd.link?.class),
     text: cn(p.fwd.text?.class),

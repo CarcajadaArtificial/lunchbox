@@ -41,19 +41,23 @@ export default (props: Partial<iTextArea>) => {
           : 'clr-bg-input',
       ),
       p.class,
-      p.nostyle,
+      p.nostyle || p.nostyleAll,
     ),
     text: cn(text?.class),
-    label: opt(cn('comp-textarea_label'), label?.class, label?.nostyle),
+    label: opt(
+      cn('comp-textarea_label'),
+      label?.class,
+      label?.nostyle || p.nostyleAll,
+    ),
     error: opt(
       cn('comp-textarea_error clr-txt-error'),
       error?.class,
-      error?.nostyle,
+      error?.nostyle || p.nostyleAll,
     ),
     required: opt(
       cn('comp-textarea_required clr-txt-error'),
       required?.class,
-      required?.nostyle,
+      required?.nostyle || p.nostyleAll,
     ),
     container: opt(
       cn(
@@ -61,7 +65,7 @@ export default (props: Partial<iTextArea>) => {
         p.maxWidth ? 'w-full' : null,
       ),
       container?.class,
-      container?.nostyle,
+      container?.nostyle || p.nostyleAll,
     ),
   });
 

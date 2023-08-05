@@ -23,11 +23,11 @@ export default (props: Partial<iNavigation>) => {
   const { wrapper, panel, layout } = p.fwd;
 
   const classes = partializeClasses({
-    nav: opt(cn('comp-navigation'), p.class, p.nostyle),
+    nav: opt(cn('comp-navigation'), p.class, p.nostyle || p.nostyleAll),
     wrapper: opt(
       cn('comp-navigation_wrapper'),
       wrapper?.class,
-      wrapper?.nostyle,
+      wrapper?.nostyle || p.nostyleAll,
     ),
     panel: cn(panel?.class),
     layout: cn(layout?.class),
