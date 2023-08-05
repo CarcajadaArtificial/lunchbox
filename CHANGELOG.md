@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.2.2-beta.2
+## v0.2.2-beta.3
 
-### Added configuration to ignore .md file formatting
+### Minor changes
 
-- `/deno.json`
+- `/routes/index.tsx`
 - `/.vscode/settings.json`
 
 ## Changes so far
