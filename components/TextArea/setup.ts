@@ -62,7 +62,7 @@ export default (props: Partial<iTextArea>) => {
     container: opt(
       cn(
         'comp-textarea_container comp-input_box',
-        p.maxWidth ? 'w-full' : null,
+        p.maxWidth ? 'comp-input_maxwidth' : null,
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,

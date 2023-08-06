@@ -40,7 +40,7 @@ export default function Select(props: Partial<iSelect>) {
           ? null
           : (
             <Text fref={fwd.text?.ref} noMargins class={c.text}>
-              {label}
+              <>{label}</>
               {p.required
                 ? (
                   <sup

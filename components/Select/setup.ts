@@ -71,7 +71,10 @@ export default (props: Partial<iSelect>) => {
       required?.nostyle || p.nostyleAll,
     ),
     container: opt(
-      cn('comp-select_container comp-input_box', p.maxWidth ? 'w-full' : null),
+      cn(
+        'comp-select_container comp-input_box',
+        p.maxWidth ? 'comp-input_maxwidth' : null,
+      ),
       container?.class,
       container?.nostyle || p.nostyleAll,
     ),

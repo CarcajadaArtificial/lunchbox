@@ -1,11 +1,19 @@
 # Changelog
 
-## v0.2.2-beta.4
+## v0.2.2-beta.5
 
-### Added the nostyleAll to all components
+### Added an Input testing route
 
-- `/components/**/setup.tsx`
-- `/src/types.ts`
+- `/fresh.gen.ts`
+- `/routes/test/input.tsx`
+
+### Fixed Input component bugs
+
+- `/components/Input/index.tsx`
+- `/components/Select/index.tsx`
+- `/components/Select/setup.tsx`
+- `/components/TextArea/index.tsx`
+- `/components/TextArea/setup.tsx`
 
 ## Changes so far
 

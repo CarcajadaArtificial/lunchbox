@@ -11,7 +11,7 @@ export default function (props: Partial<iInput>) {
           ? null
           : (
             <Text fref={fwd.text?.fref} noMargins class={c.text}>
-              {label}
+              <>{label}</>
               {p.required
                 ? (
                   <sup

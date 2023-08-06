@@ -8,7 +8,7 @@ export default function TextArea(props: Partial<iTextArea>) {
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
         <Text fref={fwd.text?.ref} noMargins class={c.text}>
-          {label}
+          <>{label}</>
           {p.required
             ? (
               <sup ref={fwd.text?.ref} title='Required' class={c.required}>
