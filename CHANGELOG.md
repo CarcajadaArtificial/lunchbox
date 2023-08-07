@@ -1,21 +1,12 @@
 # Changelog
 
-## v0.2.3
-
-### Added an Gradient testing route
-
-- `/fresh.gen.ts`
-- `/routes/test/gradient.tsx`
-
-### Minor changes
-
-- `/mod.ts`
+## v0.2.3-beta.1
 
 ## Changes so far
 
-- ✅ Markdown component
-- Better task scripts.
+- Added nostyleAll global property.
 - Added UI Component testing routes.
+- Fixed object rendering issue in Input components.
 
 ## Roadmap
 
