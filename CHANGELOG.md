@@ -1,24 +1,21 @@
 # Changelog
 
-## v0.2.2-beta.5
+## v0.2.3
 
-### Added an Input testing route
+### Added an Gradient testing route
 
 - `/fresh.gen.ts`
-- `/routes/test/input.tsx`
+- `/routes/test/gradient.tsx`
 
-### Fixed Input component bugs
+### Minor changes
 
-- `/components/Input/index.tsx`
-- `/components/Select/index.tsx`
-- `/components/Select/setup.tsx`
-- `/components/TextArea/index.tsx`
-- `/components/TextArea/setup.tsx`
+- `/mod.ts`
 
 ## Changes so far
 
 - ✅ Markdown component
 - Better task scripts.
+- Added UI Component testing routes.
 
 ## Roadmap
 
@@ -55,7 +52,6 @@
 - [ ] Minor updates
   - [ ] Spread scss 
   - [ ] Add scss variables containing the css root variables.
-  - [ ] Optional don't use a label element in imput components if the label param is undefined.
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
 
