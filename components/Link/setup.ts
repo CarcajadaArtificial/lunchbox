@@ -8,7 +8,7 @@ export default (props: Partial<iLink>) => {
 
   const classes = partializeClasses({
     link: opt(
-      cn('comp-link clr-txt-personality'),
+      cn('comp-link'),
       p.class,
       p.nostyle || p.nostyleAll,
     ),

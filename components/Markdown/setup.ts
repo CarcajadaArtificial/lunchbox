@@ -17,7 +17,12 @@ const defaults: iMarkdown = {
       paragraph: ['comp-text', 'txt-paragraph'],
       heading: ['comp-text'],
       code: ['comp-code_wrapper'],
-      codespan: ['comp-code', 'comp-code_wrapper', 'clr-bg-panel'],
+      codespan: [
+        'comp-code',
+        'comp-code_wrapper',
+        'clr-bg-panel',
+        'clr-txt-personality',
+      ],
       link: ['comp-link'],
       hr: ['comp-separator'],
     },

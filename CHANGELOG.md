@@ -1,12 +1,26 @@
 # Changelog
 
-## v0.2.3-beta.1
+## v0.2.4
+
+### Fixed Markdown issues
+  - `/src/scss/components.scss`
+  - `/components/Markdown/setup.tsx`
+  - `/static/content.md`
+
+### Fixed layout schema
+  - `/src/scss/system.scss`
+
+### Minor changes
+  - `/components/Header/index.tsx`
+  - `/components/Link/index.tsx`
+  - `/components/Link/setup.tsx`
+  - `/routes/test/gradient.tsx`
+  - `/static/style.css`
 
 ## Changes so far
 
-- Added nostyleAll global property.
-- Added UI Component testing routes.
-- Fixed object rendering issue in Input components.
+- Fixed markdown issues
+- Added tabIndex to the `<Link/>` component.
 
 ## Roadmap
 
@@ -20,6 +34,9 @@
   - [x] TextArea (focus)
   - [x] Link (focus, hover)
   - [ ] Markdown (heading link hover)
+- [ ] Markdown missing features that should also be components:
+  - [ ] List
+  - [ ] Blockquote
 - [ ] Create an organized collection of island functions
 - [ ] Update component features
   - [ ] **Card**: Add text, image, gradient spacers, and chips feature.
@@ -45,6 +62,9 @@
   - [ ] Add scss variables containing the css root variables.
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
+  - [x] Fix layout responsivity.
+  - [x] Add a tabindex to the Link component.
+  - [x] Extend Heading and Footer padding.
 
 ### v0.3
 

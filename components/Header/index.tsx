@@ -4,7 +4,16 @@ import Panel from '../Panel/index.tsx';
 import Gradient from '../Gradient/index.tsx';
 
 export default function (props: Partial<iHeader>) {
-  const { c, fref, fwd, children, gradient_pattern, layout_type, ...p } = setup(
+  const {
+    c,
+    fref,
+    fwd,
+    banner,
+    children,
+    gradient_pattern,
+    layout_type,
+    ...p
+  } = setup(
     props,
   );
 

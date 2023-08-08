@@ -7,7 +7,7 @@ export default function (props: Partial<iLink>) {
   const { c, fref, children, ...p } = setup(props);
 
   return (
-    <a ref={fref} class={c.link} {...p}>
+    <a ref={fref} tabIndex={p.tabIndex ? p.tabIndex : 0} class={c.link} {...p}>
       {children}
     </a>
   );

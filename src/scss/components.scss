@@ -16,10 +16,13 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Header
 .comp-header {
-  padding: var(--s-triple) 0 var(--s-one-and-half) 0;
+  padding: var(--s-triple) 0;
 
   &_banner {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -54,6 +57,7 @@
 .comp-link {
   text-decoration: underline;
   cursor: pointer;
+  color: var(--clr-txt-personality);
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -429,5 +433,20 @@
       width: calc(100% + var(--s-single));
       right: var(--s-half);
     }
+  }
+
+  ul,
+  ol {
+    list-style: initial;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-single);
+  }
+
+  blockquote * {
+    color: var(--clr-txt-personality);
+    font-style: italic;
+    margin: var(--s-single) 0;
+    text-align: center;
   }
 }
