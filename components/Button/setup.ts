@@ -1,6 +1,6 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { BUTTON_TYPES } from '../../src/enums.ts';
-import { iComponent } from '../../src/types.ts';
+import { applyDefaults, cn, opt, partializeClasses } from 'utils';
+import { BUTTON_TYPES } from 'enums';
+import { iComponent } from 'types';
 
 export type iButton = iComponent<HTMLButtonElement> & {
   type: BUTTON_TYPES;

@@ -1,6 +1,6 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent } from '../../src/types.ts';
-import { LAYOUT_TYPES } from '../../src/enums.ts';
+import { applyDefaults, cn, opt, partializeClasses } from 'utils';
+import { iComponent } from 'types';
+import { LAYOUT_TYPES } from 'enums';
 import { iLayout } from '../Layout/setup.ts';
 
 export type iMain = iComponent & {

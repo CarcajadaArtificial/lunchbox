@@ -1,6 +1,6 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent, iFwd } from '../../src/types.ts';
-import { LAYOUT_TYPES } from '../../src/enums.ts';
+import { applyDefaults, cn, opt, partializeClasses } from 'utils';
+import { iComponent, iFwd } from 'types';
+import { LAYOUT_TYPES } from 'enums';
 
 export type iLayout = iComponent<HTMLDivElement> & {
   type: LAYOUT_TYPES;

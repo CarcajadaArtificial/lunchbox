@@ -1,5 +1,5 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent, iFwd } from '../../src/types.ts';
+import { applyDefaults, cn, opt, partializeClasses } from 'utils';
+import { iComponent, iFwd } from 'types';
 import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
 

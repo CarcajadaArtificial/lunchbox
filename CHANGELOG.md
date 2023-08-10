@@ -1,17 +1,11 @@
 # Changelog
 
-## v0.2.4-beta.2
+## v0.2.4-beta.3
 
-### Minor changes
-  - `/components/Card/index.tsx`
-
-### Added the Chip component
-  - `/components/Chip/index.tsx`
-  - `/components/Chip/setup.tsx`
-  - `/src/scss/components.scss`
-  - `/src/scss/animation.scss`
-  - `/static/style.css`
+### Added utility routes in `import_map.json`
+  - `/components/**/setup.ts`
   - `/mod.ts`
+  - `/src/utils.ts`
 
 ## Changes so far
 
