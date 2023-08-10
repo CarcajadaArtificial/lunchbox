@@ -10,7 +10,7 @@
  */
 
 import * as classNames from 'https://deno.land/x/classnames@0.1.1/index.ts';
-import { EmptyObject } from 'types';
+import { EmptyObject } from './types.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

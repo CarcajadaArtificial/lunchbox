@@ -1,5 +1,5 @@
-import { cn, opt, partializeClasses } from 'utils';
-import { iComponent } from 'types';
+import { cn, opt, partializeClasses } from '../../src/utils.ts';
+import { iComponent } from '../../src/types.ts';
 
 export type iLink = iComponent<HTMLAnchorElement>;
 

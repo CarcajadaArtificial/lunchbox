@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import Chiplist from '../components/Chiplist/index.tsx';
 import Input from '../components/Input/index.tsx';
-import { certainKeyPressed, removeChiplistValue } from 'handlers';
+import { certainKeyPressed, removeChiplistValue } from '../src/handlers.ts';
 
 export default function () {
   const [values, setValues] = useState<string[]>([]);

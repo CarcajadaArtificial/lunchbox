@@ -1,22 +1,17 @@
 # Changelog
 
-## v0.2.5
+## v0.2.5-beta.1
 
-### Added the handler module 
-  - `/src/handlers.ts`
+### Removed shorthand import paths
   - `/import_map.json`
+  - `/components/**/setup.ts`
   - `/mod.ts`
+  - `/src/utils.ts`
   - `/islands/Island.tsx`
-
-### Minor updates
-  - `/components/Code/index.tsx`
 
 ## Changes so far
 
-- Added the `<Chip/>` component.
-- Added the `<Chiplist/>` component.
-- Added the handler module.
-- Fixed components' use of `nostyle` and `nostyleAll`.
+- Fixed shorthand import paths issue
 
 ## Roadmap
 

@@ -1,6 +1,6 @@
-import { applyDefaults, cn, opt, partializeClasses } from 'utils';
-import { iComponent, iFwd } from 'types';
-import { GRADIENT_PATTERNS } from 'enums';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
+import { GRADIENT_PATTERNS } from '../../src/enums.ts';
 import { iGradient } from '../Gradient/setup.ts';
 
 export type iCard = iComponent<HTMLDivElement> & {

@@ -1,5 +1,5 @@
-import { applyDefaults, cn, opt, partializeClasses } from 'utils';
-import { iComponent } from 'types';
+import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { iComponent } from '../../src/types.ts';
 import { RenderOptions } from '../../src/markdown.ts';
 import { render } from '../../src/markdown.ts';
 
