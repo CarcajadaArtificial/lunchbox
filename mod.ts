@@ -21,3 +21,4 @@ export { default as Chiplist } from './components/Chiplist/index.tsx';
 export * from 'enums';
 export * from 'types';
 export * from 'utils';
+export * from 'handlers';

@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks';
 import Chiplist from '../components/Chiplist/index.tsx';
 import Input from '../components/Input/index.tsx';
+import { certainKeyPressed, removeChiplistValue } from 'handlers';
 
 export default function () {
   const [values, setValues] = useState<string[]>([]);
@@ -9,19 +10,17 @@ export default function () {
     <div>
       <Input
         label='New tag'
-        onkeyup={(ev) => {
-          if (ev.key === 'Enter') {
-            setValues([...values, (ev.target as HTMLInputElement).value]);
+        onkeyup={(ev) =>
+          certainKeyPressed(ev, ['Enter', 'Spacebar', ' '], (ev) => {
+            const newValue = (ev.target as HTMLInputElement).value;
+            if (newValue.replace(' ', '').length > 0) {
+              setValues([...values, newValue]);
+            }
             (ev.target as HTMLInputElement).value = '';
-          }
-        }}
+          })}
       />
       <Chiplist
-        onRemove={(ev: Event) => {
-          const target = ev.target as HTMLButtonElement;
-          const chipValue = (target.previousSibling as HTMLElement).innerHTML;
-          setValues(values.filter((value) => value !== chipValue));
-        }}
+        onRemove={(ev: Event) => removeChiplistValue(ev, values, setValues)}
         values={values}
       />
     </div>

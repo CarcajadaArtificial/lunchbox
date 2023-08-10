@@ -1,31 +1,21 @@
 # Changelog
 
-## v0.2.4-beta.4
+## v0.2.5
 
-### Added the Chiplist component
-  - `/components/Chiplist/index.tsx`
-  - `/components/Chiplist/setup.ts`
-  - `/mod`
-  - `/src/scss/components.scss`
-  - `/static/style.css`
-
-### Added remove interaction to the chip component
-  - `/components/Chip/index.tsx`
-  - `/components/Chip/setup.ts`
-
-### Added Island for testing
+### Added the handler module 
+  - `/src/handlers.ts`
+  - `/import_map.json`
+  - `/mod.ts`
   - `/islands/Island.tsx`
-  - `/fresh.gen.ts`
-  - `/routes/index.tsx`
 
-### Minor updated
-  - `/components/Input/index.tsx`
-  - `/static/content.md`
+### Minor updates
+  - `/components/Code/index.tsx`
 
 ## Changes so far
 
 - Added the `<Chip/>` component.
 - Added the `<Chiplist/>` component.
+- Added the handler module.
 - Fixed components' use of `nostyle` and `nostyleAll`.
 
 ## Roadmap
@@ -58,6 +48,7 @@
   - [ ] Page
   - [ ] Fieldset
   - [x] Chip
+    - [x] Chiplist
   - [ ] Spinner
   - [ ] Screen
   - [ ] Dialog
