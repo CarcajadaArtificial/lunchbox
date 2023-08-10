@@ -1,12 +1,21 @@
 # Changelog
 
-## v0.2.4-beta.1
+## v0.2.4-beta.2
 
-### Updated the components' use of `nostyle` and `nostyleAll`
-  - `/components/**/index.tsx`
+### Minor changes
+  - `/components/Card/index.tsx`
+
+### Added the Chip component
+  - `/components/Chip/index.tsx`
+  - `/components/Chip/setup.tsx`
+  - `/src/scss/components.scss`
+  - `/src/scss/animation.scss`
+  - `/static/style.css`
+  - `/mod.ts`
 
 ## Changes so far
 
+- Added the `<Chip/>` component.
 - Fixed components' use of `nostyle` and `nostyleAll`.
 
 ## Roadmap
@@ -38,14 +47,13 @@
   - [ ] Menu
   - [ ] Page
   - [ ] Fieldset
-  - [ ] Chip
+  - [x] Chip
   - [ ] Spinner
   - [ ] Screen
   - [ ] Dialog
   - [ ] Image
   - [x] Gradient
 - [ ] Minor updates
-  - [ ] Spread scss 
   - [ ] Add scss variables containing the css root variables.
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.

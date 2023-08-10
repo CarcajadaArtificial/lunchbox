@@ -2,7 +2,6 @@ import setup, { iCard } from './setup.ts';
 import Panel from '../Panel/index.tsx';
 import Gradient from '../Gradient/index.tsx';
 import Text from '../Text/index.tsx';
-import Linkmap from '../Linkmap/index.tsx';
 
 export default function (props: Partial<iCard>) {
   const {

@@ -450,3 +450,23 @@
     text-align: center;
   }
 }
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Chip
+.comp-chip {
+  list-style: none;
+  max-width: var(--s-fifteen);
+  width: max-content;
+  padding-left: var(--s-half);
+  display: flex;
+  align-items: center;
+  border-radius: var(--s-eighth);
+
+  &_remove {
+    width: var(--s-one-and-half);
+    text-align: center;
+    font-size: 140%;
+    height: var(--s-one-and-half);
+    border-radius: var(--s-eighth);
+  }
+}
