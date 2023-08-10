@@ -2,12 +2,18 @@ import setup, { iTextArea } from './setup.ts';
 import Text from '../Text/index.tsx';
 
 export default function TextArea(props: Partial<iTextArea>) {
-  const { c, fref, fwd, maxWidth, label, error, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, maxWidth, label, error, ...p } =
+    setup(props);
 
   return (
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
-        <Text fref={fwd.text?.ref} noMargins class={c.text}>
+        <Text
+          nostyleAll={nostyleAll}
+          fref={fwd.text?.ref}
+          noMargins
+          class={c.text}
+        >
           <>{label}</>
           {p.required
             ? (
@@ -27,6 +33,7 @@ export default function TextArea(props: Partial<iTextArea>) {
             inheritColor
             type='small'
             class={c.error}
+            nostyleAll={nostyleAll}
           >
             {error}
           </Text>

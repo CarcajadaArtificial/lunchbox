@@ -7,6 +7,8 @@ export default function (props: Partial<iHeader>) {
   const {
     c,
     fref,
+    nostyle,
+    nostyleAll,
     fwd,
     banner,
     children,
@@ -19,7 +21,7 @@ export default function (props: Partial<iHeader>) {
 
   return (
     <div>
-      <Panel fref={fwd.panel?.fref} class={c.panel}>
+      <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
         <header ref={fref} {...p} class={c.header}>
           {layout_type
             ? (
@@ -27,6 +29,7 @@ export default function (props: Partial<iHeader>) {
                 fref={fwd.layout?.fref}
                 type={layout_type}
                 class={c.layout}
+                nostyleAll={nostyleAll}
               >
                 {children}
               </Layout>
@@ -40,6 +43,7 @@ export default function (props: Partial<iHeader>) {
             fref={fwd.gradient?.fref}
             class={c.gradient}
             gradient_pattern={gradient_pattern}
+            nostyleAll={nostyleAll}
           />
         )
         : null}

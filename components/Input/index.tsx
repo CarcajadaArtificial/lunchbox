@@ -2,7 +2,8 @@ import Text from '../Text/index.tsx';
 import setup, { iInput } from './setup.ts';
 
 export default function (props: Partial<iInput>) {
-  const { c, fref, fwd, maxWidth, label, error, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, maxWidth, label, error, ...p } =
+    setup(props);
 
   return (
     <div ref={fwd.container?.ref} class={c.container}>
@@ -10,7 +11,12 @@ export default function (props: Partial<iInput>) {
         {label === ''
           ? null
           : (
-            <Text fref={fwd.text?.fref} noMargins class={c.text}>
+            <Text
+              nostyleAll={nostyleAll}
+              fref={fwd.text?.fref}
+              noMargins
+              class={c.text}
+            >
               <>{label}</>
               {p.required
                 ? (
@@ -35,6 +41,7 @@ export default function (props: Partial<iInput>) {
             type='small'
             inheritColor
             class={c.error}
+            nostyleAll={nostyleAll}
           >
             {error}
           </Text>

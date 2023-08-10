@@ -4,6 +4,8 @@ import Text from '../Text/index.tsx';
 export default function Select(props: Partial<iSelect>) {
   const {
     c,
+    nostyle,
+    nostyleAll,
     fref,
     fwd,
     children,
@@ -36,24 +38,27 @@ export default function Select(props: Partial<iSelect>) {
   return (
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
-        {label === ''
-          ? null
-          : (
-            <Text fref={fwd.text?.ref} noMargins class={c.text}>
-              <>{label}</>
-              {p.required
-                ? (
-                  <sup
-                    ref={fwd.required?.ref}
-                    title='Required'
-                    class={c.required}
-                  >
-                    *
-                  </sup>
-                )
-                : null}
-            </Text>
-          )}
+        {label === '' ? null : (
+          <Text
+            nostyleAll={nostyleAll}
+            fref={fwd.text?.ref}
+            noMargins
+            class={c.text}
+          >
+            <>{label}</>
+            {p.required
+              ? (
+                <sup
+                  ref={fwd.required?.ref}
+                  title='Required'
+                  class={c.required}
+                >
+                  *
+                </sup>
+              )
+              : null}
+          </Text>
+        )}
         <select ref={fref} class={c.input} {...p}>
           {optionPlaceholder}
           {optionComponents}
@@ -68,6 +73,7 @@ export default function Select(props: Partial<iSelect>) {
             inheritColor
             type='small'
             class={c.error}
+            nostyleAll={nostyleAll}
           >
             {error}
           </Text>

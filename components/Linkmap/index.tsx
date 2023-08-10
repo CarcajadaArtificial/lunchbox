@@ -3,7 +3,7 @@ import Link from '../Link/index.tsx';
 import Text from '../Text/index.tsx';
 
 export default function (props: Partial<iLinkmap>) {
-  const { c, fref, fwd, links, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, links, ...p } = setup(props);
 
   const renderRecursiveLinks = (links: iLinkmapitem[]) => (
     <ul ref={fwd.list?.ref} class={c.list}>
@@ -11,12 +11,22 @@ export default function (props: Partial<iLinkmap>) {
         <li ref={fwd.item?.ref} class={c.item}>
           {link.url
             ? (
-              <Link fref={fwd.link?.fref} href={link.url} class={c.link}>
+              <Link
+                nostyleAll={nostyleAll}
+                fref={fwd.link?.fref}
+                href={link.url}
+                class={c.link}
+              >
                 {link.name}
               </Link>
             )
             : (
-              <Text fref={fwd.text?.fref} noMargins class={c.text}>
+              <Text
+                nostyleAll={nostyleAll}
+                fref={fwd.text?.fref}
+                noMargins
+                class={c.text}
+              >
                 {link.name}
               </Text>
             )}

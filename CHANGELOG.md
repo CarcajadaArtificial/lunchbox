@@ -1,26 +1,13 @@
 # Changelog
 
-## v0.2.4
+## v0.2.4-beta.1
 
-### Fixed Markdown issues
-  - `/src/scss/components.scss`
-  - `/components/Markdown/setup.tsx`
-  - `/static/content.md`
-
-### Fixed layout schema
-  - `/src/scss/system.scss`
-
-### Minor changes
-  - `/components/Header/index.tsx`
-  - `/components/Link/index.tsx`
-  - `/components/Link/setup.tsx`
-  - `/routes/test/gradient.tsx`
-  - `/static/style.css`
+### Updated the components' use of `nostyle` and `nostyleAll`
+  - `/components/**/index.tsx`
 
 ## Changes so far
 
-- Fixed markdown issues
-- Added tabIndex to the `<Link/>` component.
+- Fixed components' use of `nostyle` and `nostyleAll`.
 
 ## Roadmap
 
@@ -65,6 +52,7 @@
   - [x] Fix layout responsivity.
   - [x] Add a tabindex to the Link component.
   - [x] Extend Heading and Footer padding.
+  - [ ] Remove global component properties from the setup spreads.
 
 ### v0.3
 

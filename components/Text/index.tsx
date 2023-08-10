@@ -18,6 +18,8 @@ export default function (props: Partial<iText>) {
     indent,
     noMargins,
     children,
+    nostyle,
+    nostyleAll,
     inheritColor,
     ...p
   } = setup(props);

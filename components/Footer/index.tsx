@@ -14,6 +14,8 @@ export default function (props: Partial<iFooter>) {
     c,
     fref,
     fwd,
+    nostyle,
+    nostyleAll,
     children,
     gradient_pattern,
     layout_type,
@@ -27,6 +29,7 @@ export default function (props: Partial<iFooter>) {
         fref={fwd.badge_link?.fref}
         class={c.badge_link}
         href='https://fresh.deno.dev'
+        nostyleAll={nostyleAll}
       >
         <img
           width='197'
@@ -57,10 +60,11 @@ export default function (props: Partial<iFooter>) {
             class={c.gradient}
             flip
             gradient_pattern={gradient_pattern}
+            nostyleAll={nostyleAll}
           />
         )
         : null}
-      <Panel fref={fwd.panel?.fref} class={c.panel}>
+      <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
         <footer ref={fref} {...p} class={c.footer}>
           {layout_type
             ? (
@@ -68,6 +72,7 @@ export default function (props: Partial<iFooter>) {
                 fref={fwd.layout?.fref}
                 type={layout_type}
                 class={c.layout}
+                nostyleAll={nostyleAll}
               >
                 {children}
               </Layout>

@@ -8,13 +8,18 @@ import Panel from '../Panel/index.tsx';
  * @todo [!] Add a layout-type prop.
  */
 export default function (props: Partial<iNavigation>) {
-  const { c, fref, fwd, children, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);
 
   return (
     <div ref={fwd.wrapper?.ref} class={c.wrapper}>
-      <Panel fref={fwd.panel?.fref} class={c.panel}>
+      <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
         <nav ref={fref} class={c.nav} {...p}>
-          <Layout fref={fwd.layout?.fref} type='right' class={c.layout}>
+          <Layout
+            nostyleAll={nostyleAll}
+            fref={fwd.layout?.fref}
+            type='right'
+            class={c.layout}
+          >
             {children}
           </Layout>
         </nav>

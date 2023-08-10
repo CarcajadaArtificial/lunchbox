@@ -1,7 +1,15 @@
 import setup, { iMarkdown } from './setup.ts';
 
 export default function (props: Partial<iMarkdown>) {
-  const { c, fref, markdown_content, renderOptions, ...p } = setup(props);
+  const {
+    c,
+    nostyle,
+    nostyleAll,
+    fref,
+    markdown_content,
+    renderOptions,
+    ...p
+  } = setup(props);
 
   return (
     <div
