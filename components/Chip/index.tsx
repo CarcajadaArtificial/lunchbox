@@ -1,12 +1,25 @@
+import Text from '../Text/index.tsx';
 import setup, { iChip } from './setup.ts';
 
 export default function (props: Partial<iChip>) {
-  const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, children, onRemove, ...p } = setup(
+    props,
+  );
 
   return (
     <li ref={fref} class={c.chip} {...p}>
-      <>{children}</>
-      <button class={c.remove_button}>×</button>
+      <Text class={c.content}>{children}</Text>
+      <button
+        onClick={onRemove}
+        onKeyPress={(ev) => {
+          if (onRemove && (ev.key === 'Enter' || ev.key === 'Space')) {
+            onRemove!(ev);
+          }
+        }}
+        class={c.remove_button}
+      >
+        ×
+      </button>
     </li>
   );
 }

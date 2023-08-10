@@ -8,29 +8,27 @@ export default function (props: Partial<iInput>) {
   return (
     <div ref={fwd.container?.ref} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label}>
-        {label === ''
-          ? null
-          : (
-            <Text
-              nostyleAll={nostyleAll}
-              fref={fwd.text?.fref}
-              noMargins
-              class={c.text}
-            >
-              <>{label}</>
-              {p.required
-                ? (
-                  <sup
-                    ref={fwd.required?.ref}
-                    title='Required'
-                    class={c.required}
-                  >
-                    *
-                  </sup>
-                )
-                : null}
-            </Text>
-          )}
+        {label === '' ? null : (
+          <Text
+            nostyleAll={nostyleAll}
+            fref={fwd.text?.fref}
+            noMargins
+            class={c.text}
+          >
+            <>{label}</>
+            {p.required
+              ? (
+                <sup
+                  ref={fwd.required?.ref}
+                  title='Required'
+                  class={c.required}
+                >
+                  *
+                </sup>
+              )
+              : null}
+          </Text>
+        )}
         <input ref={fref} class={c.input} {...p} />
       </label>
       {error

@@ -1,15 +1,31 @@
 # Changelog
 
-## v0.2.4-beta.3
+## v0.2.4-beta.4
 
-### Added utility routes in `import_map.json`
-  - `/components/**/setup.ts`
-  - `/mod.ts`
-  - `/src/utils.ts`
+### Added the Chiplist component
+  - `/components/Chiplist/index.tsx`
+  - `/components/Chiplist/setup.ts`
+  - `/mod`
+  - `/src/scss/components.scss`
+  - `/static/style.css`
+
+### Added remove interaction to the chip component
+  - `/components/Chip/index.tsx`
+  - `/components/Chip/setup.ts`
+
+### Added Island for testing
+  - `/islands/Island.tsx`
+  - `/fresh.gen.ts`
+  - `/routes/index.tsx`
+
+### Minor updated
+  - `/components/Input/index.tsx`
+  - `/static/content.md`
 
 ## Changes so far
 
 - Added the `<Chip/>` component.
+- Added the `<Chiplist/>` component.
 - Fixed components' use of `nostyle` and `nostyleAll`.
 
 ## Roadmap

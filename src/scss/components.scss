@@ -469,4 +469,18 @@
     height: var(--s-one-and-half);
     border-radius: var(--s-eighth);
   }
+
+  &_content {
+    max-width: var(--s-fifteen);
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Chiplist
+.comp-chiplist {
+  display: flex;
+  gap: var(--s-third);
 }
