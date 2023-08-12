@@ -1,13 +1,10 @@
 # Changelog
 
-## v0.2.5-beta.1
+## v0.2.6
 
-### Removed shorthand import paths
-  - `/import_map.json`
-  - `/components/**/setup.ts`
-  - `/mod.ts`
-  - `/src/utils.ts`
-  - `/islands/Island.tsx`
+### Minor changes
+  - `/static/style.css`
+  - `/src/scss/components.scss`
 
 ## Changes so far
 

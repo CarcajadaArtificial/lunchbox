@@ -482,5 +482,6 @@
 // Chiplist
 .comp-chiplist {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--s-third);
 }
