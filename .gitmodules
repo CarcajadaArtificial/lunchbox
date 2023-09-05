@@ -1,6 +1,0 @@
-# If using vscode, configure: ("git.ignoreSubmodules": true) and ("git.detectSubmodules": false)
-
-[submodule ".github/dep/garlicss"]
-	path = .github/dep/garlicss
-	url = https://github.com/CarcajadaArtificial/garlicss.git
-	ignore = dirty

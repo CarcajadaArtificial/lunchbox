@@ -1,10 +1,13 @@
 # Changelog
 
-## v0.2.6
+## v0.2.7
 
-### Minor changes
-  - `/static/style.css`
-  - `/src/scss/components.scss`
+### Removed SCSS functionality from this project
+  - `/src/scss/*`
+  - `/deno.json`
+
+### Removed the git submodules
+  - `/.gitmodules`
 
 ## Changes so far
 

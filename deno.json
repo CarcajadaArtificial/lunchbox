@@ -1,10 +1,6 @@
 {
   "tasks": {
     "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "sass": "sass -w src/scss/index.scss static/style.css",
-    "sass:playground": "sass -w src/scss/playground.scss static/playground.css",
-    "install:garlicss": "git submodule add -f https://github.com/CarcajadaArtificial/garlicss.git .github/dep/garlicss",
-    "update:submodules": "git submodule update --remote",
     "ok": "deno fmt --check && deno lint && deno check main.ts"
   },
   "importMap": "./import_map.json",
