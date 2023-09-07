@@ -28,6 +28,8 @@ export default (props: Partial<iInput>) => {
 
   const { text, label, error, required, container } = p.fwd;
 
+  p.type = typeof p.type === 'string' ? p.type : p.type?.value;
+
   const classes = partializeClasses({
     input: opt(
       cn(

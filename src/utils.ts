@@ -11,6 +11,7 @@
 
 import * as classNames from 'https://deno.land/x/classnames@0.1.1/index.ts';
 import { EmptyObject } from './types.ts';
+import { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -28,7 +29,7 @@ export const cn = classNames.default;
  * @param {string} className
  *  The library's assigned final `className` string, created using the `cn()` function.
  *
- * @param {string | undefined} customClassName
+ * @param {string | undefined | JSX.SignalLike<string | undefined>} customClassName
  *  It is to be appended to or replace the library's `className`.
  *
  * @param {boolean | undefined} nostyle
@@ -39,7 +40,7 @@ export const cn = classNames.default;
  */
 export const opt = (
   className: string,
-  customClassName?: string,
+  customClassName?: string | JSX.SignalLike<string | undefined>,
   nostyle?: boolean,
 ) => cn(nostyle ? '' : className, customClassName);
 

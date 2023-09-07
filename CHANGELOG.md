@@ -1,25 +1,17 @@
 # Changelog
 
-## v0.2.8
+## v0.2.9
 
-### Moved enums, types, utils and handlers out of `mod.ts`
-  - `/mod.ts`
-
-### Updated to newset fresh version.
-  - `/.gitignore`
-  - `/deno.json`
-  - `/fresh.gen.ts`
-  - Removed `/import_map.json`
-
-### Removed last remaining stylesheets
-  - `/static/playground.css`
-  - `/static/style.css`
+### Fixed `SignalLike` type on component setup script.
+  - `/src/utils.ts`
+  - `/components/Input/setup.ts`
 
 ## Changes so far
 
-- Fixed shorthand import paths issue
-- Moved enums, types, utils and handlers out of `mod.ts`
+- Moved enums, types, utils and handlers out of `mod.ts`.
 - Moved the stylesheets to another project.
+- Fixed shorthand import paths issue.
+- Fixed `SignalLike` type on component setup script.
 
 ## Roadmap
 
@@ -58,7 +50,6 @@
   - [ ] Image
   - [x] Gradient
 - [ ] Minor updates
-  - [ ] Add scss variables containing the css root variables.
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
   - [x] Fix layout responsivity.

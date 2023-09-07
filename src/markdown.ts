@@ -150,6 +150,7 @@ class Renderer extends Marked.Renderer {
     }>\n${content}</tr>\n`;
   }
 
+  // deno-lint-ignore no-explicit-any
   tablecell(content: string, flags: any) {
     const className = customClass(this.customClasses.tablecell);
     const type = flags.header ? 'th' : 'td';
@@ -239,6 +240,7 @@ interface customClasses {
 }
 
 export function render(
+  // deno-lint-ignore no-explicit-any
   this: any,
   markdown: string,
   opts: RenderOptions = {},
