@@ -1,17 +1,25 @@
 # Changelog
 
-## v0.2.7
+## v0.2.8
 
-### Removed SCSS functionality from this project
-  - `/src/scss/*`
+### Moved enums, types, utils and handlers out of `mod.ts`
+  - `/mod.ts`
+
+### Updated to newset fresh version.
+  - `/.gitignore`
   - `/deno.json`
+  - `/fresh.gen.ts`
+  - Removed `/import_map.json`
 
-### Removed the git submodules
-  - `/.gitmodules`
+### Removed last remaining stylesheets
+  - `/static/playground.css`
+  - `/static/style.css`
 
 ## Changes so far
 
 - Fixed shorthand import paths issue
+- Moved enums, types, utils and handlers out of `mod.ts`
+- Moved the stylesheets to another project.
 
 ## Roadmap
 

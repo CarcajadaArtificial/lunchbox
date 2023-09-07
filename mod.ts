@@ -18,7 +18,3 @@ export { default as Markdown } from './components/Markdown/index.tsx';
 export { default as Gradient } from './components/Gradient/index.tsx';
 export { default as Chip } from './components/Chip/index.tsx';
 export { default as Chiplist } from './components/Chiplist/index.tsx';
-export * from './src/enums.ts';
-export * from './src/types.ts';
-export * from './src/utils.ts';
-export * from './src/handlers.ts';

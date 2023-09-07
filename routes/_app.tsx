@@ -6,8 +6,10 @@ export default function App({ Component }: AppProps) {
     <>
       <Head>
         <title>Fresh Garlic - Playground</title>
-        <link rel='stylesheet' href='/style.css' />
-        <link rel='stylesheet' href='/playground.css' />
+        <link
+          rel='stylesheet'
+          href='https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.18/dist/presets/standard/style.css'
+        />
       </Head>
       <body class='clr-bg-panel clr-txt-base txt-paragraph'>
         <div class='_screen'>
