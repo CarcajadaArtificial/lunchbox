@@ -1,13 +1,11 @@
 # Changelog
 
-## v0.2.11
+## v0.2.12
 
-### Updated fresh to new configuration schema.
-  - `/deno.json`
-  - `/dev.ts`
-  - `/fresh.config.ts`
-  - `/main.ts`
-  - `/routes/_app.tsx`
+- Added css-in-js styles to the `<Button/>` component.
+- Added the `button` testing page.
+- Added the `styles` utility file for the shared css-in-js styles.
+- Updated lunchbox-css.
 
 ## Changes so far
 
@@ -39,6 +37,14 @@
   - [ ] **Code**: Add copy to clipboard.
   - [ ] **Separator**: Add gradient separators.
   - [x] **Header**, **Footer**: Add spacers with gradients that change.
+  - [ ] **Button**
+    - [ ] Add small variation.
+    - [ ] Add large variation.
+    - [ ] Add variation with a kbd element inside.
+    - [ ] Add variation with a code element inside.
+    - [ ] Add variation with an icon inside.
+  - [ ] **Panel**
+    - [ ] Add style condition for button_invisible and button_panel's background color.
 - [ ] Add components
   - [ ] Time
   - [x] Markdown
@@ -52,6 +58,7 @@
   - [ ] Dialog
   - [ ] Image
   - [x] Gradient
+  - [ ] Kbd
 - [ ] Minor updates
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
@@ -59,6 +66,7 @@
   - [x] Add a tabindex to the Link component.
   - [x] Extend Heading and Footer padding.
   - [ ] Remove global component properties from the setup spreads.
+  - [ ] Update components to Resin's css-in-js schema.
 
 ### v0.3
 

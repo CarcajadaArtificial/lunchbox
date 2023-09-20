@@ -14,7 +14,7 @@ export default function App({ Component }: AppProps) {
           rel='stylesheet'
           href={testing
             ? '/style.css'
-            : 'https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.29/dist/presets/standard/style.css'}
+            : 'https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.30/dist/presets/standard/style.css'}
         />
         <ResinCssEmitter />
       </Head>
