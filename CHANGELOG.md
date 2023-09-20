@@ -1,10 +1,13 @@
 # Changelog
 
-## v0.2.9
+## v0.2.10
 
-### Fixed `SignalLike` type on component setup script.
-  - `/src/utils.ts`
+### Updated component background styles.
+  - `/components/Button/setup.ts`
+  - `/components/Chip/setup.ts`
   - `/components/Input/setup.ts`
+  - `/components/Select/setup.ts`
+  - `/components/TextArea/setup.ts`
 
 ## Changes so far
 

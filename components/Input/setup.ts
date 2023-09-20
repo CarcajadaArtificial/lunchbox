@@ -34,11 +34,7 @@ export default (props: Partial<iInput>) => {
     input: opt(
       cn(
         'comp-input',
-        p.error
-          ? 'clr-bg-error'
-          : p.disabled
-          ? 'clr-bg-disabled'
-          : 'clr-bg-input',
+        p.error ? 'comp-input-bg_error' : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,

@@ -20,7 +20,7 @@ export default (props: Partial<iChip>) => {
 
   const classes = partializeClasses({
     chip: opt(
-      cn('comp-chip clr-bg-input'),
+      cn('comp-chip clr-bg-personality'),
       p.class,
       p.nostyle || p.nostyleAll,
     ),

@@ -34,11 +34,7 @@ export default (props: Partial<iTextArea>) => {
       cn(
         'comp-textarea',
         p.noResize ? 'resize-none' : null,
-        p.error
-          ? 'clr-bg-error'
-          : p.disabled
-          ? 'clr-bg-disabled'
-          : 'clr-bg-input',
+        p.error ? 'comp-textarea-bg_error' : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,

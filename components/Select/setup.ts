@@ -44,11 +44,7 @@ export default (props: Partial<iSelect>) => {
     input: opt(
       cn(
         'comp-select',
-        p.error
-          ? 'clr-bg-error'
-          : p.disabled
-          ? 'clr-bg-disabled'
-          : 'clr-bg-input',
+        p.error ? 'comp-select-bg_error' : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,

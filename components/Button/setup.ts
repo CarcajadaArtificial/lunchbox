@@ -28,8 +28,8 @@ export default (props: Partial<iButton>) => {
           : props.type === 'panel'
           ? 'comp-button_panel'
           : props.type === 'contrast'
-          ? 'clr-bg-input'
-          : 'clr-bg-input',
+          ? 'clr-bg-personality'
+          : 'clr-bg-personality',
       ),
       p.class,
       p.nostyle || p.nostyleAll,
