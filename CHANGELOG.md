@@ -1,13 +1,13 @@
 # Changelog
 
-## v0.2.10
+## v0.2.11
 
-### Updated component background styles.
-  - `/components/Button/setup.ts`
-  - `/components/Chip/setup.ts`
-  - `/components/Input/setup.ts`
-  - `/components/Select/setup.ts`
-  - `/components/TextArea/setup.ts`
+### Updated fresh to new configuration schema.
+  - `/deno.json`
+  - `/dev.ts`
+  - `/fresh.config.ts`
+  - `/main.ts`
+  - `/routes/_app.tsx`
 
 ## Changes so far
 
