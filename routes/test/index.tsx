@@ -1,6 +1,8 @@
 import {
   Button,
   Card,
+  Chip,
+  Chiplist,
   Code,
   Footer,
   Header,
@@ -24,15 +26,24 @@ export default function TestHome() {
           </div>
         </Layout>
         <Layout type='left'>
-          <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
-            <Text noMargins type='subheading'>Card title</Text>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Text>
-            <div class='mt-3'>
-              <Button>Action</Button>
+          <div>
+            <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
+              <Text noMargins type='subheading'>Card title</Text>
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </Text>
+              <div class='mt-3'>
+                <Button>Action</Button>
+              </div>
+            </Card>
+            <div class='mt-6'>
+              <Chip>Chip</Chip>
+              <Chip>Chip 2</Chip>
             </div>
-          </Card>
+            <div class='mt-6'>
+              <Chiplist values={['chiplist 1', 'chiplist 2', 'chiplist 3']} />
+            </div>
+          </div>
           <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
             <Text noMargins type='subheading'>Card title</Text>
             <Text>

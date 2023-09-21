@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.2.15
+## v0.2.16
 
-- Added css-in-js styles to the `<Text/>` component.
-- Added a text test route.
-- Added a separator fix.
+- Added css-in-js styles to the `<Chip/>` and `<Chiplist/>` components.
 
 ## Changes so far
 

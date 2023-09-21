@@ -1,5 +1,6 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
+import { css } from 'resin';
 
 export type iChiplist = iComponent<HTMLUListElement> & {
   onRemove?: (ev: Event) => void;
@@ -15,13 +16,21 @@ const defaults: iChiplist = {
   fwd: {},
 };
 
+const style = {
+  list: css`
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-third);
+  `,
+};
+
 export default (props: Partial<iChiplist>) => {
   const p = applyDefaults<iChiplist>(defaults, props);
 
   const { remove_button, chip } = p.fwd;
 
   const classes = partializeClasses({
-    list: opt(cn('comp-chiplist'), p.class, p.nostyle || p.nostyleAll),
+    list: opt(cn(style.list), p.class, p.nostyle || p.nostyleAll),
     chip: cn(chip?.class),
     remove_button: cn(remove_button?.class),
   });
