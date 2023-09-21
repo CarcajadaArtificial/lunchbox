@@ -17,6 +17,10 @@ export default function App({ Component }: AppProps) {
             : 'https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.30/dist/presets/standard/style.css'}
         />
         <ResinCssEmitter />
+        <link
+          rel='stylesheet'
+          href='/lunchbox.css'
+        />
       </Head>
       <body class='clr-bg-panel clr-txt-base txt-paragraph'>
         <div class='_screen'>

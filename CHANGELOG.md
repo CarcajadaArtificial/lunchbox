@@ -1,11 +1,9 @@
 # Changelog
 
-## v0.2.13
+## v0.2.14
 
-- Added css-in-js styles to the `<Code/>`, `<Footer/>`, `<Header/>`, `<Link/>`, `<Linkmap/>`, `<Main/>`, `<Panel/>`, `<Separator/>` components.
-- Minor fixes to the `<Button/>` component.
-- Minor fixes to `transition.interaction.outline`.
-- Added the index test route.
+- Added css-in-js styles to the `<Card/>` component.
+- Added a global stylesheet.
 
 ## Changes so far
 
@@ -19,7 +17,7 @@
 ### v0.2
 
 - [ ] Update components to GarliCSS animations.
-  - [ ] Button (click, focus, hover)
+  - [x] Button (click, focus, hover)
   - [ ] Navigation
   - [x] Input (focus)
   - [x] Select (focus)
@@ -45,6 +43,9 @@
     - [ ] Add variation with an icon inside.
   - [ ] **Panel**
     - [ ] Add style condition for button_invisible and button_panel's background color.
+  - [ ] **Chip**
+    - [ ] If there `onRemove` is undefined, do not show the close icon.
+    - [ ] Change the close icon to a standard icon.
 - [ ] Add components
   - [ ] Time
   - [x] Markdown

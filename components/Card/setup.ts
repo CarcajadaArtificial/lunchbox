@@ -1,53 +1,60 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { GRADIENT_PATTERNS } from '../../src/enums.ts';
-import { iGradient } from '../Gradient/setup.ts';
+import { css } from 'resin';
 
 export type iCard = iComponent<HTMLDivElement> & {
-  card_title: string | null;
-  top_gradient_pattern: GRADIENT_PATTERNS | null;
-  bottom_gradient_pattern: GRADIENT_PATTERNS | null;
+  imageUrl: string;
   fwd: Partial<{
-    wrapper: iFwd<HTMLDivElement>;
-    gradient: iFwd<HTMLDivElement>;
-    top_gradient: iGradient;
-    bottom_gradient: iGradient;
+    panel: iFwd<HTMLDivElement>;
+    section: iFwd<HTMLDivElement>;
+    image: iFwd<HTMLDivElement>;
   }>;
 };
 
 const defaults: iCard = {
-  card_title: null,
-  top_gradient_pattern: null,
-  bottom_gradient_pattern: null,
+  imageUrl: '',
   fwd: {},
+};
+
+const styles = {
+  section: css`
+    padding: var(--s-three-quarters);
+  `,
+  card: css`
+    container-type: inline-size;
+  `,
+  panel: css`
+    border-radius: var(--s-quarter);
+  `,
+  image: css`
+    border-radius: var(--s-quarter) var(--s-quarter) 0 0;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+  `,
 };
 
 export default (props: Partial<iCard>) => {
   const p = applyDefaults<iCard>(defaults, props);
 
-  const { wrapper, gradient, top_gradient, bottom_gradient } = p.fwd;
+  const { panel, section, image } = p.fwd;
 
   const classes = partializeClasses({
-    card: opt(cn('comp-card clr-bg-panel'), p.class, p.nostyle || p.nostyleAll),
-    wrapper: opt(
-      cn('comp-card_wrapper'),
-      wrapper?.class,
-      wrapper?.nostyle || p.nostyleAll,
+    card: opt(cn(styles.card), p.class, p.nostyle || p.nostyleAll),
+    panel: opt(
+      cn(styles.panel, 'lbx-card_panel'),
+      panel?.class,
+      panel?.nostyle || p.nostyleAll,
     ),
-    top_gradient: opt(
-      cn('comp-card_gradient'),
-      top_gradient?.class,
-      top_gradient?.nostyle || p.nostyleAll,
+    section: opt(
+      cn(styles.section, 'lbx-card_section'),
+      section?.class,
+      section?.nostyle || p.nostyleAll,
     ),
-    bottom_gradient: opt(
-      cn('comp-card_gradient'),
-      bottom_gradient?.class,
-      bottom_gradient?.nostyle || p.nostyleAll,
-    ),
-    gradient: opt(
-      cn('comp-card_gradient comp-gradient comp-gradient_zigzag'),
-      gradient?.class,
-      gradient?.nostyle || p.nostyleAll,
+    image: opt(
+      cn(styles.image, 'lbx-card_image'),
+      image?.class,
+      image?.nostyle || p.nostyleAll,
     ),
   });
 

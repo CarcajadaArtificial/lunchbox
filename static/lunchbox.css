@@ -1,0 +1,15 @@
+@container (width > 35em) {
+  .lbx-card_panel {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  .lbx-card_image {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--s-quarter) 0 0 var(--s-quarter);
+  }
+
+  .lbx-card_section {
+    padding-left: var(--s-single);
+  }
+}
