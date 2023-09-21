@@ -1,6 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
+import { css } from 'resin';
 
 export type iText = iComponent<HTMLSpanElement> & {
   type: TEXT_TYPES;
@@ -20,17 +21,62 @@ const defaults: iText = {
   indent: false,
 };
 
+const style = {
+  text: css`
+    display: block;
+
+    &.txt-display,
+    &.txt-title,
+    &.txt-heading {
+      color: var(--clr-txt-personality);
+    }
+
+    &.txt-display,
+    &.txt-title,
+    &.txt-heading,
+    &.txt-subheading {
+      font-weight: 600;
+    }
+
+    &.txt-paragraph + .lbx-separator {
+      margin-top: var(--s-one-and-half);
+    }
+
+    &:not(.no-margins) {
+      &.txt-display,
+      &.txt-title,
+      &.txt-heading,
+      &.txt-subheading {
+        margin-bottom: var(--s-one-and-half);
+      }
+
+      &.txt-paragraph {
+        + .txt-display,
+        + .txt-title,
+        + .txt-heading,
+        + .txt-subheading {
+          margin-top: var(--s-triple);
+        }
+
+        + .txt-paragraph {
+          margin-top: var(--s-one-and-half);
+        }
+      }
+
+      &.txt-small {
+        margin: var(--s-one-and-half) 0;
+      }
+  `,
+};
+
 export default (props: Partial<iText>) => {
   const p = applyDefaults<iText>(defaults, props);
 
   const classes = partializeClasses({
     span: opt(
       cn(
-        'comp-text',
+        style.text,
         `txt-${p.type}`,
-        ['display', 'title', 'heading'].includes(p.type)
-          ? 'clr-txt-personality'
-          : null,
         p.compact ? 'compact' : null,
         p.single ? 'single' : null,
         p.noMargins ? 'no-margins' : null,

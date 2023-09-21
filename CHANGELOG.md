@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.2.14
+## v0.2.15
 
-- Added css-in-js styles to the `<Card/>` component.
-- Added a global stylesheet.
+- Added css-in-js styles to the `<Text/>` component.
+- Added a text test route.
+- Added a separator fix.
 
 ## Changes so far
 

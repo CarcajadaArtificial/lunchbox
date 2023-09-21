@@ -15,7 +15,11 @@ export default (props: Partial<iSeparator>) => {
   const p = props;
 
   const classes = partializeClasses({
-    separator: opt(cn(style.separator), p.class, p.nostyle || p.nostyleAll),
+    separator: opt(
+      cn(style.separator, 'lbx-separator'),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
   });
 
   delete p.class;
