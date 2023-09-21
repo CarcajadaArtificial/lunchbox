@@ -5,8 +5,11 @@ import Text from '../Text/index.tsx';
 export default function (props: Partial<iLinkmap>) {
   const { c, nostyle, nostyleAll, fref, fwd, links, ...p } = setup(props);
 
-  const renderRecursiveLinks = (links: iLinkmapitem[]) => (
-    <ul ref={fwd.list?.ref} class={c.list}>
+  const renderRecursiveLinks = (
+    links: iLinkmapitem[],
+    firstRecursion: boolean,
+  ) => (
+    <ul ref={fwd.list?.ref} class={!firstRecursion ? c.list : undefined}>
       {links.map((link) => (
         <li ref={fwd.item?.ref} class={c.item}>
           {link.url
@@ -31,7 +34,7 @@ export default function (props: Partial<iLinkmap>) {
               </Text>
             )}
           {link.children && link.children.length >= 0
-            ? renderRecursiveLinks(link.children)
+            ? renderRecursiveLinks(link.children, false)
             : null}
         </li>
       ))}
@@ -40,7 +43,7 @@ export default function (props: Partial<iLinkmap>) {
 
   return (
     <div ref={fref} {...p} class={c.linkmap}>
-      {renderRecursiveLinks(links)}
+      {renderRecursiveLinks(links, true)}
     </div>
   );
 }

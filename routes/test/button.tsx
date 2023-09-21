@@ -1,4 +1,13 @@
-import { Button, Header, Main, Text } from '../../mod.ts';
+import {
+  Button,
+  Header,
+  Link,
+  Linkmap,
+  Main,
+  Panel,
+  Separator,
+  Text,
+} from '../../mod.ts';
 
 export default function TestButton() {
   return (
@@ -15,6 +24,10 @@ export default function TestButton() {
           <Button type='panel'>panel</Button>
           <Button type='error'>error</Button>
           <Button type='disabled'>disabled</Button>
+          <Panel class='grid p-3'>
+            <Button type='panel'>panel</Button>
+            <Button type='invisible'>invisible</Button>
+          </Panel>
         </div>
         <div class='grid'>
           <Text type='subheading'>Types</Text>
@@ -30,6 +43,23 @@ export default function TestButton() {
           <Button>
             <Text noMargins type='subheading'>large</Text>
           </Button>
+        </div>
+        <div class='grid'>
+          <Text type='subheading'>Links</Text>
+          <Link>test link</Link>
+          <Separator />
+          <Linkmap
+            links={[{ name: 'empty link' }, {
+              name: 'normal link',
+              url: '/test/button',
+            }, {
+              name: 'group',
+              children: [{ name: 'empty link' }, {
+                name: 'normal link',
+                url: '/test/button',
+              }],
+            }]}
+          />
         </div>
       </Main>
     </>

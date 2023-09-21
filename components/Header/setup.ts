@@ -4,6 +4,7 @@ import { GRADIENT_PATTERNS, LAYOUT_TYPES } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { iGradient } from '../Gradient/setup.ts';
+import { css } from 'resin';
 
 export type iHeader = iComponent & {
   layout_type: LAYOUT_TYPES | null;
@@ -24,18 +25,31 @@ const defaults: iHeader = {
   fwd: {},
 };
 
+const style = {
+  header: css`
+    padding: var(--s-triple) 0;
+  `,
+
+  header_banner: css`
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  `,
+};
+
 export default (props: Partial<iHeader>) => {
   const p = applyDefaults<iHeader>(defaults, props);
 
   const { layout, panel, wrapper, gradient } = p.fwd;
 
   const classes = partializeClasses({
-    header: opt(cn('comp-header'), p.class, p.nostyle || p.nostyleAll),
+    header: opt(cn(style.header), p.class, p.nostyle || p.nostyleAll),
     layout: cn(layout?.class),
     wrapper: cn(wrapper?.class),
     gradient: cn(gradient?.class),
     panel: opt(
-      cn(p.banner ? 'comp-header_banner' : null),
+      cn(p.banner ? style.header_banner : null),
       panel?.class,
       panel?.nostyle || p.nostyleAll,
     ),

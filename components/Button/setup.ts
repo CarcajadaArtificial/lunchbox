@@ -92,9 +92,9 @@ export default (props: Partial<iButton>) => {
           : props.type === 'error'
           ? style.button_error
           : props.type === 'invisible'
-          ? style.button_invisible
+          ? [style.button_invisible, 'lbx-btn-invisible']
           : props.type === 'panel'
-          ? style.button_panel
+          ? [style.button_panel, 'lbx-btn-panel']
           : props.type === 'contrast'
           ? style.button_personality
           : style.button_personality,

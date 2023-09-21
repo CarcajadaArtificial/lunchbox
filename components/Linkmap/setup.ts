@@ -2,6 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iLink } from '../Link/setup.ts';
 import { iText } from '../Text/setup.ts';
+import { css } from 'resin';
 
 export type iLinkmapitem = {
   name: string;
@@ -24,15 +25,24 @@ const defaults: iLinkmap = {
   fwd: {},
 };
 
+const style = {
+  linkmap: css`
+    margin-bottom: var(--s-one-and-half);
+  `,
+  linkmap_list: css`
+    margin-left: var(--s-single);
+  `,
+};
+
 export default (props: Partial<iLinkmap>) => {
   const p = applyDefaults<iLinkmap>(defaults, props);
 
   const { list } = p.fwd;
 
   const classes = partializeClasses({
-    linkmap: opt(cn('comp-linkmap'), p.class, p.nostyle || p.nostyleAll),
+    linkmap: opt(cn(style.linkmap), p.class, p.nostyle || p.nostyleAll),
     list: opt(
-      cn('comp-linkmap_list'),
+      cn(style.linkmap_list),
       list?.class,
       list?.nostyle || p.nostyleAll,
     ),

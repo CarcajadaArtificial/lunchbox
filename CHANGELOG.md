@@ -1,11 +1,11 @@
 # Changelog
 
-## v0.2.12
+## v0.2.13
 
-- Added css-in-js styles to the `<Button/>` component.
-- Added the `button` testing page.
-- Added the `styles` utility file for the shared css-in-js styles.
-- Updated lunchbox-css.
+- Added css-in-js styles to the `<Code/>`, `<Footer/>`, `<Header/>`, `<Link/>`, `<Linkmap/>`, `<Main/>`, `<Panel/>`, `<Separator/>` components.
+- Minor fixes to the `<Button/>` component.
+- Minor fixes to `transition.interaction.outline`.
+- Added the index test route.
 
 ## Changes so far
 

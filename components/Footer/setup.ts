@@ -5,6 +5,7 @@ import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iLink } from '../Link/setup.ts';
 import { iGradient } from '../Gradient/setup.ts';
+import { css } from 'resin';
 
 export type iFooter = iComponent & {
   madeWithFresh: boolean;
@@ -28,6 +29,27 @@ const defaults: iFooter = {
   fwd: {},
 };
 
+const style = {
+  footer: css`
+    padding: var(--s-one-and-half) 0;
+  `,
+
+  footer_fresh_badge: css`
+    margin: var(--s-third) 0;
+
+    @media (prefers-color-scheme: dark) {
+      &.lbx-fresh-badge-light {
+        display: none;
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      &.lbx-fresh-badge-dark {
+        display: none;
+      }
+    }
+  `,
+};
+
 export default (props: Partial<iFooter>) => {
   props.children = props.children
     ? Array.isArray(props.children) ? props.children : [props.children]
@@ -38,23 +60,19 @@ export default (props: Partial<iFooter>) => {
   const { layout, wrapper, panel, badge_link, badge_dark, badge_light } = p.fwd;
 
   const classes = partializeClasses({
-    footer: opt(cn('comp-footer'), p.class, p.nostyle || p.nostyleAll),
+    footer: opt(cn(style.footer), p.class, p.nostyle || p.nostyleAll),
     wrapper: cn(wrapper?.class),
     layout: cn(layout?.class),
     panel: cn(panel?.class),
     gradient: cn(panel?.class),
-    badge_link: opt(
-      cn('made-with-fresh'),
-      badge_link?.class,
-      badge_link?.nostyle || p.nostyleAll,
-    ),
+    badge_link: cn(badge_link?.class),
     badge_light: opt(
-      cn('fresh-badge light'),
+      cn(style.footer_fresh_badge, 'lbx-fresh-badge-light'),
       badge_light?.class,
       badge_light?.nostyle || p.nostyleAll,
     ),
     badge_dark: opt(
-      cn('fresh-badge dark'),
+      cn(style.footer_fresh_badge, 'lbx-fresh-badge-dark'),
       badge_dark?.class,
       badge_dark?.nostyle || p.nostyleAll,
     ),
