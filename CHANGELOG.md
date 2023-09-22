@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.16
+## v0.2.17
 
-- Added css-in-js styles to the `<Chip/>` and `<Chiplist/>` components.
+- Added the `<Fieldset/>` component.
 
 ## Changes so far
 
@@ -10,6 +10,7 @@
 - Moved the stylesheets to another project.
 - Fixed shorthand import paths issue.
 - Fixed `SignalLike` type on component setup script.
+- Added the `<Fieldset/>` component.
 
 ## Roadmap
 
@@ -50,7 +51,7 @@
   - [x] Markdown
   - [ ] Menu
   - [ ] Page
-  - [ ] Fieldset
+  - [x] Fieldset
   - [x] Chip
     - [x] Chiplist
   - [ ] Spinner
@@ -67,6 +68,7 @@
   - [x] Extend Heading and Footer padding.
   - [ ] Remove global component properties from the setup spreads.
   - [ ] Update components to Resin's css-in-js schema.
+  - [ ] Fix the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
 
 ### v0.3
 
