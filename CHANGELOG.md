@@ -1,9 +1,11 @@
 # Changelog
 
-## v0.2.17
+## v0.2.18
 
-- Added the `<Fieldset/>` component.
-
+- Added the css-in-js ot the `<Input/>`, `<Select/>`, and `<TextArea/>` components.
+- Added the `input` shared style.
+- Fixed the `<Fieldset/>` component's horizontal position.
+ 
 ## Changes so far
 
 - Moved enums, types, utils and handlers out of `mod.ts`.

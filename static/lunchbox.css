@@ -13,3 +13,14 @@
     padding-left: var(--s-single);
   }
 }
+
+.lbx-input_box {
+  padding-bottom: calc(var(--s-single) + var(--s-three-eights));
+}
+
+.lbx-fieldset,
+.lbx-input_box .lbx-input,
+.lbx-input_box .lbx-textarea,
+.lbx-input_box .lbx-select {
+  width: calc(100% + var(--s-half));
+}

@@ -24,8 +24,10 @@ const defaults: iFieldset = {
 
 const style = {
   fieldset: css`
+    position: relative;
+    right: var(--s-half);
     background-color: var(--clr-bg-panel-15);
-    padding: var(--s-half) var(--s-single);
+    padding: var(--s-half);
     border-radius: var(--s-quarter);
     margin-bottom: var(--s-single);
     max-width: 24rem;
@@ -40,11 +42,19 @@ const style = {
 export default (props: Partial<iFieldset>) => {
   const p = applyDefaults<iFieldset>(defaults, props);
 
-  const {} = p.fwd;
+  const { legend } = p.fwd;
 
   const classes = partializeClasses({
-    fieldset: opt(cn(style.fieldset), p.class, p.nostyle || p.nostyleAll),
-    legend: 'undefined',
+    fieldset: opt(
+      cn('lbx-fieldset', style.fieldset),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
+    legend: opt(
+      cn(style.legend),
+      legend?.class,
+      legend?.nostyle || p.nostyleAll,
+    ),
   });
 
   delete p.class;

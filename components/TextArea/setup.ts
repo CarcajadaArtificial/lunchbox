@@ -1,5 +1,6 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
+import { inputStyles } from '../../src/styles.ts';
 
 export type iTextArea = iComponent<HTMLTextAreaElement> & {
   label: string;
@@ -32,33 +33,35 @@ export default (props: Partial<iTextArea>) => {
   const classes = partializeClasses({
     input: opt(
       cn(
-        'comp-textarea',
+        'lbx-textarea',
+        inputStyles.part.input,
         p.noResize ? 'resize-none' : null,
-        p.error ? 'comp-textarea-bg_error' : null,
+        p.error ? inputStyles.part.bgError : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
     ),
-    text: cn(text?.class),
+    text: opt(cn('select-none'), text?.class, text?.nostyle || p.nostyleAll),
     label: opt(
-      cn('comp-textarea_label'),
+      cn('lbx-input-label', inputStyles.part.label),
       label?.class,
       label?.nostyle || p.nostyleAll,
     ),
     error: opt(
-      cn('comp-textarea_error clr-txt-error'),
+      cn(inputStyles.part.error),
       error?.class,
       error?.nostyle || p.nostyleAll,
     ),
     required: opt(
-      cn('comp-textarea_required clr-txt-error'),
+      cn(inputStyles.part.required),
       required?.class,
       required?.nostyle || p.nostyleAll,
     ),
     container: opt(
       cn(
-        'comp-textarea_container comp-input_box',
-        p.maxWidth ? 'comp-input_maxwidth' : null,
+        inputStyles.part.container,
+        [inputStyles.kind.box, 'lbx-input_box'],
+        p.maxWidth ? 'lbx-input_maxwidth' : null,
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,

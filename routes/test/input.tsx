@@ -43,7 +43,7 @@ export default function TestInput() {
             values={['option a', 'option b', 'option c']}
           />
           <Fieldset
-            name='test-a'
+            name='test-b'
             legend='checkbox fieldset'
             values={['option a', 'option b', 'option c']}
             allowMultiple
