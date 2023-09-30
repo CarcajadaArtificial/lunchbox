@@ -10,12 +10,12 @@
  */
 
 export type LAYOUT_TYPES =
+  | 'empty'
   | 'full'
   | 'center'
   | 'focus'
   | 'halves'
   | 'thirds'
-  | 'quarters'
   | 'right'
   | 'left';
 

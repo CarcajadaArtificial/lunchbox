@@ -1,8 +1,9 @@
 # Changelog
 
-## v0.2.20
+## v0.2.21
 
-- Added the `<Code/>` component to the text test page.
+- Added css-in-js in the `<Layout/>` component.
+- Added pseudo-twind and gradients to the css module.
  
 ## Changes so far
 

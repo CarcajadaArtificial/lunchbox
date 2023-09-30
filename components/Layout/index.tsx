@@ -2,9 +2,10 @@ import setup, { iLayout } from './setup.ts';
 import { ComponentChild } from 'preact';
 
 export default function (props: Partial<iLayout>) {
-  const { c, nostyle, nostyleAll, fref, fwd, type, children, ...p } = setup(
-    props,
-  );
+  const { c, nostyle, nostyleAll, fref, fwd, type, dashboard, children, ...p } =
+    setup(
+      props,
+    );
 
   return (
     <div ref={fref} {...p} class={c.layout}>
