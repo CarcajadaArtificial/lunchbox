@@ -224,8 +224,8 @@ export const globalStyles = {
       --txt-display: 3.8146972656rem / 4.5rem;
 
       --font-mono: 'Fira Code', ui-monospace, monospace;
-      --font-base: 'Figtree', sans-serif;
-      --font-heading: 'Libre Caslon Text', serif;
+      --font-base: 'Figtree', system-ui, ui-sans-serif, sans-serif;
+      --font-heading: 'Libre Caslon Text', ui-serif serif;
     }
 
     .txt-small { 

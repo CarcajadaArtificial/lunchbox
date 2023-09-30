@@ -1,4 +1,4 @@
-import { Header, Main, Separator, Text } from '../../mod.ts';
+import { Code, Header, Main, Separator, Text } from '../../mod.ts';
 
 export default function TestText() {
   return (
@@ -8,23 +8,30 @@ export default function TestText() {
       </Header>
       <Main layout_type='center'>
         <div>
-          <Text type='title'>Title</Text>
+          <Text type='title'>
+            Title <Code>{'<Code/>'}</Code>
+          </Text>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita
+            autem optio quidem! <Code>{'<Code/>'}</Code>
+          </Text>
+          <Text type='heading'>
+            Heading <Code>{'<Code/>'}</Code>
+          </Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita
             autem optio quidem!
           </Text>
-          <Text type='heading'>Heading</Text>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita
-            autem optio quidem!
+          <Text type='subheading'>
+            Subheading <Code>{'<Code/>'}</Code>
           </Text>
-          <Text type='subheading'>Subheading</Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita
             autem optio quidem!
           </Text>
           <Text type='small'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+            <Code>{'<Code/>'}</Code>
           </Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita

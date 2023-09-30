@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.19
+## v0.2.20
 
-- Added Global styles and fonts
+- Added the `<Code/>` component to the text test page.
  
 ## Changes so far
 
@@ -11,6 +11,7 @@
 - Fixed shorthand import paths issue.
 - Fixed `SignalLike` type on component setup script.
 - Added the `<Fieldset/>` component.
+- Added Global styles and fonts
 
 ## Roadmap
 
