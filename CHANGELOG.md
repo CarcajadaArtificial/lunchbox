@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.2.18
+## v0.2.19
 
-- Added the css-in-js ot the `<Input/>`, `<Select/>`, and `<TextArea/>` components.
-- Added the `input` shared style.
-- Fixed the `<Fieldset/>` component's horizontal position.
+- Added Global styles and fonts
  
 ## Changes so far
 
@@ -18,24 +16,18 @@
 
 ### v0.2
 
-- [ ] Update components to GarliCSS animations.
+- [x] Update components to GarliCSS animations.
   - [x] Button (click, focus, hover)
-  - [ ] Navigation
   - [x] Input (focus)
   - [x] Select (focus)
   - [x] TextArea (focus)
   - [x] Link (focus, hover)
-  - [ ] Markdown (heading link hover)
 - [ ] Markdown missing features that should also be components:
   - [ ] List
   - [ ] Blockquote
 - [ ] Create an organized collection of island functions
 - [ ] Update component features
-  - [ ] **Card**: Add text, image, gradient spacers, and chips feature.
-  - [ ] **Navigation**: Add appear/disappear when scrolling interaction on a
-        fixed navigation.
-  - [ ] **Code**: Add copy to clipboard.
-  - [ ] **Separator**: Add gradient separators.
+  - [x] **Card**: Add text, image, gradient spacers, and chips feature.
   - [x] **Header**, **Footer**: Add spacers with gradients that change.
   - [ ] **Button**
     - [ ] Add small variation.
@@ -43,23 +35,25 @@
     - [ ] Add variation with a kbd element inside.
     - [ ] Add variation with a code element inside.
     - [ ] Add variation with an icon inside.
-  - [ ] **Panel**
-    - [ ] Add style condition for button_invisible and button_panel's background color.
+  - [x] **Panel**
+    - [x] Add style condition for button_invisible and button_panel's background color.
   - [ ] **Chip**
-    - [ ] If there `onRemove` is undefined, do not show the close icon.
+    - [x] If there `onRemove` is undefined, do not show the close icon.
     - [ ] Change the close icon to a standard icon.
 - [ ] Add components
   - [ ] Time
   - [x] Markdown
   - [ ] Menu
-  - [ ] Page
   - [x] Fieldset
   - [x] Chip
     - [x] Chiplist
   - [ ] Spinner
   - [ ] Screen
   - [ ] Dialog
-  - [ ] Image
+  - [ ] Stylesheets (includes ResinCSSEmitter)
+    - [ ] Fonts
+    - [ ] Themes
+    - [ ] Reset
   - [x] Gradient
   - [ ] Kbd
 - [ ] Minor updates
@@ -69,9 +63,21 @@
   - [x] Add a tabindex to the Link component.
   - [x] Extend Heading and Footer padding.
   - [ ] Remove global component properties from the setup spreads.
-  - [ ] Update components to Resin's css-in-js schema.
+  - [x] Update components to Resin's css-in-js schema.
   - [ ] Fix the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
 
 ### v0.3
 
 - [ ] Make component's default prop values configurable.
+- [ ] Components
+  - [ ] `<Input/>`
+    - [ ] Enhance types color, range and file.
+  - [ ] `<Markdown/>`
+    - [ ] Add css-in-js styles.
+- [ ] Finish CSS-in-JS migration
+  - [ ] Add grid and layout styles.
+  - [ ] Add reset as global styles.
+  - [ ] Add size global styles.
+  - [ ] Add theme styles.
+  - [ ] Add font configuration.
+

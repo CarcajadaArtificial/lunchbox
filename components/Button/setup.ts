@@ -20,7 +20,7 @@ const style = {
     margin: var(--s-third) 0 var(--s-two-thirds) 0;
     max-width: max-content;
     cursor: pointer;
-    border-radius: var(--s-eighth);
+    border-radius: var(--s-quarter);
     margin-right: var(--s-eighth);
   `,
 

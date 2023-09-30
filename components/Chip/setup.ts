@@ -22,15 +22,15 @@ const style = {
     padding-left: var(--s-half);
     display: flex;
     align-items: center;
-    border-radius: var(--s-eighth);
-    background-color: var(--clr-bg-personality-60);
+    border-radius: var(--s-quarter);
+    background-color: var(--clr-bg-personality);
   `,
   remove: css`
     width: var(--s-one-and-half);
     text-align: center;
     font-size: 140%;
     height: var(--s-one-and-half);
-    border-radius: var(--s-eighth);
+    border-radius: var(--s-quarter);
   `,
   content: css`
     max-width: var(--s-fifteen);
