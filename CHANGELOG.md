@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.2.22
+## v0.2.23
 
-- Added css-in-js in the `<Markdown/>` component.
-- Removed the `lunchbox-css` module for good.
+- Added the `<Stylesheet/>` component.
+- Removed the `lunchbox.css` stylesheet.
  
 ## Changes so far
 
@@ -12,6 +12,7 @@
 - Fixed shorthand import paths issue.
 - Fixed `SignalLike` type on component setup script.
 - Added the `<Fieldset/>` component.
+- Added the `<Stylesheet/>` component.
 - Added Global styles and fonts
 
 ## Roadmap
@@ -24,8 +25,8 @@
   - [x] Select (focus)
   - [x] TextArea (focus)
   - [x] Link (focus, hover)
-- [ ] Markdown missing features that should also be components:
-  - [ ] List
+- [x] Markdown missing features that should also be components:
+  - [x] List
   - [ ] Blockquote
 - [ ] Create an organized collection of island functions
 - [ ] Update component features
@@ -53,9 +54,6 @@
   - [ ] Screen
   - [ ] Dialog
   - [ ] Stylesheets (includes ResinCSSEmitter)
-    - [ ] Fonts
-    - [ ] Themes
-    - [ ] Reset
   - [x] Gradient
   - [ ] Kbd
 - [ ] Minor updates
