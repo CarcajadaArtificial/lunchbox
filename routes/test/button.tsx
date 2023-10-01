@@ -10,6 +10,7 @@ import {
   Separator,
   Text,
 } from '../../mod.ts';
+import IconEdit from 'icons/edit.tsx';
 
 export default function TestButton() {
   return (
@@ -18,21 +19,29 @@ export default function TestButton() {
         <Text type='title'>Button tests</Text>
       </Header>
       <Main layout_type='thirds'>
-        <div class='grid'>
+        <div>
           <Text type='subheading'>Types</Text>
-          <Button>default</Button>
-          <Button type='contrast'>contrast</Button>
-          <Button type='invisible'>invisible</Button>
-          <Button type='panel'>panel</Button>
-          <Button type='error'>error</Button>
-          <Button type='disabled'>disabled</Button>
-          <Panel class='grid p-3'>
-            <Button type='panel'>panel</Button>
-            <Button type='invisible'>invisible</Button>
-          </Panel>
+          <div class='flex'>
+            <div class='flex-1 grid gap-3 p-3'>
+              <Button>default</Button>
+              <Button type='contrast'>contrast</Button>
+              <Button type='panel'>panel</Button>
+              <Button type='invisible'>invisible</Button>
+              <Button type='error'>error</Button>
+              <Button type='disabled'>disabled</Button>
+            </div>
+            <Panel class='flex-1 grid gap-3 p-3'>
+              <Button>default</Button>
+              <Button type='contrast'>contrast</Button>
+              <Button type='panel'>panel</Button>
+              <Button type='invisible'>invisible</Button>
+              <Button type='error'>error</Button>
+              <Button type='disabled'>disabled</Button>
+            </Panel>
+          </div>
         </div>
-        <div class='grid'>
-          <Text type='subheading'>Types</Text>
+        <div class='grid gap-3'>
+          <Text type='subheading'>Content</Text>
           <Button>
             Press <Kbd>k</Kbd> to continue
           </Button>
@@ -40,7 +49,7 @@ export default function TestButton() {
             Continue and run <Code>npm init</Code>
           </Button>
           <Button>
-            icon <i>i</i>
+            Edit <IconEdit />
           </Button>
           <Button>
             <Text noMargins type='small'>small</Text>

@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.27
+## v0.2.28
 
-- Minor layout fixes
+- Added custom styles for icons inside the `<Button/>` component.
  
 ## Changes so far
 
@@ -39,7 +39,7 @@
     - [ ] Add large variation.
     - [x] Add variation with a kbd element inside.
     - [x] Add variation with a code element inside.
-    - [ ] Add variation with an icon inside.
+    - [x] Add variation with an icon inside.
   - [x] **Panel**
     - [x] Add style condition for button_invisible and button_panel's background color.
   - [ ] **Chip**

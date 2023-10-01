@@ -17,11 +17,17 @@ const defaults: iButton = {
 const style = {
   button: css`
     padding: var(--s-quarter) var(--s-five-eights);
-    margin: var(--s-third) 0 var(--s-two-thirds) 0;
     max-width: max-content;
     cursor: pointer;
     border-radius: var(--s-quarter);
     margin-right: var(--s-eighth);
+
+    svg {
+      display: inline;
+      width: var(--s-single);
+      position: relative;
+      bottom: var(--s-eighth);
+    }
   `,
 
   button_personality: css`

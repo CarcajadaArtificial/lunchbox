@@ -29,6 +29,7 @@
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
     "$std/": "https://deno.land/std@0.193.0/",
+    "icons/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
     "resin": "https://deno.land/x/resin@v0.1.6/mod.ts",
     "ptera": "https://deno.land/x/ptera@v1.0.2/mod.ts"
   }
