@@ -7,8 +7,8 @@ export type iNavigation = iComponent & {
   fixed: boolean;
   fwd: Partial<{
     wrapper: iFwd<HTMLDivElement>;
-    panel: iPanel;
-    layout: iLayout;
+    panel: Partial<iPanel>;
+    layout: Partial<iLayout>;
   }>;
 };
 

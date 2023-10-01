@@ -12,11 +12,11 @@ export type iFooter = iComponent & {
   layout_type: LAYOUT_TYPES | null;
   gradient_pattern: GRADIENT_PATTERNS | null;
   fwd: Partial<{
-    layout: iLayout;
-    panel: iPanel;
+    layout: Partial<iLayout>;
+    panel: Partial<iPanel>;
     wrapper: iFwd<HTMLDivElement>;
-    gradient: iGradient;
-    badge_link: iLink;
+    gradient: Partial<iGradient>;
+    badge_link: Partial<iLink>;
     badge_light: iFwd<HTMLImageElement>;
     badge_dark: iFwd<HTMLImageElement>;
   }>;

@@ -15,8 +15,8 @@ export type iLinkmap = iComponent<HTMLDivElement> & {
   fwd: Partial<{
     list: iFwd<HTMLUListElement>;
     item: iFwd<HTMLLIElement>;
-    link: iLink;
-    text: iText;
+    link: Partial<iLink>;
+    text: Partial<iText>;
   }>;
 };
 

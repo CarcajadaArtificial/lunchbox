@@ -7,7 +7,7 @@ import { css } from 'resin';
 export type iMain = iComponent & {
   layout_type: LAYOUT_TYPES | null;
   fwd: Partial<{
-    layout: iLayout;
+    layout: Partial<iLayout>;
   }>;
 };
 

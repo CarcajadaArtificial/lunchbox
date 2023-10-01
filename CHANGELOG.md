@@ -1,19 +1,19 @@
 # Changelog
 
-## v0.2.23
+## v0.2.24
 
-- Added the `<Stylesheet/>` component.
-- Removed the `lunchbox.css` stylesheet.
+- Fixed the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
  
 ## Changes so far
 
-- Moved enums, types, utils and handlers out of `mod.ts`.
-- Moved the stylesheets to another project.
-- Fixed shorthand import paths issue.
-- Fixed `SignalLike` type on component setup script.
 - Added the `<Fieldset/>` component.
 - Added the `<Stylesheet/>` component.
 - Added Global styles and fonts
+- Moved enums, types, utils and handlers out of `mod.ts`.
+- Moved the stylesheets to css-in-js.
+- Fixed shorthand import paths issue.
+- Fixed `SignalLike` type on component setup script.
+- Fixed the missing `Partial<>` in subcomponent types.
 
 ## Roadmap
 
@@ -27,7 +27,7 @@
   - [x] Link (focus, hover)
 - [x] Markdown missing features that should also be components:
   - [x] List
-  - [ ] Blockquote
+  - [x] Blockquote
 - [ ] Create an organized collection of island functions
 - [ ] Update component features
   - [x] **Card**: Add text, image, gradient spacers, and chips feature.
@@ -62,9 +62,9 @@
   - [x] Fix layout responsivity.
   - [x] Add a tabindex to the Link component.
   - [x] Extend Heading and Footer padding.
-  - [ ] Remove global component properties from the setup spreads.
+  - [x] Remove global component properties from the setup spreads.
   - [x] Update components to Resin's css-in-js schema.
-  - [ ] Fix the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
+  - [x] Fix the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
 
 ### v0.3
 

@@ -8,10 +8,10 @@ export type iInput = iComponent<HTMLInputElement> & {
   error: string | null;
   maxWidth: boolean;
   fwd: Partial<{
-    text: iText;
+    text: Partial<iText>;
     label: iFwd<HTMLLabelElement>;
-    error: iText;
-    required: iFwd;
+    error: Partial<iText>;
+    required: Partial<iFwd>;
     container: iFwd<HTMLDivElement>;
   }>;
 };

@@ -11,10 +11,10 @@ export type iHeader = iComponent & {
   banner: boolean;
   gradient_pattern: GRADIENT_PATTERNS | null;
   fwd: Partial<{
-    layout: iLayout;
-    panel: iPanel;
+    layout: Partial<iLayout>;
+    panel: Partial<iPanel>;
     wrapper: iFwd<HTMLDivElement>;
-    gradient: iGradient;
+    gradient: Partial<iGradient>;
   }>;
 };
 
