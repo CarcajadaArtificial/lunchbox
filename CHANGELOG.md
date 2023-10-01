@@ -1,13 +1,14 @@
 # Changelog
 
-## v0.2.25
+## v0.2.26
 
-- Added the `<Time/>` component.
+- Added the `<Kbd/>` component.
  
 ## Changes so far
 
 - Added the `<Fieldset/>` component.
 - Added the `<Stylesheet/>` component.
+- Added the `<Kbd/>` component.
 - Added the `<Time/>` component with ptera formating implemented out of the box.
 - Added Global styles and fonts
 - Moved enums, types, utils and handlers out of `mod.ts`.
@@ -36,8 +37,8 @@
   - [ ] **Button**
     - [ ] Add small variation.
     - [ ] Add large variation.
-    - [ ] Add variation with a kbd element inside.
-    - [ ] Add variation with a code element inside.
+    - [x] Add variation with a kbd element inside.
+    - [x] Add variation with a code element inside.
     - [ ] Add variation with an icon inside.
   - [x] **Panel**
     - [x] Add style condition for button_invisible and button_panel's background color.
@@ -52,11 +53,10 @@
   - [x] Chip
     - [x] Chiplist
   - [ ] Spinner
-  - [ ] Screen
   - [ ] Dialog
   - [x] Stylesheets (includes ResinCSSEmitter)
   - [x] Gradient
-  - [ ] Kbd
+  - [x] Kbd
 - [x] Minor updates
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.

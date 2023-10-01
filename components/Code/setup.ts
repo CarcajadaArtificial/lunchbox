@@ -23,6 +23,7 @@ const style = {
     padding: 3px 0.5ch 1px 0.5ch;
     margin: 0 0.5ch;
     background-color: var(--clr-bg-panel);
+    border-radius: var(--s-quarter);
   `,
 };
 

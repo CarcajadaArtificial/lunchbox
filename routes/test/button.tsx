@@ -1,6 +1,8 @@
 import {
   Button,
+  Code,
   Header,
+  Kbd,
   Link,
   Linkmap,
   Main,
@@ -32,7 +34,10 @@ export default function TestButton() {
         <div class='grid'>
           <Text type='subheading'>Types</Text>
           <Button>
-            kbd <kbd>key</kbd>
+            Press <Kbd>k</Kbd> to continue
+          </Button>
+          <Button>
+            Continue and run <Code>npm init</Code>
           </Button>
           <Button>
             icon <i>i</i>

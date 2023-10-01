@@ -6,6 +6,7 @@ import {
   Code,
   Footer,
   Header,
+  Kbd,
   Layout,
   Main,
   Separator,
@@ -21,11 +22,18 @@ export default function TestHome() {
       </Header>
       <Main>
         <Layout type='center'>
+          <Text class='mb-3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+            fugit nisi eaque laborum minus sequi est iste nulla aliquid quaerat
+            consequatur, reprehenderit accusamus, provident a aspernatur cumque
+            ut atque. Consequuntur.
+          </Text>
+          <Text>
+            Press <Kbd>x</Kbd> to continue.
+          </Text>
+          <Separator />
           <Time />
-          <div class='grid'>
-            <Code>Test code</Code>
-            <Separator />
-          </div>
+          <Separator />
         </Layout>
         <Layout type='left'>
           <div>
