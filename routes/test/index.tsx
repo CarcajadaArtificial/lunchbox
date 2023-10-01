@@ -10,6 +10,7 @@ import {
   Main,
   Separator,
   Text,
+  Time,
 } from '../../mod.ts';
 
 export default function TestHome() {
@@ -20,6 +21,7 @@ export default function TestHome() {
       </Header>
       <Main>
         <Layout type='center'>
+          <Time />
           <div class='grid'>
             <Code>Test code</Code>
             <Separator />

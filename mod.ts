@@ -20,3 +20,4 @@ export { default as Chip } from './components/Chip/index.tsx';
 export { default as Chiplist } from './components/Chiplist/index.tsx';
 export { default as Fieldset } from './components/Fieldset/index.tsx';
 export { default as Stylesheet } from './components/Stylesheet/index.tsx';
+export { default as Time } from './components/Time/index.tsx';

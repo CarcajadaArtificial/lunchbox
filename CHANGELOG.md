@@ -1,13 +1,14 @@
 # Changelog
 
-## v0.2.24
+## v0.2.25
 
-- Fixed the Fwd interface in molecule setups. `Partial<>` is missing in subcomponent types.
+- Added the `<Time/>` component.
  
 ## Changes so far
 
 - Added the `<Fieldset/>` component.
 - Added the `<Stylesheet/>` component.
+- Added the `<Time/>` component with ptera formating implemented out of the box.
 - Added Global styles and fonts
 - Moved enums, types, utils and handlers out of `mod.ts`.
 - Moved the stylesheets to css-in-js.
@@ -44,7 +45,7 @@
     - [x] If there `onRemove` is undefined, do not show the close icon.
     - [ ] Change the close icon to a standard icon.
 - [ ] Add components
-  - [ ] Time
+  - [x] Time
   - [x] Markdown
   - [ ] Menu
   - [x] Fieldset
@@ -53,10 +54,10 @@
   - [ ] Spinner
   - [ ] Screen
   - [ ] Dialog
-  - [ ] Stylesheets (includes ResinCSSEmitter)
+  - [x] Stylesheets (includes ResinCSSEmitter)
   - [x] Gradient
   - [ ] Kbd
-- [ ] Minor updates
+- [x] Minor updates
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
   - [x] Fix layout responsivity.
