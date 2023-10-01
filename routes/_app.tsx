@@ -4,7 +4,6 @@ import { css, ResinCssEmitter, ResinCssGlobalStyle } from 'resin';
 import { globalStyles, themeStyles } from '../src/styles.ts';
 
 export default function App({ Component }: AppProps) {
-  const testing = false;
   return (
     <html>
       <Head>
@@ -19,12 +18,6 @@ export default function App({ Component }: AppProps) {
             ${globalStyles.fonts}
             ${themeStyles.newspaper}
           `}
-        />
-        <link
-          rel='stylesheet'
-          href={testing
-            ? '/style.css'
-            : 'https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox-css@v0.0.31/dist/presets/standard/style.css'}
         />
         <ResinCssEmitter />
         <link rel='stylesheet' href='/lunchbox.css' />

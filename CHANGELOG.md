@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.2.21
+## v0.2.22
 
-- Added css-in-js in the `<Layout/>` component.
-- Added pseudo-twind and gradients to the css module.
+- Added css-in-js in the `<Markdown/>` component.
+- Removed the `lunchbox-css` module for good.
  
 ## Changes so far
 
@@ -74,12 +74,12 @@
 - [ ] Components
   - [ ] `<Input/>`
     - [ ] Enhance types color, range and file.
-  - [ ] `<Markdown/>`
-    - [ ] Add css-in-js styles.
-- [ ] Finish CSS-in-JS migration
-  - [ ] Add grid and layout styles.
-  - [ ] Add reset as global styles.
-  - [ ] Add size global styles.
-  - [ ] Add theme styles.
-  - [ ] Add font configuration.
+  - [x] `<Markdown/>`
+    - [x] Add css-in-js styles.
+- [x] Finish CSS-in-JS migration
+  - [x] Add grid and layout styles.
+  - [x] Add reset as global styles.
+  - [x] Add size global styles.
+  - [x] Add theme styles.
+  - [x] Add font configuration.
 
