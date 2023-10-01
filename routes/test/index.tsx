@@ -21,22 +21,22 @@ export default function TestHome() {
         <Text type='title'>Misc tests</Text>
       </Header>
       <Main>
-        <Layout type='center'>
-          <Text class='mb-3'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            fugit nisi eaque laborum minus sequi est iste nulla aliquid quaerat
-            consequatur, reprehenderit accusamus, provident a aspernatur cumque
-            ut atque. Consequuntur.
-          </Text>
-          <Text>
-            Press <Kbd>x</Kbd> to continue.
-          </Text>
-          <Separator />
-          <Time />
-          <Separator />
-        </Layout>
-        <Layout type='left'>
+        <Layout type='left' dashboard>
           <div>
+            <div>
+              <Text class='mb-3'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita, fugit nisi eaque laborum minus sequi est iste nulla
+                aliquid quaerat consequatur, reprehenderit accusamus, provident
+                a aspernatur cumque ut atque. Consequuntur.
+              </Text>
+              <Text>
+                Press <Kbd>x</Kbd> to continue.
+              </Text>
+              <Separator />
+              <Time />
+              <Separator />
+            </div>
             <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
               <Text noMargins type='subheading'>Card title</Text>
               <Text>

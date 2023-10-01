@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.26
+## v0.2.27
 
-- Added the `<Kbd/>` component.
+- Minor layout fixes
  
 ## Changes so far
 

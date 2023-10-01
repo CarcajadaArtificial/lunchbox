@@ -88,20 +88,32 @@ const styles: {
     `,
     right: css`
       grid-column: span 4;
-      &:nth-child(even) {
-        grid-column: span 8;
-      }
+
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;
+      }
+
+      &:nth-child(even) {
+        grid-column: span 8;
+
+        @media screen and (max-width: 39.9375em) {
+          grid-column: span 6;
+        }
       }
     `,
     left: css`
       grid-column: span 4;
-      &:nth-child(odd) {
-        grid-column: span 8;
-      }
+
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;
+      }
+      
+      &:nth-child(odd) {
+        grid-column: span 8;
+
+        @media screen and (max-width: 39.9375em) {
+          grid-column: span 6;
+        }
       }
     `,
   },
