@@ -10,6 +10,7 @@ import {
   Layout,
   Loader,
   Main,
+  Menu,
   Separator,
   Text,
   Time,
@@ -24,6 +25,12 @@ export default function TestHome() {
       <Main>
         <Layout type='left' dashboard>
           <>
+            <Menu
+              open
+              menuOptions={{ test: 'abc', test2: 'abc' }}
+            >
+              Test
+            </Menu>
             <div>
               <Text class='mb-3'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -16,6 +16,7 @@ export { default as Linkmap } from './components/Linkmap/index.tsx';
 export { default as Loader } from './components/Loader/index.tsx';
 export { default as Main } from './components/Main/index.tsx';
 export { default as Markdown } from './components/Markdown/index.tsx';
+export { default as Menu } from './components/Menu/index.tsx';
 export { default as Navigation } from './components/Navigation/index.tsx';
 export { default as Panel } from './components/Panel/index.tsx';
 export { default as Select } from './components/Select/index.tsx';

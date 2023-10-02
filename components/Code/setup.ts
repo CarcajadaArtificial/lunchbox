@@ -18,7 +18,7 @@ const style = {
     line-height: calc(100% - 1px);
     color: var(--clr-txt-personality);
   `,
-  code_wrapper: css`
+  wrapper: css`
     display: inline;
     padding: 3px 0.5ch 1px 0.5ch;
     margin: 0 0.5ch;
@@ -39,7 +39,7 @@ export default (props: Partial<iCode>) => {
       p.nostyle || p.nostyleAll,
     ),
     wrapper: opt(
-      cn(style.code_wrapper),
+      cn(style.wrapper),
       wrapper?.class,
       wrapper?.nostyle || p.nostyleAll,
     ),

@@ -35,3 +35,9 @@ export type BUTTON_TYPES =
   | 'invisible';
 
 export type GRADIENT_PATTERNS = 'cloud' | 'zigzag' | 'wave';
+
+export type MENU_POSITIONS =
+  | 'top-right'
+  | 'top-left'
+  | 'bottom-right'
+  | 'bottom-left';
