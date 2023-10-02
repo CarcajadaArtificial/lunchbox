@@ -13,6 +13,7 @@ export { default as Kbd } from './components/Kbd/index.tsx';
 export { default as Layout } from './components/Layout/index.tsx';
 export { default as Link } from './components/Link/index.tsx';
 export { default as Linkmap } from './components/Linkmap/index.tsx';
+export { default as Loader } from './components/Loader/index.tsx';
 export { default as Main } from './components/Main/index.tsx';
 export { default as Markdown } from './components/Markdown/index.tsx';
 export { default as Navigation } from './components/Navigation/index.tsx';

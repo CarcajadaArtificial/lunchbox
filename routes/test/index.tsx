@@ -8,6 +8,7 @@ import {
   Header,
   Kbd,
   Layout,
+  Loader,
   Main,
   Separator,
   Text,
@@ -22,7 +23,7 @@ export default function TestHome() {
       </Header>
       <Main>
         <Layout type='left' dashboard>
-          <div>
+          <>
             <div>
               <Text class='mb-3'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,16 +54,20 @@ export default function TestHome() {
             <div class='mt-6'>
               <Chiplist values={['chiplist 1', 'chiplist 2', 'chiplist 3']} />
             </div>
-          </div>
-          <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
-            <Text noMargins type='subheading'>Card title</Text>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Text>
-            <div class='mt-3'>
-              <Button>Action</Button>
-            </div>
-          </Card>
+          </>
+          <>
+            <Loader />
+            <Separator />
+            <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
+              <Text noMargins type='subheading'>Card title</Text>
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </Text>
+              <div class='mt-3'>
+                <Button>Action</Button>
+              </div>
+            </Card>
+          </>
         </Layout>
         <Dialog>Test</Dialog>
       </Main>

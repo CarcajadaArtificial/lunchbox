@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.30
+## v0.2.31
 
-- Change the close icon to a standard icon in the `<Chip/>` component.
+- Added the `<Loader/>` component.
  
 ## Changes so far
 
@@ -53,7 +53,7 @@
   - [x] Stylesheets (includes ResinCSSEmiutter)
   - [x] Gradient
   - [x] Kbd
-  - [ ] Spinner
+  - [x] Loader
   - [ ] Menu
 - [x] Minor updates
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.

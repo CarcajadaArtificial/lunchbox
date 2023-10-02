@@ -16,6 +16,41 @@ export const transition = {
   },
 };
 
+export const animation = {
+  spin: css`
+    animation: spin 1s ease-in-out infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  `,
+
+  float: css`
+    position: relative;
+    top: 0.25rem;
+    animation: float 3s infinite;
+    
+    @keyframes float {
+      from {
+        top: 0.25rem;
+      }
+    
+      50% {
+        top: -0.25rem;
+      }
+    
+      to {
+        top: 0.25rem;
+      }
+    }
+  `,
+};
+
 export const inputStyles = {
   part: {
     input: css`
