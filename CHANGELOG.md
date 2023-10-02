@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.28
+## v0.2.29
 
-- Added custom styles for icons inside the `<Button/>` component.
+- Added the `<Dialog/>` component.
  
 ## Changes so far
 
@@ -10,6 +10,7 @@
 - Added the `<Stylesheet/>` component.
 - Added the `<Kbd/>` component.
 - Added the `<Time/>` component with ptera formating implemented out of the box.
+- Added the `<Dialog/>` component.
 - Added Global styles and fonts
 - Moved enums, types, utils and handlers out of `mod.ts`.
 - Moved the stylesheets to css-in-js.
@@ -30,13 +31,10 @@
 - [x] Markdown missing features that should also be components:
   - [x] List
   - [x] Blockquote
-- [ ] Create an organized collection of island functions
 - [ ] Update component features
   - [x] **Card**: Add text, image, gradient spacers, and chips feature.
   - [x] **Header**, **Footer**: Add spacers with gradients that change.
-  - [ ] **Button**
-    - [ ] Add small variation.
-    - [ ] Add large variation.
+  - [x] **Button**
     - [x] Add variation with a kbd element inside.
     - [x] Add variation with a code element inside.
     - [x] Add variation with an icon inside.
@@ -53,8 +51,8 @@
   - [x] Chip
     - [x] Chiplist
   - [ ] Spinner
-  - [ ] Dialog
-  - [x] Stylesheets (includes ResinCSSEmitter)
+  - [x] Dialog
+  - [x] Stylesheets (includes ResinCSSEmiutter)
   - [x] Gradient
   - [x] Kbd
 - [x] Minor updates
@@ -69,12 +67,17 @@
 
 ### v0.3
 
-- [ ] Make component's default prop values configurable.
+- [ ] Features
+  - [ ] Create an organized collection of island functions
+  - [ ] Make component's default prop values configurable.
 - [ ] Components
   - [ ] `<Input/>`
     - [ ] Enhance types color, range and file.
   - [x] `<Markdown/>`
     - [x] Add css-in-js styles.
+  - [ ] `<Button/>`
+    - [ ] Add small variation.
+    - [ ] Add large variation.
 - [x] Finish CSS-in-JS migration
   - [x] Add grid and layout styles.
   - [x] Add reset as global styles.

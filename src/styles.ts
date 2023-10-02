@@ -187,6 +187,7 @@ export const globalStyles = {
       margin: 0;
       padding: 0;
       font: inherit;
+      position: static;
     }
 
     html {

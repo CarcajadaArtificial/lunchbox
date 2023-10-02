@@ -72,7 +72,7 @@ const styles: {
       }
     `,
     focus: css`
-      grid-column: 2/span 8;
+      grid-column: 3/span 8;
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;
       }

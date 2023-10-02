@@ -3,6 +3,7 @@ export { default as Card } from './components/Card/index.tsx';
 export { default as Chip } from './components/Chip/index.tsx';
 export { default as Chiplist } from './components/Chiplist/index.tsx';
 export { default as Code } from './components/Code/index.tsx';
+export { default as Dialog } from './components/Dialog/index.tsx';
 export { default as Fieldset } from './components/Fieldset/index.tsx';
 export { default as Footer } from './components/Footer/index.tsx';
 export { default as Gradient } from './components/Gradient/index.tsx';

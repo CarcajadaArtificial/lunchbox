@@ -3,7 +3,7 @@ import {
   Card,
   Chip,
   Chiplist,
-  Code,
+  Dialog,
   Footer,
   Header,
   Kbd,
@@ -64,6 +64,7 @@ export default function TestHome() {
             </div>
           </Card>
         </Layout>
+        <Dialog open>Test</Dialog>
       </Main>
       <Footer layout_type='center' madeWithFresh>
       </Footer>
