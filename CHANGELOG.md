@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.2.29
+## v0.2.30
 
-- Added the `<Dialog/>` component.
+- Change the close icon to a standard icon in the `<Chip/>` component.
  
 ## Changes so far
 
@@ -31,7 +31,7 @@
 - [x] Markdown missing features that should also be components:
   - [x] List
   - [x] Blockquote
-- [ ] Update component features
+- [x] Update component features
   - [x] **Card**: Add text, image, gradient spacers, and chips feature.
   - [x] **Header**, **Footer**: Add spacers with gradients that change.
   - [x] **Button**
@@ -40,21 +40,21 @@
     - [x] Add variation with an icon inside.
   - [x] **Panel**
     - [x] Add style condition for button_invisible and button_panel's background color.
-  - [ ] **Chip**
+  - [x] **Chip**
     - [x] If there `onRemove` is undefined, do not show the close icon.
-    - [ ] Change the close icon to a standard icon.
+    - [x] Change the close icon to a standard icon.
 - [ ] Add components
   - [x] Time
   - [x] Markdown
-  - [ ] Menu
   - [x] Fieldset
   - [x] Chip
     - [x] Chiplist
-  - [ ] Spinner
   - [x] Dialog
   - [x] Stylesheets (includes ResinCSSEmiutter)
   - [x] Gradient
   - [x] Kbd
+  - [ ] Spinner
+  - [ ] Menu
 - [x] Minor updates
   - [x] Add a nostyleAll global parameter to all components that ignores all classes in the component's elements.
   - [x] Ignore .md files in the .vscode settings for deno fmt.
@@ -78,6 +78,9 @@
   - [ ] `<Button/>`
     - [ ] Add small variation.
     - [ ] Add large variation.
+- [ ] Add CSS transitions
+  - [ ] `<Dialog/>` - Backdrop fade and panel flies from top.
+  - [ ] `<Menu/>` - Popup appears from button.
 - [x] Finish CSS-in-JS migration
   - [x] Add grid and layout styles.
   - [x] Add reset as global styles.

@@ -26,11 +26,8 @@ const style = {
     background-color: var(--clr-bg-personality);
   `,
   remove: css`
-    width: var(--s-one-and-half);
-    text-align: center;
-    font-size: 140%;
-    height: var(--s-one-and-half);
-    border-radius: var(--s-quarter);
+    width: var(--s-single);
+    margin: 0 var(--s-quarter);
   `,
   content: css`
     max-width: var(--s-fifteen);

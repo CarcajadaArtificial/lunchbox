@@ -1,3 +1,4 @@
+import IconX from 'icons/x.tsx';
 import Text from '../Text/index.tsx';
 import setup, { iChip } from './setup.ts';
 
@@ -20,7 +21,7 @@ export default function (props: Partial<iChip>) {
             }}
             class={c.remove_button}
           >
-            ×
+            <IconX />
           </button>
         )
         : null}

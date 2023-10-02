@@ -64,7 +64,7 @@ export default function TestHome() {
             </div>
           </Card>
         </Layout>
-        <Dialog open>Test</Dialog>
+        <Dialog>Test</Dialog>
       </Main>
       <Footer layout_type='center' madeWithFresh>
       </Footer>
