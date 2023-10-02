@@ -2,7 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iLink } from '../Link/setup.ts';
 import { iText } from '../Text/setup.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iLinkmapitem = {
   name: string;

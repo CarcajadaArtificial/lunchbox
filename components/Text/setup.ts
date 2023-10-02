@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iText = iComponent<HTMLSpanElement> & {
   type: TEXT_TYPES;

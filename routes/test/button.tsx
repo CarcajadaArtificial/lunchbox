@@ -10,7 +10,7 @@ import {
   Separator,
   Text,
 } from '../../mod.ts';
-import IconEdit from 'icons/edit.tsx';
+import { IconX } from '../../deps.ts';
 
 export default function TestButton() {
   return (
@@ -49,7 +49,7 @@ export default function TestButton() {
             Continue and run <Code>npm init</Code>
           </Button>
           <Button>
-            Edit <IconEdit />
+            Edit <IconX />
           </Button>
           <Button>
             <Text noMargins type='small'>small</Text>

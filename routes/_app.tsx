@@ -1,7 +1,5 @@
 import { AppProps } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
-import { css, ResinCssEmitter, ResinCssGlobalStyle } from 'resin';
-import { globalStyles, themeStyles } from '../src/styles.ts';
 import { Stylesheet } from '../mod.ts';
 
 export default function App({ Component }: AppProps) {

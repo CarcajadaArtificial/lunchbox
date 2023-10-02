@@ -2,7 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iMain = iComponent & {
   layout_type: LAYOUT_TYPES | null;

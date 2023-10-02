@@ -1,6 +1,6 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iCode = iComponent & {
   fwd: Partial<{

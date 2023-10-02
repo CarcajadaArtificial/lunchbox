@@ -1,4 +1,4 @@
-import { css, ResinCssEmitter, ResinCssGlobalStyle } from 'resin';
+import { css, ResinCssEmitter, ResinCssGlobalStyle } from '../../deps.ts';
 import { globalStyles, themeStyles } from '../../src/styles.ts';
 
 export default function () {

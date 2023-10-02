@@ -1,24 +1,10 @@
 # Changelog
 
-## v0.3
+## v0.3.1
 
-- Added the `<Menu/>` component.
+- Fixed dependency importing
  
 ## Changes so far
-
-- Added the `<Fieldset/>` component.
-- Added the `<Stylesheet/>` component.
-- Added the `<Kbd/>` component.
-- Added the `<Time/>` component with ptera formating implemented out of the box.
-- Added the `<Dialog/>` component.
-- Added the `<Loader/>` component.
-- Added the `<Menu/>` component.
-- Added Global styles and fonts
-- Moved enums, types, utils and handlers out of `mod.ts`.
-- Moved the stylesheets to css-in-js.
-- Fixed shorthand import paths issue.
-- Fixed `SignalLike` type on component setup script.
-- Fixed the missing `Partial<>` in subcomponent types.
 
 ## Roadmap
 

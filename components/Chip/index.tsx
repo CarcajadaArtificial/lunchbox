@@ -1,4 +1,4 @@
-import IconX from 'icons/x.tsx';
+import { IconX } from '../../deps.ts';
 import Text from '../Text/index.tsx';
 import setup, { iChip } from './setup.ts';
 

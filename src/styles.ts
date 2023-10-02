@@ -1,4 +1,4 @@
-import { css } from 'resin';
+import { css } from '../deps.ts';
 
 export const transition = {
   interaction: {

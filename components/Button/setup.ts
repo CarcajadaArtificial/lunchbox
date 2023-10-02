@@ -2,7 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { BUTTON_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iButton = iComponent<HTMLButtonElement> & {
   type: BUTTON_TYPES;

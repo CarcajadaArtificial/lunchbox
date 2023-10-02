@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { LAYOUT_TYPES } from '../../src/enums.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iLayout = iComponent<HTMLDivElement> & {
   type: LAYOUT_TYPES;

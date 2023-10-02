@@ -1,7 +1,7 @@
 import setup, { iLoader } from './setup.ts';
 import Panel from '../Panel/index.tsx';
 import Text from '../Text/index.tsx';
-import IconLoader2 from 'icons/loader-2.tsx';
+import { IconLoader2 } from '../../deps.ts';
 
 export default function (props: Partial<iLoader>) {
   const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);

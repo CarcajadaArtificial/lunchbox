@@ -1,7 +1,6 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from 'resin';
-import { DateTime, datetime } from 'ptera';
+import { css, DateTime, datetime } from '../../deps.ts';
 
 export type iTime = iComponent<HTMLTimeElement> & {
   dateObject: DateTime;

@@ -1,6 +1,6 @@
 import { cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iKbd = iComponent;
 

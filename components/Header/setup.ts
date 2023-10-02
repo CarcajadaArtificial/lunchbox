@@ -4,7 +4,7 @@ import { GRADIENT_PATTERNS, LAYOUT_TYPES } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { iGradient } from '../Gradient/setup.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iHeader = iComponent & {
   layout_type: LAYOUT_TYPES | null;

@@ -5,7 +5,7 @@ import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iLink } from '../Link/setup.ts';
 import { iGradient } from '../Gradient/setup.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iFooter = iComponent & {
   madeWithFresh: boolean;

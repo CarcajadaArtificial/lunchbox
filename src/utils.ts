@@ -9,7 +9,7 @@
  * @module
  */
 
-import * as classNames from 'https://deno.land/x/classnames@0.1.1/index.ts';
+import { classNames } from '../deps.ts';
 import { EmptyObject } from './types.ts';
 import { JSX } from 'preact';
 
