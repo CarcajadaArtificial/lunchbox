@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.1
+## v0.3.2
 
-- Fixed dependency importing
+- Fixed MutableRef typing in iComponent.
  
 ## Changes so far
 

@@ -9,10 +9,11 @@
  * @module
  */
 
+import { MutableRef } from 'preact/hooks';
 import { JSX, Ref } from 'preact';
 
 export type iComponent<T extends EventTarget = HTMLElement> = iElement<T> & {
-  fref?: Ref<T>;
+  fref?: MutableRef<T | undefined>;
   nostyle?: boolean;
   nostyleAll?: boolean;
 };
