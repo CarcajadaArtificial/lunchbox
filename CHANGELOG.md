@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.2
+## v0.3.3
 
-- Fixed MutableRef typing in iComponent.
+- Refixed MutableRef typing in iComponent.
+- Fixed the global styles in the `<Stylesheet/>` component.
+- Added css-in-js styles to the `<Gradient/>` component.
  
 ## Changes so far
 
