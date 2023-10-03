@@ -42,7 +42,7 @@ export default (props: Partial<iCard>) => {
   const classes = partializeClasses({
     card: opt(cn(styles.card), p.class, p.nostyle || p.nostyleAll),
     panel: opt(
-      cn(styles.panel, 'lbx-card_panel'),
+      cn(styles.panel, p.imageUrl === '' ? null : 'lbx-card_panel'),
       panel?.class,
       panel?.nostyle || p.nostyleAll,
     ),

@@ -10,7 +10,6 @@ const style = {
     text-decoration: underline;
     cursor: pointer;
     color: var(--clr-txt-base);
-    transition: color 0.1s ease-in-out;
 
     &:hover, 
     &:focus {

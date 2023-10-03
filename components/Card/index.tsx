@@ -14,12 +14,11 @@ export default function (props: Partial<iCard>) {
   } = setup(props);
 
   return (
-    <div ref={fref} class={c.card}>
+    <div ref={fref} class={c.card} {...p}>
       <Panel
         nostyleAll={nostyleAll}
-        fref={fwd.panel?.ref!}
+        fref={fwd.panel?.ref}
         class={c.panel}
-        {...p}
       >
         {imageUrl === '' ? undefined : (
           <div

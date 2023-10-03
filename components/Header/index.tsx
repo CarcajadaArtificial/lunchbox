@@ -20,7 +20,7 @@ export default function (props: Partial<iHeader>) {
   );
 
   return (
-    <div>
+    <>
       <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
         <header ref={fref} {...p} class={c.header}>
           {layout_type
@@ -47,6 +47,6 @@ export default function (props: Partial<iHeader>) {
           />
         )
         : null}
-    </div>
+    </>
   );
 }

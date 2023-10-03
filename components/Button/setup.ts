@@ -16,11 +16,13 @@ const defaults: iButton = {
 
 const style = {
   button: css`
-    padding: var(--s-quarter) var(--s-five-eights);
+    padding: var(--s-eighth) var(--s-five-eights);
     max-width: max-content;
     cursor: pointer;
     border-radius: var(--s-quarter);
     margin-right: var(--s-eighth);
+    border-top: var(--s-eighth) solid transparent;
+    border-bottom: var(--s-eighth) solid transparent;
 
     svg {
       display: inline;
@@ -35,10 +37,13 @@ const style = {
 
     &:hover, &:focus { 
       background-color: var(--clr-bg-personality-60);
+      border-bottom: var(--s-eighth) solid var(--clr-bg-panel-35);
     }
 
     &:active {
       background-color: var(--clr-bg-personality-30);
+      border-top: var(--s-eighth) solid var(--clr-personality);
+      border-bottom: var(--s-eighth) solid transparent;
     }
   `,
 

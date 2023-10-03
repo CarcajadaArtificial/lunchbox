@@ -11,6 +11,7 @@ import {
   Loader,
   Main,
   Menu,
+  Navigation,
   Separator,
   Text,
   Time,
@@ -19,7 +20,12 @@ import {
 export default function TestHome() {
   return (
     <>
-      <Header layout_type='center'>
+      <Navigation>
+        <Layout dashboard>
+          <Text>Misc tests</Text>
+        </Layout>
+      </Navigation>
+      <Header class='mt-6' layout_type='center'>
         <Text type='title'>Misc tests</Text>
       </Header>
       <Main>
@@ -45,15 +51,26 @@ export default function TestHome() {
               <Time />
               <Separator />
             </div>
-            <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
-              <Text noMargins type='subheading'>Card title</Text>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </Text>
-              <div class='mt-3'>
-                <Button>Action</Button>
-              </div>
-            </Card>
+            <div class='grid gap-6'>
+              <Card imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2021/10/Puppy-Cover.png'>
+                <Text noMargins type='subheading'>Card title</Text>
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </Text>
+                <div class='mt-3'>
+                  <Button>Action</Button>
+                </div>
+              </Card>
+              <Card>
+                <Text noMargins type='subheading'>Card title</Text>
+                <Text>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </Text>
+                <div class='mt-3'>
+                  <Button>Action</Button>
+                </div>
+              </Card>
+            </div>
             <div class='mt-6'>
               <Chip>Chip</Chip>
               <Chip>Chip 2</Chip>

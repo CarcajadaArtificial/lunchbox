@@ -60,7 +60,9 @@ export default function TestButton() {
         </div>
         <div class='grid'>
           <Text type='subheading'>Links</Text>
-          <Link>test link</Link>
+          <div>
+            <Link>test link</Link>
+          </div>
           <Separator />
           <Linkmap
             links={[{ name: 'empty link' }, {

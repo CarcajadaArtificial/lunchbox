@@ -4,7 +4,7 @@ export const transition = {
   interaction: {
     outline: css`
       outline: 0;
-      transition: outline 0.1s ease-in-out;
+      transition: outline 0.1s ease-in-out 0.4s;
 
       &:focus,
       &:hover {
