@@ -1,9 +1,8 @@
 # Changelog
 
-## v0.3.5
+## v0.3.6
 
-- Add compact and large variations to the `<Button/>` compoennt.
-- Property renaming and minor fixes in the `<Navigation/>`, `<Layout/>`, `<Link/>` and `<Menu/>` components.
+- Added styles for the types color and range in the input component.
  
 ## Changes so far
 
@@ -16,7 +15,9 @@
 
 - Component updates:
   - `<Input/>`
-    - [ ] Enhance types color, range and file.
+    - [x] Enhance the types color and range.
+    - [ ] Add ms styles for the color and range types.
+    - [ ] Enhance the file type.
   - `<Markdown/>`
     - [x] Add css-in-js styles.
   - `<Navigation/>`
@@ -107,3 +108,5 @@
   - `<Stylesheet/>`
     - [ ] Palette: Add light transparent backgrounds.
     - [ ] Palette: Rename color transparencies to names that don't depend on opacity.
+  - `<Layout/>`
+    - [ ] Add custom column spans for one or many layout-modules.

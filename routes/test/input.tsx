@@ -50,9 +50,9 @@ export default function TestInput() {
           />
 
           <Text type='subheading'>Other inputs</Text>
-          <Input type='range' />
-          <Input type='color' />
-          <Input type='file' />
+          <Input label='Select a number from 0 to 100.' type='range' />
+          <Input type='color' label='Select a color.' />
+          <Input type='file' label='Upload the document.' />
         </>
       </Main>
     </>

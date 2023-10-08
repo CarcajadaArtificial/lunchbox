@@ -188,7 +188,6 @@ export const inputStyles = {
         flex-direction: row-reverse;
         justify-content: flex-end;
         align-items: center;
-        width: max-content;
       }
     `,
     button: css`
@@ -207,6 +206,144 @@ export const inputStyles = {
       .lbx-input-label {
         flex-direction: column;
         width: max-content;
+      }
+    `,
+    range: css`
+      .lbx-input {
+        width: 100%;
+        margin: var(--s-three-eights) 0;
+        background-color: transparent;
+
+        &::-webkit-slider-runnable-track {
+          background: var(--clr-bg-personality);
+          border-radius: var(--s-quarter);
+          cursor: pointer;
+          height: var(--s-three-quarters);
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          margin-top: calc(-1 * var(--s-eighth));
+          width: var(--s-single);
+          height: var(--s-single);
+          border-radius: var(--s-eighth);
+          background: var(--clr-txt-personality);
+          transition-property: height, width, margin-top, border-radius;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-in-out;
+        }
+
+        &:hover,
+        &:focus {
+          &::-webkit-slider-runnable-track {
+            background: var(--clr-bg-personality-30);
+          }
+
+          &::-webkit-slider-thumb {
+            margin-top: calc(-1 * var(--s-three-eights));
+            width: var(--s-one-and-half);
+            height: var(--s-one-and-half);
+            border-radius: var(--s-quarter);
+          }
+        }
+
+        &::-moz-range-track {
+          background: var(--clr-bg-personality);
+          border-radius: var(--s-quarter);
+          cursor: pointer;
+          height: var(--s-three-quarters);
+        }
+
+        &::-moz-range-thumb {
+          -webkit-appearance: none;
+          margin-top: calc(-1 * var(--s-eighth));
+          width: var(--s-single);
+          height: var(--s-single);
+          border-radius: var(--s-eighth);
+          background: var(--clr-txt-personality);
+          border: 0;
+          transition-property: height, width, margin-top, border-radius;
+          transition-duration: 0.1s;
+          transition-timing-function: ease-in-out;
+        }
+
+        &:hover,
+        &:focus {
+          &::-moz-range-track {
+            background: var(--clr-bg-personality-30);
+          }
+
+          &::-moz-range-thumb {
+            margin-top: calc(-1 * var(--s-three-eights));
+            width: var(--s-one-and-half);
+            height: var(--s-one-and-half);
+            border-radius: var(--s-quarter);
+          }
+        }
+      }
+
+      .lbx-input_error {
+        &::-webkit-slider-runnable-track {
+          background-color: var(--clr-bg-error);
+        }
+
+        &::-webkit-slider-thumb {
+          background-color: var(--clr-txt-error);
+        }
+
+        &::-moz-range-track {
+          background-color: var(--clr-bg-error);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--clr-txt-error);
+        }
+
+        &:hover,
+        &:focus {
+          &::-webkit-slider-runnable-track {
+            background-color: var(--clr-bg-error-50);
+          }
+
+          &::-moz-range-track {
+            background-color: var(--clr-bg-error-50);
+          }
+        }
+      }
+
+      .lbx-input-label {
+        flex-direction: column;
+      }
+    `,
+    color: css`
+      .lbx-input {
+        width: 100%;
+        height: var(--s-one-and-half);
+        cursor: pointer;
+
+        &::-webkit-color-swatch-wrapper {
+          padding: 0;
+        }
+        
+        &::-webkit-color-swatch {
+          border: 0;
+          border-radius: var(--s-quarter);
+        }
+        
+        &::-moz-color-swatch {
+          border: 0;
+          border-radius: var(--s-quarter);
+        }
+      }
+
+      .lbx-input-label {
+        flex-direction: column;
+      }
+    `,
+    file: css`
+      .lbx-input-label {
+        flex-direction: column;
+        cursor: pointer;
       }
     `,
   },

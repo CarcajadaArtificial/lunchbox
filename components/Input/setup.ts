@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iText } from '../Text/setup.ts';
-import { inputStyles } from '../../src/styles.ts';
+import { inputStyles, transition } from '../../src/styles.ts';
 
 export type iInput = iComponent<HTMLInputElement> & {
   label: string;
@@ -36,7 +36,8 @@ export default (props: Partial<iInput>) => {
       cn(
         'lbx-input',
         inputStyles.part.input,
-        p.error ? inputStyles.part.bgError : null,
+        transition.interaction.outline,
+        p.error ? [inputStyles.part.bgError, 'lbx-input_error'] : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
@@ -60,15 +61,20 @@ export default (props: Partial<iInput>) => {
     container: opt(
       cn(
         inputStyles.part.container,
-        p.type && ['button', 'image', 'reset', 'submit'].includes(p.type)
+        p.type === undefined
+          ? [inputStyles.kind.box, 'lbx-input_box']
+          : ['button', 'image', 'reset', 'submit'].includes(p.type)
           ? inputStyles.kind.button
-          : p.type && ['radio', 'checkbox'].includes(p.type)
+          : ['radio', 'checkbox'].includes(p.type)
           ? inputStyles.kind.bool
-          : p.type &&
-              ['datetime-local', 'date', 'month', 'time', 'week'].includes(
-                p.type,
-              )
+          : ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
           ? [inputStyles.kind.date, 'lbx-input_box']
+          : p.type === 'range'
+          ? [inputStyles.kind.range, 'lbx-input_range']
+          : p.type === 'color'
+          ? [inputStyles.kind.color, 'lbx-input_color']
+          : p.type === 'file'
+          ? [inputStyles.kind.file, 'lbx-input_file']
           : [inputStyles.kind.box, 'lbx-input_box'],
         p.maxWidth ? 'lbx-input_maxwidth' : null,
       ),
