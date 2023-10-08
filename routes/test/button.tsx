@@ -51,10 +51,10 @@ export default function TestButton() {
           <Button>
             Edit <IconX />
           </Button>
-          <Button>
+          <Button compact>
             <Text noMargins type='small'>small</Text>
           </Button>
-          <Button>
+          <Button large>
             <Text noMargins type='subheading'>large</Text>
           </Button>
         </div>

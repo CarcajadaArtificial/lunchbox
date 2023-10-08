@@ -32,6 +32,7 @@ const style = {
     background-color: var(--clr-bg-panel-50);
     border-radius: var(--s-quarter);
     backdrop-filter: blur(var(--s-three-quarters));
+    -webkit-backdrop-filter: blur(var(--s-three-quarters));
     box-shadow: 0px var(--s-eighth) var(--s-quarter) var(--s-eighth) rgba(0, 0, 0, 0.1);
     position: absolute;
   `,

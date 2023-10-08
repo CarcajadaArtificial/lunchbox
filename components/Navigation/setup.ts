@@ -6,6 +6,7 @@ import { css } from 'resin';
 
 export type iNavigation = iComponent & {
   fixed: boolean;
+  compact: boolean;
   fwd: Partial<{
     wrapper: iFwd<HTMLDivElement>;
     panel: Partial<iPanel>;
@@ -15,6 +16,7 @@ export type iNavigation = iComponent & {
 
 const defaults: iNavigation = {
   fixed: false,
+  compact: false,
   fwd: {},
 };
 
@@ -22,8 +24,10 @@ const style = {
   nav: css`
     padding: var(--s-single) 0;
   `,
+  compact: css`
+    padding: var(--s-half) 0;
+  `,
   wrapper: css`
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -36,9 +40,13 @@ export default (props: Partial<iNavigation>) => {
   const { wrapper, panel, layout } = p.fwd;
 
   const classes = partializeClasses({
-    nav: opt(cn(style.nav), p.class, p.nostyle || p.nostyleAll),
+    nav: opt(
+      cn(p.compact ? style.compact : style.nav),
+      p.class,
+      p.nostyle || p.nostyleAll,
+    ),
     wrapper: opt(
-      cn(style.wrapper),
+      cn(style.wrapper, p.fixed ? 'fixed' : null),
       wrapper?.class,
       wrapper?.nostyle || p.nostyleAll,
     ),

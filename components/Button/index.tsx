@@ -5,7 +5,9 @@ import setup, { iButton } from './setup.ts';
  * @todo [!] Add a boolean property for smaller buttons.
  */
 export default function (props: Partial<iButton>) {
-  const { c, nostyle, nostyleAll, fref, children, type, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, children, compact, type, ...p } = setup(
+    props,
+  );
 
   return (
     <button ref={fref} class={c.button} {...p}>

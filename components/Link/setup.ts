@@ -10,6 +10,7 @@ const style = {
     text-decoration: underline;
     cursor: pointer;
     color: var(--clr-txt-base);
+    border-radius: var(--s-quarter);
 
     &:hover, 
     &:focus {

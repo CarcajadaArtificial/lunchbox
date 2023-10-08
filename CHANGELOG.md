@@ -1,12 +1,9 @@
 # Changelog
 
-## v0.3.4
+## v0.3.5
 
-- Added twind dependencies.
-- Added a bevel to the buttons.
-- Added css-in-js styles to the `<Navigation/>` component.
-- Added a delay to the outline interaction transition.
-- Fixed layout in `<Card/>` component components without images.
+- Add compact and large variations to the `<Button/>` compoennt.
+- Property renaming and minor fixes in the `<Navigation/>`, `<Layout/>`, `<Link/>` and `<Menu/>` components.
  
 ## Changes so far
 
@@ -24,19 +21,22 @@
     - [x] Add css-in-js styles.
   - `<Navigation/>`
     - [x] Add css-in-js styles.
+    - [x] Make sticky style optional.
+    - [x] Add a compact style variation.
     - [ ] Add property that makes it appear after scrolling past the header.
   - `<Link/>`
-    - [ ] Add css-in-js styles.
+    - [x] Add css-in-js styles.
   - `<Button/>`
-    - [ ] Add small variation.
-    - [ ] Add large variation.
+    - [x] Add compact variation.
+    - [x] Add large variation.
   - `<Layout/>`
-    - [ ] Apply the fill width styles by default.
-    - [ ] Rename the "dashboard" attribute to "includeHorizontalWhitespace".
+    - [x] Apply the fill width styles by default.
+    - [x] Rename the "dashboard" attribute to "includeHorizontalWhitespace".
   - `<Separator/>`
     - [ ] Add gradient pattern separator types.
   - `<Gradient/>`
     - [ ] Rename to `<Pattern/>` and rename the "pattern" attribute to "type".
+    - [ ] Rename the `gradient_pattern` property inside the `<Footer/>` and `<Header/>` components.
 
 - Add CSS transitions and animations:
   - `<Button/>`
@@ -71,13 +71,13 @@
   - `<Dialog/>`
     - [ ] CloseDialog() - On determined close button and on the screen background.
     - [ ] OpenDialog() 
+  - `<Menu/>`
+    - [ ] OpenMenu()
+    - [ ] CloseMenu()
   - `<Fieldset/>`
     - ?
   - `<Input/>`, `<Select/>`, `<TextArea/>`
     - ?
-  - `<Menu/>`
-    - [ ] OpenMenu()
-    - [ ] CloseMenu()
 
 - [ ] Standarize subcomponent's property forwarding. Every component must:
   - Every component must have a "main" element with:
@@ -99,3 +99,11 @@
 
 - New Components
   - [ ] Breadcrumbs
+  - [ ] ContentEditable
+
+- Component Updates
+  - `<Button/>`
+    - [ ] Add focus bevel for the panel and invisible types.
+  - `<Stylesheet/>`
+    - [ ] Palette: Add light transparent backgrounds.
+    - [ ] Palette: Rename color transparencies to names that don't depend on opacity.

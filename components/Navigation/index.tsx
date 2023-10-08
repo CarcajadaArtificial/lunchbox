@@ -6,7 +6,9 @@ import Panel from '../Panel/index.tsx';
  * @todo [!] Add an animation when the navigation appears.
  */
 export default function (props: Partial<iNavigation>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, children, fixed, ...p } = setup(
+    props,
+  );
 
   return (
     <div ref={fwd.wrapper?.ref} class={c.wrapper}>

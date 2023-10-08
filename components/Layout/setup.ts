@@ -5,24 +5,24 @@ import { css } from '../../deps.ts';
 
 export type iLayout = iComponent<HTMLDivElement> & {
   type: LAYOUT_TYPES;
-  dashboard: boolean;
+  includeHorizontalWhitespace: boolean;
   fwd: Partial<{
     module: iFwd<HTMLDivElement>;
   }>;
 };
 
 const defaults: iLayout = {
-  dashboard: false,
+  includeHorizontalWhitespace: false,
   type: 'full',
   fwd: {},
 };
 
 const styles: {
+  whitespaceGrid: string;
   grid: string;
-  dashboard: string;
   module: Record<LAYOUT_TYPES, string>;
 } = {
-  grid: css`
+  whitespaceGrid: css`
     display: grid; 
     @media screen and (max-width: 39.9375em) {
       gap: 0 0.8503100088rem;
@@ -43,7 +43,7 @@ const styles: {
       grid-template-columns: repeat(12, minmax(4.5rem, 4.5rem));
     }
   `,
-  dashboard: css`
+  grid: css`
     display: grid; 
     gap: 0 1.5rem;
     margin: 0 1.5rem;
@@ -127,7 +127,7 @@ export default (props: Partial<iLayout>) => {
   const classes = partializeClasses({
     layout: opt(
       cn(
-        props.dashboard ? styles.dashboard : styles.grid,
+        props.includeHorizontalWhitespace ? styles.whitespaceGrid : styles.grid,
       ),
       p.class,
       p.nostyle || p.nostyleAll,

@@ -10,7 +10,6 @@ export const transition = {
       &:hover {
         outline: 2px solid var(--clr-txt-base);
         outline-offset: 2px;
-        border-radius: var(--s-quarter);
       }
     `,
   },
@@ -252,7 +251,7 @@ export const globalStyles = {
   `,
   fonts: css`
     :root {
-      --txt-small: 0.64rem / 1.5rem;
+      --txt-small: 0.64rem / 1.1rem;
       --txt-paragraph: 1rem / 1.5rem;
       --txt-subheading: 1.5625rem / 3rem;
       --txt-heading: 2.44140625rem / 3rem;

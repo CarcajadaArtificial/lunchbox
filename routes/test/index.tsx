@@ -20,8 +20,8 @@ import {
 export default function TestHome() {
   return (
     <>
-      <Navigation>
-        <Layout dashboard>
+      <Navigation fixed>
+        <Layout>
           <Text>Misc tests</Text>
         </Layout>
       </Navigation>
@@ -29,7 +29,7 @@ export default function TestHome() {
         <Text type='title'>Misc tests</Text>
       </Header>
       <Main>
-        <Layout type='left' dashboard>
+        <Layout type='left'>
           <>
             <Menu
               open

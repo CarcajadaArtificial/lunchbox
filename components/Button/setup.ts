@@ -7,22 +7,32 @@ import { css } from '../../deps.ts';
 export type iButton = iComponent<HTMLButtonElement> & {
   type: BUTTON_TYPES;
   maxWidth: boolean;
+  compact: boolean;
+  large: boolean;
 };
 
 const defaults: iButton = {
   maxWidth: false,
+  compact: false,
+  large: false,
   type: 'contrast',
 };
 
 const style = {
   button: css`
-    padding: var(--s-eighth) var(--s-five-eights);
     max-width: max-content;
     cursor: pointer;
     border-radius: var(--s-quarter);
     margin-right: var(--s-eighth);
-    border-top: var(--s-eighth) solid transparent;
-    border-bottom: var(--s-eighth) solid transparent;
+
+    border-style: solid;
+    border-top-width: var(--s-eighth);
+    border-bottom-width: var(--s-eighth);
+
+    border-color: transparent;
+    border-left-width: 0;
+    border-right-width: 0;
+    
 
     svg {
       display: inline;
@@ -32,18 +42,35 @@ const style = {
     }
   `,
 
+  padding: {
+    normal: css`
+      padding: var(--s-eighth) var(--s-five-eights);
+    `,
+    compact: css`
+      padding: 0 var(--s-three-eights);
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    `,
+    large: css`
+      padding: var(--s-quarter) var(--s-one-and-half);
+      border-top-width: var(--s-quarter);
+      border-bottom-width: var(--s-quarter);
+      border-radius: var(--s-five-eights);
+    `,
+  },
+
   button_personality: css`
     background-color: var(--clr-bg-personality-45);
 
     &:hover, &:focus { 
       background-color: var(--clr-bg-personality-60);
-      border-bottom: var(--s-eighth) solid var(--clr-bg-panel-35);
+      border-bottom-color: var(--clr-bg-panel-35);
     }
 
     &:active {
       background-color: var(--clr-bg-personality-30);
-      border-top: var(--s-eighth) solid var(--clr-personality);
-      border-bottom: var(--s-eighth) solid transparent;
+      border-top-color: var(--clr-personality);
+      border-bottom-color: transparent;
     }
   `,
 
@@ -58,10 +85,13 @@ const style = {
 
     &:hover, &:focus { 
       background-color: var(--clr-bg-error-50);
+      border-bottom-color: var(--clr-bg-error);
     }
 
     &:active {
       background-color: var(--clr-bg-error);
+      border-top-color: var(--clr-bg-error-50);
+      border-bottom-color: transparent;
     }
   `,
 
@@ -109,6 +139,11 @@ export default (props: Partial<iButton>) => {
           : props.type === 'contrast'
           ? style.button_personality
           : style.button_personality,
+        p.compact
+          ? style.padding.compact
+          : p.large
+          ? style.padding.large
+          : style.padding.normal,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
