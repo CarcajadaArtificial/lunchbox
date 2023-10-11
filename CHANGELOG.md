@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.6
+## v0.3.7
 
-- Added styles for the types color and range in the input component.
+- Added the `<XDialog/>` island.
+- Added the `useDialog()` custom hook.
+- Fixed minor UI issues with the `<Menu/>` and `<Navigation/>` components.
  
 ## Changes so far
 
@@ -18,6 +20,7 @@
     - [x] Enhance the types color and range.
     - [ ] Add ms styles for the color and range types.
     - [ ] Enhance the file type.
+    - [ ] Add usage of icons.
   - `<Markdown/>`
     - [x] Add css-in-js styles.
   - `<Navigation/>`

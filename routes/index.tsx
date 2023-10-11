@@ -1,4 +1,3 @@
-import Island from '../islands/Island.tsx';
 import { Header, Main } from '../mod.ts';
 
 export default function Home() {
@@ -6,7 +5,6 @@ export default function Home() {
     <div>
       <Header></Header>
       <Main layout_type='center'>
-        <Island />
       </Main>
     </div>
   );

@@ -10,7 +10,7 @@ import * as $4 from './routes/test/gradient.tsx';
 import * as $5 from './routes/test/index.tsx';
 import * as $6 from './routes/test/input.tsx';
 import * as $7 from './routes/test/text.tsx';
-import * as $$0 from './islands/Island.tsx';
+import * as $$0 from './islands/XDialog.tsx';
 
 const manifest = {
   routes: {
@@ -24,7 +24,7 @@ const manifest = {
     './routes/test/text.tsx': $7,
   },
   islands: {
-    './islands/Island.tsx': $$0,
+    './islands/XDialog.tsx': $$0,
   },
   baseUrl: import.meta.url,
 };

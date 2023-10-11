@@ -24,7 +24,10 @@ const styles = {
     height: 100vh;
     position: fixed;
     top: 0;
-    backdrop-filter: blur(var(--s-single)) brightness(40%);
+    left: 0;
+    backdrop-filter: blur(var(--s-three-quarters)) brightness(75%);
+    -webkit-backdrop-filter: blur(var(--s-three-quarters)) brightness(75%);
+    z-index: 50;
   `,
   panel: css`
     padding: var(--s-single);

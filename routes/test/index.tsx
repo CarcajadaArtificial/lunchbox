@@ -3,7 +3,6 @@ import {
   Card,
   Chip,
   Chiplist,
-  Dialog,
   Footer,
   Header,
   Kbd,
@@ -16,6 +15,7 @@ import {
   Text,
   Time,
 } from '../../mod.ts';
+import XDialog from '../../islands/XDialog.tsx';
 
 export default function TestHome() {
   return (
@@ -31,6 +31,14 @@ export default function TestHome() {
       <Main>
         <Layout type='left'>
           <>
+            <XDialog>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                excepturi provident ad, optio ratione libero nihil eum.
+                Voluptates doloremque quo minus nisi culpa odit aliquid ducimus
+                quasi dolores, tempore enim.
+              </Text>
+            </XDialog>
             <Menu
               open
               menuOptions={{ test: 'abc', test2: 'abc' }}
@@ -93,7 +101,6 @@ export default function TestHome() {
             </Card>
           </>
         </Layout>
-        <Dialog>Test</Dialog>
       </Main>
       <Footer layout_type='center' madeWithFresh>
       </Footer>

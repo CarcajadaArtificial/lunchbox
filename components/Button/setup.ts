@@ -9,6 +9,7 @@ export type iButton = iComponent<HTMLButtonElement> & {
   maxWidth: boolean;
   compact: boolean;
   large: boolean;
+  OnExtendedClick?: () => void;
 };
 
 const defaults: iButton = {
