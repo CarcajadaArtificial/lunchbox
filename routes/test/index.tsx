@@ -41,7 +41,6 @@ export default function TestHome() {
               </Text>
             </XDialog>
             <Menu
-              open
               menuOptions={{ test: 'abc', test2: 'abc' }}
               customOption={(option, key) => (
                 <Text noMargins type='paragraph'>

@@ -8,7 +8,7 @@ import { JSX } from 'preact';
 type MenuOption = string | (() => void);
 
 export type iMenu = iComponent<HTMLDivElement> & {
-  open: boolean;
+  closed: boolean;
   menuPosition: MENU_POSITIONS;
   menuOptions: Record<string, MenuOption>;
   customOption?: (option: MenuOption, key: string) => JSX.Element;
@@ -20,7 +20,7 @@ export type iMenu = iComponent<HTMLDivElement> & {
 };
 
 const defaults: iMenu = {
-  open: false,
+  closed: false,
   menuPosition: 'static',
   menuOptions: {},
   fwd: {},

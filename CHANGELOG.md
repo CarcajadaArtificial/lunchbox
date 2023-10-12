@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.8
+## v0.3.9
 
-- Extended the `<Menu/>` component to support customized option rendering.
+- Minor fixes in the `<Menu/>` component.
  
 ## Changes so far
 
@@ -62,7 +62,7 @@
 
 - Component Hooks and handlers:
   - `<Button/>`
-    - [ ] OnExtendedClick() - click, tap, pressed enter, pressed, space
+    - [x] OnExtendedClick() - click, tap, pressed enter, pressed, space
   - `<Chip/>`
     - [ ] OnExtendedClick() - remove button.
   - `<Chiplist/>`
@@ -71,8 +71,8 @@
   - `<Code/>`
     - [ ] OnExtendedClick() - Copy content to clipboard.
   - `<Dialog/>`
-    - [ ] CloseDialog() - On determined close button and on the screen background.
-    - [ ] OpenDialog() 
+    - [x] CloseDialog() - On determined close button and on the screen background.
+    - [x] OpenDialog() 
   - `<Menu/>`
     - [ ] OpenMenu()
     - [ ] CloseMenu()

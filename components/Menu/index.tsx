@@ -10,7 +10,7 @@ export default function (props: Partial<iMenu>) {
     fref,
     fwd,
     children,
-    open,
+    closed,
     menuPosition,
     menuOptions,
     customOption,
@@ -46,15 +46,13 @@ export default function (props: Partial<iMenu>) {
       <Button type='panel' fref={fwd.button?.ref} class={c.button}>
         {children}
       </Button>
-      {open
-        ? (
-          <div ref={fref} {...p} class={c.menu}>
-            {Object.keys(menuOptions).map((menuOptionKey) =>
-              MenuOption(menuOptionKey, menuOptions[menuOptionKey])
-            )}
-          </div>
-        )
-        : undefined}
+      {closed ? undefined : (
+        <div ref={fref} {...p} class={c.menu}>
+          {Object.keys(menuOptions).map((menuOptionKey) =>
+            MenuOption(menuOptionKey, menuOptions[menuOptionKey])
+          )}
+        </div>
+      )}
     </div>
   );
 }
