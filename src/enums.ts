@@ -37,6 +37,7 @@ export type BUTTON_TYPES =
 export type GRADIENT_PATTERNS = 'cloud' | 'zigzag' | 'wave';
 
 export type MENU_POSITIONS =
+  | 'static'
   | 'top-right'
   | 'top-left'
   | 'bottom-right'

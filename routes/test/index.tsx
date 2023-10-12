@@ -3,6 +3,7 @@ import {
   Card,
   Chip,
   Chiplist,
+  Code,
   Footer,
   Header,
   Kbd,
@@ -42,6 +43,12 @@ export default function TestHome() {
             <Menu
               open
               menuOptions={{ test: 'abc', test2: 'abc' }}
+              customOption={(option, key) => (
+                <Text noMargins type='paragraph'>
+                  <Code>x:</Code>
+                  {key}
+                </Text>
+              )}
             >
               Test
             </Menu>

@@ -13,33 +13,33 @@ export default function (props: Partial<iMenu>) {
     open,
     menuPosition,
     menuOptions,
+    customOption,
     ...p
   } = setup(props);
 
-  function MenuOption(
+  const MenuOption = (
     menuOptionKey: string,
-    menuOption: string | ((ev: Event) => void),
-  ) {
-    if (typeof menuOption === 'string') {
-      return (
-        <Link nostyleAll href={menuOption}>
-          <Button type='invisible' class={c.option}>
-            {menuOptionKey}
-          </Button>
-        </Link>
-      );
-    } else {
-      return (
-        <Button
-          type='invisible'
-          onClick={menuOption}
-          class={c.option}
-        >
-          {menuOptionKey}
-        </Button>
-      );
-    }
-  }
+    menuOption: string | (() => void),
+  ) => (
+    <Link
+      tabIndex={-1}
+      nostyleAll
+      href={typeof menuOption === 'string' ? menuOption : undefined}
+    >
+      <Button
+        OnExtendedClick={typeof menuOption === 'string'
+          ? undefined
+          : menuOption}
+        type='invisible'
+        class={c.option}
+        compact
+      >
+        {customOption
+          ? customOption(menuOptions[menuOptionKey], menuOptionKey)
+          : menuOptionKey}
+      </Button>
+    </Link>
+  );
 
   return (
     <div ref={fwd.container?.ref} class={c.container}>

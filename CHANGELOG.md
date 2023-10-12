@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.7
+## v0.3.8
 
-- Added the `<XDialog/>` island.
-- Added the `useDialog()` custom hook.
-- Fixed minor UI issues with the `<Menu/>` and `<Navigation/>` components.
+- Extended the `<Menu/>` component to support customized option rendering.
  
 ## Changes so far
 
