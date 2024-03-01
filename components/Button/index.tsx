@@ -1,10 +1,30 @@
+//   ___      _   _
+//  | _ )_  _| |_| |_ ___ _ _
+//  | _ \ || |  _|  _/ _ \ ' \
+//  |___/\_,_|\__|\__\___/_||_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * ### Button
+ * *Basic Atom*
+ *
+ * This module contains the render function for the `<Button />` component.
+ *
+ * @module
+ */
 import setup, { iButton } from './setup.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * @todo [!] Add a boolean property for icon buttons, these have different paddings.
- * @todo [!] Add a boolean property for smaller buttons.
+ * Render function for the `<Button />` component.
+ *
+ * @param {Partial<iButton>} props
+ *  {@linkcode iButton} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ *
+ * @returns {JSXInternal.Element}
+ *  The `<Button />` component.
  */
-export default function (props: Partial<iButton>) {
+export default function Button(props: Partial<iButton>) {
   const {
     c,
     nostyle,
@@ -13,7 +33,6 @@ export default function (props: Partial<iButton>) {
     children,
     compact,
     type,
-    OnExtendedClick,
     ...p
   } = setup(
     props,
@@ -21,15 +40,6 @@ export default function (props: Partial<iButton>) {
 
   return (
     <button
-      onClick={OnExtendedClick}
-      onTouchEnd={OnExtendedClick}
-      onKeyUp={OnExtendedClick
-        ? (ev) => {
-          if (ev.code === 'Space') {
-            OnExtendedClick();
-          }
-        }
-        : undefined}
       ref={fref}
       class={c.button}
       {...p}

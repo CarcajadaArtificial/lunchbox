@@ -24,17 +24,15 @@ export default function TestButton() {
           <div class='flex'>
             <div class='flex-1 grid gap-3 p-3'>
               <Button>default</Button>
-              <Button type='contrast'>contrast</Button>
               <Button type='panel'>panel</Button>
-              <Button type='invisible'>invisible</Button>
+              <Button type='transparent'>transparent</Button>
               <Button type='error'>error</Button>
               <Button type='disabled'>disabled</Button>
             </div>
             <Panel class='flex-1 grid gap-3 p-3'>
               <Button>default</Button>
-              <Button type='contrast'>contrast</Button>
               <Button type='panel'>panel</Button>
-              <Button type='invisible'>invisible</Button>
+              <Button type='transparent'>transparent</Button>
               <Button type='error'>error</Button>
               <Button type='disabled'>disabled</Button>
             </Panel>
@@ -49,7 +47,7 @@ export default function TestButton() {
             Continue and run <Code>npm init</Code>
           </Button>
           <Button>
-            Edit <IconX />
+            Edit <IconX class='button__icon' />
           </Button>
           <Button compact>
             <Text noMargins type='small'>small</Text>

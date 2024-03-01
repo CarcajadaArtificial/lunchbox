@@ -1,126 +1,152 @@
+//   ___      _   _              ___      _
+//  | _ )_  _| |_| |_ ___ _ _   / __| ___| |_ _  _ _ __
+//  | _ \ || |  _|  _/ _ \ ' \  \__ \/ -_)  _| || | '_ \
+//  |___/\_,_|\__|\__\___/_||_| |___/\___|\__|\_,_| .__/
+//                                                |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Button />` component.
+ *
+ * @module
+ */
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { BUTTON_TYPES } from '../../src/enums.ts';
+import { type ButtonTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
 import { css } from '../../deps.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Property type of the `<Button />` component. */
 export type iButton = iComponent<HTMLButtonElement> & {
-  type: BUTTON_TYPES;
+  /** If true, expands the width of the button up to its maximum width. */
   maxWidth: boolean;
+  /** If true, the button's paddings will be shorter. */
   compact: boolean;
+  /** If true, the button's paddings will be larger. */
   large: boolean;
-  OnExtendedClick?: () => void;
+  /**
+   * Changes the button's style depending on the property.
+   * - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
+   * - **error:** Makes it the standard red color.
+   * - **panel:** Gives a panel background to the button. If placed on top of a `<Panel />` component,
+   *    it gives a page background instead, simulating a "hole" in the panel.
+   * - **transparent:** Makes the button's background transparent.
+   */
+  type: ButtonTypes;
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** These are the default values of the `<Button />` component's props. */
 const defaults: iButton = {
   maxWidth: false,
   compact: false,
   large: false,
-  type: 'contrast',
+  type: 'default',
 };
 
-const style = {
-  button: css`
-    max-width: max-content;
-    cursor: pointer;
-    border-radius: var(--s-quarter);
-    margin-right: var(--s-eighth);
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Style object for the `<Button />` component. */
+const style = css`
+  border-bottom-width: var(--s-eighth);
+  border-color: transparent;
+  border-left-width: 0;
+  border-radius: var(--s-quarter);
+  border-right-width: 0;
+  border-style: solid;
+  border-top-width: var(--s-eighth);
+  cursor: pointer;
+  margin-right: var(--s-eighth);
+  max-width: max-content;
 
-    border-style: solid;
-    border-top-width: var(--s-eighth);
-    border-bottom-width: var(--s-eighth);
-
-    border-color: transparent;
-    border-left-width: 0;
-    border-right-width: 0;
-    
-
-    svg {
-      display: inline;
-      width: var(--s-single);
-      position: relative;
-      bottom: var(--s-eighth);
-    }
-  `,
-
-  padding: {
-    normal: css`
+  &.button {
+    &__padding {
       padding: var(--s-eighth) var(--s-five-eights);
-    `,
-    compact: css`
-      padding: 0 var(--s-three-eights);
-      border-top-width: 1px;
-      border-bottom-width: 1px;
-    `,
-    large: css`
-      padding: var(--s-quarter) var(--s-one-and-half);
-      border-top-width: var(--s-quarter);
-      border-bottom-width: var(--s-quarter);
-      border-radius: var(--s-five-eights);
-    `,
-  },
 
-  button_personality: css`
-    background-color: var(--clr-bg-personality-45);
+      &--compact {
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        padding: 0 var(--s-three-eights);
+      }
 
-    &:hover, &:focus { 
-      background-color: var(--clr-bg-personality-60);
-      border-bottom-color: var(--clr-bg-panel-35);
+      &--large {
+        border-bottom-width: var(--s-quarter);
+        border-radius: var(--s-five-eights);
+        border-top-width: var(--s-quarter);
+        padding: var(--s-quarter) var(--s-one-and-half);
+      }
     }
 
-    &:active {
-      background-color: var(--clr-bg-personality-30);
-      border-top-color: var(--clr-personality);
-      border-bottom-color: transparent;
+    &__style {
+      background-color: var(--clr-bg-personality-45);
+
+      &:hover, &:focus { 
+        background-color: var(--clr-bg-personality-60);
+        border-bottom-color: var(--clr-bg-panel-35);
+      }
+
+      &:active {
+        background-color: var(--clr-bg-personality-30);
+        border-top-color: var(--clr-personality);
+        border-bottom-color: transparent;
+      }
+
+      &--disabled {
+        background-color: var(--clr-bg-panel);
+        cursor: not-allowed;
+        filter: opacity(0.4);
+      }
+
+      &--error {
+        background-color: var(--clr-bg-error);
+
+        &:hover, &:focus { 
+          background-color: var(--clr-bg-error-50);
+          border-bottom-color: var(--clr-bg-error);
+        }
+
+        &:active {
+          background-color: var(--clr-bg-error);
+          border-top-color: var(--clr-bg-error-50);
+          border-bottom-color: transparent;
+        }
+      }
+
+      &--transparent {
+        background-color: var(--clr-bg-page);
+
+        &:hover, &:focus { 
+          background-color: var(--clr-bg-panel-35);
+        }
+        
+        &:active {
+          background-color: var(--clr-bg-panel-60);
+        }
+      }
+
+      &--panel {
+        background-color: var(--clr-bg-panel);
+
+        &:hover, &:focus { 
+          background-color: var(--clr-bg-panel-35);
+        }
+        
+        &:active {
+          background-color: var(--clr-bg-page);
+        }
+      }
     }
-  `,
+  }
 
-  button_disabled: css`
-    background-color: var(--clr-bg-panel);
-    cursor: not-allowed;
-    filter: opacity(0.4);
-  `,
+  .button__icon {
+    display: inline;
+    width: var(--s-single);
+    position: relative;
+    bottom: var(--s-eighth);
+  }
+`;
 
-  button_error: css`
-    background-color: var(--clr-bg-error);
-
-    &:hover, &:focus { 
-      background-color: var(--clr-bg-error-50);
-      border-bottom-color: var(--clr-bg-error);
-    }
-
-    &:active {
-      background-color: var(--clr-bg-error);
-      border-top-color: var(--clr-bg-error-50);
-      border-bottom-color: transparent;
-    }
-  `,
-
-  button_invisible: css`
-    background-color: var(--clr-bg-page);
-
-    &:hover, &:focus { 
-      background-color: var(--clr-bg-panel-35);
-    }
-    
-    &:active {
-      background-color: var(--clr-bg-panel-60);
-    }
-  `,
-
-  button_panel: css`
-    background-color: var(--clr-bg-panel);
-
-    &:hover, &:focus { 
-      background-color: var(--clr-bg-panel-35);
-    }
-    
-    &:active {
-      background-color: var(--clr-bg-page);
-    }
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Button />` component. */
 export default (props: Partial<iButton>) => {
   const p = applyDefaults<iButton>(defaults, props);
 
@@ -128,23 +154,13 @@ export default (props: Partial<iButton>) => {
     button: opt(
       cn(
         transition.interaction.outline,
-        style.button,
-        props.type === 'disabled'
-          ? style.button_disabled
-          : props.type === 'error'
-          ? style.button_error
-          : props.type === 'invisible'
-          ? [style.button_invisible, 'lbx-btn-invisible']
-          : props.type === 'panel'
-          ? [style.button_panel, 'lbx-btn-panel']
-          : props.type === 'contrast'
-          ? style.button_personality
-          : style.button_personality,
+        style,
+        p.type === 'default' ? 'button__style' : `button__style--${p.type}`,
         p.compact
-          ? style.padding.compact
+          ? 'button__padding--compact'
           : p.large
-          ? style.padding.large
-          : style.padding.normal,
+          ? 'button__padding--large'
+          : 'button__padding',
       ),
       p.class,
       p.nostyle || p.nostyleAll,

@@ -2,31 +2,32 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from './routes/_app.tsx';
-import * as $1 from './routes/index.tsx';
-import * as $2 from './routes/md.tsx';
-import * as $3 from './routes/test/button.tsx';
-import * as $4 from './routes/test/gradient.tsx';
-import * as $5 from './routes/test/index.tsx';
-import * as $6 from './routes/test/input.tsx';
-import * as $7 from './routes/test/text.tsx';
-import * as $$0 from './islands/XDialog.tsx';
+import * as $_app from './routes/_app.tsx';
+import * as $index from './routes/index.tsx';
+import * as $md from './routes/md.tsx';
+import * as $test_button from './routes/test/button.tsx';
+import * as $test_gradient from './routes/test/gradient.tsx';
+import * as $test_index from './routes/test/index.tsx';
+import * as $test_input from './routes/test/input.tsx';
+import * as $test_text from './routes/test/text.tsx';
+import * as $XDialog from './islands/XDialog.tsx';
+import { type Manifest } from '$fresh/server.ts';
 
 const manifest = {
   routes: {
-    './routes/_app.tsx': $0,
-    './routes/index.tsx': $1,
-    './routes/md.tsx': $2,
-    './routes/test/button.tsx': $3,
-    './routes/test/gradient.tsx': $4,
-    './routes/test/index.tsx': $5,
-    './routes/test/input.tsx': $6,
-    './routes/test/text.tsx': $7,
+    './routes/_app.tsx': $_app,
+    './routes/index.tsx': $index,
+    './routes/md.tsx': $md,
+    './routes/test/button.tsx': $test_button,
+    './routes/test/gradient.tsx': $test_gradient,
+    './routes/test/index.tsx': $test_index,
+    './routes/test/input.tsx': $test_input,
+    './routes/test/text.tsx': $test_text,
   },
   islands: {
-    './islands/XDialog.tsx': $$0,
+    './islands/XDialog.tsx': $XDialog,
   },
   baseUrl: import.meta.url,
-};
+} satisfies Manifest;
 
 export default manifest;

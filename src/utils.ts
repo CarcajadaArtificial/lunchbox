@@ -71,7 +71,8 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
  * @returns {T}
  *  An object of type `T` that contains the default `d` values and the new input `i` values.
  */
-// Disabled linter in this line because I couldn't find a way to adapt the component type schema to support EmptyObject.
+// Disabled linter in this line because I couldn't find a way to adapt the component type schema to
+//    support EmptyObject.
 // deno-lint-ignore ban-types
 export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
@@ -86,7 +87,10 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * When adding class to an element, say: `<div class={x} />` and `x`'s value ends up being an empty string (`''`), the element will render `<div class />` and end up with tons of empty `class` attributes. This function simplifies the code that replaces parts that end up having an empty string and makes them have `undefined` value.
+ * When adding class to an element, say: `<div class={x} />` and `x`'s value ends up being an empty
+ * string (`''`), the element will render `<div class />` and end up with tons of empty `class`
+ * attributes. This function simplifies the code that replaces parts that end up having an empty string
+ * and makes them have `undefined` value.
  *
  * @param {Record<string, string>}
  *  The record of parts that might contain empty string values.

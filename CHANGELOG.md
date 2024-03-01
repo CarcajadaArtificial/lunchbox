@@ -1,8 +1,13 @@
 # Changelog
 
-## v0.3.9
+## v0.3.10
 
-- Minor fixes in the `<Menu/>` component.
+- `<Button />` component
+  - Fully documented the component.
+  - Removed event listeners, in favor of future standard event listener builders.
+  - Updated the css-in-js object.
+  - Updated component test page.
+- Updated the `ButtonTypes` enum.
  
 ## Changes so far
 
@@ -16,7 +21,7 @@
 - Component updates:
   - `<Input/>`
     - [x] Enhance the types color and range.
-    - [ ] Add ms styles for the color and range types.
+    - [x] Add ms styles for the color and range types.
     - [ ] Enhance the file type.
     - [ ] Add usage of icons.
   - `<Markdown/>`
@@ -53,12 +58,13 @@
   - `<Chip/>` 
     - [ ] Focus on close icon
 
-- [x] Finish CSS-in-JS migration
+- [ ] Finish CSS-in-JS migration
   - [x] Add grid and layout styles.
   - [x] Add reset as global styles.
   - [x] Add size global styles.
   - [x] Add theme styles.
   - [x] Add font configuration.
+  - [ ] Change pattern from styles object, to a single styles constant and css classes inside.
 
 - Component Hooks and handlers:
   - `<Button/>`
@@ -82,13 +88,17 @@
     - ?
 
 - [ ] Standarize subcomponent's property forwarding. Every component must:
+  - Everycomponent must have module documentation with:
+    - [ ] A banner comment in `index.tsx` and `setup.ts`.
+    - [ ] A comment for the component's interface.
+    - [ ] A comment that marks the following 
   - Every component must have a "main" element with:
     - [ ] The components type referenced using `iComponent` and that element.
-    - [ ] The standarized css class. (`class={c.foobar}`)
+    - [ ] The standarized css class. (`class={c.styles}`)
     - [ ] The reference must point to the component's forwarded reference. (`ref={fref}`)
     - [ ] The spread of the rest of component's parameters. (`{...p}`)
   - Any other element must have:
-    - [ ] The standarized css class. (`class={c.foobar}`)
+    - [ ] The standarized css bem class. (`class='foo-bar__element--modifier'`)
     - [ ] A reference comming from the `fwd` object. (`ref={fwd.foobar?.ref}`)
     - [ ] * A spread of the other forwarded attributes. (`{...fwd.foobar}`)
   - Any subcomponent must have:
