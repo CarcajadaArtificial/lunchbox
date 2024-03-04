@@ -6,6 +6,7 @@ import * as $_app from './routes/_app.tsx';
 import * as $index from './routes/index.tsx';
 import * as $md from './routes/md.tsx';
 import * as $test_button from './routes/test/button.tsx';
+import * as $test_card from './routes/test/card.tsx';
 import * as $test_gradient from './routes/test/gradient.tsx';
 import * as $test_index from './routes/test/index.tsx';
 import * as $test_input from './routes/test/input.tsx';
@@ -19,6 +20,7 @@ const manifest = {
     './routes/index.tsx': $index,
     './routes/md.tsx': $md,
     './routes/test/button.tsx': $test_button,
+    './routes/test/card.tsx': $test_card,
     './routes/test/gradient.tsx': $test_gradient,
     './routes/test/index.tsx': $test_index,
     './routes/test/input.tsx': $test_input,

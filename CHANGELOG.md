@@ -1,13 +1,12 @@
 # Changelog
 
-## v0.3.10
+## v0.3.11
 
-- `<Button />` component
+- `<Card />` component
   - Fully documented the component.
-  - Removed event listeners, in favor of future standard event listener builders.
   - Updated the css-in-js object.
-  - Updated component test page.
-- Updated the `ButtonTypes` enum.
+  - Added component test page.
+- Updated the global styles inside the `<Stylesheet />` component.
  
 ## Changes so far
 

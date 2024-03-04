@@ -17,16 +17,17 @@ export default function () {
       <style>
         {`
           @container (width > 35em) {
-            .lbx-card_panel {
-              display: grid;
-              grid-template-columns: 30% 70%;
+            .card__panel {
+              display: grid !important;
+              grid-template-columns: 30% 70% !important;
             }
-            .lbx-card_image {
-              aspect-ratio: 1 / 1;
-              border-radius: var(--s-quarter) 0 0 var(--s-quarter);
+            .card__image {
+              aspect-ratio: 1 / 0 !important;
+              border-radius: var(--s-quarter) 0 0 var(--s-quarter) !important;
             }
-            .lbx-card_section {
-              padding-left: var(--s-single);
+            .card__image + .card__section {
+              padding-left: var(--s-single) !important;
+              grid-column: span 1 !important;
             }
           }
           
