@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * ### Button
- * *Basic Atom*
+ * *Atom*
  *
  * This module contains the render function for the `<Button />` component.
  *
@@ -16,10 +16,10 @@ import setup, { iButton } from './setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * Render function for the `<Button />` component.
+ * Render function for the [`<Button/>`]{@link components/Button} component.
  *
  * @param {Partial<iButton>} props
- *  {@linkcode iButton} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ *  {@link iButton} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
  *
  * @returns {JSXInternal.Element}
  *  The `<Button />` component.

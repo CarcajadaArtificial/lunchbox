@@ -1,12 +1,8 @@
 # Changelog
 
-## v0.3.11
+## v0.3.12
 
-- `<Card />` component
-  - Fully documented the component.
-  - Updated the css-in-js object.
-  - Added component test page.
-- Updated the global styles inside the `<Stylesheet />` component.
+- Updated the `<Button />` component's documentation.
  
 ## Changes so far
 
