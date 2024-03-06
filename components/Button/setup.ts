@@ -16,8 +16,8 @@ import { transition } from '../../src/styles.ts';
 import { css } from '../../deps.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property type of the `<Button />` component. */
-export type iButton = iComponent<HTMLButtonElement> & {
+/** Properties of the `<Button />` component. */
+export type ButtonProps = {
   /** If true, expands the width of the button up to its maximum width. */
   maxWidth: boolean;
   /** If true, the button's paddings will be shorter. */
@@ -35,8 +35,10 @@ export type iButton = iComponent<HTMLButtonElement> & {
   type: ButtonTypes;
 };
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** These are the default values of the `<Button />` component's props. */
+/** Property type of the `<Button />` component. */
+export type iButton = iComponent<HTMLButtonElement> & ButtonProps;
+
+/** Default values of the `<Button />` component's props. */
 const defaults: iButton = {
   maxWidth: false,
   compact: false,
