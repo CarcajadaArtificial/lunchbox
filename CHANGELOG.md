@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.15
+## v0.3.16
 
-- Updated the `<Button />` component's documentation.
+- Updated the `<Button />` and `<Card />` component's documentation, and refactored the styles object.
  
 ## Changes so far
 

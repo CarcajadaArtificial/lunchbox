@@ -9,12 +9,20 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property type of the `<Card />` component. */
+/**
+ * Properties of the `<Card />` component.
+ *
+ * `imageUrl` (string):
+ *    An optional URL for the card's header.
+ *
+ * `fwd` (Partial<{...}>):
+ *    The configuration props of the
+ */
 export type iCard = iComponent<HTMLDivElement> & {
   /** An optional URL for the card's header. */
   imageUrl: string;
@@ -26,55 +34,11 @@ export type iCard = iComponent<HTMLDivElement> & {
   }>;
 };
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** These are the default values of the `<Card />` component's props. */
 const defaults: iCard = {
   imageUrl: '',
   fwd: {},
 };
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Style object for the `<Card />` component.
- *
- * @todo Add the `@container` queries when they're added to resin, also remove them on the
- * `<Stylesheet />` component.
- */
-const styles = css`
-  container-type: inline-size;
-
-  .card {
-    &__section {
-      padding: var(--s-three-quarters);
-      grid-column: span 2;
-
-      /* @container (width > 35em) {
-        padding-left: var(--s-single);
-      } */
-    }
-
-    &__panel {
-      border-radius: var(--s-quarter);
-
-      /* @container (width > 35em) {
-        display: grid;
-        grid-template-columns: 30% 70%;
-      } */
-    }
-    
-    &__image {
-      border-radius: var(--s-quarter) var(--s-quarter) 0 0;
-      aspect-ratio: 16 / 9;
-      background-size: cover;
-      background-position: center;
-
-      /* @container (width > 35em) {
-        aspect-ratio: 1 / 1;
-        border-radius: var(--s-quarter) 0 0 var(--s-quarter);
-      } */
-    }
-  }
-`;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Card />` component. */
@@ -84,15 +48,11 @@ export default (props: Partial<iCard>) => {
   const { panel, section, image } = p.fwd;
 
   const classes = partializeClasses({
-    card: opt(cn(styles), p.class, p.nostyle || p.nostyleAll),
-    image: opt(cn('card__image'), image?.class, image?.nostyle || p.nostyleAll),
-    panel: opt(
-      cn('card__panel'),
-      panel?.class,
-      panel?.nostyle || p.nostyleAll,
-    ),
+    card: opt(styles, p.class, p.nostyle || p.nostyleAll),
+    image: opt('card__image', image?.class, image?.nostyle || p.nostyleAll),
+    panel: opt('card__panel', panel?.class, panel?.nostyle || p.nostyleAll),
     section: opt(
-      cn('card__section'),
+      'card__section',
       section?.class,
       section?.nostyle || p.nostyleAll,
     ),

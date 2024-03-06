@@ -17,7 +17,7 @@ import Panel from '../Panel/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * Render function for the `<Card />` component.
+ * Render function for the [`<Card/ >`](/x/lunchbox/components/Card/setup.ts?s=iCard)` component.
  *
  * @param {Partial<iCard>} props
  *  {@linkcode iCard} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
@@ -38,19 +38,28 @@ export default function (props: Partial<iCard>) {
   } = setup(props);
 
   return (
-    <div ref={fref} class={c.card} {...p}>
+    <div
+      class={c.card}
+      ref={fref}
+      {...p}
+    >
       <Panel
+        class={c.panel}
         nostyleAll={nostyleAll}
         fref={fwd.panel?.ref}
-        class={c.panel}
+        {...fwd.panel}
       >
         {imageUrl === '' ? undefined : (
           <div
             class={c.image}
             style={{ backgroundImage: `url(${imageUrl})` }}
+            {...fwd.image}
           />
         )}
-        <div class={c.section}>
+        <div
+          class={c.section}
+          {...fwd.section}
+        >
           {children}
         </div>
       </Panel>
