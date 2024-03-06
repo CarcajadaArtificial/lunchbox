@@ -16,27 +16,28 @@ import { transition } from '../../src/styles.ts';
 import { css } from '../../deps.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Properties of the `<Button />` component. */
-export type ButtonProps = {
-  /** If true, expands the width of the button up to its maximum width. */
+/**
+ * Properties of the `<Button />` component.
+ * - `maxWidth` (boolean):
+ *    If true, expands the width of the button up to its maximum width.
+ * - `compact` (boolean):
+ *    If true, the button's paddings will be shorter.
+ * - `large` (boolean):
+ *    If true, the button's paddings will be larger.
+ * - `type` (ButtonTypes):
+ *    Changes the button's style depending on the property.
+ *    - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
+ *    - **error:** Makes it the standard red color.
+ *    - **panel:** Gives a panel background to the button. If placed on top of a `<Panel />` component,
+ *       it gives a page background instead, simulating a "hole" in the panel.
+ *    - **transparent:** Makes the button's background transparent.
+ */
+export type iButton = iComponent<HTMLButtonElement> & {
   maxWidth: boolean;
-  /** If true, the button's paddings will be shorter. */
   compact: boolean;
-  /** If true, the button's paddings will be larger. */
   large: boolean;
-  /**
-   * Changes the button's style depending on the property.
-   * - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
-   * - **error:** Makes it the standard red color.
-   * - **panel:** Gives a panel background to the button. If placed on top of a `<Panel />` component,
-   *    it gives a page background instead, simulating a "hole" in the panel.
-   * - **transparent:** Makes the button's background transparent.
-   */
   type: ButtonTypes;
 };
-
-/** Property type of the `<Button />` component. */
-export type iButton = iComponent<HTMLButtonElement> & ButtonProps;
 
 /** Default values of the `<Button />` component's props. */
 const defaults: iButton = {

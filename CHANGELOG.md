@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.3.13
+## v0.3.14
 
 - Updated the `<Button />` component's documentation.
  
