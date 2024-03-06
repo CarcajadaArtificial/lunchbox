@@ -16,7 +16,7 @@ import setup, { iButton } from './setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * Render function for the [`<Button/ >`](/components/Button) component.
+ * Render function for the [`<Button/ >`](/x/lunchbox/components/Button/setup.ts?s=iButton) component.
  *
  * @param {Partial<iButton>} props
  *  {@link iButton} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))

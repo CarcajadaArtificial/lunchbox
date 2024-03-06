@@ -16,12 +16,14 @@ import { JSX, Ref } from 'preact';
  * HTMLElement that inherits its attributes, the GenericComponent properties, Aria atributes, and Event
  * Handlers. [See more](https://deno.land/x/lunchbox#configure-anything-easily)
  *
- * - `fref?` (Ref<T>):
+ * `fref?` (Ref<T>):
  *    Short for "Forwarded Reference". This prop allows the component to receive a preact reference
  *    that points to the protagonist HTMLElement in the component.
- * - `nostyle?` (boolean):
+ *
+ * `nostyle?` (boolean):
  *    This prop removes the default styles of the component.
- * - `nostyleAll?` (boolean):
+ *
+ * `nostyleAll?` (boolean):
  *    This prop removes the default styles and the class names of all HTMLElements in the component.
  */
 export type iComponent<T extends EventTarget = HTMLElement> =
@@ -45,9 +47,10 @@ export type iElement<T extends EventTarget = HTMLElement> =
  * This type is a shorthand that helps in forwarding props and references to a component's part. This
  * type points to every secondary HTMLElement in a component.
  *
- * - `ref?` (Ref<T>):
+ * `ref?` (Ref<T>):
  *    Stores a reference that points to this HTMLElement.
- * - `nostyle?` (boolean):
+ *
+ * `nostyle?` (boolean):
  *    If true, removes the default class name of this HTMLElement.
  */
 export type iFwd<T extends EventTarget = HTMLElement> = iElement<T> & {

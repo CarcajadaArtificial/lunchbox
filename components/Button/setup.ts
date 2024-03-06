@@ -18,13 +18,17 @@ import { css } from '../../deps.ts';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * Properties of the `<Button />` component.
- * - `maxWidth` (boolean):
+ *
+ * `maxWidth` (boolean):
  *    If true, expands the width of the button up to its maximum width.
- * - `compact` (boolean):
+ *
+ * `compact` (boolean):
  *    If true, the button's paddings will be shorter.
- * - `large` (boolean):
+ *
+ * `large` (boolean):
  *    If true, the button's paddings will be larger.
- * - `type` (ButtonTypes):
+ *
+ * `type` (ButtonTypes):
  *    Changes the button's style depending on the property.
  *    - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
  *    - **error:** Makes it the standard red color.
