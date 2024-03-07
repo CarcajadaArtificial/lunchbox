@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.16
+## v0.3.17
 
-- Updated the `<Button />` and `<Card />` component's documentation, and refactored the styles object.
+- Created the empty vessel for the `<Autocomplete />` component.
  
 ## Changes so far
 
