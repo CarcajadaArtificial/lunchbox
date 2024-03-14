@@ -24,6 +24,17 @@ export default function TestInput() {
           <Input error='error' label='label' />
           <Input maxWidth />
 
+          <Text type='subheading'>Input types:</Text>
+          <Input type='password' label='password' />
+          <Input type='email' label='email' />
+          <Input type='number' label='number' />
+          <Input type='phone' label='phone' />
+          <Input type='datetime-local' label='datetime-local' />
+          <Input type='date' label='date' />
+          <Input type='month' label='month' />
+          <Input type='time' label='time' />
+          <Input type='week' label='week' />
+
           <Text type='subheading'>TextArea:</Text>
           <TextArea />
           <TextArea label='label' />
@@ -49,10 +60,21 @@ export default function TestInput() {
             allowMultiple
           />
 
-          <Text type='subheading'>Other inputs</Text>
+          <Text type='subheading'>Other inputs:</Text>
+          <Input value='input button' type='button' />
+          <Input value='input button' type='button' error='error' />
           <Input label='Select a number from 0 to 100.' type='range' />
+          <Input
+            label='Select a number from 0 to 100.'
+            type='range'
+            error='error'
+          />
           <Input type='color' label='Select a color.' />
+          <Input type='color' label='Select a color.' error='error' />
           <Input type='file' label='Upload the document.' />
+          <Input type='file' label='Upload the document.' error='error' />
+
+          <Text type='subheading'>Inputs with icons:</Text>
         </>
       </Main>
     </>

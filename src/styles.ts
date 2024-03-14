@@ -126,7 +126,9 @@ user-select: none;
     select {
       padding: 0 var(--s-half);
       height: var(--s-one-and-half);
-      @include appearance-none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
   
       &:disabled {
         opacity: 1;
@@ -290,7 +292,7 @@ user-select: none;
       }
     }
 
-    .input__error-msg {
+    .input__error-bg {
       &::-webkit-slider-runnable-track {
         background-color: var(--clr-bg-error);
       }

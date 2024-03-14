@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.19
+## v0.3.20
 
-- Updated the documentation in the `<Input/>`, `<TextArea/>`, and `<Select/>` component.
+- Updated the input testing page.
  
 ## Changes so far
 
