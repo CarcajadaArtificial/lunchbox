@@ -31,14 +31,14 @@ export default function () {
             }
           }
           
-          .lbx-input_box {
+          .input--box {
             padding-bottom: calc(var(--s-single) + var(--s-three-eights));
           }
           
-          .lbx-fieldset,
-          .lbx-input_box .lbx-input,
-          .lbx-input_box .lbx-textarea,
-          .lbx-input_box .lbx-select {
+          .fieldset,
+          .input--box input,
+          .input--box textarea,
+          .input--box select {
             width: calc(100% + var(--s-half));
           }
           
@@ -66,7 +66,7 @@ export default function () {
           }
           .comp-gradient {
             min-height: var(--s-triple);
-        }        
+          }
         `}
       </style>
     </>

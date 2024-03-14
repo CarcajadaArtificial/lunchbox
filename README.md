@@ -20,44 +20,8 @@ them inherently hierarchical. In this, I strongly disagree because atoms are of
 no less importance than organisms. But I do agree that they have one
 fundamentally different characteristic. Atoms are components only made by
 nature's _subatomic particles_ a.k.a. pure HTML Elements. Am I stretching too
-far with the atomic analogy?
-
-- **Atoms**
-  - ✅
-    [Button](https://deno.land/x/lunchbox@v0.1.13/components/Button/index.tsx)
-  - ✅ [Code](https://deno.land/x/lunchbox@v0.1.13/components/Code/index.tsx)
-  - ✅
-    [Layout](https://deno.land/x/lunchbox@v0.1.13/components/Layout/index.tsx)
-  - ✅ [Link](https://deno.land/x/lunchbox@v0.1.13/components/Link/index.tsx)
-  - ✅ [Panel](https://deno.land/x/lunchbox@v0.1.13/components/Panel/index.tsx)
-  - ✅
-    [Separator](https://deno.land/x/lunchbox@v0.1.13/components/Separator/index.tsx)
-  - ✅ [Text](https://deno.land/x/lunchbox@v0.1.13/components/Text/index.tsx)
-  - ⏳ Time
-  - ⏳ Markdown
-  - ⏳ Spinner
-  - ⏳ Screen
-- Molecules
-  - ✅ [Card](https://deno.land/x/lunchbox@v0.1.13/components/Card/index.tsx)
-  - ✅
-    [Footer](https://deno.land/x/lunchbox@v0.1.13/components/Footer/index.tsx)
-  - ✅
-    [Header](https://deno.land/x/lunchbox@v0.1.13/components/Header/index.tsx)
-  - ✅ [Input](https://deno.land/x/lunchbox@v0.1.13/components/Input/index.tsx)
-  - ✅
-    [Linkmap](https://deno.land/x/lunchbox@v0.1.13/components/Linkmap/index.tsx)
-  - ✅ [Main](https://deno.land/x/lunchbox@v0.1.13/components/Main/index.tsx)
-  - ✅
-    [Navigation](https://deno.land/x/lunchbox@v0.1.13/components/Navigation/index.tsx)
-  - ✅
-    [Select](https://deno.land/x/lunchbox@v0.1.13/components/Select/index.tsx)
-  - ✅
-    [TextArea](https://deno.land/x/lunchbox@v0.1.13/components/TextArea/index.tsx)
-  - ⏳ Menu
-  - ⏳ Fieldset
-  - ⏳ Chip
-  - ⏳ Page
-  - ⏳ Dialog
+far with the atomic analogy? You can observe the progress status of all components 
+in the [official project](https://github.com/users/CarcajadaArtificial/projects/2).
 
 ### Trivial HTML good practices
 

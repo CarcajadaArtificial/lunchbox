@@ -12,6 +12,10 @@ const defaults: iCode = {
   fwd: {},
 };
 
+/**
+ * @todo Change `padding: 3px 0.5ch 1px 0.5ch;` to `padding: 3px 0.5ch;` when inside a `<Button />`
+ *    component.
+ */
 const style = {
   code: css`
     line-break: strict;

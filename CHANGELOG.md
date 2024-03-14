@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.17
+## v0.3.18
 
-- Created the empty vessel for the `<Autocomplete />` component.
+- Updated the input styles to the new method of css-in-js.
  
 ## Changes so far
 
@@ -17,7 +17,7 @@
   - `<Input/>`
     - [x] Enhance the types color and range.
     - [x] Add ms styles for the color and range types.
-    - [ ] Enhance the file type.
+    - [x] Enhance the file type.
     - [ ] Add usage of icons.
   - `<Markdown/>`
     - [x] Add css-in-js styles.

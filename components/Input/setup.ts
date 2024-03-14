@@ -1,8 +1,33 @@
+//   ___                _     ___      _
+//  |_ _|_ _  _ __ _  _| |_  / __| ___| |_ _  _ _ __
+//   | || ' \| '_ \ || |  _| \__ \/ -_)  _| || | '_ \
+//  |___|_||_| .__/\_,_|\__| |___/\___|\__|\_,_| .__/
+//           |_|                               |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Input />` component.
+ *
+ * @module
+ */
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iText } from '../Text/setup.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Properties of the `<Input />` component.
+ *
+ * `label` (string):
+ *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
+ *    by nesting it inside the label as well.
+ *
+ * `error` (string | null):
+ *    This string creates a standarized error message linked individually to the input component.
+ *
+ * `maxWidth` (boolean):
+ *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ */
 export type iInput = iComponent<HTMLInputElement> & {
   label: string;
   error: string | null;
@@ -16,6 +41,7 @@ export type iInput = iComponent<HTMLInputElement> & {
   }>;
 };
 
+/** Default values of the `<Input />` component's props. */
 const defaults: iInput = {
   label: '',
   error: null,
@@ -24,6 +50,8 @@ const defaults: iInput = {
   fwd: {},
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Input />` component. */
 export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
@@ -34,49 +62,44 @@ export default (props: Partial<iInput>) => {
   const classes = partializeClasses({
     input: opt(
       cn(
-        'lbx-input',
-        inputStyles.part.input,
+        'input__abstract',
         transition.interaction.outline,
-        p.error ? [inputStyles.part.bgError, 'lbx-input_error'] : null,
+        p.error ? 'input__error-bg' : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
     ),
-    text: opt(cn('select-none'), text?.class, text?.nostyle || p.nostyleAll),
-    label: opt(
-      cn('lbx-input-label', inputStyles.part.label),
-      label?.class,
-      label?.nostyle || p.nostyleAll,
-    ),
+    text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
+    label: opt('input__label', label?.class, label?.nostyle || p.nostyleAll),
     error: opt(
-      cn(inputStyles.part.error),
+      'input__error-msg',
       error?.class,
       error?.nostyle || p.nostyleAll,
     ),
     required: opt(
-      cn(inputStyles.part.required),
+      'input__required',
       required?.class,
       required?.nostyle || p.nostyleAll,
     ),
     container: opt(
       cn(
-        inputStyles.part.container,
+        inputStyles,
         p.type === undefined
-          ? [inputStyles.kind.box, 'lbx-input_box']
+          ? 'input--box'
           : ['button', 'image', 'reset', 'submit'].includes(p.type)
-          ? inputStyles.kind.button
+          ? 'input--button'
           : ['radio', 'checkbox'].includes(p.type)
-          ? inputStyles.kind.bool
+          ? 'input--bool'
           : ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
-          ? [inputStyles.kind.date, 'lbx-input_box']
+          ? 'input--box input--date'
           : p.type === 'range'
-          ? [inputStyles.kind.range, 'lbx-input_range']
+          ? 'input--range'
           : p.type === 'color'
-          ? [inputStyles.kind.color, 'lbx-input_color']
+          ? 'input--color'
           : p.type === 'file'
-          ? [inputStyles.kind.file, 'lbx-input_file']
-          : [inputStyles.kind.box, 'lbx-input_box'],
-        p.maxWidth ? 'lbx-input_maxwidth' : null,
+          ? 'input--file'
+          : 'input--box',
+        p.maxWidth ? 'input--max-width' : null,
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,

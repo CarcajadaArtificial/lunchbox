@@ -1,6 +1,6 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { inputStyles } from '../../src/styles.ts';
+import { inputStyles, transition } from '../../src/styles.ts';
 
 export type iOption =
   | string
@@ -44,35 +44,31 @@ export default (props: Partial<iSelect>) => {
   const classes = partializeClasses({
     input: opt(
       cn(
-        'lbx-select',
-        inputStyles.part.input,
-        p.error ? inputStyles.part.bgError : null,
+        'input__abstract',
+        transition.interaction.outline,
+        p.error ? 'input__error-bg' : null,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
     ),
-    text: opt(cn('select-none'), text?.class, text?.nostyle || p.nostyleAll),
+    text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
     option: cn(option?.class),
-    label: opt(
-      cn('lbx-input-label', inputStyles.part.label),
-      label?.class,
-      label?.nostyle || p.nostyleAll,
-    ),
+    label: opt('input__label', label?.class, label?.nostyle || p.nostyleAll),
     error: opt(
-      cn(inputStyles.part.error),
+      'input__error-msg',
       error?.class,
       error?.nostyle || p.nostyleAll,
     ),
     required: opt(
-      cn(inputStyles.part.required),
+      'input__required',
       required?.class,
       required?.nostyle || p.nostyleAll,
     ),
     container: opt(
       cn(
-        inputStyles.part.container,
-        [inputStyles.kind.box, 'lbx-input_box'],
-        p.maxWidth ? 'lbx-input_maxwidth' : null,
+        inputStyles,
+        'input--box',
+        p.maxWidth ? 'input--max-width' : null,
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,
