@@ -1,7 +1,26 @@
+//   ___      _        _     ___      _
+//  / __| ___| |___ __| |_  / __| ___| |_ _  _ _ __
+//  \__ \/ -_) / -_) _|  _| \__ \/ -_)  _| || | '_ \
+//  |___/\___|_\___\__|\__| |___/\___|\__|\_,_| .__/
+//                                            |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Select />` component.
+ *
+ * @module
+ */
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * This type simplifies the usage of `<option/>` elements inside the component. There are three degrees
+ * of fineness of configuration:
+ * - **string**: Appends a `<option value={string}>{string}</option>` element.
+ * - **value/name pair**: Appends a `<option value={value}>{name}</option>` element.
+ * - **`<option/>` element**: Appends the element as it is.
+ */
 export type iOption =
   | string
   | {
@@ -10,6 +29,26 @@ export type iOption =
   }
   | iComponent<HTMLOptionElement>;
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Properties of the `<Select />` component.
+ *
+ * `label` (string):
+ *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
+ *    by nesting it inside the label as well.
+ *
+ * `error` (string | null):
+ *    This string creates a standarized error message linked individually to the component.
+ *
+ * `maxWidth` (boolean):
+ *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ *
+ * `placeholder` (string):
+ *    Creates an `<option value='' selected hidden>` HTMLElement that acts as a placeholder.
+ *
+ * `options` (iOption[]):
+ *    The array of available options in the component.
+ */
 export type iSelect = iComponent<HTMLSelectElement> & {
   label: string;
   error: string | null;
@@ -26,6 +65,7 @@ export type iSelect = iComponent<HTMLSelectElement> & {
   }>;
 };
 
+/** Default values of the `<Select />` component's props. */
 const defaults: iSelect = {
   label: '',
   error: null,
@@ -36,6 +76,8 @@ const defaults: iSelect = {
   fwd: {},
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Select />` component. */
 export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 

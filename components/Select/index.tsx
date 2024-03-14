@@ -1,6 +1,30 @@
+//   _____        _     _
+//  |_   _|____ _| |_  /_\  _ _ ___ __ _
+//    | |/ -_) \ /  _|/ _ \| '_/ -_) _` |
+//    |_|\___/_\_\\__/_/ \_\_| \___\__,_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * ### TextArea
+ * *Molecule*
+ *
+ * This module contains the render function for the `<TextArea />` component.
+ *
+ * @module
+ */
 import setup, { iSelect } from './setup.ts';
 import Text from '../Text/index.tsx';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Render function for the [`<Select/ >`](/x/lunchbox/components/Select/setup.ts?s=iSelect) component.
+ *
+ * @param {Partial<iSelect>} props
+ *  {@link iSelect} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ *
+ * @returns {JSXInternal.Element}
+ *  The `<Select />` component.
+ */
 export default function Select(props: Partial<iSelect>) {
   const {
     c,

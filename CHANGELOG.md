@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.18
+## v0.3.19
 
-- Updated the input styles to the new method of css-in-js.
+- Updated the documentation in the `<Input/>`, `<TextArea/>`, and `<Select/>` component.
  
 ## Changes so far
 
@@ -116,3 +116,8 @@
     - [ ] Palette: Rename color transparencies to names that don't depend on opacity.
   - `<Layout/>`
     - [ ] Add custom column spans for one or many layout-modules.
+
+- Plugin upgrade
+  - [ ] Make lunchbox installable like a plugin.
+  - [ ] Correctly assign islands.
+  - [ ] Automatically add the static stylesheet (Remove the `<Stylesheet />` component)

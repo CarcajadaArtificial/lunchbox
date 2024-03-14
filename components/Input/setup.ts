@@ -23,7 +23,7 @@ import { inputStyles, transition } from '../../src/styles.ts';
  *    by nesting it inside the label as well.
  *
  * `error` (string | null):
- *    This string creates a standarized error message linked individually to the input component.
+ *    This string creates a standarized error message linked individually to the component.
  *
  * `maxWidth` (boolean):
  *    If true, overrides the default max width and makes it adjust to the parent container's width.
@@ -49,6 +49,42 @@ const defaults: iInput = {
   maxWidth: false,
   fwd: {},
 };
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * This function determines the correct class name variation style for an input component depending on
+ * the attribute type. This is a quick rundown of every variation:
+ * - `box`: The default box input, this style is shared with the textarea and select components.
+ * - `button`: For inputs that have button shape.
+ * - `bool`: Boolean input types that includes radio and checkbox.
+ * - `date`: Some date/time input types have styles specific to the browser or OS, this class name
+ *   standarizes them to look like the `box` variation.
+ * - `range`: Specific of the range type.
+ * - `color`: Specific of the color type.
+ * - `file`: Specific of the file type.
+ *
+ * @param {string} type
+ *  The input type attribute. (`<input type="radio">`)
+ *
+ * @returns {string}
+ *  The corresponding class name of the input variation.
+ */
+const getInputVariationClass = (type?: string): string =>
+  type === undefined
+    ? 'input--box'
+    : ['button', 'image', 'reset', 'submit'].includes(type)
+    ? 'input--button'
+    : ['radio', 'checkbox'].includes(type)
+    ? 'input--bool'
+    : ['datetime-local', 'date', 'month', 'time', 'week'].includes(type)
+    ? 'input--box input--date'
+    : type === 'range'
+    ? 'input--range'
+    : type === 'color'
+    ? 'input--color'
+    : type === 'file'
+    ? 'input--file'
+    : 'input--box';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Input />` component. */
@@ -84,21 +120,7 @@ export default (props: Partial<iInput>) => {
     container: opt(
       cn(
         inputStyles,
-        p.type === undefined
-          ? 'input--box'
-          : ['button', 'image', 'reset', 'submit'].includes(p.type)
-          ? 'input--button'
-          : ['radio', 'checkbox'].includes(p.type)
-          ? 'input--bool'
-          : ['datetime-local', 'date', 'month', 'time', 'week'].includes(p.type)
-          ? 'input--box input--date'
-          : p.type === 'range'
-          ? 'input--range'
-          : p.type === 'color'
-          ? 'input--color'
-          : p.type === 'file'
-          ? 'input--file'
-          : 'input--box',
+        getInputVariationClass(p.type),
         p.maxWidth ? 'input--max-width' : null,
       ),
       container?.class,
