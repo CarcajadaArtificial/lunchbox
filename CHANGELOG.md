@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.20
+## v0.3.21
 
-- Updated the input testing page.
+- Addes style modules to the `</Input>`, `</TextArea>`, and `</Select>` component.
  
 ## Changes so far
 

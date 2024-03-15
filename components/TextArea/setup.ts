@@ -12,6 +12,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
+import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -66,6 +67,7 @@ export default (props: Partial<iTextArea>) => {
       cn(
         'input__abstract',
         transition.interaction.outline,
+        styles,
         p.noResize ? 'resize-none' : null,
         p.error ? 'input__error-bg' : null,
       ),
