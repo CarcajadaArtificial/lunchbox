@@ -78,22 +78,27 @@ const inputStyles = {
         content: '●';
       }
     }
+    
 
     .input__label {
-      grid-template-columns: var(--s-single) var(--s-one-and-half) 1fr;
+      grid-template-columns: var(--s-one-and-half) 1fr;
       align-items: center;
 
       .input__abstract {
         order: -1;
       }
 
-      .input__icon-container {
-        grid-column: 2;
-        grid-row: 1;
-      }
+      &.input--has-icon {
+        grid-template-columns: var(--s-one-and-half) var(--s-one-and-half) 1fr;
 
-      .txt-paragraph {
-        grid-column: 3;
+        .input__icon-container {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        .txt-paragraph {
+          grid-column: 3;
+        }
       }
     }
 

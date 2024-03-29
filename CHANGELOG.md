@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.22
+## v0.3.23
 
-- Added the icon functionality to the `<Input/>` component
-- Added the project incompleteness warning in the README.
-- Updated Fresh dependencies.
+- Minor fix in boolean Inputs with icons.
  
 ## Changes so far
 

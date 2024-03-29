@@ -86,6 +86,8 @@ export default function TestInput() {
             value='button'
             fieldIcon={<XIcon />}
           />
+          <br />
+          <Input label='label' type='radio' fieldIcon={<XIcon />} />
         </>
       </Main>
     </>
