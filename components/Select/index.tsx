@@ -37,6 +37,7 @@ export default function Select(props: Partial<iSelect>) {
     options,
     maxWidth,
     label,
+    fieldIcon,
     error,
     ...p
   } = setup(props);
@@ -83,6 +84,13 @@ export default function Select(props: Partial<iSelect>) {
               : null}
           </Text>
         )}
+        {fieldIcon
+          ? (
+            <div class={c.iconContainer}>
+              {fieldIcon}
+            </div>
+          )
+          : null}
         <select ref={fref} class={c.input} {...p}>
           {optionPlaceholder}
           {optionComponents}

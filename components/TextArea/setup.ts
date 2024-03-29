@@ -9,6 +9,7 @@
  *
  * @module
  */
+import { ComponentChild } from 'preact';
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
@@ -36,12 +37,14 @@ export type iTextArea = iComponent<HTMLTextAreaElement> & {
   error: string | null;
   maxWidth: boolean;
   noResize: boolean;
+  fieldIcon: ComponentChild | null;
   fwd: Partial<{
     text: iFwd<HTMLSpanElement>;
     label: iFwd<HTMLLabelElement>;
     error: iFwd<HTMLSpanElement>;
     required: iFwd;
     container: iFwd<HTMLDivElement>;
+    iconContainer: iFwd<HTMLDivElement>;
   }>;
 };
 
@@ -52,6 +55,7 @@ const defaults: iTextArea = {
   required: false,
   maxWidth: false,
   noResize: false,
+  fieldIcon: null,
   fwd: {},
 };
 
@@ -60,7 +64,7 @@ const defaults: iTextArea = {
 export default (props: Partial<iTextArea>) => {
   const p = applyDefaults<iTextArea>(defaults, props);
 
-  const { text, label, error, required, container } = p.fwd;
+  const { text, label, error, required, container, iconContainer } = p.fwd;
 
   const classes = partializeClasses({
     input: opt(
@@ -75,7 +79,11 @@ export default (props: Partial<iTextArea>) => {
       p.nostyle || p.nostyleAll,
     ),
     text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
-    label: opt('input__label', label?.class, label?.nostyle || p.nostyleAll),
+    label: opt(
+      cn('input__label', p.fieldIcon ? 'input--has-icon' : null),
+      label?.class,
+      label?.nostyle || p.nostyleAll,
+    ),
     error: opt(
       'input__error-msg',
       error?.class,
@@ -94,6 +102,11 @@ export default (props: Partial<iTextArea>) => {
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,
+    ),
+    iconContainer: opt(
+      'input__icon-container',
+      iconContainer?.class,
+      iconContainer?.nostyle || p.nostyleAll,
     ),
   });
 

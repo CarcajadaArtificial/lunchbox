@@ -12,6 +12,7 @@
  *
  * @module
  */
+
 import setup, { iTextArea } from './setup.ts';
 import Text from '../Text/index.tsx';
 
@@ -26,8 +27,18 @@ import Text from '../Text/index.tsx';
  *  The `<TextArea />` component.
  */
 export default function TextArea(props: Partial<iTextArea>) {
-  const { c, nostyle, nostyleAll, fref, fwd, maxWidth, label, error, ...p } =
-    setup(props);
+  const {
+    c,
+    nostyle,
+    nostyleAll,
+    fref,
+    fwd,
+    maxWidth,
+    label,
+    error,
+    fieldIcon,
+    ...p
+  } = setup(props);
 
   return (
     <div ref={fwd.container?.ref} class={c.container}>
@@ -47,6 +58,13 @@ export default function TextArea(props: Partial<iTextArea>) {
             )
             : null}
         </Text>
+        {fieldIcon
+          ? (
+            <div class={c.iconContainer}>
+              {fieldIcon}
+            </div>
+          )
+          : null}
         <textarea ref={fref} class={c.input} {...p} />
       </label>
       {error

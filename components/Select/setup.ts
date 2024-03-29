@@ -9,6 +9,7 @@
  *
  * @module
  */
+import { ComponentChild } from 'preact';
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
@@ -56,6 +57,7 @@ export type iSelect = iComponent<HTMLSelectElement> & {
   placeholder: string;
   maxWidth: boolean;
   options: iOption[] | [];
+  fieldIcon: ComponentChild | null;
   fwd: Partial<{
     text: iFwd<HTMLSpanElement>;
     label: iFwd<HTMLLabelElement>;
@@ -63,6 +65,7 @@ export type iSelect = iComponent<HTMLSelectElement> & {
     required: iFwd;
     container: iFwd<HTMLDivElement>;
     option: iFwd<HTMLOptionElement>;
+    iconContainer: iFwd<HTMLDivElement>;
   }>;
 };
 
@@ -73,6 +76,7 @@ const defaults: iSelect = {
   required: false,
   maxWidth: false,
   placeholder: '',
+  fieldIcon: null,
   options: [],
   fwd: {},
 };
@@ -82,7 +86,8 @@ const defaults: iSelect = {
 export default (props: Partial<iSelect>) => {
   const p = applyDefaults<iSelect>(defaults, props);
 
-  const { text, label, option, error, required, container } = p.fwd;
+  const { text, label, option, error, required, container, iconContainer } =
+    p.fwd;
 
   const classes = partializeClasses({
     input: opt(
@@ -97,7 +102,11 @@ export default (props: Partial<iSelect>) => {
     ),
     text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
     option: cn(option?.class),
-    label: opt('input__label', label?.class, label?.nostyle || p.nostyleAll),
+    label: opt(
+      cn('input__label', p.fieldIcon ? 'input--has-icon' : null),
+      label?.class,
+      label?.nostyle || p.nostyleAll,
+    ),
     error: opt(
       'input__error-msg',
       error?.class,
@@ -116,6 +125,11 @@ export default (props: Partial<iSelect>) => {
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,
+    ),
+    iconContainer: opt(
+      'input__icon-container',
+      iconContainer?.class,
+      iconContainer?.nostyle || p.nostyleAll,
     ),
   });
 

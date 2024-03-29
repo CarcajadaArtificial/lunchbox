@@ -77,6 +77,8 @@ export default function TestInput() {
 
           <Text type='subheading'>Inputs with icons:</Text>
           <Input label='label' fieldIcon={<XIcon />} />
+          <Select options={selectData} label='label' fieldIcon={<XIcon />} />
+          <TextArea label='label' fieldIcon={<XIcon />} />
           <Input label='label' type='range' fieldIcon={<XIcon />} />
           <Input label='label' type='color' fieldIcon={<XIcon />} />
           <Input label='label' type='file' fieldIcon={<XIcon />} />
