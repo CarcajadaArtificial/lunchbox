@@ -26,8 +26,18 @@ import setup, { iInput } from './setup.ts';
  *  The `<Input />` component.
  */
 export default function (props: Partial<iInput>) {
-  const { c, nostyle, nostyleAll, fref, fwd, maxWidth, label, error, ...p } =
-    setup(props);
+  const {
+    c,
+    nostyle,
+    nostyleAll,
+    fref,
+    fwd,
+    maxWidth,
+    label,
+    fieldIcon,
+    error,
+    ...p
+  } = setup(props);
 
   return (
     <div ref={fwd.container?.ref} class={c.container}>
@@ -53,6 +63,13 @@ export default function (props: Partial<iInput>) {
               : null}
           </Text>
         )}
+        {fieldIcon
+          ? (
+            <div class={c.iconContainer}>
+              {fieldIcon}
+            </div>
+          )
+          : null}
         <input ref={fref} class={c.input} {...p} />
       </label>
       {error

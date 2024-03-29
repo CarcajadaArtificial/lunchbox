@@ -14,6 +14,7 @@ import { iComponent, iFwd } from '../../src/types.ts';
 import { iText } from '../Text/setup.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 import Styles from './styles.ts';
+import { ComponentChild } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -28,17 +29,22 @@ import Styles from './styles.ts';
  *
  * `maxWidth` (boolean):
  *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ *
+ * `fieldIcon` (ComponentChild | null):
+ *    A component that will be placed next to the input field.
  */
 export type iInput = iComponent<HTMLInputElement> & {
   label: string;
   error: string | null;
   maxWidth: boolean;
+  fieldIcon: ComponentChild | null;
   fwd: Partial<{
     text: Partial<iText>;
     label: iFwd<HTMLLabelElement>;
     error: Partial<iText>;
     required: Partial<iFwd>;
     container: iFwd<HTMLDivElement>;
+    iconContainer: iFwd<HTMLDivElement>;
   }>;
 };
 
@@ -46,6 +52,7 @@ export type iInput = iComponent<HTMLInputElement> & {
 const defaults: iInput = {
   label: '',
   error: null,
+  fieldIcon: null,
   required: false,
   maxWidth: false,
   fwd: {},
@@ -56,7 +63,7 @@ const defaults: iInput = {
 export default (props: Partial<iInput>) => {
   const p = applyDefaults<iInput>(defaults, props);
 
-  const { text, label, error, required, container } = p.fwd;
+  const { text, label, error, required, container, iconContainer } = p.fwd;
 
   p.type = typeof p.type === 'string' ? p.type : p.type?.value;
 
@@ -71,7 +78,11 @@ export default (props: Partial<iInput>) => {
       p.nostyle || p.nostyleAll,
     ),
     text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
-    label: opt('input__label', label?.class, label?.nostyle || p.nostyleAll),
+    label: opt(
+      cn('input__label', p.fieldIcon ? 'input--has-icon' : null),
+      label?.class,
+      label?.nostyle || p.nostyleAll,
+    ),
     error: opt(
       'input__error-msg',
       error?.class,
@@ -90,6 +101,11 @@ export default (props: Partial<iInput>) => {
       ),
       container?.class,
       container?.nostyle || p.nostyleAll,
+    ),
+    iconContainer: opt(
+      'input__icon-container',
+      iconContainer?.class,
+      iconContainer?.nostyle || p.nostyleAll,
     ),
   });
 

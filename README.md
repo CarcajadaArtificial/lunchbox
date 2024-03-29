@@ -1,5 +1,7 @@
 # 🍱 Lunchbox
 
+### Warning! This is an incomplete project and it will have breaking changes soon. Expect the version `v1.0.0` to be the first stable and permanent release.
+
 ``Hello ( ´ ω ` )ノﾞ`` Welcome to 🍱 Lunchbox. So... you're into Deno 🦕 Fresh
 🍋? Damn, me too. I've found myself using nothing but Fresh for most of my web
 dev projects. But I'm not that much of a user of existing web component

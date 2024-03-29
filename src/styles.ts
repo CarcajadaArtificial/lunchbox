@@ -75,7 +75,7 @@ user-select: none;
   }
 
   &__label {
-    display: flex;
+    display: grid;
   }
 
   &__error-bg {
@@ -98,6 +98,14 @@ user-select: none;
   &__required {
     padding-left: var(--s-quarter);
   }
+
+  &--has-icon {
+    grid-template-columns: var(--s-one-and-half) 1fr;
+
+    .txt-paragraph {
+      grid-column: 2;
+    } 
+  }
 }
 
 &.input {
@@ -114,8 +122,8 @@ user-select: none;
       font: var(--txt-paragraph) var(--font-base);
     }
 
-    .input__label {
-      flex-direction: column;
+    .input--has-icon {
+      grid-template-columns: var(--s-double) 1fr;
     }
   }
 }

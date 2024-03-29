@@ -7,6 +7,7 @@ import {
   Text,
   TextArea,
 } from '../../mod.ts';
+import XIcon from 'icons/x.tsx';
 
 export default function TestInput() {
   const selectData = ['a', 'b', 'c'];
@@ -75,6 +76,16 @@ export default function TestInput() {
           <Input type='file' label='Upload the document.' error='error' />
 
           <Text type='subheading'>Inputs with icons:</Text>
+          <Input label='label' fieldIcon={<XIcon />} />
+          <Input label='label' type='range' fieldIcon={<XIcon />} />
+          <Input label='label' type='color' fieldIcon={<XIcon />} />
+          <Input label='label' type='file' fieldIcon={<XIcon />} />
+          <Input
+            label='label'
+            type='button'
+            value='button'
+            fieldIcon={<XIcon />}
+          />
         </>
       </Main>
     </>

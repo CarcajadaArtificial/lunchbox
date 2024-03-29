@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.21
+## v0.3.22
 
-- Addes style modules to the `</Input>`, `</TextArea>`, and `</Select>` component.
+- Added the icon functionality to the `<Input/>` component
+- Added the project incompleteness warning in the README.
+- Updated Fresh dependencies.
  
 ## Changes so far
 
