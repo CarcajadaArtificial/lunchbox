@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.24
+## v0.3.25
 
-- Added field icons to the `<Select/>` and `<TextArea/>` components
+- Updated the `<Code />` component.
  
 ## Changes so far
 
@@ -18,7 +18,7 @@
     - [x] Enhance the types color and range.
     - [x] Add ms styles for the color and range types.
     - [x] Enhance the file type.
-    - [ ] Add usage of icons.
+    - [x] Add usage of icons.
   - `<Markdown/>`
     - [x] Add css-in-js styles.
   - `<Navigation/>`

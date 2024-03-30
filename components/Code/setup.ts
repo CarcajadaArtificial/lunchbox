@@ -1,52 +1,41 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+//    ___         _       ___      _
+//   / __|___  __| |___  / __| ___| |_ _  _ _ __
+//  | (__/ _ \/ _` / -_) \__ \/ -_)  _| || | '_ \
+//   \___\___/\__,_\___| |___/\___|\__|\_,_| .__/
+//                                         |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Code />` component.
+ *
+ * @module
+ */
+import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Code />` component. */
 export type iCode = iComponent & {
   fwd: Partial<{
     wrapper: iFwd<HTMLDivElement>;
   }>;
 };
 
+/** Default values of the `<Code />` component's props. */
 const defaults: iCode = {
   fwd: {},
 };
 
-/**
- * @todo Change `padding: 3px 0.5ch 1px 0.5ch;` to `padding: 3px 0.5ch;` when inside a `<Button />`
- *    component.
- */
-const style = {
-  code: css`
-    line-break: strict;
-    line-height: calc(100% - 1px);
-    color: var(--clr-txt-personality);
-  `,
-  wrapper: css`
-    display: inline;
-    padding: 3px 0.5ch 1px 0.5ch;
-    margin: 0 0.5ch;
-    background-color: var(--clr-bg-panel);
-    border-radius: var(--s-quarter);
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Code />` component. */
 export default (props: Partial<iCode>) => {
   const p = applyDefaults<iCode>(defaults, props);
 
   const { wrapper } = p.fwd;
 
   const classes = partializeClasses({
-    code: opt(
-      cn(style.code),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
-    wrapper: opt(
-      cn(style.wrapper),
-      wrapper?.class,
-      wrapper?.nostyle || p.nostyleAll,
-    ),
+    code: opt('code', p.class, p.nostyle || p.nostyleAll),
+    wrapper: opt(styles, wrapper?.class, wrapper?.nostyle || p.nostyleAll),
   });
 
   delete p.class;
