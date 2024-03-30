@@ -1,32 +1,28 @@
-import { cn, opt, partializeClasses } from '../../src/utils.ts';
+//   ___               _           _
+//  | _ \__ _ _ _  ___| |  ___ ___| |_ _  _ _ __
+//  |  _/ _` | ' \/ -_) | (_-</ -_)  _| || | '_ \
+//  |_| \__,_|_||_\___|_| /__/\___|\__|\_,_| .__/
+//                                         |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Panel />` component.
+ *
+ * @module
+ */
+import { opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
+/** Properties of the `<Panel />` component. */
 export type iPanel = iComponent<HTMLDivElement>;
 
-const style = {
-  panel: css`
-    background-color: var(--clr-bg-panel);
-
-    .lbx-btn-invisible {
-      background-color: var(--clr-bg-panel);
-    }
-
-    .lbx-btn-panel {
-      background-color: var(--clr-bg-page);
-    }
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Panel />` component. */
 export default (props: Partial<iPanel>) => {
   const p = props;
 
   const classes = partializeClasses({
-    panel: opt(
-      cn(style.panel),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
+    panel: opt(styles, p.class, p.nostyle || p.nostyleAll),
   });
 
   delete p.class;

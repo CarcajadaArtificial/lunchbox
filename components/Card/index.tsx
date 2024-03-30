@@ -49,7 +49,7 @@ export default function (props: Partial<iCard>) {
         fref={fwd.panel?.ref}
         {...fwd.panel}
       >
-        {imageUrl === '' ? undefined : (
+        {imageUrl === '' || imageUrl === undefined ? undefined : (
           <div
             class={c.image}
             style={{ backgroundImage: `url(${imageUrl})` }}

@@ -1,9 +1,11 @@
 # Changelog
 
-## v0.3.29
+## v0.3.30
 
-- Updated the `<Markdown />` component.
-- Added a `<Markdown />` test page.
+- Updated the `<Panel />` component.
+- Added a `<Panel />` test page.
+- Minor updates to the `<Card />` component.
+- Added the panel test page that started as a renamed card test page.
  
 ## Changes so far
 
