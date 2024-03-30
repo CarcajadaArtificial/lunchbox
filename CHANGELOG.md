@@ -1,10 +1,9 @@
 # Changelog
 
-## v0.3.31
+## v0.3.32
 
-- Updated the `<Text />` component.
-- Added a `<Text />` test page.
-- Minor updates to the `<Input />` component, `_app.tsx` route, global styles, and text test page.
+- Updated the `<Separator />` component.
+- Minor updates to the `<Text />` component.
  
 ## Changes so far
 
@@ -71,8 +70,6 @@
   - `<Chiplist/>`
     - [ ] UpdateTags() - add or/and remove many tags at once.
     - [ ] Tags - Array of current tags
-  - `<Code/>`
-    - [ ] OnExtendedClick() - Copy content to clipboard.
   - `<Dialog/>`
     - [x] CloseDialog() - On determined close button and on the screen background.
     - [x] OpenDialog() 

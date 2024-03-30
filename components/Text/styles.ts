@@ -27,7 +27,7 @@ export const styles = css`
     font-weight: 600;
   }
 
-  &.text--paragraph + .lbx-separator {
+  &.text--paragraph + .separator {
     margin-top: var(--s-one-and-half);
   }
 
