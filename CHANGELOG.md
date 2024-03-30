@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.3.28
+## v0.3.29
 
-- Updated the `<Link />` component.
-- Added a `<Link />` test page.
+- Updated the `<Markdown />` component.
+- Added a `<Markdown />` test page.
  
 ## Changes so far
 

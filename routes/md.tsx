@@ -16,7 +16,7 @@ export default async function Md() {
   return (
     <div>
       <Main layout_type='center'>
-        <Markdown markdown_content={markdown} />
+        <Markdown markdownContent={markdown} />
       </Main>
     </div>
   );
