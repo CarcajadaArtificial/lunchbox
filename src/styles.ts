@@ -182,22 +182,22 @@ export const globalStyles = {
       --font-heading: 'Libre Caslon Text', ui-serif serif;
     }
 
-    .txt-small { 
+    .text--small { 
       font: var(--txt-small) var(--font-base);
     }
-    .txt-paragraph {
+    .text--paragraph {
       font: var(--txt-paragraph) var(--font-base);
     }
-    .txt-subheading {
+    .text--subheading {
       font: var(--txt-subheading) var(--font-base);
     }
-    .txt-heading {
+    .text--heading {
       font: var(--txt-heading) var(--font-heading);
     }
-    .txt-title {
+    .text--title {
       font: var(--txt-title) var(--font-heading);
     }
-    .txt-display {
+    .text--display {
       font: var(--txt-display) var(--font-heading);
     }
   `,

@@ -1,10 +1,29 @@
+//   _____        _
+//  |_   _|____ _| |_
+//    | |/ -_) \ /  _|
+//    |_|\___/_\_\\__|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * ### Text
+ * *Atom*
+ *
+ * This module contains the render function for the `<Text />` component.
+ *
+ * @module
+ */
 import setup, { iText } from './setup.ts';
 
 /**
+ *  Render function for the [`<Text/ >`](/x/lunchbox/components/Text/setup.ts?s=iText) component.
+ *
+ * @param {Partial<iText>} props
+ *  {@link iText} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ *
+ * @returns {JSXInternal.Element}
+ *  The `<Text />` component.
+ *
  * @todo [!] Add scroll-padding-top to headings.
- * @todo [!] Impleent the prop `compact`.
- * @todo [!] Impleent the prop `single`.
- * @todo [!] Impleent the prop `noMargins`.
  * @todo [!] Impleent the prop `indent`.
  * @todo [!] Impleent the prop `inheritColor`.
  */
@@ -13,8 +32,6 @@ export default function (props: Partial<iText>) {
     c,
     fref,
     type,
-    compact,
-    single,
     indent,
     noMargins,
     children,

@@ -1,84 +1,68 @@
+//   _____        _             _
+//  |_   _|____ _| |_   ___ ___| |_ _  _ _ __
+//    | |/ -_) \ /  _| (_-</ -_)  _| || | '_ \
+//    |_|\___/_\_\\__| /__/\___|\__|\_,_| .__/
+//                                      |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Button />` component.
+ *
+ * @module
+ */
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { TEXT_TYPES } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Properties of the `<Button />` component.
+ *
+ * `type` (TEXT_TYPES):
+ *    Changes the style of the text.
+ *    - **paragraph:** The default base text.
+ *    - **small:** A smaller variation of the paragraph and smallest of all the types.
+ *    - **title:** The standard large heading in the document
+ *    - **display:** A larger version of the title and largest of all the types. It should be used for
+ *        specific aesthetic purposes, it's too large to be readable on smaller screens.
+ *    - **heading:** A smaller version of the title, used for sections within it.
+ *    - **subheading:** The smaller heading type, has a unique style for smaller sections within
+ *        headings.
+ *
+ * `inheritColor` (boolean):
+ *    (todo) If true, the default text color will be avoided and instead it will inherit it.
+ *
+ * `noMargins` (boolean):
+ *    If true, removes the default margins from the text.
+ *
+ * `indent` (boolean):
+ *    (todo) If true, adds a default indentation to the text.
+ */
 export type iText = iComponent<HTMLSpanElement> & {
   type: TEXT_TYPES;
   inheritColor: boolean;
-  compact: boolean;
-  single: boolean;
   noMargins: boolean;
   indent: boolean;
 };
 
+/** Default values of the `<Button />` component's props. */
 const defaults: iText = {
   type: 'paragraph',
   inheritColor: false,
-  compact: false,
-  single: false,
   noMargins: false,
   indent: false,
 };
 
-const style = {
-  text: css`
-    display: block;
-
-    &.txt-display,
-    &.txt-title,
-    &.txt-heading {
-      color: var(--clr-txt-personality);
-    }
-
-    &.txt-display,
-    &.txt-title,
-    &.txt-heading,
-    &.txt-subheading {
-      font-weight: 600;
-    }
-
-    &.txt-paragraph + .lbx-separator {
-      margin-top: var(--s-one-and-half);
-    }
-
-    &:not(.no-margins) {
-      &.txt-display,
-      &.txt-title,
-      &.txt-heading,
-      &.txt-subheading {
-        margin-bottom: var(--s-one-and-half);
-      }
-
-      &.txt-paragraph {
-        + .txt-display,
-        + .txt-title,
-        + .txt-heading,
-        + .txt-subheading {
-          margin-top: var(--s-triple);
-        }
-
-        + .txt-paragraph {
-          margin-top: var(--s-one-and-half);
-        }
-      }
-
-      &.txt-small {
-        margin: var(--s-one-and-half) 0;
-      }
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Button />` component. */
 export default (props: Partial<iText>) => {
   const p = applyDefaults<iText>(defaults, props);
 
   const classes = partializeClasses({
     span: opt(
       cn(
-        style.text,
-        `txt-${p.type}`,
-        p.compact ? 'compact' : null,
-        p.single ? 'single' : null,
+        styles,
+        `text--${p.type}`,
         p.noMargins ? 'no-margins' : null,
         p.indent ? 'indent' : null,
         p.inheritColor ? 'inherit-color' : null,

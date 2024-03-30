@@ -96,7 +96,7 @@ const inputStyles = {
           grid-row: 1;
         }
 
-        .txt-paragraph {
+        .text--paragraph {
           grid-column: 3;
         }
       }

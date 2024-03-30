@@ -8,6 +8,13 @@ export default function TestText() {
       </Header>
       <Main layout_type='center'>
         <div>
+          <Text type='display'>
+            Display <Code>{'<Code/>'}</Code>
+          </Text>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In expedita
+            autem optio quidem! <Code>{'<Code/>'}</Code>
+          </Text>
           <Text type='title'>
             Title <Code>{'<Code/>'}</Code>
           </Text>

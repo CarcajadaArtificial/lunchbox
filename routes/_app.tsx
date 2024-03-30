@@ -11,7 +11,7 @@ export default function App({ Component }: AppProps) {
         <title>Fresh Garlic - Playground</title>
         <Stylesheet />
       </Head>
-      <body class='clr-bg-panel clr-txt-base txt-paragraph'>
+      <body class='clr-bg-panel clr-txt-base text--paragraph'>
         <div class='_screen'>
           <Component />
         </div>

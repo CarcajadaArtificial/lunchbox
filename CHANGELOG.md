@@ -1,11 +1,10 @@
 # Changelog
 
-## v0.3.30
+## v0.3.31
 
-- Updated the `<Panel />` component.
-- Added a `<Panel />` test page.
-- Minor updates to the `<Card />` component.
-- Added the panel test page that started as a renamed card test page.
+- Updated the `<Text />` component.
+- Added a `<Text />` test page.
+- Minor updates to the `<Input />` component, `_app.tsx` route, global styles, and text test page.
  
 ## Changes so far
 
