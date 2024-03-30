@@ -1,10 +1,9 @@
 # Changelog
 
-## v0.3.26
+## v0.3.27
 
-- Updated the `<Kbd />` component.
-- Added a `<Kbd />` test page.
-- Minor update to the `<Button />` component.
+- Updated the `<Layout />` component.
+- Added a `<Layout />` test page.
  
 ## Changes so far
 

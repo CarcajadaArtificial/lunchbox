@@ -11,6 +11,7 @@ import * as $test_gradient from './routes/test/gradient.tsx';
 import * as $test_index from './routes/test/index.tsx';
 import * as $test_input from './routes/test/input.tsx';
 import * as $test_kbd from './routes/test/kbd.tsx';
+import * as $test_layout from './routes/test/layout.tsx';
 import * as $test_text from './routes/test/text.tsx';
 import * as $XDialog from './islands/XDialog.tsx';
 import { type Manifest } from '$fresh/server.ts';
@@ -26,6 +27,7 @@ const manifest = {
     './routes/test/index.tsx': $test_index,
     './routes/test/input.tsx': $test_input,
     './routes/test/kbd.tsx': $test_kbd,
+    './routes/test/layout.tsx': $test_layout,
     './routes/test/text.tsx': $test_text,
   },
   islands: {
