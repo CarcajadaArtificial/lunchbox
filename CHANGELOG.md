@@ -1,9 +1,9 @@
 # Changelog
 
-## v0.3.27
+## v0.3.28
 
-- Updated the `<Layout />` component.
-- Added a `<Layout />` test page.
+- Updated the `<Link />` component.
+- Added a `<Link />` test page.
  
 ## Changes so far
 
