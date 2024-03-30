@@ -1,9 +1,8 @@
 # Changelog
 
-## v0.3.32
+## v0.3.33
 
-- Updated the `<Separator />` component.
-- Minor updates to the `<Text />` component.
+- Updated the `<Card />` component.
  
 ## Changes so far
 

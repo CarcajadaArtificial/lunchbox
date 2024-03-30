@@ -1,8 +1,8 @@
-//    ___             _   ___      _
-//   / __|__ _ _ _ __| | / __| ___| |_ _  _ _ __
-//  | (__/ _` | '_/ _` | \__ \/ -_)  _| || | '_ \
-//   \___\__,_|_| \__,_| |___/\___|\__|\_,_| .__/
-//                                         |_|
+//    ___             _           _
+//   / __|__ _ _ _ __| |  ___ ___| |_ _  _ _ __
+//  | (__/ _` | '_/ _` | (_-</ -_)  _| || | '_ \
+//   \___\__,_|_| \__,_| /__/\___|\__|\_,_| .__/
+//                                        |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * This module contains the prop type, default values, and styles for the `<Card />` component.
@@ -12,6 +12,7 @@
 import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { styles } from './styles.ts';
+import { iPanel } from '../Panel/setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -21,14 +22,12 @@ import { styles } from './styles.ts';
  *    An optional URL for the card's header.
  *
  * `fwd` (Partial<{...}>):
- *    The configuration props of the
+ *    The configuration props of the elements that make up this components.
  */
 export type iCard = iComponent<HTMLDivElement> & {
-  /** An optional URL for the card's header. */
   imageUrl: string;
-  /** Secondary elements' configuration props. */
   fwd: Partial<{
-    panel: iFwd<HTMLDivElement>;
+    panel: Partial<iPanel>;
     section: iFwd<HTMLDivElement>;
     image: iFwd<HTMLDivElement>;
   }>;
