@@ -1,26 +1,31 @@
+//   _  ___        _   ___      _
+//  | |/ / |__  __| | / __| ___| |_ _  _ _ __
+//  | ' <| '_ \/ _` | \__ \/ -_)  _| || | '_ \
+//  |_|\_\_.__/\__,_| |___/\___|\__|\_,_| .__/
+//                                      |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Kbd />` component.
+ *
+ * @module
+ */
+
 import { cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Kbd />` component. */
 export type iKbd = iComponent;
 
-const style = {
-  kbd: css`
-    background-color: var(--clr-bg-panel-50);
-    padding: var(--s-quarter) var(--s-three-eights);
-    position: relative;
-    bottom: var(--s-eighth);
-    border-radius: var(--s-eighth);
-    border-bottom: var(--s-eighth) solid var(--clr-bg-panel);
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Kbd />` component. */
 export default (props: Partial<iKbd>) => {
   const p = props;
 
   const classes = partializeClasses({
     kbd: opt(
-      cn(style.kbd, 'txt-small'),
+      cn(styles),
       p.class,
       p.nostyle || p.nostyleAll,
     ),

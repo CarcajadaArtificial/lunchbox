@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.25
+## v0.3.26
 
-- Updated the `<Code />` component.
+- Updated the `<Kbd />` component.
+- Added a `<Kbd />` test page.
+- Minor update to the `<Button />` component.
  
 ## Changes so far
 

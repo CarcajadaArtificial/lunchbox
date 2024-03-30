@@ -35,7 +35,6 @@ export const styles = css`
 
       &--large {
         border-bottom-width: var(--s-quarter);
-        border-radius: var(--s-five-eights);
         border-top-width: var(--s-quarter);
         padding: var(--s-quarter) var(--s-one-and-half);
       }
