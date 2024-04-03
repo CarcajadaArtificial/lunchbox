@@ -22,5 +22,6 @@ export const styles = css`
     line-break: strict;
     line-height: calc(100% - 1px);
     color: var(--clr-txt-personality);
+    font-family: var(--font-mono);
   }
 `;

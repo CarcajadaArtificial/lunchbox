@@ -2,6 +2,9 @@ import { css, ResinCssEmitter, ResinCssGlobalStyle } from '../../deps.ts';
 import { globalStyles, themeStyles } from '../../src/styles.ts';
 
 export default function () {
+  console.warn(
+    'The `<Stylesheet/> component is deprecated and will be removed in future versions.`',
+  );
   return (
     <>
       <link rel='stylesheet' href='/fonts/fonts.css' />

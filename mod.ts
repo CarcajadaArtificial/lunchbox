@@ -25,5 +25,3 @@ export { default as Stylesheet } from './components/Stylesheet/index.tsx';
 export { default as Text } from './components/Text/index.tsx';
 export { default as TextArea } from './components/TextArea/index.tsx';
 export { default as Time } from './components/Time/index.tsx';
-
-export { default as XDialog } from './islands/XDialog.tsx';

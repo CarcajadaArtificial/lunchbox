@@ -31,7 +31,7 @@ const style = {
   `,
 
   header_banner: css`
-    min-height: 100dvh;
+    min-height: 90dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;

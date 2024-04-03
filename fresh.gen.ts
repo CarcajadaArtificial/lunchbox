@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from './routes/_app.tsx';
+import * as $demo from './routes/demo.tsx';
 import * as $index from './routes/index.tsx';
 import * as $md from './routes/md.tsx';
 import * as $test_button from './routes/test/button.tsx';
@@ -19,6 +20,7 @@ import { type Manifest } from '$fresh/server.ts';
 const manifest = {
   routes: {
     './routes/_app.tsx': $_app,
+    './routes/demo.tsx': $demo,
     './routes/index.tsx': $index,
     './routes/md.tsx': $md,
     './routes/test/button.tsx': $test_button,

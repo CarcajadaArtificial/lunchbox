@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.33
+## v0.3.34
 
-- Updated the `<Card />` component.
+- Officially deprecated the `<Stylesheet />` component.
+- Added plugin functionality for importing styles.
+- Minor updates in the `<Header />` and `<Code />` components.
  
 ## Changes so far
 
