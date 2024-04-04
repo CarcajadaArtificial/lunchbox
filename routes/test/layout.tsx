@@ -7,7 +7,7 @@ import {
   Separator,
   Text,
 } from '../../mod.ts';
-import { iLayout } from '../../src/atoms/Layout/setup.ts';
+import { iLayout } from '../../src/components/atoms/Layout/setup.ts';
 
 const sampleItems = () =>
   ['Three', 'Sad', 'Tigers', 'Ate', 'Wheat'].map((content) => (

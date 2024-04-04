@@ -4,13 +4,13 @@ import {
   Header,
   Kbd,
   Link,
-  Linkmap,
   Main,
   Panel,
   Separator,
   Text,
 } from '../../mod.ts';
 import { IconX } from '../../deps.ts';
+import Linkmap from '../../components/Linkmap/index.tsx';
 
 export default function TestButton() {
   return (

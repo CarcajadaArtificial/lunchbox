@@ -1,6 +1,6 @@
 import setup, { iLinkmap, iLinkmapitem } from './setup.ts';
-import Link from '../../src/atoms/Link/index.tsx';
-import Text from '../../src/atoms/Text/index.tsx';
+import Link from '../../src/components/atoms/Link/index.tsx';
+import Text from '../../src/components/atoms/Text/index.tsx';
 
 export default function (props: Partial<iLinkmap>) {
   const { c, nostyle, nostyleAll, fref, fwd, links, ...p } = setup(props);

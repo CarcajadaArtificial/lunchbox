@@ -1,9 +1,11 @@
 # Changelog
 
-## v0.3.35
+## v0.3.37
 
-- Moved all finished atom components to the `/src` directory.
- 
+- Moved all released components to the `/src/comoponents` directory.
+- Updated `mod.ts` to only export atoms and molecules because organisms are to be islands exported from
+  the plugin.
+
 ## Changes so far
 
 ## Roadmap

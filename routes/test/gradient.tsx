@@ -1,4 +1,5 @@
-import { Gradient, Link, Main, Text } from '../../mod.ts';
+import Gradient from '../../components/Gradient/index.tsx';
+import { Link, Main, Text } from '../../mod.ts';
 
 export default function TestGradient() {
   return (
