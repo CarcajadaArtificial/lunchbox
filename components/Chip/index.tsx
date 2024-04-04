@@ -1,5 +1,5 @@
 import { IconX } from '../../deps.ts';
-import Text from '../Text/index.tsx';
+import Text from '../../src/atoms/Text/index.tsx';
 import setup, { iChip } from './setup.ts';
 
 export default function (props: Partial<iChip>) {

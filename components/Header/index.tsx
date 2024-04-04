@@ -1,6 +1,6 @@
 import setup, { iHeader } from './setup.ts';
-import Layout from '../Layout/index.tsx';
-import Panel from '../Panel/index.tsx';
+import Layout from '../../src/atoms/Layout/index.tsx';
+import Panel from '../../src/atoms/Panel/index.tsx';
 import Gradient from '../Gradient/index.tsx';
 
 export default function (props: Partial<iHeader>) {

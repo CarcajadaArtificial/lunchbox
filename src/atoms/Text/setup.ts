@@ -9,9 +9,9 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { TEXT_TYPES } from '../../src/enums.ts';
-import { iComponent } from '../../src/types.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../utils.ts';
+import { TEXT_TYPES } from '../../enums.ts';
+import { iComponent } from '../../types.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

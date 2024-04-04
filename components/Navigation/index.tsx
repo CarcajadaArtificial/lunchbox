@@ -1,5 +1,5 @@
 import setup, { iNavigation } from './setup.ts';
-import Panel from '../Panel/index.tsx';
+import Panel from '../../src/atoms/Panel/index.tsx';
 
 /**
  * @todo [!] Add a property `scroll-height` that makes the menu appear after scrolling until that height.

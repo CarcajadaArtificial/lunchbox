@@ -11,6 +11,9 @@ export default function lunchboxPlugin(): Plugin {
     //     "./plugin/OtherPluginIsland.tsx",
     //   ],
     // },
+    buildStart: (config) => {
+      console.log('buildStart', config.build.outDir);
+    },
     render: (ctx) => {
       ctx.render();
 
@@ -79,55 +82,7 @@ export default function lunchboxPlugin(): Plugin {
           },
           {
             id: 'lunchbox-font-families',
-            cssText: `              
-              @font-face {
-                font-family: 'Figtree';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url('./Figtree-Regular.woff2') format('woff2');
-              }
-              
-              @font-face {
-                font-family: 'Figtree';
-                font-style: italic;
-                font-weight: 400;
-                font-display: swap;
-                src: url('./Figtree-Italic.woff2') format('woff2');
-              }
-              
-              @font-face {
-                font-family: 'Figtree';
-                font-style: normal;
-                font-weight: 700;
-                font-display: swap;
-                src: url('./Figtree-700.woff2') format('woff2');
-              }
-              
-              @font-face {
-                font-family: 'Libre Caslon Text';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-                src: url('./Libre-Caslon-Text-Regular.woff2') format('woff2');
-              }
-              
-              @font-face {
-                font-family: 'Libre Caslon Text';
-                font-style: italic;
-                font-weight: 400;
-                font-display: swap;
-                src: url('./Libre-Caslon-Text-Italic.woff2') format('woff2');
-              }
-              
-              @font-face {
-                font-family: 'Libre Caslon Text';
-                font-style: normal;
-                font-weight: 700;
-                font-display: swap;
-                src: url('./Libre-Caslon-Text-700.woff2') format('woff2');
-              }
-            
+            cssText: `
               :root {
                 --font-mono: 'Fira Code', ui-monospace, monospace;
                 --font-base: 'Figtree', system-ui, ui-sans-serif, sans-serif;

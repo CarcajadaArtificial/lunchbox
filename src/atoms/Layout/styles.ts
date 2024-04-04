@@ -9,8 +9,8 @@
  *
  * @module
  */
-import { LAYOUT_TYPES } from '../../src/enums.ts';
-import { css } from '../../deps.ts';
+import { LAYOUT_TYPES } from '../../enums.ts';
+import { css } from '../../../deps.ts';
 
 export const styles: {
   whitespaceGrid: string;

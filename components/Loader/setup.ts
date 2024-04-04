@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { css } from '../../deps.ts';
-import { iText } from '../Text/setup.ts';
+import { iText } from '../../src/atoms/Text/setup.ts';
 import { animation } from '../../src/styles.ts';
 
 export type iLoader = iComponent<HTMLDivElement> & {

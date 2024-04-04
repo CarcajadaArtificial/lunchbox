@@ -2,7 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { MENU_POSITIONS } from '../../src/enums.ts';
 import { css } from '../../deps.ts';
-import { iButton } from '../Button/setup.ts';
+import { iButton } from '../../src/atoms/Button/setup.ts';
 import { JSX } from 'preact';
 
 type MenuOption = string | (() => void);

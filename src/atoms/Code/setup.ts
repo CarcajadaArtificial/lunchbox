@@ -9,8 +9,8 @@
  *
  * @module
  */
-import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent, iFwd } from '../../src/types.ts';
+import { applyDefaults, opt, partializeClasses } from '../../utils.ts';
+import { iComponent, iFwd } from '../../types.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

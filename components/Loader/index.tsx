@@ -1,6 +1,6 @@
 import setup, { iLoader } from './setup.ts';
-import Panel from '../Panel/index.tsx';
-import Text from '../Text/index.tsx';
+import Panel from '../../src/atoms/Panel/index.tsx';
+import Text from '../../src/atoms/Text/index.tsx';
 import { IconLoader2 } from '../../deps.ts';
 
 export default function (props: Partial<iLoader>) {

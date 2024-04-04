@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { css } from '../../deps.ts';
+import { css } from '../../../deps.ts';
 
 export const styles = css`
   text-decoration: underline;

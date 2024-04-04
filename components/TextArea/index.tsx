@@ -14,7 +14,7 @@
  */
 
 import setup, { iTextArea } from './setup.ts';
-import Text from '../Text/index.tsx';
+import Text from '../../src/atoms/Text/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

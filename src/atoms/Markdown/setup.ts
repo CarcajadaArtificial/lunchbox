@@ -9,10 +9,10 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent } from '../../src/types.ts';
-import { RenderOptions } from '../../src/markdown.ts';
-import { render } from '../../src/markdown.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../utils.ts';
+import { iComponent } from '../../types.ts';
+import { RenderOptions } from '../../markdown.ts';
+import { render } from '../../markdown.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

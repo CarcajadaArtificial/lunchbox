@@ -9,9 +9,9 @@
  *
  * @module
  */
-import { cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent } from '../../src/types.ts';
-import { transition } from '../../src/styles.ts';
+import { cn, opt, partializeClasses } from '../../utils.ts';
+import { iComponent } from '../../types.ts';
+import { transition } from '../../styles.ts';
 import { styles } from './styles.ts';
 
 /** Properties of the `<Button />` component. */

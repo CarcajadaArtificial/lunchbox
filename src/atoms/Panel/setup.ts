@@ -9,8 +9,8 @@
  *
  * @module
  */
-import { opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent } from '../../src/types.ts';
+import { opt, partializeClasses } from '../../utils.ts';
+import { iComponent } from '../../types.ts';
 import { styles } from './styles.ts';
 
 /** Properties of the `<Panel />` component. */

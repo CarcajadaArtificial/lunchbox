@@ -1,6 +1,6 @@
 import setup, { iMenu } from './setup.ts';
-import Button from '../Button/index.tsx';
-import Link from '../Link/index.tsx';
+import Button from '../../src/atoms/Button/index.tsx';
+import Link from '../../src/atoms/Link/index.tsx';
 
 export default function (props: Partial<iMenu>) {
   const {

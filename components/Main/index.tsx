@@ -1,5 +1,5 @@
 import setup, { iMain } from './setup.ts';
-import Layout from '../Layout/index.tsx';
+import Layout from '../../src/atoms/Layout/index.tsx';
 
 export default function (props: Partial<iMain>) {
   const { c, nostyle, nostyleAll, fref, fwd, children, layout_type, ...p } =

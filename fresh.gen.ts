@@ -14,7 +14,7 @@ import * as $test_kbd from './routes/test/kbd.tsx';
 import * as $test_layout from './routes/test/layout.tsx';
 import * as $test_panel from './routes/test/panel.tsx';
 import * as $test_text from './routes/test/text.tsx';
-import * as $XDialog from './islands/XDialog.tsx';
+
 import { type Manifest } from '$fresh/server.ts';
 
 const manifest = {
@@ -32,9 +32,7 @@ const manifest = {
     './routes/test/panel.tsx': $test_panel,
     './routes/test/text.tsx': $test_text,
   },
-  islands: {
-    './islands/XDialog.tsx': $XDialog,
-  },
+  islands: {},
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

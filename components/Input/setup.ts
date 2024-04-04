@@ -11,7 +11,7 @@
  */
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { iText } from '../Text/setup.ts';
+import { iText } from '../../src/atoms/Text/setup.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 import Styles from './styles.ts';
 import { ComponentChild } from 'preact';

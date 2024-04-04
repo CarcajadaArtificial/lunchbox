@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { iPanel } from '../Panel/setup.ts';
-import { iLayout } from '../Layout/setup.ts';
+import { iPanel } from '../../src/atoms/Panel/setup.ts';
+import { iLayout } from '../../src/atoms/Layout/setup.ts';
 import { css } from 'resin';
 
 export type iNavigation = iComponent & {

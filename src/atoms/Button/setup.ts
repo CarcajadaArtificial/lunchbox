@@ -9,10 +9,10 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { type ButtonTypes } from '../../src/enums.ts';
-import { iComponent } from '../../src/types.ts';
-import { transition } from '../../src/styles.ts';
+import { applyDefaults, cn, opt, partializeClasses } from '../../utils.ts';
+import { type ButtonTypes } from '../../enums.ts';
+import { iComponent } from '../../types.ts';
+import { transition } from '../../styles.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

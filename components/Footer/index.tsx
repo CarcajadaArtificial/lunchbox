@@ -1,8 +1,8 @@
 import { ComponentChild } from 'preact';
 import setup, { iFooter } from './setup.ts';
-import Layout from '../Layout/index.tsx';
-import Panel from '../Panel/index.tsx';
-import Link from '../Link/index.tsx';
+import Layout from '../../src/atoms/Layout/index.tsx';
+import Panel from '../../src/atoms/Panel/index.tsx';
+import Link from '../../src/atoms/Link/index.tsx';
 import Gradient from '../Gradient/index.tsx';
 
 /**

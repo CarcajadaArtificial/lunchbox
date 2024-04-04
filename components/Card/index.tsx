@@ -13,7 +13,7 @@
  * @module
  */
 import setup, { iCard } from './setup.ts';
-import Panel from '../Panel/index.tsx';
+import Panel from '../../src/atoms/Panel/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

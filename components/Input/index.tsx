@@ -12,7 +12,7 @@
  *
  * @module
  */
-import Text from '../Text/index.tsx';
+import Text from '../../src/atoms/Text/index.tsx';
 import setup, { iInput } from './setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

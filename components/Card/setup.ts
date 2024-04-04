@@ -12,7 +12,7 @@
 import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { styles } from './styles.ts';
-import { iPanel } from '../Panel/setup.ts';
+import { iPanel } from '../../src/atoms/Panel/setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

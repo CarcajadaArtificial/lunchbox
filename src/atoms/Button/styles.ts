@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { css } from '../../deps.ts';
+import { css } from '../../../deps.ts';
 
 export const styles = css`
   border-bottom-width: var(--s-eighth);

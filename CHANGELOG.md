@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.34
+## v0.3.35
 
-- Officially deprecated the `<Stylesheet />` component.
-- Added plugin functionality for importing styles.
-- Minor updates in the `<Header />` and `<Code />` components.
+- Moved all finished atom components to the `/src` directory.
  
 ## Changes so far
 
@@ -12,48 +10,17 @@
 
 ### v0.3
 
-- Features
-  - [ ] Make component's default prop values configurable.
-
-- Component updates:
-  - `<Input/>`
-    - [x] Enhance the types color and range.
-    - [x] Add ms styles for the color and range types.
-    - [x] Enhance the file type.
-    - [x] Add usage of icons.
-  - `<Markdown/>`
-    - [x] Add css-in-js styles.
-  - `<Navigation/>`
-    - [x] Add css-in-js styles.
-    - [x] Make sticky style optional.
-    - [x] Add a compact style variation.
-    - [ ] Add property that makes it appear after scrolling past the header.
-  - `<Link/>`
-    - [x] Add css-in-js styles.
-  - `<Button/>`
-    - [x] Add compact variation.
-    - [x] Add large variation.
-  - `<Layout/>`
-    - [x] Apply the fill width styles by default.
-    - [x] Rename the "dashboard" attribute to "includeHorizontalWhitespace".
-  - `<Separator/>`
-    - [ ] Add gradient pattern separator types.
-  - `<Gradient/>`
-    - [ ] Rename to `<Pattern/>` and rename the "pattern" attribute to "type".
-    - [ ] Rename the `gradient_pattern` property inside the `<Footer/>` and `<Header/>` components.
-
-- Add CSS transitions and animations:
-  - `<Button/>`
-    - [x] Small hover detail.
-    - [x] Small pressed detail. 
-  - `<Dialog/>`
-    - [ ] Backdrop fade and panel flies from top.
-  - `<Menu/>` 
-    - [ ] Popup appears from button.
-  - `<Navigation/>`
-    - [ ] Add appearing animation.
+- Component Updates
   - `<Chip/>` 
-    - [ ] Focus on close icon
+    - [ ] Focus on close icon css animation.
+    - [ ] OnActivation() listener - when the chip is activated.
+    - [ ] OnRemove() listener - when an added close button inside the chip is activated.
+  - `<Chiplist/>`
+    - [ ] useChiplistState() state
+      - (param) starting chips: Chip[]
+      - (state) updateChips() - add or/and remove many tags at once.
+      - (state) chips - Array of current tags
+    - [ ] Listeners onRemove, onAdd, and onActivate for every chip in the list.
 
 - [ ] Finish CSS-in-JS migration
   - [x] Add grid and layout styles.
@@ -63,61 +30,70 @@
   - [x] Add font configuration.
   - [ ] Change pattern from styles object, to a single styles constant and css classes inside.
 
-- Component Hooks and handlers:
-  - `<Button/>`
-    - [x] OnExtendedClick() - click, tap, pressed enter, pressed, space
-  - `<Chip/>`
-    - [ ] OnExtendedClick() - remove button.
-  - `<Chiplist/>`
-    - [ ] UpdateTags() - add or/and remove many tags at once.
-    - [ ] Tags - Array of current tags
-  - `<Dialog/>`
-    - [x] CloseDialog() - On determined close button and on the screen background.
-    - [x] OpenDialog() 
-  - `<Menu/>`
-    - [ ] OpenMenu()
-    - [ ] CloseMenu()
-  - `<Fieldset/>`
-    - ?
-  - `<Input/>`, `<Select/>`, `<TextArea/>`
-    - ?
+- [ ] Plugin upgrade
+  - [x] Make lunchbox installable like a plugin.
+  - [x] Automatically add the static stylesheet (Remove the `<Stylesheet />` component).
+  - [ ] Serve static font files.
+  - [ ] Correctly assign islands.
+  - [ ] Update README to have the new installation instructions.
 
 - [ ] Standarize subcomponent's property forwarding. Every component must:
   - Everycomponent must have module documentation with:
-    - [ ] A banner comment in `index.tsx` and `setup.ts`.
-    - [ ] A comment for the component's interface.
-    - [ ] A comment that marks the following 
+    - A banner comment in `index.tsx` and `setup.ts`.
+    - A comment for the component's interface.
   - Every component must have a "main" element with:
-    - [ ] The components type referenced using `iComponent` and that element.
-    - [ ] The standarized css class. (`class={c.styles}`)
-    - [ ] The reference must point to the component's forwarded reference. (`ref={fref}`)
-    - [ ] The spread of the rest of component's parameters. (`{...p}`)
+    - The components type referenced using `iComponent` and that element.
+    - The standarized css class. (`class={c.styles}`)
+    - The reference must point to the component's forwarded reference. (`ref={fref}`)
+    - The spread of the rest of component's parameters. (`{...p}`)
   - Any other element must have:
-    - [ ] The standarized css bem class. (`class='foo-bar__element--modifier'`)
-    - [ ] A reference comming from the `fwd` object. (`ref={fwd.foobar?.ref}`)
-    - [ ] * A spread of the other forwarded attributes. (`{...fwd.foobar}`)
+    - The standarized css bem class. (`class='foo-bar__element--modifier'`)
+    - A reference comming from the `fwd` object. (`ref={fwd.foobar?.ref}`)
+    - * A spread of the other forwarded attributes. (`{...fwd.foobar}`)
   - Any subcomponent must have:
-    - [ ] The `nostyleAll` passed. (`nostyleAll={nostyleAll}`)
-    - [ ] The standarized css class. (`class={c.foobar}`)
-    - [ ] * Default value but configurable for component attributes. (`attr={fwd.foobar?.attr ?? ''}`)
-    - [ ] * A spread of the other forwarded attributes. (`{...fwd.foobar}`)
+    - The `nostyleAll` passed. (`nostyleAll={nostyleAll}`)
+    - The standarized css class. (`class={c.foobar}`)
+    - * Default value but configurable for component attributes. (`attr={fwd.foobar?.attr ?? ''}`)
+    - * A spread of the other forwarded attributes. (`{...fwd.foobar}`)
 
 ### v0.4
 
+- Features
+  - [ ] Make component's default prop values configurable.
+
 - New Components
-  - [ ] Breadcrumbs
-  - [ ] ContentEditable
+  - `<Breadcrumbs/>`
+    - [ ] Built using the `<Link/>` component.
+  - `<ContentEditable/>`
+    - [ ] Same aesthetic and similar features to `<Input/>`, `<TextArea/>`, and `<Select/>` components.
+  - `<Pattern/>`
+    - [ ] Replaces the current functionality of the `<Gradient/>` component
 
 - Component Updates
   - `<Button/>`
     - [ ] Add focus bevel for the panel and invisible types.
-  - `<Stylesheet/>`
-    - [ ] Palette: Add light transparent backgrounds.
-    - [ ] Palette: Rename color transparencies to names that don't depend on opacity.
   - `<Layout/>`
     - [ ] Add custom column spans for one or many layout-modules.
+  - `<Gradient/>`
+    - [ ] Rename to `<Pattern/>` and rename the "pattern" attribute to "type".
+    - [ ] Remove the pattern functionality.
+    - [ ] Rename the `gradient_pattern` property inside the `<Footer/>` and `<Header/>` components.
+    - [ ] Easily create gradients using hex-values, rgba values, and css variables.
+    - [ ] Easily alter the types, positions, and angles of the gradient.
+    - [ ] Easily use similar to the `<Panel/>` component.
+  - `<Dialog/>`
+    - [ ] CSS animation of backdrop fading in and panel flying from top.
+    - [ ] CloseDialog() - On determined close button and on the screen background.
+    - [ ] OpenDialog()
+  - `<Menu/>` 
+    - [ ] Popup appears from button.
+    - [ ] OpenMenu()
+    - [ ] CloseMenu()
+  - `<Navigation/>`
+    - [ ] Add appearing animation.
+  - `<Separator/>`
+    - [ ] Add pattern separator types.
 
 - Plugin upgrade
-  - [ ] Make lunchbox installable like a plugin.
-  - [ ] Correctly assign islands.
-  - [ ] Automatically add the static stylesheet (Remove the `<Stylesheet />` component)
+  - [ ] Palette: Add light transparent backgrounds.
+  - [ ] Palette: Rename color transparencies to names that don't depend on opacity.
