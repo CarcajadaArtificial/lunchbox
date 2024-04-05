@@ -1,69 +1,65 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../../utils.ts';
+//    ___ _    _                _
+//   / __| |_ (_)_ __   ___ ___| |_ _  _ _ __
+//  | (__| ' \| | '_ \ (_-</ -_)  _| || | '_ \
+//   \___|_||_|_| .__/ /__/\___|\__|\_,_| .__/
+//              |_|                     |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Chip />` component.
+ *
+ * @module
+ */
+import { ComponentChild } from 'preact';
+import { apDef, o, part } from '../../../utils.ts';
 import { iComponent, iFwd } from '../../../types.ts';
-import { css } from '../../../../deps.ts';
+import { transition } from '../../../styles.ts';
+import type { iText } from '../../atoms/Text/setup.ts';
+import { styles } from './styles.ts';
 
-export type iChip = iComponent<HTMLLIElement> & {
-  onRemove?: (ev: Event) => void;
+/** Properties of the `<Chip />` component. */
+export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
+  content: string;
+  icon: null | ComponentChild;
+  onRemove: null | ((ev: Event) => void);
+  onActivate: null | ((ev: Event) => void);
   fwd: Partial<{
-    content: iFwd<HTMLSpanElement>;
-    remove_button: iFwd<HTMLButtonElement>;
+    content: iText;
+    remove: iFwd<HTMLButtonElement>;
+    removeIcon: Omit<iFwd<SVGSVGElement>, 'size'>;
+    icon: iFwd<SVGSVGElement>;
   }>;
 };
 
+/** These are the default values of the `<Chip />` component's props. */
 const defaults: iChip = {
+  content: 'test',
+  icon: null,
+  onRemove: null,
+  onActivate: null,
   fwd: {},
 };
 
-const style = {
-  chip: css`
-    list-style: none;
-    max-width: var(--s-fifteen);
-    width: max-content;
-    padding-left: var(--s-half);
-    display: flex;
-    align-items: center;
-    border-radius: var(--s-quarter);
-    background-color: var(--clr-bg-personality);
-  `,
-  remove: css`
-    width: var(--s-single);
-    margin: 0 var(--s-quarter);
-  `,
-  content: css`
-    max-width: var(--s-fifteen);
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    
-    &:not(:has(+ .lbx-chip_remove)) {
-      padding-right: var(--s-half);
-    }
-  `,
-};
-
+/** Setup function of the `<Card />` component. */
 export default (props: Partial<iChip>) => {
-  const p = applyDefaults<iChip>(defaults, props);
+  const p = apDef<iChip>(defaults, props);
 
-  const { remove_button, content } = p.fwd;
-
-  const classes = partializeClasses({
-    chip: opt(
-      cn(style.chip),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
-    remove_button: opt(
-      cn(style.remove, 'lbx-chip_remove'),
-      remove_button?.class,
-      remove_button?.nostyle || p.nostyleAll,
-    ),
-    content: opt(
-      cn(style.content),
-      content?.class,
-      content?.nostyle || p.nostyleAll,
-    ),
-  });
+  const c = part({
+    chip: o([
+      styles,
+      'chip',
+      p.onActivate ? 'chip--activable' : null,
+      p.onRemove ? 'chip--removable' : null,
+      p.icon ? 'chip--has-icon' : null,
+    ], { ...p }),
+    remove: o([
+      'chip__remove',
+      transition.interaction.outline,
+    ], { ...p.fwd.remove }),
+    removeIcon: o('chip__remove-icon', { ...p.fwd.removeIcon }),
+    content: o('chip__content', { ...p.fwd.content }),
+    icon: o('chip__icon', { ...p.fwd.icon }),
+  }, p.nostyleAll);
 
   delete p.class;
-  return { c: classes, ...p };
+  return { c, ...p };
 };

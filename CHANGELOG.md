@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.3.37
+## v0.3.38
 
-- Moved all released components to the `/src/comoponents` directory.
-- Updated `mod.ts` to only export atoms and molecules because organisms are to be islands exported from
-  the plugin.
+- Added `part()`, `o()`, and `apDef()` utility functions.
+- Updated the `<Chip/>` component.
+- Added the chip test page.
 
 ## Changes so far
 

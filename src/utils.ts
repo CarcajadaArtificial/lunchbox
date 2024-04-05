@@ -43,6 +43,14 @@ export const opt = (
   customClassName?: string | JSX.SignalLike<string | undefined>,
   nostyle?: boolean,
 ) => cn(nostyle ? '' : className, customClassName);
+/** New version of `opt()`. */
+export const o = (
+  classes: string | unknown[],
+  props?: {
+    class?: string | JSX.SignalLike<string | undefined>;
+    nostyle?: boolean;
+  },
+) => props && !props.nostyle ? classNames.default(classes, props.class) : '';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -84,6 +92,18 @@ export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
   }
   return { ...d, ...i };
 }
+/** New version of applyDefaults */
+// deno-lint-ignore ban-types
+export function apDef<T extends {}>(d: T, i: Partial<T>): T {
+  if (Object.keys(d).length === 0) {
+    throw new Error(
+      'Error in applyDefaults(): If there are no default values, this function must be avoided.',
+    );
+  } else if (Object.keys(i).length === 0) {
+    return d;
+  }
+  return { ...d, ...i };
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -106,6 +126,16 @@ export function partializeClasses(
     (entry) => (entry === '' ? undefined : entry),
   );
 }
+/** New version of `partializeClasses()`. */
+export const part = (
+  classes: Record<string, string>,
+  nostyleAll?: boolean,
+): Record<string, string | undefined> =>
+  nostyleAll ? {} : rMap<string | undefined>(
+    classes,
+    (entry) => (entry === '' ? undefined : entry),
+  );
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This function emulates the behavior of `Array.prototype.map()` in Records. It calls a function

@@ -11,9 +11,6 @@ export default function lunchboxPlugin(): Plugin {
     //     "./plugin/OtherPluginIsland.tsx",
     //   ],
     // },
-    buildStart: (config) => {
-      console.log('buildStart', config.build.outDir);
-    },
     render: (ctx) => {
       ctx.render();
 
