@@ -12,20 +12,18 @@
  *
  * @module
  */
-
 import setup, { iKbd } from './setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * Render function for the [`<Kbd/ >`](/x/lunchbox/components/Kbd/setup.ts?s=iKbd) component.
  *
- * @param {Partial<iKbd>} props
- *  {@link iKbd} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
  *
  * @returns {JSXInternal.Element}
  *  The `<Kbd />` component.
  */
-export default function (props: Partial<iKbd>) {
+export default function Kbd(props: Partial<iKbd>) {
   const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
 
   return <kbd class={c.kbd} ref={fref} {...p}>{children}</kbd>;

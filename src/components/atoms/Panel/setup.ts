@@ -13,6 +13,7 @@ import { opt, partializeClasses } from '../../../utils.ts';
 import { iComponent } from '../../../types.ts';
 import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Panel />` component. */
 export type iPanel = iComponent<HTMLDivElement>;
 

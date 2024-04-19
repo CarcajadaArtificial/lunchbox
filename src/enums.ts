@@ -14,8 +14,7 @@
  *
  * @module
  */
-
-export const LAYOUT_TYPES_ARRAY = [
+export const LAYOUT_TYPES = [
   'empty',
   'full',
   'center',
@@ -26,23 +25,18 @@ export const LAYOUT_TYPES_ARRAY = [
   'left',
 ] as const;
 
-export type LAYOUT_TYPES =
-  | 'empty'
-  | 'full'
-  | 'center'
-  | 'focus'
-  | 'halves'
-  | 'thirds'
-  | 'right'
-  | 'left';
+export type LayoutTypes = (typeof LAYOUT_TYPES)[number];
 
-export type TEXT_TYPES =
-  | 'display'
-  | 'title'
-  | 'heading'
-  | 'subheading'
-  | 'paragraph'
-  | 'small';
+export const TEXT_TYPES = [
+  'display',
+  'title',
+  'heading',
+  'subheading',
+  'paragraph',
+  'small',
+] as const;
+
+export type TextTypes = (typeof TEXT_TYPES)[number];
 
 /** @todo Write documentation */
 export const BUTTON_TYPES = [

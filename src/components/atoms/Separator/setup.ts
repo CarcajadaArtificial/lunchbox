@@ -13,6 +13,7 @@ import { cn, opt, partializeClasses } from '../../../utils.ts';
 import { iComponent } from '../../../types.ts';
 import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Separator />` component. */
 export type iSeparator = iComponent<HTMLHRElement>;
 

@@ -18,8 +18,24 @@ import setup, { iButton } from './setup.ts';
 /**
  * Render function for the [`<Button/ >`](/x/lunchbox/components/Button/setup.ts?s=iButton) component.
  *
- * @param {Partial<iButton>} props
- *  {@link iButton} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {boolean} maxWidth
+ *    If true, expands the width of the button up to its maximum width.
+ *
+ * @param {boolean} compact
+ *    If true, the button's paddings will be shorter.
+ *
+ * @param {boolean} large
+ *    If true, the button's paddings will be larger.
+ *
+ * @param {ButtonTypes} type
+ *    Changes the button's style depending on the property.
+ *    - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
+ *    - **error:** Makes it the standard red color.
+ *    - **panel:** Gives a panel background to the button. If placed on top of a `<Panel />` component,
+ *       it gives a page background instead, simulating a "hole" in the panel.
+ *    - **transparent:** Makes the button's background transparent.
  *
  * @returns {JSXInternal.Element}
  *  The `<Button />` component.

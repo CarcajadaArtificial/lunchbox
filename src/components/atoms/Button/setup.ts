@@ -16,26 +16,7 @@ import { transition } from '../../../styles.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Properties of the `<Button />` component.
- *
- * `maxWidth` (boolean):
- *    If true, expands the width of the button up to its maximum width.
- *
- * `compact` (boolean):
- *    If true, the button's paddings will be shorter.
- *
- * `large` (boolean):
- *    If true, the button's paddings will be larger.
- *
- * `type` (ButtonTypes):
- *    Changes the button's style depending on the property.
- *    - **disabled:** Adds `cursor: not-allowed` and makes it look unavailable.
- *    - **error:** Makes it the standard red color.
- *    - **panel:** Gives a panel background to the button. If placed on top of a `<Panel />` component,
- *       it gives a page background instead, simulating a "hole" in the panel.
- *    - **transparent:** Makes the button's background transparent.
- */
+/** Properties of the `<Button />` component. */
 export type iButton = iComponent<HTMLButtonElement> & {
   maxWidth: boolean;
   compact: boolean;

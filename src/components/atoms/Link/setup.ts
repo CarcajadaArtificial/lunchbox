@@ -5,7 +5,7 @@
 //                                     |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * This module contains the prop type, default values, and styles for the `<Button />` component.
+ * This module contains the prop type, default values, and styles for the `<Link />` component.
  *
  * @module
  */
@@ -14,11 +14,12 @@ import { iComponent } from '../../../types.ts';
 import { transition } from '../../../styles.ts';
 import { styles } from './styles.ts';
 
-/** Properties of the `<Button />` component. */
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Link />` component. */
 export type iLink = iComponent<HTMLAnchorElement>;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Setup function of the `<Button />` component. */
+/** Setup function of the `<Link />` component. */
 export default (props: Partial<iLink>) => {
   const p = props;
 

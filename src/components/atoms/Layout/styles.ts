@@ -9,13 +9,13 @@
  *
  * @module
  */
-import { LAYOUT_TYPES } from '../../../enums.ts';
+import { LayoutTypes } from '../../../enums.ts';
 import { css } from '../../../../deps.ts';
 
 export const styles: {
   whitespaceGrid: string;
   grid: string;
-  module: Record<LAYOUT_TYPES, string>;
+  module: Record<LayoutTypes, string>;
 } = {
   whitespaceGrid: css`
     display: grid; 

@@ -16,15 +16,21 @@ import setup, { iMarkdown } from './setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * Render function for the [`<Markdown/ >`](/x/lunchbox/components/Markdown/setup.ts?s=iMarkdown) component.
+ * Render function for the [`<Markdown/ >`](/x/lunchbox/components/Markdown/setup.ts?s=iMarkdown)
+ * component.
  *
- * @param {Partial<iMarkdown>} props
- *  {@link iMarkdown} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} markdownContent
+ *    A string that contains content with markdown syntax.
+ *
+ * @param {RenderOptions} renderOptions
+ *    Rendering options imported from the deno-gfm project.
  *
  * @returns {JSXInternal.Element}
  *  The `<Markdown />` component.
  */
-export default function (props: Partial<iMarkdown>) {
+export default function Markdown(props: Partial<iMarkdown>) {
   const {
     c,
     nostyle,

@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.3.38
+## v0.3.39
 
-- Added `part()`, `o()`, and `apDef()` utility functions.
-- Updated the `<Chip/>` component.
-- Added the chip test page.
+- Updated the documentation of the `<Button/>`, `<Code/>`, `<Kbd/>`, `<Layout/>`, `<Link/>`, 
+  `<Markdown/>`, `<Panel/>`, `<Separator/>`, and `<Text/>` components.
+- Added the `LAYOUT_TYPES` and `TEXT_TYPES` string arrays and their types.
 
 ## Changes so far
 
@@ -35,7 +35,6 @@
 - [ ] Plugin upgrade
   - [x] Make lunchbox installable like a plugin.
   - [x] Automatically add the static stylesheet (Remove the `<Stylesheet />` component).
-  - [ ] Serve static font files.
   - [ ] Correctly assign islands.
   - [ ] Update README to have the new installation instructions.
 

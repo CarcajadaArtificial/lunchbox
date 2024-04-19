@@ -9,7 +9,6 @@
  *
  * @module
  */
-
 import { cn, opt, partializeClasses } from '../../../utils.ts';
 import { iComponent } from '../../../types.ts';
 import { styles } from './styles.ts';

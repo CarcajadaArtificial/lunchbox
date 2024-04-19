@@ -18,13 +18,12 @@ import setup, { iLink } from './setup.ts';
 /**
  * Render function for the [`<Link/ >`](/x/lunchbox/components/Link/setup.ts?s=iLink) component.
  *
- * @param {Partial<iLink>} props
- *  {@link iLink} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
  *
  * @returns {JSXInternal.Element}
  *  The `<Link />` component.
  */
-export default function (props: Partial<iLink>) {
+export default function Link(props: Partial<iLink>) {
   const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
 
   return (

@@ -18,13 +18,12 @@ import setup, { iSeparator } from './setup.ts';
 /**
  * Render function for the [`<Separator/ >`](/x/lunchbox/components/Separator/setup.ts?s=iSeparator) component.
  *
- * @param {Partial<iSeparator>} props
- *  {@link iSeparator} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
  *
  * @returns {JSXInternal.Element}
  *  The `<Separator />` component.
  */
-export default function (props: Partial<iSeparator>) {
+export default function Separator(props: Partial<iSeparator>) {
   const { c, nostyle, nostyleAll, fref, ...p } = setup(props);
 
   return <hr ref={fref} class={c.separator} {...p} />;

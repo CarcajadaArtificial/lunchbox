@@ -11,23 +11,13 @@
  */
 import { applyDefaults, cn, opt, partializeClasses } from '../../../utils.ts';
 import { iComponent, iFwd } from '../../../types.ts';
-import { LAYOUT_TYPES } from '../../../enums.ts';
+import { LayoutTypes } from '../../../enums.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Properties of the `<Layout />` component.
- *
- * `type` (LAYOUT_TYPES):
- *    Available options that represent the different column arrangements on the grid.
- *
- * `whitespaceMode` (boolean):
- *    If true, adds horizontal whitespace margins to the layout section. This is useful for making
- *    certain layout types more focused. Additionally, having this mode turned off would create a
- *    layout with the minimum whitespace, making it have a "dashboard-like" appearance.
- */
+/** Properties of the `<Layout />` component. */
 export type iLayout = iComponent<HTMLDivElement> & {
-  type: LAYOUT_TYPES;
+  type: LayoutTypes;
   whitespaceMode: boolean;
   fwd: Partial<{
     module: iFwd<HTMLDivElement>;
@@ -57,7 +47,7 @@ export default (props: Partial<iLayout>) => {
       p.nostyle || p.nostyleAll,
     ),
     module: opt(
-      cn(styles.module[p.type as LAYOUT_TYPES]),
+      cn(styles.module[p.type as LayoutTypes]),
       module?.class,
       module?.nostyle || p.nostyleAll,
     ),

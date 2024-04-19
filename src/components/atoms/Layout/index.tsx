@@ -19,13 +19,20 @@ import { ComponentChild } from 'preact';
 /**
  * Render function for the [`<Layout/ >`](/x/lunchbox/components/Layout/setup.ts?s=iLayout) component.
  *
- * @param {Partial<iLayout>} props
- *  {@link iLayout} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {LayoutTypes} type
+ *    Available options that represent the different column arrangements on the grid.
+ *
+ * @param {boolean} whitespaceMode
+ *    If true, adds horizontal whitespace margins to the layout section. This is useful for making
+ *    certain layout types more focused. Additionally, having this mode turned off would create a
+ *    layout with the minimum whitespace, making it have a "dashboard-like" appearance.
  *
  * @returns {JSXInternal.Element}
  *  The `<Layout />` component.
  */
-export default function (props: Partial<iLayout>) {
+export default function Layout(props: Partial<iLayout>) {
   const {
     c,
     nostyle,

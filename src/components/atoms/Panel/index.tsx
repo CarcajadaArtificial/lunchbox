@@ -18,13 +18,12 @@ import setup, { iPanel } from './setup.ts';
 /**
  * Render function for the [`<Panel/ >`](/x/lunchbox/components/Panel/setup.ts?s=iPanel) component.
  *
- * @param {Partial<iPanel>} props
- *  {@link iPanel} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
  *
  * @returns {JSXInternal.Element}
  *  The `<Panel />` component.
  */
-export default function (props: Partial<iPanel>) {
+export default function Panel(props: Partial<iPanel>) {
   const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
 
   return (

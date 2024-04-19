@@ -16,15 +16,7 @@ import { render } from '../../../markdown.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Properties of the `<Button />` component.
- *
- * `markdownContent` (string):
- *    A string that contains content with markdown syntax.
- *
- * `renderOptions` (RenderOptions):
- *    Rendering options imported from the deno-gfm project.
- */
+/** Properties of the `<Button />` component. */
 export type iMarkdown = iComponent<HTMLDivElement> & {
   markdownContent: string;
   renderOptions: RenderOptions;
