@@ -20,25 +20,25 @@ import { IconX } from '../../../../deps.ts';
 /**
  * Render function for the [`<Chip/ >`](/x/lunchbox/components/Chip/setup.ts?s=iChip)` component.
  *
- * @param {Partial<iChip>} props
- * (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
- * - `content`: **(string)**
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} content
  *    The text interior of a chip.
  *
- * - `ChipIcon`: **(null | ((props: { size: number }) => JSX.Element))**
- *    The render function of an icon. *Must contain the property "size: number"*
+ * @param {null | ComponentChild} icon
+ *    The icon component. *Must contain the property "size: number"*
  *
- * - `onRemove`: **(null | ((ev: Event) => void))**
+ * @param {null | Function} onRemove
  *    Adds a button with an `<XIcon/>` from tabler icons and a listener for the `extendedClick()` event
  *    for the remove button.
  *
- * - `onActivate`: **(null | ((ev: Event) => void))**
+ * @param {null | Function} onActivate
  *    Adds "button-like" interactivity to the chip and a listener for the `extendedClick()` event.
  *
  * @returns {JSXInternal.Element}
  *  The `<Chip />` component.
  */
-export default function (props: Partial<iChip>) {
+export default function Chip(props: Partial<iChip>) {
   const {
     c,
     fwd,

@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.39
+## v0.3.40
 
-- Updated the documentation of the `<Button/>`, `<Code/>`, `<Kbd/>`, `<Layout/>`, `<Link/>`, 
-  `<Markdown/>`, `<Panel/>`, `<Separator/>`, and `<Text/>` components.
-- Added the `LAYOUT_TYPES` and `TEXT_TYPES` string arrays and their types.
+- Updated the documentation of the `<Chip/>` and `<Card/>` components.
 
 ## Changes so far
 

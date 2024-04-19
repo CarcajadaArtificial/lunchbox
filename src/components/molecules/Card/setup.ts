@@ -15,15 +15,7 @@ import { styles } from './styles.ts';
 import { iPanel } from '../../atoms/Panel/setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Properties of the `<Card />` component.
- *
- * `imageUrl` (string):
- *    An optional URL for the card's header.
- *
- * `fwd` (Partial<{...}>):
- *    The configuration props of the elements that make up this components.
- */
+/** Properties of the `<Card />` component. */
 export type iCard = iComponent<HTMLDivElement> & {
   imageUrl: string;
   fwd: Partial<{

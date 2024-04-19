@@ -16,6 +16,7 @@ import { transition } from '../../../styles.ts';
 import type { iText } from '../../atoms/Text/setup.ts';
 import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Chip />` component. */
 export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
   content: string;
@@ -26,7 +27,7 @@ export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
     content: iText;
     remove: iFwd<HTMLButtonElement>;
     removeIcon: Omit<iFwd<SVGSVGElement>, 'size'>;
-    icon: iFwd<SVGSVGElement>;
+    icon: Omit<iFwd<SVGSVGElement>, 'size'>;
   }>;
 };
 
@@ -39,6 +40,7 @@ const defaults: iChip = {
   fwd: {},
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Card />` component. */
 export default (props: Partial<iChip>) => {
   const p = apDef<iChip>(defaults, props);

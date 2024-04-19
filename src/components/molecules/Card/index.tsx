@@ -19,13 +19,15 @@ import Panel from '../../atoms/Panel/index.tsx';
 /**
  * Render function for the [`<Card/ >`](/x/lunchbox/components/Card/setup.ts?s=iCard)` component.
  *
- * @param {Partial<iCard>} props
- *  {@linkcode iCard} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} imageUrl
+ *    An optional URL for the card's header.
  *
  * @returns {JSXInternal.Element}
  *  The `<Card />` component.
  */
-export default function (props: Partial<iCard>) {
+export default function Card(props: Partial<iCard>) {
   const {
     c,
     fref,
