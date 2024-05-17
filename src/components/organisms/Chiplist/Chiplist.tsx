@@ -12,11 +12,6 @@ export default function (props: Partial<iChiplist>) {
         <Chip
           class={c.chip}
           onRemove={onRemove}
-          fwd={{
-            remove_button: {
-              class: c.remove_button,
-            },
-          }}
         >
           {value}
         </Chip>

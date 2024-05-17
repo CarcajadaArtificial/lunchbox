@@ -4,13 +4,12 @@ import { ResinCssEmitter } from './deps.ts';
 export default function lunchboxPlugin(): Plugin {
   return {
     name: 'lunchbox',
-    // islands: {
-    //   baseLocation: import.meta.url,
-    //   paths: [
-    //     "./plugin/MyPluginIsland.tsx",
-    //     "./plugin/OtherPluginIsland.tsx",
-    //   ],
-    // },
+    islands: {
+      baseLocation: import.meta.url,
+      paths: [
+        // './islands/plugin/Chiplist.tsx',
+      ],
+    },
     render: (ctx) => {
       ctx.render();
 

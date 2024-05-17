@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.40
+## v0.3.41
 
-- Updated the documentation of the `<Chip/>` and `<Card/>` components.
+- Added the `<Chiplist/>` component.
 
 ## Changes so far
 
@@ -12,9 +12,9 @@
 
 - Component Updates
   - `<Chip/>` 
-    - [ ] Focus on close icon css animation.
-    - [ ] OnActivation() listener - when the chip is activated.
-    - [ ] OnRemove() listener - when an added close button inside the chip is activated.
+    - [x] Focus on close icon css animation.
+    - [x] OnActivate() listener - when the chip is activated.
+    - [x] OnRemove() listener - when an added close button inside the chip is activated.
   - `<Chiplist/>`
     - [ ] useChiplistState() state
       - (param) starting chips: Chip[]
