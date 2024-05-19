@@ -1,8 +1,8 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { css } from '../../deps.ts';
-import { iPanel } from '../../src/components/atoms/Panel/setup.ts';
-import { iLayout } from '../../src/components/atoms/Layout/setup.ts';
+import { iPanel } from '../Panel/setup.ts';
+import { iLayout } from '../Layout/setup.ts';
 
 export type iDialog = iComponent<HTMLDivElement> & {
   open: boolean;

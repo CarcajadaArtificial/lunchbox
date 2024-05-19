@@ -1,8 +1,12 @@
 # Changelog
 
-## v0.3.43
+## v0.3.44
 
-- Removed fresh boilerplate app from the `/example` project.
+- Moved all atom and molecule components to the `/components` library.
+- Moved all organism components to the `/islands` library.
+- Moved all test routes to the `/example` project.
+- Updated `deno.json`.
+- Removed the fresh app functionalty.
 
 ## Changes so far
 
@@ -30,12 +34,20 @@
   - [x] Add font configuration.
   - [ ] Change pattern from styles object, to a single styles constant and css classes inside.
 
+- [ ] Project quality upgrade
+ - [ ] Fix plugin issues.
+ - [ ] Build a project docker image.
+ - [ ] Add git workflow. 
+ - [ ] Add Fresh Stories.
+ - [ ] Add unit testing for pertinent functions.
+ - [ ] Fix deno.land documentation.
+ - [ ] Deploy to jsr.
+
 - [ ] Plugin upgrade
   - [x] Make lunchbox installable like a plugin.
   - [x] Automatically add the static stylesheet (Remove the `<Stylesheet />` component).
   - [ ] Migrate fresh project test functionality to the `/example` directory.
     - [x] Remove fresh boilerplate app from the `/example` project.
-    - [ ] Change component import from `mod.ts` to `/components`. 
     - [ ] Add utility functions and a plugin export inside `mod.ts`.
     - [ ] Add the plugin inside the `/example` project.
     - [ ] Move the testing routes to the `/example` project.

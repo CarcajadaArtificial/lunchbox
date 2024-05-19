@@ -1,6 +1,7 @@
-import { defineConfig } from "$fresh/server.ts";
-import tailwind from "$fresh/plugins/tailwind.ts";
+import { defineConfig } from '$fresh/server.ts';
+import tailwind from '$fresh/plugins/tailwind.ts';
+import lunchbox from '../plugin.ts';
 
 export default defineConfig({
-  plugins: [tailwind()],
+  plugins: [tailwind(), lunchbox()],
 });
