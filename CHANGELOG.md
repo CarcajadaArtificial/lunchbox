@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.47
+## v0.3.48
 
-- Added the `./islands.ts` export module.
-- Removed the `island` export attempt from `./plugin.ts`.
-- Added mandarory `lunchbox.ts` island inside the example project.
+- Added font adding script during the build process.
 
 ## Changes so far
 
