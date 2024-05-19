@@ -1,12 +1,9 @@
 # Changelog
 
-## v0.3.44
+## v0.3.45
 
-- Moved all atom and molecule components to the `/components` library.
-- Moved all organism components to the `/islands` library.
-- Moved all test routes to the `/example` project.
-- Updated `deno.json`.
-- Removed the fresh app functionalty.
+- Added utility functions and types to the `mod.ts` file.
+- Added a `components.ts` module that forwards all components.
 
 ## Changes so far
 
@@ -48,11 +45,11 @@
   - [x] Automatically add the static stylesheet (Remove the `<Stylesheet />` component).
   - [ ] Migrate fresh project test functionality to the `/example` directory.
     - [x] Remove fresh boilerplate app from the `/example` project.
-    - [ ] Add utility functions and a plugin export inside `mod.ts`.
-    - [ ] Add the plugin inside the `/example` project.
-    - [ ] Move the testing routes to the `/example` project.
+    - [x] Add utility functions to `mod.ts`.
+    - [x] Add the plugin inside the `/example` project.
+    - [x] Move the testing routes to the `/example` project.
     - [ ] Add a `CONTRIBUTING.md` file with running and setup instructions for 
-  - [ ] Remove twind plugin. All stylesheets inside lunchbox must be inline stylesheets or css-in-js.
+  - [x] Remove twind plugin. All stylesheets inside lunchbox must be inline stylesheets or css-in-js.
   - [ ] Correctly assign islands.
   - [ ] Update README to have the new installation instructions.
 
