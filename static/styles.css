@@ -79,7 +79,7 @@ button {
 }
 
 /* Colors */
-html.lunchbox {
+.lunchbox {
   --clr-personality: #089969;
   --clr-bg-page: #3d3640;
   --clr-bg-panel: #241f26;
@@ -97,7 +97,7 @@ html.lunchbox {
   --clr-bg-personality-30: #0899694d;
 }
 @media (prefers-color-scheme: light) {
-  html.lunchbox {
+  .lunchbox {
     --clr-bg-page: #eee6f2;
     --clr-bg-panel: #ffffff;
     --clr-txt-base: #3d3640;
@@ -118,11 +118,12 @@ html.lunchbox {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Text styles
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.text--small {
-  font: var(--txt-small) var(--font-base);
-}
+.lunchbox,
 .text--paragraph {
   font: var(--txt-paragraph) var(--font-base);
+}
+.text--small {
+  font: var(--txt-small) var(--font-base);
 }
 .text--subheading {
   font: var(--txt-subheading) var(--font-base);

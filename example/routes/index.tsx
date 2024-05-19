@@ -13,13 +13,13 @@ export default function Home() {
           <Linkmap
             links={[
               { name: 'Button', url: '/Button' },
-              { name: 'Code', url: '/Code' },
+              { name: 'Code' },
               { name: 'Kbd', url: '/Kbd' },
               { name: 'Layout', url: '/Layout' },
-              { name: 'Link', url: '/Link' },
+              { name: 'Link' },
               { name: 'Markdown', url: '/Markdown' },
               { name: 'Panel', url: '/Panel' },
-              { name: 'Separator', url: '/Separator' },
+              { name: 'Separator' },
               { name: 'Text', url: '/Text' },
             ]}
           />

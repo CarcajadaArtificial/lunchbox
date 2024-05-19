@@ -1,8 +1,9 @@
 # Changelog
 
-## v0.3.49
+## v0.3.50
 
-- Added linkmaps in the test project home.
+- Minor fixes
+- Removed the `.vscode` directories.
 
 ## Changes so far
 
