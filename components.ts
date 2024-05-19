@@ -6,8 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Inside here all atom and molecule components are exported. Because organisms are, by nature, islands
- * must not be exported here. Instead, organisms must be forwareded to the `islands/` directory using
- * a Fresh plugin. Components exported here must be SSR and non interactible.
+ * must not be exported here.
  *
  * @module
  */

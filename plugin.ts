@@ -8,12 +8,6 @@ const styles = await Deno.readTextFile(
 export default function lunchboxPlugin(): Plugin {
   return {
     name: 'lunchbox',
-    islands: {
-      baseLocation: import.meta.url,
-      paths: [
-        // './islands/plugin/Chiplist.tsx',
-      ],
-    },
     render: (ctx) => {
       ctx.render();
 

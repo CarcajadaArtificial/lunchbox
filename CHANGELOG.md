@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.3.46
+## v0.3.47
 
-- Refactored the static styles in the import file.
-- Moved the static `content.md` test file.
-- Removed the stylesheet component.
+- Added the `./islands.ts` export module.
+- Removed the `island` export attempt from `./plugin.ts`.
+- Added mandarory `lunchbox.ts` island inside the example project.
 
 ## Changes so far
 
@@ -51,7 +51,7 @@
     - [x] Move the testing routes to the `/example` project.
     - [ ] Add a `CONTRIBUTING.md` file with running and setup instructions for 
   - [x] Remove twind plugin. All stylesheets inside lunchbox must be inline stylesheets or css-in-js.
-  - [ ] Correctly assign islands.
+  - [x] Correctly assign islands.
   - [ ] Update README to have the new installation instructions.
 
 - [ ] Standarize subcomponent's property forwarding. Every component must:

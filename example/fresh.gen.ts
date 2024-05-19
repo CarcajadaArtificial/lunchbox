@@ -15,7 +15,7 @@ import * as $layout_index from "./routes/layout/index.tsx";
 import * as $markdown_index from "./routes/markdown/index.tsx";
 import * as $panel_panel from "./routes/panel/panel.tsx";
 import * as $text_text from "./routes/text/text.tsx";
-
+import * as $lunchbox from "./islands/lunchbox.ts";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -34,7 +34,9 @@ const manifest = {
     "./routes/panel/panel.tsx": $panel_panel,
     "./routes/text/text.tsx": $text_text,
   },
-  islands: {},
+  islands: {
+    "./islands/lunchbox.ts": $lunchbox,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
