@@ -4,4 +4,5 @@ deno.lock
 .github/dep/
 .github/dep/garlicss/
 .obsidian
+.vscode
 _fresh/
