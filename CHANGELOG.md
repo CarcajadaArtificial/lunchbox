@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.42
+## v0.3.43
 
-- Added the `/example` project.
+- Removed fresh boilerplate app from the `/example` project.
 
 ## Changes so far
 
@@ -33,6 +33,14 @@
 - [ ] Plugin upgrade
   - [x] Make lunchbox installable like a plugin.
   - [x] Automatically add the static stylesheet (Remove the `<Stylesheet />` component).
+  - [ ] Migrate fresh project test functionality to the `/example` directory.
+    - [x] Remove fresh boilerplate app from the `/example` project.
+    - [ ] Change component import from `mod.ts` to `/components`. 
+    - [ ] Add utility functions and a plugin export inside `mod.ts`.
+    - [ ] Add the plugin inside the `/example` project.
+    - [ ] Move the testing routes to the `/example` project.
+    - [ ] Add a `CONTRIBUTING.md` file with running and setup instructions for 
+  - [ ] Remove twind plugin. All stylesheets inside lunchbox must be inline stylesheets or css-in-js.
   - [ ] Correctly assign islands.
   - [ ] Update README to have the new installation instructions.
 
