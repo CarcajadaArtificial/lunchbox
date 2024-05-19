@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.41
+## v0.3.42
 
-- Added the `<Chiplist/>` component.
+- Added the `/example` project.
 
 ## Changes so far
 
@@ -11,7 +11,7 @@
 ### v0.3
 
 - Component Updates
-  - `<Chip/>` 
+  - `<Chip/>`
     - [x] Focus on close icon css animation.
     - [x] OnActivate() listener - when the chip is activated.
     - [x] OnRemove() listener - when an added close button inside the chip is activated.
