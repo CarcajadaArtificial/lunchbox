@@ -8,7 +8,7 @@ export default function App({ Component }: PageProps) {
         <title>Example Lunchbox Project</title>
         <link rel='stylesheet' href='/styles.css' />
       </head>
-      <body class='clr-bg-panel clr-txt-base text--paragraph'>
+      <body>
         <Component />
       </body>
     </html>

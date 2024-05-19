@@ -44,11 +44,3 @@ export { default as Main } from './components/Main/index.tsx';
 export { default as Navigation } from './components/Navigation/index.tsx';
 export { default as Select } from './components/Select/index.tsx';
 export { default as TextArea } from './components/TextArea/index.tsx';
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//   ___                           _          _
-//  |   \ ___ _ __ _ _ ___ __ __ _| |_ ___ __| |
-//  | |) / -_) '_ \ '_/ -_) _/ _` |  _/ -_) _` |
-//  |___/\___| .__/_| \___\__\__,_|\__\___\__,_|
-//           |_|
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export { default as Stylesheet } from './components/Stylesheet/index.tsx';

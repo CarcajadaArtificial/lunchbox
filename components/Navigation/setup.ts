@@ -2,7 +2,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iNavigation = iComponent & {
   fixed: boolean;

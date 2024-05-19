@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.3.45
+## v0.3.46
 
-- Added utility functions and types to the `mod.ts` file.
-- Added a `components.ts` module that forwards all components.
+- Refactored the static styles in the import file.
+- Moved the static `content.md` test file.
+- Removed the stylesheet component.
 
 ## Changes so far
 

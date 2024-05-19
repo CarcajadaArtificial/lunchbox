@@ -1,7 +1,7 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { GRADIENT_PATTERNS } from '../../src/enums.ts';
-import { css } from 'resin';
+import { css } from '../../deps.ts';
 
 export type iGradient = iComponent<HTMLDivElement> & {
   gradient_pattern: GRADIENT_PATTERNS | null;
