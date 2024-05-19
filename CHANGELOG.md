@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.48
+## v0.3.49
 
-- Added font adding script during the build process.
+- Added linkmaps in the test project home.
 
 ## Changes so far
 

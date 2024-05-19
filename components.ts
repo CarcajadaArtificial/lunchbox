@@ -39,6 +39,7 @@ export { default as Fieldset } from './components/Fieldset/index.tsx';
 export { default as Footer } from './components/Footer/index.tsx';
 export { default as Header } from './components/Header/index.tsx';
 export { default as Input } from './components/Input/index.tsx';
+export { default as Linkmap } from './components/Linkmap/index.tsx';
 export { default as Main } from './components/Main/index.tsx';
 export { default as Navigation } from './components/Navigation/index.tsx';
 export { default as Select } from './components/Select/index.tsx';
