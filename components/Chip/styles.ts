@@ -22,38 +22,18 @@ export const styles = css`
   max-width: var(--s-fifteen);
   padding-left: var(--s-quarter);
   width: max-content;
-
-  &--activable {
-    
+  
+  &--selected {
+    background-color: var(--clr-bg-personality-60);
   }
 
-  &--removable {
-
-  }
-
-  &--has-icon {
-
+  &--has-interaction {
+    user-select: none;
+    cursor: pointer;
   }
 }
 
 .chip {
-  &__remove {
-    margin-left: var(--s-eighth);
-    border-radius: var(--s-quarter);
-
-    &:focus, &:hover {
-
-    }
-  }
-
-  &__remove-icon {
-    margin: 0 var(--s-eighth);
-    min-width: var(--s-three-quarters);
-  }
-
-  &__icon {
-    min-width: var(--s-three-quarters);
-  }
 
   &__content {
     max-width: var(--s-fifteen);
@@ -62,7 +42,7 @@ export const styles = css`
     white-space: nowrap;
     
     &:not(:has(+ .chip__remove)) {
-      padding-right: var(--s-half);
+      padding-right: var(--s-quarter);
     }
   }
 }

@@ -1,9 +1,10 @@
 # Changelog
 
-## v0.3.50
+## v0.3.52
 
-- Minor fixes
-- Removed the `.vscode` directories.
+- Added the `<ChipSelect />` island.
+- Removed the `<Chiplist />` island.
+- Updated the `<Chip />` component.
 
 ## Changes so far
 

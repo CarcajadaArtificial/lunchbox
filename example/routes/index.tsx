@@ -12,15 +12,15 @@ export default function Home() {
           <Text type='subheading' noMargins>Atoms</Text>
           <Linkmap
             links={[
-              { name: 'Button', url: '/Button' },
+              { name: 'Button', url: '/button' },
               { name: 'Code' },
-              { name: 'Kbd', url: '/Kbd' },
-              { name: 'Layout', url: '/Layout' },
+              { name: 'Kbd', url: '/kbd' },
+              { name: 'Layout', url: '/layout' },
               { name: 'Link' },
-              { name: 'Markdown', url: '/Markdown' },
-              { name: 'Panel', url: '/Panel' },
+              { name: 'Markdown', url: '/markdown' },
+              { name: 'Panel', url: '/panel' },
               { name: 'Separator' },
-              { name: 'Text', url: '/Text' },
+              { name: 'Text', url: '/text' },
             ]}
           />
         </Card>
@@ -28,17 +28,17 @@ export default function Home() {
           <Text type='subheading' noMargins>Molecules</Text>
           <Linkmap
             links={[
-              { name: 'Card', url: '/Card' },
-              { name: 'Chip', url: '/Chip' },
-              { name: 'Fieldset', url: '/Fieldset' },
-              { name: 'Footer', url: '/Footer' },
-              { name: 'Header', url: '/Header' },
-              { name: 'Input', url: '/Input' },
-              { name: 'Linkmap', url: '/Linkmap' },
-              { name: 'Main', url: '/Main' },
-              { name: 'Navigation', url: '/Navigation' },
-              { name: 'Select', url: '/Select' },
-              { name: 'TextArea', url: '/TextArea' },
+              { name: 'Card', url: '/card' },
+              { name: 'Chip', url: '/chip' },
+              { name: 'Fieldset', url: '/fieldset' },
+              { name: 'Footer', url: '/footer' },
+              { name: 'Header', url: '/header' },
+              { name: 'Input', url: '/input' },
+              { name: 'Linkmap', url: '/linkmap' },
+              { name: 'Main', url: '/main' },
+              { name: 'Navigation', url: '/navigation' },
+              { name: 'Select', url: '/select' },
+              { name: 'TextArea', url: '/textarea' },
             ]}
           />
         </Card>

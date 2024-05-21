@@ -40,7 +40,7 @@ export default function lunchboxPlugin(): Plugin {
             cssText: styles,
           },
           {
-            id: 'lunchbox-resin-emitter',
+            id: 'resin-css-page-css-tag',
             cssText: ResinCssEmitter({})!.props.children,
           },
         ],

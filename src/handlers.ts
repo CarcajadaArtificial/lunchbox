@@ -31,3 +31,17 @@ export const certainKeyPressed = (
     cb(ev);
   }
 };
+
+export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
+  if (cb === null) {
+    return {};
+  }
+  return {
+    onClick: (ev: MouseEvent) => cb(ev),
+    onKeyDown: (ev: KeyboardEvent) => {
+      if (ev.key === 'Enter') {
+        cb(ev);
+      }
+    },
+  };
+};

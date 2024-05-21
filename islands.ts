@@ -4,7 +4,6 @@
 //  |___/__/_\__,_|_||_\__,_/__/
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Inside here all atom and molecule components are exported. Because organisms are, by nature, islands
  * must not be exported here.
@@ -18,5 +17,5 @@
 //   \___/|_| \__, \__,_|_||_|_/__/_|_|_/__/
 //            |___/
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export { default as Chiplist } from './islands/Chiplist/index.tsx';
+export { default as ChipSelect } from './islands/ChipSelect/index.tsx';
 export { default as Menu } from './islands/Menu/index.tsx';

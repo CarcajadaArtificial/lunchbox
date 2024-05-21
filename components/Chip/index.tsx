@@ -12,9 +12,10 @@
  *
  * @module
  */
-import Text from '../Text/index.tsx';
 import setup, { iChip } from './setup.ts';
+import Text from '../Text/index.tsx';
 import { IconX } from '../../deps.ts';
+import { handleInteraction } from '../../src/handlers.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -47,30 +48,23 @@ export default function Chip(props: Partial<iChip>) {
     fref,
     content,
     icon,
-    onRemove,
+    onInteraction,
     ...p
   } = setup(
     props,
   );
 
   return (
-    <li ref={fref} class={c.chip} {...p}>
-      {icon
-        ? (
-          <div class={c.icon}>
-            {icon}
-          </div>
-        )
-        : null}
-
-      <Text noMargins type='small' class={c.content}>{content}</Text>
-      {onRemove
-        ? (
-          <button class={c.remove}>
-            <IconX size={12} class={c.removeIcon} {...fwd.removeIcon} />
-          </button>
-        )
-        : null}
+    <li
+      ref={fref}
+      class={c.chip}
+      {...handleInteraction(onInteraction)}
+      tabindex={onInteraction ? 0 : undefined}
+      {...p}
+    >
+      <Text noMargins type='small' class={c.content} {...fwd.content}>
+        {content}
+      </Text>
     </li>
   );
 }

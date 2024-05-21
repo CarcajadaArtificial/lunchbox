@@ -10,7 +10,7 @@
  * @module
  */
 import { ComponentChild } from 'preact';
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, cn, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
 import type { iText } from '../Text/setup.ts';
@@ -20,9 +20,9 @@ import { styles } from './styles.ts';
 /** Properties of the `<Chip />` component. */
 export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
   content: string;
+  selected: boolean;
   icon: null | ComponentChild;
-  onRemove: null | ((ev: Event) => void);
-  onActivate: null | ((ev: Event) => void);
+  onInteraction: null | ((ev?: Event) => void);
   fwd: Partial<{
     content: iText;
     remove: iFwd<HTMLButtonElement>;
@@ -34,9 +34,9 @@ export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
 /** These are the default values of the `<Chip />` component's props. */
 const defaults: iChip = {
   content: 'test',
+  selected: false,
   icon: null,
-  onRemove: null,
-  onActivate: null,
+  onInteraction: null,
   fwd: {},
 };
 
@@ -46,18 +46,18 @@ export default (props: Partial<iChip>) => {
   const p = apDef<iChip>(defaults, props);
 
   const c = part({
-    chip: o([
-      styles,
-      'chip',
-      p.onActivate ? 'chip--activable' : null,
-      p.onRemove ? 'chip--removable' : null,
-      p.icon ? 'chip--has-icon' : null,
-    ], { ...p }),
-    remove: o([
-      'chip__remove',
-      transition.interaction.outline,
-    ], { ...p.fwd.remove }),
-    removeIcon: o('chip__remove-icon', { ...p.fwd.removeIcon }),
+    chip: o(
+      cn(
+        styles,
+        'chip',
+        p.selected ? 'chip--selected' : null,
+        p.onInteraction
+          ? ['chip--has-interaction', transition.interaction.outline]
+          : null,
+        p.icon ? 'chip--has-icon' : null,
+      ),
+      { ...p },
+    ),
     content: o('chip__content', { ...p.fwd.content }),
     icon: o('chip__icon', { ...p.fwd.icon }),
   }, p.nostyleAll);
