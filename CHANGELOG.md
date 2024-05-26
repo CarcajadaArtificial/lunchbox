@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.52
+## v0.3.53
 
-- Added the `<ChipSelect />` island.
-- Removed the `<Chiplist />` island.
-- Updated the `<Chip />` component.
+- Migrated example project to its own repo.
 
 ## Changes so far
 
