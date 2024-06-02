@@ -129,3 +129,11 @@ user-select: none;
 }
 
 `;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+export const relativeContainer = css`
+
+position: relative;
+max-height: 0;
+
+`;

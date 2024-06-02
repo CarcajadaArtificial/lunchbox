@@ -87,6 +87,7 @@ button {
   --clr-txt-error: #fa96c8;
   --clr-bg-error: #573c4d;
   --clr-txt-personality: #7dc0af;
+  --clr-txt-personality-10: #7dc0af1a;
   --clr-bg-personality: #344747;
   --clr-bg-error-50: #fa96c880;
   --clr-bg-panel-50: #241f2680;
@@ -104,6 +105,7 @@ button {
     --clr-txt-error: #66050d;
     --clr-bg-error: #dbc4c5;
     --clr-txt-personality: #2b584e;
+    --clr-txt-personality-10: #2b584e1a;
     --clr-bg-personality: #c8d9db;
     --clr-bg-error-50: #66050d80;
     --clr-bg-panel-50: #ffffff80;

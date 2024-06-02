@@ -1,10 +1,8 @@
 # Changelog
 
-## v0.3.54
+## v0.3.55
 
-- Added the database module.
-- Added a keyhboard handler module inside `handlers.ts`.
-- Added the `bring()` function to the utility module.
+- Added the `<Autocomplete/>` island.
 
 ## Changes so far
 
@@ -33,7 +31,7 @@
   - [ ] Change pattern from styles object, to a single styles constant and css classes inside.
 
 - [ ] Project quality upgrade
- - [ ] Fix plugin issues.
+ - [x] Fix plugin issues.
  - [ ] Build a project docker image.
  - [ ] Add git workflow. 
  - [ ] Add Fresh Stories.
