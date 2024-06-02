@@ -160,3 +160,42 @@ export function rMap<T>(
   });
   return newRecord;
 }
+
+/**
+ * -----------------------------------------------------------------------------------------------------
+ * bring
+ * -----------------------------------------------------------------------------------------------------
+ * @param url
+ * @param method
+ * @param body
+ *
+ * @param errorMessage
+ *  A string that will be printed when catching an error on the request.
+ *
+ * @returns
+ *  The response JSON object obtained from the the API endpoint.
+ * -----------------------------------------------------------------------------------------------------
+ */
+export async function bring<Req, Res = unknown>(
+  url: string,
+  method: 'POST' | 'GET',
+  body: Req,
+  errorMessage?: string,
+): Promise<Res | null> {
+  let responseObject: Res | null = null;
+
+  await fetch(url, {
+    method: method,
+    mode: 'no-cors',
+    body: JSON.stringify(body),
+  })
+    .then(async (res) => {
+      responseObject = await res.json() as Res;
+    })
+    .catch((e) => {
+      alert(errorMessage);
+      console.error(errorMessage, responseObject, e);
+    });
+
+  return responseObject;
+}

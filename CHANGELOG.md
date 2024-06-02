@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.3.53
+## v0.3.54
 
-- Migrated example project to its own repo.
+- Added the database module.
+- Added a keyhboard handler module inside `handlers.ts`.
+- Added the `bring()` function to the utility module.
 
 ## Changes so far
 
