@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { opt, partializeClasses } from '../../src/utils.ts';
+import { o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -22,8 +22,8 @@ export type iPanel = iComponent<HTMLDivElement>;
 export default (props: Partial<iPanel>) => {
   const p = props;
 
-  const classes = partializeClasses({
-    panel: opt(styles, p.class, p.nostyle || p.nostyleAll),
+  const classes = part({
+    panel: o(styles, { ...p }),
   });
 
   delete p.class;

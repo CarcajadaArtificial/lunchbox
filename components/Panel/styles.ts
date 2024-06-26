@@ -21,4 +21,8 @@ export const styles = css`
   .button__style--panel {
     background-color: var(--clr-bg-page);
   }
+
+  .kbd {
+    background-color: var(--clr-bg-page);
+  }
 `;

@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { cn, opt, partializeClasses } from '../../src/utils.ts';
+import { o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -22,12 +22,8 @@ export type iKbd = iComponent;
 export default (props: Partial<iKbd>) => {
   const p = props;
 
-  const classes = partializeClasses({
-    kbd: opt(
-      cn(styles),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    kbd: o([styles, 'kbd'], { ...p }),
   });
 
   delete p.class;

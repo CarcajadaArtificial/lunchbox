@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.3.55
+## v0.3.56
 
-- Added the `<Autocomplete/>` island.
+- Minor updates on the `<Kbd/>` and `<Panel/>` components.
 
 ## Changes so far
 
