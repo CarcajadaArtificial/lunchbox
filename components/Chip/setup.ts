@@ -24,7 +24,7 @@ export type iChip = Omit<iComponent<HTMLLIElement>, 'icon'> & {
   icon: null | ComponentChild;
   onInteraction: null | ((ev?: Event) => void);
   fwd: Partial<{
-    content: iText;
+    content: Partial<iText>;
     remove: iFwd<HTMLButtonElement>;
     removeIcon: Omit<iFwd<SVGSVGElement>, 'size'>;
     icon: Omit<iFwd<SVGSVGElement>, 'size'>;

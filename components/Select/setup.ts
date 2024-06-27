@@ -14,6 +14,7 @@ import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 import { styles } from './styles.ts';
+import { iText } from '../Text/setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -59,9 +60,9 @@ export type iSelect = iComponent<HTMLSelectElement> & {
   options: iOption[] | [];
   fieldIcon: ComponentChild | null;
   fwd: Partial<{
-    text: iFwd<HTMLSpanElement>;
+    text: Partial<iText>;
     label: iFwd<HTMLLabelElement>;
-    error: iFwd<HTMLSpanElement>;
+    error: Partial<iText>;
     required: iFwd;
     container: iFwd<HTMLDivElement>;
     option: iFwd<HTMLOptionElement>;

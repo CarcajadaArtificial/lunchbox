@@ -40,14 +40,15 @@ export default function (props: Partial<iInput>) {
   } = setup(props);
 
   return (
-    <div ref={fwd.container?.ref} class={c.container}>
-      <label ref={fwd.label?.ref} class={c.label}>
+    <div ref={fwd.container?.ref} class={c.container} {...fwd.container}>
+      <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
         {label === '' ? null : (
           <Text
             nostyleAll={nostyleAll}
             fref={fwd.text?.fref}
             noMargins
             class={c.text}
+            {...fwd.text}
           >
             <>{label}</>
             {p.required
@@ -56,6 +57,7 @@ export default function (props: Partial<iInput>) {
                   ref={fwd.required?.ref}
                   title='Required'
                   class={c.required}
+                  {...fwd.required}
                 >
                   *
                 </sup>
@@ -65,7 +67,11 @@ export default function (props: Partial<iInput>) {
         )}
         {fieldIcon
           ? (
-            <div class={c.iconContainer}>
+            <div
+              ref={fwd.iconContainer?.ref}
+              class={c.iconContainer}
+              {...fwd.iconContainer}
+            >
               {fieldIcon}
             </div>
           )
@@ -81,6 +87,7 @@ export default function (props: Partial<iInput>) {
             inheritColor
             class={c.error}
             nostyleAll={nostyleAll}
+            {...fwd.error}
           >
             {error}
           </Text>

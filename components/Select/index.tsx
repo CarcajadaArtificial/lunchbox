@@ -61,14 +61,15 @@ export default function Select(props: Partial<iSelect>) {
   });
 
   return (
-    <div ref={fwd.container?.ref} class={c.container}>
-      <label ref={fwd.label?.ref} class={c.label}>
+    <div ref={fwd.container?.ref} class={c.container} {...fwd.container}>
+      <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
         {label === '' ? null : (
           <Text
             nostyleAll={nostyleAll}
             fref={fwd.text?.ref}
             noMargins
             class={c.text}
+            {...fwd.text}
           >
             <>{label}</>
             {p.required
@@ -77,6 +78,7 @@ export default function Select(props: Partial<iSelect>) {
                   ref={fwd.required?.ref}
                   title='Required'
                   class={c.required}
+                  {...fwd.required}
                 >
                   *
                 </sup>
@@ -86,7 +88,11 @@ export default function Select(props: Partial<iSelect>) {
         )}
         {fieldIcon
           ? (
-            <div class={c.iconContainer}>
+            <div
+              ref={fwd.iconContainer?.ref}
+              class={c.iconContainer}
+              {...fwd.iconContainer}
+            >
               {fieldIcon}
             </div>
           )
@@ -106,6 +112,7 @@ export default function Select(props: Partial<iSelect>) {
             type='small'
             class={c.error}
             nostyleAll={nostyleAll}
+            {...fwd.error}
           >
             {error}
           </Text>

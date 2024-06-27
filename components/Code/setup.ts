@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, cn, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -29,13 +29,13 @@ const defaults: iCode = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Code />` component. */
 export default (props: Partial<iCode>) => {
-  const p = applyDefaults<iCode>(defaults, props);
+  const p = apDef<iCode>(defaults, props);
 
   const { wrapper } = p.fwd;
 
-  const classes = partializeClasses({
-    code: opt('code', p.class, p.nostyle || p.nostyleAll),
-    wrapper: opt(styles, wrapper?.class, wrapper?.nostyle || p.nostyleAll),
+  const classes = part({
+    code: o(cn('code', p.class), { ...p }),
+    wrapper: o(cn(styles, wrapper?.class), { ...wrapper }),
   });
 
   delete p.class;
