@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { styles } from './styles.ts';
 import { iPanel } from '../Panel/setup.ts';
@@ -34,19 +34,15 @@ const defaults: iCard = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Card />` component. */
 export default (props: Partial<iCard>) => {
-  const p = applyDefaults<iCard>(defaults, props);
+  const p = apDef<iCard>(defaults, props);
 
   const { panel, section, image } = p.fwd;
 
-  const classes = partializeClasses({
-    card: opt(styles, p.class, p.nostyle || p.nostyleAll),
-    image: opt('card__image', image?.class, image?.nostyle || p.nostyleAll),
-    panel: opt('card__panel', panel?.class, panel?.nostyle || p.nostyleAll),
-    section: opt(
-      'card__section',
-      section?.class,
-      section?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    card: o(styles, { ...p }),
+    image: o('card__image', { ...image }),
+    panel: o('card__panel', { ...panel }),
+    section: o('card__section', { ...section }),
   });
 
   delete p.class;

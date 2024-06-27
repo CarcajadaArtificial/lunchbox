@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { type ButtonTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
@@ -35,11 +35,11 @@ const defaults: iButton = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Button />` component. */
 export default (props: Partial<iButton>) => {
-  const p = applyDefaults<iButton>(defaults, props);
+  const p = apDef<iButton>(defaults, props);
 
-  const classes = partializeClasses({
-    button: opt(
-      cn(
+  const classes = part({
+    button: o(
+      [
         styles,
         transition.interaction.outline,
         p.type === 'default' ? 'button__style' : `button__style--${p.type}`,
@@ -48,9 +48,8 @@ export default (props: Partial<iButton>) => {
           : p.large
           ? 'button__padding--large'
           : 'button__padding',
-      ),
-      p.class,
-      p.nostyle || p.nostyleAll,
+      ],
+      { ...p },
     ),
   });
 

@@ -54,11 +54,13 @@ export default function Card(props: Partial<iCard>) {
         {imageUrl === '' || imageUrl === undefined ? undefined : (
           <div
             class={c.image}
+            ref={fwd.image?.ref}
             style={{ backgroundImage: `url(${imageUrl})` }}
             {...fwd.image}
           />
         )}
         <div
+          ref={fwd.image?.ref}
           class={c.section}
           {...fwd.section}
         >

@@ -19,8 +19,20 @@ import setup, { iInput } from './setup.ts';
 /**
  * Render function for the [`<Input/ >`](/x/lunchbox/components/Input/setup.ts?s=iInput) component.
  *
- * @param {Partial<iInput>} props
- *  {@link iInput} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} label
+ *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
+ *    by nesting it inside the label as well.
+ *
+ * @param {string | null} error
+ *    This string creates a standardized error message linked individually to the component.
+ *
+ * @param {boolean} maxWidth
+ *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ *
+ * @param {ComponentChild | null} fieldIcon
+ *    A component that will be placed next to the input field.
  *
  * @returns {JSXInternal.Element}
  *  The `<Input />` component.

@@ -1,8 +1,21 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+//   ___ _     _    _         _     ___      _
+//  | __(_)___| |__| |___ ___| |_  / __| ___| |_ _  _ _ __
+//  | _|| / -_) / _` (_-</ -_)  _| \__ \/ -_)  _| || | '_ \
+//  |_| |_\___|_\__,_/__/\___|\__| |___/\___|\__|\_,_| .__/
+//                                                   |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Fieldset />` component.
+ *
+ * @module
+ */
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from '../../deps.ts';
 import type { iInput } from '../Input/setup.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Fieldset />` component. */
 export type iFieldset = iComponent<HTMLFieldSetElement> & {
   allowMultiple: boolean;
   values: string[];
@@ -14,6 +27,7 @@ export type iFieldset = iComponent<HTMLFieldSetElement> & {
   }>;
 };
 
+/** Default values of the `<Fieldset />` component's props. */
 const defaults: iFieldset = {
   allowMultiple: false,
   values: [],
@@ -22,39 +36,14 @@ const defaults: iFieldset = {
   fwd: {},
 };
 
-const style = {
-  fieldset: css`
-    position: relative;
-    right: var(--s-half);
-    background-color: var(--clr-bg-panel-15);
-    padding: var(--s-half);
-    border-radius: var(--s-quarter);
-    margin-bottom: var(--s-single);
-    max-width: 24rem;
-
-    &:hover, &:has(:hover), &:has(:focus) {
-      background-color: var(--clr-bg-panel-50);
-    }
-  `,
-  legend: css``,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Fieldset />` component. */
 export default (props: Partial<iFieldset>) => {
-  const p = applyDefaults<iFieldset>(defaults, props);
+  const p = apDef<iFieldset>(defaults, props);
 
-  const { legend } = p.fwd;
-
-  const classes = partializeClasses({
-    fieldset: opt(
-      cn('lbx-fieldset', style.fieldset),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
-    legend: opt(
-      cn(style.legend),
-      legend?.class,
-      legend?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    fieldset: o(styles, { ...p }),
+    legend: o('fieldset__legend', { ...p.fwd.legend }),
   });
 
   delete p.class;
