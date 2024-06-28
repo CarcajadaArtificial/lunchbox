@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.61
+
+- Added standarized practices to the `<Separator/>` and `<Text/>` components.
+
 ## v0.3.60
 
 - Added standarized practices to the `<Link/>`, `<Linkmap/>`, and `<Loader/>` components.

@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { TextTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
@@ -34,19 +34,18 @@ const defaults: iText = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Button />` component. */
 export default (props: Partial<iText>) => {
-  const p = applyDefaults<iText>(defaults, props);
+  const p = apDef<iText>(defaults, props);
 
-  const classes = partializeClasses({
-    span: opt(
-      cn(
+  const classes = part({
+    span: o(
+      [
         styles,
         `text--${p.type}`,
         p.noMargins ? 'no-margins' : null,
         p.indent ? 'indent' : null,
         p.inheritColor ? 'inherit-color' : null,
-      ),
-      p.class,
-      p.nostyle || p.nostyleAll,
+      ],
+      { ...p },
     ),
   });
 

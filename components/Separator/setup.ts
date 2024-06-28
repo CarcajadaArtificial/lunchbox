@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { cn, opt, partializeClasses } from '../../src/utils.ts';
+import { o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -22,12 +22,8 @@ export type iSeparator = iComponent<HTMLHRElement>;
 export default (props: Partial<iSeparator>) => {
   const p = props;
 
-  const classes = partializeClasses({
-    separator: opt(
-      cn(styles, 'separator'),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    separator: o(styles, { ...p }),
   });
 
   delete p.class;
