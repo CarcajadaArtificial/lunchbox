@@ -19,8 +19,23 @@ import Text from '../Text/index.tsx';
 /**
  * Render function for the [`<Select/ >`](/x/lunchbox/components/Select/setup.ts?s=iSelect) component.
  *
- * @param {Partial<iSelect>} props
- *  {@link iSelect} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} label
+ *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
+ *    by nesting it inside the label as well.
+ *
+ * @param {string | null} error
+ *    This string creates a standardized error message linked individually to the component.
+ *
+ * @param {boolean} maxWidth
+ *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ *
+ * @param {string} placeholder
+ *    Creates an `<option value='' selected hidden>` HTMLElement that acts as a placeholder.
+ *
+ * @param {iOption[]} options
+ *    The array of available options in the component.
  *
  * @returns {JSXInternal.Element}
  *  The `<Select />` component.

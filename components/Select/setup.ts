@@ -10,7 +10,7 @@
  * @module
  */
 import { ComponentChild } from 'preact';
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
 import { styles } from './styles.ts';
@@ -33,25 +33,7 @@ export type iOption =
   | iComponent<HTMLOptionElement>;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * Properties of the `<Select />` component.
- *
- * `label` (string):
- *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
- *    by nesting it inside the label as well.
- *
- * `error` (string | null):
- *    This string creates a standarized error message linked individually to the component.
- *
- * `maxWidth` (boolean):
- *    If true, overrides the default max width and makes it adjust to the parent container's width.
- *
- * `placeholder` (string):
- *    Creates an `<option value='' selected hidden>` HTMLElement that acts as a placeholder.
- *
- * `options` (iOption[]):
- *    The array of available options in the component.
- */
+/** Properties of the `<Select />` component. */
 export type iSelect = iComponent<HTMLSelectElement> & {
   label: string;
   error: string | null;
@@ -85,53 +67,35 @@ const defaults: iSelect = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Select />` component. */
 export default (props: Partial<iSelect>) => {
-  const p = applyDefaults<iSelect>(defaults, props);
+  const p = apDef<iSelect>(defaults, props);
 
-  const { text, label, option, error, required, container, iconContainer } =
-    p.fwd;
-
-  const classes = partializeClasses({
-    input: opt(
-      cn(
+  const classes = part({
+    input: o(
+      [
         'input__abstract',
         transition.interaction.outline,
         styles,
         p.error ? 'input__error-bg' : null,
-      ),
-      p.class,
-      p.nostyle || p.nostyleAll,
+      ],
+      { ...p },
     ),
-    text: opt('select-none', text?.class, text?.nostyle || p.nostyleAll),
-    option: cn(option?.class),
-    label: opt(
-      cn('input__label', p.fieldIcon ? 'input--has-icon' : null),
-      label?.class,
-      label?.nostyle || p.nostyleAll,
+    label: o(
+      ['input__label', p.fieldIcon ? 'input--has-icon' : null],
+      { ...p.fwd.label },
     ),
-    error: opt(
-      'input__error-msg',
-      error?.class,
-      error?.nostyle || p.nostyleAll,
-    ),
-    required: opt(
-      'input__required',
-      required?.class,
-      required?.nostyle || p.nostyleAll,
-    ),
-    container: opt(
-      cn(
+    container: o(
+      [
         inputStyles,
         'input--box',
         p.maxWidth ? 'input--max-width' : null,
-      ),
-      container?.class,
-      container?.nostyle || p.nostyleAll,
+      ],
+      { ...p.fwd.container },
     ),
-    iconContainer: opt(
-      'input__icon-container',
-      iconContainer?.class,
-      iconContainer?.nostyle || p.nostyleAll,
-    ),
+    iconContainer: o('input__icon-container', { ...p.fwd.iconContainer }),
+    text: o('select-none', { ...p.fwd.text }),
+    option: o('', { ...p.fwd.option }),
+    error: o('input__error-msg', { ...p.fwd.error }),
+    required: o('input__required', { ...p.fwd.required }),
   });
 
   delete p.class;

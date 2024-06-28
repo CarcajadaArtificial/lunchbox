@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.62
+
+- Added standarized practices to the `<Select/>` and `<TextArea/>` components.
+
 ## v0.3.61
 
 - Added standarized practices to the `<Separator/>` and `<Text/>` components.

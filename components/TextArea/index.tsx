@@ -18,10 +18,25 @@ import Text from '../Text/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * Render function for the [`<TextArea/ >`](/x/lunchbox/components/TextArea/setup.ts?s=iTextArea) component.
+ * Render function for the [`<TextArea/ >`](/x/lunchbox/components/TextArea/setup.ts?s=iTextArea)
+ * component.
  *
- * @param {Partial<iTextArea>} props
- *  {@link iTextArea} (Partial by [design](https://deno.land/x/lunchbox#configure-anything-easily))
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @param {string} label
+ *    This property will add a `<Text />` component inside the `<label/>` element and links it to the
+ *    by nesting it inside the label as well.
+ *
+ * @param {string | null} error
+ *    This string creates a standardized error message linked individually to the component.
+ *
+ * @param {boolean} maxWidth
+ *    If true, overrides the default max width and makes it adjust to the parent container's width.
+ *
+ * @param {boolean} noResize
+ *    If true, adds a `resize-none` css style fully preventing resizing.
+ *
+ * @returns {JSXInternal.Element}
  *
  * @returns {JSXInternal.Element}
  *  The `<TextArea />` component.
@@ -41,18 +56,24 @@ export default function TextArea(props: Partial<iTextArea>) {
   } = setup(props);
 
   return (
-    <div ref={fwd.container?.ref} class={c.container}>
-      <label ref={fwd.label?.ref} class={c.label}>
+    <div ref={fwd.container?.ref} class={c.container} {...fwd.container}>
+      <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
         <Text
           nostyleAll={nostyleAll}
           fref={fwd.text?.ref}
           noMargins
           class={c.text}
+          {...fwd.text}
         >
           <>{label}</>
           {p.required
             ? (
-              <sup ref={fwd.text?.ref} title='Required' class={c.required}>
+              <sup
+                ref={fwd.text?.ref}
+                title='Required'
+                class={c.required}
+                {...fwd.required}
+              >
                 *
               </sup>
             )
@@ -60,7 +81,7 @@ export default function TextArea(props: Partial<iTextArea>) {
         </Text>
         {fieldIcon
           ? (
-            <div class={c.iconContainer}>
+            <div class={c.iconContainer} {...fwd.iconContainer}>
               {fieldIcon}
             </div>
           )
@@ -76,6 +97,7 @@ export default function TextArea(props: Partial<iTextArea>) {
             type='small'
             class={c.error}
             nostyleAll={nostyleAll}
+            {...fwd.error}
           >
             {error}
           </Text>
