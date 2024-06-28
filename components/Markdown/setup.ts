@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { render, RenderOptions } from '../../src/markdown.ts';
 import { styles } from './styles.ts';
@@ -39,14 +39,10 @@ const defaults: iMarkdown = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Button />` component. */
 export default (props: Partial<iMarkdown>) => {
-  const p = applyDefaults<iMarkdown>(defaults, props);
+  const p = apDef<iMarkdown>(defaults, props);
 
-  const classes = partializeClasses({
-    markdown: opt(
-      cn(styles.markdown, styles.syntax),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    markdown: o([styles.markdown, styles.syntax], { ...p }),
   });
 
   p.markdownContent = render(p.markdownContent, p.renderOptions);

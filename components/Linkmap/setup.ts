@@ -1,15 +1,22 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+//   _    _      _                     ___      _
+//  | |  (_)_ _ | |___ __  __ _ _ __  / __| ___| |_ _  _ _ __
+//  | |__| | ' \| / / '  \/ _` | '_ \ \__ \/ -_)  _| || | '_ \
+//  |____|_|_||_|_\_\_|_|_\__,_| .__/ |___/\___|\__|\_,_| .__/
+//                             |_|                      |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Linkmap />` component.
+ *
+ * @module
+ */
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iLink } from '../Link/setup.ts';
 import { iText } from '../Text/setup.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
-export type iLinkmapitem = {
-  name: string;
-  url?: string;
-  children?: iLinkmapitem[];
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Linkmap />` component. */
 export type iLinkmap = iComponent<HTMLDivElement> & {
   links: iLinkmapitem[] | [];
   fwd: Partial<{
@@ -20,35 +27,30 @@ export type iLinkmap = iComponent<HTMLDivElement> & {
   }>;
 };
 
+/** Linkmap item interface */
+export type iLinkmapitem = {
+  name: string;
+  url?: string;
+  children?: iLinkmapitem[];
+};
+
+/** These are the default values of the `<Linkmap />` component's props. */
 const defaults: iLinkmap = {
   links: [],
   fwd: {},
 };
 
-const style = {
-  linkmap: css`
-    margin-bottom: var(--s-one-and-half);
-  `,
-  linkmap_list: css`
-    margin-left: var(--s-single);
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Linkmap />` component. */
 export default (props: Partial<iLinkmap>) => {
-  const p = applyDefaults<iLinkmap>(defaults, props);
+  const p = apDef<iLinkmap>(defaults, props);
 
-  const { list } = p.fwd;
-
-  const classes = partializeClasses({
-    linkmap: opt(cn(style.linkmap), p.class, p.nostyle || p.nostyleAll),
-    list: opt(
-      cn(style.linkmap_list),
-      list?.class,
-      list?.nostyle || p.nostyleAll,
-    ),
-    item: cn(p.fwd.item?.class),
-    link: cn(p.fwd.link?.class),
-    text: cn(p.fwd.text?.class),
+  const classes = part({
+    linkmap: o(styles, { ...p }),
+    list: o('linkmap__list', { ...p.fwd.list }),
+    item: o('', { ...p.fwd.item }),
+    link: o('', { ...p.fwd.link }),
+    text: o('', { ...p.fwd.text }),
   });
 
   delete p.class;

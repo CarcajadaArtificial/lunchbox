@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { cn, opt, partializeClasses } from '../../src/utils.ts';
+import { o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
 import { styles } from './styles.ts';
@@ -23,12 +23,8 @@ export type iLink = iComponent<HTMLAnchorElement>;
 export default (props: Partial<iLink>) => {
   const p = props;
 
-  const classes = partializeClasses({
-    link: opt(
-      cn(styles, transition.interaction.outline),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    link: o([styles, transition.interaction.outline], { ...p }),
   });
 
   delete p.class;

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.60
+
+- Added standarized practices to the `<Link/>`, `<Linkmap/>`, and `<Loader/>` components.
+
 ## v0.3.59
 
 - Added standarized practices to the `<Button/>`, `<Card/>`, `<Fieldset/>`, `<Gradient/>` and `<Input/>` components.

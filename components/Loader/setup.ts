@@ -1,58 +1,51 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
-import { iComponent, iFwd } from '../../src/types.ts';
-import { css } from '../../deps.ts';
+//   _                 _
+//  | |   ___  __ _ __| |___ _ _
+//  | |__/ _ \/ _` / _` / -_) '_|
+//  |____\___/\__,_\__,_\___|_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Loader />` component.
+ *
+ * @module
+ */
+import { Ref } from 'preact';
+import { apDef, o, part } from '../../src/utils.ts';
+import { iComponent } from '../../src/types.ts';
 import { iText } from '../Text/setup.ts';
 import { animation } from '../../src/styles.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Loader />` component. */
 export type iLoader = iComponent<HTMLDivElement> & {
   fwd: Partial<{
-    icon: iFwd<SVGSVGElement>;
+    icon: Partial<{
+      size: number;
+      color: string;
+      stroke: number;
+      ref?: Ref<SVGSVGElement>;
+      nostyle?: boolean;
+      class: string;
+    }>;
     text: Partial<iText>;
   }>;
 };
 
+/** These are the default values of the `<Loader />` component's props. */
 const defaults: iLoader = {
   fwd: {},
 };
 
-const style = {
-  loader: css`
-    padding: var(--s-single);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--s-half);
-    border-radius: var(--s-quarter)
-  `,
-  icon: css`
-    height: var(--s-triple);
-    width: var(--s-triple);
-  `,
-  text: css`
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Loader />` component. */
 export default (props: Partial<iLoader>) => {
-  const p = applyDefaults<iLoader>(defaults, props);
+  const p = apDef<iLoader>(defaults, props);
 
-  const { icon, text } = p.fwd;
-
-  const classes = partializeClasses({
-    loader: opt(
-      cn(style.loader),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
-    icon: opt(
-      cn(style.icon, animation.spin),
-      icon?.class,
-      icon?.nostyle || p.nostyleAll,
-    ),
-    text: opt(
-      cn(style.text),
-      text?.class,
-      text?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    loader: o(styles, { ...p }),
+    icon: o(['loader__icon', animation.spin], { ...p.fwd.icon }),
+    text: o('loader__text', { ...p.fwd.text }),
   });
 
   delete p.class;
