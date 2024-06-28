@@ -1,7 +1,21 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+//   _____ _             ___      _
+//  |_   _(_)_ __  ___  / __| ___| |_ _  _ _ __
+//    | | | | '  \/ -_) \__ \/ -_)  _| || | '_ \
+//    |_| |_|_|_|_\___| |___/\___|\__|\_,_| .__/
+//                                        |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Kbd />` component.
+ *
+ * @module
+ */
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { css, DateTime, datetime } from '../../deps.ts';
+import { DateTime, datetime } from '../../deps.ts';
+import { styles } from './styles.ts';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Time />` component. */
 export type iTime = iComponent<HTMLTimeElement> & {
   dateObject: DateTime;
   format: string;
@@ -10,23 +24,21 @@ export type iTime = iComponent<HTMLTimeElement> & {
   }>;
 };
 
+/** These are the default values of the `<Time />` component's props. */
 const defaults: iTime = {
   dateObject: datetime(new Date()),
   format: 'www, d MMM YYYY - h:mm a',
   fwd: {},
 };
 
-const style = {
-  time: css``,
-  colon: css``,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Time />` component. */
 export default (props: Partial<iTime>) => {
-  const p = applyDefaults<iTime>(defaults, props);
+  const p = apDef<iTime>(defaults, props);
 
-  const classes = partializeClasses({
-    time: opt(cn(style.time), p.class, p.nostyle || p.nostyleAll),
-    colon: opt(cn(style.colon), p.class, p.nostyle || p.nostyleAll),
+  const classes = part({
+    time: o(styles, { ...p }),
+    colon: o('', { ...p.fwd.colon }),
   });
 
   delete p.class;

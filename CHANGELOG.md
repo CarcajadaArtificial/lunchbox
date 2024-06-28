@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.63
+
+- Added standarized practices to the `<Time/>` component.
+
 ## v0.3.62
 
 - Added standarized practices to the `<Select/>` and `<TextArea/>` components.
