@@ -39,6 +39,10 @@ import setup, { iButton } from './setup.ts';
  *
  * @returns {JSXInternal.Element}
  *  The `<Button />` component.
+ *
+ * @todo - tabindex=0 by default
+ * @todo - compact
+ * @todo - large
  */
 export default function Button(props: Partial<iButton>) {
   const {

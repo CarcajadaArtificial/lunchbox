@@ -74,28 +74,33 @@ export const styles = css`
           border-bottom-color: transparent;
         }
       }
-
+      
       &--transparent {
         background-color: var(--clr-bg-page);
-
+        
         &:hover, &:focus { 
           background-color: var(--clr-bg-panel-35);
+          border-bottom-color: var(--clr-txt-personality-10);
         }
         
         &:active {
-          background-color: var(--clr-bg-panel-60);
+          background-color: var(--clr-bg-panel-50);
+          border-top-color: var(--clr-bg-panel);
+          border-bottom-color: transparent;
         }
       }
-
+      
       &--panel {
         background-color: var(--clr-bg-panel);
-
+        
         &:hover, &:focus { 
-          background-color: var(--clr-bg-panel-35);
+          background-color: var(--clr-bg-panel-50);
+          border-bottom-color: var(--clr-bg-panel-15);
         }
         
         &:active {
-          background-color: var(--clr-bg-page);
+          background-color: var(--clr-bg-panel);
+          border-bottom-color: transparent;
         }
       }
     }

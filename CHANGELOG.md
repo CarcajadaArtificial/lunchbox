@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.64
+
+- Added To-Dos to the `<Button/>` component.
+- Added standarized practices to the `<Fieldset/>` component.
+- Added styles for the `<Button/>` and `<Panel/>` components.
+- Minor updates in the utils module.
+
 ## v0.3.63
 
 - Added standarized practices to the `<Time/>` component.

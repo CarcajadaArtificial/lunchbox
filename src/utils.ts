@@ -50,7 +50,7 @@ export const o = (
     class?: string | JSX.SignalLike<string | undefined>;
     nostyle?: boolean;
   },
-) => props && !props.nostyle ? classNames.default(classes, props.class) : '';
+) => props ? (!props.nostyle ? cn(classes, props.class) : cn(props.class)) : '';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

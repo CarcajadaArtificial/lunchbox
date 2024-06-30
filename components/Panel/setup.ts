@@ -23,7 +23,7 @@ export default (props: Partial<iPanel>) => {
   const p = props;
 
   const classes = part({
-    panel: o(styles, { ...p }),
+    panel: o([styles, 'panel'], { ...p }),
   });
 
   delete p.class;

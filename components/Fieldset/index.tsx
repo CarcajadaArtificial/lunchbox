@@ -61,7 +61,7 @@ export default function (props: Partial<iFieldset>) {
       {...p}
     >
       {legend === '' ? null : (
-        <legend class={c.legend}>
+        <legend class={c.legend} {...fwd.legend}>
           {legend}
         </legend>
       )}
@@ -71,6 +71,8 @@ export default function (props: Partial<iFieldset>) {
           label={inputValue}
           name={p.name ? p.name : 'undefined-fieldset'}
           checked={selectedValues.includes(inputValue)}
+          data-label={inputValue}
+          {...fwd.input}
         />
       ))}
     </fieldset>

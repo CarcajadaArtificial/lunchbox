@@ -14,15 +14,37 @@ import { css } from '../../deps.ts';
 export const styles = css`
   background-color: var(--clr-bg-panel);
 
-  .button__style--transparent {
-    background-color: var(--clr-bg-panel);
+  &.panel {
+
+    .button__style {
+      &--transparent {
+        background-color: var(--clr-bg-panel);
+
+        &:hover, &:focus { 
+          background-color: var(--clr-bg-error);
+        }
+        
+        &:active {
+          background-color: var(--clr-bg-personality-45);
+        }
+      }
+
+      &--panel {
+        background-color: var(--clr-bg-page);
+
+        &:hover, &:focus { 
+          background-color: var(--clr-bg-error);
+        }
+        
+        &:active {
+          background-color: var(--clr-bg-personality-45);
+        }
+      }
+    }
+  
+    .kbd {
+      background-color: var(--clr-bg-page);
+    }
   }
 
-  .button__style--panel {
-    background-color: var(--clr-bg-page);
-  }
-
-  .kbd {
-    background-color: var(--clr-bg-page);
-  }
 `;
