@@ -47,6 +47,10 @@ export const styles = css`
         }
       }
     }
+
+    .code__wrapper {
+      background-color: var(--clr-txt-personality-10);
+    }
   
     .kbd {
       background-color: var(--clr-bg-page);

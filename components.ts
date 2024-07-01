@@ -26,6 +26,7 @@ export { default as Markdown } from './components/Markdown/index.tsx';
 export { default as Panel } from './components/Panel/index.tsx';
 export { default as Separator } from './components/Separator/index.tsx';
 export { default as Text } from './components/Text/index.tsx';
+export { default as Time } from './components/Time/index.tsx';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //   __  __     _             _
 //  |  \/  |___| |___ __ _  _| |___ ___

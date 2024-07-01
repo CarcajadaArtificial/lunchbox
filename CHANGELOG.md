@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.67
+
+- Added the `<Time/>` component to the export module.
+- Minor fixes for the `<Code/>` and `<Panel/>` components.
+
 ## v0.3.66
 
 - Minor fixes for the `<Button/>` and `<Fieldset/>` components.

@@ -12,11 +12,12 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-  display: inline;
-  padding: 3px 0.5ch 1px 0.5ch;
-  margin: 0 0.5ch;
-  background-color: var(--clr-bg-panel);
-  border-radius: var(--s-quarter);
+  &.code__wrapper {
+    display: inline;
+    padding: 3px 0.5ch 1px 0.5ch;
+    background-color: var(--clr-bg-panel);
+    border-radius: var(--s-quarter);
+  }
 
   .code {
     line-break: strict;

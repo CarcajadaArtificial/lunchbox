@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, cn, o, part } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -34,8 +34,8 @@ export default (props: Partial<iCode>) => {
   const { wrapper } = p.fwd;
 
   const classes = part({
-    code: o(cn('code', p.class), { ...p }),
-    wrapper: o(cn(styles, wrapper?.class), { ...wrapper }),
+    code: o(['code', p.class], { ...p }),
+    wrapper: o(['code__wrapper', styles, wrapper?.class], { ...wrapper }),
   });
 
   delete p.class;
