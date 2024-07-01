@@ -51,7 +51,7 @@ export default function Button(props: Partial<iButton>) {
     nostyleAll,
     fref,
     children,
-    compact,
+    padding,
     type,
     ...p
   } = setup(

@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.65
+
+- Added styles for the `<Button/>` and `<Panel/>` components.
+- Added the `BUTTON_PADDINGS` and `ButtonPaddings` to the enums module.
+- Added `--clr-bg-page-50` and `--clr-txt-base-25` to the theme variables.
+
 ## v0.3.64
 
 - Added To-Dos to the `<Button/>` component.

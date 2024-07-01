@@ -82,8 +82,10 @@ button {
 .lunchbox {
   --clr-personality: #089969;
   --clr-bg-page: #3d3640;
+  --clr-bg-page-50: #3d364080;
   --clr-bg-panel: #241f26;
   --clr-txt-base: #eee6f2;
+  --clr-txt-base-25: #eee6f240;
   --clr-txt-error: #fa96c8;
   --clr-bg-error: #573c4d;
   --clr-txt-personality: #7dc0af;
@@ -100,8 +102,10 @@ button {
 @media (prefers-color-scheme: light) {
   .lunchbox {
     --clr-bg-page: #eee6f2;
+    --clr-bg-page-50: #eee6f280;
     --clr-bg-panel: #ffffff;
     --clr-txt-base: #3d3640;
+    --clr-txt-base-25: #3d364040;
     --clr-txt-error: #66050d;
     --clr-bg-error: #dbc4c5;
     --clr-txt-personality: #2b584e;

@@ -19,25 +19,31 @@ export const styles = css`
     .button__style {
       &--transparent {
         background-color: var(--clr-bg-panel);
-
+        
         &:hover, &:focus { 
-          background-color: var(--clr-bg-error);
+          background-color: var(--clr-bg-page-50);
+          border-bottom-color: var(--clr-txt-personality-10);
         }
         
         &:active {
-          background-color: var(--clr-bg-personality-45);
+          background-color: var(--clr-txt-personality-10);
+          border-top-color: var(--clr-bg-personality-30);
+          border-bottom-color: transparent;
         }
       }
-
+      
       &--panel {
         background-color: var(--clr-bg-page);
-
+        
         &:hover, &:focus { 
-          background-color: var(--clr-bg-error);
+          background-color: var(--clr-txt-base-25);
+          border-bottom-color: var(--clr-txt-base);
         }
         
         &:active {
-          background-color: var(--clr-bg-personality-45);
+          background-color: var(--clr-bg-page-50);
+          border-top-color: var(--clr-bg-personality-30);
+          border-bottom-color: transparent;
         }
       }
     }

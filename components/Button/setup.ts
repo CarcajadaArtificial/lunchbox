@@ -10,7 +10,7 @@
  * @module
  */
 import { apDef, o, part } from '../../src/utils.ts';
-import { type ButtonTypes } from '../../src/enums.ts';
+import { ButtonPaddings, type ButtonTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
 import { styles } from './styles.ts';
@@ -19,16 +19,14 @@ import { styles } from './styles.ts';
 /** Properties of the `<Button />` component. */
 export type iButton = iComponent<HTMLButtonElement> & {
   maxWidth: boolean;
-  compact: boolean;
-  large: boolean;
+  padding: ButtonPaddings;
   type: ButtonTypes;
 };
 
 /** Default values of the `<Button />` component's props. */
 const defaults: iButton = {
   maxWidth: false,
-  compact: false,
-  large: false,
+  padding: 'default',
   type: 'default',
 };
 
@@ -43,11 +41,9 @@ export default (props: Partial<iButton>) => {
         styles,
         transition.interaction.outline,
         p.type === 'default' ? 'button__style' : `button__style--${p.type}`,
-        p.compact
-          ? 'button__padding--compact'
-          : p.large
-          ? 'button__padding--large'
-          : 'button__padding',
+        p.padding === 'default'
+          ? 'button__padding'
+          : `button__padding--${p.padding}`,
       ],
       { ...p },
     ),

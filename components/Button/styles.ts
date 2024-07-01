@@ -24,6 +24,13 @@ export const styles = css`
   max-width: max-content;
 
   &.button {
+    &__icon {
+      display: inline;
+      width: var(--s-single);
+      position: relative;
+      bottom: var(--s-eighth);
+    }
+
     &__padding {
       padding: var(--s-eighth) var(--s-five-eights);
 
@@ -104,12 +111,5 @@ export const styles = css`
         }
       }
     }
-  }
-
-  .button__icon {
-    display: inline;
-    width: var(--s-single);
-    position: relative;
-    bottom: var(--s-eighth);
   }
 `;
