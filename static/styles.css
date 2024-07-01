@@ -162,10 +162,6 @@ button {
   }
 }
 
-.input--box {
-  padding-bottom: calc(var(--s-single) + var(--s-three-eights));
-}
-
 .fieldset,
 .input--box input,
 .input--box textarea,

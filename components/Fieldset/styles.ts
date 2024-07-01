@@ -17,7 +17,6 @@ export const styles = css`
     background-color: var(--clr-bg-panel-15);
     padding: var(--s-half);
     border-radius: var(--s-quarter);
-    margin-bottom: var(--s-single);
     max-width: 24rem;
 
     &:hover, &:has(:hover), &:has(:focus) {

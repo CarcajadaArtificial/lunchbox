@@ -15,7 +15,7 @@ const inputStyles = {
   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
   box: css`
 
-    input {
+    .input__abstract {
       padding: 1px var(--s-half);
 
       &::placeholder {
@@ -106,9 +106,6 @@ const inputStyles = {
 
   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
   button: css`
-  
-    padding-bottom: var(--s-single);
-
     input {
       padding: var(--s-quarter) var(--s-five-eights);
       border-radius: var(--s-quarter);
@@ -290,15 +287,15 @@ export default (type?: string): string | string[] =>
   type === undefined
     ? ['input--box', inputStyles.box]
     : ['button', 'image', 'reset', 'submit'].includes(type)
-    ? inputStyles.button
+    ? [inputStyles.button]
     : ['radio', 'checkbox'].includes(type)
-    ? inputStyles.bool
+    ? [inputStyles.bool]
     : ['datetime-local', 'date', 'month', 'time', 'week'].includes(type)
     ? ['input--box', inputStyles.box, inputStyles.date]
     : type === 'range'
-    ? inputStyles.range
+    ? [inputStyles.range]
     : type === 'color'
-    ? inputStyles.color
+    ? [inputStyles.color]
     : type === 'file'
-    ? inputStyles.file
+    ? [inputStyles.file]
     : ['input--box', inputStyles.box];

@@ -66,7 +66,7 @@ export default (props: Partial<iInput>) => {
     container: o(
       [
         inputStyles,
-        Styles(p.type),
+        ...Styles(p.type),
         p.maxWidth ? 'input--max-width' : null,
       ],
       { ...p.fwd.container },

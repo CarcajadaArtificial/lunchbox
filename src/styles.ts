@@ -110,6 +110,7 @@ user-select: none;
 
 &.input {
   &--max-width {
+    width: 100%;
     max-width: 100%;
   }
 

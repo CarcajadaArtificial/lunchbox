@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.66
+
+- Minor fixes for the `<Button/>` and `<Fieldset/>` components.
+
 ## v0.3.65
 
 - Added styles for the `<Button/>` and `<Panel/>` components.
