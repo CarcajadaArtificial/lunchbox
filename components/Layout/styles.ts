@@ -82,7 +82,7 @@ export const styles: {
       }
     `,
     right: css`
-      grid-column: span 4;
+      grid-column: span 3;
 
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;
@@ -97,7 +97,7 @@ export const styles: {
       }
     `,
     left: css`
-      grid-column: span 4;
+      grid-column: span 3;
 
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;

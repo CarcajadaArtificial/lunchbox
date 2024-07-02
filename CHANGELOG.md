@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.68
+
+- Added style fixes to the `<Layout/>` component.
+
 ## v0.3.67
 
 - Added the `<Time/>` component to the export module.
