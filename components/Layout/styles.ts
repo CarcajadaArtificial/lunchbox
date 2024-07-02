@@ -13,11 +13,13 @@ import { LayoutTypes } from '../../src/enums.ts';
 import { css } from '../../deps.ts';
 
 export const styles: {
-  whitespaceGrid: string;
   grid: string;
   module: Record<LayoutTypes, string>;
 } = {
-  whitespaceGrid: css`
+  grid: css`
+
+&.grid {
+  &--whitespace {
     display: grid; 
     @media screen and (max-width: 39.9375em) {
       grid-column-gap: 0.8503100088rem;
@@ -37,8 +39,8 @@ export const styles: {
       margin: 0 auto;
       grid-template-columns: repeat(12, minmax(4.5rem, 4.5rem));
     }
-  `,
-  grid: css`
+  }
+  &--no-whitespace {
     display: grid; 
     grid-column-gap: 1.5rem;
     margin: 0 1.5rem;
@@ -49,6 +51,9 @@ export const styles: {
     @media screen and (min-width: 40em){
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
+  }
+}
+
   `,
   module: {
     empty: css`
@@ -82,7 +87,7 @@ export const styles: {
       }
     `,
     right: css`
-      grid-column: span 3;
+      grid-column: span 4;
 
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;
@@ -97,7 +102,7 @@ export const styles: {
       }
     `,
     left: css`
-      grid-column: span 3;
+      grid-column: span 4;
 
       @media screen and (max-width: 39.9375em) {
         grid-column: span 6;

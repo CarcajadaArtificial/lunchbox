@@ -9,7 +9,12 @@ export default function (props: Partial<iMain>) {
     <main ref={fref} {...p} class={c.main}>
       {layout_type
         ? (
-          <Layout type={layout_type} class={c.layout} fref={fwd.layout?.fref}>
+          <Layout
+            type={layout_type}
+            class={c.layout}
+            fref={fwd.layout?.fref}
+            {...fwd.layout}
+          >
             {children}
           </Layout>
         )

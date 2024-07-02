@@ -52,6 +52,17 @@ export const styles = {
       margin: var(--s-single) 0;
       text-align: center;
     }
+
+    p {
+
+      + h1, + h2, + h3, + h4, + h5, + h6 {
+        margin-top: var(--s-triple);
+      }
+
+      + p {
+        margin-top: var(--s-one-and-half);
+      }
+    }
   `,
   syntax: css`
     .keyword,

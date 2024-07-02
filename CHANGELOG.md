@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.69
+
+- Added style fixes to the `<Layout/>` and `<Markdown/>` component.
+- Added the `<Sidebar/>` island.
+- Added standarized practices to the `<Main/>` component.
+
 ## v0.3.68
 
 - Added style fixes to the `<Layout/>` component.

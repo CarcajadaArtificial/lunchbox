@@ -41,7 +41,8 @@ export default (props: Partial<iLayout>) => {
   const classes = partializeClasses({
     layout: opt(
       cn(
-        props.whitespaceMode ? styles.whitespaceGrid : styles.grid,
+        props.whitespaceMode ? 'grid--whitespace' : 'grid--no-whitespace',
+        styles.grid,
       ),
       p.class,
       p.nostyle || p.nostyleAll,
