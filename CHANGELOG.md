@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.70
+
+- Added style fixes to the `<Kbd>` component
+- Added standarized practices to the `<Linkmap/>` component.
+- Added a sticky position to the contents of the `<Sidebar/>` island.
+
 ## v0.3.69
 
 - Added style fixes to the `<Layout/>` and `<Markdown/>` component.

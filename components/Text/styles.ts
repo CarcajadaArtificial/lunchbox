@@ -18,6 +18,26 @@ export const styles = css`
   &.text--title,
   &.text--heading {
     color: var(--clr-txt-personality);
+
+    .kbd {
+      padding-left: 0.75ch;
+      padding-right: 0.75ch;
+    }
+  }
+  
+  &.text--subheading,
+  &.text--paragraph {
+    .kbd {
+      padding-left: 1.25ch;
+      padding-right: 1.25ch;
+    }
+  }
+
+  &.text--small {
+    .kbd {
+      padding-left: 1.75ch;
+      padding-right: 1.75ch;
+    }
   }
 
   &.text--display,

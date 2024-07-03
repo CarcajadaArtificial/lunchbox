@@ -11,7 +11,7 @@
  */
 import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { iLink } from '../Link/setup.ts';
+import type { iLink } from '../Link/setup.ts';
 import { iText } from '../Text/setup.ts';
 import { styles } from './styles.ts';
 
@@ -48,9 +48,9 @@ export default (props: Partial<iLinkmap>) => {
   const classes = part({
     linkmap: o(styles, { ...p }),
     list: o('linkmap__list', { ...p.fwd.list }),
-    item: o('', { ...p.fwd.item }),
-    link: o('', { ...p.fwd.link }),
-    text: o('', { ...p.fwd.text }),
+    item: o('linkmap__item', { ...p.fwd.item }),
+    link: o('linkmap__link', { ...p.fwd.link }),
+    text: o('linkmap__text', { ...p.fwd.text }),
   });
 
   delete p.class;

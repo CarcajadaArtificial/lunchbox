@@ -13,7 +13,8 @@ import { css } from '../../deps.ts';
 
 export const styles = css`
   background-color: var(--clr-bg-panel-50);
-  padding: var(--s-quarter) var(--s-three-eights);
+  padding-top: var(--s-quarter);
+  padding-bottom: var(--s-quarter);
   position: relative;
   bottom: var(--s-eighth);
   border-radius: var(--s-eighth);

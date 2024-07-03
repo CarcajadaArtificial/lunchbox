@@ -26,12 +26,16 @@ export default function Sidebar(props: Partial<iSidebar>) {
     ...p
   } = setup(props);
 
+  console.log(c.container);
+
   return (
-    <aside class={c.sidebar} {...p}>
-      {links && links.length > 0
-        ? <Linkmap links={links} class={c.linkmap} {...fwd.linkmap} />
-        : null}
-      {children}
-    </aside>
+    <div {...fwd.container} class={c.container}>
+      <aside class={c.sidebar} {...p}>
+        {links && links.length > 0
+          ? <Linkmap links={links} {...fwd.linkmap} class={c.linkmap} />
+          : null}
+        {children}
+      </aside>
+    </div>
   );
 }

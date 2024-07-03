@@ -14,6 +14,7 @@ import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
 import type { iLinkmap, iLinkmapitem } from '../../components/Linkmap/setup.ts';
 import { ComponentChildren } from 'preact';
+import type { iFwd } from '../../src/types.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Sidebar />` island. */
@@ -21,6 +22,7 @@ export type iSidebar = iComponent & {
   children: ComponentChildren;
   links: iLinkmapitem[] | [];
   fwd: Partial<{
+    container: iFwd<HTMLDivElement>;
     linkmap: Partial<iLinkmap>;
   }>;
 };
@@ -38,8 +40,9 @@ export default (props: Partial<iSidebar>) => {
   const p = apDef<iSidebar>(defaults, props);
 
   const c = part({
-    sidebar: o([styles, 'sidebar'], { ...p }),
+    sidebar: o('sidebar', { ...p }),
     linkmap: o('sidebar__linkmap', { ...p.fwd.linkmap }),
+    container: o([styles, 'sidebar__container'], { ...p.fwd.container }),
   }, p.nostyleAll);
 
   delete p.class;

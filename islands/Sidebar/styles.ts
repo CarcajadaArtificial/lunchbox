@@ -13,6 +13,13 @@ import { css } from '../../deps.ts';
 
 export const styles = css`
 
+  &.sidebar__container {
+    height: 100%;
+  }
 
+  .sidebar {
+    position: sticky;
+    top: var(--s-one-and-half);
+  }
 
 `;
