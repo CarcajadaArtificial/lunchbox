@@ -44,6 +44,7 @@ export default (props: Partial<iFieldset>) => {
   const classes = part({
     fieldset: o(styles, { ...p }),
     legend: o('fieldset__legend', { ...p.fwd.legend }),
+    input: o('fieldset__input-container', { ...p.fwd.input }),
   });
 
   delete p.class;

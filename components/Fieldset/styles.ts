@@ -17,9 +17,12 @@ export const styles = css`
     background-color: var(--clr-bg-panel-15);
     padding: var(--s-half);
     border-radius: var(--s-quarter);
-    max-width: 24rem;
 
     &:hover, &:has(:hover), &:has(:focus) {
       background-color: var(--clr-bg-panel-50);
+    }
+
+    .fieldset__input-container {
+      width: 100%;
     }
   `;

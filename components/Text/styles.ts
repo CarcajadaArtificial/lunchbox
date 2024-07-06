@@ -5,7 +5,7 @@
 //                             |__/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Style object for the `<Button />` component.
+ * Style object for the `<Text />` component.
  *
  * @module
  */
@@ -22,6 +22,7 @@ export const styles = css`
     .kbd {
       padding-left: 0.75ch;
       padding-right: 0.75ch;
+      border-bottom-width: var(--s-quarter);
     }
   }
   

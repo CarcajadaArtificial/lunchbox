@@ -88,7 +88,7 @@ export default (props: Partial<iTextArea>) => {
       ],
       { ...p.fwd.container },
     ),
-    text: o('select-none', { ...p.fwd.text }),
+    text: o('input__text select-none', { ...p.fwd.text }),
     error: o('input__error-msg', { ...p.fwd.error }),
     required: o('input__required', { ...p.fwd.required }),
     iconContainer: o('input__icon-container', { ...p.fwd.iconContainer }),

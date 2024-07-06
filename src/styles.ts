@@ -55,10 +55,11 @@ export const animation = {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const inputStyles = css`
 
-max-width: 24rem;
+max-width: 100%;
 -webkit-user-select: none;
 -ms-user-select: none;
 user-select: none;
+width: 24rem;
 
 .input {
   &__abstract {

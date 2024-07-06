@@ -73,6 +73,7 @@ export default function (props: Partial<iFieldset>) {
           checked={selectedValues.includes(inputValue)}
           data-label={inputValue}
           {...fwd.input}
+          fwd={{ container: { class: c.input } }}
         />
       ))}
     </fieldset>

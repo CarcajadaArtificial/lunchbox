@@ -5,7 +5,7 @@
 //                                |__/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Style object for the `<Button />` component.
+ * Style object for the `<Panel />` component.
  *
  * @module
  */
@@ -54,6 +54,7 @@ export const styles = css`
   
     .kbd {
       background-color: var(--clr-bg-page);
+      border-bottom-color: var(--clr-txt-personality-10);
     }
   }
 

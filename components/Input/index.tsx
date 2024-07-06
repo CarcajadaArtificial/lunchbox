@@ -52,7 +52,7 @@ export default function (props: Partial<iInput>) {
   } = setup(props);
 
   return (
-    <div ref={fwd.container?.ref} class={c.container} {...fwd.container}>
+    <div ref={fwd.container?.ref} {...fwd.container} class={c.container}>
       <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
         {label === '' ? null : (
           <Text

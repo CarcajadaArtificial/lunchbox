@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.71
+
+- Added style fixes to the `<Fieldset>`, `<Input>`, `<Panel>`, `<Select>`, `<Text>`, and `<TextArea>` components.
+
 ## v0.3.70
 
 - Added style fixes to the `<Kbd>` component

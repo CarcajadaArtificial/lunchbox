@@ -92,7 +92,7 @@ export default (props: Partial<iSelect>) => {
       { ...p.fwd.container },
     ),
     iconContainer: o('input__icon-container', { ...p.fwd.iconContainer }),
-    text: o('select-none', { ...p.fwd.text }),
+    text: o('input__text select-none', { ...p.fwd.text }),
     option: o('', { ...p.fwd.option }),
     error: o('input__error-msg', { ...p.fwd.error }),
     required: o('input__required', { ...p.fwd.required }),
