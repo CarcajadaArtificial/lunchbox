@@ -40,6 +40,7 @@ export default (props: Partial<iText>) => {
     span: o(
       [
         styles,
+        'text',
         `text--${p.type}`,
         p.noMargins ? 'no-margins' : null,
         p.indent ? 'indent' : null,

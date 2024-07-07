@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.72
+
+- Added style fixes to the `<Text/>` and `<Time/>` components.
+
 ## v0.3.71
 
 - Added style fixes to the `<Fieldset>`, `<Input>`, `<Panel>`, `<Select>`, `<Text>`, and `<TextArea>` components.

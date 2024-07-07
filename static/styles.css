@@ -194,3 +194,7 @@ button {
 .comp-gradient {
   min-height: var(--s-triple);
 }
+
+.prose .text {
+  line-break: normal;
+}

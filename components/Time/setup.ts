@@ -17,7 +17,7 @@ import { styles } from './styles.ts';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Time />` component. */
 export type iTime = iComponent<HTMLTimeElement> & {
-  dateObject: DateTime;
+  timestamp: DateTime | string;
   format: string;
   fwd: Partial<{
     colon: iFwd<HTMLSpanElement>;
@@ -26,7 +26,7 @@ export type iTime = iComponent<HTMLTimeElement> & {
 
 /** These are the default values of the `<Time />` component's props. */
 const defaults: iTime = {
-  dateObject: datetime(new Date()),
+  timestamp: datetime(new Date()),
   format: 'www, d MMM YYYY - h:mm a',
   fwd: {},
 };
