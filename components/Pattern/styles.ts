@@ -1,25 +1,27 @@
-//    ___             _ _         _     ___ _        _
-//   / __|_ _ __ _ __| (_)___ _ _| |_  / __| |_ _  _| |___ ___
-//  | (_ | '_/ _` / _` | / -_) ' \  _| \__ \  _| || | / -_|_-<
-//   \___|_| \__,_\__,_|_\___|_||_\__| |___/\__|\_, |_\___/__/
-//                                              |__/
+//   ___      _   _                  ___ _        _
+//  | _ \__ _| |_| |_ ___ _ _ _ _   / __| |_ _  _| |___ ___
+//  |  _/ _` |  _|  _/ -_) '_| ' \  \__ \  _| || | / -_|_-<
+//  |_| \__,_|\__|\__\___|_| |_||_| |___/\__|\_, |_\___/__/
+//                                           |__/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Style object for the `<Gradient />` component.
+ * Style object for the `<Pattern />` component.
  *
  * @module
  */
 import { css } from '../../deps.ts';
-import { GRADIENT_PATTERNS } from '../../src/enums.ts';
+import { PatternTypes } from '../../src/enums.ts';
 
 export const styles: {
-  gradient: string;
-  patterns: Record<GRADIENT_PATTERNS, string>;
+  base: string;
+  patterns: Record<PatternTypes, string>;
 } = {
-  gradient: css`
+  base: css`
     min-height: var(--s-triple);
+    width: 100%;
   `,
   patterns: {
+    default: css``,
     cloud: css`
       background: linear-gradient(var(--clr-bg-panel) 50%, transparent 0) 0 0,
         radial-gradient(circle closest-side, var(--clr-bg-panel) 53%, transparent 0) 0 0,

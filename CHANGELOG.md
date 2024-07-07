@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.73
+
+- Renamed the `<Gradient/>` component to `<Pattern/>`.
+
 ## v0.3.72
 
 - Added style fixes to the `<Text/>` and `<Time/>` components.

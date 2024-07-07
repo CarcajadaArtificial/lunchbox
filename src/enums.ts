@@ -57,6 +57,14 @@ export const BUTTON_PADDINGS = [
 /** @todo Write documentation */
 export type ButtonPaddings = WithDefault<(typeof BUTTON_PADDINGS)[number]>;
 
+export const PATTERN_TYPES = [
+  'cloud',
+  'zigzag',
+  'wave',
+] as const;
+
+export type PatternTypes = WithDefault<(typeof PATTERN_TYPES)[number]>;
+
 export type GRADIENT_PATTERNS = 'cloud' | 'zigzag' | 'wave';
 
 export type MENU_POSITIONS =
