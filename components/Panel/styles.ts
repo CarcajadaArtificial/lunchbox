@@ -12,50 +12,59 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-  background-color: var(--clr-bg-panel);
 
-  &.panel {
+background-color: var(--clr-bg-panel);
 
-    .button__style {
-      &--transparent {
-        background-color: var(--clr-bg-panel);
-        
-        &:hover, &:focus { 
-          background-color: var(--clr-bg-page-50);
-          border-bottom-color: var(--clr-txt-personality-10);
-        }
-        
-        &:active {
-          background-color: var(--clr-txt-personality-10);
-          border-top-color: var(--clr-bg-personality-30);
-          border-bottom-color: transparent;
-        }
+&.panel {
+
+  .button__style {
+    &--transparent {
+      background-color: var(--clr-bg-panel);
+      
+      &:hover, &:focus { 
+        background-color: var(--clr-bg-page-50);
+        border-bottom-color: var(--clr-txt-personality-10);
       }
       
-      &--panel {
-        background-color: var(--clr-bg-page);
-        
-        &:hover, &:focus { 
-          background-color: var(--clr-txt-base-25);
-          border-bottom-color: var(--clr-txt-base);
-        }
-        
-        &:active {
-          background-color: var(--clr-bg-page-50);
-          border-top-color: var(--clr-bg-personality-30);
-          border-bottom-color: transparent;
-        }
+      &:active {
+        background-color: var(--clr-txt-personality-10);
+        border-top-color: var(--clr-bg-personality-30);
+        border-bottom-color: transparent;
       }
     }
-
-    .code__wrapper {
-      background-color: var(--clr-txt-personality-10);
-    }
-  
-    .kbd {
+    
+    &--panel {
       background-color: var(--clr-bg-page);
-      border-bottom-color: var(--clr-txt-personality-10);
+      
+      &:hover, &:focus { 
+        background-color: var(--clr-txt-base-25);
+        border-bottom-color: var(--clr-txt-base);
+      }
+      
+      &:active {
+        background-color: var(--clr-bg-page-50);
+        border-top-color: var(--clr-bg-personality-30);
+        border-bottom-color: transparent;
+      }
     }
   }
+
+  .code__wrapper {
+    background-color: var(--clr-txt-personality-10);
+  }
+
+  .kbd {
+    background-color: var(--clr-bg-page);
+    border-bottom-color: var(--clr-txt-personality-10);
+  }
+
+  .fieldset {
+    background-color: var(--clr-txt-base-10);
+    
+    &:hover, &:has(:hover), &:has(:focus) {
+      background-color: var(--clr-txt-personality-10);
+    }
+  }
+}
 
 `;

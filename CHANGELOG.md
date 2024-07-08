@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.74
+
+- Extended the `<Fieldset/>` to be standarized like the rest of the input elements.
+- Removed the Gradient from the `<Footer/>` and `<Header/>` components.
+
 ## v0.3.73
 
 - Renamed the `<Gradient/>` component to `<Pattern/>`.

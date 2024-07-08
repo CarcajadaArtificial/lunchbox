@@ -1,7 +1,6 @@
 import setup, { iHeader } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
-import Gradient from '../Gradient/index.tsx';
 
 export default function (props: Partial<iHeader>) {
   const {
@@ -12,7 +11,6 @@ export default function (props: Partial<iHeader>) {
     fwd,
     banner,
     children,
-    gradient_pattern,
     layout_type,
     ...p
   } = setup(
@@ -37,16 +35,6 @@ export default function (props: Partial<iHeader>) {
             : <>{children}</>}
         </header>
       </Panel>
-      {gradient_pattern
-        ? (
-          <Gradient
-            fref={fwd.gradient?.fref}
-            class={c.gradient}
-            gradient_pattern={gradient_pattern}
-            nostyleAll={nostyleAll}
-          />
-        )
-        : null}
     </>
   );
 }

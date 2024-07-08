@@ -12,17 +12,35 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-    position: relative;
-    right: var(--s-half);
-    background-color: var(--clr-bg-panel-15);
-    padding: var(--s-half);
-    border-radius: var(--s-quarter);
 
-    &:hover, &:has(:hover), &:has(:focus) {
-      background-color: var(--clr-bg-panel-50);
-    }
+&.fieldset {
+  &__container {
+    max-width: 100%;
+    width: 24rem;
+  }
 
-    .fieldset__input-container {
-      width: 100%;
-    }
-  `;
+  &--max-width {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+}
+
+
+.fieldset {
+  position: relative;
+  right: var(--s-half);
+  padding: var(--s-half);
+  background-color: var(--clr-bg-panel-15);
+  border-radius: var(--s-quarter);
+  
+  &:hover, &:has(:hover), &:has(:focus) {
+    background-color: var(--clr-bg-panel-50);
+  }
+
+  &__input-container {
+    width: 100%;
+  }
+}
+
+`;

@@ -21,8 +21,10 @@ export type iFieldset = iComponent<HTMLFieldSetElement> & {
   values: string[];
   selectedValues: string[];
   legend: string;
+  maxWidth: boolean;
   fwd: Partial<{
     legend: iFwd<HTMLLegendElement>;
+    container: iFwd<HTMLDivElement>;
     input: Partial<iInput>;
   }>;
 };
@@ -33,6 +35,7 @@ const defaults: iFieldset = {
   values: [],
   selectedValues: [],
   legend: '',
+  maxWidth: false,
   fwd: {},
 };
 
@@ -42,7 +45,12 @@ export default (props: Partial<iFieldset>) => {
   const p = apDef<iFieldset>(defaults, props);
 
   const classes = part({
-    fieldset: o(styles, { ...p }),
+    container: o([
+      'fieldset__container',
+      p.maxWidth ? 'fieldset--max-width' : null,
+      styles,
+    ], { ...p.fwd.container }),
+    fieldset: o('fieldset', { ...p }),
     legend: o('fieldset__legend', { ...p.fwd.legend }),
     input: o('fieldset__input-container', { ...p.fwd.input }),
   });

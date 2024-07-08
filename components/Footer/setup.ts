@@ -1,21 +1,18 @@
 import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import { GRADIENT_PATTERNS, LayoutTypes } from '../../src/enums.ts';
+import { LayoutTypes } from '../../src/enums.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iLink } from '../Link/setup.ts';
-import { iGradient } from '../Gradient/setup.ts';
 import { css } from '../../deps.ts';
 
 export type iFooter = iComponent & {
   madeWithFresh: boolean;
   layout_type: LayoutTypes | null;
-  gradient_pattern: GRADIENT_PATTERNS | null;
   fwd: Partial<{
     layout: Partial<iLayout>;
     panel: Partial<iPanel>;
     wrapper: iFwd<HTMLDivElement>;
-    gradient: Partial<iGradient>;
     badge_link: Partial<iLink>;
     badge_light: iFwd<HTMLImageElement>;
     badge_dark: iFwd<HTMLImageElement>;
@@ -24,7 +21,6 @@ export type iFooter = iComponent & {
 
 const defaults: iFooter = {
   madeWithFresh: false,
-  gradient_pattern: null,
   layout_type: null,
   fwd: {},
 };

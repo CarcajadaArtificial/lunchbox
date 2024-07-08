@@ -3,7 +3,6 @@ import setup, { iFooter } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
 import Link from '../Link/index.tsx';
-import Gradient from '../Gradient/index.tsx';
 
 /**
  * @todo [ ] Lazy load the `made-with-fresh` images.
@@ -17,7 +16,6 @@ export default function (props: Partial<iFooter>) {
     nostyle,
     nostyleAll,
     children,
-    gradient_pattern,
     layout_type,
     madeWithFresh,
     ...p
@@ -53,17 +51,6 @@ export default function (props: Partial<iFooter>) {
 
   return (
     <div ref={fwd.wrapper?.ref} class={c.wrapper}>
-      {gradient_pattern
-        ? (
-          <Gradient
-            fref={fwd.gradient?.fref}
-            class={c.gradient}
-            flip
-            gradient_pattern={gradient_pattern}
-            nostyleAll={nostyleAll}
-          />
-        )
-        : null}
       <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
         <footer ref={fref} {...p} class={c.footer}>
           {layout_type

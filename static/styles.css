@@ -85,10 +85,12 @@ button {
   --clr-bg-page-50: #3d364080;
   --clr-bg-panel: #241f26;
   --clr-txt-base: #eee6f2;
+  --clr-txt-base-10: #eee6f21a;
   --clr-txt-base-25: #eee6f240;
   --clr-txt-error: #fa96c8;
   --clr-bg-error: #573c4d;
   --clr-txt-personality: #7dc0af;
+  --clr-txt-personality-25: #7dc0af40;
   --clr-txt-personality-10: #7dc0af1a;
   --clr-bg-personality: #344747;
   --clr-bg-error-50: #fa96c880;
@@ -105,10 +107,12 @@ button {
     --clr-bg-page-50: #eee6f280;
     --clr-bg-panel: #ffffff;
     --clr-txt-base: #3d3640;
+    --clr-txt-base-10: #3d36401a;
     --clr-txt-base-25: #3d364040;
     --clr-txt-error: #66050d;
     --clr-bg-error: #dbc4c5;
     --clr-txt-personality: #2b584e;
+    --clr-txt-personality-25: #2b584e40;
     --clr-txt-personality-10: #2b584e1a;
     --clr-bg-personality: #c8d9db;
     --clr-bg-error-50: #66050d80;
