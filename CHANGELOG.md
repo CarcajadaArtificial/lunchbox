@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.80
+
+- Added standarized practices to the `<Footer/>` component.
+
 ## v0.3.79
 
 - Added standarized practices to the `<Header/>` component.

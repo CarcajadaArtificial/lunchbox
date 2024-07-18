@@ -1,10 +1,38 @@
+//   ___         _
+//  | __|__  ___| |_ ___ _ _
+//  | _/ _ \/ _ \  _/ -_) '_|
+//  |_|\___/\___/\__\___|_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * ### Footer
+ * *Molecule*
+ *
+ * This module contains the render function for the `<Footer />` component.
+ *
+ * @module
+ */
 import { ComponentChild } from 'preact';
 import setup, { iFooter } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
 import Link from '../Link/index.tsx';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
+ * Render function for the [`<Footer/ >`](/x/lunchbox/components/Footer/setup.ts?s=iFooter) component.
+ *
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @prop {LayoutTypes} layout
+ *    The layout type of the native Layout component inside the Footer.
+ *
+ * @prop {boolean} madeWithFresh
+ *    If true, displays the "Made with fresh" badge.
+ *
+ * @returns {JSXInternal.Element}
+ *  The `<Footer />` component.
+ *
  * @todo [ ] Lazy load the `made-with-fresh` images.
  * @todo [?] Replace an src image with an inline SVG.
  */
@@ -16,7 +44,7 @@ export default function (props: Partial<iFooter>) {
     nostyle,
     nostyleAll,
     children,
-    layout_type,
+    layout,
     madeWithFresh,
     ...p
   } = setup(props);
@@ -50,23 +78,23 @@ export default function (props: Partial<iFooter>) {
   }
 
   return (
-    <div ref={fwd.wrapper?.ref} class={c.wrapper}>
-      <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
-        <footer ref={fref} {...p} class={c.footer}>
-          {layout_type
-            ? (
-              <Layout
-                fref={fwd.layout?.fref}
-                type={layout_type}
-                class={c.layout}
-                nostyleAll={nostyleAll}
-              >
-                {children}
-              </Layout>
-            )
-            : <>{children}</>}
-        </footer>
-      </Panel>
-    </div>
+    <Panel
+      nostyleAll={nostyleAll}
+      fref={fwd.panel?.fref}
+      {...fwd.panel}
+      class={c.panel}
+    >
+      <footer ref={fref} {...p} class={c.footer}>
+        <Layout
+          fref={fwd.layout?.fref}
+          type={layout}
+          nostyleAll={nostyleAll}
+          {...fwd.layout}
+          class={c.layout}
+        >
+          {children}
+        </Layout>
+      </footer>
+    </Panel>
   );
 }
