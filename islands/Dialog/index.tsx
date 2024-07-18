@@ -1,5 +1,5 @@
-import Panel from '../Panel/index.tsx';
-import Layout from '../Layout/index.tsx';
+import Panel from '../../components/Panel/index.tsx';
+import Layout from '../../components/Layout/index.tsx';
 import setup, { iDialog } from './setup.ts';
 
 export default function (props: Partial<iDialog>) {

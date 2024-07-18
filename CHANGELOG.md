@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.76
+
+- Ordered islands.
+- Removed the `<Autocomplete/>` component.
+
 ## v0.3.75
 
 - Added standarized practices to the `<Layout/>` component.
