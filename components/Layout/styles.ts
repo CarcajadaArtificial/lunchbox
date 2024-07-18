@@ -9,16 +9,22 @@
  *
  * @module
  */
-import { LayoutTypes } from '../../src/enums.ts';
 import { css } from '../../deps.ts';
 
-export const styles: {
-  grid: string;
-  module: Record<LayoutTypes, string>;
-} = {
-  grid: css`
+export const styles = css`
 
-&.grid {
+&.layout {
+  display: grid; 
+  grid-column-gap: 1.5rem;
+  margin: 0 1.5rem;
+  width: auto;
+  @media screen and (max-width: 39.9375em) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  @media screen and (min-width: 40em){
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   &--whitespace {
     display: grid; 
     @media screen and (max-width: 39.9375em) {
@@ -40,81 +46,69 @@ export const styles: {
       grid-template-columns: repeat(12, minmax(4.5rem, 4.5rem));
     }
   }
-  &--no-whitespace {
-    display: grid; 
-    grid-column-gap: 1.5rem;
-    margin: 0 1.5rem;
-    width: auto;
+}
+
+.layout__module {
+  &--empty {
+    grid-column: span 1;
+  }
+  &--full {
+    grid-column: span 12;
     @media screen and (max-width: 39.9375em) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-column: span 6;
     }
-    @media screen and (min-width: 40em){
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  &--center {
+    grid-column: 2/span 10;
+    @media screen and (max-width: 39.9375em) {
+      grid-column: span 6;
+    }
+  }
+  &--focus {
+    grid-column: 3/span 8;
+    @media screen and (max-width: 39.9375em) {
+      grid-column: span 6;
+    }
+  }
+  &--halves {
+    grid-column: span 6;
+  }
+  &--thirds {
+    grid-column: span 4;
+    @media screen and (max-width: 39.9375em) {
+      grid-column: span 6;
+    }
+  }
+  &--right {
+    grid-column: span 4;
+
+    @media screen and (max-width: 39.9375em) {
+      grid-column: span 6;
+    }
+
+    &:nth-child(even) {
+      grid-column: span 8;
+
+      @media screen and (max-width: 39.9375em) {
+        grid-column: span 6;
+      }
+    }
+  }
+  &--left {
+    grid-column: span 4;
+
+    @media screen and (max-width: 39.9375em) {
+      grid-column: span 6;
+    }
+    
+    &:nth-child(odd) {
+      grid-column: span 8;
+
+      @media screen and (max-width: 39.9375em) {
+        grid-column: span 6;
+      }
     }
   }
 }
 
-  `,
-  module: {
-    empty: css`
-      grid-column: span 1;
-    `,
-    full: css`
-      grid-column: span 12;
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-    `,
-    center: css`
-      grid-column: 2/span 10;
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-    `,
-    focus: css`
-      grid-column: 3/span 8;
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-    `,
-    halves: css`
-      grid-column: span 6;
-    `,
-    thirds: css`
-      grid-column: span 4;
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-    `,
-    right: css`
-      grid-column: span 4;
-
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-
-      &:nth-child(even) {
-        grid-column: span 8;
-
-        @media screen and (max-width: 39.9375em) {
-          grid-column: span 6;
-        }
-      }
-    `,
-    left: css`
-      grid-column: span 4;
-
-      @media screen and (max-width: 39.9375em) {
-        grid-column: span 6;
-      }
-      
-      &:nth-child(odd) {
-        grid-column: span 8;
-
-        @media screen and (max-width: 39.9375em) {
-          grid-column: span 6;
-        }
-      }
-    `,
-  },
-};
+`;

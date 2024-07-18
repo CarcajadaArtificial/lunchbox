@@ -26,8 +26,6 @@ export default function Sidebar(props: Partial<iSidebar>) {
     ...p
   } = setup(props);
 
-  console.log(c.container);
-
   return (
     <div {...fwd.container} class={c.container}>
       <aside class={c.sidebar} {...p}>

@@ -7,7 +7,7 @@ import { iPanel } from '../Panel/setup.ts';
 import { css } from '../../deps.ts';
 
 export type iHeader = iComponent & {
-  layout_type: LayoutTypes | null;
+  layout_type: LayoutTypes;
   banner: boolean;
   fwd: Partial<{
     layout: Partial<iLayout>;
@@ -17,7 +17,7 @@ export type iHeader = iComponent & {
 };
 
 const defaults: iHeader = {
-  layout_type: null,
+  layout_type: 'default',
   banner: false,
   fwd: {},
 };

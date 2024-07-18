@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.75
+
+- Added standarized practices to the `<Layout/>` component.
+- Added minor updates.
+
 ## v0.3.74
 
 - Extended the `<Fieldset/>` to be standarized like the rest of the input elements.

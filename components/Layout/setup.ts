@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
 import { styles } from './styles.ts';
@@ -27,31 +27,30 @@ export type iLayout = iComponent<HTMLDivElement> & {
 /** Default values of the `<Layout />` component's props. */
 const defaults: iLayout = {
   whitespaceMode: false,
-  type: 'full',
+  type: 'default',
   fwd: {},
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Layout />` component. */
 export default (props: Partial<iLayout>) => {
-  const p = applyDefaults<iLayout>(defaults, props);
+  const p = apDef<iLayout>(defaults, props);
 
   const { module } = p.fwd;
 
-  const classes = partializeClasses({
-    layout: opt(
-      cn(
-        props.whitespaceMode ? 'grid--whitespace' : 'grid--no-whitespace',
-        styles.grid,
-      ),
-      p.class,
-      p.nostyle || p.nostyleAll,
+  const classes = part({
+    layout: o(
+      [
+        styles,
+        props.type === 'default'
+          ? null
+          : props.whitespaceMode
+          ? 'layout--whitespace'
+          : 'layout',
+      ],
+      { ...p },
     ),
-    module: opt(
-      cn(styles.module[p.type as LayoutTypes]),
-      module?.class,
-      module?.nostyle || p.nostyleAll,
-    ),
+    module: o(`layout__module--${props.type}`, { ...module }),
   });
 
   delete p.class;

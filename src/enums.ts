@@ -25,7 +25,7 @@ export const LAYOUT_TYPES = [
   'left',
 ] as const;
 
-export type LayoutTypes = (typeof LAYOUT_TYPES)[number];
+export type LayoutTypes = WithDefault<(typeof LAYOUT_TYPES)[number]>;
 
 export const TEXT_TYPES = [
   'display',
