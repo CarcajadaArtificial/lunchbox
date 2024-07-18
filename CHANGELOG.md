@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.78
+
+- Added standarized practices to the `<Main/>` component.
+
 ## v0.3.77
 
 - Added standarized practices to the `<Main/>`, `<Footer/>`, and `<Header/>` components.
