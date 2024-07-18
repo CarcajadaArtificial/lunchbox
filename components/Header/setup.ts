@@ -1,12 +1,25 @@
+//   _  _             _           ___      _
+//  | || |___ __ _ __| |___ _ _  / __| ___| |_ _  _ _ __
+//  | __ / -_) _` / _` / -_) '_| \__ \/ -_)  _| || | '_ \
+//  |_||_\___\__,_\__,_\___|_|   |___/\___|\__|\_,_| .__/
+//                                                 |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the prop type, default values, and styles for the `<Header />` component.
+ *
+ * @module
+ */
 import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iPanel } from '../Panel/setup.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
-export type iHeader = iComponent & {
-  layout_type: LayoutTypes;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Properties of the `<Header />` component. */
+export type iHeader = Omit<iComponent, 'layout'> & {
+  layout: LayoutTypes;
   banner: boolean;
   fwd: Partial<{
     layout: Partial<iLayout>;
@@ -15,33 +28,26 @@ export type iHeader = iComponent & {
   }>;
 };
 
+/** These are the default values of the `<Header />` component's props. */
 const defaults: iHeader = {
-  layout_type: 'default',
+  layout: 'default',
   banner: false,
   fwd: {},
 };
 
-const style = {
-  header: css`
-    padding: var(--s-triple) 0;
-  `,
-
-  header_banner: css`
-    min-height: 90dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  `,
-};
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/** Setup function of the `<Header />` component. */
 export default (props: Partial<iHeader>) => {
   const p = apDef<iHeader>(defaults, props);
 
   const classes = part({
-    header: o(style.header, { ...p }),
+    panel: o(
+      [styles, p.banner ? 'header__panel--banner' : ''],
+      { ...p.fwd.panel },
+    ),
+    header: o('header', { ...p }),
     layout: o('', { ...p.fwd.layout }),
     wrapper: o('', { ...p.fwd.wrapper }),
-    panel: o(p.banner ? style.header_banner : '', { ...p.fwd.panel }),
   });
 
   delete p.class;

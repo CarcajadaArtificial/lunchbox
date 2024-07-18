@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.79
+
+- Added standarized practices to the `<Header/>` component.
+- Removed the `<ChipSelect/>` island.
+
 ## v0.3.78
 
 - Added standarized practices to the `<Main/>` component.
