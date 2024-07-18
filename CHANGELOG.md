@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.77
+
+- Added standarized practices to the `<Main/>`, `<Footer/>`, and `<Header/>` components.
+
 ## v0.3.76
 
 - Ordered islands.

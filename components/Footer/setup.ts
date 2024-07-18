@@ -1,4 +1,4 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
 import { iPanel } from '../Panel/setup.ts';
@@ -51,27 +51,21 @@ export default (props: Partial<iFooter>) => {
     ? Array.isArray(props.children) ? props.children : [props.children]
     : [];
 
-  const p = applyDefaults<iFooter>(defaults, props);
+  const p = apDef<iFooter>(defaults, props);
 
-  const { layout, wrapper, panel, badge_link, badge_dark, badge_light } = p.fwd;
-
-  const classes = partializeClasses({
-    footer: opt(cn(style.footer), p.class, p.nostyle || p.nostyleAll),
-    wrapper: cn(wrapper?.class),
-    layout: cn(layout?.class),
-    panel: cn(panel?.class),
-    gradient: cn(panel?.class),
-    badge_link: cn(badge_link?.class),
-    badge_light: opt(
-      cn(style.footer_fresh_badge, 'lbx-fresh-badge-light'),
-      badge_light?.class,
-      badge_light?.nostyle || p.nostyleAll,
-    ),
-    badge_dark: opt(
-      cn(style.footer_fresh_badge, 'lbx-fresh-badge-dark'),
-      badge_dark?.class,
-      badge_dark?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    footer: o(style.footer, { ...p }),
+    wrapper: o('', { ...p.fwd.wrapper }),
+    layout: o('', { ...p.fwd.layout }),
+    panel: o('', { ...p.fwd.panel }),
+    gradient: o('', { ...p.fwd.panel }),
+    badge_link: o('', { ...p.fwd.badge_link }),
+    badge_light: o([style.footer_fresh_badge, 'lbx-fresh-badge-light'], {
+      ...p.fwd.badge_light,
+    }),
+    badge_dark: o([style.footer_fresh_badge, 'lbx-fresh-badge-dark'], {
+      ...p.fwd.badge_dark,
+    }),
   });
 
   delete p.class;

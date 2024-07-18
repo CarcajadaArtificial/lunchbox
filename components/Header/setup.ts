@@ -1,9 +1,8 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
 import { iPanel } from '../Panel/setup.ts';
-
 import { css } from '../../deps.ts';
 
 export type iHeader = iComponent & {
@@ -36,19 +35,13 @@ const style = {
 };
 
 export default (props: Partial<iHeader>) => {
-  const p = applyDefaults<iHeader>(defaults, props);
+  const p = apDef<iHeader>(defaults, props);
 
-  const { layout, panel, wrapper } = p.fwd;
-
-  const classes = partializeClasses({
-    header: opt(cn(style.header), p.class, p.nostyle || p.nostyleAll),
-    layout: cn(layout?.class),
-    wrapper: cn(wrapper?.class),
-    panel: opt(
-      cn(p.banner ? style.header_banner : null),
-      panel?.class,
-      panel?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    header: o(style.header, { ...p }),
+    layout: o('', { ...p.fwd.layout }),
+    wrapper: o('', { ...p.fwd.wrapper }),
+    panel: o(p.banner ? style.header_banner : '', { ...p.fwd.panel }),
   });
 
   delete p.class;

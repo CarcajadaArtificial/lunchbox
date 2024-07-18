@@ -1,4 +1,4 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
 import { iLayout } from '../Layout/setup.ts';
@@ -24,13 +24,11 @@ const style = {
 };
 
 export default (props: Partial<iMain>) => {
-  const p = applyDefaults<iMain>(defaults, props);
+  const p = apDef<iMain>(defaults, props);
 
-  const { layout } = p.fwd;
-
-  const classes = partializeClasses({
-    main: opt(cn(style.main), p.class, p.nostyle || p.nostyleAll),
-    layout: cn(layout?.class),
+  const classes = part({
+    main: o(style.main, { ...p }),
+    layout: o('', { ...p.fwd.layout }),
   });
 
   delete p.class;
