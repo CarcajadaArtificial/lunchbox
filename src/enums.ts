@@ -14,6 +14,26 @@
  *
  * @module
  */
+
+export const ICON_SIZES = [
+  'xs',
+  'sm',
+  'md',
+  'lg',
+  'xl',
+] as const;
+
+export type IconSizes = (typeof ICON_SIZES)[number];
+
+export const ICON_COLORS = [
+  'personality',
+  'base',
+  'error',
+  'subtle',
+] as const;
+
+export type IconColors = (typeof ICON_COLORS)[number];
+
 export const LAYOUT_TYPES = [
   'empty',
   'full',

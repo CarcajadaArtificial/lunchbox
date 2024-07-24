@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.81
+
+- Added the `<IconLoader/>` and `<IconBrandFresh/>` components.
+
 ## v0.3.80
 
 - Added standarized practices to the `<Footer/>` component.
