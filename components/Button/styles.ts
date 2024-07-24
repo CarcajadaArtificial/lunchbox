@@ -112,4 +112,8 @@ export const styles = css`
       }
     }
   }
+
+  .icon {
+    margin-bottom: var(--s-quarter);
+  }
 `;

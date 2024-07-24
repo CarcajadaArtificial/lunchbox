@@ -9,6 +9,8 @@ export default function (props: Partial<iIcon>) {
       height={size}
       viewBox='0 0 4.2333332 4.2333333'
       xmlns='http://www.w3.org/2000/svg'
+      style={{ display: 'inline' }}
+      class='icon icon__loader'
     >
       <g>
         <path

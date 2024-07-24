@@ -41,7 +41,7 @@ export default (props: Partial<iIcon>) => {
 export const iconSizeToSvgSize = (size: IconSizes) =>
   /* deno-fmt-ignore */
   16 * (
-    size === 'xs' ? 1 : 
+    size === 'xs' ? 1.2 : 
     size === 'sm' ? 2 : 
     size === 'md' ? 4 :
     size === 'lg' ? 6 :

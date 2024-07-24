@@ -8,6 +8,8 @@ export default function (props: Partial<iIcon>) {
       width={size}
       height={size}
       viewBox='0 0 4.2333332 4.2333333'
+      style={{ display: 'inline' }}
+      class='icon icon__brand-fresh'
     >
       <g transform='rotate(-45,1.069344,2.4993371)'>
         <path

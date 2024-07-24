@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.82
+
+- Updated the `<IconLoader/>` and `<IconBrandFresh/>` components.
+
 ## v0.3.81
 
 - Added the `<IconLoader/>` and `<IconBrandFresh/>` components.

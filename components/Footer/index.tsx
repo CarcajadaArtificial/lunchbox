@@ -17,6 +17,8 @@ import setup, { iFooter } from './setup.ts';
 import Layout from '../Layout/index.tsx';
 import Panel from '../Panel/index.tsx';
 import Link from '../Link/index.tsx';
+import Button from '../Button/index.tsx';
+import IconBrandFresh from '../Icon/IconBrandFresh.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -57,22 +59,9 @@ export default function (props: Partial<iFooter>) {
         href='https://fresh.deno.dev'
         nostyleAll={nostyleAll}
       >
-        <img
-          width='197'
-          height='37'
-          src='https://fresh.deno.dev/fresh-badge.svg'
-          alt='Made with Fresh'
-          class={c.badge_light}
-          ref={fwd.badge_light?.ref}
-        />
-        <img
-          width='197'
-          height='37'
-          src='https://fresh.deno.dev/fresh-badge-dark.svg'
-          alt='Made with Fresh'
-          class={c.badge_dark}
-          ref={fwd.badge_dark?.ref}
-        />
+        <Button type='panel'>
+          <IconBrandFresh size='xs' /> Made with <strong>Fresh</strong>
+        </Button>
       </Link>,
     );
   }
