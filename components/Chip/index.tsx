@@ -14,7 +14,6 @@
  */
 import setup, { iChip } from './setup.ts';
 import Text from '../Text/index.tsx';
-import { IconX } from '../../deps.ts';
 import { handleInteraction } from '../../src/handlers.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

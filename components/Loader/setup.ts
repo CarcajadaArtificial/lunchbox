@@ -9,10 +9,8 @@
  *
  * @module
  */
-import { Ref } from 'preact';
 import { apDef, o, part } from '../../src/utils.ts';
-import { iComponent } from '../../src/types.ts';
-import { iText } from '../Text/setup.ts';
+import { iComponent, iFwd } from '../../src/types.ts';
 import { animation } from '../../src/styles.ts';
 import { styles } from './styles.ts';
 
@@ -20,15 +18,9 @@ import { styles } from './styles.ts';
 /** Properties of the `<Loader />` component. */
 export type iLoader = iComponent<HTMLDivElement> & {
   fwd: Partial<{
-    icon: Partial<{
-      size: number;
-      color: string;
-      stroke: number;
-      ref?: Ref<SVGSVGElement>;
-      nostyle?: boolean;
-      class: string;
-    }>;
-    text: Partial<iText>;
+    controller: iFwd<HTMLDivElement>;
+    container: iFwd<HTMLDivElement>;
+    children: iFwd<HTMLDivElement>;
   }>;
 };
 
@@ -43,9 +35,12 @@ export default (props: Partial<iLoader>) => {
   const p = apDef<iLoader>(defaults, props);
 
   const classes = part({
-    loader: o(styles, { ...p }),
-    icon: o(['loader__icon', animation.spin], { ...p.fwd.icon }),
-    text: o('loader__text', { ...p.fwd.text }),
+    controller: o([styles, 'loader__controller'], { ...p }),
+    container: o(
+      [animation.spin, 'loader__container'],
+      { ...p.fwd.container },
+    ),
+    children: o('loader__children', { ...p.fwd.children }),
   });
 
   delete p.class;

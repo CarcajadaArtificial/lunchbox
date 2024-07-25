@@ -13,9 +13,7 @@
  * @module
  */
 import setup, { iLoader } from './setup.ts';
-import Panel from '../Panel/index.tsx';
-import Text from '../Text/index.tsx';
-import { IconLoader2 } from '../../deps.ts';
+import IconLoader from '../Icon/IconLoader.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -31,11 +29,13 @@ export default function (props: Partial<iLoader>) {
   const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);
 
   return (
-    <Panel ref={fref} class={c.loader} {...p}>
-      <IconLoader2 ref={fwd.icon?.ref} class={c.icon} {...fwd.icon} />
-      <Text noMargins fref={fwd.text?.ref} class={c.text} {...fwd.text}>
-        Loading...
-      </Text>
-    </Panel>
+    <div class={c.controller}>
+      <div class={c.container}>
+        <IconLoader size='md' />
+      </div>
+      <div class={c.children} hidden>
+        {children}
+      </div>
+    </div>
   );
 }

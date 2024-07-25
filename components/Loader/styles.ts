@@ -12,17 +12,19 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-  padding: var(--s-single);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--s-half);
-  border-radius: var(--s-quarter);
 
-  .loader {
-    &__icon {
-      height: var(--s-triple);
-      width: var(--s-triple);
-    }
+&.loader__controller {
+
+}
+
+.loader {
+  &__container {
+
   }
+
+  &__children {
+    
+  }
+}
+
 `;

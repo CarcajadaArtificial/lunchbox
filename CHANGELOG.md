@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.83
+
+- Updated the `<Loader/>` component.
+- Removed the tabler icons dependencies.
+
 ## v0.3.82
 
 - Updated the `<IconLoader/>` and `<IconBrandFresh/>` components.
