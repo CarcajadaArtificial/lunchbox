@@ -17,6 +17,7 @@ import { styles } from './styles.ts';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Loader />` component. */
 export type iLoader = iComponent<HTMLDivElement> & {
+  loaded: boolean;
   fwd: Partial<{
     controller: iFwd<HTMLDivElement>;
     container: iFwd<HTMLDivElement>;
@@ -26,6 +27,7 @@ export type iLoader = iComponent<HTMLDivElement> & {
 
 /** These are the default values of the `<Loader />` component's props. */
 const defaults: iLoader = {
+  loaded: true,
   fwd: {},
 };
 
@@ -40,7 +42,7 @@ export default (props: Partial<iLoader>) => {
       [animation.spin, 'loader__container'],
       { ...p.fwd.container },
     ),
-    children: o('loader__children', { ...p.fwd.children }),
+    children: o([animation.fadein, 'loader__children'], { ...p.fwd.children }),
   });
 
   delete p.class;

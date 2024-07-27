@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.84
+
+- Updated the `<Loader/>` component.
+- Added `animation.fadein` global styles.
+
 ## v0.3.83
 
 - Updated the `<Loader/>` component.

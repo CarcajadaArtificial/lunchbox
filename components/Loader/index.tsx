@@ -26,14 +26,16 @@ import IconLoader from '../Icon/IconLoader.tsx';
  *  The `<Loader />` component.
  */
 export default function (props: Partial<iLoader>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);
+  const { c, nostyle, nostyleAll, fref, fwd, children, loaded, ...p } = setup(
+    props,
+  );
 
   return (
     <div class={c.controller}>
-      <div class={c.container}>
+      <div class={c.container} hidden={loaded}>
         <IconLoader size='md' />
       </div>
-      <div class={c.children} hidden>
+      <div class={c.children} hidden={!loaded}>
         {children}
       </div>
     </div>

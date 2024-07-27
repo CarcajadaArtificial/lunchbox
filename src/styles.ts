@@ -20,6 +20,10 @@ export const transition = {
 export const animation = {
   spin: css`
     animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    -moz-animation: spin 1s ease-in-out infinite;
+    -o-animation: spin 1s ease-in-out infinite;
+    -ms-animation: spin 1s ease-in-out infinite;
 
     @keyframes spin {
       0% {
@@ -35,6 +39,10 @@ export const animation = {
     position: relative;
     top: 0.25rem;
     animation: float 3s infinite;
+    -webkit-animation: float 3s infinite;
+    -moz-animation: float 3s infinite;
+    -o-animation: float 3s infinite;
+    -ms-animation: float 3s infinite;
     
     @keyframes float {
       from {
@@ -48,6 +56,19 @@ export const animation = {
       to {
         top: 0.25rem;
       }
+    }
+  `,
+
+  fadein: css`
+    animation: fadeIn ease-in-out 0.2s;
+    -webkit-animation: fadeIn ease-in-out 0.2s;
+    -moz-animation: fadeIn ease-in-out 0.2s;
+    -o-animation: fadeIn ease-in-out 0.2s;
+    -ms-animation: fadeIn ease-in-out 0.2s;
+    
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   `,
 };
