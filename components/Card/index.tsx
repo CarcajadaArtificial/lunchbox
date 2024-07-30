@@ -45,27 +45,21 @@ export default function Card(props: Partial<iCard>) {
       ref={fref}
       {...p}
     >
+      {imageUrl === '' || imageUrl === undefined ? undefined : (
+        <div
+          class={c.image}
+          ref={fwd.image?.ref}
+          style={{ backgroundImage: `url(${imageUrl})` }}
+          {...fwd.image}
+        />
+      )}
       <Panel
         class={c.panel}
         nostyleAll={nostyleAll}
         fref={fwd.panel?.ref}
         {...fwd.panel}
       >
-        {imageUrl === '' || imageUrl === undefined ? undefined : (
-          <div
-            class={c.image}
-            ref={fwd.image?.ref}
-            style={{ backgroundImage: `url(${imageUrl})` }}
-            {...fwd.image}
-          />
-        )}
-        <div
-          ref={fwd.image?.ref}
-          class={c.section}
-          {...fwd.section}
-        >
-          {children}
-        </div>
+        {children}
       </Panel>
     </div>
   );

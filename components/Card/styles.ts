@@ -15,37 +15,28 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-  container-type: inline-size;
 
-  .card {
-    &__section {
-      padding: var(--s-three-quarters);
-      grid-column: span 2;
+&.card {
+  margin-top: var(--s-double);
+}
 
-      /* @container (width > 35em) {
-        padding-left: var(--s-single);
-      } */
-    }
-
-    &__panel {
-      border-radius: var(--s-quarter);
-
-      /* @container (width > 35em) {
-        display: grid;
-        grid-template-columns: 30% 70%;
-      } */
-    }
-    
-    &__image {
-      border-radius: var(--s-quarter) var(--s-quarter) 0 0;
-      aspect-ratio: 16 / 9;
-      background-size: cover;
-      background-position: center;
-
-      /* @container (width > 35em) {
-        aspect-ratio: 1 / 1;
-        border-radius: var(--s-quarter) 0 0 var(--s-quarter);
-      } */
-    }
+.card {
+  &__image {
+    aspect-ratio: 1 / 1;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: var(--s-quarter);
+    border-top-right-radius: var(--s-quarter);
+    width: var(--s-fifteen);
+    margin-left: var(--s-half);
+    border: var(--s-half) solid var(--clr-bg-panel);
   }
+
+  &__panel {
+    border-radius: var(--s-quarter);
+    padding: var(--s-single);
+    margin-top: calc(var(--s-quarter) * -1);
+  }
+}
+
 `;

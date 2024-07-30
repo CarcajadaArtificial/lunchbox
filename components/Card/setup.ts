@@ -20,7 +20,6 @@ export type iCard = iComponent<HTMLDivElement> & {
   imageUrl: string;
   fwd: Partial<{
     panel: Partial<iPanel>;
-    section: iFwd<HTMLDivElement>;
     image: iFwd<HTMLDivElement>;
   }>;
 };
@@ -36,13 +35,10 @@ const defaults: iCard = {
 export default (props: Partial<iCard>) => {
   const p = apDef<iCard>(defaults, props);
 
-  const { panel, section, image } = p.fwd;
-
   const classes = part({
-    card: o(styles, { ...p }),
-    image: o('card__image', { ...image }),
-    panel: o('card__panel', { ...panel }),
-    section: o('card__section', { ...section }),
+    card: o([styles, 'card'], { ...p }),
+    image: o('card__image', { ...p.fwd.image }),
+    panel: o('card__panel', { ...p.fwd.panel }),
   });
 
   delete p.class;

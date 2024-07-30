@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.85
+
+- Updated the `<Card/>` component.
+
 ## v0.3.84
 
 - Updated the `<Loader/>` component.

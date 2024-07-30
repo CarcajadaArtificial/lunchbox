@@ -151,21 +151,6 @@ button {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Misc styles
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-@container (width > 35em) {
-  .card__panel {
-    display: grid !important;
-    grid-template-columns: 30% 70% !important;
-  }
-  .card__image {
-    aspect-ratio: 1 / 0 !important;
-    border-radius: var(--s-quarter) 0 0 var(--s-quarter) !important;
-  }
-  .card__image + .card__section {
-    padding-left: var(--s-single) !important;
-    grid-column: span 1 !important;
-  }
-}
-
 .fieldset,
 .input--box input,
 .input--box textarea,
