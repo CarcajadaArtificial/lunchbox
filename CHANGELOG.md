@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.87
+
+- Moved the `<Navigation/>` component from the islands to the components directory..
+
 ## v0.3.86
 
 - Added the `<Navigation/>` component.

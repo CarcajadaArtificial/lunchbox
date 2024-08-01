@@ -1,5 +1,5 @@
 import setup, { iNavigation } from './setup.ts';
-import Panel from '../../components/Panel/index.tsx';
+import Panel from '../Panel/index.tsx';
 
 export default function (props: Partial<iNavigation>) {
   const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(

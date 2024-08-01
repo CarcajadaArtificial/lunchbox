@@ -5,7 +5,7 @@
 //                                                              |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * This module contains the prop type, default values, and styles for the `<Button />` component.
+ * This module contains the prop type, default values, and styles for the `<Markdown />` component.
  *
  * @module
  */
@@ -15,13 +15,13 @@ import { render, RenderOptions } from '../../src/markdown.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Properties of the `<Button />` component. */
+/** Properties of the `<Markdown />` component. */
 export type iMarkdown = iComponent<HTMLDivElement> & {
   markdownContent: string;
   renderOptions: RenderOptions;
 };
 
-/** Default values of the `<Button />` component's props. */
+/** Default values of the `<Markdown />` component's props. */
 const defaults: iMarkdown = {
   markdownContent: '',
   renderOptions: {
@@ -37,7 +37,7 @@ const defaults: iMarkdown = {
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Setup function of the `<Button />` component. */
+/** Setup function of the `<Markdown />` component. */
 export default (props: Partial<iMarkdown>) => {
   const p = apDef<iMarkdown>(defaults, props);
 
