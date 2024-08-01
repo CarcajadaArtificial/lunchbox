@@ -10,12 +10,8 @@
  *
  * @module
  */
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//    ___                     _
-//   / _ \ _ _ __ _ __ _ _ _ (_)____ __  ___
-//  | (_) | '_/ _` / _` | ' \| (_-< '  \(_-<
-//   \___/|_| \__, \__,_|_||_|_/__/_|_|_/__/
-//            |___/
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export { default as ChipSelect } from './islands/ChipSelect/index.tsx';
+export { default as Autocomplete } from './islands/Autocomplete/index.tsx';
+export { default as Dialog } from './islands/Dialog/index.tsx';
 export { default as Menu } from './islands/Menu/index.tsx';
+export { default as Navigation } from './islands/Navigation/index.tsx';
+export { default as Sidebar } from './islands/Sidebar/index.tsx';

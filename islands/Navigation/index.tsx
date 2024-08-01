@@ -1,19 +1,15 @@
 import setup, { iNavigation } from './setup.ts';
 import Panel from '../../components/Panel/index.tsx';
 
-/**
- * @todo [!] Add a property `scroll-height` that makes the menu appear after scrolling until that height.
- * @todo [!] Add an animation when the navigation appears.
- */
 export default function (props: Partial<iNavigation>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, fixed, ...p } = setup(
+  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(
     props,
   );
 
   return (
-    <div ref={fwd.wrapper?.ref} class={c.wrapper}>
-      <Panel nostyleAll={nostyleAll} fref={fwd.panel?.fref} class={c.panel}>
-        <nav ref={fref} class={c.nav} {...p}>
+    <div class={c.container} {...fwd.container}>
+      <Panel class={c.panel} {...fwd.panel}>
+        <nav class={c.navigation} {...p}>
           {children}
         </nav>
       </Panel>

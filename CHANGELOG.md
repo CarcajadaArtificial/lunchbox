@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.86
+
+- Added the `<Navigation/>` component.
+
 ## v0.3.85
 
 - Updated the `<Card/>` component.

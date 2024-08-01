@@ -19,7 +19,8 @@ export const styles = css`
 
   .sidebar {
     position: sticky;
-    top: var(--s-one-and-half);
+    top: var(--s-triple);
+    padding-top: var(--s-single);
   }
 
 `;

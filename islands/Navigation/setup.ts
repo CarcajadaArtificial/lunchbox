@@ -1,57 +1,26 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iPanel } from '../../components/Panel/setup.ts';
-import { iLayout } from '../../components/Layout/setup.ts';
-import { css } from '../../deps.ts';
+import { styles } from './styles.ts';
 
 export type iNavigation = iComponent & {
-  fixed: boolean;
-  compact: boolean;
   fwd: Partial<{
-    wrapper: iFwd<HTMLDivElement>;
+    container: iFwd<HTMLDivElement>;
     panel: Partial<iPanel>;
-    layout: Partial<iLayout>;
   }>;
 };
 
 const defaults: iNavigation = {
-  fixed: false,
-  compact: false,
   fwd: {},
 };
 
-const style = {
-  nav: css`
-    padding: var(--s-single) 0;
-  `,
-  compact: css`
-    padding: var(--s-half) 0;
-  `,
-  wrapper: css`
-    top: 0;
-    width: 100%;
-    z-index: 20;
-  `,
-};
-
 export default (props: Partial<iNavigation>) => {
-  const p = applyDefaults<iNavigation>(defaults, props);
+  const p = apDef<iNavigation>(defaults, props);
 
-  const { wrapper, panel, layout } = p.fwd;
-
-  const classes = partializeClasses({
-    nav: opt(
-      cn(p.compact ? style.compact : style.nav),
-      p.class,
-      p.nostyle || p.nostyleAll,
-    ),
-    wrapper: opt(
-      cn(style.wrapper, p.fixed ? 'fixed' : null),
-      wrapper?.class,
-      wrapper?.nostyle || p.nostyleAll,
-    ),
-    panel: cn(panel?.class),
-    layout: cn(layout?.class),
+  const classes = part({
+    navigation: o('navigation', { ...p }),
+    container: o([styles, 'navigation__container'], { ...p.fwd.container }),
+    panel: o('', { ...p.fwd.panel }),
   });
 
   delete p.class;
