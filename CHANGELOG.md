@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.88
+
+- Added standarized practices to the `<Navigation/>` and `<Sidebar/>` components.
+
 ## v0.3.87
 
 - Moved the `<Navigation/>` component from the islands to the components directory..

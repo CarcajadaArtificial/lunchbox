@@ -15,6 +15,18 @@
 import setup, { iSidebar } from './setup.ts';
 import Linkmap from '../../components/Linkmap/index.tsx';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Render function for the [`<Sidebar/ >`](/x/lunchbox/components/Sidebar/setup.ts?s=iMarkdown)
+ * component.
+ *
+ * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
+ *
+ * @returns {JSXInternal.Element}
+ *  The `<Sidebar />` component.
+ *
+ * @todo Remove the Linkmap functionality in favor of only the children.
+ */
 export default function Sidebar(props: Partial<iSidebar>) {
   const {
     c,
