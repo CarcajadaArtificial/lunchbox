@@ -1,14 +1,11 @@
-import { applyDefaults, cn, opt, partializeClasses } from '../../src/utils.ts';
+import { apDef, o, part } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { css } from '../../deps.ts';
 import { iPanel } from '../../components/Panel/setup.ts';
-import { iLayout } from '../../components/Layout/setup.ts';
 
 export type iDialog = iComponent<HTMLDivElement> & {
   open: boolean;
   fwd: Partial<{
     panel: Partial<iPanel>;
-    layout: Partial<iLayout>;
   }>;
 };
 
@@ -17,45 +14,12 @@ const defaults: iDialog = {
   fwd: {},
 };
 
-const styles = {
-  dialog: css`
-    background-color: var(--clr-bg-panel-15);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(var(--s-three-quarters)) brightness(75%);
-    -webkit-backdrop-filter: blur(var(--s-three-quarters)) brightness(75%);
-    z-index: 50;
-  `,
-  panel: css`
-    padding: var(--s-single);
-    border-radius: var(--s-quarter);
-    box-shadow: 0px var(--s-eighth) var(--s-one-and-half) var(--s-eighth) rgba(0, 0, 0, 0.3);
-  `,
-  layout: css`
-    padding: var(--s-triple) 0;
-  `,
-};
-
 export default (props: Partial<iDialog>) => {
-  const p = applyDefaults<iDialog>(defaults, props);
+  const p = apDef<iDialog>(defaults, props);
 
-  const { panel, layout } = p.fwd;
-
-  const classes = partializeClasses({
-    dialog: opt(cn(styles.dialog), p.class, p.nostyle || p.nostyleAll),
-    panel: opt(
-      cn(styles.panel),
-      panel?.class,
-      panel?.nostyle || p.nostyleAll,
-    ),
-    layout: opt(
-      cn(styles.layout),
-      layout?.class,
-      layout?.nostyle || p.nostyleAll,
-    ),
+  const classes = part({
+    dialog: o('dialog', { ...p }),
+    panel: o('dialog__panel', { ...p.fwd.panel }),
   });
 
   delete p.class;

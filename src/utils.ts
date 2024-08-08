@@ -38,12 +38,6 @@ export const cn = classNames.default;
  * @returns {string}
  *  `"${nostyle ? '' : className} ${customClassName}"`
  */
-export const opt = (
-  className: string,
-  customClassName?: string | JSX.SignalLike<string | undefined>,
-  nostyle?: boolean,
-) => cn(nostyle ? '' : className, customClassName);
-/** New version of `opt()`. */
 export const o = (
   classes: string | unknown[],
   props?: {
@@ -82,18 +76,6 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
 // Disabled linter in this line because I couldn't find a way to adapt the component type schema to
 //    support EmptyObject.
 // deno-lint-ignore ban-types
-export function applyDefaults<T extends {}>(d: T, i: Partial<T>): T {
-  if (Object.keys(d).length === 0) {
-    throw new Error(
-      'Error in applyDefaults(): If there are no default values, this function must be avoided.',
-    );
-  } else if (Object.keys(i).length === 0) {
-    return d;
-  }
-  return { ...d, ...i };
-}
-/** New version of applyDefaults */
-// deno-lint-ignore ban-types
 export function apDef<T extends {}>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
     throw new Error(
@@ -118,15 +100,6 @@ export function apDef<T extends {}>(d: T, i: Partial<T>): T {
  * @returns {Record<string, string | undefined>}
  *  A new record of the same parts but an `undefined` value replaced empty string values.
  */
-export function partializeClasses(
-  classes: Record<string, string>,
-): Record<string, string | undefined> {
-  return rMap<string | undefined>(
-    classes,
-    (entry) => (entry === '' ? undefined : entry),
-  );
-}
-/** New version of `partializeClasses()`. */
 export const part = (
   classes: Record<string, string>,
   nostyleAll?: boolean,

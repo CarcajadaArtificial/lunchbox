@@ -27,12 +27,8 @@ export default function (props: Partial<iMenu>) {
       href={typeof menuOption === 'string' ? menuOption : undefined}
     >
       <Button
-        // OnExtendedClick={typeof menuOption === 'string'
-        //   ? undefined
-        //   : menuOption}
         type='transparent'
         class={c.option}
-        compact
       >
         {customOption
           ? customOption(menuOptions[menuOptionKey], menuOptionKey)

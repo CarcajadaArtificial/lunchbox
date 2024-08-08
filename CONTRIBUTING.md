@@ -58,7 +58,7 @@ The `apDef` function, short for "Apply Defaults", merges default values with new
 ```typescript
     export function apDef<T extends {}>(d: T, i: Partial<T>): T {
       if (Object.keys(d).length === 0) {
-        throw new Error('Error in applyDefaults(): If there are no default values, this function must be avoided.');
+        throw new Error('Error in apDef(): If there are no default values, this function must be avoided.');
       } else if (Object.keys(i).length === 0) {
         return d;
       }

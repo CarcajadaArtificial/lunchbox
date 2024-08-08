@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.89
+
+- Added standarized practices to the `<Dialog/>` and `<Menu/>` islands.
+- Minor updates in the `CONTRIBUTING.md` document.
+- Removed the deprecated `partializeClasses()`, `opt()`, and `applyDefaults()` functions.
+
 ## v0.3.88
 
 - Added standarized practices to the `<Navigation/>` and `<Sidebar/>` components.
