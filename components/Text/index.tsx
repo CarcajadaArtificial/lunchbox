@@ -48,21 +48,13 @@ import setup, { iText } from './setup.ts';
  */
 export default function Text(props: Partial<iText>) {
   const {
-    c,
-    fref,
     type,
     indent,
     noMargins,
     children,
-    nostyle,
-    nostyleAll,
     inheritColor,
     ...p
   } = setup(props);
 
-  return (
-    <span ref={fref} class={c.span} {...p}>
-      {children}
-    </span>
-  );
+  return <span {...p}>{children}</span>;
 }

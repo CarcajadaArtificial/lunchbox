@@ -9,6 +9,7 @@
  * @module
  */
 
+import { SignalLike } from '$fresh/src/types.ts';
 import { classNames } from '../deps.ts';
 import { EmptyObject } from './types.ts';
 import { JSX } from 'preact';
@@ -43,8 +44,18 @@ export const o = (
   props?: {
     class?: string | JSX.SignalLike<string | undefined>;
     nostyle?: boolean;
+    nostyleAll?: boolean;
   },
-) => props ? (!props.nostyle ? cn(classes, props.class) : cn(props.class)) : '';
+) => {
+  if (!props) {
+    return;
+  } else if (!props.nostyle && !props.nostyleAll) {
+    return cn(classes, props.class);
+  } else {
+    delete props.nostyle, props.nostyleAll;
+    return props.class;
+  }
+};
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -73,10 +84,7 @@ export function getDocumentation(relativeUrl: string, fileNames: string[]) {
  * @returns {T}
  *  An object of type `T` that contains the default `d` values and the new input `i` values.
  */
-// Disabled linter in this line because I couldn't find a way to adapt the component type schema to
-//    support EmptyObject.
-// deno-lint-ignore ban-types
-export function apDef<T extends {}>(d: T, i: Partial<T>): T {
+export function apDef<T extends object>(d: T, i: Partial<T>): T {
   if (Object.keys(d).length === 0) {
     throw new Error(
       'Error in applyDefaults(): If there are no default values, this function must be avoided.',
@@ -108,6 +116,21 @@ export const part = (
     classes,
     (entry) => (entry === '' ? undefined : entry),
   );
+export const forward = <
+  T extends Record<
+    string,
+    { class?: SignalLike<string | undefined> | string; nostyle?: boolean }
+  >,
+>(
+  classes: Record<keyof T, string | unknown[]>,
+  fwd: T,
+): T => {
+  Object.keys(fwd).forEach((key) => {
+    fwd[key].class = o(classes[key], { ...fwd[key] });
+    delete fwd[key].nostyle;
+  });
+  return fwd;
+};
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

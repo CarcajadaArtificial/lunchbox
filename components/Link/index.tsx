@@ -24,11 +24,7 @@ import setup, { iLink } from './setup.ts';
  *  The `<Link />` component.
  */
 export default function Link(props: Partial<iLink>) {
-  const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
+  const { children, ...p } = setup(props);
 
-  return (
-    <a ref={fref} tabIndex={p.tabIndex ? p.tabIndex : 0} class={c.link} {...p}>
-      {children}
-    </a>
-  );
+  return <a {...p}>{children}</a>;
 }

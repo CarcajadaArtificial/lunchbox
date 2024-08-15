@@ -24,7 +24,7 @@ import setup, { iSeparator } from './setup.ts';
  *  The `<Separator />` component.
  */
 export default function Separator(props: Partial<iSeparator>) {
-  const { c, nostyle, nostyleAll, fref, ...p } = setup(props);
+  const { ...p } = setup(props);
 
-  return <hr ref={fref} class={c.separator} {...p} />;
+  return <hr {...p} />;
 }

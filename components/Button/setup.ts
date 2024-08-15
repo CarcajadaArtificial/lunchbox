@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, o } from '../../src/utils.ts';
 import { ButtonPaddings, type ButtonTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
@@ -35,20 +35,17 @@ const defaults: iButton = {
 export default (props: Partial<iButton>) => {
   const p = apDef<iButton>(defaults, props);
 
-  const classes = part({
-    button: o(
-      [
-        styles,
-        transition.interaction.outline,
-        p.type === 'default' ? 'button__style' : `button__style--${p.type}`,
-        p.padding === 'default'
-          ? 'button__padding'
-          : `button__padding--${p.padding}`,
-      ],
-      { ...p },
-    ),
-  });
+  p.class = o(
+    [
+      styles,
+      transition.interaction.outline,
+      p.type === 'default' ? 'button__style' : `button__style--${p.type}`,
+      p.padding === 'default'
+        ? 'button__padding'
+        : `button__padding--${p.padding}`,
+    ],
+    { ...p },
+  );
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

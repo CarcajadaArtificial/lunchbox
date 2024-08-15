@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, o } from '../../src/utils.ts';
 import { TextTypes } from '../../src/enums.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
@@ -36,20 +36,17 @@ const defaults: iText = {
 export default (props: Partial<iText>) => {
   const p = apDef<iText>(defaults, props);
 
-  const classes = part({
-    span: o(
-      [
-        styles,
-        'text',
-        `text--${p.type}`,
-        p.noMargins ? 'no-margins' : null,
-        p.indent ? 'indent' : null,
-        p.inheritColor ? 'inherit-color' : null,
-      ],
-      { ...p },
-    ),
-  });
+  p.class = o(
+    [
+      styles,
+      'text',
+      `text--${p.type}`,
+      p.noMargins ? 'no-margins' : null,
+      p.indent ? 'indent' : null,
+      p.inheritColor ? 'inherit-color' : null,
+    ],
+    { ...p },
+  );
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

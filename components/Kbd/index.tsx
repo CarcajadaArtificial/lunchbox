@@ -24,7 +24,7 @@ import setup, { iKbd } from './setup.ts';
  *  The `<Kbd />` component.
  */
 export default function Kbd(props: Partial<iKbd>) {
-  const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
+  const { children, ...p } = setup(props);
 
-  return <kbd class={c.kbd} ref={fref} {...p}>{children}</kbd>;
+  return <kbd {...p}>{children}</kbd>;
 }

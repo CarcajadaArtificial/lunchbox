@@ -9,16 +9,12 @@
  *
  * @module
  */
-import { JSX, Ref } from 'preact';
+import { JSX } from 'preact';
 
 /**
  * This type is used for standarizing all components. By design every component must have a protagonic
  * HTMLElement that inherits its attributes, the GenericComponent properties, Aria atributes, and Event
  * Handlers. [See more](https://deno.land/x/lunchbox#configure-anything-easily)
- *
- * `fref?` (Ref<T>):
- *    Short for "Forwarded Reference". This prop allows the component to receive a preact reference
- *    that points to the protagonist HTMLElement in the component.
  *
  * `nostyle?` (boolean):
  *    This prop removes the default styles of the component.
@@ -29,7 +25,6 @@ import { JSX, Ref } from 'preact';
 export type iComponent<T extends EventTarget = HTMLElement> =
   & iElement<T>
   & {
-    fref?: Ref<T>;
     nostyle?: boolean;
     nostyleAll?: boolean;
   };
@@ -54,7 +49,6 @@ export type iElement<T extends EventTarget = HTMLElement> =
  *    If true, removes the default class name of this HTMLElement.
  */
 export type iFwd<T extends EventTarget = HTMLElement> = iElement<T> & {
-  ref?: Ref<T>;
   nostyle?: boolean;
 };
 

@@ -31,7 +31,7 @@ import setup, { iPattern } from './setup.ts';
  *  The `<Pattern />` component.
  */
 export default function (props: Partial<iPattern>) {
-  const { c, nostyle, nostyleAll, fref, type, ...p } = setup(props);
+  const { type, flip, ...p } = setup(props);
 
-  return <div ref={fref} {...p} class={c.pattern} />;
+  return <div {...p} />;
 }

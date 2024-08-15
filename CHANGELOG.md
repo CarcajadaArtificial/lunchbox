@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.90
+
+- Added standarized practices to Simple Atom Components.
+- Added the component standarization function `forward()`.
+
 ## v0.3.89
 
 - Added standarized practices to the `<Dialog/>` and `<Menu/>` islands.

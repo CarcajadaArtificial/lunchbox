@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { render, RenderOptions } from '../../src/markdown.ts';
 import { styles } from './styles.ts';
@@ -41,12 +41,8 @@ const defaults: iMarkdown = {
 export default (props: Partial<iMarkdown>) => {
   const p = apDef<iMarkdown>(defaults, props);
 
-  const classes = part({
-    markdown: o([styles.markdown, styles.syntax], { ...p }),
-  });
-
+  p.class = o([styles.markdown, styles.syntax], { ...p });
   p.markdownContent = render(p.markdownContent, p.renderOptions);
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

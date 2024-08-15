@@ -6,14 +6,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * ### Main
- * *Molecule*
+ * *Atom*
  *
  * This module contains the render function for the `<Main />` component.
  *
  * @module
  */
 import setup, { iMain } from './setup.ts';
-import Layout from '../Layout/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -21,27 +20,11 @@ import Layout from '../Layout/index.tsx';
  *
  * [Component properties are partial](https://deno.land/x/lunchbox#configure-anything-easily)
  *
- * @prop {LayoutTypes} layout
- *    The layout type of the native Layout component inside the main.
- *
  * @returns {JSXInternal.Element}
  *  The `<Main />` component.
  */
 export default function (props: Partial<iMain>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, layout, ...p } = setup(
-    props,
-  );
+  const { children, ...p } = setup(props);
 
-  return (
-    <main ref={fref} {...p} class={c.main}>
-      <Layout
-        type={layout}
-        fref={fwd.layout?.fref}
-        {...fwd.layout}
-        class={c.layout}
-      >
-        {children}
-      </Layout>
-    </main>
-  );
+  return <main {...p}>{children}</main>;
 }

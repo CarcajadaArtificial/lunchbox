@@ -45,26 +45,7 @@ import setup, { iButton } from './setup.ts';
  * @todo - large
  */
 export default function Button(props: Partial<iButton>) {
-  const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
-    children,
-    padding,
-    type,
-    ...p
-  } = setup(
-    props,
-  );
+  const { children, padding, type, ...p } = setup(props);
 
-  return (
-    <button
-      ref={fref}
-      class={c.button}
-      {...p}
-    >
-      {children}
-    </button>
-  );
+  return <button {...p}>{children}</button>;
 }

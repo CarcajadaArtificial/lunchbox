@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, o } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { DateTime, datetime } from '../../deps.ts';
 import { styles } from './styles.ts';
@@ -17,7 +17,7 @@ import { styles } from './styles.ts';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Time />` component. */
 export type iTime = iComponent<HTMLTimeElement> & {
-  timestamp: DateTime | string;
+  timestamp: DateTime;
   format: string;
   fwd: Partial<{
     colon: iFwd<HTMLSpanElement>;
@@ -36,11 +36,8 @@ const defaults: iTime = {
 export default (props: Partial<iTime>) => {
   const p = apDef<iTime>(defaults, props);
 
-  const classes = part({
-    time: o(styles, { ...p }),
-    colon: o('', { ...p.fwd.colon }),
-  });
+  p.dateTime = p.timestamp.toISO();
+  p.class = o(styles, { ...p });
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

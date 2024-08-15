@@ -13,7 +13,6 @@
  * @module
  */
 import setup, { iTime } from './setup.ts';
-import { DateTime, datetime } from '../../deps.ts';
 
 /**
  * Render function for the [`<Time/ >`](/x/lunchbox/components/Time/setup.ts?s=iLinkmap)
@@ -31,23 +30,13 @@ import { DateTime, datetime } from '../../deps.ts';
  *  The `<Time />` component.
  */
 export default function (props: Partial<iTime>) {
-  const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
-    fwd,
-    timestamp,
-    format,
-    ...p
-  } = setup(props);
+  const { fwd, timestamp, format, ...p } = setup(props);
 
-  let dateobject;
-  if (typeof timestamp === 'string') {
-    dateobject = datetime(new Date(timestamp));
-  } else {
-    dateobject = timestamp;
-  }
+  console.log(timestamp);
 
-  return <time dateTime={dateobject.toISO()}>{dateobject.format(format)}</time>;
+  return (
+    <time {...p}>
+      {timestamp.format(format)}
+    </time>
+  );
 }

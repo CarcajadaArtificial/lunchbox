@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { o, part } from '../../src/utils.ts';
+import { o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
 
@@ -20,12 +20,7 @@ export type iKbd = iComponent;
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Kbd />` component. */
 export default (props: Partial<iKbd>) => {
-  const p = props;
+  props.class = o([styles, 'kbd'], { ...props });
 
-  const classes = part({
-    kbd: o([styles, 'kbd'], { ...p }),
-  });
-
-  delete p.class;
-  return { c: classes, ...p };
+  return props;
 };

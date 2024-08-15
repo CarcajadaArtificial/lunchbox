@@ -31,20 +31,10 @@ import setup, { iMarkdown } from './setup.ts';
  *  The `<Markdown />` component.
  */
 export default function Markdown(props: Partial<iMarkdown>) {
-  const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
-    markdownContent,
-    renderOptions,
-    ...p
-  } = setup(props);
+  const { markdownContent, renderOptions, ...p } = setup(props);
 
   return (
     <div
-      class={c.markdown}
-      ref={fref}
       dangerouslySetInnerHTML={{ __html: markdownContent }}
       {...p}
     />

@@ -5,7 +5,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { PatternTypes } from '../../src/enums.ts';
 import { styles } from './styles.ts';
@@ -28,19 +28,10 @@ const defaults: iPattern = {
 export default (props: Partial<iPattern>) => {
   const p = apDef<iPattern>(defaults, props);
 
-  props.type;
+  p.class = o(
+    [styles.base, styles.patterns[p.type], p.flip ? 'flip' : null],
+    { ...p },
+  );
 
-  const classes = part({
-    pattern: o(
-      [
-        styles.base,
-        styles.patterns[p.type],
-        p.flip ? 'flip' : null,
-      ],
-      { ...p },
-    ),
-  });
-
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

@@ -24,11 +24,11 @@ import setup, { iCode } from './setup.ts';
  *  The `<Code />` component.
  */
 export default function Code(props: Partial<iCode>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(props);
+  const { children, fwd, ...p } = setup(props);
 
   return (
-    <div ref={fwd.wrapper?.ref} class={c.wrapper} {...fwd.wrapper}>
-      <code ref={fref} {...p} class={c.code}>
+    <div {...fwd.wrapper}>
+      <code {...p}>
         {children}
       </code>
     </div>

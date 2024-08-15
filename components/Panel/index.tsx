@@ -24,10 +24,10 @@ import setup, { iPanel } from './setup.ts';
  *  The `<Panel />` component.
  */
 export default function Panel(props: Partial<iPanel>) {
-  const { c, nostyle, nostyleAll, fref, children, ...p } = setup(props);
+  const { children, fref, nostyle, nostyleAll, ...p } = setup(props);
 
   return (
-    <div ref={fref} class={c.panel} {...p}>
+    <div {...p}>
       {children}
     </div>
   );

@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { o, part } from '../../src/utils.ts';
+import { o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { transition } from '../../src/styles.ts';
 import { styles } from './styles.ts';
@@ -21,12 +21,8 @@ export type iLink = iComponent<HTMLAnchorElement>;
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Setup function of the `<Link />` component. */
 export default (props: Partial<iLink>) => {
-  const p = props;
+  props.class = o([styles, transition.interaction.outline], { ...props });
+  props.tabIndex = props.tabIndex ? props.tabIndex : 0;
 
-  const classes = part({
-    link: o([styles, transition.interaction.outline], { ...p }),
-  });
-
-  delete p.class;
-  return { c: classes, ...p };
+  return props;
 };
