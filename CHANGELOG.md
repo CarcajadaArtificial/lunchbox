@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.91
+
+- Removed the `<Time/>` component. 
+
 ## v0.3.90
 
 - Added standarized practices to Simple Atom Components.

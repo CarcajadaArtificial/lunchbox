@@ -15,7 +15,7 @@ export const styles = css`
   display: block;
   line-break: anywhere;
   
-  .code, .link, .time, .kbd {
+  .code, .link, .kbd {
     line-break: anywhere;
   }
 
