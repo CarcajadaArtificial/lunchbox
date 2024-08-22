@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.95
+
+- Added standarized practices to the `<Loader/>`, and `<Navigation/>` components.
+
 ## v0.3.94
 
 - Removed the `<Chip/>` component.

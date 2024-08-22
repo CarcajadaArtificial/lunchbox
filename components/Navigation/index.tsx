@@ -26,14 +26,14 @@ import Panel from '../Panel/index.tsx';
  *  The `<Navigation />` component.
  */
 export default function (props: Partial<iNavigation>) {
-  const { c, nostyle, nostyleAll, fref, fwd, children, ...p } = setup(
+  const { fwd, children, ...p } = setup(
     props,
   );
 
   return (
-    <div class={c.container} {...fwd.container}>
-      <Panel class={c.panel} {...fwd.panel}>
-        <nav class={c.navigation} {...p}>
+    <div {...fwd.container}>
+      <Panel {...fwd.panel}>
+        <nav {...p}>
           {children}
         </nav>
       </Panel>
