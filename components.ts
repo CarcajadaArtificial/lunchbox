@@ -24,6 +24,7 @@ export { default as Layout } from './components/Layout/index.tsx';
 export { default as Link } from './components/Link/index.tsx';
 export { default as Loader } from './components/Loader/index.tsx';
 export { default as Markdown } from './components/Markdown/index.tsx';
+export { default as Module } from './components/Module/index.tsx';
 export { default as Panel } from './components/Panel/index.tsx';
 export { default as Pattern } from './components/Pattern/index.tsx';
 export { default as Separator } from './components/Separator/index.tsx';

@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.3.92
+
+- Added the `<Module/>` component.
+- Added standarized practices to the `<Header/>`, and `<Layout/>` component.
+- Added the `MODULE_SIZES` enum and removed the `LAYOUT_TYPES` enum.
+- Removed the `bring()` utility function. In favor of Fetchify.
+- Fixed the `o()` function with the `isForwarding` parameter.
+- Added the `ClassNameString` type.
+
 ## v0.3.91
 
 - Removed the `<Time/>` component. 

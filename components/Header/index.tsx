@@ -33,39 +33,19 @@ import Panel from '../Panel/index.tsx';
  */
 export default function (props: Partial<iHeader>) {
   const {
-    c,
-    fref,
-    nostyle,
-    nostyleAll,
-    fwd,
     banner,
     children,
-    layout,
+    fwd,
     ...p
   } = setup(
     props,
   );
 
   return (
-    <>
-      <Panel
-        nostyleAll={nostyleAll}
-        fref={fwd.panel?.fref}
-        {...fwd.panel}
-        class={c.panel}
-      >
-        <header ref={fref} {...p} class={c.header}>
-          <Layout
-            fref={fwd.layout?.fref}
-            type={layout}
-            nostyleAll={nostyleAll}
-            {...fwd.layout}
-            class={c.layout}
-          >
-            {children}
-          </Layout>
-        </header>
-      </Panel>
-    </>
+    <Panel {...fwd.panel}>
+      <header {...p}>
+        {children}
+      </header>
+    </Panel>
   );
 }

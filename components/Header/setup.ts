@@ -9,10 +9,9 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
-import { iComponent, iFwd } from '../../src/types.ts';
+import { apDef, forward, o } from '../../src/utils.ts';
+import { iComponent } from '../../src/types.ts';
 import { LayoutTypes } from '../../src/enums.ts';
-import { iLayout } from '../Layout/setup.ts';
 import { iPanel } from '../Panel/setup.ts';
 import { styles } from './styles.ts';
 
@@ -21,18 +20,20 @@ import { styles } from './styles.ts';
 export type iHeader = Omit<iComponent, 'layout'> & {
   layout: LayoutTypes;
   banner: boolean;
-  fwd: Partial<{
-    layout: Partial<iLayout>;
-    panel: Partial<iPanel>;
-    wrapper: iFwd<HTMLDivElement>;
-  }>;
+  fwd: Partial<iHeaderFwd>;
+};
+
+type iHeaderFwd = {
+  panel: Partial<iPanel>;
 };
 
 /** These are the default values of the `<Header />` component's props. */
 const defaults: iHeader = {
   layout: 'default',
   banner: false,
-  fwd: {},
+  fwd: {
+    panel: {},
+  },
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -40,16 +41,10 @@ const defaults: iHeader = {
 export default (props: Partial<iHeader>) => {
   const p = apDef<iHeader>(defaults, props);
 
-  const classes = part({
-    panel: o(
-      [styles, p.banner ? 'header__panel--banner' : ''],
-      { ...p.fwd.panel },
-    ),
-    header: o('header', { ...p }),
-    layout: o('', { ...p.fwd.layout }),
-    wrapper: o('', { ...p.fwd.wrapper }),
-  });
+  p.class = o('header', { ...p });
+  p.fwd = forward({
+    panel: [styles, p.banner ? 'header__panel--banner' : null],
+  }, p.fwd);
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

@@ -34,18 +34,17 @@ export const ICON_COLORS = [
 
 export type IconColors = (typeof ICON_COLORS)[number];
 
-export const LAYOUT_TYPES = [
-  'empty',
+export const MODULE_SIZES = [
+  'none',
   'full',
-  'center',
-  'focus',
-  'halves',
-  'thirds',
-  'right',
-  'left',
+  'xl',
+  'lg',
+  'md',
+  'sm',
+  'xs',
 ] as const;
 
-export type LayoutTypes = WithDefault<(typeof LAYOUT_TYPES)[number]>;
+export type ModuleSizes = WithDefault<(typeof MODULE_SIZES)[number]>;
 
 export const TEXT_TYPES = [
   'display',

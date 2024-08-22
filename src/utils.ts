@@ -9,9 +9,8 @@
  * @module
  */
 
-import { SignalLike } from '$fresh/src/types.ts';
 import { classNames } from '../deps.ts';
-import { EmptyObject } from './types.ts';
+import { ClassNameString, EmptyObject } from './types.ts';
 import { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -24,20 +23,7 @@ export const cn = classNames.default;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * This function makes final `classNames` (the result of the `cn()` function) optional and allows a
- * custom class to be appended or to override it altogether.
- *
- * @param {string} className
- *  The library's assigned final `className` string, created using the `cn()` function.
- *
- * @param {string | undefined | JSX.SignalLike<string | undefined>} customClassName
- *  It is to be appended to or replace the library's `className`.
- *
- * @param {boolean | undefined} nostyle
- *  True if the `className` string should be ignored.
- *
- * @returns {string}
- *  `"${nostyle ? '' : className} ${customClassName}"`
+ * @todo [!] Complete documentation
  */
 export const o = (
   classes: string | unknown[],
@@ -46,11 +32,12 @@ export const o = (
     nostyle?: boolean;
     nostyleAll?: boolean;
   },
+  isForwarding?: boolean,
 ) => {
   if (!props) {
     return;
   } else if (!props.nostyle && !props.nostyleAll) {
-    return cn(classes, props.class);
+    return cn(classes, isForwarding ? null : props.class);
   } else {
     delete props.nostyle, props.nostyleAll;
     return props.class;
@@ -97,16 +84,7 @@ export function apDef<T extends object>(d: T, i: Partial<T>): T {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
- * When adding class to an element, say: `<div class={x} />` and `x`'s value ends up being an empty
- * string (`''`), the element will render `<div class />` and end up with tons of empty `class`
- * attributes. This function simplifies the code that replaces parts that end up having an empty string
- * and makes them have `undefined` value.
- *
- * @param {Record<string, string>}
- *  The record of parts that might contain empty string values.
- *
- * @returns {Record<string, string | undefined>}
- *  A new record of the same parts but an `undefined` value replaced empty string values.
+ * @todo [!] Complete documentation
  */
 export const part = (
   classes: Record<string, string>,
@@ -116,18 +94,18 @@ export const part = (
     classes,
     (entry) => (entry === '' ? undefined : entry),
   );
+
 export const forward = <
   T extends Record<
     string,
-    { class?: SignalLike<string | undefined> | string; nostyle?: boolean }
+    { class?: ClassNameString; nostyle?: boolean }
   >,
 >(
   classes: Record<keyof T, string | unknown[]>,
   fwd: T,
 ): T => {
   Object.keys(fwd).forEach((key) => {
-    fwd[key].class = o(classes[key], { ...fwd[key] });
-    delete fwd[key].nostyle;
+    fwd[key].class = o(classes[key], { ...fwd[key] }, true);
   });
   return fwd;
 };
@@ -155,43 +133,4 @@ export function rMap<T>(
     newRecord[key] = callback(record[key], key);
   });
   return newRecord;
-}
-
-/**
- * -----------------------------------------------------------------------------------------------------
- * bring
- * -----------------------------------------------------------------------------------------------------
- * @param url
- * @param method
- * @param body
- *
- * @param errorMessage
- *  A string that will be printed when catching an error on the request.
- *
- * @returns
- *  The response JSON object obtained from the the API endpoint.
- * -----------------------------------------------------------------------------------------------------
- */
-export async function bring<Req, Res = unknown>(
-  url: string,
-  method: 'POST' | 'GET',
-  body: Req,
-  errorMessage?: string,
-): Promise<Res | null> {
-  let responseObject: Res | null = null;
-
-  await fetch(url, {
-    method: method,
-    mode: 'no-cors',
-    body: JSON.stringify(body),
-  })
-    .then(async (res) => {
-      responseObject = await res.json() as Res;
-    })
-    .catch((e) => {
-      alert(errorMessage);
-      console.error(errorMessage, responseObject, e);
-    });
-
-  return responseObject;
 }
