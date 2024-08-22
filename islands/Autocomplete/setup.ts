@@ -15,7 +15,6 @@ import type { iInput } from '../../components/Input/setup.ts';
 import { styles } from './styles.ts';
 import { relativeContainer, transition } from '../../src/styles.ts';
 import { iText } from '../../components/Text/setup.ts';
-import { iChip } from '../../components/Chip/setup.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Autocomplete />` island. */
@@ -28,7 +27,7 @@ export type iAutocomplete = Partial<iInput> & {
     menuWrapper: iFwd<HTMLDivElement>;
     menuOption: iFwd<HTMLDivElement>;
     menuOptionText: Partial<iText>;
-    selectedOption: Partial<iChip>;
+    selectedOption: iFwd<HTMLSpanElement>;
     selectionsWrapper: iFwd<HTMLDivElement>;
   }>;
 };

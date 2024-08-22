@@ -14,7 +14,6 @@
  */
 import { useRef, useState } from 'preact/hooks';
 import setup, { type iAutocomplete } from './setup.ts';
-import Chip from '../../components/Chip/index.tsx';
 import Input from '../../components/Input/index.tsx';
 import Text from '../../components/Text/index.tsx';
 import { handleKeyboard, Key } from '../../src/handlers.ts';
@@ -149,7 +148,7 @@ export default function (props: Partial<iAutocomplete>) {
       </div>
       <div class={c.selectionsWrapper} {...fwd.selectionsWrapper}>
         {selectedOptions.map((option) => (
-          <Chip
+          <span
             class={c.selectedOption}
             {...fwd.selectedOption}
             content={option}

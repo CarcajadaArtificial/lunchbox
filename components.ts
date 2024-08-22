@@ -37,7 +37,6 @@ export { default as Text } from './components/Text/index.tsx';
 //
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export { default as Card } from './components/Card/index.tsx';
-export { default as Chip } from './components/Chip/index.tsx';
 export { default as Fieldset } from './components/Fieldset/index.tsx';
 export { default as Footer } from './components/Footer/index.tsx';
 export { default as Header } from './components/Header/index.tsx';
