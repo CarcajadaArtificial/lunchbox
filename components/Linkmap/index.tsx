@@ -30,48 +30,17 @@ import Text from '../Text/index.tsx';
  *  The `<Linkmap />` component.
  */
 export default function (props: Partial<iLinkmap>) {
-  const { c, nostyle, nostyleAll, fref, fwd, links, ...p } = setup(props);
+  const { fwd, links, ...p } = setup(props);
 
-  const RenderRecursiveLinks = (
-    props: { links: iLinkmapitem[]; firstRecursion: boolean },
-  ) => (
-    <ul
-      ref={fwd.list?.ref}
-      class={!props.firstRecursion ? c.list : undefined}
-      {...fwd.list}
-    >
+  const RenderRecursiveLinks = (props: { links: iLinkmapitem[] }) => (
+    <ul {...fwd.list}>
       {props.links.map((link) => (
-        <li ref={fwd.item?.ref} class={c.item} {...fwd.item}>
+        <li {...fwd.item}>
           {link.url
-            ? (
-              <Link
-                nostyleAll={nostyleAll}
-                fref={fwd.link?.fref}
-                href={link.url}
-                class={c.link}
-                {...fwd.link}
-              >
-                {link.name}
-              </Link>
-            )
-            : (
-              <Text
-                nostyleAll={nostyleAll}
-                fref={fwd.text?.fref}
-                noMargins
-                class={c.text}
-                {...fwd.text}
-              >
-                {link.name}
-              </Text>
-            )}
+            ? <Link {...fwd.link}>{link.name}</Link>
+            : <Text {...fwd.text}>{link.name}</Text>}
           {link.children && link.children.length >= 0
-            ? (
-              <RenderRecursiveLinks
-                links={link.children}
-                firstRecursion={false}
-              />
-            )
+            ? <RenderRecursiveLinks links={link.children} />
             : null}
         </li>
       ))}
@@ -79,8 +48,8 @@ export default function (props: Partial<iLinkmap>) {
   );
 
   return (
-    <div ref={fref} class={c.linkmap} {...p}>
-      <RenderRecursiveLinks links={links} firstRecursion={true} />
+    <div {...p}>
+      <RenderRecursiveLinks links={links} />
     </div>
   );
 }

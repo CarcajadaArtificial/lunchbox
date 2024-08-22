@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, forward, o } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import type { iLink } from '../Link/setup.ts';
 import { iText } from '../Text/setup.ts';
@@ -19,12 +19,14 @@ import { styles } from './styles.ts';
 /** Properties of the `<Linkmap />` component. */
 export type iLinkmap = iComponent<HTMLDivElement> & {
   links: iLinkmapitem[] | [];
-  fwd: Partial<{
-    list: iFwd<HTMLUListElement>;
-    item: iFwd<HTMLLIElement>;
-    link: Partial<iLink>;
-    text: Partial<iText>;
-  }>;
+  fwd: Partial<iLinkmapFwd>;
+};
+
+type iLinkmapFwd = {
+  list: iFwd<HTMLUListElement>;
+  item: iFwd<HTMLLIElement>;
+  link: Partial<iLink>;
+  text: Partial<iText>;
 };
 
 /** Linkmap item interface */
@@ -37,7 +39,12 @@ export type iLinkmapitem = {
 /** These are the default values of the `<Linkmap />` component's props. */
 const defaults: iLinkmap = {
   links: [],
-  fwd: {},
+  fwd: {
+    list: {},
+    item: {},
+    link: {},
+    text: {},
+  },
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -45,14 +52,13 @@ const defaults: iLinkmap = {
 export default (props: Partial<iLinkmap>) => {
   const p = apDef<iLinkmap>(defaults, props);
 
-  const classes = part({
-    linkmap: o(styles, { ...p }),
-    list: o('linkmap__list', { ...p.fwd.list }),
-    item: o('linkmap__item', { ...p.fwd.item }),
-    link: o('linkmap__link', { ...p.fwd.link }),
-    text: o('linkmap__text', { ...p.fwd.text }),
-  });
+  p.class = o(styles, { ...p });
+  p.fwd = forward({
+    list: 'linkmap__list',
+    item: 'linkmap__item',
+    link: 'linkmap__link',
+    text: 'linkmap__text',
+  }, p.fwd);
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

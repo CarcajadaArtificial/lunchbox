@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.93
+
+- Added standarized practices to the `<Footer/>`, and `<Linkmap/>` components.
+
 ## v0.3.92
 
 - Added the `<Module/>` component.
