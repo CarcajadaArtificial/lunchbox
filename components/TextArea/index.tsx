@@ -43,10 +43,6 @@ import Text from '../Text/index.tsx';
  */
 export default function TextArea(props: Partial<iTextArea>) {
   const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
     fwd,
     maxWidth,
     label,
@@ -56,53 +52,16 @@ export default function TextArea(props: Partial<iTextArea>) {
   } = setup(props);
 
   return (
-    <div ref={fwd.container?.ref} class={c.container} {...fwd.container}>
-      <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
-        <Text
-          nostyleAll={nostyleAll}
-          fref={fwd.text?.ref}
-          noMargins
-          class={c.text}
-          {...fwd.text}
-        >
+    <div {...fwd.container}>
+      <label {...fwd.label}>
+        <Text {...fwd.text}>
           <>{label}</>
-          {p.required
-            ? (
-              <sup
-                ref={fwd.text?.ref}
-                title='Required'
-                class={c.required}
-                {...fwd.required}
-              >
-                *
-              </sup>
-            )
-            : null}
+          {p.required ? <sup {...fwd.required}>*</sup> : null}
         </Text>
-        {fieldIcon
-          ? (
-            <div class={c.iconContainer} {...fwd.iconContainer}>
-              {fieldIcon}
-            </div>
-          )
-          : null}
-        <textarea ref={fref} class={c.input} {...p} />
+        {fieldIcon ? <div {...fwd.iconContainer}>{fieldIcon}</div> : null}
+        <textarea {...p} />
       </label>
-      {error
-        ? (
-          <Text
-            fref={fwd.error?.ref}
-            noMargins
-            inheritColor
-            type='small'
-            class={c.error}
-            nostyleAll={nostyleAll}
-            {...fwd.error}
-          >
-            {error}
-          </Text>
-        )
-        : null}
+      {error ? <Text {...fwd.error}>{error}</Text> : null}
     </div>
   );
 }

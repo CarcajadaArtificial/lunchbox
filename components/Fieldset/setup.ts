@@ -9,34 +9,31 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, forward, o } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
-import type { iInput } from '../Input/setup.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Fieldset />` component. */
 export type iFieldset = iComponent<HTMLFieldSetElement> & {
-  allowMultiple: boolean;
-  values: string[];
-  selectedValues: string[];
   legend: string;
   maxWidth: boolean;
-  fwd: Partial<{
-    legend: iFwd<HTMLLegendElement>;
-    container: iFwd<HTMLDivElement>;
-    input: Partial<iInput>;
-  }>;
+  fwd: Partial<iFieldsetFwd>;
+};
+
+type iFieldsetFwd = {
+  legend: iFwd<HTMLLegendElement>;
+  container: iFwd<HTMLDivElement>;
 };
 
 /** Default values of the `<Fieldset />` component's props. */
 const defaults: iFieldset = {
-  allowMultiple: false,
-  values: [],
-  selectedValues: [],
   legend: '',
   maxWidth: false,
-  fwd: {},
+  fwd: {
+    legend: {},
+    container: {},
+  },
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -44,17 +41,20 @@ const defaults: iFieldset = {
 export default (props: Partial<iFieldset>) => {
   const p = apDef<iFieldset>(defaults, props);
 
-  const classes = part({
-    container: o([
+  if (p.name === undefined || p.name === '') {
+    p.name = 'undefined-fieldset';
+  }
+
+  p.class = o('fieldset', { ...p });
+
+  p.fwd = forward({
+    container: [
       'fieldset__container',
       p.maxWidth ? 'fieldset--max-width' : null,
       styles,
-    ], { ...p.fwd.container }),
-    fieldset: o('fieldset', { ...p }),
-    legend: o('fieldset__legend', { ...p.fwd.legend }),
-    input: o('fieldset__input-container', { ...p.fwd.input }),
-  });
+    ],
+    legend: 'fieldset__legend',
+  }, p.fwd);
 
-  delete p.class;
-  return { c: classes, ...p };
+  return p;
 };

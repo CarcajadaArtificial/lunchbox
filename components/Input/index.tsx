@@ -39,10 +39,6 @@ import setup, { iInput } from './setup.ts';
  */
 export default function (props: Partial<iInput>) {
   const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
     fwd,
     maxWidth,
     label,
@@ -52,59 +48,18 @@ export default function (props: Partial<iInput>) {
   } = setup(props);
 
   return (
-    <div ref={fwd.container?.ref} {...fwd.container} class={c.container}>
-      <label ref={fwd.label?.ref} class={c.label} {...fwd.label}>
+    <div {...fwd.container}>
+      <label {...fwd.label}>
         {label === '' ? null : (
-          <Text
-            nostyleAll={nostyleAll}
-            fref={fwd.text?.fref}
-            noMargins
-            class={c.text}
-            {...fwd.text}
-          >
+          <Text {...fwd.text}>
             <>{label}</>
-            {p.required
-              ? (
-                <sup
-                  ref={fwd.required?.ref}
-                  title='Required'
-                  class={c.required}
-                  {...fwd.required}
-                >
-                  *
-                </sup>
-              )
-              : null}
+            {p.required ? <sup {...fwd.required}>*</sup> : null}
           </Text>
         )}
-        {fieldIcon
-          ? (
-            <div
-              ref={fwd.iconContainer?.ref}
-              class={c.iconContainer}
-              {...fwd.iconContainer}
-            >
-              {fieldIcon}
-            </div>
-          )
-          : null}
-        <input ref={fref} class={c.input} {...p} />
+        {fieldIcon ? <div {...fwd.iconContainer}>{fieldIcon}</div> : null}
+        <input {...p} />
       </label>
-      {error
-        ? (
-          <Text
-            fref={fwd.error?.fref}
-            noMargins
-            type='small'
-            inheritColor
-            class={c.error}
-            nostyleAll={nostyleAll}
-            {...fwd.error}
-          >
-            {error}
-          </Text>
-        )
-        : null}
+      {error ? <Text {...fwd.error}>{error}</Text> : null}
     </div>
   );
 }

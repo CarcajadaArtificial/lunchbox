@@ -9,7 +9,7 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, forward, o } from '../../src/utils.ts';
 import { iComponent, iFwd } from '../../src/types.ts';
 import { iText } from '../Text/setup.ts';
 import { inputStyles, transition } from '../../src/styles.ts';
@@ -23,14 +23,16 @@ export type iInput = iComponent<HTMLInputElement> & {
   error: string | null;
   maxWidth: boolean;
   fieldIcon: ComponentChild | null;
-  fwd: Partial<{
-    text: Partial<iText>;
-    label: iFwd<HTMLLabelElement>;
-    error: Partial<iText>;
-    required: Partial<iFwd>;
-    container: iFwd<HTMLDivElement>;
-    iconContainer: iFwd<HTMLDivElement>;
-  }>;
+  fwd: Partial<iInputFwd>;
+};
+
+type iInputFwd = {
+  text: Partial<iText>;
+  label: iFwd<HTMLLabelElement>;
+  error: Partial<iText>;
+  required: Partial<iFwd>;
+  container: iFwd<HTMLDivElement>;
+  iconContainer: iFwd<HTMLDivElement>;
 };
 
 /** Default values of the `<Input />` component's props. */
@@ -40,7 +42,20 @@ const defaults: iInput = {
   fieldIcon: null,
   required: false,
   maxWidth: false,
-  fwd: {},
+  fwd: {
+    text: {},
+    label: {},
+    error: {
+      noMargins: true,
+      type: 'small',
+      inheritColor: true,
+    },
+    required: {
+      title: 'Required',
+    },
+    container: {},
+    iconContainer: {},
+  },
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -50,33 +65,27 @@ export default (props: Partial<iInput>) => {
 
   p.type = typeof p.type === 'string' ? p.type : p.type?.value;
 
-  const classes = part({
-    input: o(
-      [
-        'input__abstract',
-        transition.interaction.outline,
-        p.error ? 'input__error-bg' : null,
-      ],
-      { ...p },
-    ),
-    label: o(
-      ['input__label', p.fieldIcon ? 'input--has-icon' : null],
-      { ...p.fwd.label },
-    ),
-    container: o(
-      [
-        inputStyles,
-        ...Styles(p.type),
-        p.maxWidth ? 'input--max-width' : null,
-      ],
-      { ...p.fwd.container },
-    ),
-    text: o('input__text select-none', { ...p.fwd.text }),
-    error: o('input__error-msg', { ...p.fwd.error }),
-    required: o('input__required', { ...p.fwd.required }),
-    iconContainer: o('input__icon-container', { ...p.fwd.iconContainer }),
-  });
+  p.class = o(
+    [
+      'input__abstract',
+      transition.interaction.outline,
+      p.error ? 'input__error-bg' : null,
+    ],
+    { ...p },
+  );
 
-  delete p.class;
-  return { c: classes, ...p };
+  p.fwd = forward({
+    label: ['input__label', p.fieldIcon ? 'input--has-icon' : null],
+    container: [
+      inputStyles,
+      ...Styles(p.type),
+      p.maxWidth ? 'input--max-width' : null,
+    ],
+    text: 'input__text select-none',
+    error: 'input__error-msg',
+    required: 'input__required',
+    iconContainer: 'input__icon-container',
+  }, p.fwd);
+
+  return p;
 };

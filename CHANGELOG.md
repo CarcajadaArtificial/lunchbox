@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.96
+
+- Added standarized practices to the `<Fieldset/>`, `<Input/>`, `<Select/>`, and `<TextArea/>` components.
+
 ## v0.3.95
 
 - Added standarized practices to the `<Loader/>`, and `<Navigation/>` components.

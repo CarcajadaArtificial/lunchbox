@@ -38,45 +38,13 @@ import setup, { iFieldset } from './setup.ts';
  *  The `<Fieldset />` component.
  */
 export default function (props: Partial<iFieldset>) {
-  const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
-    allowMultiple,
-    values,
-    selectedValues,
-    legend,
-    fwd,
-    ...p
-  } = setup(
-    props,
-  );
+  const { legend, children, fwd, ...p } = setup(props);
 
   return (
-    <div {...fwd.container} class={c.container}>
-      <fieldset
-        ref={fref}
-        name={p.name ? p.name : 'undefined-fieldset'}
-        class={c.fieldset}
-        {...p}
-      >
-        {legend === '' ? null : (
-          <legend class={c.legend} {...fwd.legend}>
-            {legend}
-          </legend>
-        )}
-        {values.map((inputValue) => (
-          <Input
-            type={allowMultiple ? 'checkbox' : 'radio'}
-            label={inputValue}
-            name={p.name ? p.name : 'undefined-fieldset'}
-            checked={selectedValues.includes(inputValue)}
-            data-label={inputValue}
-            {...fwd.input}
-            fwd={{ container: { class: c.input } }}
-          />
-        ))}
+    <div {...fwd.container}>
+      <fieldset {...p}>
+        {legend === '' ? null : <legend {...fwd.legend}>{legend}</legend>}
+        {children}
       </fieldset>
     </div>
   );
