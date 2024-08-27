@@ -6,14 +6,13 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * ### Sidebar
- * *Organism*
+ * *Atom*
  *
- * This module contains the render function for the `<Sidebar />` island.
+ * This module contains the render function for the `<Sidebar />` component.
  *
  * @module
  */
 import setup, { iSidebar } from './setup.ts';
-import Linkmap from '../../components/Linkmap/index.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -28,22 +27,11 @@ import Linkmap from '../../components/Linkmap/index.tsx';
  * @todo Remove the Linkmap functionality in favor of only the children.
  */
 export default function Sidebar(props: Partial<iSidebar>) {
-  const {
-    c,
-    fwd,
-    links,
-    nostyle,
-    children,
-    nostyleAll,
-    ...p
-  } = setup(props);
+  const { fwd, children, ...p } = setup(props);
 
   return (
-    <div {...fwd.container} class={c.container}>
-      <aside class={c.sidebar} {...p}>
-        {links && links.length > 0
-          ? <Linkmap links={links} {...fwd.linkmap} class={c.linkmap} />
-          : null}
+    <div {...fwd.container}>
+      <aside {...p}>
         {children}
       </aside>
     </div>

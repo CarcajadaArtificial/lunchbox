@@ -9,28 +9,28 @@
  *
  * @module
  */
-import { apDef, o, part } from '../../src/utils.ts';
+import { apDef, forward, o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
 import { styles } from './styles.ts';
-import type { iLinkmap, iLinkmapitem } from '../../components/Linkmap/setup.ts';
 import { ComponentChildren } from 'preact';
 import type { iFwd } from '../../src/types.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Sidebar />` island. */
 export type iSidebar = iComponent & {
+  sticky: boolean;
   children: ComponentChildren;
-  links: iLinkmapitem[] | [];
-  fwd: Partial<{
-    container: iFwd<HTMLDivElement>;
-    linkmap: Partial<iLinkmap>;
-  }>;
+  fwd: Partial<iSidebarFwd>;
+};
+
+type iSidebarFwd = {
+  container: iFwd<HTMLDivElement>;
 };
 
 /** These are the default values of the `<Sidebar />` island's props. */
 const defaults: iSidebar = {
   children: null,
-  links: [],
+  sticky: false,
   fwd: {},
 };
 
@@ -39,12 +39,10 @@ const defaults: iSidebar = {
 export default (props: Partial<iSidebar>) => {
   const p = apDef<iSidebar>(defaults, props);
 
-  const c = part({
-    sidebar: o('sidebar', { ...p }),
-    linkmap: o('sidebar__linkmap', { ...p.fwd.linkmap }),
-    container: o([styles, 'sidebar__container'], { ...p.fwd.container }),
-  }, p.nostyleAll);
+  p.class = o(['sidebar', p.sticky ? 'sidebar--sticky' : null], { ...p });
+  p.fwd = forward({
+    container: [styles, 'sidebar__container'],
+  }, p.fwd);
 
-  delete p.class;
-  return { c, ...p };
+  return p;
 };

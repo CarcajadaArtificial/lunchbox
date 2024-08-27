@@ -13,4 +13,3 @@
 export { default as Autocomplete } from './islands/Autocomplete/index.tsx';
 export { default as Dialog } from './islands/Dialog/index.tsx';
 export { default as Menu } from './islands/Menu/index.tsx';
-export { default as Sidebar } from './islands/Sidebar/index.tsx';

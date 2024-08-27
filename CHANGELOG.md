@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.97
+
+- Updated the `<Sidebar/>` component from being an island and added standarized practices.
+
 ## v0.3.96
 
 - Added standarized practices to the `<Fieldset/>`, `<Input/>`, `<Select/>`, and `<TextArea/>` components.

@@ -18,9 +18,12 @@ export const styles = css`
   }
 
   .sidebar {
-    position: sticky;
-    top: var(--s-triple);
     padding-top: var(--s-single);
+    
+    &--sticky {
+      position: sticky;
+      top: var(--s-triple);
+    }
   }
 
 `;
