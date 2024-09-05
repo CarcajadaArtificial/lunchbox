@@ -1,52 +1,49 @@
+//   __  __
+//  |  \/  |___ _ _ _  _
+//  | |\/| / -_) ' \ || |
+//  |_|  |_\___|_||_\_,_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * ### Menu
+ * *Organism*
+ *
+ * This module contains the render function for the `<Menu />` island.
+ *
+ * @module
+ */
+import { useState } from 'preact/hooks';
 import setup, { iMenu } from './setup.ts';
 import Button from '../../components/Button/index.tsx';
-import Link from '../../components/Link/index.tsx';
 
 export default function (props: Partial<iMenu>) {
-  const {
-    c,
-    nostyle,
-    nostyleAll,
-    fref,
-    fwd,
-    children,
-    closed,
-    menuPosition,
-    menuOptions,
-    customOption,
-    ...p
-  } = setup(props);
+  const { fwd, button, children, closed, ...p } = setup(props);
+  const [isClosed, setClosed] = useState<boolean>(closed);
 
-  const MenuOption = (
-    menuOptionKey: string,
-    menuOption: string | (() => void),
-  ) => (
-    <Link
-      tabIndex={-1}
-      nostyleAll
-      href={typeof menuOption === 'string' ? menuOption : undefined}
-    >
-      <Button
-        type='transparent'
-        class={c.option}
-      >
-        {customOption
-          ? customOption(menuOptions[menuOptionKey], menuOptionKey)
-          : menuOptionKey}
-      </Button>
-    </Link>
-  );
+  function handleOpenMenu(event: MouseEvent) {
+    event.stopPropagation();
+    setClosed(!isClosed);
+
+    const handleClick = () => {
+      setClosed(true);
+      document.body.removeEventListener('click', handleClick);
+    };
+
+    document.body.addEventListener('click', handleClick);
+  }
 
   return (
-    <div ref={fwd.container?.ref} class={c.container}>
-      <Button type='panel' fref={fwd.button?.ref} class={c.button}>
-        {children}
-      </Button>
-      {closed ? undefined : (
-        <div ref={fref} {...p} class={c.menu}>
-          {Object.keys(menuOptions).map((menuOptionKey) =>
-            MenuOption(menuOptionKey, menuOptions[menuOptionKey])
-          )}
+    <div {...fwd.container}>
+      {button
+        ? button
+        : (
+          <Button type='panel' onClick={handleOpenMenu} {...fwd.button}>
+            Menu
+          </Button>
+        )}
+      {isClosed ? undefined : (
+        <div {...p}>
+          {children}
         </div>
       )}
     </div>

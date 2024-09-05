@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.98
+
+- Added standarized practices to the `<Menu/>` component.
+
 ## v0.3.97
 
 - Updated the `<Sidebar/>` component from being an island and added standarized practices.
