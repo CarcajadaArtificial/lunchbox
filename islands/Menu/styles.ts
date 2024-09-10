@@ -14,7 +14,12 @@ import { css } from '../../deps.ts';
 export const styles = css`
 
 .menu {
-
+  position: absolute;
+  top: var(--s-half);
+  
+  &__floater {
+    position: relative;
+  }
 }
 
 `;

@@ -17,8 +17,8 @@ import setup, { iMenu } from './setup.ts';
 import Button from '../../components/Button/index.tsx';
 
 export default function (props: Partial<iMenu>) {
-  const { fwd, button, children, closed, ...p } = setup(props);
-  const [isClosed, setClosed] = useState<boolean>(closed);
+  const { fwd, button, children, open, ...p } = setup(props);
+  const [isClosed, setClosed] = useState<boolean>(!open);
 
   function handleOpenMenu(event: MouseEvent) {
     event.stopPropagation();
@@ -34,16 +34,14 @@ export default function (props: Partial<iMenu>) {
 
   return (
     <div {...fwd.container}>
-      {button
-        ? button
-        : (
-          <Button type='panel' onClick={handleOpenMenu} {...fwd.button}>
-            Menu
-          </Button>
-        )}
+      <Button onClick={handleOpenMenu} {...fwd.button}>
+        {button ? button : 'Menu'}
+      </Button>
       {isClosed ? undefined : (
-        <div {...p}>
-          {children}
+        <div {...fwd.floater}>
+          <ul {...p}>
+            {children}
+          </ul>
         </div>
       )}
     </div>

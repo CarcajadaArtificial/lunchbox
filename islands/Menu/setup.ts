@@ -17,31 +17,35 @@ import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Properties of the `<Menu />` island. */
-export type iMenu = iComponent<HTMLDivElement> & {
-  closed: boolean;
+export type iMenu = iComponent<HTMLUListElement> & {
+  open: boolean;
   button: ComponentChild;
   fwd: Partial<iMenuFwd>;
 };
 
 type iMenuFwd = {
   container: iFwd<HTMLDivElement>;
+  floater: iFwd<HTMLDivElement>;
   button: Partial<iButton>;
   option: Partial<iButton>;
 };
 
 /** These are the default values of the `<Menu />` island's props. */
 const defaults: iMenu = {
-  closed: true,
+  open: false,
   button: undefined,
   fwd: {
     container: {},
-    button: {},
+    floater: {},
+    button: {
+      type: 'panel',
+    },
     option: {},
   },
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Setup function of the `<Menu />` islabd. */
+/** Setup function of the `<Menu />` island. */
 export default (props: Partial<iMenu>) => {
   const p = apDef<iMenu>(defaults, props);
 
@@ -49,6 +53,7 @@ export default (props: Partial<iMenu>) => {
 
   p.fwd = forward({
     button: 'menu__button',
+    floater: 'menu__floater',
     container: ['menu__container', styles],
     option: 'menu__option',
   }, p.fwd);

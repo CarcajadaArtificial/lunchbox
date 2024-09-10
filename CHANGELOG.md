@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.99
+
+- Added the `<MenuIsland/>` component.
+- Added standarized practices to the `<Menu/>` island.
+
 ## v0.3.98
 
 - Added standarized practices to the `<Menu/>` component.
