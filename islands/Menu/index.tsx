@@ -17,7 +17,7 @@ import setup, { iMenu } from './setup.ts';
 import Button from '../../components/Button/index.tsx';
 
 export default function (props: Partial<iMenu>) {
-  const { fwd, button, children, open, ...p } = setup(props);
+  const { fwd, button, children, hardToggle, open, ...p } = setup(props);
   const [isClosed, setClosed] = useState<boolean>(!open);
 
   function handleOpenMenu(event: MouseEvent) {
@@ -26,10 +26,15 @@ export default function (props: Partial<iMenu>) {
 
     const handleClick = () => {
       setClosed(true);
-      document.body.removeEventListener('click', handleClick);
+
+      if (!hardToggle) {
+        document.body.removeEventListener('click', handleClick);
+      }
     };
 
-    document.body.addEventListener('click', handleClick);
+    if (!hardToggle) {
+      document.body.addEventListener('click', handleClick);
+    }
   }
 
   return (

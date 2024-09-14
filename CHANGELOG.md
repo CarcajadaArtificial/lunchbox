@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.100
+
+- Updated the `<Menu/>` island.
+
 ## v0.3.99
 
 - Added the `<MenuIsland/>` component.

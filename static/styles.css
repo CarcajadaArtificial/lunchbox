@@ -155,7 +155,7 @@ button {
 .input--box input,
 .input--box textarea,
 .input--box select {
-  width: calc(100% + var(--s-half));
+  width: calc(100% + var(--s-single));
 }
 
 .h-min {

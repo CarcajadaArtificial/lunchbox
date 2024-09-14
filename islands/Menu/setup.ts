@@ -19,6 +19,7 @@ import { styles } from './styles.ts';
 /** Properties of the `<Menu />` island. */
 export type iMenu = iComponent<HTMLUListElement> & {
   open: boolean;
+  hardToggle: boolean;
   button: ComponentChild;
   fwd: Partial<iMenuFwd>;
 };
@@ -34,6 +35,7 @@ type iMenuFwd = {
 const defaults: iMenu = {
   open: false,
   button: undefined,
+  hardToggle: false,
   fwd: {
     container: {},
     floater: {},
