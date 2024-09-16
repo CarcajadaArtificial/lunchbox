@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.101
+
+- Added standarized practices to the `<Card/>` island.
+- Updated the `<Menu/>` island.
+
 ## v0.3.100
 
 - Updated the `<Menu/>` island.

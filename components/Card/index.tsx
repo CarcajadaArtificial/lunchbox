@@ -28,37 +28,17 @@ import Panel from '../Panel/index.tsx';
  *  The `<Card />` component.
  */
 export default function Card(props: Partial<iCard>) {
-  const {
-    c,
-    fref,
-    fwd,
-    nostyle,
-    nostyleAll,
-    children,
-    imageUrl,
-    ...p
-  } = setup(props);
+  const { fwd, children, imageUrl, ...p } = setup(props);
 
   return (
-    <div
-      class={c.card}
-      ref={fref}
-      {...p}
-    >
+    <div {...p}>
       {imageUrl === '' || imageUrl === undefined ? undefined : (
         <div
-          class={c.image}
-          ref={fwd.image?.ref}
           style={{ backgroundImage: `url(${imageUrl})` }}
           {...fwd.image}
         />
       )}
-      <Panel
-        class={c.panel}
-        nostyleAll={nostyleAll}
-        fref={fwd.panel?.ref}
-        {...fwd.panel}
-      >
+      <Panel {...fwd.panel}>
         {children}
       </Panel>
     </div>
