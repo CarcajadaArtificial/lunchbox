@@ -18,11 +18,13 @@ import { ModuleSizes } from '../../src/enums.ts';
 /** Properties of the `<Module />` component. */
 export type iModule = Omit<iComponent, 'size'> & {
   size: ModuleSizes;
+  half: ModuleSizes;
 };
 
 /** Default values of the `<Module />` component's props. */
 const defaults: iModule = {
   size: 'full',
+  half: 'full',
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -31,7 +33,7 @@ export default (props: Partial<iModule>) => {
   const p = apDef<iModule>(defaults, props);
 
   p.class = o(
-    [styles, `module--${p.size}`],
+    [styles, `module--${p.size} module__half--${p.half}`],
     { ...p },
   );
 

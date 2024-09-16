@@ -13,7 +13,7 @@ import { css } from '../../deps.ts';
 
 export const styles = css`
   display: block;
-  line-break: anywhere;
+  line-break: loose;
   
   .code, .link, .kbd {
     line-break: anywhere;

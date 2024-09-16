@@ -20,4 +20,5 @@ export const styles = css`
   border-radius: var(--s-eighth);
   border-bottom: var(--s-eighth) solid var(--clr-bg-panel);
   font-size: 75%;
+  font-family: var(--font-mono);
 `;

@@ -17,9 +17,7 @@ export const styles = css`
     height: 100%;
   }
 
-  .sidebar {
-    padding-top: var(--s-single);
-    
+  .sidebar {    
     &--sticky {
       position: sticky;
       top: var(--s-triple);

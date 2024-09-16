@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.102
+
+- Updated the styles of the `<Kbc/>`, `<Linkmap/>`, `<Module/>`, `<Sidebar/>`, `<Text/>`, and `<Menu/>` components.
+
 ## v0.3.101
 
 - Added standarized practices to the `<Card/>` island.

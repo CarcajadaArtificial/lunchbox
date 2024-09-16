@@ -12,7 +12,6 @@
 import { css } from '../../deps.ts';
 
 export const styles = css`
-    margin-bottom: var(--s-one-and-half);
 
     .linkmap__list {
       margin-left: var(--s-single);
