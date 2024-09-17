@@ -36,8 +36,8 @@ export default function (props: Partial<iLinkmap>) {
     <ul {...fwd.list}>
       {props.links.map((link) => (
         <li {...fwd.item}>
-          {link.url
-            ? <Link {...fwd.link}>{link.name}</Link>
+          {link.href
+            ? <Link href={link.href} {...fwd.link}>{link.name}</Link>
             : <Text {...fwd.text}>{link.name}</Text>}
           {link.children && link.children.length >= 0
             ? <RenderRecursiveLinks links={link.children} />

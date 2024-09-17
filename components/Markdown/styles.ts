@@ -14,6 +14,8 @@ import { css } from '../../deps.ts';
 export const styles = {
   markdown: css`
     h1, h2, h3, h4, h5, h6 {
+      scroll-margin-top: var(--s-quadruple);
+      
       a {
         display: none;
       }
@@ -25,6 +27,7 @@ export const styles = {
 
     h1 {
       font: 600 var(--txt-title) var(--font-heading);
+
       margin: var(--s-double) 0 var(--s-single) 0;
     }
 

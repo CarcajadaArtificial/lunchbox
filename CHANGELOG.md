@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.103
+
+- Updated the `<Linkmap/>` and `<Markdown/>` components.
+
 ## v0.3.102
 
 - Updated the styles of the `<Kbc/>`, `<Linkmap/>`, `<Module/>`, `<Sidebar/>`, `<Text/>`, and `<Menu/>` components.

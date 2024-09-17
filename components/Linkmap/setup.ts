@@ -32,7 +32,7 @@ type iLinkmapFwd = {
 /** Linkmap item interface */
 export type iLinkmapitem = {
   name: string;
-  url?: string;
+  href?: string;
   children?: iLinkmapitem[];
 };
 
