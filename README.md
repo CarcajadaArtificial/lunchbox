@@ -123,19 +123,22 @@ This will create the following files:
 
 ```
 ~/static
-	|_ fonts
-		|_ Figtree
-			|_ Figtree-700.woff2
-			|_ Figtree-Italic.woff2
-			|_ Figtree-Regular.woff2
-		|_ FiraCode
-			|_ FiraCode-Bold.woff2
-			|_ FiraCode-Regular.woff2
-		|_ LibreCaslonText
-			|_ Libre-Caslon-Text-700.woff2
-			|_ Libre-Caslon-Text-Italic.woff2
-			|_ Libre-Caslon-Text-Regular.woff2
-		|_ fonts.css
+|_ fonts
+  |_ Figtree
+  | |_ Figtree-700.woff2
+  | |_ Figtree-Italic.woff2
+  | |_ Figtree-Regular.woff2
+  |
+  |_ FiraCode
+  | |_ FiraCode-Bold.woff2
+  | |_ FiraCode-Regular.woff2
+  |
+  |_ LibreCaslonText
+  | |_ Libre-Caslon-Text-700.woff2
+  | |_ Libre-Caslon-Text-Italic.woff2
+  | |_ Libre-Caslon-Text-Regular.woff2
+  |
+  |_ fonts.css
 ```
 
 ### Step 4: Setup the `_app.tsx` file
