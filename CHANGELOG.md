@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.104
+
+- Added minor updates to the `<MenuItem/>` and `<Module/>` styles.
+- Added the `effects.blur` global style.
+
 ## v0.3.103
 
 - Updated the `<Linkmap/>` and `<Markdown/>` components.

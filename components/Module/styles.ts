@@ -14,13 +14,9 @@ import { css } from '../../deps.ts';
 export const styles = css`
 
 
+
 &.module {
   &--full {
-    grid-column: span 12;
-  }
-
-  &--none {
-    display: none;
     grid-column: span 12;
   }
 
@@ -44,13 +40,20 @@ export const styles = css`
     grid-column: span 2;
   }
 
+  &--none {
+    display: none;
+    grid-column: span 12;
+
+    @media screen and (max-width: 39.9375em) {
+      &:not(.module__half--none) {
+        display: block;
+      }
+    }
+  }
+
   &__half {
     @media screen and (max-width: 39.9375em) {
       &--full {
-        grid-column: span 6;
-      }
-      &--none {
-        display: none;
         grid-column: span 6;
       }
       &--xl {
@@ -67,6 +70,10 @@ export const styles = css`
       }
       &--xs {
         grid-column: span 1;
+      }
+      &--none {
+        display: none;
+        grid-column: span 6;
       }
     }
   }

@@ -14,7 +14,7 @@ import { css } from '../../deps.ts';
 export const styles = css`
 
 .menuItem {
-
+  min-width: var(--s-fifteen);
 }
 
 `;

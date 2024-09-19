@@ -1,6 +1,13 @@
 import { css } from '../deps.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+export const effects = {
+  blur: css`
+    filter: blur(var(--s-three-quarters));
+  `,
+};
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const transition = {
   interaction: {
     outline: css`
