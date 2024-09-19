@@ -2,7 +2,7 @@
 
 ### Warning! This is an incomplete project and it will have breaking changes soon. Expect the version `v1.0.0` to be the first stable and permanent release.
 
-``Hello ( ´ ω ` )ノﾞ`` Welcome to 🍱 Lunchbox. So... you're into Deno 🦕 Fresh
+`` Hello ( ´ ω ` )ノﾞ `` Welcome to 🍱 Lunchbox. So... you're into Deno 🦕 Fresh
 🍋? Damn, me too. I've found myself using nothing but Fresh for most of my web
 dev projects. But I'm not that much of a user of existing web component
 libraries. Even though I respect these, I'm more of a _do-it-yourself_ kind of
@@ -54,9 +54,9 @@ and can be removed with the universal prop `nostyles`.
 
 Also, additional classes can be appended simply by adding a class to the
 component. Having `<Input class="x" />` will add the class `"x"` to the
-`<input />` element inside it. Every HTML Element and framework component that 
-make up a particular component will be called a _"piece"_. Every piece of every 
-component can be referenced using the universal component `fwd`. This is an 
+`<input />` element inside it. Every HTML Element and framework component that
+make up a particular component will be called a _"piece"_. Every piece of every
+component can be referenced using the universal component `fwd`. This is an
 oversimplified html code for the `<Input />` component:
 
 ```jsx
@@ -71,14 +71,18 @@ oversimplified html code for the `<Input />` component:
 </div>
 ```
 
-The piece name is used in the CSS classes and in the `fwd` prop 
-(`<Input fwd={{ label: {class: 'x'} }}` will add the class `'x'` to the piece 
+The piece name is used in the CSS classes and in the `fwd` prop
+(`<Input fwd={{ label: {class: 'x'} }}` will add the class `'x'` to the piece
 "label").
 
 ## Getting started
 
 ### Step 1: Importing Lunchbox
-Assuming you are using Deno Fresh, you could simply add lunchbox's root directory to your import section inside your project's `deno.json` file. I would recommend the usage of [Resin](https://github.com/yahiro07/resin) by [yahiro](https://github.com/yahiro07), it is an excellent CSS-in-JS library.
+
+Assuming you are using Deno Fresh, you could simply add lunchbox's root
+directory to your import section inside your project's `deno.json` file. I would
+recommend the usage of [Resin](https://github.com/yahiro07/resin) by
+[yahiro](https://github.com/yahiro07), it is an excellent CSS-in-JS library.
 
 ```json
 {
@@ -88,25 +92,35 @@ Assuming you are using Deno Fresh, you could simply add lunchbox's root director
   }
 }
 ```
+
 ### Step 2: Add the Lunchbox plugin
-Inside your `fresh.config.ts` file, you can add the Lunchbox plugin. It is fully compatible with Tailwind so you can run both without any issues:
+
+Inside your `fresh.config.ts` file, you can add the Lunchbox plugin. It is fully
+compatible with Tailwind so you can run both without any issues:
+
 ```ts
 // ~/fresh.config.ts
-import { defineConfig } from '$fresh/server.ts';
-import tailwind from '$fresh/plugins/tailwind.ts';
-import lunchbox from 'lunchbox/plugin.ts';
+import { defineConfig } from "$fresh/server.ts";
+import tailwind from "$fresh/plugins/tailwind.ts";
+import lunchbox from "lunchbox/plugin.ts";
 
-  
 export default defineConfig({
   plugins: [tailwind(), lunchbox()],
 });
 ```
+
 ### Step 3: Generate static font files
-For Lunchbox to work as intended, the build task must be run once when setting up. This will generate the static font files inside your `/static/` directory. The imported fonts are: Figtree, FiraCode, and LibreCaslonText.
+
+For Lunchbox to work as intended, the build task must be run once when setting
+up. This will generate the static font files inside your `/static/` directory.
+The imported fonts are: Figtree, FiraCode, and LibreCaslonText.
+
 ```
 deno task build
 ```
+
 This will create the following files:
+
 ```
 ~/static
 	|_ fonts
@@ -115,7 +129,7 @@ This will create the following files:
 			|_ Figtree-Italic.woff2
 			|_ Figtree-Regular.woff2
 		|_ FiraCode
-			|_ FiraCode-Bold.woff2}
+			|_ FiraCode-Bold.woff2
 			|_ FiraCode-Regular.woff2
 		|_ LibreCaslonText
 			|_ Libre-Caslon-Text-700.woff2
@@ -123,27 +137,31 @@ This will create the following files:
 			|_ Libre-Caslon-Text-Regular.woff2
 		|_ fonts.css
 ```
+
 ### Step 4: Setup the `_app.tsx` file
+
 Finally, a few things must be added in the `_app.tsx` file:
+
 1. Add `class="lunchbox"` to the `<html/>` tag.
 2. Add the `<link rel="stylesheet" href="/fonts/fonts.css" />` font import link.
-3. Add `id="lunchbox-body"` to the `<body/>` tag.
-It should end up with this modifications:
+3. Add `id="lunchbox-body"` to the `<body/>` tag. It should end up with this
+   modifications:
+
 ```tsx
 // ~/routes/_app.tsx
 import { type PageProps } from "$fresh/server.ts";
 
 export default function App({ Component }: PageProps) {
-	return (
-		<html class="lunchbox">
-			<head>
-				<link rel="stylesheet" href="/fonts/fonts.css" />
-			</head>
-			<body id="lunchbox-body">
-				<Component />
-			</body>
-		</html>
-	);
+  return (
+    <html class="lunchbox">
+      <head>
+        <link rel="stylesheet" href="/fonts/fonts.css" />
+      </head>
+      <body id="lunchbox-body">
+        <Component />
+      </body>
+    </html>
+  );
 }
 ```
 
