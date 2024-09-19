@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.105
+
+- Updated the README.
+- Remved import modules.
+
 ## v0.3.104
 
 - Added minor updates to the `<MenuItem/>` and `<Module/>` styles.
