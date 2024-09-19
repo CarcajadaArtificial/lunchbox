@@ -166,3 +166,34 @@ export default function App({ Component }: PageProps) {
 ```
 
 ## Usage
+
+After setting up Lunchbox in your project, simply import from the `lunchbox/components/` to start using any component. By being inside the `/components/`
+
+```tsx
+// ~/routes/example.tsx. OR  ~/components/example.tsx
+import Button from "lunchbox/components/Button/index.tsx";
+
+export default function () {
+  return <Button>Click me!</Button>;
+}
+```
+
+### Using islands
+
+It is a little different for islands, for starters, you must import them from the `~/islands/` directory. This informs you that the imported component requires client-side javascript to function.
+
+```tsx
+// ~/islands/Menu.tsx
+export { default } from "lunchbox/islands/Menu/index.tsx";
+```
+ 
+ After doing this now you can import it from a route or wherever:
+ 
+ ```tsx
+// ~/routes/example.tsx. OR  ~/components/example.tsx
+import Menu from "../islands/Menu.tsx";
+
+export default function () {
+  return <Menu>This is a menu!</Menu>;
+}
+```
