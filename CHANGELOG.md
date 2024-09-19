@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.106
+
+- Updated the README.
+
 ## v0.3.105
 
 - Updated the README.
