@@ -18,24 +18,24 @@ export default function lunchboxPlugin(): Plugin {
         ],
         head: [
           // Link to your main CSS file
-          `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/styles.css">`,
+          `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/styles.css"></link>`,
 
           // Preload Figtree fonts
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-700.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/Figtree/Figtree-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
 
           // Preload FiraCode fonts
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/FiraCode/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/FiraCode/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/FiraCode/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/FiraCode/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
 
           // Preload Libre Caslon Text fonts
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
-          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-700.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
+          `<link rel="preload" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/LibreCaslonText/Libre-Caslon-Text-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"></link>`,
 
           // Load fonts.css for any additional font-related styles
-          `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/fonts.css">`,
+          `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/fonts/fonts.css"></link>`,
         ],
       };
     },
