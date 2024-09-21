@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.110
+
+- Added plugin fix that points to jsDelivr github cdn.
+
 ## v0.3.109
 
 - Updated the README.
