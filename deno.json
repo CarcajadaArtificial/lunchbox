@@ -18,9 +18,7 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "$std/": "https://deno.land/std@0.216.0/",
-    "icons/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
-    "resin": "https://deno.land/x/resin@v0.1.7/mod.ts",
-    "ptera": "https://deno.land/x/ptera@v1.0.2/mod.ts"
+    "resin": "https://deno.land/x/resin@v0.1.7/mod.ts"
   },
   "exclude": ["**/_fresh/*"]
 }

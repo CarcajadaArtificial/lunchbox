@@ -75,6 +75,8 @@ The piece name is used in the CSS classes and in the `fwd` prop
 (`<Input fwd={{ label: {class: 'x'} }}` will add the class `'x'` to the piece
 "label").
 
+---
+
 ## Getting started
 
 ### Step 1: Importing Lunchbox
@@ -109,68 +111,21 @@ export default defineConfig({
 });
 ```
 
-### Step 3: Generate static font files
-
-For Lunchbox to work as intended, the build task must be run once when setting
-up. This will generate the static font files inside your `/static/` directory.
-The imported fonts are: Figtree, FiraCode, and LibreCaslonText.
-
-```
-deno task build
-```
-
-This will create the following files:
-
-```
-~/static
-|_ fonts
-  |_ Figtree
-  | |_ Figtree-700.woff2
-  | |_ Figtree-Italic.woff2
-  | |_ Figtree-Regular.woff2
-  |
-  |_ FiraCode
-  | |_ FiraCode-Bold.woff2
-  | |_ FiraCode-Regular.woff2
-  |
-  |_ LibreCaslonText
-  | |_ Libre-Caslon-Text-700.woff2
-  | |_ Libre-Caslon-Text-Italic.woff2
-  | |_ Libre-Caslon-Text-Regular.woff2
-  |
-  |_ fonts.css
-```
-
-### Step 4: Setup the `_app.tsx` file
+### Step 3: Setup the `_app.tsx` file
 
 Finally, a few things must be added in the `_app.tsx` file:
 
 1. Add `class="lunchbox"` to the `<html/>` tag.
-2. Add the `<link rel="stylesheet" href="/fonts/fonts.css" />` font import link.
-3. Add `id="lunchbox-body"` to the `<body/>` tag. It should end up with this
+2. Add `id="lunchbox-body"` to the `<body/>` tag. It should end up with this
    modifications:
 
-```tsx
-// ~/routes/_app.tsx
-import { type PageProps } from "$fresh/server.ts";
-
-export default function App({ Component }: PageProps) {
-  return (
-    <html class="lunchbox">
-      <head>
-        <link rel="stylesheet" href="/fonts/fonts.css" />
-      </head>
-      <body id="lunchbox-body">
-        <Component />
-      </body>
-    </html>
-  );
-}
-```
+---
 
 ## Usage
 
-After setting up Lunchbox in your project, simply import from the `lunchbox/components/` to start using any component. By being inside the `/components/`
+After setting up Lunchbox in your project, simply import from the
+`lunchbox/components/` to start using any component. By being inside the
+`/components/`
 
 ```tsx
 // ~/routes/example.tsx. OR  ~/components/example.tsx
@@ -183,16 +138,18 @@ export default function () {
 
 ### Using islands
 
-It is a little different for islands, for starters, you must import them from the `~/islands/` directory. This informs you that the imported component requires client-side javascript to function.
+It is a little different for islands, for starters, you must import them from
+the `~/islands/` directory. This informs you that the imported component
+requires client-side javascript to function.
 
 ```tsx
 // ~/islands/Menu.tsx
 export { default } from "lunchbox/islands/Menu/index.tsx";
 ```
- 
- After doing this now you can import it from a route or wherever:
- 
- ```tsx
+
+After doing this now you can import it from a route or wherever:
+
+```tsx
 // ~/routes/example.tsx. OR  ~/components/example.tsx
 import Menu from "../islands/Menu.tsx";
 
