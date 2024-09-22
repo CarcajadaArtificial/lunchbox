@@ -272,8 +272,7 @@ anyone navigating the project's evolution.
 ```md
 ## vX.Y.Z
 
-- Added the `<Example />` component that supports a new
-  feature.[@yourusername](https://github.com/yourusername)
+- Added the `<Example />` component that supports a new feature. [@yourusername](https://github.com/yourusername)
 ```
 
 At the end of each bullet point, append your GitHub username as a markdown link.
