@@ -5,6 +5,10 @@ export const effects = {
   blur: css`
     filter: blur(var(--s-three-quarters));
   `,
+
+  transparent: css`
+    opacity: 0;
+  `,
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
