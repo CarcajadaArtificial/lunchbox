@@ -22,7 +22,7 @@ export type iInterObs = iComponent<HTMLDivElement> & {
   observerOptions: IntersectionObserverInit;
 };
 
-/** These are the default values of the `<Menu />` island's props. */
+/** These are the default values of the `<InterObs />` island's props. */
 const defaults: iInterObs = {
   animation: '',
   isIntersectingCb: () => null,
@@ -34,7 +34,7 @@ const defaults: iInterObs = {
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Setup function of the `<Menu />` island. */
+/** Setup function of the `<InterObs />` island. */
 export default (props: Partial<iInterObs>) => {
   const p = apDef<iInterObs>(defaults, props);
 

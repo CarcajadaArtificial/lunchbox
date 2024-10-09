@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2
+
+- Added the `Revealer` island for abstracting the common "See more..." functionality.
+
 ## v1.0.1
 
 - Added the `InterObs` island for abstracting the native Intersection Observer
