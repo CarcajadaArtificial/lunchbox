@@ -3,21 +3,28 @@
 //   | || ' \  _/ -_) '_| (_) | '_ (_-<
 //  |___|_||_\__\___|_|  \___/|_.__/__/
 //
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * ### InterObs
- * *Organism*
+ * InterObs component.
  *
- * This module contains the render function for the `<InterObs />` island.
+ * This is an Organism component that renders the `<InterObs />` island.
  *
- * @module
+ * @module InterObs
  */
 import { useEffect, useRef, useState } from 'preact/hooks';
+import { JSX } from 'preact';
 import setup, { iInterObs } from './setup.ts';
 import { cn } from '../../src/utils.ts';
 import { effects } from '../../src/styles.ts';
 
-export default function (props: Partial<iInterObs>) {
+/**
+ * InterObs component.
+ *
+ * @param {Partial<iInterObs>} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered component.
+ */
+export default function InterObs(props: Partial<iInterObs>): JSX.Element {
   const { animation, isIntersectingCb, observerOptions, ...p } = setup(props);
 
   const ref = useRef<HTMLDivElement>(null);

@@ -1,8 +1,7 @@
 *.css.map
 deno.lock
 .DS_Store
-.github/dep/
-.github/dep/garlicss/
 .obsidian
 .vscode
 _fresh/
+docs/

@@ -3,31 +3,39 @@
 //  |   / -_) V / -_) _` | / -_) '_|
 //  |_|_\___|\_/\___\__,_|_\___|_|
 //
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * ### Revealer
- * *Organism*
+ * Revealer component.
  *
- * This module contains the render function for the `<Revealer />` island.
+ * This is an Organism component that renders the `<Revealer />` island.
  *
- * @module
+ * @module Revealer
  */
+
 import { useState } from 'preact/hooks';
 import setup, { iRevealer } from './setup.ts';
+import { JSX } from 'preact';
 
-export default function (props: Partial<iRevealer>) {
+/**
+ * Revealer component.
+ *
+ * @param {Partial<iRevealer>} props - The properties passed to the component.
+ * @returns {JSX.Element} The rendered component.
+ */
+export default function Revealer(props: Partial<iRevealer>): JSX.Element {
   const { children, fwd, actuator, ...p } = setup(props);
   const [isRevealed, setRevealed] = useState<boolean>(false);
 
   return (
     <div {...p}>
-      {isRevealed ? null : (
+      {!isRevealed && (
         <div onClick={() => setRevealed(true)}>
           {actuator}
         </div>
       )}
-      <div>
-        {isRevealed ? children : null}
+      <div {...fwd.revelation}>
+        {isRevealed && children}
       </div>
     </div>
   );

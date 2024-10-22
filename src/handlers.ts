@@ -7,13 +7,10 @@
 /**
  * This module contains all functions that help handle event listeners in islands.
  *
- * @module
+ * @module EventListeners
  */
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * handleInteraction
- * -----------------------------------------------------------------------------------------------------
  * This function is a shorthand for the onClick and onKeyDown ("Enter" key) event listeners.
  *
  * @param cb
@@ -22,7 +19,6 @@
  * @returns
  *  An object containing the two event listener functions it is meant to be passed as spread attributes
  *  of an element. `<div {...handleInteraction(() => console.log("Interacted"))} />`.
- * -----------------------------------------------------------------------------------------------------
  */
 export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
   if (cb === null) {
@@ -39,9 +35,6 @@ export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
 };
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * isMacOS
- * -----------------------------------------------------------------------------------------------------
  * Determines if the current operating system is macOS.
  *
  * This utility function checks the user agent string of the browser to identify if the user is running
@@ -54,7 +47,7 @@ export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
  * - On macOS: 'Command' (Meta) is used in place of 'Control' for most shortcuts.
  *
  * @example
- * ```typescript
+ * ```ts
  * const handleKeyDown = (event: KeyboardEvent) => {
  *   const isMac = isMacOS();
  *   if (event.key === 'Control' && !isMac) {
@@ -67,14 +60,10 @@ export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
  *
  * @returns {boolean}
  *  True if the current OS is macOS, false otherwise.
- * -----------------------------------------------------------------------------------------------------
  */
 const isMacOS = () => /Mac/.test(window.navigator.userAgent);
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * Key
- * -----------------------------------------------------------------------------------------------------
  * A utility object to easily check if certain keys are being pressed during `onkeydown` events. This
  * object provides methods to check for common special keys like Enter, Backspace, Shift, etc., and
  * also includes methods to handle modifier keys specific to different operating systems (Windows and
@@ -82,45 +71,96 @@ const isMacOS = () => /Mac/.test(window.navigator.userAgent);
  *
  * Each method takes a `KeyboardEvent` object and returns a boolean indicating whether the
  * corresponding key is being pressed.
- * -----------------------------------------------------------------------------------------------------
  */
 export const Key = {
-  /* Special keys checked purely. */
-  Enter: (ev: KeyboardEvent) => ev.key === 'Enter',
-  Backspace: (ev: KeyboardEvent) => ev.key === 'Backspace',
-  Shift: (ev: KeyboardEvent) => ev.key === 'Shift',
-  Escape: (ev: KeyboardEvent) => ev.key === 'Escape',
-  Tab: (ev: KeyboardEvent) => ev.key === 'Tab',
-  Control: (ev: KeyboardEvent) => ev.key === 'Control',
-  Meta: (ev: KeyboardEvent) => ev.key === 'Meta',
-  Alt: (ev: KeyboardEvent) => ev.key === 'Alt',
-  Spacebar: (ev: KeyboardEvent) => ev.key === ' ',
-  Up: (ev: KeyboardEvent) => ev.key === 'ArrowUp',
-  Down: (ev: KeyboardEvent) => ev.key === 'ArrowDown',
-  Left: (ev: KeyboardEvent) => ev.key === 'ArrowLeft',
-  Right: (ev: KeyboardEvent) => ev.key === 'ArrowRight',
+  /** Checks if the Enter key is pressed. */
+  Enter: (ev: KeyboardEvent): boolean => ev.key === 'Enter',
 
-  /* Modifier keys specific to an OS. */
-  CtrlWin: (ev: KeyboardEvent) => ev.key === 'Control' && !isMacOS(),
-  WindowsKey: (ev: KeyboardEvent) => ev.key === 'Meta' && !isMacOS(),
-  CtrlMac: (ev: KeyboardEvent) => ev.key === 'Control' && isMacOS(),
-  Command: (ev: KeyboardEvent) => ev.key === 'Meta' && isMacOS(),
+  /** Checks if the Backspace key is pressed. */
+  Backspace: (ev: KeyboardEvent): boolean => ev.key === 'Backspace',
 
-  /* Modifier keys by their hierarchy */
-  mod1: (ev: KeyboardEvent) =>
+  /** Checks if the Shift key is pressed. */
+  Shift: (ev: KeyboardEvent): boolean => ev.key === 'Shift',
+
+  /** Checks if the Escape key is pressed. */
+  Escape: (ev: KeyboardEvent): boolean => ev.key === 'Escape',
+
+  /** Checks if the Tab key is pressed. */
+  Tab: (ev: KeyboardEvent): boolean => ev.key === 'Tab',
+
+  /** Checks if the Control key is pressed (Windows). */
+  Control: (ev: KeyboardEvent): boolean => ev.key === 'Control',
+
+  /** Checks if the Meta key is pressed (Windows). */
+  Meta: (ev: KeyboardEvent): boolean => ev.key === 'Meta',
+
+  /** Checks if the Alt key is pressed. */
+  Alt: (ev: KeyboardEvent): boolean => ev.key === 'Alt',
+
+  /** Checks if the Spacebar is pressed. */
+  Spacebar: (ev: KeyboardEvent): boolean => ev.key === ' ',
+
+  /** Checks if the Arrow Up key is pressed. */
+  Up: (ev: KeyboardEvent): boolean => ev.key === 'ArrowUp',
+
+  /** Checks if the Arrow Down key is pressed. */
+  Down: (ev: KeyboardEvent): boolean => ev.key === 'ArrowDown',
+
+  /** Checks if the Arrow Left key is pressed. */
+  Left: (ev: KeyboardEvent): boolean => ev.key === 'ArrowLeft',
+
+  /** Checks if the Arrow Right key is pressed. */
+  Right: (ev: KeyboardEvent): boolean => ev.key === 'ArrowRight',
+
+  /**
+   * Checks if the Control key (Windows) is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  CtrlWin: (ev: KeyboardEvent): boolean => ev.key === 'Control' && !isMacOS(),
+
+  /**
+   * Checks if the Windows key is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  WindowsKey: (ev: KeyboardEvent): boolean => ev.key === 'Meta' && !isMacOS(),
+
+  /**
+   * Checks if the Control key (macOS) is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  CtrlMac: (ev: KeyboardEvent): boolean => ev.key === 'Control' && isMacOS(),
+
+  /**
+   * Checks if the Command key (macOS) is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  Command: (ev: KeyboardEvent): boolean => ev.key === 'Meta' && isMacOS(),
+
+  /**
+   * Checks if either Control (Windows) or Meta (macOS) key is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  mod1: (ev: KeyboardEvent): boolean =>
     (ev.key === 'Control' && !isMacOS()) || (ev.key === 'Meta' && isMacOS()),
-  mod2: (ev: KeyboardEvent) =>
+
+  /**
+   * Checks if either Control (macOS) or Meta (Windows) key is pressed.
+   *
+   * @see {@link isMacOS}
+   */
+  mod2: (ev: KeyboardEvent): boolean =>
     (ev.key === 'Control' && isMacOS()) || (ev.key === 'Meta' && !isMacOS()),
 };
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * iKeystroke
- * -----------------------------------------------------------------------------------------------------
  * Interface representing a keystroke combination and its associated callback. Contains an array of
  * keys to be pressed, an array of keys to be excluded, and a callback function to be executed when the
  * keystroke combination is detected.
- * -----------------------------------------------------------------------------------------------------
  */
 interface iKeystroke {
   keys: ((ev: KeyboardEvent) => boolean)[];
@@ -129,9 +169,6 @@ interface iKeystroke {
 }
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * isKeyStroked
- * -----------------------------------------------------------------------------------------------------
  * Function to check if a given keystroke combination is detected. It verifies that all keys in the
  * `keys` array are pressed and all keys in the `except` array are not pressed.
  *
@@ -143,7 +180,6 @@ interface iKeystroke {
  *
  * @returns {boolean}
  *  True if the keystroke combination is detected, false otherwise.
- * -----------------------------------------------------------------------------------------------------
  */
 const isKeyStroked = (keystroke: iKeystroke, ev: KeyboardEvent) =>
   keystroke.keys.reduce<boolean>(
@@ -155,9 +191,6 @@ const isKeyStroked = (keystroke: iKeystroke, ev: KeyboardEvent) =>
   );
 
 /**
- * -----------------------------------------------------------------------------------------------------
- * handleKeyboard
- * -----------------------------------------------------------------------------------------------------
  * Function to handle keyboard events based on an array of keystroke combinations. It checks each
  * keystroke combination and executes the associated callback if the combination is detected.
  *
@@ -166,7 +199,6 @@ const isKeyStroked = (keystroke: iKeystroke, ev: KeyboardEvent) =>
  *
  * @returns
  *  A function that processes keyboard events.
- * -----------------------------------------------------------------------------------------------------
  */
 export const handleKeyboard =
   (keystrokes: iKeystroke[]) => (ev: KeyboardEvent) =>

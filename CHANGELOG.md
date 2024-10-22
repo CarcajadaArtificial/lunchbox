@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+
+- Added better documentation comments.
+
 ## v1.0.2
 
 - Added the `Revealer` island for abstracting the common "See more..." functionality.
