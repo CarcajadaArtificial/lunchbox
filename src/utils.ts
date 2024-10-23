@@ -86,15 +86,6 @@ export function apDef<T extends object>(d: T, i: Partial<T>): T {
 /**
  * @todo [!] Complete documentation
  */
-export const part = (
-  classes: Record<string, string>,
-  nostyleAll?: boolean,
-): Record<string, string | undefined> =>
-  nostyleAll ? {} : rMap<string | undefined>(
-    classes,
-    (entry) => (entry === '' ? undefined : entry),
-  );
-
 export const forward = <
   T extends Record<
     string,
@@ -134,3 +125,27 @@ export function rMap<T>(
   });
   return newRecord;
 }
+
+/**
+ * This function is a shorthand for the onClick and onKeyDown ("Enter" key) event listeners.
+ *
+ * @param cb
+ *  The function that will be executed when clicking or pressing the "Enter" key.
+ *
+ * @returns
+ *  An object containing the two event listener functions it is meant to be passed as spread attributes
+ *  of an element. `<div {...handleInteraction(() => console.log("Interacted"))} />`.
+ */
+export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
+  if (cb === null) {
+    return {};
+  }
+  return {
+    onClick: (ev: MouseEvent) => cb(ev),
+    onKeyDown: (ev: KeyboardEvent) => {
+      if (ev.key === 'Enter') {
+        cb(ev);
+      }
+    },
+  };
+};

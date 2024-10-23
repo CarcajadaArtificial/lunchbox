@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.4
+
+- Added the `Keyboard` island.
+- Removed the `Autocomplete` and `Dialog` islands.
+- Removed the `handlers.ts` module in favor of the `@carcajada/teclas` module.
+- Updated `deno.json`, `plugin.ts`, and `deps.ts`.
+- Removed the `hooks.ts` module.
+- Added the `handleInteraction()` function to the `utils.ts` module.
+- Added fixes to the `CONTRIBUTING.md` file.
+
 ## v1.0.3
 
 - Added better documentation comments.

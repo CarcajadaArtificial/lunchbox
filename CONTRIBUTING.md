@@ -103,7 +103,7 @@ on integrity.
 // ~/components/Example/setup.ts
 import { iComponent } from "../../src/types.ts";
 
-type iExample = iComponent<HTMLInputElement> & {
+export type iExample = iComponent<HTMLInputElement> & {
   foo?: string;
 };
 ```
@@ -205,8 +205,8 @@ export const defaults: iExample = {
   }
 };
 
-export default(props: Partial<iExample>) {
-  const p = apDef<iLayout>(defaults, props);
+export default function(props: Partial<iExample>) {
+  const p = apDef<iExample>(defaults, props);
 
   p.class = o([styles, 'example'], { ...p });
 
