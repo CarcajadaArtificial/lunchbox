@@ -10,8 +10,8 @@
  */
 
 import { classNames } from '../deps.ts';
-import { ClassNameString, EmptyObject } from './types.ts';
 import { JSX } from 'preact';
+import { SignalLike } from '$fresh/src/types.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -89,7 +89,7 @@ export function apDef<T extends object>(d: T, i: Partial<T>): T {
 export const forward = <
   T extends Record<
     string,
-    { class?: ClassNameString; nostyle?: boolean }
+    { class?: SignalLike<string | undefined> | string; nostyle?: boolean }
   >,
 >(
   classes: Record<keyof T, string | unknown[]>,
@@ -119,7 +119,8 @@ export function rMap<T>(
   record: Record<string, T>,
   callback: (entry: T, key?: string) => T,
 ): Record<string, T> {
-  const newRecord: Record<string, T> | EmptyObject = {};
+  const newRecord: Record<string, T> | Record<string | number | symbol, never> =
+    {};
   Object.keys(record).forEach((key) => {
     newRecord[key] = callback(record[key], key);
   });

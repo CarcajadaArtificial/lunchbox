@@ -10,7 +10,6 @@
  * @module
  */
 import { JSX } from 'preact';
-import { SignalLike } from '$fresh/src/types.ts';
 
 /**
  * This type is used for standarizing all components. By design every component must have a protagonic
@@ -52,12 +51,3 @@ export type iElement<T extends EventTarget = HTMLElement> =
 export type iFwd<T extends EventTarget = HTMLElement> = iElement<T> & {
   nostyle?: boolean;
 };
-
-/**
- * This type is a shorthand of `Record<string | number | symbol, never>` that
- * `deno-lint(ban-types) recommends as the correct way to express the type of an empty object.`.
- */
-export type EmptyObject = Record<string | number | symbol, never>;
-
-/** */
-export type ClassNameString = SignalLike<string | undefined> | string;

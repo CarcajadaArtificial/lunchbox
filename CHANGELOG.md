@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.5
+
+- Removed the types `classNameString` and `EmptyObject`.
+
 ## v1.0.4
 
 - Added the `Keyboard` island.
