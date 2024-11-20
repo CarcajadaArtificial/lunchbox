@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.6
+
+- Added the `setup` example project.
+
 ## v1.0.5
 
 - Removed the types `classNameString` and `EmptyObject`.
