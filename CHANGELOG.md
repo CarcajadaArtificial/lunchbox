@@ -6,6 +6,7 @@
 - Added the `setup-temp` example project as a temporal empty fresh projet to test the effects of simply importing lunchbox and running the plugin.
 - Added the Components import inside `setup-temp` to the index page. This is what causes the present error.
 - Added breaking changes to the `setup` example project.
+- Moving out of Resin's CSS-in-JS philosophy, going for tailwind classes instead.
 
 ## v1.0.6
 

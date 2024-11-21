@@ -1,7 +1,7 @@
 import { Plugin, PluginRenderContext } from '$fresh/server.ts';
 import { ResinCssEmitter } from './deps.ts';
 
-export default function lunchboxPlugin(): Plugin {
+export function lunchbox(): Plugin {
   return {
     name: 'lunchbox',
     render: (ctx: PluginRenderContext) => {
