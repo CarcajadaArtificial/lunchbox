@@ -1,5 +1,12 @@
 # Changelog
 
+## In Progress
+
+- `Uncaught (in promise) TypeError: Import assertions are deprecated. Use `with` keyword, instead of 'assert' keyword.` Still present
+- Added the `setup-temp` example project as a temporal empty fresh projet to test the effects of simply importing lunchbox and running the plugin.
+- Added the Components import inside `setup-temp` to the index page. This is what causes the present error.
+- Added breaking changes to the `setup` example project.
+
 ## v1.0.6
 
 - Added the `setup` example project.

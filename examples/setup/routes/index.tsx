@@ -1,10 +1,5 @@
 import { useSignal } from "@preact/signals";
-import Header from "lunchbox/components/Header/index.tsx";
-import Main from "lunchbox/components/Main/index.tsx";
-import Text from "lunchbox/components/Text/index.tsx";
-import Code from "lunchbox/components/Code/index.tsx";
-import Layout from "lunchbox/components/Layout/index.tsx";
-import Module from "lunchbox/components/Module/index.tsx";
+import { Code, Header, Layout, Main, Module, Text } from "lunchbox";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
@@ -23,8 +18,9 @@ export default function Home() {
             />
             <Text type="heading">Welcome to Fresh</Text>
             <Text>
-              Try updating this message in the
-              <Code>./routes/index.tsx</Code> file, and refresh.
+              Try updating this message in the <Code>./routes/index.tsx</Code>
+              {" "}
+              file, and refresh.
             </Text>
           </Module>
         </Layout>
