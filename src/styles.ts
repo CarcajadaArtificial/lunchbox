@@ -1,4 +1,11 @@
+import { o } from './utils.ts';
 import { css } from '../deps.ts';
+import { iMain } from '../components/Main/setup.ts';
+
+export const main = (props: iMain) => {
+  props.class = o('bg-slate-100', { ...props });
+  return props;
+};
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const effects = {
@@ -54,16 +61,16 @@ export const animation = {
     -moz-animation: float 3s infinite;
     -o-animation: float 3s infinite;
     -ms-animation: float 3s infinite;
-    
+
     @keyframes float {
       from {
         top: 0.25rem;
       }
-    
+
       50% {
         top: -0.25rem;
       }
-    
+
       to {
         top: 0.25rem;
       }
@@ -76,7 +83,7 @@ export const animation = {
     -moz-animation: fadeIn ease-in-out 0.2s;
     -o-animation: fadeIn ease-in-out 0.2s;
     -ms-animation: fadeIn ease-in-out 0.2s;
-    
+
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -113,7 +120,7 @@ width: 24rem;
 
   &__error-bg {
     background-color: var(--clr-bg-error);
-    
+
     &:hover,
     &:focus,
     &:focus-visible,
@@ -137,7 +144,7 @@ width: 24rem;
 
     .txt-paragraph {
       grid-column: 2;
-    } 
+    }
   }
 }
 

@@ -5,22 +5,17 @@
 //                                         |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * This module contains the prop type, default values, and styles for the `<Main />` component.
- *
  * @module
  */
-import { o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { styles } from './styles.ts';
+import { apDef } from '../../src/utils.ts';
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Properties of the `<Main />` component. */
-export type iMain = iComponent;
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Setup function of the `<Main />` component. */
-export default (props: Partial<iMain>) => {
-  props.class = o(styles, { ...props });
-
-  return props;
+export type iMain = iComponent & {
+  whitespace: boolean;
 };
+
+const defaults: iMain = {
+  whitespace: false,
+};
+
+export default (props: Partial<iMain>) => apDef<iMain>(defaults, props);

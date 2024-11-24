@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import Main from "../../../components/Main/index.tsx";
+import { Main } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
