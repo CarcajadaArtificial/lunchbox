@@ -2,6 +2,33 @@ import { type Config } from "tailwindcss";
 
 export default {
   theme: {
+    fontFamily: {
+      mono: ["Fira Code", "ui-monospace", "monospace"],
+      base: ["Figtree", "system-ui", "ui-sans-serif", "sans-serif"],
+      heading: ["Libre Caslon Text", "ui-serif", "serif"],
+    },
+    colors: {
+      page: {
+        DEFAULT: "#eee6f2",
+        50: "#eee6f280",
+      },
+      panel: {
+        DEFAULT: "#ffffff",
+      },
+      d: {
+        page: {
+          DEFAULT: "#3d3640",
+          50: "#3d364080",
+        },
+        panel: {
+          DEFAULT: "#241f26",
+        },
+      },
+    },
+    screens: {
+      md: "40em",
+      lg: "80em",
+    },
     extend: {
       spacing: {
         "eighth": "0.125rem",
@@ -20,22 +47,8 @@ export default {
         "quadruple": "4rem",
         "fifteen": "15rem",
       },
-      fontFamily: {
-        mono: ["Fira Code", "ui-monospace", "monospace"],
-        base: ["Figtree", "system-ui", "ui-sans-serif", "sans-serif"],
-        heading: ["Libre Caslon Text", "ui-serif", "serif"],
-      },
-      colors: {
-        page: {
-          100: "#eee6f2",
-          50: "#eee6f280",
-        },
-        d: {
-          page: {
-            100: "#3d3640",
-            50: "#3d364080",
-          },
-        },
+      gridTemplateColumns: {
+        lg: "repeat(12, minmax(4.5rem, 4.5rem))",
       },
     },
   },

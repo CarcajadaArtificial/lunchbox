@@ -15,6 +15,7 @@
 - Added new style proof of concept to the `<Main/>` component inside the `setup-temp` project.
 - [ ] Add a `<Body/>` component for the `_app.tsx` route.
 - [ ] Add tailwind dependency to lunchbox to export the config object.
+- Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard
 
 ## v1.0.6
 
