@@ -1,5 +1,4 @@
 import { Plugin, PluginRenderContext } from '$fresh/server.ts';
-import { ResinCssEmitter } from './deps.ts';
 
 export function lunchbox(): Plugin {
   return {
@@ -8,12 +7,6 @@ export function lunchbox(): Plugin {
       ctx.render();
 
       return {
-        styles: [
-          {
-            id: 'resin-css-page-css-tag',
-            cssText: ResinCssEmitter({})!.props.children,
-          },
-        ],
         links: [
           {
             rel: 'stylesheet',

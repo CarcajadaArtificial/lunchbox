@@ -7,12 +7,14 @@
 - Added the Components import inside `setup-temp` to the index page. This is what causes the present error.
 - Added breaking changes to the `setup` example project.
 - Moving out of Resin's CSS-in-JS philosophy, going for tailwind classes instead.
-- [ ] Add all lunchbox styles possible to tailwind.config.ts.
-- [ ] Add tailwind styles to a test component.
+- [x] Add all lunchbox styles possible to tailwind.config.ts. The colors are missing but will be added gradually.
+- [x] Add tailwind styles to a test component. Used the `<Main/>` component.
 - [ ] Define tailwind styles standard of usage.
 - [ ] Update all components to the new standard.
 - Added a new export patter in `./mod.ts` where this file exports a function that builds the component.
 - Added new style proof of concept to the `<Main/>` component inside the `setup-temp` project.
+- [ ] Add a `<Body/>` component for the `_app.tsx` route.
+- [ ] Add tailwind dependency to lunchbox to export the config object.
 
 ## v1.0.6
 

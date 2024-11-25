@@ -1,8 +1,22 @@
 import { o } from './utils.ts';
 import { css } from '../deps.ts';
 import { iMain } from '../components/Main/setup.ts';
+import { iPanel } from '../components/Panel/setup.ts';
+
+const clr = {
+  bg_page: 'bg-page-50 dark:bg-d-page-50',
+};
 
 export const main = (props: iMain) => {
+  props.class = o([
+    clr.bg_page,
+    'min-h-dvh',
+    props.whitespace ? 'py-triple' : null,
+  ], { ...props });
+  return props;
+};
+
+export const panel = (props: iPanel) => {
   props.class = o('bg-slate-100', { ...props });
   return props;
 };
