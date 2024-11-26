@@ -9,13 +9,14 @@
 - Moving out of Resin's CSS-in-JS philosophy, going for tailwind classes instead.
 - [x] Add all lunchbox styles possible to tailwind.config.ts. The colors are missing but will be added gradually.
 - [x] Add tailwind styles to a test component. Used the `<Main/>` component.
-- [ ] Define tailwind styles standard of usage.
+- [x] Define tailwind styles standard of usage.
 - [ ] Update all components to the new standard.
 - Added a new export patter in `./mod.ts` where this file exports a function that builds the component.
 - Added new style proof of concept to the `<Main/>` component inside the `setup-temp` project.
-- [ ] Add a `<Body/>` component for the `_app.tsx` route.
+- [x] Add a `<Body/>` component for the `_app.tsx` route.
 - [ ] Add tailwind dependency to lunchbox to export the config object.
-- Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard
+- Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard.
+- Added the concept of particles for Design Tokens, added the complete color palette, dark/light responsive color, grid settings, and text sizes.
 
 ## v1.0.6
 

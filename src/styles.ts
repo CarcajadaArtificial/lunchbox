@@ -3,17 +3,60 @@ import { css } from '../deps.ts';
 import { iMain } from '../components/Main.tsx';
 import { iHeader } from '../components/Header.tsx';
 import { iLayout } from '../components/Layout.tsx';
-import { iModule } from '../components/Module.tsx';
 
 const clr = {
-  bg_page: 'bg-page-50 dark:bg-d-page-50',
-  bg_panel: 'bg-panel dark:bg-d-panel',
+  neutral: {
+    txt: 'text-neutral dark:text-d-neutral',
+    txt_10: 'text-neutral-10 dark:text-d-neutral-10',
+    txt_25: 'text-neutral-25 dark:text-d-neutral-25',
+  },
+
+  brand: {
+    txt: 'text-brand-hc dark:text-d-brand-hc',
+    txt_25: 'text-brand-hc-25 dark:text-d-brand-hc-25',
+    txt_15: 'text-brand-hc-15 dark:text-d-brand-hc-15',
+    bg: 'bg-brand-lc dark:bg-d-brand-lc',
+    bg_60: 'bg-brand-lc-60 dark:bg-d-brand-lc-60',
+    bg_45: 'bg-brand-lc-45 dark:bg-d-brand-lc-45',
+    bg_30: 'bg-brand-lc-30 dark:bg-d-brand-lc-30',
+  },
+
+  error: {
+    txt: 'text-error-hc dark:text-error-d-hc',
+    bg: 'bg-error-lc dark:bg-error-d-lc',
+    bg_50: 'bg-error-lc-50 dark:bg-error-d-lc-50',
+  },
+
+  page: {
+    bg: 'bg-page dark:bg-d-page',
+    bg_50: 'bg-page-50 dark:bg-d-page-50',
+  },
+
+  panel: {
+    bg: 'bg-panel dark:bg-d-panel',
+    bg_50: 'bg-page-50 dark:bg-d-page-50',
+    bg_35: 'bg-page-35 dark:bg-d-page-35',
+    bg_15: 'bg-page-15 dark:bg-d-page-15',
+  },
 };
+
+const txt = {
+  display: `text-disp font-heading ${clr.brand.txt}`,
+  title: `text-title font-heading ${clr.brand.txt}`,
+  head: `text-head font-heading ${clr.brand.txt}`,
+  subhead: 'text-subhead',
+  base: 'text-base',
+  small: 'text-small',
+};
+
+const body = `font-base ${txt.base} ${clr.panel.bg} ${clr.neutral.txt}`;
+
+export const s = { clr, txt, body };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const main = (props: iMain) => {
   props.class = o([
-    clr.bg_page,
+    clr.page.bg_50,
     'min-h-dvh',
     props.whitespace ? 'py-triple' : null,
   ], { ...props });
@@ -24,7 +67,7 @@ export const main = (props: iMain) => {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const header = (props: iHeader) => {
   props.class = o([
-    clr.bg_panel,
+    clr.panel.bg,
     'py-triple',
     props.banner ? 'min-h-[90dvh]' : null,
   ], { ...props });
@@ -41,35 +84,6 @@ export const layout = (props: iLayout) => {
       'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
       'w-auto lg:w-min',
       'mx-[0.8503100088rem] md:mx-[calc(23.13871222%-134.488008342px)] lg:mx-auto',
-    ],
-    { ...props },
-  );
-
-  return props;
-};
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const module = (props: iModule) => {
-  props.class = o(
-    [
-      // deno-fmt-ignore
-      props.half === 'none' ? 'hidden'
-      : props.half === 'full' ? 'col-span-12'
-      : props.half === 'xl' ? 'col-span-10'
-      : props.half === 'lg' ? 'col-span-8'
-      : props.half === 'md' ? 'col-span-6'
-      : props.half === 'sm' ? 'col-span-4'
-      : props.half === 'xs' ? 'col-span-2'
-      : null,
-      // deno-fmt-ignore
-      props.size === 'none' ? 'md:hidden'
-      : props.size === 'full' ? 'md:col-span-12'
-      : props.size === 'xl' ? 'md:col-span-10'
-      : props.size === 'lg' ? 'md:col-span-8'
-      : props.size === 'md' ? 'md:col-span-6'
-      : props.size === 'sm' ? 'md:col-span-4'
-      : props.size === 'xs' ? 'md:col-span-2'
-      : null,
     ],
     { ...props },
   );
@@ -306,4 +320,77 @@ background-color: var(--clr-bg-panel);
   }
 }
 
+`;
+
+export const textStyles = css`
+  display: block;
+  line-break: loose;
+
+  .code, .link, .kbd {
+    line-break: anywhere;
+  }
+
+  &.text--display,
+  &.text--title,
+  &.text--heading {
+    color: var(--clr-txt-personality);
+
+    .kbd {
+      padding-left: 0.75ch;
+      padding-right: 0.75ch;
+      border-bottom-width: var(--s-quarter);
+    }
+  }
+
+  &.text--subheading,
+  &.text--paragraph {
+    .kbd {
+      padding-left: 1.25ch;
+      padding-right: 1.25ch;
+    }
+  }
+
+  &.text--small {
+    .kbd {
+      padding-left: 1.75ch;
+      padding-right: 1.75ch;
+    }
+  }
+
+  &.text--display,
+  &.text--title,
+  &.text--heading,
+  &.text--subheading {
+    font-weight: 600;
+  }
+
+  &.text--paragraph + .separator {
+    margin-top: var(--s-one-and-half);
+  }
+
+  &:not(.no-margins) {
+    &.text--display,
+    &.text--title,
+    &.text--heading,
+    &.text--subheading {
+      margin-bottom: var(--s-one-and-half);
+    }
+
+    &.text--paragraph {
+      + .text--display,
+      + .text--title,
+      + .text--heading,
+      + .text--subheading {
+        margin-top: var(--s-triple);
+      }
+
+      + .text--paragraph {
+        margin-top: var(--s-one-and-half);
+      }
+    }
+
+    &.text--small {
+      margin: var(--s-one-and-half) 0;
+    }
+  }
 `;

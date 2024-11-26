@@ -1,5 +1,7 @@
 import * as styles from './src/styles.ts';
 
+export const s = styles.s;
+
 import renderMain, {
   type iMain,
   setup as setupMain,
@@ -23,11 +25,3 @@ import renderLayout, {
 
 export const Layout = (props: Partial<iLayout>) =>
   renderLayout(styles.layout(setupLayout(props)));
-
-import renderModule, {
-  type iModule,
-  setup as setupModule,
-} from './components/Module.tsx';
-
-export const Module = (props: Partial<iModule>) =>
-  renderModule(styles.module(setupModule(props)));
