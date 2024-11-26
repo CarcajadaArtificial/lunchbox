@@ -17,6 +17,7 @@
 - [ ] Add tailwind dependency to lunchbox to export the config object.
 - Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard.
 - Added the concept of particles for Design Tokens, added the complete color palette, dark/light responsive color, grid settings, and text sizes.
+- Changed atoms from component to simple tailwind styles.
 
 ## v1.0.6
 

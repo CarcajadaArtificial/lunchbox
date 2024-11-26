@@ -1,10 +1,7 @@
-import { o } from './utils.ts';
+import { cn } from './utils.ts';
 import { css } from '../deps.ts';
-import { iMain } from '../components/Main.tsx';
-import { iHeader } from '../components/Header.tsx';
-import { iLayout } from '../components/Layout.tsx';
 
-const clr = {
+export const clr = {
   neutral: {
     txt: 'text-neutral dark:text-d-neutral',
     txt_10: 'text-neutral-10 dark:text-d-neutral-10',
@@ -41,55 +38,27 @@ const clr = {
 };
 
 const txt = {
-  display: `text-disp font-heading ${clr.brand.txt}`,
-  title: `text-title font-heading ${clr.brand.txt}`,
-  head: `text-head font-heading ${clr.brand.txt}`,
+  display: cn('font-heading', 'text-display', 'font-bold', clr.brand.txt),
+  title: cn('font-heading', 'text-title', 'font-bold', clr.brand.txt),
+  head: cn('font-heading', 'text-head', clr.brand.txt),
   subhead: 'text-subhead',
   base: 'text-base',
   small: 'text-small',
 };
 
-const body = `font-base ${txt.base} ${clr.panel.bg} ${clr.neutral.txt}`;
+const body = cn('font-base', txt.base, clr.panel.bg, clr.neutral.txt);
 
-export const s = { clr, txt, body };
+const main = cn(clr.page.bg, 'py-triple');
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const main = (props: iMain) => {
-  props.class = o([
-    clr.page.bg_50,
-    'min-h-dvh',
-    props.whitespace ? 'py-triple' : null,
-  ], { ...props });
+const layout = cn([
+  'grid',
+  'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
+  'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
+  'w-auto lg:w-min',
+  'mx-[0.8503100088rem] md:mx-[calc(23.13871222%-134.488008342px)] lg:mx-auto',
+]);
 
-  return props;
-};
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const header = (props: iHeader) => {
-  props.class = o([
-    clr.panel.bg,
-    'py-triple',
-    props.banner ? 'min-h-[90dvh]' : null,
-  ], { ...props });
-
-  return props;
-};
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-export const layout = (props: iLayout) => {
-  props.class = o(
-    [
-      'grid',
-      'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
-      'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
-      'w-auto lg:w-min',
-      'mx-[0.8503100088rem] md:mx-[calc(23.13871222%-134.488008342px)] lg:mx-auto',
-    ],
-    { ...props },
-  );
-
-  return props;
-};
+export const s = { txt, body, main, layout };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 export const effects = {
