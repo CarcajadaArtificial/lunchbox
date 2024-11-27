@@ -18,7 +18,7 @@
 - Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard.
 - Added the concept of particles for Design Tokens, added the complete color palette, dark/light responsive color, grid settings, and text sizes.
 - Changed atoms from component to simple tailwind styles.
-- [ ] Add button type panel variation in a panel bg parent.
+- [x] Add button type panel variation in a panel bg parent.
 - [ ] Add Link and Kbd as atoms.
 - Added the button and separator atoms.
 - Changed the header atom to area.

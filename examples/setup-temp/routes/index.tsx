@@ -20,6 +20,7 @@ export default function Home() {
             Try updating this message in the
             <code class="mx-2">./routes/index.tsx</code> file, and refresh.
           </p>
+          <button class={s.btn.panel}>Test</button>
         </div>
       </header>
       <main class={`${s.main} ${s.layout}`}>
@@ -31,7 +32,12 @@ export default function Home() {
       </main>
       <footer class={`${s.area} ${s.layout}`}>
         <div class="col-h-full md:col-full">
-          <a href="https://github.com/CarcajadaArtificial/lunchbox">GitHub</a>
+          <a
+            class={s.link}
+            href="https://github.com/CarcajadaArtificial/lunchbox"
+          >
+            GitHub
+          </a>
         </div>
       </footer>
     </>

@@ -118,7 +118,7 @@ const btn = {
     focus,
   ),
 
-  transparent: cn(
+  page: cn(
     clr.page.bg,
     'hocus:bg-panel-35 dark:hocus:bg-d-panel-35',
     btn_abstract,
@@ -147,7 +147,18 @@ const separator = cn(
   'h-one-and-half',
 );
 
-export const s = { txt, body, area, main, layout, btn, separator };
+const link = cn(
+  clr.neutral.txt,
+  'hocus:text-brand-hc dark:hocus:text-d-brand-hc',
+  'underline',
+  'cursor-pointer',
+  'rounded',
+  focus,
+);
+
+const kbd = cn();
+
+export const s = { txt, body, area, main, layout, btn, separator, link };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // export const effects = {
