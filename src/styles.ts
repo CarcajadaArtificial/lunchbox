@@ -6,6 +6,7 @@ export const clr = {
     txt_10: 'text-neutral-10 dark:text-d-neutral-10',
     txt_25: 'text-neutral-25 dark:text-d-neutral-25',
     border: 'border-neutral dark:border-d-neutral',
+    border_25: 'border-neutral-25 dark:border-d-neutral-25',
     outline: 'outline-neutral dark:outline-d-neutral',
   },
 
@@ -156,9 +157,17 @@ const link = cn(
   focus,
 );
 
-const kbd = cn();
+const kbd = cn(
+  clr.page.bg_50,
+  clr.neutral.border_25,
+  txt.small,
+  'relative bottom-eighth',
+  'py-quarter px-third',
+  'border-b-[1px]',
+  'rounded',
+);
 
-export const s = { txt, body, area, main, layout, btn, separator, link };
+export const s = { txt, body, area, main, layout, btn, separator, link, kbd };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // export const effects = {

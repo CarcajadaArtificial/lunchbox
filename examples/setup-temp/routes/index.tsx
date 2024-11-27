@@ -20,7 +20,6 @@ export default function Home() {
             Try updating this message in the
             <code class="mx-2">./routes/index.tsx</code> file, and refresh.
           </p>
-          <button class={s.btn.panel}>Test</button>
         </div>
       </header>
       <main class={`${s.main} ${s.layout}`}>
