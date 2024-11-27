@@ -137,4 +137,9 @@ export default {
     "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
     "../../src/styles.ts",
   ],
+  plugins: [
+    {
+      handler: ({ addVariant }) => addVariant("hocus", ["&:hover", "&:focus"]),
+    },
+  ],
 } satisfies Config;

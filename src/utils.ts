@@ -127,6 +127,7 @@ export function rMap<T>(
   return newRecord;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This function is a shorthand for the onClick and onKeyDown ("Enter" key) event listeners.
  *
@@ -149,4 +150,36 @@ export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
       }
     },
   };
+};
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * Appends a prefix to each Tailwind class in a given string of classes.
+ *
+ * @param tw_classes - A string containing space-separated Tailwind CSS classes.
+ * @param suffix - The string to append to each Tailwind class.
+ * @returns A new string where the suffix has been appended to each Tailwind class.
+ *
+ * @example
+ * ```typescript
+ * appendSuffixToClasses("bg-red-500 text-center p-4", "hover:");
+ * // Output: "hover:bg-red-500 hover:text-center hover:p-4"
+ * ```
+ */
+export const tw_prepend_each = (
+  tw_classes: string | string[],
+  prefix: string,
+) => {
+  if (typeof tw_classes === 'string') {
+    if (!tw_classes.trim()) {
+      return '';
+    }
+
+    tw_classes = tw_classes.split(/\s+/);
+  }
+
+  return tw_classes.reduce(
+    (result, className) => `${result} ${prefix}${className}`,
+    '',
+  );
 };
