@@ -1,10 +1,14 @@
-import { cn } from './utils.ts';
+import type { iCode } from '../components/Code.tsx';
+import { cn, forward, o } from './utils.ts';
 
 export const clr = {
   neutral: {
     txt: 'text-neutral dark:text-d-neutral',
     txt_10: 'text-neutral-10 dark:text-d-neutral-10',
     txt_25: 'text-neutral-25 dark:text-d-neutral-25',
+    bg: 'bg-neutral dark:bg-d-neutral',
+    bg_10: 'bg-neutral-10 dark:bg-d-neutral-10',
+    bg_25: 'bg-neutral-25 dark:bg-d-neutral-25',
     border: 'border-neutral dark:border-d-neutral',
     border_25: 'border-neutral-25 dark:border-d-neutral-25',
     outline: 'outline-neutral dark:outline-d-neutral',
@@ -167,7 +171,33 @@ const kbd = cn(
   'rounded',
 );
 
-export const s = { txt, body, area, main, layout, btn, separator, link, kbd };
+export const s = {
+  area,
+  body,
+  btn,
+  kbd,
+  layout,
+  link,
+  main,
+  separator,
+  txt,
+};
+
+export function Code(props: iCode) {
+  props.class = o([
+    clr.brand.txt,
+    'leading-[calc(100%-1px)]',
+  ], { ...props });
+  props.fwd = forward({
+    wrapper: [
+      clr.neutral.bg_10,
+      'inline',
+      'pt-[3px] pb-[1px] px-[0.5ch]',
+      'rounded',
+    ],
+  }, props.fwd);
+  return props;
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // export const effects = {

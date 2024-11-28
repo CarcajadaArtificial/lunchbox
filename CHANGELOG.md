@@ -22,6 +22,7 @@
 - [x] Add Link and Kbd as atoms.
 - Added the button and separator atoms.
 - Changed the header atom to area.
+- Added the `<Code/>` molecule.
 
 ## v1.0.6
 
