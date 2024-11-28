@@ -8,14 +8,14 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   return (
-    <div class="flex gap-8 py-6 items-center">
+    <div class="flex gap-8 py-one-and-half items-center">
       <button
         class={s.btn.panel}
         {...handleInteraction(() => props.count.value -= 1)}
       >
         -1
       </button>
-      <p class={`tabular-nums ${s.txt.subhead}`}>{props.count}</p>
+      <span class={`tabular-nums ${s.txt.subhead}`}>{props.count}</span>
       <button
         class={s.btn.panel}
         {...handleInteraction(() => props.count.value += 1)}

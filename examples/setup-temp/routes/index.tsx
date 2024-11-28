@@ -17,16 +17,21 @@ export default function Home() {
           />
           <h1 class={s.txt.title}>Welcome to Fresh</h1>
           <div>
-            <span>Try updating this message in the</span>{" "}
-            <Code>./routes/index.tsx</Code> <span>file, and refresh.</span>
+            <span>The code for this page is located here</span>{" "}
+            <Code>./routes/index.tsx</Code>{" "}
+            <span>and it is server side rendered.</span>
           </div>
         </div>
       </header>
       <main class={`${s.main} ${s.layout}`}>
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
           <h2 class={s.txt.head}>Counter</h2>
+          <div class="mt-half">
+            <span>The code for this island is located here</span>{" "}
+            <Code>./islands/Counter.tsx</Code>{" "}
+            <span>it is updated in the client.</span>
+          </div>
           <Counter count={count} />
-          <hr class={s.separator} />
         </div>
       </main>
       <footer class={`${s.area} ${s.layout}`}>
