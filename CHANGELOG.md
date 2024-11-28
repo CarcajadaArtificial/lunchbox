@@ -23,6 +23,13 @@
 - Added the button and separator atoms.
 - Changed the header atom to area.
 - Added the `<Code/>` molecule.
+- Added the list atoms.
+- [ ] Add the `<Markdown/>` molecule.
+- [ ] Add the `<Input/>`, `<TextArea/>`, `<Fieldset/>`, and `<Select/>` molecules.
+- [ ] Add the `<Icon/>` and `<Loader/>` components.
+- [ ] Add the `<Navigation/>` and `<Sidebar/>` components.
+- [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.
+- [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
 
 ## v1.0.6
 

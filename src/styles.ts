@@ -171,6 +171,17 @@ const kbd = cn(
   'rounded',
 );
 
+const list = {
+  unordered: cn(
+    'list-disc',
+    'ml-single my-quarter',
+  ),
+  ordered: cn(
+    'list-decimal',
+    'ml-single my-quarter',
+  ),
+};
+
 export const s = {
   area,
   body,
@@ -178,6 +189,7 @@ export const s = {
   kbd,
   layout,
   link,
+  list,
   main,
   separator,
   txt,
