@@ -25,7 +25,9 @@
 - Added the `<Code/>` molecule.
 - Added the list atoms.
 - [ ] Add the `<Markdown/>` molecule.
-- [ ] Add the `<Input/>`, `<TextArea/>`, `<Fieldset/>`, and `<Select/>` molecules.
+- [x] Add the `<Input/>` and `<TextArea/>` molecules.
+- [ ] Add the `<Input/>` component type variations.
+- [ ] Add the `<Fieldset/>`, and `<Select/>` molecules.
 - [ ] Add the `<Icon/>` and `<Loader/>` components.
 - [ ] Add the `<Navigation/>` and `<Sidebar/>` components.
 - [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.

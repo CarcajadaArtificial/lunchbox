@@ -29,10 +29,10 @@ export default {
       },
       error: {
         lc: {
-          DEFAULT: "#dbc4c5",
-          50: "#dbc4c580",
+          DEFAULT: "#573c4d",
+          50: "#573c4d80",
         },
-        hc: "#66050d",
+        hc: "#fa96c8",
       },
       page: {
         DEFAULT: "#eee6f2",
@@ -66,10 +66,10 @@ export default {
         },
         error: {
           lc: {
-            DEFAULT: "#573c4d",
-            50: "#573c4d80",
+            DEFAULT: "#dbc4c5",
+            50: "#dbc4c580",
           },
-          hc: "#fa96c8",
+          hc: "#66050d",
         },
         page: {
           DEFAULT: "#3d3640",

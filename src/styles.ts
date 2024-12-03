@@ -1,4 +1,6 @@
 import type { iCode } from '../components/Code.tsx';
+import type { iInput } from '../components/Input.tsx';
+import type { iTextArea } from '../components/TextArea.tsx';
 import { cn, forward, o } from './utils.ts';
 
 export const clr = {
@@ -99,7 +101,7 @@ const layout = cn(
   'grid',
   'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
   'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
-  'w-auto lg:w-min',
+  'w-auto lg:min-w-min',
   'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
 );
 
@@ -200,6 +202,7 @@ export function Code(props: iCode) {
     clr.brand.txt,
     'leading-[calc(100%-1px)]',
   ], { ...props });
+
   props.fwd = forward({
     wrapper: [
       clr.neutral.bg_10,
@@ -208,92 +211,69 @@ export function Code(props: iCode) {
       'rounded',
     ],
   }, props.fwd);
+
   return props;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// export const effects = {
-//   blur: css`
-//     filter: blur(var(--s-three-quarters));
-//   `,
+const input_abstract = {
+  input: ['rounded', 'px-half py-px'],
+  text: 'pl-half break-all',
+  label: 'w-full flex',
+  error: [clr.error.txt, 'pl-half'],
+  required: [clr.error.txt, 'pl-quarter'],
+  container: 'mb-single',
+};
 
-//   transparent: css`
-//     opacity: 0;
-//   `,
-// };
+export function Input(props: iInput) {
+  props.class = o([
+    props.error === '' ? clr.brand.bg_30 : clr.error.bg,
+    input_abstract.input,
+  ], { ...props });
 
-// // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// export const transition = {
-//   interaction: {
-//     outline: css`
-//       outline: 0;
-//       transition: outline 0.1s ease-in-out 0.4s;
+  props.fwd = forward({
+    text: input_abstract.text,
+    label: [input_abstract.label, 'flex-col'],
+    error: input_abstract.error,
+    required: input_abstract.required,
+    container: input_abstract.container,
+  }, props.fwd);
 
-//       &:focus,
-//       &:hover {
-//         outline: 2px solid var(--clr-txt-base);
-//         outline-offset: 2px;
-//       }
-//     `,
-//   },
-// };
+  return props;
+}
 
-// // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// export const animation = {
-//   spin: css`
-//     animation: spin 1s ease-in-out infinite;
-//     -webkit-animation: spin 1s ease-in-out infinite;
-//     -moz-animation: spin 1s ease-in-out infinite;
-//     -o-animation: spin 1s ease-in-out infinite;
-//     -ms-animation: spin 1s ease-in-out infinite;
+export function TextArea(props: iTextArea) {
+  props.class = o([
+    props.error === '' ? clr.brand.bg_30 : clr.error.bg,
+    ...input_abstract.input,
+  ], { ...props });
 
-//     @keyframes spin {
-//       0% {
-//         transform: rotate(0deg);
-//       }
-//       100% {
-//         transform: rotate(360deg);
-//       }
-//     }
-//   `,
+  props.fwd = forward({
+    text: input_abstract.text,
+    label: [input_abstract.label, 'flex-col'],
+    error: input_abstract.error,
+    required: input_abstract.required,
+    container: input_abstract.container,
+  }, props.fwd);
 
-//   float: css`
-//     position: relative;
-//     top: 0.25rem;
-//     animation: float 3s infinite;
-//     -webkit-animation: float 3s infinite;
-//     -moz-animation: float 3s infinite;
-//     -o-animation: float 3s infinite;
-//     -ms-animation: float 3s infinite;
+  return props;
+}
 
-//     @keyframes float {
-//       from {
-//         top: 0.25rem;
-//       }
+export function Select(props: iTextArea) {
+  props.class = o([
+    props.error === '' ? clr.brand.bg_30 : clr.error.bg,
+    ...input_abstract.input,
+  ], { ...props });
 
-//       50% {
-//         top: -0.25rem;
-//       }
+  props.fwd = forward({
+    text: input_abstract.text,
+    label: [input_abstract.label, 'flex-col'],
+    error: input_abstract.error,
+    required: input_abstract.required,
+    container: input_abstract.container,
+  }, props.fwd);
 
-//       to {
-//         top: 0.25rem;
-//       }
-//     }
-//   `,
-
-//   fadein: css`
-//     animation: fadeIn ease-in-out 0.2s;
-//     -webkit-animation: fadeIn ease-in-out 0.2s;
-//     -moz-animation: fadeIn ease-in-out 0.2s;
-//     -o-animation: fadeIn ease-in-out 0.2s;
-//     -ms-animation: fadeIn ease-in-out 0.2s;
-
-//     @keyframes fadeIn {
-//       0% { opacity: 0; }
-//       100% { opacity: 1; }
-//     }
-//   `,
-// };
+  return props;
+}
 
 // // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // export const inputStyles = css`
@@ -375,15 +355,6 @@ export function Code(props: iCode) {
 
 // `;
 
-// // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// export const relativeContainer = css`
-
-// position: relative;
-// max-height: 0;
-
-// `;
-
-// // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // export const panelStyles = css`
 
 // background-color: var(--clr-bg-panel);
@@ -442,182 +413,290 @@ export function Code(props: iCode) {
 
 // `;
 
-// export const textStyles = css`
-//   display: block;
-//   line-break: loose;
+// const inputStyles = {
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   box: css`
 
-//   .code, .link, .kbd {
-//     line-break: anywhere;
-//   }
+//     .input__abstract {
+//       padding: 1px var(--s-half);
 
-//   &.text--display,
-//   &.text--title,
-//   &.text--heading {
-//     color: var(--clr-txt-personality);
-
-//     .kbd {
-//       padding-left: 0.75ch;
-//       padding-right: 0.75ch;
-//       border-bottom-width: var(--s-quarter);
-//     }
-//   }
-
-//   &.text--subheading,
-//   &.text--paragraph {
-//     .kbd {
-//       padding-left: 1.25ch;
-//       padding-right: 1.25ch;
-//     }
-//   }
-
-//   &.text--small {
-//     .kbd {
-//       padding-left: 1.75ch;
-//       padding-right: 1.75ch;
-//     }
-//   }
-
-//   &.text--display,
-//   &.text--title,
-//   &.text--heading,
-//   &.text--subheading {
-//     font-weight: 600;
-//   }
-
-//   &.text--paragraph + .separator {
-//     margin-top: var(--s-one-and-half);
-//   }
-
-//   &:not(.no-margins) {
-//     &.text--display,
-//     &.text--title,
-//     &.text--heading,
-//     &.text--subheading {
-//       margin-bottom: var(--s-one-and-half);
-//     }
-
-//     &.text--paragraph {
-//       + .text--display,
-//       + .text--title,
-//       + .text--heading,
-//       + .text--subheading {
-//         margin-top: var(--s-triple);
-//       }
-
-//       + .text--paragraph {
-//         margin-top: var(--s-one-and-half);
+//       &::placeholder {
+//         color: var(--clr-txt-base);
+//         opacity: 0.75;
 //       }
 //     }
 
-//     &.text--small {
-//       margin: var(--s-one-and-half) 0;
-//     }
-//   }
-// `;
+//   `,
 
-// export const ButtonStyles = css`
-//   border-bottom-width: var(--s-eighth);
-//   border-color: transparent;
-//   border-left-width: 0;
-//   border-radius: var(--s-quarter);
-//   border-right-width: 0;
-//   border-style: solid;
-//   border-top-width: var(--s-eighth);
-//   cursor: pointer;
-//   margin-right: var(--s-eighth);
-//   max-width: max-content;
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   date: css`
 
-//   &.button {
-//     &__icon {
-//       display: inline;
-//       width: var(--s-single);
+//     input {
+//       padding: 0 var(--s-half);
+//       align-items: center;
+//       height: 26px;
+//       -webkit-text-fill-color: var(--clr-txt-base);
 //       position: relative;
-//       bottom: var(--s-eighth);
-//     }
+//       right: var(--s-half);
+//       bottom: 1px;
+//       box-sizing: border-box;
+//       font: var(--txt-paragraph) var(--font-base);
 
-//     &__padding {
-//       padding: var(--s-eighth) var(--s-five-eights);
-
-//       &--compact {
-//         border-bottom-width: 1px;
-//         border-top-width: 1px;
-//         padding: 0 var(--s-three-eights);
-//       }
-
-//       &--large {
-//         border-bottom-width: var(--s-quarter);
-//         border-top-width: var(--s-quarter);
-//         padding: var(--s-quarter) var(--s-one-and-half);
+//       &::-webkit-datetime-edit {
+//         font: var(--txt-paragraph) var(--font-base);
+//         padding: 0;
+//         height: 21px;
 //       }
 //     }
 
-//     &__style {
-//       background-color: var(--clr-bg-personality-45);
+//   `,
 
-//       &:hover, &:focus {
-//         background-color: var(--clr-bg-personality-60);
-//         border-bottom-color: var(--clr-bg-panel-35);
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   bool: css`
+
+//     padding: var(--s-eighth) var(--s-three-eights);
+//     border-radius: var(--s-quarter);
+
+//     &:hover {
+//       background-color: var(--clr-bg-panel-35);
+//     }
+
+//     &:has(.lbx-input[type=checkbox]:focus) {
+//       background-color: var(--clr-bg-panel-50);
+//     }
+
+//     input {
+//       width: var(--s-single);
+//       height: var(--s-single);
+//       margin-right: var(--s-half);
+//       display: grid;
+//       place-content: center;
+
+//       &[type='radio'] {
+//         border-radius: 50%;
 //       }
 
-//       &:active {
-//         background-color: var(--clr-bg-personality-30);
-//         border-top-color: var(--clr-personality);
-//         border-bottom-color: transparent;
+//       &:checked::before {
+//         content: '●';
+//       }
+//     }
+
+//     .input__label {
+//       grid-template-columns: var(--s-one-and-half) 1fr;
+//       align-items: center;
+
+//       .input__abstract {
+//         order: -1;
 //       }
 
-//       &--disabled {
-//         background-color: var(--clr-bg-panel);
-//         cursor: not-allowed;
-//         filter: opacity(0.4);
+//       &.input--has-icon {
+//         grid-template-columns: var(--s-one-and-half) var(--s-one-and-half) 1fr;
+
+//         .input__icon-container {
+//           grid-column: 2;
+//           grid-row: 1;
+//         }
+
+//         .text--paragraph {
+//           grid-column: 3;
+//         }
+//       }
+//     }
+
+//   `,
+
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   button: css`
+//     input {
+//       padding: var(--s-quarter) var(--s-five-eights);
+//       border-radius: var(--s-quarter);
+//       cursor: pointer;
+
+//       &[type='image'] {
+//         height: var(--s-one-and-half);
+//       }
+//     }
+
+//     .input__label {
+//       width: max-content;
+//     }
+
+//   `,
+
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   range: css`
+
+//     input {
+//       width: 100%;
+//       margin: var(--s-three-eights) 0;
+//       background-color: transparent;
+
+//       &::-webkit-slider-runnable-track {
+//         background: var(--clr-bg-personality);
+//         border-radius: var(--s-quarter);
+//         cursor: pointer;
+//         height: var(--s-three-quarters);
 //       }
 
-//       &--error {
+//       &::-webkit-slider-thumb {
+//         -webkit-appearance: none;
+//         margin-top: calc(-1 * var(--s-eighth));
+//         width: var(--s-single);
+//         height: var(--s-single);
+//         border-radius: var(--s-eighth);
+//         background: var(--clr-txt-personality);
+//         transition-property: height, width, margin-top, border-radius;
+//         transition-duration: 0.1s;
+//         transition-timing-function: ease-in-out;
+//       }
+
+//       &:hover,
+//       &:focus {
+//         &::-webkit-slider-runnable-track {
+//           background: var(--clr-bg-personality-30);
+//         }
+
+//         &::-webkit-slider-thumb {
+//           margin-top: calc(-1 * var(--s-three-eights));
+//           width: var(--s-one-and-half);
+//           height: var(--s-one-and-half);
+//           border-radius: var(--s-quarter);
+//         }
+//       }
+
+//       &::-moz-range-track {
+//         background: var(--clr-bg-personality);
+//         border-radius: var(--s-quarter);
+//         cursor: pointer;
+//         height: var(--s-three-quarters);
+//       }
+
+//       &::-moz-range-thumb {
+//         appearance: none;
+//         margin-top: calc(-1 * var(--s-eighth));
+//         width: var(--s-single);
+//         height: var(--s-single);
+//         border-radius: var(--s-eighth);
+//         background: var(--clr-txt-personality);
+//         border: 0;
+//         transition-property: height, width, margin-top, border-radius;
+//         transition-duration: 0.1s;
+//         transition-timing-function: ease-in-out;
+//       }
+
+//       &:hover,
+//       &:focus {
+//         &::-moz-range-track {
+//           background: var(--clr-bg-personality-30);
+//         }
+
+//         &::-moz-range-thumb {
+//           margin-top: calc(-1 * var(--s-three-eights));
+//           width: var(--s-one-and-half);
+//           height: var(--s-one-and-half);
+//           border-radius: var(--s-quarter);
+//         }
+//       }
+//     }
+
+//     .input__error-bg {
+//       &::-webkit-slider-runnable-track {
 //         background-color: var(--clr-bg-error);
+//       }
 
-//         &:hover, &:focus {
+//       &::-webkit-slider-thumb {
+//         background-color: var(--clr-txt-error);
+//       }
+
+//       &::-moz-range-track {
+//         background-color: var(--clr-bg-error);
+//       }
+
+//       &::-moz-range-thumb {
+//         background-color: var(--clr-txt-error);
+//       }
+
+//       &:hover,
+//       &:focus {
+//         &::-webkit-slider-runnable-track {
 //           background-color: var(--clr-bg-error-50);
-//           border-bottom-color: var(--clr-bg-error);
 //         }
 
-//         &:active {
-//           background-color: var(--clr-bg-error);
-//           border-top-color: var(--clr-bg-error-50);
-//           border-bottom-color: transparent;
-//         }
-//       }
-
-//       &--transparent {
-//         background-color: var(--clr-bg-page);
-
-//         &:hover, &:focus {
-//           background-color: var(--clr-bg-panel-35);
-//           border-bottom-color: var(--clr-txt-personality-10);
-//         }
-
-//         &:active {
-//           background-color: var(--clr-bg-panel-50);
-//           border-top-color: var(--clr-bg-panel);
-//           border-bottom-color: transparent;
-//         }
-//       }
-
-//       &--panel {
-//         background-color: var(--clr-bg-panel);
-
-//         &:hover, &:focus {
-//           background-color: var(--clr-bg-panel-50);
-//           border-bottom-color: var(--clr-bg-panel-15);
-//         }
-
-//         &:active {
-//           background-color: var(--clr-bg-panel);
-//           border-bottom-color: transparent;
+//         &::-moz-range-track {
+//           background-color: var(--clr-bg-error-50);
 //         }
 //       }
 //     }
-//   }
 
-//   .icon {
-//     margin-bottom: var(--s-quarter);
-//   }
-// `;
+//   `,
+
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   color: css`
+
+//     input {
+//       width: 100%;
+//       height: var(--s-one-and-half);
+//       cursor: pointer;
+
+//       &::-webkit-color-swatch-wrapper {
+//         padding: 0;
+//       }
+
+//       &::-webkit-color-swatch {
+//         border: 0;
+//         border-radius: var(--s-quarter);
+//       }
+
+//       &::-moz-color-swatch {
+//         border: 0;
+//         border-radius: var(--s-quarter);
+//       }
+//     }
+
+//   `,
+
+//   //   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+//   file: css`
+
+//     .input__label {
+//       cursor: pointer;
+//     }
+
+//   `,
+// };
+
+// // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// /**
+//  * This function determines the correct class name variation style for an input component depending on
+//  * the attribute type. This is a quick rundown of every variation:
+//  * - `box`: The default box input, this style is shared with the textarea and select components.
+//  * - `button`: For inputs that have button shape.
+//  * - `bool`: Boolean input types that includes radio and checkbox.
+//  * - `date`: Some date/time input types have styles specific to the browser or OS, this class name
+//  *   standarizes them to look like the `box` variation.
+//  * - `range`: Specific of the range type.
+//  * - `color`: Specific of the color type.
+//  * - `file`: Specific of the file type.
+//  *
+//  * @param {string} type
+//  *  The input type attribute. (`<input type="radio">`)
+//  *
+//  * @returns {string}
+//  *  The corresponding class name of the input variation.
+//  */
+// export default (type?: string): string | string[] =>
+//   type === undefined
+//     ? ['input--box', inputStyles.box]
+//     : ['button', 'image', 'reset', 'submit'].includes(type)
+//     ? [inputStyles.button]
+//     : ['radio', 'checkbox'].includes(type)
+//     ? [inputStyles.bool]
+//     : ['datetime-local', 'date', 'month', 'time', 'week'].includes(type)
+//     ? ['input--box', inputStyles.box, inputStyles.date]
+//     : type === 'range'
+//     ? [inputStyles.range]
+//     : type === 'color'
+//     ? [inputStyles.color]
+//     : type === 'file'
+//     ? [inputStyles.file]
+//     : ['input--box', inputStyles.box];

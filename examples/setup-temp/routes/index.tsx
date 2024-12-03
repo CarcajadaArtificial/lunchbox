@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import { Code, s } from "../../../mod.ts";
+import { Code, Input, s, TextArea } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
@@ -32,6 +32,16 @@ export default function Home() {
             <span>it is updated in the client.</span>
           </div>
           <Counter count={count} />
+        </div>
+        <div class="col-h-full md:col-sm">
+          <Input
+            label="dfiuasdhfiuhaidlshfuhdslifhilahsduhfilahdslufhdsdfasdfasdfasdfdsa"
+            required
+          />
+          <TextArea label="label" required />
+          <Input label="label" error="error" required />
+          <Input type="checkbox" label="label" required />
+          <Input type="checkbox" label="label" />
         </div>
       </main>
       <footer class={`${s.area} ${s.layout}`}>
