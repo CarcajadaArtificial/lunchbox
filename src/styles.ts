@@ -1,6 +1,5 @@
 import type { iCode } from '../components/Code.tsx';
 import type { iInput } from '../components/Input.tsx';
-import type { iTextArea } from '../components/TextArea.tsx';
 import { cn, forward, o } from './utils.ts';
 
 export const clr = {
@@ -44,6 +43,19 @@ export const clr = {
     bg_15: 'bg-page-15 dark:bg-d-page-15',
   },
 };
+
+export const area = cn(
+  clr.panel.bg,
+  'py-triple',
+);
+
+export const layout = cn(
+  'grid',
+  'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
+  'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
+  'w-auto lg:min-w-min',
+  'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
+);
 
 const focus = cn(
   clr.neutral.outline,
@@ -90,19 +102,6 @@ const main = cn(
   clr.page.bg,
   'py-triple',
   'w-full',
-);
-
-const area = cn(
-  clr.panel.bg,
-  'py-triple',
-);
-
-const layout = cn(
-  'grid',
-  'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
-  'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
-  'w-auto lg:min-w-min',
-  'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
 );
 
 const btn_abstract = cn(
@@ -184,32 +183,44 @@ const list = {
   ),
 };
 
+const header = cn(area, layout, 'min-h-banner');
+
+const footer = cn(area, layout);
+
+const code = {
+  content: cn(
+    clr.brand.txt,
+    'leading-[calc(100%-1px)]',
+  ),
+
+  inline: cn(
+    clr.neutral.bg_10,
+    'inline',
+    'pt-[3px] pb-[1px] px-[0.5ch]',
+    'rounded',
+  ),
+  // block: cn(),
+};
+
 export const s = {
-  area,
   body,
+  header,
+  footer,
   btn,
   kbd,
-  layout,
   link,
   list,
   main,
   separator,
   txt,
+  code,
 };
 
 export function Code(props: iCode) {
-  props.class = o([
-    clr.brand.txt,
-    'leading-[calc(100%-1px)]',
-  ], { ...props });
+  props.class = o([], { ...props });
 
   props.fwd = forward({
-    wrapper: [
-      clr.neutral.bg_10,
-      'inline',
-      'pt-[3px] pb-[1px] px-[0.5ch]',
-      'rounded',
-    ],
+    wrapper: [],
   }, props.fwd);
 
   return props;
@@ -228,40 +239,6 @@ export function Input(props: iInput) {
   props.class = o([
     props.error === '' ? clr.brand.bg_30 : clr.error.bg,
     input_abstract.input,
-  ], { ...props });
-
-  props.fwd = forward({
-    text: input_abstract.text,
-    label: [input_abstract.label, 'flex-col'],
-    error: input_abstract.error,
-    required: input_abstract.required,
-    container: input_abstract.container,
-  }, props.fwd);
-
-  return props;
-}
-
-export function TextArea(props: iTextArea) {
-  props.class = o([
-    props.error === '' ? clr.brand.bg_30 : clr.error.bg,
-    ...input_abstract.input,
-  ], { ...props });
-
-  props.fwd = forward({
-    text: input_abstract.text,
-    label: [input_abstract.label, 'flex-col'],
-    error: input_abstract.error,
-    required: input_abstract.required,
-    container: input_abstract.container,
-  }, props.fwd);
-
-  return props;
-}
-
-export function Select(props: iTextArea) {
-  props.class = o([
-    props.error === '' ? clr.brand.bg_30 : clr.error.bg,
-    ...input_abstract.input,
   ], { ...props });
 
   props.fwd = forward({
@@ -700,3 +677,52 @@ export function Select(props: iTextArea) {
 //     : type === 'file'
 //     ? [inputStyles.file]
 //     : ['input--box', inputStyles.box];
+
+// Fieldset styles
+// export const styles = css`
+
+// &.fieldset {
+//   &__container {
+//     max-width: 100%;
+//     width: 24rem;
+//   }
+
+//   &--max-width {
+//     width: 100%;
+//     max-width: 100%;
+//   }
+
+// }
+
+// .fieldset {
+//   position: relative;
+//   right: var(--s-half);
+//   padding: var(--s-half);
+//   background-color: var(--clr-bg-panel-15);
+//   border-radius: var(--s-quarter);
+
+//   &:hover, &:has(:hover), &:has(:focus) {
+//     background-color: var(--clr-bg-panel-50);
+//   }
+
+//   &__input-container {
+//     width: 100%;
+//   }
+// }
+
+// `;
+
+// Select styles
+// export const styles = css`
+
+// padding: 0 var(--s-half);
+// height: var(--s-one-and-half);
+// -webkit-appearance: none;
+// -moz-appearance: none;
+// appearance: none;
+
+// &:disabled {
+//   opacity: 1;
+// }
+
+// `;

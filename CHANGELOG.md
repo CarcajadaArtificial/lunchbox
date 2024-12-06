@@ -32,6 +32,7 @@
 - [ ] Add the `<Navigation/>` and `<Sidebar/>` components.
 - [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.
 - [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
+- Refactored the atom structure
 
 ## v1.0.6
 

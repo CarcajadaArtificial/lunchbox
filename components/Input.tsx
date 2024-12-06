@@ -62,3 +62,5 @@ export default function (props: Partial<iInput>) {
     </div>
   );
 }
+
+export const x = {};

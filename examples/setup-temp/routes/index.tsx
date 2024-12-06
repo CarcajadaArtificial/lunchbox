@@ -1,12 +1,12 @@
 import { useSignal } from "@preact/signals";
-import { Code, Input, s, TextArea } from "../../../mod.ts";
+import { area, Code, Input, layout, s, TextArea } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
   const count = useSignal(3);
   return (
     <>
-      <header class={`${s.area} ${s.layout} min-h-banner`}>
+      <header class={`${area} ${layout} min-h-banner`}>
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
           <img
             class="my-6"
@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main class={`${s.main} ${s.layout}`}>
+      <main class={`${s.main} ${layout}`}>
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
           <h2 class={s.txt.head}>Counter</h2>
           <div class="mt-half">
@@ -44,7 +44,7 @@ export default function Home() {
           <Input type="checkbox" label="label" />
         </div>
       </main>
-      <footer class={`${s.area} ${s.layout}`}>
+      <footer class={`${area} ${layout}`}>
         <div class="col-h-full md:col-full">
           <a
             class={s.link}
