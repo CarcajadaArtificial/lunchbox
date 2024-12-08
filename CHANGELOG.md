@@ -26,13 +26,14 @@
 - Added the list atoms.
 - [ ] Add the `<Markdown/>` molecule.
 - [x] Add the `<Input/>` and `<TextArea/>` molecules.
-- [ ] Add the `<Input/>` component type variations.
-- [ ] Add the `<Fieldset/>`, and `<Select/>` molecules.
+- [x] Add the `<Input/>` component type variations.
+- [x] Add the `<Fieldset/>`, and `<Select/>` molecules.
 - [ ] Add the `<Icon/>` and `<Loader/>` components.
 - [ ] Add the `<Navigation/>` and `<Sidebar/>` components.
 - [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.
 - [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
 - Refactored the atom structure
+- Added the InputCombo components.
 
 ## v1.0.6
 

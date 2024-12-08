@@ -1,5 +1,5 @@
 import { type PageProps } from "$fresh/server.ts";
-import { s } from "../../../mod.ts";
+import { Page } from "../../../mod.ts";
 
 export default function App({ Component }: PageProps) {
   return (
@@ -10,9 +10,9 @@ export default function App({ Component }: PageProps) {
         <title>setup-temp</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body class={s.body}>
+      <Page.Body>
         <Component />
-      </body>
+      </Page.Body>
     </html>
   );
 }

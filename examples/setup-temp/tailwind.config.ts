@@ -32,7 +32,7 @@ export default {
           DEFAULT: "#573c4d",
           50: "#573c4d80",
         },
-        hc: "#fa96c8",
+        hc: "#66050d",
       },
       page: {
         DEFAULT: "#eee6f2",
@@ -69,7 +69,7 @@ export default {
             DEFAULT: "#dbc4c5",
             50: "#dbc4c580",
           },
-          hc: "#66050d",
+          hc: "#fa96c8",
         },
         page: {
           DEFAULT: "#3d3640",
@@ -107,7 +107,8 @@ export default {
         "banner": "90dvh",
       },
       gridTemplateColumns: {
-        lg: "repeat(12, minmax(4.5rem, 4.5rem))",
+        md: "repeat(12, minmax(4.5rem, 4.5rem))",
+        lg: "repeat(12, 1fr)",
       },
       gridColumn: {
         full: "span 12 / span 12",
@@ -136,6 +137,7 @@ export default {
   content: [
     "{routes,islands,components}/**/*.{ts,tsx,js,jsx}",
     "../../src/styles.ts",
+    "../../src/atoms.tsx",
   ],
   plugins: [
     {

@@ -1,12 +1,13 @@
 import { useSignal } from "@preact/signals";
-import { area, Code, Input, layout, s, TextArea } from "../../../mod.ts";
+import { clr, Code, Link, Page, Text } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
+import Form from "../islands/Form.tsx";
 
 export default function Home() {
   const count = useSignal(3);
   return (
     <>
-      <header class={`${area} ${layout} min-h-banner`}>
+      <Page.Header>
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
           <img
             class="my-6"
@@ -15,45 +16,37 @@ export default function Home() {
             height="128"
             alt="the Fresh logo: a sliced lemon dripping with juice"
           />
-          <h1 class={s.txt.title}>Welcome to Fresh</h1>
+          <Text.Title>Welcome to Fresh</Text.Title>
           <div>
             <span>The code for this page is located here</span>{" "}
-            <Code>./routes/index.tsx</Code>{" "}
+            <Code.Inline>
+              <Code.Content>./routes/index.tsx</Code.Content>
+            </Code.Inline>{" "}
             <span>and it is server side rendered.</span>
           </div>
         </div>
-      </header>
-      <main class={`${s.main} ${layout}`}>
+      </Page.Header>
+      <Page.Main>
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
-          <h2 class={s.txt.head}>Counter</h2>
+          <Text.Head>Counter</Text.Head>
           <div class="mt-half">
             <span>The code for this island is located here</span>{" "}
-            <Code>./islands/Counter.tsx</Code>{" "}
+            <Code.Inline>
+              <Code.Content>./islands/Counter.tsx</Code.Content>
+            </Code.Inline>{" "}
             <span>it is updated in the client.</span>
           </div>
           <Counter count={count} />
         </div>
-        <div class="col-h-full md:col-sm">
-          <Input
-            label="dfiuasdhfiuhaidlshfuhdslifhilahsduhfilahdslufhdsdfasdfasdfasdfdsa"
-            required
-          />
-          <TextArea label="label" required />
-          <Input label="label" error="error" required />
-          <Input type="checkbox" label="label" required />
-          <Input type="checkbox" label="label" />
+        <div class={`col-h-full md:col-sm p-single rounded ${clr.panel.bg}`}>
+          <Form />
         </div>
-      </main>
-      <footer class={`${area} ${layout}`}>
+      </Page.Main>
+      <Page.Footer>
         <div class="col-h-full md:col-full">
-          <a
-            class={s.link}
-            href="https://github.com/CarcajadaArtificial/lunchbox"
-          >
-            GitHub
-          </a>
+          <Link>GitHub</Link>
         </div>
-      </footer>
+      </Page.Footer>
     </>
   );
 }

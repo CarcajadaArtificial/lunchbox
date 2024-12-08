@@ -1,139 +1,527 @@
-import { s } from './styles.ts';
 import { JSX, Ref } from 'preact';
+import { cn } from './utils.ts';
+
+export const clr = {
+  neutral: {
+    txt: 'text-neutral dark:text-d-neutral',
+    txt_10: 'text-neutral-10 dark:text-d-neutral-10',
+    txt_25: 'text-neutral-25 dark:text-d-neutral-25',
+    bg: 'bg-neutral dark:bg-d-neutral',
+    bg_10: 'bg-neutral-10 dark:bg-d-neutral-10',
+    bg_25: 'bg-neutral-25 dark:bg-d-neutral-25',
+    border: 'border-neutral dark:border-d-neutral',
+    border_25: 'border-neutral-25 dark:border-d-neutral-25',
+    outline: 'outline-neutral dark:outline-d-neutral',
+  },
+
+  brand: {
+    txt: 'text-brand-hc dark:text-d-brand-hc',
+    txt_25: 'text-brand-hc-25 dark:text-d-brand-hc-25',
+    txt_15: 'text-brand-hc-15 dark:text-d-brand-hc-15',
+    bg: 'bg-brand-lc dark:bg-d-brand-lc',
+    bg_60: 'bg-brand-lc-60 dark:bg-d-brand-lc-60',
+    bg_45: 'bg-brand-lc-45 dark:bg-d-brand-lc-45',
+    bg_30: 'bg-brand-lc-30 dark:bg-d-brand-lc-30',
+  },
+
+  error: {
+    txt: 'text-error-hc dark:text-error-d-hc',
+    bg: 'bg-error-lc dark:bg-error-d-lc',
+    bg_50: 'bg-error-lc-50 dark:bg-error-d-lc-50',
+  },
+
+  page: {
+    bg: 'bg-page dark:bg-d-page',
+    bg_50: 'bg-page-50 dark:bg-d-page-50',
+  },
+
+  panel: {
+    bg: 'bg-panel dark:bg-d-panel',
+    bg_50: 'bg-page-50 dark:bg-d-page-50',
+    bg_35: 'bg-page-35 dark:bg-d-page-35',
+    bg_15: 'bg-page-15 dark:bg-d-page-15',
+  },
+};
+
+export const area = cn(
+  clr.panel.bg,
+  'py-triple',
+);
+
+export const layout = cn(
+  'grid',
+  'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
+  'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
+  'w-auto lg:min-w-min',
+  'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
+);
+
+export const focus = cn(
+  clr.neutral.outline,
+  'focus:outline-1',
+  'outline-offset-2',
+);
+
+export const btn = cn(
+  'px-three-quarters py-quarter',
+  'rounded',
+);
+
+export const required = cn(
+  'after:content-["*"] after:font-mono',
+  'after:text-error-hc, dark:after:text-d-error-hc',
+  'after:ml-quarter',
+);
 
 export type iAtom<T extends EventTarget = HTMLElement> =
   & JSX.HTMLAttributes<T>
   & Partial<ARIAMixin>
   & Partial<GlobalEventHandlers>
   & {
-    nostyle?: boolean;
     ref?: Ref<T>;
   };
 
-/* deno-fmt-ignore */
+/** */
 export const Text = {
   /** */
-  Display:  (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.display} {...p} />,
+  Display: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      {...p}
+      class={cn(
+        'font-heading',
+        'text-display',
+        'font-bold',
+        clr.brand.txt,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Title:    (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.title} {...p} />,
+  Title: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      {...p}
+      class={cn(
+        'font-heading',
+        'text-title',
+        'font-bold',
+        clr.brand.txt,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Head:     (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.head} {...p} />,
+  Head: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      {...p}
+      class={cn(
+        'font-heading',
+        'text-head',
+        clr.brand.txt,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Subhead:  (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.subhead} {...p} />,
+  Subhead: (p: iAtom<HTMLSpanElement>) => (
+    <span {...p} class={cn('txt-subhead', p.class)} />
+  ),
 
   /** */
-  Base:     (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.base} {...p} />,
+  Base: (p: iAtom<HTMLSpanElement>) => (
+    <span {...p} class={cn('txt-base', p.class)} />
+  ),
 
   /** */
-  Small:    (p: iAtom<HTMLSpanElement>) =>
-              <span class={s.txt.small} {...p} />,
-}
+  Small: (p: iAtom<HTMLSpanElement>) => (
+    <span {...p} class={cn('txt-small', p.class)} />
+  ),
+};
 
-/* deno-fmt-ignore */
+/** */
 export const Page = {
   /** */
-  Body:   (p: iAtom<HTMLBodyElement>) =>
-            <body class={s.body} {...p} />,
+  Body: (p: iAtom<HTMLBodyElement>) => (
+    <body
+      {...p}
+      class={cn(
+        'font-base',
+        'txt-base',
+        clr.panel.bg,
+        clr.neutral.txt,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Main:   (p: iAtom) =>
-            <main class={s.main} {...p} />,
+  Main: (p: iAtom) => (
+    <main
+      {...p}
+      class={cn(
+        clr.page.bg,
+        layout,
+        'py-triple',
+        'w-full',
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Header: (p: iAtom) =>
-            <header class={s.header} {...p} />,
+  Header: (p: iAtom) => (
+    <header
+      {...p}
+      class={cn(
+        area,
+        layout,
+        'min-h-banner',
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Footer: (p: iAtom) =>
-            <footer class={s.footer} {...p} />,
-}
+  Footer: (p: iAtom) => (
+    <footer
+      {...p}
+      class={cn(
+        area,
+        layout,
+        p.class,
+      )}
+    />
+  ),
+};
 
-/* deno-fmt-ignore */
+/** */
 export const Button = {
   /** */
-  Brand:  (p: iAtom<HTMLButtonElement>) =>
-            <button class={s.btn.brand} {...p} />,
+  Brand: (p: iAtom<HTMLButtonElement>) => (
+    <button
+      {...p}
+      class={cn(
+        clr.brand.bg_45,
+        'hocus:bg-brand-lc-60 dark:hocus:bg-d-brand-lc-60',
+        btn,
+        focus,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Page:   (p: iAtom<HTMLButtonElement>) =>
-            <button class={s.btn.page} {...p} />,
+  Page: (p: iAtom<HTMLButtonElement>) => (
+    <button
+      {...p}
+      class={cn(
+        clr.page.bg,
+        'hocus:bg-panel-35 dark:hocus:bg-d-panel-35',
+        btn,
+        focus,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Panel:  (p: iAtom<HTMLButtonElement>) =>
-            <button class={s.btn.panel} {...p} />,
+  Panel: (p: iAtom<HTMLButtonElement>) => (
+    <button
+      {...p}
+      class={cn(
+        clr.panel.bg,
+        'hocus:bg-panel-50 dark:hocus:bg-d-panel-50',
+        btn,
+        focus,
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Error:  (p: iAtom<HTMLButtonElement>) =>
-            <button class={s.btn.error} {...p} />,
-}
+  Error: (p: iAtom<HTMLButtonElement>) => (
+    <button
+      {...p}
+      class={cn(
+        clr.error.bg,
+        'hocus:bg-error-lc-50 dark:hocus:bg-d-error-lc-50',
+        btn,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+};
 
-/* deno-fmt-ignore */
+/** */
 export const List = {
   /** */
-  Unordered:  (p: iAtom<HTMLUListElement>) =>
-                <ul class={s.list.unordered} {...p} />,
+  Unordered: (p: iAtom<HTMLUListElement>) => (
+    <ul
+      {...p}
+      class={cn(
+        'list-disc',
+        'ml-single my-quarter',
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Ordered:    (p: iAtom<HTMLUListElement>) =>
-                <ul class={s.list.ordered} {...p} />,
-}
+  Ordered: (p: iAtom<HTMLUListElement>) => (
+    <ul
+      {...p}
+      class={cn(
+        'list-decimal',
+        'ml-single my-quarter',
+        p.class,
+      )}
+    />
+  ),
+};
 
-/* deno-fmt-ignore */
+/** */
 export const Code = {
   /** */
-  Content:  (p: iAtom) =>
-              <code class={s.code.content} {...p} />,
+  Content: (p: iAtom) => (
+    <code
+      {...p}
+      class={cn(
+        clr.brand.txt,
+        'leading-[calc(100%-1px)]',
+        p.class,
+      )}
+    />
+  ),
 
   /** */
-  Inline:   (p: iAtom<HTMLDivElement>) =>
-              <div class={s.code.inline} {...p} />,
-
+  Inline: (p: iAtom<HTMLDivElement>) => (
+    <div
+      {...p}
+      class={cn(
+        clr.neutral.bg_10,
+        'inline',
+        'pt-[3px] pb-[1px] px-[0.5ch]',
+        'rounded',
+        p.class,
+      )}
+    />
+  ),
   // Block: (p:  iAtom<HTMLDivElement>) => <div class={s.code.block} {...p} />
 };
 
-/* deno-fmt-ignore */
+/** */
 export const Input = {
-  // Field:
-  // Radio:
-  // Check:
-  // Container:
-  // Label:
-  // Error:
-  // File:
-  // Range:
-  // Color:
-  // Form:
-  // Submit:
-  // Fieldset:
-  // Select:
-  // Textarea:
-}
+  /** */
+  Field: (p: iAtom<HTMLInputElement>) => (
+    <input
+      {...p}
+      class={cn(
+        'rounded',
+        'px-half py-px',
+        clr.panel.bg_50,
+        focus,
+        p.class,
+      )}
+    />
+  ),
 
-/* deno-fmt-ignore */
+  /** */
+  Label: (p: iAtom<HTMLLabelElement>) => (
+    <label
+      {...p}
+      class={cn('w-full flex', p.class)}
+    />
+  ),
+
+  /** */
+  Container: (p: iAtom<HTMLDivElement>) => (
+    <div
+      {...p}
+      class={cn('mb-half', p.class)}
+    />
+  ),
+
+  /** */
+  Text: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      {...p}
+      class={cn(
+        'pl-half break-all',
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Error: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      {...p}
+      class={cn(clr.error.txt, 'pl-half', p.class)}
+    />
+  ),
+
+  /** */
+  Required: (p: iAtom<HTMLSpanElement>) => (
+    <span
+      title={'Required'}
+      {...p}
+      class={cn(
+        clr.error.txt,
+        'font-mono',
+        'pl-quarter',
+        p.class,
+      )}
+    >
+      {p.children ? p.children : '*'}
+    </span>
+  ),
+
+  /** */
+  Radio: (p: iAtom<HTMLInputElement>) => (
+    <input
+      type='radio'
+      {...p}
+      class={cn(
+        'rounded-full',
+        'h-single w-single',
+        'checked:before:content-["●"]',
+        'grid place-content-center',
+        clr.brand.bg_30,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Fieldset: (p: iAtom<HTMLFieldSetElement>) => (
+    <fieldset
+      {...p}
+      class={cn(
+        'px-half pb-half pt-quarter mb-half',
+        clr.panel.bg_50,
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Legend: (p: iAtom<HTMLLegendElement>) => (
+    <legend
+      {...p}
+      class={cn(p.class)}
+    />
+  ),
+
+  /** */
+  Check: (p: iAtom<HTMLInputElement>) => (
+    <input
+      type='checkbox'
+      {...p}
+      class={cn(
+        'rounded',
+        'h-single w-single',
+        'checked:before:content-["✓"]',
+        'grid place-content-center',
+        clr.brand.bg_30,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Textarea: (p: iAtom<HTMLTextAreaElement>) => (
+    <textarea
+      {...p}
+      class={cn(
+        'rounded',
+        'px-half py-px',
+        clr.panel.bg_50,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Select: (p: iAtom<HTMLSelectElement>) => (
+    <select
+      {...p}
+      class={cn(
+        'rounded',
+        'px-half py-px',
+        'h-one-and-half',
+        clr.panel.bg_50,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+
+  /** */
+  Submit: (p: iAtom<HTMLInputElement>) => (
+    <input
+      type='submit'
+      {...p}
+      class={cn(
+        clr.brand.bg_45,
+        'hocus:bg-brand-lc-60 dark:hocus:bg-d-brand-lc-60',
+        'mt-half mx-auto',
+        btn,
+        focus,
+        p.class,
+      )}
+    />
+  ),
+};
+
 /** */
-export const Separator =
-  (p: iAtom<HTMLHRElement>) =>
-    <hr class={s.separator} {...p} />
+export const Separator = (p: iAtom<HTMLHRElement>) => (
+  <hr
+    class={cn(
+      clr.neutral.border,
+      'w-full',
+      'mt-one-and-half',
+      'h-one-and-half',
+    )}
+    {...p}
+  />
+);
 
-/* deno-fmt-ignore */
 /** */
-export const Link =
-  (p: iAtom<HTMLAnchorElement>) =>
-    <a class={s.link} {...p} />
+export const Link = (p: iAtom<HTMLAnchorElement>) => (
+  <a
+    class={cn(
+      clr.neutral.txt,
+      'hocus:text-brand-hc dark:hocus:text-d-brand-hc',
+      'underline',
+      'cursor-pointer',
+      'rounded',
+      focus,
+    )}
+    {...p}
+  />
+);
 
-/* deno-fmt-ignore */
 /** */
-export const Kbd =
-  (p: iAtom) =>
-    <kbd class={s.kbd} {...p} />
+export const Kbd = (p: iAtom) => (
+  <kbd
+    class={cn(
+      clr.page.bg_50,
+      clr.neutral.border_25,
+      'txt-small',
+      'relative bottom-eighth',
+      'py-quarter px-third',
+      'border-b-[1px]',
+      'rounded',
+    )}
+    {...p}
+  />
+);
 
-// export const Pattern =
 // export const Sidebar =
+// export const Navigation =

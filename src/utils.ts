@@ -162,7 +162,7 @@ export const handleInteraction = (cb: null | ((ev: Event) => void)) => {
  *
  * @example
  * ```typescript
- * appendSuffixToClasses("bg-red-500 text-center p-4", "hover:");
+ * tw_prepend_each("bg-red-500 text-center p-4", "hover:");
  * // Output: "hover:bg-red-500 hover:text-center hover:p-4"
  * ```
  */
