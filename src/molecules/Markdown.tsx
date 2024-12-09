@@ -1,4 +1,4 @@
-import { iAtom } from '../atoms.tsx';
+import { iAtom, Markdown } from '../atoms.tsx';
 import { apDef } from '../../deps.ts';
 import { render, RenderOptions } from 'jsr:@deno/gfm@^0.10.0';
 
@@ -25,5 +25,11 @@ function setup(props: Partial<iMarkdown>) {
 
 export default function (props: Partial<iMarkdown>) {
   const p = setup(props);
-  return <div dangerouslySetInnerHTML={{ __html: p.content }} {...p.fwd} />;
+
+  return (
+    <Markdown
+      dangerouslySetInnerHTML={{ __html: p.content }}
+      {...p.fwd}
+    />
+  );
 }

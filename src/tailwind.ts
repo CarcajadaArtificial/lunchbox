@@ -1,4 +1,5 @@
 import { type Config, PluginAPI } from 'tailwindcss/config';
+import typographyPlugin from 'npm:@tailwindcss/typography@0.5.15';
 
 export default {
   theme: {
@@ -135,6 +136,7 @@ export default {
     },
   },
   plugins: [
+    typographyPlugin,
     {
       handler: ({ addVariant }: PluginAPI) =>
         addVariant('hocus', ['&:hover', '&:focus']),

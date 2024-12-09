@@ -1,5 +1,6 @@
 import { JSX, Ref } from 'preact';
 import { cn } from '../deps.ts';
+import { KATEX_CSS } from 'jsr:@deno/gfm@^0.10.0';
 
 export const clr = {
   neutral: {
@@ -541,6 +542,7 @@ export const Link = (p: iAtom<HTMLAnchorElement>) => (
 /** */
 export const Kbd = (p: iAtom) => (
   <kbd
+    {...p}
     class={cn(
       clr.page.bg_50,
       clr.neutral.border_25,
@@ -550,10 +552,26 @@ export const Kbd = (p: iAtom) => (
       'border-b-[1px]',
       'rounded',
     )}
-    {...p}
   />
 );
 
 /** */
+export const Markdown = (p: iAtom<HTMLDivElement>) => (
+  <div
+    {...p}
+    class={cn(
+      'prose',
+      p.class,
+    )}
+  />
+);
+
+/** */
+export const KatexStyles = (p: iAtom<HTMLStyleElement>) => (
+  <style {...p}>
+    {KATEX_CSS}
+  </style>
+);
+
 // export const Sidebar =
 // export const Navigation =
