@@ -11,7 +11,7 @@
  */
 import { apDef, o } from '../../src/utils.ts';
 import { iComponent } from '../../src/types.ts';
-import { render, RenderOptions } from '../../src/markdown.ts';
+import { render, RenderOptions } from './markdown.ts';
 import { styles } from './styles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
