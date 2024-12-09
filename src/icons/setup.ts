@@ -1,5 +1,15 @@
-import type { IconColors, IconSizes } from '../../src/enums.ts';
-import { apDef } from '../../src/utils.ts';
+import { apDef } from '../../deps.ts';
+
+type IconColors =
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg';
+
+type IconSizes =
+  | 'base'
+  | 'personality'
+  | 'error';
 
 export type iIcon = {
   size: IconSizes | number;
@@ -41,8 +51,8 @@ export default (props: Partial<iIcon>) => {
 export const iconSizeToSvgSize = (size: IconSizes) =>
   /* deno-fmt-ignore */
   16 * (
-    size === 'xs' ? 1.2 : 
-    size === 'sm' ? 2 : 
+    size === 'xs' ? 1.2 :
+    size === 'sm' ? 2 :
     size === 'md' ? 4 :
     size === 'lg' ? 6 :
     8
@@ -63,8 +73,8 @@ export const iconColorToCssVariable = (
   color: IconColors,
 ) => /* deno-fmt-ignore */
 (
-    color === 'base' ? 'var(--clr-txt-base)' : 
-    color === 'personality' ? 'var(--clr-txt-personality)' : 
+    color === 'base' ? 'var(--clr-txt-base)' :
+    color === 'personality' ? 'var(--clr-txt-personality)' :
     color === 'error' ? 'var(--clr-txt-error)' :
     'var(--clr-txt-base-25)'
   );

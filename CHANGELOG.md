@@ -35,6 +35,7 @@
 - Refactored the atom structure
 - Added the InputCombo components.
 - Code cleanup
+- Code cleanup
 
 ## v1.0.6
 
