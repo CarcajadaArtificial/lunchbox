@@ -480,13 +480,29 @@ export const Input = {
 };
 
 /** */
-export const Sidebar = {
-  Aside: (p: iAtom) => (
+export const Aside = {
+  Sticky: (p: iAtom) => (
     <aside
       {...p}
       class={cn(
         'sticky',
         'top-triple',
+        p.class,
+      )}
+    />
+  ),
+};
+
+export const Nav = {
+  Bar: (p: iAtom) => (
+    <nav
+      {...p}
+      class={cn(
+        'sticky',
+        'top-0',
+        'py-quarter',
+        clr.panel.bg,
+        layout,
         p.class,
       )}
     />

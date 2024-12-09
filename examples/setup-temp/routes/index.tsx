@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import { Code, Link, Page, Sidebar, Text } from "../../../mod.ts";
+import { Aside, Code, Link, Nav, Page, Text } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
 import Form from "../islands/Form.tsx";
 
@@ -26,11 +26,12 @@ export default function Home() {
           </div>
         </div>
       </Page.Header>
+      <Nav.Bar>Navigation</Nav.Bar>
       <Page.Main>
         <div class="col-h-full md:col-sm h-full">
-          <Sidebar.Aside>
+          <Aside.Sticky>
             Sidebar
-          </Sidebar.Aside>
+          </Aside.Sticky>
         </div>
         <div class="col-h-full md:col-lg">
           <Text.Head>Counter</Text.Head>

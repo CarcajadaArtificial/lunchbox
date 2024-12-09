@@ -29,13 +29,14 @@
 - [x] Add the `<Input/>` component type variations.
 - [x] Add the `<Fieldset/>`, and `<Select/>` molecules.
 - [ ] Add the `<Icon/>` and `<Loader/>` components.
-- [ ] Add the `<Navigation/>` and `<Sidebar/>` components.
+- [x] Add the `<Navigation/>` and `<Sidebar/>` components.
 - [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.
 - [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
 - Refactored the atom structure
 - Added the InputCombo components.
 - Code cleanup
 - Added the sidebar component
+- Added the navigation component
 
 ## v1.0.6
 
