@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import { clr, Code, Link, Page, Text } from "../../../mod.ts";
+import { Code, Link, Page, Sidebar, Text } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
 import Form from "../islands/Form.tsx";
 
@@ -27,7 +27,12 @@ export default function Home() {
         </div>
       </Page.Header>
       <Page.Main>
-        <div class="col-h-full md:col-full flex flex-col items-center justify-center">
+        <div class="col-h-full md:col-sm h-full">
+          <Sidebar.Aside>
+            Sidebar
+          </Sidebar.Aside>
+        </div>
+        <div class="col-h-full md:col-lg">
           <Text.Head>Counter</Text.Head>
           <div class="mt-half">
             <span>The code for this island is located here</span>{" "}
@@ -37,11 +42,18 @@ export default function Home() {
             <span>it is updated in the client.</span>
           </div>
           <Counter count={count} />
-        </div>
-        <div
-          class={`col-h-full md:col-start-5 md:col-sm p-single rounded ${clr.panel.bg}`}
-        >
+
+          <Text.Head>Form</Text.Head>
+          <div class="mt-half">
+            <span>The code for this island is located here</span>{" "}
+            <Code.Inline>
+              <Code.Content>./islands/Form.tsx</Code.Content>
+            </Code.Inline>{" "}
+            <span>it is updated in the client.</span>
+          </div>
           <Form />
+          <div class="h-dvh"></div>
+          <div class="h-dvh"></div>
         </div>
       </Page.Main>
       <Page.Footer>

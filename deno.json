@@ -13,8 +13,7 @@
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
     "core": "jsr:@carcajada/lunchbox-core@^1.0.0",
-    "preact": "https://esm.sh/preact@10.19.6",
-    "preact/": "https://esm.sh/preact@10.19.6/"
+    "preact": "npm:preact@^10.24.1"
   },
   "exclude": ["**/_fresh/*"]
 }

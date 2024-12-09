@@ -35,7 +35,7 @@
 - Refactored the atom structure
 - Added the InputCombo components.
 - Code cleanup
-- Code cleanup
+- Added the sidebar component
 
 ## v1.0.6
 

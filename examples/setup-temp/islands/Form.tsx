@@ -1,4 +1,5 @@
 import {
+  clr,
   Input,
   InputCheckCombo,
   InputFieldCombo,
@@ -11,7 +12,7 @@ import {
 
 export default function Form() {
   return (
-    <form>
+    <form class={`p-single my-single rounded max-w-96 ${clr.panel.bg_50}`}>
       <InputFieldCombo
         label="username"
         fwd={{

@@ -37,9 +37,9 @@ export const clr = {
 
   panel: {
     bg: 'bg-panel dark:bg-d-panel',
-    bg_50: 'bg-page-50 dark:bg-d-page-50',
-    bg_35: 'bg-page-35 dark:bg-d-page-35',
-    bg_15: 'bg-page-15 dark:bg-d-page-15',
+    bg_50: 'bg-panel-50 dark:bg-d-panel-50',
+    bg_35: 'bg-panel-35 dark:bg-d-panel-35',
+    bg_15: 'bg-panel-15 dark:bg-d-panel-15',
   },
 };
 
@@ -473,6 +473,20 @@ export const Input = {
         'mt-half mx-auto',
         btn,
         focus,
+        p.class,
+      )}
+    />
+  ),
+};
+
+/** */
+export const Sidebar = {
+  Aside: (p: iAtom) => (
+    <aside
+      {...p}
+      class={cn(
+        'sticky',
+        'top-triple',
         p.class,
       )}
     />
