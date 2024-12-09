@@ -1,5 +1,5 @@
 import { JSX, Ref } from 'preact';
-import { cn } from './utils.ts';
+import { cn } from '../deps.ts';
 
 export const clr = {
   neutral: {
@@ -523,5 +523,6 @@ export const Kbd = (p: iAtom) => (
   />
 );
 
+/** */
 // export const Sidebar =
 // export const Navigation =

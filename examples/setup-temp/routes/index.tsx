@@ -38,7 +38,9 @@ export default function Home() {
           </div>
           <Counter count={count} />
         </div>
-        <div class={`col-h-full md:col-sm p-single rounded ${clr.panel.bg}`}>
+        <div
+          class={`col-h-full md:col-start-5 md:col-sm p-single rounded ${clr.panel.bg}`}
+        >
           <Form />
         </div>
       </Page.Main>

@@ -1,5 +1,5 @@
 import { iAtom, Input, required } from '../src/atoms.tsx';
-import { apDef } from '../src/utils.ts';
+import { apDef } from '../deps.ts';
 
 interface iInputFieldCombo {
   label: string;

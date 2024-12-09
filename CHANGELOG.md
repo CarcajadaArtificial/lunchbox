@@ -34,6 +34,7 @@
 - [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
 - Refactored the atom structure
 - Added the InputCombo components.
+- Code cleanup
 
 ## v1.0.6
 
