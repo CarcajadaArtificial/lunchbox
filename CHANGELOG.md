@@ -24,7 +24,7 @@
 - Changed the header atom to area.
 - Added the `<Code/>` molecule.
 - Added the list atoms.
-- [ ] Add the `<Markdown/>` molecule.
+- [x] Add the `<Markdown/>` molecule.
 - [x] Add the `<Input/>` and `<TextArea/>` molecules.
 - [x] Add the `<Input/>` component type variations.
 - [x] Add the `<Fieldset/>`, and `<Select/>` molecules.
@@ -37,6 +37,7 @@
 - Code cleanup
 - Added the sidebar component
 - Added the navigation component
+- [ ] Add prose styles using the tailwind typography plugin to the markdown component.
 
 ## v1.0.6
 

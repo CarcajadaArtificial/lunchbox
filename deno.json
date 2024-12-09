@@ -12,7 +12,7 @@
   },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
-    "core": "jsr:@carcajada/lunchbox-core@^1.0.0",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "preact": "npm:preact@^10.24.1"
   },
   "exclude": ["**/_fresh/*"]
