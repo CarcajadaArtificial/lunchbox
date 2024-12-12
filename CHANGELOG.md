@@ -1,43 +1,11 @@
 # Changelog
 
-## In Progress
+## v1.0.7
 
-- `Uncaught (in promise) TypeError: Import assertions are deprecated. Use `with` keyword, instead of 'assert' keyword.` Still present
-- Added the `setup-temp` example project as a temporal empty fresh projet to test the effects of simply importing lunchbox and running the plugin.
-- Added the Components import inside `setup-temp` to the index page. This is what causes the present error.
-- Added breaking changes to the `setup` example project.
-- Moving out of Resin's CSS-in-JS philosophy, going for tailwind classes instead.
-- [x] Add all lunchbox styles possible to tailwind.config.ts. The colors are missing but will be added gradually.
-- [x] Add tailwind styles to a test component. Used the `<Main/>` component.
-- [x] Define tailwind styles standard of usage.
-- [x] Update all components to the new standard.
-- Added a new export patter in `./mod.ts` where this file exports a function that builds the component.
-- Added new style proof of concept to the `<Main/>` component inside the `setup-temp` project.
-- [x] Add a `<Body/>` component for the `_app.tsx` route.
-- [x] Add tailwind dependency to lunchbox to export the config object.
-- Added the `<Header/>`, `<Layout/>`, `<Module/>`, and `<Main/>` components to the new standard.
-- Added the concept of particles for Design Tokens, added the complete color palette, dark/light responsive color, grid settings, and text sizes.
-- Changed atoms from component to simple tailwind styles.
-- [x] Add button type panel variation in a panel bg parent.
-- [x] Add Link and Kbd as atoms.
-- Added the button and separator atoms.
-- Changed the header atom to area.
-- Added the `<Code/>` molecule.
-- Added the list atoms.
-- [x] Add the `<Markdown/>` molecule.
-- [x] Add the `<Input/>` and `<TextArea/>` molecules.
-- [x] Add the `<Input/>` component type variations.
-- [x] Add the `<Fieldset/>`, and `<Select/>` molecules.
-- [ ] Add the `<Icon/>` and `<Loader/>` components.
-- [x] Add the `<Navigation/>` and `<Sidebar/>` components.
-- [ ] Add the `<InterObs/>`, `<Revealer/>`, and `<Keyboard/>` organisms.
-- [ ] Add the `<Menu/>` organism and the `<MenuItem/>` component.
-- Refactored the atom structure
-- Added the InputCombo components.
-- Code cleanup
-- Added the sidebar component
-- Added the navigation component
-- [x] Add prose styles using the tailwind typography plugin to the markdown component.
+- Refactored the `resin` implementation in favor of pure tailwind.
+- Refactored components and islands into the `src` folder and organized them into an atomic hierarchy.
+- Added the official native tailwind plugin for a base configuration.
+- Removed the `deno-gfm` fork in favor of @tailwind/typography and prose styles.
 
 ## v1.0.6
 
