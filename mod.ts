@@ -11,4 +11,4 @@ export { default as Markdown } from './src/molecules/Markdown.tsx';
 
 export { default as InterObs } from './src/organisms/InterObs.tsx';
 export { default as Keyboard } from './src/organisms/Keyboard.tsx';
-// export { default as Revealer } from './src/organisms/Revealer.tsx';
+export { default as Revealer } from './src/organisms/Revealer.tsx';

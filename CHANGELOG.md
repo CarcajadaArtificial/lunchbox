@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.8
+
+- Renamed example project `setup-temp` to `base`.
+- Removed typeface files.
+
 ## v1.0.7
 
 - Refactored the `resin` implementation in favor of pure tailwind.

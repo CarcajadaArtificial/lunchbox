@@ -16,7 +16,7 @@ export const d: iKeyboard = {
 
 export const setup = (props: Partial<iKeyboard>) => apDef<iKeyboard>(d, props);
 
-export default (props: Partial<iKeyboard>) => {
+export default function (props: Partial<iKeyboard>) {
   const { keystrokes, fwd } = setup(props);
   return <div {...fwd} onKeyUp={handleKeyboard(keystrokes)} />;
-};
+}
