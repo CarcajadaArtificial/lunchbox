@@ -560,7 +560,17 @@ export const Markdown = (p: iAtom<HTMLDivElement>) => (
   <div
     {...p}
     class={cn(
-      'prose',
+      'prose dark:prose-invert',
+      'prose-h1:font-heading prose-h1:text-title prose-h1:mb-one-and-half',
+      'prose-h2:font-heading prose-h2:text-head prose-h2:mb-single prose-h2:mt-triple',
+      'prose-h3:text-subhead prose-h3:mb-half prose-h3:mt-one-and-half',
+      'prose-a:outline-neutral prose-a:dark:outline-d-neutral prose-a:outline-offset-2',
+      'prose-p:mb-half',
+      'prose-pre:my-half',
+      'prose-li:my-quarter',
+      'prose-ul:mb-half prose-ol:mb-half',
+      'prose-hr:my-double',
+      'prose-td:py-eighth prose-td:px-half prose-th:py-eighth prose-th:px-half',
       p.class,
     )}
   />

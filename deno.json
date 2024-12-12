@@ -13,7 +13,6 @@
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
-    "tailwindcss": "npm:tailwindcss@3.4.1",
     "preact": "npm:preact@^10.24.1"
   },
   "exclude": ["**/_fresh/*"]

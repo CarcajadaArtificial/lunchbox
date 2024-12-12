@@ -172,8 +172,6 @@ async function serve(conn: Deno.Conn) {
 You can find a deeper introduction, examples, and environment setup guides in
 the [manual](https://deno.land/manual).
 
-<iframe width="100%" height="600" src="https://embed.deno.com/playground/urlpattern?layout=both"></iframe>
-
 The complete API reference is available at the runtime
 [documentation](https://doc.deno.land).
 
@@ -183,6 +181,8 @@ We appreciate your help!
 
 To contribute, please read our
 [contributing instructions](https://deno.land/manual/contributing).
+
+---
 
 [Build Status - Cirrus]: https://github.com/denoland/deno/workflows/ci/badge.svg?branch=main&event=push
 [Build status]: https://github.com/denoland/deno/actions
@@ -234,3 +234,9 @@ export const config: PageConfig = { runtimeJS: true };
   <img src="https://deno.land/logo.svg" />
   <figcaption><b>Figure 1.</b> The deno mascot dinosaur standing in the rain.</figcaption>
 </figure>
+
+1. a
+2. b
+3. c
+
+> Quote akadhjflaidsahs aisdjfosdijfoiaosjdjf sdnfuasdnf

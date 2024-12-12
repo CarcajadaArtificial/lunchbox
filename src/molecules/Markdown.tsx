@@ -11,7 +11,7 @@ export type iMarkdown = {
 const d: iMarkdown = {
   content: '',
   renderOptions: {
-    allowIframes: true,
+    allowIframes: false,
     allowMath: true,
   },
   fwd: {},

@@ -37,7 +37,7 @@
 - Code cleanup
 - Added the sidebar component
 - Added the navigation component
-- [ ] Add prose styles using the tailwind typography plugin to the markdown component.
+- [x] Add prose styles using the tailwind typography plugin to the markdown component.
 
 ## v1.0.6
 
