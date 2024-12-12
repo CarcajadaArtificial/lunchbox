@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.7
+
+- Refactored the `resin` implementation in favor of pure tailwind.
+- Refactored components and islands into the `src` folder and organized them into an atomic hierarchy.
+- Added the official native tailwind plugin for a base configuration.
+- Removed the `deno-gfm` fork in favor of @tailwind/typography and prose styles.
+
 ## v1.0.6
 
 - Added the `setup` example project.

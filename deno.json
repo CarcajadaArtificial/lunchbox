@@ -12,12 +12,8 @@
   },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
-    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
-    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-    "preact": "https://esm.sh/preact@10.19.6",
-    "preact/": "https://esm.sh/preact@10.19.6/",
-    "resin": "https://deno.land/x/resin@v0.1.7/mod.ts"
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "preact": "npm:preact@^10.24.1"
   },
   "exclude": ["**/_fresh/*"]
 }

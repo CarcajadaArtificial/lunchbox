@@ -1,5 +1,5 @@
 import type { Signal } from "@preact/signals";
-import Text from "lunchbox/components/Text/index.tsx";
+import { Text } from "lunchbox";
 import Button from "../components/Button.tsx";
 
 interface CounterProps {
