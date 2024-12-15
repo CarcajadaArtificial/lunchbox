@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.10
+
+- Added the `<Navbar/>`, `<Footer/>`, and `<Logo/>` components in the base example.
+- Updated the 404 page.
+
 ## v1.0.9
 
 - Finished the `<Markdown/>` molecule component.

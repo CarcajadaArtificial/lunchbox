@@ -7,7 +7,7 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   return (
-    <div class="flex gap-8 py-one-and-half items-center">
+    <div class="flex gap-8 py-one-and-half items-center justify-center">
       <Button.Panel
         onClick={() => props.count.value -= 1}
       >

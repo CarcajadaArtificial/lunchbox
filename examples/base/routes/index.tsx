@@ -1,21 +1,17 @@
 import { useSignal } from "@preact/signals";
-import { Aside, Code, Link, Nav, Page, Text } from "../../../mod.ts";
+import { Code, Page, Text } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
-import Form from "../islands/Form.tsx";
+import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
+import Logo from "../components/Logo.tsx";
 
 export default function Home() {
   const count = useSignal(3);
   return (
     <>
-      <Page.Header>
+      <Page.Header class="min-h-banner">
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
-          <img
-            class="my-6"
-            src="/logo.svg"
-            width="128"
-            height="128"
-            alt="the Fresh logo: a sliced lemon dripping with juice"
-          />
+          <Logo />
           <Text.Title>Welcome to Fresh</Text.Title>
           <div>
             <span>The code for this page is located here</span>{" "}
@@ -26,14 +22,9 @@ export default function Home() {
           </div>
         </div>
       </Page.Header>
-      <Nav.Bar>Navigation</Nav.Bar>
+      <Navbar />
       <Page.Main>
-        <div class="col-h-full md:col-sm h-full">
-          <Aside.Sticky>
-            Sidebar
-          </Aside.Sticky>
-        </div>
-        <div class="col-h-full md:col-lg">
+        <div class="col-h-full md:col-full text-center">
           <Text.Head>Counter</Text.Head>
           <div class="mt-half">
             <span>The code for this island is located here</span>{" "}
@@ -43,25 +34,9 @@ export default function Home() {
             <span>it is updated in the client.</span>
           </div>
           <Counter count={count} />
-
-          <Text.Head>Form</Text.Head>
-          <div class="mt-half">
-            <span>The code for this island is located here</span>{" "}
-            <Code.Inline>
-              <Code.Content>./islands/Form.tsx</Code.Content>
-            </Code.Inline>{" "}
-            <span>it is updated in the client.</span>
-          </div>
-          <Form />
-          <div class="h-dvh"></div>
-          <div class="h-dvh"></div>
         </div>
       </Page.Main>
-      <Page.Footer>
-        <div class="col-h-full md:col-full">
-          <Link>GitHub</Link>
-        </div>
-      </Page.Footer>
+      <Footer />
     </>
   );
 }

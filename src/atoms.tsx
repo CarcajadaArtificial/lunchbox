@@ -178,7 +178,6 @@ export const Page = {
       class={cn(
         area,
         layout,
-        'min-h-banner',
         p.class,
       )}
     />
