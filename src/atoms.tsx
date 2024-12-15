@@ -302,7 +302,7 @@ export const Code = {
     <div
       {...p}
       class={cn(
-        clr.neutral.bg_10,
+        clr.panel.bg_35,
         'inline',
         'pt-[3px] pb-[1px] px-[0.5ch]',
         'rounded',
@@ -503,6 +503,7 @@ export const Nav = {
         'sticky',
         'top-0',
         'py-quarter',
+        'z-[16]',
         clr.panel.bg,
         layout,
         p.class,
@@ -564,13 +565,18 @@ export const Markdown = (p: iAtom<HTMLDivElement>) => (
       'prose-h1:font-heading prose-h1:text-title prose-h1:mb-one-and-half',
       'prose-h2:font-heading prose-h2:text-head prose-h2:mb-single prose-h2:mt-triple',
       'prose-h3:text-subhead prose-h3:mb-half prose-h3:mt-one-and-half',
-      'prose-a:outline-neutral prose-a:dark:outline-d-neutral prose-a:outline-offset-2',
+      'prose-a:has-[.anchor]:*:hidden',
+      'prose-a:outline-neutral prose-a:dark:outline-d-neutral prose-a:outline-offset-2 prose-a:inline-block',
       'prose-p:mb-half',
       'prose-pre:my-half',
       'prose-li:my-quarter',
       'prose-ul:mb-half prose-ol:mb-half',
+      'prose-tr:grid md:prose-tr:table-row',
       'prose-hr:my-double',
       'prose-td:py-eighth prose-td:px-half prose-th:py-eighth prose-th:px-half',
+      'prose-img:my-0 prose-img:text-center prose-img:mx-auto',
+      'prose-figure:my-single prose-figure:text-center',
+      'prose-figcaption:mt-quarter prose-figcaption:text-center',
       p.class,
     )}
   />
@@ -578,10 +584,5 @@ export const Markdown = (p: iAtom<HTMLDivElement>) => (
 
 /** */
 export const KatexStyles = (p: iAtom<HTMLStyleElement>) => (
-  <style {...p}>
-    {KATEX_CSS}
-  </style>
+  <style {...p}>{KATEX_CSS}</style>
 );
-
-// export const Sidebar =
-// export const Navigation =

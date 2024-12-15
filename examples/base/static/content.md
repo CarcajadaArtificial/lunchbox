@@ -86,7 +86,7 @@ $$ \begin{aligned} \dot{x} & = \sigma(y-x) \\ \dot{y} & = \rho x - y - xz \\
 [![Build Status - Cirrus][]][Build status] [![Twitter handle][]][Twitter badge]
 [![Discord Chat](https://img.shields.io/discord/684898665143206084?logo=discord&style=social)](https://discord.gg/deno)
 
-<img align="right" src="https://deno.land/logo.svg" height="150px" alt="the deno mascot dinosaur standing in the rain">
+<img align="right" src="/deno.svg" height="150px" width="150px" alt="the deno mascot dinosaur standing in the rain">
 
 Deno is a _simple_, _modern_ and _secure_ runtime for **JavaScript** and
 **TypeScript** that uses V8 and is built in Rust.
@@ -231,7 +231,7 @@ export const config: PageConfig = { runtimeJS: true };
 ```
 
 <figure>
-  <img src="https://deno.land/logo.svg" />
+  <img src="/deno.svg" height="150px" width="150px" />
   <figcaption><b>Figure 1.</b> The deno mascot dinosaur standing in the rain.</figcaption>
 </figure>
 

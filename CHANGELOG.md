@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.9
+
+- Finished the `<Markdown/>` molecule component.
+
 ## v1.0.8
 
 - Renamed the `setup-temp` example to `base`.
