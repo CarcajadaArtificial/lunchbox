@@ -18,7 +18,7 @@ export const clr = {
   brand: {
     txt: 'text-brand-hc dark:text-d-brand-hc',
     txt_25: 'text-brand-hc-25 dark:text-d-brand-hc-25',
-    txt_15: 'text-brand-hc-15 dark:text-d-brand-hc-15',
+    txt_10: 'text-brand-hc-10 dark:text-d-brand-hc-10',
     bg: 'bg-brand-lc dark:bg-d-brand-lc',
     bg_60: 'bg-brand-lc-60 dark:bg-d-brand-lc-60',
     bg_45: 'bg-brand-lc-45 dark:bg-d-brand-lc-45',
@@ -26,9 +26,9 @@ export const clr = {
   },
 
   error: {
-    txt: 'text-error-hc dark:text-error-d-hc',
-    bg: 'bg-error-lc dark:bg-error-d-lc',
-    bg_50: 'bg-error-lc-50 dark:bg-error-d-lc-50',
+    txt: 'text-error-hc dark:text-d-error-hc',
+    bg: 'bg-error-lc dark:bg-d-error-lc',
+    bg_50: 'bg-error-lc-50 dark:bg-d-error-lc-50',
   },
 
   page: {
@@ -51,7 +51,7 @@ export const area = cn(
 
 export const layout = cn(
   'grid',
-  'grid-cols-6 md:grid-cols-12 lg:grid-cols-lg',
+  'grid-cols-6 md:grid-cols-12',
   'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
   'w-auto lg:min-w-min',
   'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
@@ -89,6 +89,7 @@ export const Text = {
     <span
       {...p}
       class={cn(
+        'block',
         'font-heading',
         'text-display',
         'font-bold',
@@ -103,6 +104,7 @@ export const Text = {
     <span
       {...p}
       class={cn(
+        'block',
         'font-heading',
         'text-title',
         'font-bold',
@@ -117,6 +119,7 @@ export const Text = {
     <span
       {...p}
       class={cn(
+        'block',
         'font-heading',
         'text-head',
         clr.brand.txt,
@@ -127,17 +130,17 @@ export const Text = {
 
   /** */
   Subhead: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('txt-subhead', p.class)} />
+    <span {...p} class={cn('block txt-subhead', p.class)} />
   ),
 
   /** */
   Base: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('txt-base', p.class)} />
+    <span {...p} class={cn('block txt-base', p.class)} />
   ),
 
   /** */
   Small: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('txt-small', p.class)} />
+    <span {...p} class={cn('block txt-small', p.class)} />
   ),
 };
 
@@ -302,6 +305,7 @@ export const Code = {
       {...p}
       class={cn(
         clr.panel.bg_35,
+        clr.brand.txt,
         'inline',
         'pt-[3px] pb-[1px] px-[0.5ch]',
         'rounded',

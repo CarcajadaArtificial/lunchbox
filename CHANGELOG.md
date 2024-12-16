@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.11
+
+- Added the particles page in the base example.
+- Fixed issues with the color palette.
+
 ## v1.0.10
 
 - Added the `<Navbar/>`, `<Footer/>`, and `<Logo/>` components in the base example.

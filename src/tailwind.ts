@@ -13,13 +13,13 @@ export default plugin(
       colors: {
         neutral: {
           DEFAULT: '#3d3640',
-          25: '#3d36401a',
-          10: '#3d364040',
+          25: '#3d364040',
+          10: '#3d36401a',
         },
         brand: {
-          DEFAULT: '#089969',
+          DEFAULT: '#c8d9db',
           lc: {
-            DEFAULT: '#c8d9db',
+            DEFAULT: '#089969',
             60: '#08996999',
             45: '#08996973',
             30: '#0899694d',
@@ -32,8 +32,8 @@ export default plugin(
         },
         error: {
           lc: {
-            DEFAULT: '#573c4d',
-            50: '#573c4d80',
+            DEFAULT: '#dbc4c5',
+            50: '#dbc4c580',
           },
           hc: '#66050d',
         },
@@ -50,15 +50,15 @@ export default plugin(
         d: {
           neutral: {
             DEFAULT: '#eee6f2',
-            25: '#eee6f21a',
-            10: '#eee6f240',
+            25: '#eee6f240',
+            10: '#eee6f21a',
           },
           brand: {
             lc: {
               DEFAULT: '#344747',
-              60: '#08996999',
-              45: '#08996973',
-              30: '#0899694d',
+              60: '#34474799',
+              45: '#34474773',
+              30: '#3447474d',
             },
             hc: {
               DEFAULT: '#7dc0af',
@@ -68,8 +68,8 @@ export default plugin(
           },
           error: {
             lc: {
-              DEFAULT: '#dbc4c5',
-              50: '#dbc4c580',
+              DEFAULT: '#573c4d',
+              50: '#573c4d80',
             },
             hc: '#fa96c8',
           },

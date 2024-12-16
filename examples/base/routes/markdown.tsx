@@ -22,7 +22,7 @@ export default async function () {
       </Page.Header>
       <Navbar />
       <Page.Main>
-        <div class="col-h-full md:col-full h-full">
+        <div class="col-h-full md:col-full">
           <Markdown content={markdown} />
         </div>
       </Page.Main>
