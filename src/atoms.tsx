@@ -70,7 +70,7 @@ export const btn = cn(
 
 export const required = cn(
   'after:content-["*"] after:font-mono',
-  'after:text-error-hc, dark:after:text-d-error-hc',
+  'after:text-error-hc dark:after:text-d-error-hc',
   'after:ml-quarter',
 );
 
@@ -130,17 +130,17 @@ export const Text = {
 
   /** */
   Subhead: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('block txt-subhead', p.class)} />
+    <span {...p} class={cn('block text-subhead', p.class)} />
   ),
 
   /** */
   Base: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('block txt-base', p.class)} />
+    <span {...p} class={cn('block text-base', p.class)} />
   ),
 
   /** */
   Small: (p: iAtom<HTMLSpanElement>) => (
-    <span {...p} class={cn('block txt-small', p.class)} />
+    <span {...p} class={cn('block text-small', p.class)} />
   ),
 };
 
@@ -261,7 +261,7 @@ export const Button = {
 /** */
 export const List = {
   /** */
-  Unordered: (p: iAtom<HTMLUListElement>) => (
+  ul: (p: iAtom<HTMLUListElement>) => (
     <ul
       {...p}
       class={cn(
@@ -273,7 +273,7 @@ export const List = {
   ),
 
   /** */
-  Ordered: (p: iAtom<HTMLUListElement>) => (
+  ol: (p: iAtom<HTMLUListElement>) => (
     <ul
       {...p}
       class={cn(
@@ -306,7 +306,7 @@ export const Code = {
       class={cn(
         clr.panel.bg_35,
         clr.brand.txt,
-        'inline',
+        'inline-block',
         'pt-[3px] pb-[1px] px-[0.5ch]',
         'rounded',
         p.class,
@@ -532,7 +532,7 @@ export const Separator = (p: iAtom<HTMLHRElement>) => (
 export const Link = (p: iAtom<HTMLAnchorElement>) => (
   <a
     class={cn(
-      clr.neutral.txt,
+      'text-[inherit]',
       'hocus:text-brand-hc dark:hocus:text-d-brand-hc',
       'underline',
       'cursor-pointer',
@@ -548,7 +548,7 @@ export const Kbd = (p: iAtom) => (
   <kbd
     {...p}
     class={cn(
-      clr.page.bg_50,
+      clr.neutral.bg_10,
       clr.neutral.border_25,
       'txt-small',
       'relative bottom-eighth',

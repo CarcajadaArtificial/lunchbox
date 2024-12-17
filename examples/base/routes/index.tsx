@@ -12,7 +12,7 @@ export default function Home() {
       <Page.Header class="min-h-banner">
         <div class="col-h-full md:col-full flex flex-col items-center justify-center">
           <Logo />
-          <Text.Title>Welcome to Fresh</Text.Title>
+          <Text.Title>Welcome to a Fresh Lunchbox</Text.Title>
           <div>
             <span>The code for this page is located here</span>{" "}
             <Code.Inline>

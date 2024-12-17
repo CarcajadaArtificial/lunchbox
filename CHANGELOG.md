@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.12
+
+- Added the molecule testing page in the base example.
+- Fixed issues with a few atoms.
+
 ## v1.0.11
 
 - Added the particles page in the base example.

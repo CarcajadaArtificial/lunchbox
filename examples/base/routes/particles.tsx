@@ -118,9 +118,6 @@ export default function () {
           <BackgroundColor class={`border-2 ${clr.neutral.border_25}`}>
             <Text.Base>Neutral Border 25%</Text.Base>
           </BackgroundColor>
-          <BackgroundColor class={`outline ${clr.neutral.outline}`}>
-            <Text.Base>Neutral Outline</Text.Base>
-          </BackgroundColor>
           <Text.Head class="mt-double mb-single">Misc.</Text.Head>
           <Text.Base class={required}>
             Required input indicator as a pseudoelement:
