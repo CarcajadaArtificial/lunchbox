@@ -3,13 +3,11 @@ import { apDef } from '../../deps.ts';
 
 interface iInputRadioCombo {
   label: string;
-  error: string;
   fwd: iAtom<HTMLInputElement>;
 }
 
 const d: iInputRadioCombo = {
   label: '',
-  error: '',
   fwd: {},
 };
 
@@ -24,7 +22,6 @@ export default function (props: Partial<iInputRadioCombo>) {
         <Input.Radio {...p.fwd} />
         <Input.Text>{p.label}</Input.Text>
       </Input.Label>
-      {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </div>
   );
 }

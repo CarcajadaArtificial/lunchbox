@@ -9,6 +9,7 @@ import * as $atoms from "./routes/atoms.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $markdown from "./routes/markdown.tsx";
+import * as $molecules from "./routes/molecules.tsx";
 import * as $particles from "./routes/particles.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Form from "./islands/Form.tsx";
@@ -23,6 +24,7 @@ const manifest = {
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/markdown.tsx": $markdown,
+    "./routes/molecules.tsx": $molecules,
     "./routes/particles.tsx": $particles,
   },
   islands: {
