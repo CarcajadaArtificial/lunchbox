@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.14
+
+- Added the Fieldset molecules.
+
 ## v1.0.13
 
 - Added the molecules testing page in the base example.

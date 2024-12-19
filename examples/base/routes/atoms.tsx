@@ -321,8 +321,10 @@ export default function () {
 
         <div class="col-h-full md:col-full mt-double">
           <Text.Title>Misc</Text.Title>
+          <Text.Subhead>Separator</Text.Subhead>
           <Separator />
-          <div class="flex gap-single mt-double">
+          <div class="flex gap-single flex-wrap mt-double">
+            <Text.Subhead class="w-full">Buttons</Text.Subhead>
             <div
               class={`${clr.page.bg} ${clr.neutral.border} p-half rounded border-2 flex flex-col items-start gap-half`}
             >

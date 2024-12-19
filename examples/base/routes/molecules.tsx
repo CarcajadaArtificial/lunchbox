@@ -1,5 +1,7 @@
 import {
   Code,
+  FieldsetCheck,
+  FieldsetRadio,
   InputCheckCombo,
   InputFieldCombo,
   InputRadioCombo,
@@ -27,8 +29,8 @@ export default function () {
         </div>
       </Page.Header>
       <Navbar />
-      <Page.Main>
-        <div class="col-h-full md:col-full mb-double">
+      <Page.Main class="gap-y-double">
+        <div class="col-h-full md:col-full">
           <Text.Title>Inputs</Text.Title>
         </div>
         <div class="col-h-full md:col-md">
@@ -54,6 +56,31 @@ export default function () {
           <InputCheckCombo label="check" />
           <InputCheckCombo label="check" error="error" />
           <InputRadioCombo label="radio" />
+        </div>
+        <div class="col-h-full md:col-md">
+          <Text.Head class="mb-single">Fieldset</Text.Head>
+          <FieldsetCheck
+            values={["Foo", "Bar"]}
+            legend="Fieldset Check"
+            fwd={{ name: "fieldset_check_a" }}
+          />
+          <FieldsetCheck
+            values={["Foo", "Bar"]}
+            legend="Fieldset Check"
+            error="error"
+            fwd={{ name: "fieldset_check_b" }}
+          />
+          <FieldsetRadio
+            values={["Foo", "Bar"]}
+            legend="Fieldset Radio"
+            fwd={{ name: "fieldset_radio_a" }}
+          />
+          <FieldsetRadio
+            values={["Foo", "Bar"]}
+            legend="Fieldset Radio"
+            error="error"
+            fwd={{ name: "fieldset_radio_b" }}
+          />
         </div>
       </Page.Main>
       <Footer />
