@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.16
+
+- Added the Accordion molecule and the Details atom group.
+
 ## v1.0.15
 
 - Removed the tailwind forms plugin from the base example.

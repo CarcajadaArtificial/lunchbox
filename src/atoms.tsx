@@ -44,6 +44,26 @@ export const clr = {
   },
 };
 
+export const input = {
+  required: cn(
+    'after:content-["*"] after:font-mono',
+    'after:text-error-hc dark:after:text-d-error-hc',
+    'after:ml-quarter',
+  ),
+
+  invalid: cn(
+    'invalid:bg-error-lc-50 invalid:dark:bg-d-error-lc-50',
+  ),
+
+  error: cn(
+    clr.error.bg_50,
+  ),
+
+  abstract: cn(
+    'border-none',
+  ),
+};
+
 export const area = cn(
   clr.panel.bg,
   'py-triple',
@@ -67,26 +87,6 @@ export const btn = cn(
   'px-three-quarters py-quarter',
   'rounded',
 );
-
-export const input = {
-  required: cn(
-    'after:content-["*"] after:font-mono',
-    'after:text-error-hc dark:after:text-d-error-hc',
-    'after:ml-quarter',
-  ),
-
-  invalid: cn(
-    'invalid:bg-error-lc-50 invalid:dark:bg-d-error-lc-50',
-  ),
-
-  error: cn(
-    clr.error.bg_50,
-  ),
-
-  abstract: cn(
-    'border-none',
-  ),
-};
 
 export type iAtom<T extends EventTarget = HTMLElement> =
   & JSX.HTMLAttributes<T>
@@ -422,7 +422,7 @@ export const Input = {
     <fieldset
       {...p}
       class={cn(
-        'px-half pb-half pt-quarter mb-half',
+        'px-half pb-half pt-quarter',
         clr.panel.bg_35,
         p.class,
       )}
@@ -528,6 +528,30 @@ export const Nav = {
         'z-[16]',
         clr.panel.bg,
         layout,
+        p.class,
+      )}
+    />
+  ),
+};
+
+export const Details = {
+  Container: (p: iAtom<HTMLDetailsElement>) => (
+    <details
+      {...p}
+      class={cn(
+        clr.panel.bg_35,
+        'rounded',
+        'mb-half',
+        'px-half py-quarter',
+        p.class,
+      )}
+    />
+  ),
+  Summary: (p: iAtom) => (
+    <summary
+      {...p}
+      class={cn(
+        'py-quarter px-half',
         p.class,
       )}
     />

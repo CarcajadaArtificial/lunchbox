@@ -1,4 +1,5 @@
 import {
+  Accordion,
   Code,
   FieldsetCheck,
   FieldsetRadio,
@@ -81,6 +82,15 @@ export default function () {
             error="error"
             fwd={{ name: "fieldset_radio_b" }}
           />
+        </div>
+        <div class="col-h-full md:col-md">
+          <Text.Head class="mb-single">Accordion</Text.Head>
+          <Accordion open name="accordion" summary="Foo">
+            <Text.Base>Example content</Text.Base>
+          </Accordion>
+          <Accordion name="accordion" summary="Bar">
+            <Text.Base>Example content</Text.Base>
+          </Accordion>
         </div>
       </Page.Main>
       <Footer />
