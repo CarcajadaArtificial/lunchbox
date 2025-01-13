@@ -1,12 +1,12 @@
 import {
   clr,
   Input,
+  input,
   InputCheckCombo,
   InputFieldCombo,
   InputRadioCombo,
   InputSelectCombo,
   InputTextareaCombo,
-  required,
 } from "../../../mod.ts";
 // import { useReducer } from "preact/hooks";
 
@@ -20,7 +20,7 @@ export default function Form() {
         }}
       />
       <Input.Fieldset required>
-        <Input.Legend class={required}>Select your species</Input.Legend>
+        <Input.Legend class={input.required}>Select your species</Input.Legend>
         <InputRadioCombo
           label="human"
           fwd={{

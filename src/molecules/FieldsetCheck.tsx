@@ -1,4 +1,4 @@
-import { iAtom, Input, required } from '../atoms.tsx';
+import { iAtom, Input, input } from '../atoms.tsx';
 import InputCheckCombo from './InputCheckCombo.tsx';
 import { apDef } from '../../deps.ts';
 
@@ -27,7 +27,7 @@ export default function (props: Partial<iFieldsetCheck>) {
         {p.legend
           ? (
             <Input.Legend>
-              <Input.Text class={p.fwd.required ? required : undefined}>
+              <Input.Text class={p.fwd.required ? input.required : undefined}>
                 <>{p.legend}</>
               </Input.Text>
             </Input.Legend>

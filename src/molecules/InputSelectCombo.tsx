@@ -1,4 +1,4 @@
-import { iAtom, Input, required } from '../atoms.tsx';
+import { iAtom, Input, input } from '../atoms.tsx';
 import { apDef } from '../../deps.ts';
 import { ComponentChildren } from 'preact';
 
@@ -26,7 +26,7 @@ export default function (props: Partial<iInputFieldCombo>) {
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? required : undefined}>
+            <Input.Text class={p.fwd.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )

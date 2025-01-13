@@ -1,7 +1,7 @@
 import { type Config } from "tailwindcss";
 import { LunchboxTailwind } from "lunchbox";
 import typographyPlugin from "npm:/@tailwindcss/typography@0.5.15";
-import formsPlugin from "npm:/@tailwindcss/forms@0.5.9";
+// import formsPlugin from "npm:/@tailwindcss/forms@0.5.9";
 
 export default {
   content: [
@@ -12,6 +12,6 @@ export default {
   plugins: [
     LunchboxTailwind,
     typographyPlugin,
-    formsPlugin,
+    // formsPlugin,
   ],
 } satisfies Config;

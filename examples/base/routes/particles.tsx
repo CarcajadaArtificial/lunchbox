@@ -4,9 +4,9 @@ import {
   clr,
   Code,
   iAtom,
+  input,
   layout,
   Page,
-  required,
   Text,
 } from "../../../mod.ts";
 import Navbar from "../components/Navbar.tsx";
@@ -119,7 +119,7 @@ export default function () {
             <Text.Base>Neutral Border 25%</Text.Base>
           </BackgroundColor>
           <Text.Head class="mt-double mb-single">Misc.</Text.Head>
-          <Text.Base class={required}>
+          <Text.Base class={input.required}>
             Required input indicator as a pseudoelement:
           </Text.Base>
           <Text.Base>

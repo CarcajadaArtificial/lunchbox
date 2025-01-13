@@ -1,5 +1,5 @@
-import { iAtom, Input, required } from '../atoms.tsx';
-import { apDef } from '../../deps.ts';
+import { iAtom, Input, input } from '../atoms.tsx';
+import { apDef, cn } from '../../deps.ts';
 
 interface iInputFieldCombo {
   label: string;
@@ -23,12 +23,15 @@ export default function (props: Partial<iInputFieldCombo>) {
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? required : undefined}>
+            <Input.Text class={p.fwd.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
-        <Input.Field {...p.fwd} />
+        <Input.Field
+          class={cn(p.error ? input.error : p.fwd.class)}
+          {...p.fwd}
+        />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </Input.Container>

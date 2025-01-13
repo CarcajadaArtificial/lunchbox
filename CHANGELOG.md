@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.15
+
+- Removed the tailwind forms plugin from the base example.
+- Added the `input` atom group with the new `invalid`, `error`, and `abstract` input atoms.
+
 ## v1.0.14
 
 - Added the Fieldset molecules.

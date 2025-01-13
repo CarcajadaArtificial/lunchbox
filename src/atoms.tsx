@@ -68,11 +68,25 @@ export const btn = cn(
   'rounded',
 );
 
-export const required = cn(
-  'after:content-["*"] after:font-mono',
-  'after:text-error-hc dark:after:text-d-error-hc',
-  'after:ml-quarter',
-);
+export const input = {
+  required: cn(
+    'after:content-["*"] after:font-mono',
+    'after:text-error-hc dark:after:text-d-error-hc',
+    'after:ml-quarter',
+  ),
+
+  invalid: cn(
+    'invalid:bg-error-lc-50 invalid:dark:bg-d-error-lc-50',
+  ),
+
+  error: cn(
+    clr.error.bg_50,
+  ),
+
+  abstract: cn(
+    'border-none',
+  ),
+};
 
 export type iAtom<T extends EventTarget = HTMLElement> =
   & JSX.HTMLAttributes<T>
@@ -323,11 +337,12 @@ export const Input = {
     <input
       {...p}
       class={cn(
+        p.class,
+        focus,
+        clr.neutral.bg_10,
+        input.invalid,
         'rounded',
         'px-half py-px',
-        clr.panel.bg_50,
-        focus,
-        p.class,
       )}
     />
   ),
@@ -389,12 +404,14 @@ export const Input = {
       type='radio'
       {...p}
       class={cn(
+        'appearance-none',
+        clr.neutral.bg_10,
+        focus,
+        input.invalid,
         'rounded-full',
         'h-single w-single',
         'checked:before:content-["●"]',
         'grid place-content-center',
-        clr.brand.bg_30,
-        focus,
         p.class,
       )}
     />
@@ -406,7 +423,7 @@ export const Input = {
       {...p}
       class={cn(
         'px-half pb-half pt-quarter mb-half',
-        clr.panel.bg_50,
+        clr.panel.bg_35,
         p.class,
       )}
     />
@@ -426,12 +443,14 @@ export const Input = {
       type='checkbox'
       {...p}
       class={cn(
+        'appearance-none',
+        clr.neutral.bg_10,
+        focus,
+        input.invalid,
         'rounded',
         'h-single w-single',
         'checked:before:content-["✓"]',
         'grid place-content-center',
-        clr.brand.bg_30,
-        focus,
         p.class,
       )}
     />
@@ -444,7 +463,7 @@ export const Input = {
       class={cn(
         'rounded',
         'px-half py-px',
-        clr.panel.bg_50,
+        clr.neutral.bg_10,
         focus,
         p.class,
       )}
@@ -459,7 +478,7 @@ export const Input = {
         'rounded',
         'px-half py-px',
         'h-one-and-half',
-        clr.panel.bg_50,
+        clr.neutral.bg_10,
         focus,
         p.class,
       )}
