@@ -13,6 +13,7 @@ import * as $molecules from "./routes/molecules.tsx";
 import * as $particles from "./routes/particles.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Form from "./islands/Form.tsx";
+import * as $Keyboard from "./islands/Keyboard.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -30,6 +31,7 @@ const manifest = {
   islands: {
     "./islands/Counter.tsx": $Counter,
     "./islands/Form.tsx": $Form,
+    "./islands/Keyboard.tsx": $Keyboard,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

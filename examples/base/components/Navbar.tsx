@@ -9,7 +9,6 @@ export default function () {
         <Link href="/particles">Particles</Link>
         <Link href="/atoms">Atoms</Link>
         <Link href="/molecules">Molecules</Link>
-        <Link href="/organisms">Organisms</Link>
       </div>
     </Nav.Bar>
   );

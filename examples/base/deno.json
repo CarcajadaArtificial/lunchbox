@@ -29,6 +29,8 @@
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
+    "usehooks-ts": "npm:usehooks-ts@3.1.0",
+    "teclas": "jsr:@carcajada/teclas@^1.0.8",
     "$std/": "https://deno.land/std@0.216.0/",
     "lunchbox/core": "jsr:@carcajada/lunchbox-core@^1.0.2",
     "lunchbox": "../../mod.ts"

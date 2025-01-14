@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.17
+
+- Removed the organism components in favor of preact signals.
+- Updated the base example.
+
 ## v1.0.16
 
 - Added the Accordion molecule and the Details atom group.

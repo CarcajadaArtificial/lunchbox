@@ -1,6 +1,7 @@
 import { useSignal } from "@preact/signals";
 import { Code, Page, Text } from "../../../mod.ts";
 import Counter from "../islands/Counter.tsx";
+import Keyboard from "../islands/Keyboard.tsx";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 import Logo from "../components/Logo.tsx";
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Page.Header class="min-h-banner">
-        <div class="col-h-full md:col-full flex flex-col items-center justify-center">
+        <div class="col-h-full md:col-full flex flex-col items-center text-center justify-center">
           <Logo />
           <Text.Title>Welcome to a Fresh Lunchbox</Text.Title>
           <div>
@@ -25,6 +26,7 @@ export default function Home() {
       <Navbar />
       <Page.Main>
         <div class="col-h-full md:col-full text-center">
+          <Keyboard />
           <Text.Head>Counter</Text.Head>
           <div class="mt-half">
             <span>The code for this island is located here</span>{" "}
