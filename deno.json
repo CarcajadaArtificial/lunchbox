@@ -1,19 +1,14 @@
 {
+  "name": "@lunchbox/lunchbox",
+  "version": "1.0.18",
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "ok": "deno fmt --check && deno lint && deno check main.ts",
-    "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts"
+    "example:base": "deno run -A --watch=static/,routes/ examples/base/dev.ts"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
-  "lint": {
-    "exclude": [".github/dep"],
-    "rules": { "tags": ["fresh", "recommended"] }
-  },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
+    "preact": "npm:preact@^10.24.1",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
-    "preact": "npm:preact@^10.24.1"
-  },
-  "exclude": ["**/_fresh/*"]
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2"
+  }
 }

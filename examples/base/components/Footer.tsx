@@ -1,4 +1,4 @@
-import { Link, Page } from "../../../mod.ts";
+import { Link, Page } from "lunchbox";
 
 export default function () {
   return (

@@ -2,36 +2,36 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $_404 from "./routes/_404.tsx";
-import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $atoms from "./routes/atoms.tsx";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
-import * as $index from "./routes/index.tsx";
-import * as $markdown from "./routes/markdown.tsx";
-import * as $molecules from "./routes/molecules.tsx";
-import * as $particles from "./routes/particles.tsx";
-import * as $Counter from "./islands/Counter.tsx";
-import * as $Form from "./islands/Form.tsx";
-import * as $Keyboard from "./islands/Keyboard.tsx";
-import type { Manifest } from "$fresh/server.ts";
+import * as $_404 from './routes/_404.tsx';
+import * as $_app from './routes/_app.tsx';
+import * as $api_joke from './routes/api/joke.ts';
+import * as $atoms from './routes/atoms.tsx';
+import * as $greet_name_ from './routes/greet/[name].tsx';
+import * as $index from './routes/index.tsx';
+import * as $markdown from './routes/markdown.tsx';
+import * as $molecules from './routes/molecules.tsx';
+import * as $particles from './routes/particles.tsx';
+import * as $Counter from './islands/Counter.tsx';
+import * as $Form from './islands/Form.tsx';
+import * as $Keyboard from './islands/Keyboard.tsx';
+import type { Manifest } from '$fresh/server.ts';
 
 const manifest = {
   routes: {
-    "./routes/_404.tsx": $_404,
-    "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/atoms.tsx": $atoms,
-    "./routes/greet/[name].tsx": $greet_name_,
-    "./routes/index.tsx": $index,
-    "./routes/markdown.tsx": $markdown,
-    "./routes/molecules.tsx": $molecules,
-    "./routes/particles.tsx": $particles,
+    './routes/_404.tsx': $_404,
+    './routes/_app.tsx': $_app,
+    './routes/api/joke.ts': $api_joke,
+    './routes/atoms.tsx': $atoms,
+    './routes/greet/[name].tsx': $greet_name_,
+    './routes/index.tsx': $index,
+    './routes/markdown.tsx': $markdown,
+    './routes/molecules.tsx': $molecules,
+    './routes/particles.tsx': $particles,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
-    "./islands/Form.tsx": $Form,
-    "./islands/Keyboard.tsx": $Keyboard,
+    './islands/Counter.tsx': $Counter,
+    './islands/Form.tsx': $Form,
+    './islands/Keyboard.tsx': $Keyboard,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

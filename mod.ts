@@ -11,5 +11,3 @@ export { default as InputCheckCombo } from './src/molecules/InputCheckCombo.tsx'
 export { default as InputTextareaCombo } from './src/molecules/InputTextareaCombo.tsx';
 export { default as InputSelectCombo } from './src/molecules/InputSelectCombo.tsx';
 export { default as Markdown } from './src/molecules/Markdown.tsx';
-
-export { default as Keyboard } from './src/organisms/Keyboard.tsx';

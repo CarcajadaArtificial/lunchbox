@@ -1,6 +1,6 @@
 import { iAtom, Input, input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
-import { apDef } from '../../deps.ts';
+import { apDef } from '../utils.ts';
 
 interface iFieldsetRadio {
   values: string[];

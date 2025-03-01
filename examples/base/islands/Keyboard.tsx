@@ -1,4 +1,4 @@
-import { Button } from "../../../mod.ts";
+import { Button } from "lunchbox";
 // import { useRef } from "preact/hooks";
 // import { handleKeyboard } from "teclas";
 

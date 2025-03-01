@@ -1,5 +1,5 @@
 import type { Signal } from "@preact/signals";
-import { Button } from "../../../mod.ts";
+import { Button } from "lunchbox";
 
 interface CounterProps {
   count: Signal<number>;

@@ -1,4 +1,4 @@
-import { apDef } from '../../deps.ts';
+import { apDef } from '../utils.ts';
 
 type IconColors =
   | 'xs'

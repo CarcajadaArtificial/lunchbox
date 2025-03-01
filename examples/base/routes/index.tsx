@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import { Code, Page, Text } from "../../../mod.ts";
+import { Code, Page, Text } from "lunchbox";
 import Counter from "../islands/Counter.tsx";
 import Keyboard from "../islands/Keyboard.tsx";
 import Navbar from "../components/Navbar.tsx";

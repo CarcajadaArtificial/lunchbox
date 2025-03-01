@@ -1,5 +1,6 @@
 import { iAtom, Input, input } from '../atoms.tsx';
-import { apDef, cn } from '../../deps.ts';
+import { apDef } from '../utils.ts';
+import { cn } from '@vyn/cn';
 
 interface iInputFieldCombo {
   label: string;

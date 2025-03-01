@@ -1,5 +1,5 @@
 import { Details, iAtom } from '../atoms.tsx';
-import { apDef } from '../../deps.ts';
+import { apDef } from '../utils.ts';
 import { ComponentChildren } from 'preact';
 
 interface iFieldsetCheck {

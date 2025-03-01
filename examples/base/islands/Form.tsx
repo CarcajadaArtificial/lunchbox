@@ -7,7 +7,7 @@ import {
   InputRadioCombo,
   InputSelectCombo,
   InputTextareaCombo,
-} from "../../../mod.ts";
+} from "lunchbox";
 // import { useReducer } from "preact/hooks";
 
 export default function Form() {

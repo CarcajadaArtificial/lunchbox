@@ -1,6 +1,6 @@
 import { iAtom, Markdown } from '../atoms.tsx';
-import { apDef } from '../../deps.ts';
-import { render, RenderOptions } from 'jsr:@deno/gfm@^0.10.0';
+import { apDef } from '../utils.ts';
+import { render, RenderOptions } from '@deno/gfm';
 
 export type iMarkdown = {
   content: string;

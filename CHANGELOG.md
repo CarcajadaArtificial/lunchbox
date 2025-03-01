@@ -1,5 +1,14 @@
 # Changelog
 
+- [ ] Updated base example's fresh and std dependencies to jsr and preact to npm.
+- [ ] Update tailwind to v4 and update the plugin colors.
+
+## v1.0.18
+
+- Updated base example to use @lunchbox/plugin and correct dependency imports.
+- Added the `apDef()` function and updated everywhere that was using it.
+- Removed the dependency module.
+
 ## v1.0.17
 
 - Removed the organism components in favor of preact signals.

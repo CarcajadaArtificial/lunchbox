@@ -1,4 +1,4 @@
-import { Code, Markdown, Page, Text } from "../../../mod.ts";
+import { Code, Markdown, Page, Text } from "lunchbox";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 

@@ -22,6 +22,7 @@
   ],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "@lunchbox/plugin": "jsr:@lunchbox/plugin@^1.0.8",
     "preact": "https://esm.sh/preact@10.22.0",
     "preact/": "https://esm.sh/preact@10.22.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
@@ -29,10 +30,11 @@
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
     "usehooks-ts": "npm:usehooks-ts@3.1.0",
     "teclas": "jsr:@carcajada/teclas@^1.0.8",
     "$std/": "https://deno.land/std@0.216.0/",
-    "lunchbox/core": "jsr:@carcajada/lunchbox-core@^1.0.2",
     "lunchbox": "../../mod.ts"
   },
   "compilerOptions": {

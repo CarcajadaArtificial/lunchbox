@@ -8,7 +8,7 @@ import {
   layout,
   Page,
   Text,
-} from "../../../mod.ts";
+} from "lunchbox";
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 
