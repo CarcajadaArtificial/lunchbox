@@ -1,5 +1,6 @@
-import { iAtom, Input } from '../atoms.tsx';
+import { type iAtom, Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
+import type { JSX } from 'preact';
 
 interface iInputCheckCombo {
   label: string;
@@ -15,7 +16,7 @@ const d: iInputCheckCombo = {
 
 const setup = (p: Partial<iInputCheckCombo>) => apDef(d, p);
 
-export default function (props: Partial<iInputCheckCombo>) {
+export default function (props: Partial<iInputCheckCombo>): JSX.Element {
   const p = setup(props);
 
   return (

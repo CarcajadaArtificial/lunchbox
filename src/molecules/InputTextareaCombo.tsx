@@ -1,5 +1,6 @@
-import { iAtom, Input, input } from '../atoms.tsx';
+import { type iAtom, Input, input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
+import type { JSX } from 'preact';
 
 interface iInputFieldCombo {
   label: string;
@@ -15,7 +16,7 @@ const d: iInputFieldCombo = {
 
 const setup = (p: Partial<iInputFieldCombo>) => apDef(d, p);
 
-export default function (props: Partial<iInputFieldCombo>) {
+export default function (props: Partial<iInputFieldCombo>): JSX.Element {
   const p = setup(props);
 
   return (

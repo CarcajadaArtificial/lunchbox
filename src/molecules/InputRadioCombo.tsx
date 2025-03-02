@@ -1,5 +1,6 @@
-import { iAtom, Input } from '../atoms.tsx';
+import { type iAtom, Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
+import type { JSX } from 'preact';
 
 interface iInputRadioCombo {
   label: string;
@@ -13,7 +14,7 @@ const d: iInputRadioCombo = {
 
 const setup = (p: Partial<iInputRadioCombo>) => apDef(d, p);
 
-export default function (props: Partial<iInputRadioCombo>) {
+export default function (props: Partial<iInputRadioCombo>): JSX.Element {
   const p = setup(props);
 
   return (

@@ -1,8 +1,19 @@
+//   _____     _ _        _         _
+//  |_   _|_ _(_) |_ __ _(_)_ _  __| |
+//    | |/ _` | | \ V  V / | ' \/ _` |
+//    |_|\__,_|_|_|\_/\_/|_|_||_\__,_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * This module contains the tailwind plugin for the library.
+ *
+ * @module
+ */
+
 import plugin from 'npm:/tailwindcss@3.4.1/plugin.js';
 
-export default plugin(
-  function () {
-  },
+const twPlugin: ReturnType<typeof plugin> = plugin(
+  function () {},
   {
     theme: {
       fontFamily: {
@@ -106,6 +117,21 @@ export default plugin(
           'triple': '3rem',
           'quadruple': '4rem',
           'fifteen': '15rem',
+          '1/8': '0.125em',
+          '1/4': '0.25em',
+          '3/8': '0.375em',
+          '1/3': '0.3333333333em',
+          '1/2': '0.5em',
+          '5/8': '0.625em',
+          '2/3': '0.6666666666em',
+          '3/4': '0.75em',
+          '7/8': '0.875em',
+          '1/1': '1em',
+          '3/2': '1.5em',
+          '2/1': '2em',
+          '3/1': '3em',
+          '4/1': '4em',
+          '15/1': '15em',
           'banner': '90dvh',
         },
         gridTemplateColumns: {
@@ -134,7 +160,6 @@ export default plugin(
           title: ['3.0517578125rem', '4.5rem'],
           display: ['3.8146972656rem', '4.5rem'],
         },
-
         typography: {
           DEFAULT: {
             css: {
@@ -184,3 +209,5 @@ export default plugin(
     },
   },
 );
+
+export default twPlugin;

@@ -1,6 +1,7 @@
-import { iAtom, Input, input } from '../atoms.tsx';
+import { type iAtom, Input, input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
 import { apDef } from '../utils.ts';
+import type { JSX } from 'preact';
 
 interface iFieldsetRadio {
   values: string[];
@@ -18,7 +19,7 @@ const d: iFieldsetRadio = {
 
 const setup = (p: Partial<iFieldsetRadio>) => apDef(d, p);
 
-export default function (props: Partial<iFieldsetRadio>) {
+export default function (props: Partial<iFieldsetRadio>): JSX.Element {
   const p = setup(props);
 
   return (

@@ -1,6 +1,7 @@
-import { iAtom, Markdown } from '../atoms.tsx';
+import { type iAtom, Markdown } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
-import { render, RenderOptions } from '@deno/gfm';
+import { render, type RenderOptions } from '@deno/gfm';
+import type { JSX } from 'preact';
 
 export type iMarkdown = {
   content: string;
@@ -23,7 +24,7 @@ function setup(props: Partial<iMarkdown>) {
   return p;
 }
 
-export default function (props: Partial<iMarkdown>) {
+export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
   return (

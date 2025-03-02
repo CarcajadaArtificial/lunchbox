@@ -17,7 +17,7 @@
  *
  * @module
  */
-import { JSX, Ref } from 'preact';
+import type { JSX, Ref } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
 
@@ -80,7 +80,7 @@ export const clr = {
 /**
  * This is a dictionary of particles that represent parts of inputs that repeat accross multiple atoms.
  */
-export const input = {
+export const input: Record<string, string> = {
   /** The standard required indicator (`*`) with a contrasting color. */
   required: cn(
     'after:content-["*"] after:font-mono',
@@ -109,7 +109,7 @@ export const input = {
  * This particle contains the styles that are common between the `<Page.Header/>` and
  * `<Page.Footer/>` atoms.
  */
-export const area = cn(
+export const area: string = cn(
   clr.panel.bg,
   'py-triple',
 );
@@ -119,7 +119,7 @@ export const area = cn(
  * This is particle contains the styles for the library's grid system container. Children of elements
  * containing this styles should use the extended tailwind `gridColumn` settings.
  */
-export const layout = cn(
+export const layout: string = cn(
   'grid',
   'grid-cols-6 md:grid-cols-12',
   'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
@@ -129,7 +129,7 @@ export const layout = cn(
 
 // =====================================================================================================
 /** This particle contains the styles for any element's focus state. */
-export const focus = cn(
+export const focus: string = cn(
   clr.neutral.outline,
   'focus:outline-1',
   'outline-offset-2',
@@ -137,7 +137,7 @@ export const focus = cn(
 
 // =====================================================================================================
 /** This particle contains the styles that are common in button atoms. */
-export const btn = cn(
+export const btn: string = cn(
   'px-three-quarters py-quarter',
   'rounded',
 );
@@ -152,11 +152,15 @@ export type iAtom<T extends EventTarget = HTMLElement> =
     ref?: Ref<T>;
   };
 
+export type iAtomRender = (p: iAtom) => JSX.Element;
+
+export type iAtomRecord = Record<string, iAtomRender>;
+
 // =====================================================================================================
 /** This dictionary contains the atoms that render text. */
-export const Text = {
+export const Text: iAtomRecord = {
   /** The text with the largest font size. For aesthetic or branding purposes. */
-  Display: (p: iAtom<HTMLSpanElement>) => (
+  Display: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(
@@ -171,7 +175,7 @@ export const Text = {
   ),
 
   /** The standard text with the largest font size. sed for page titles. */
-  Title: (p: iAtom<HTMLSpanElement>) => (
+  Title: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(
@@ -186,7 +190,7 @@ export const Text = {
   ),
 
   /** Short for "heading", this text is for section titles. */
-  Head: (p: iAtom<HTMLSpanElement>) => (
+  Head: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(
@@ -200,17 +204,17 @@ export const Text = {
   ),
 
   /** Short for "subheading", this text is for sub-section titles. */
-  Subhead: (p: iAtom<HTMLSpanElement>) => (
+  Subhead: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span {...p} class={cn('block text-subhead', p.class)} />
   ),
 
   /** The standard text for paragraphs, labels, and other body text. */
-  Base: (p: iAtom<HTMLSpanElement>) => (
+  Base: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span {...p} class={cn('block text-base', p.class)} />
   ),
 
   /** The smallest text size, is slightly less accessible and can be used for subtle details. */
-  Small: (p: iAtom<HTMLSpanElement>) => (
+  Small: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span {...p} class={cn('block text-small', p.class)} />
   ),
 };
@@ -223,7 +227,7 @@ export const Text = {
  */
 export const Page = {
   /** */
-  Body: (p: iAtom<HTMLBodyElement>) => (
+  Body: (p: iAtom<HTMLBodyElement>): JSX.Element => (
     <body
       {...p}
       class={cn(
@@ -237,7 +241,7 @@ export const Page = {
   ),
 
   /** */
-  Main: (p: iAtom) => (
+  Main: (p: iAtom): JSX.Element => (
     <main
       {...p}
       class={cn(
@@ -251,7 +255,7 @@ export const Page = {
   ),
 
   /** */
-  Header: (p: iAtom) => (
+  Header: (p: iAtom): JSX.Element => (
     <header
       {...p}
       class={cn(
@@ -263,7 +267,7 @@ export const Page = {
   ),
 
   /** */
-  Footer: (p: iAtom) => (
+  Footer: (p: iAtom): JSX.Element => (
     <footer
       {...p}
       class={cn(
@@ -283,7 +287,7 @@ export const Page = {
  */
 export const Button = {
   /** */
-  Brand: (p: iAtom<HTMLButtonElement>) => (
+  Brand: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
       class={cn(
@@ -297,7 +301,7 @@ export const Button = {
   ),
 
   /** */
-  Page: (p: iAtom<HTMLButtonElement>) => (
+  Page: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
       class={cn(
@@ -311,7 +315,7 @@ export const Button = {
   ),
 
   /** */
-  Panel: (p: iAtom<HTMLButtonElement>) => (
+  Panel: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
       class={cn(
@@ -325,7 +329,7 @@ export const Button = {
   ),
 
   /** */
-  Error: (p: iAtom<HTMLButtonElement>) => (
+  Error: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
       class={cn(
@@ -343,7 +347,7 @@ export const Button = {
 /** This dictionary contains the atoms that render lists. */
 export const List = {
   /** A simple unordered list. */
-  ul: (p: iAtom<HTMLUListElement>) => (
+  ul: (p: iAtom<HTMLUListElement>): JSX.Element => (
     <ul
       {...p}
       class={cn(
@@ -355,7 +359,7 @@ export const List = {
   ),
 
   /** A simple ordered list. */
-  ol: (p: iAtom<HTMLUListElement>) => (
+  ol: (p: iAtom<HTMLUListElement>): JSX.Element => (
     <ul
       {...p}
       class={cn(
@@ -374,7 +378,7 @@ export const List = {
  */
 export const Code = {
   /** The content part of the codeblock. Must be a child of the container atom. */
-  Content: (p: iAtom) => (
+  Content: (p: iAtom): JSX.Element => (
     <code
       {...p}
       class={cn(
@@ -389,7 +393,7 @@ export const Code = {
    * The container part of an inline codeblock, used inside of a paragraph. It must contain a content
    * atom.
    */
-  Inline: (p: iAtom<HTMLDivElement>) => (
+  Inline: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       {...p}
       class={cn(
@@ -411,7 +415,7 @@ export const Code = {
    *
    * @ignore
    */
-  Block: (p: iAtom<HTMLDivElement>) => (
+  Block: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       class={cn(
         p.class,
@@ -431,7 +435,7 @@ export const Code = {
  */
 export const Input = {
   /** */
-  Field: (p: iAtom<HTMLInputElement>) => (
+  Field: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       {...p}
       class={cn(
@@ -446,7 +450,7 @@ export const Input = {
   ),
 
   /** */
-  Label: (p: iAtom<HTMLLabelElement>) => (
+  Label: (p: iAtom<HTMLLabelElement>): JSX.Element => (
     <label
       {...p}
       class={cn('w-full flex', p.class)}
@@ -454,7 +458,7 @@ export const Input = {
   ),
 
   /** */
-  Container: (p: iAtom<HTMLDivElement>) => (
+  Container: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       {...p}
       class={cn('mb-half', p.class)}
@@ -462,7 +466,7 @@ export const Input = {
   ),
 
   /** */
-  Text: (p: iAtom<HTMLSpanElement>) => (
+  Text: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(
@@ -473,7 +477,7 @@ export const Input = {
   ),
 
   /** */
-  Error: (p: iAtom<HTMLSpanElement>) => (
+  Error: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(clr.error.txt, 'pl-half', p.class)}
@@ -481,7 +485,7 @@ export const Input = {
   ),
 
   /** */
-  Required: (p: iAtom<HTMLSpanElement>) => (
+  Required: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       title={'Required'}
       {...p}
@@ -497,7 +501,7 @@ export const Input = {
   ),
 
   /** */
-  Radio: (p: iAtom<HTMLInputElement>) => (
+  Radio: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='radio'
       {...p}
@@ -516,7 +520,7 @@ export const Input = {
   ),
 
   /** */
-  Fieldset: (p: iAtom<HTMLFieldSetElement>) => (
+  Fieldset: (p: iAtom<HTMLFieldSetElement>): JSX.Element => (
     <fieldset
       {...p}
       class={cn(
@@ -528,7 +532,7 @@ export const Input = {
   ),
 
   /** */
-  Legend: (p: iAtom<HTMLLegendElement>) => (
+  Legend: (p: iAtom<HTMLLegendElement>): JSX.Element => (
     <legend
       {...p}
       class={cn(p.class)}
@@ -536,7 +540,7 @@ export const Input = {
   ),
 
   /** */
-  Check: (p: iAtom<HTMLInputElement>) => (
+  Check: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='checkbox'
       {...p}
@@ -555,7 +559,7 @@ export const Input = {
   ),
 
   /** */
-  Textarea: (p: iAtom<HTMLTextAreaElement>) => (
+  Textarea: (p: iAtom<HTMLTextAreaElement>): JSX.Element => (
     <textarea
       {...p}
       class={cn(
@@ -569,7 +573,7 @@ export const Input = {
   ),
 
   /** */
-  Select: (p: iAtom<HTMLSelectElement>) => (
+  Select: (p: iAtom<HTMLSelectElement>): JSX.Element => (
     <select
       {...p}
       class={cn(
@@ -584,7 +588,7 @@ export const Input = {
   ),
 
   /** */
-  Submit: (p: iAtom<HTMLInputElement>) => (
+  Submit: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='submit'
       {...p}
@@ -609,7 +613,7 @@ export const Input = {
  */
 export const Aside = {
   /** */
-  Sticky: (p: iAtom) => (
+  Sticky: (p: iAtom): JSX.Element => (
     <aside
       {...p}
       class={cn(
@@ -627,7 +631,7 @@ export const Aside = {
  */
 export const Nav = {
   /** The sticky navbar stays on the top of the page when scrolling. */
-  Sticky: (p: iAtom) => (
+  Sticky: (p: iAtom): JSX.Element => (
     <nav
       {...p}
       class={cn(
@@ -650,7 +654,7 @@ export const Nav = {
  */
 export const Details = {
   /** The container for the details element that is shown/hidden when a summary atom is clicked. */
-  Container: (p: iAtom<HTMLDetailsElement>) => (
+  Container: (p: iAtom<HTMLDetailsElement>): JSX.Element => (
     <details
       {...p}
       class={cn(
@@ -664,7 +668,7 @@ export const Details = {
   ),
 
   /** The summary element that prompts the user to click to show/hide a container atom. */
-  Summary: (p: iAtom) => (
+  Summary: (p: iAtom): JSX.Element => (
     <summary
       {...p}
       class={cn(
@@ -679,7 +683,7 @@ export const Details = {
 /**
  * This atom renders a horizontal rule, replacing the `<hr/>` element.
  */
-export const Separator = (p: iAtom<HTMLHRElement>) => (
+export const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
   <hr
     class={cn(
       clr.neutral.border,
@@ -695,7 +699,7 @@ export const Separator = (p: iAtom<HTMLHRElement>) => (
 /**
  * This atom renders a link element, replacing the `<a/>` element.
  */
-export const Link = (p: iAtom<HTMLAnchorElement>) => (
+export const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
   <a
     class={cn(
       'text-[inherit]',
@@ -713,7 +717,7 @@ export const Link = (p: iAtom<HTMLAnchorElement>) => (
 /**
  * This atom renders a keyboard key, replacing the `<kbd/>` element.
  */
-export const Kbd = (p: iAtom) => (
+export const Kbd = (p: iAtom): JSX.Element => (
   <kbd
     {...p}
     class={cn(
@@ -734,7 +738,7 @@ export const Kbd = (p: iAtom) => (
  * `deno-gfm` package to render markdown content. It can be used by itself, but using the @see Markdown
  * molecule is highly recommended to avoid redundancies.
  */
-export const Markdown = (p: iAtom<HTMLDivElement>) => (
+export const Markdown = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
     {...p}
     class={cn(
@@ -763,6 +767,6 @@ export const Markdown = (p: iAtom<HTMLDivElement>) => (
 /**
  * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX.
  */
-export const KatexStyles = (p: iAtom<HTMLStyleElement>) => (
+export const KatexStyles = (p: iAtom<HTMLStyleElement>): JSX.Element => (
   <style {...p}>{KATEX_CSS}</style>
 );

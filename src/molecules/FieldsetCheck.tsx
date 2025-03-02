@@ -1,6 +1,7 @@
-import { iAtom, Input, input } from '../atoms.tsx';
+import { type iAtom, Input, input } from '../atoms.tsx';
 import InputCheckCombo from './InputCheckCombo.tsx';
 import { apDef } from '../utils.ts';
+import type { JSX } from 'preact';
 
 interface iFieldsetCheck {
   values: string[];
@@ -18,7 +19,7 @@ const d: iFieldsetCheck = {
 
 const setup = (p: Partial<iFieldsetCheck>) => apDef(d, p);
 
-export default function (props: Partial<iFieldsetCheck>) {
+export default function (props: Partial<iFieldsetCheck>): JSX.Element {
   const p = setup(props);
 
   return (
