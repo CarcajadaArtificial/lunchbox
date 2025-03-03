@@ -28,7 +28,7 @@ export default function Home() {
         <div class="col-h-full md:col-full text-center">
           <Keyboard />
           <Text.Head>Counter</Text.Head>
-          <div class="mt-half">
+          <div class="mt-1/2">
             <span>The code for this island is located here</span>{" "}
             <Code.Inline>
               <Code.Content>./islands/Counter.tsx</Code.Content>

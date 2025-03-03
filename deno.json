@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/lunchbox",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "exports": "./mod.ts",
   "tasks": {
     "example:base": "deno run -A --watch=static/,routes/ examples/base/dev.ts"

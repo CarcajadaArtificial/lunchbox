@@ -30,36 +30,36 @@ export default function () {
         </div>
       </Page.Header>
       <Navbar />
-      <Page.Main class="gap-y-double">
+      <Page.Main class="gap-y-2/1">
         <div class="col-h-full md:col-full">
           <Text.Title>Inputs</Text.Title>
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">InputField</Text.Head>
+          <Text.Head class="mb-1/1">InputField</Text.Head>
           <InputFieldCombo />
           <InputFieldCombo label="label" />
           <InputFieldCombo error="error" />
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">Textarea</Text.Head>
+          <Text.Head class="mb-1/1">Textarea</Text.Head>
           <InputTextareaCombo />
           <InputTextareaCombo label="label" />
           <InputTextareaCombo error="error" />
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">Select</Text.Head>
+          <Text.Head class="mb-1/1">Select</Text.Head>
           <InputSelectCombo />
           <InputSelectCombo label="label" />
           <InputSelectCombo error="error" />
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">Check & Radio</Text.Head>
+          <Text.Head class="mb-1/1">Check & Radio</Text.Head>
           <InputCheckCombo label="check" />
           <InputCheckCombo label="check" error="error" />
           <InputRadioCombo label="radio" />
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">Fieldset</Text.Head>
+          <Text.Head class="mb-1/1">Fieldset</Text.Head>
           <FieldsetCheck
             values={["Foo", "Bar"]}
             legend="Fieldset Check"
@@ -84,7 +84,7 @@ export default function () {
           />
         </div>
         <div class="col-h-full md:col-md">
-          <Text.Head class="mb-single">Accordion</Text.Head>
+          <Text.Head class="mb-1/1">Accordion</Text.Head>
           <Accordion open name="accordion" summary="Foo">
             <Text.Base>Example content</Text.Base>
           </Accordion>

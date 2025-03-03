@@ -5,3 +5,4 @@ deno.lock
 .vscode
 _fresh/
 docs/
+node_modules/

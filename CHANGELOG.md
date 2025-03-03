@@ -2,15 +2,22 @@
 
 ## Working on
 
-- Updated base example's fresh and std dependencies to jsr and preact to npm.
-- Update tailwind to v4 and update the plugin colors.
-- Replace spacing units to number fractions instead of text fractions.
+- Finish documentation of `atom.tsx` and molecules.
+- Publish the package to jsr.
 
 ### Next up
 
-- Publish the package to jsr.
+- Update base example's fresh and std dependencies to jsr and preact to npm.
+- Update tailwind to v4 and update the plugin colors.
+- Test generated jsr documentation (@see tag).
 
 ## Version History
+
+### v1.0.20
+
+- Replaced spacing units to number fractions instead of text fractions.
+- Removed the tailwind plugin module.
+- Updated the `@lunchbox/plugin` package.
 
 ### v1.0.19
 

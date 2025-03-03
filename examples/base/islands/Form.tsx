@@ -12,7 +12,7 @@ import {
 
 export default function Form() {
   return (
-    <form class={`p-single my-single rounded max-w-96 ${clr.panel.bg_50}`}>
+    <form class={`p-1/1 my-1/1 rounded max-w-96 ${clr.panel.bg_50}`}>
       <InputFieldCombo
         label="username"
         fwd={{

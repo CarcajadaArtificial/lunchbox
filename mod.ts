@@ -1,7 +1,5 @@
 export * from './src/atoms.tsx';
 
-export { default as LunchboxTailwind } from './src/tailwind.ts';
-
 export { default as Accordion } from './src/molecules/Accordion.tsx';
 export { default as FieldsetCheck } from './src/molecules/FieldsetCheck.tsx';
 export { default as FieldsetRadio } from './src/molecules/FieldsetRadio.tsx';

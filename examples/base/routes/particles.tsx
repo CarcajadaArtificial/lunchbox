@@ -13,7 +13,7 @@ import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 
 const BackgroundColor = (props: iAtom<HTMLDivElement>) => (
-  <div {...props} class={`min-h-double p-half rounded ${props.class}`} />
+  <div {...props} class={`min-h-2/1 p-1/2 rounded ${props.class}`} />
 );
 
 export default function () {
@@ -36,7 +36,7 @@ export default function () {
         <div class="col-h-full md:col-full">
           <Text.Title>Colors</Text.Title>
         </div>
-        <div class="col-h-full md:col-md flex flex-col gap-half">
+        <div class="col-h-full md:col-md flex flex-col gap-1/2">
           <div>
             <Text.Base>Neutral</Text.Base>
             <BackgroundColor class={clr.neutral.bg} />
@@ -90,7 +90,7 @@ export default function () {
             <BackgroundColor class={clr.panel.bg_15} />
           </div>
           <BackgroundColor class={clr.panel.bg}>
-            <div class="mb-half">
+            <div class="mb-1/2">
               <Text.Base>Page</Text.Base>
               <BackgroundColor class={clr.page.bg} />
             </div>
@@ -100,7 +100,7 @@ export default function () {
             </div>
           </BackgroundColor>
         </div>
-        <div class="col-h-full md:col-md flex flex-col gap-half">
+        <div class="col-h-full md:col-md flex flex-col gap-1/2">
           <div class="flex flex-col">
             <Text.Base class={clr.neutral.txt}>Neutral</Text.Base>
             <Text.Base class={clr.neutral.txt_25}>Neutral 25%</Text.Base>
@@ -118,14 +118,14 @@ export default function () {
           <BackgroundColor class={`border-2 ${clr.neutral.border_25}`}>
             <Text.Base>Neutral Border 25%</Text.Base>
           </BackgroundColor>
-          <Text.Head class="mt-double mb-single">Misc.</Text.Head>
+          <Text.Head class="mt-2/1 mb-1/1">Misc.</Text.Head>
           <Text.Base class={input.required}>
             Required input indicator as a pseudoelement:
           </Text.Base>
           <Text.Base>
             Abstraction of a button without specific styles, but is interactible
             and displays the Neutral Outline color:
-            <button class={`mx-half ${clr.neutral.outline} ${btn}`}>
+            <button class={`mx-1/2 ${clr.neutral.outline} ${btn}`}>
               Button
             </button>
             This particle will then be adapted to the different button atoms.
@@ -134,7 +134,7 @@ export default function () {
       </Page.Main>
       <div class={`${area} ${layout}`}>
         <div class="col-h-full md:col-full">
-          <Text.Head class="mb-single">Area</Text.Head>
+          <Text.Head class="mb-1/1">Area</Text.Head>
           <Text.Base>
             This is an abstraction of a page section, it is used in the{" "}
             <Code.Inline>{"<Header/>"}</Code.Inline>
@@ -142,7 +142,7 @@ export default function () {
           </Text.Base>
         </div>
       </div>
-      <div class={`${layout} ${clr.page.bg} py-triple gap-y-single`}>
+      <div class={`${layout} ${clr.page.bg} py-3/1 gap-y-1/1`}>
         <div class="col-h-full md:col-full">
           <Text.Head>Layout</Text.Head>
         </div>
