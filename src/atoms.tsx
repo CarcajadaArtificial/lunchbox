@@ -34,6 +34,13 @@ import { KATEX_CSS } from '@deno/gfm';
  * - `page`: The default background of the page.
  * - `panel`: A background that feels as a physical section for panels.
  *
+ * ```tsx
+ * import { clr } from '@lunchbox/ui';
+ *
+ * <div class={clr.neutral.bg}>Example background</div>
+ * <div class={clr.neutral.txt}>Example text</div>
+ * ```
+ *
  * @todo Update to new shading syntax in the new tailwind version.
  */
 export const clr = {
@@ -76,12 +83,23 @@ export const clr = {
 
 // =====================================================================================================
 /**
- * This is a dictionary of particles that represent parts of inputs that repeat accross multiple atoms.
+ * This is a dictionary of particles that represent parts of inputs that repeat accross multiple atoms
+ * or molecules.
  *
  * - `required`: The standard required indicator (`*`) with a contrasting color.
  * - `invalid`: The background of an invalid input.
- * - `error`: The text color of an invalid input.
  * - `abstract`: An abstract particle shared in many input atoms.
+ *
+ * ```tsx
+ * import { input } from '@lunchbox/ui';
+ *
+ * // Required input label
+ * <label class={input.required}>Label text</label>
+ * // Usage of the abstract particle
+ * <input class={input.abstract} />
+ * // Invalid input
+ * <input class={input.invalid} />
+ * ```
  */
 export const input: Record<string, string> = {
   required: cn(
@@ -92,9 +110,6 @@ export const input: Record<string, string> = {
   invalid: cn(
     'invalid:bg-error-lc-50 invalid:dark:bg-d-error-lc-50',
   ),
-  error: cn(
-    clr.error.bg_50,
-  ),
   abstract: cn(
     'border-none',
   ),
@@ -102,16 +117,15 @@ export const input: Record<string, string> = {
 
 // =====================================================================================================
 /**
- * This is a dictionary of particles that represent the different text sizes and line heights.
+ * This is a dictionary of particles that represent the different text sizes and line heights. These
+ * are used in the @see Text atoms along with other standarized styles. In most cases, the
+ * `<Text.Base/>` atom is recommended over the `txt.base` particle.
  *
- * - `display`:
- * - `title`:
- * - `head`:
- * - `subhead`:
- * - `base`:
- * - `small`:
+ * ```tsx
+ * import { txt } from '@lunchbox/ui';
  *
- * @todo Finish documentation.
+ * <span class={txt.base}>Base text</span>
+ * ```
  */
 export const txt: Record<string, string> = {
   display: 'text-[3.8146972656rem]/[4.5rem]',
@@ -125,6 +139,12 @@ export const txt: Record<string, string> = {
 /**
  * This particle contains the styles that are common between the `<Page.Header/>` and
  * `<Page.Footer/>` atoms.
+ *
+ * ```tsx
+ * import { area } from '@lunchbox/ui';
+ *
+ * <section class={area}>...</section>
+ * ```
  */
 export const area: string = cn(
   clr.panel.bg,
@@ -135,6 +155,14 @@ export const area: string = cn(
 /**
  * This is particle contains the styles for the library's grid system container. Children of elements
  * containing this styles should use the extended tailwind `gridColumn` settings.
+ *
+ * ```tsx
+ * import { layout } from '@lunchbox/ui';
+ *
+ * <div class={layout}>
+ *  <div class="grid-cols-12">...</div>
+ * </div>
+ * ```
  */
 export const layout: string = cn(
   'grid',
@@ -145,7 +173,15 @@ export const layout: string = cn(
 );
 
 // =====================================================================================================
-/** This particle contains the styles for any element's focus state. */
+/**
+ * This particle contains the styles for any element's focus state.
+ *
+ * ```tsx
+ * import { focus } from '@lunchbox/ui';
+ *
+ * <div tabIndex={0} class={focus}>{...</div>
+ * ```
+ */
 export const focus: string = cn(
   clr.neutral.outline,
   'focus:outline-1',
@@ -153,7 +189,15 @@ export const focus: string = cn(
 );
 
 // =====================================================================================================
-/** This particle contains the styles that are common in button atoms. */
+/**
+ * This particle contains the styles that are common in button atoms.
+ *
+ * ```tsx
+ * import { btn } from '@lunchbox/ui';
+ *
+ * <button class={btn}>Button</button>
+ * ```
+ */
 export const btn: string = cn(
   'px-3/4 py-1/4',
   'rounded',
@@ -193,6 +237,21 @@ export type iAtomRecord = Record<string, iAtomRender>;
  * - `Subhead`: Short for "subheading", this text is for sub-section titles.
  * - `Base`: The standard text for paragraphs, labels, and other body text.
  * - `Small`: The smallest text size, is slightly less accessible and can be used for subtle details.
+ *
+ * ```tsx
+ * import { Text } from '@lunchbox/ui';
+ *
+ * <Text.Display>Display text</Text.Display>
+ * <Text.Title>Title text</Text.Title>
+ * <Text.Head>Head text</Text.Head>
+ * <Text.Subhead>Subhead text</Text.Subhead>
+ * <Text.Base>Base text</Text.Base>
+ * <Text.Small>Small text</Text.Small>
+ * ```
+ *
+ * @todo Why where these the selection for text types?
+ * @todo Remove the `Text` dictionary in favor of individual atoms for non base text, include h1,
+ *    h2, and h3 for the Title, Head, and Subhead atoms.
  */
 export const Text: iAtomRecord = {
   Display: (p: iAtom<HTMLSpanElement>): JSX.Element => (
@@ -269,12 +328,20 @@ export const Text: iAtomRecord = {
 /**
  * This dictionary contains the atoms that render the page's main semantic sections.
  *
- * - `Body`:
- * - `Main`:
- * - `Header`:
- * - `Footer`:
+ * - `Body`: The entire page's content.
+ * - `Main`: The main content section of the page.
+ * - `Header`: The page's header.
+ * - `Footer`: The page's footer.
  *
- * @todo Finish documentation
+ * ```tsx
+ * import { Page } from '@lunchbox/ui';
+ *
+ * <Page.Body>
+ *  <Page.Header>{...}</Page.Header>
+ *  <Page.Main>{...}</Page.Main>
+ *  <Page.Footer>{...}</Page.Footer>
+ * </Page.Body>
+ * ```
  */
 export const Page = {
   Body: (p: iAtom<HTMLBodyElement>): JSX.Element => (
@@ -325,12 +392,16 @@ export const Page = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render all different button variants.
+ * (description)
  *
- * - `Brand`:
- * - `Page`:
- * - `Panel`:
- * - `Error`:
+ * - `Brand`: (description)
+ * - `Page`: (description)
+ * - `Panel`: (description)
+ * - `Error`: (description)
+ *
+ * ```tsx
+ * (example code)
+ * ```
  *
  * @todo Finish documentation
  */
@@ -387,10 +458,16 @@ export const Button = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render lists.
+ * description)
  *
- * - `ul`: A simple unordered list.
- * - `ol`: A simple ordered list.
+ * - `ul`: (description)
+ * - `ol`: (description)
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const List = {
   ul: (p: iAtom<HTMLUListElement>): JSX.Element => (
@@ -427,7 +504,12 @@ export const List = {
  *    paragraph because it occupies the full width of the parent element. It must contain a content
  *    atom.
  *
- * @todo Implement the `<Code.Block/>` atom.
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
+ * @todo Implement the `<Code.Block/>` atom. (ignore this for now)
  */
 export const Code = {
   Content: (p: iAtom): JSX.Element => (
@@ -469,19 +551,23 @@ export const Code = {
  * could build any type of customized input component. It is recommended to check out the input
  * molecules as they are standard components that are built using these atoms.
  *
- * - `Field`:
- * - `Label`:
- * - `Container`:
- * - `Text`:
- * - `Error`:
- * - `Required`:
- * - `Radio`:
- * - `Fieldset`:
- * - `Legend`:
- * - `Check`:
- * - `Textarea`:
- * - `Select`:
- * - `Submit`:
+ * - `Field`:  (description)
+ * - `Label`:  (description)
+ * - `Container`:  (description)
+ * - `Text`:  (description)
+ * - `Error`:  (description)
+ * - `Required`:  (description)
+ * - `Radio`:  (description)
+ * - `Fieldset`:  (description)
+ * - `Legend`:  (description)
+ * - `Check`:  (description)
+ * - `Textarea`:  (description)
+ * - `Select`:  (description)
+ * - `Submit`:  (description)
+ *
+ * ```tsx
+ * (example code)
+ * ```
  *
  * @todo Finish documentation
  */
@@ -525,20 +611,6 @@ export const Input = {
       {...p}
       class={cn(clr.error.txt, 'pl-1/2', p.class)}
     />
-  ),
-  Required: (p: iAtom<HTMLSpanElement>): JSX.Element => (
-    <span
-      title='Required'
-      {...p}
-      class={cn(
-        clr.error.txt,
-        'font-mono',
-        'pl-1/4',
-        p.class,
-      )}
-    >
-      {p.children ? p.children : '*'}
-    </span>
   ),
   Radio: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
@@ -636,7 +708,11 @@ export const Input = {
  * This dictionary contains the atoms that render secondary sections of content made using the
  * `<aside/>` element, usually for types of sidebars.
  *
- * - `Sticky`:
+ * - `Sticky`: (description)
+ *
+ * ```tsx
+ * (example code)
+ * ```
  *
  * @todo Finish documentation
  */
@@ -658,6 +734,12 @@ export const Aside = {
  * This dictionary contains the atoms that render different types of navigation components.
  *
  * - `Sticky`: The sticky navbar stays on the top of the page when scrolling.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Nav = {
   Sticky: (p: iAtom): JSX.Element => (
@@ -684,6 +766,12 @@ export const Nav = {
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
  * - `Summary`: The summary element that prompts the user to click to show/hide a container atom.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Details = {
   Container: (p: iAtom<HTMLDetailsElement>): JSX.Element => (
@@ -712,6 +800,14 @@ export const Details = {
 // =====================================================================================================
 /**
  * This atom renders a horizontal rule, replacing the `<hr/>` element.
+ *
+ * ```tsx
+ * import { Separator } from '@lunchbox/ui';
+ *
+ * <Separator />
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
   <hr
@@ -728,6 +824,12 @@ export const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
 // =====================================================================================================
 /**
  * This atom renders a link element, replacing the `<a/>` element.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
   <a
@@ -746,6 +848,12 @@ export const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
 // =====================================================================================================
 /**
  * This atom renders a keyboard key, replacing the `<kbd/>` element.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Kbd = (p: iAtom): JSX.Element => (
   <kbd
@@ -767,6 +875,12 @@ export const Kbd = (p: iAtom): JSX.Element => (
  * This atom contains style settings for the `@tailwind/typeography` plugin and works with the
  * `deno-gfm` package to render markdown content. It can be used by itself, but using the @see Markdown
  * molecule is highly recommended to avoid redundancies.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const Markdown = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
@@ -796,6 +910,12 @@ export const Markdown = (p: iAtom<HTMLDivElement>): JSX.Element => (
 // =====================================================================================================
 /**
  * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX.
+ *
+ * ```tsx
+ * (example code)
+ * ```
+ *
+ * @todo Finish documentation
  */
 export const KatexStyles = (p: iAtom<HTMLStyleElement>): JSX.Element => (
   <style {...p}>{KATEX_CSS}</style>

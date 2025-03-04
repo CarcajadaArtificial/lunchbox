@@ -31,7 +31,7 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
           )
           : null}
         <Input.Field
-          class={cn(p.error ? input.error : p.fwd.class)}
+          class={cn(p.error ? input.invalid : p.fwd.class)}
           {...p.fwd}
         />
       </Input.Label>

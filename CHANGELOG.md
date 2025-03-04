@@ -13,6 +13,11 @@
 
 ## Version History
 
+### v1.0.21
+
+- Removed the `error` input particle in favor of the `invalid` particle.
+- Added more documentation to the `atom.tsx` file.
+
 ### v1.0.20
 
 - Replaced spacing units to number fractions instead of text fractions.
