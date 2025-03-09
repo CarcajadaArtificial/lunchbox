@@ -8,32 +8,32 @@ import {
   Page,
   Separator,
   Text,
-} from "lunchbox";
-import Navbar from "../components/Navbar.tsx";
-import Footer from "../components/Footer.tsx";
+} from 'lunchbox';
+import Navbar from '../components/Navbar.tsx';
+import Footer from '../components/Footer.tsx';
 
 export default function () {
   const card_module = `col-h-full md:col-1/2 rounded p-1/2 ${clr.panel.bg}`;
   return (
     <>
       <Page.Header>
-        <div class="col-h-full md:col-full flex flex-col items-center justify-center">
+        <div class='col-h-full md:col-full flex flex-col items-center justify-center'>
           <Text.Title>Atoms</Text.Title>
           <Text.Base>
-            <span>The code for this page is located here</span>{" "}
+            <span>The code for this page is located here</span>{' '}
             <Code.Inline>
               <Code.Content>./routes/atoms.tsx</Code.Content>
-            </Code.Inline>{" "}
+            </Code.Inline>{' '}
             <span>and it is server side rendered.</span>
           </Text.Base>
         </div>
       </Page.Header>
       <Navbar />
       <Page.Main>
-        <div class="col-h-full md:col-full">
+        <div class='col-h-full md:col-full'>
           <Text.Title>Text</Text.Title>
         </div>
-        <div class="col-h-full md:col-1/2 text-center">
+        <div class='col-h-full md:col-1/2 text-center'>
           <Text.Display>Display</Text.Display>
           <Text.Title>Title</Text.Title>
           <Text.Head>Head</Text.Head>
@@ -49,10 +49,10 @@ export default function () {
           <Text.Base>Base</Text.Base>
           <Text.Small>Small</Text.Small>
         </div>
-        <div class="col-h-full md:col-full mt-2/1">
+        <div class='col-h-full md:col-full mt-2/1'>
           <Text.Title>Link</Text.Title>
         </div>
-        <div class="col-h-full md:col-1/2 text-center">
+        <div class='col-h-full md:col-1/2 text-center'>
           <Text.Display>
             <Link>Display</Link>
           </Text.Display>
@@ -92,10 +92,10 @@ export default function () {
             <Link>Small</Link>
           </Text.Small>
         </div>
-        <div class="col-h-full md:col-full mt-2/1">
+        <div class='col-h-full md:col-full mt-2/1'>
           <Text.Title>Kbd</Text.Title>
         </div>
-        <div class="col-h-full md:col-1/2 flex flex-col items-center gap-1/2">
+        <div class='col-h-full md:col-1/2 flex flex-col items-center gap-1/2'>
           <Text.Display>
             <Kbd>Display</Kbd>
           </Text.Display>
@@ -135,10 +135,10 @@ export default function () {
             <Kbd>Small</Kbd>
           </Text.Small>
         </div>
-        <div class="col-h-full md:col-full mt-2/1">
+        <div class='col-h-full md:col-full mt-2/1'>
           <Text.Title>OL</Text.Title>
         </div>
-        <div class="col-h-full md:col-1/2">
+        <div class='col-h-full md:col-1/2'>
           <Text.Display>
             <List.ol>
               <li>Display</li>
@@ -227,10 +227,10 @@ export default function () {
           </Text.Small>
         </div>
 
-        <div class="col-h-full md:col-full mt-2/1">
+        <div class='col-h-full md:col-full mt-2/1'>
           <Text.Title>UL</Text.Title>
         </div>
-        <div class="col-h-full md:col-1/2">
+        <div class='col-h-full md:col-1/2'>
           <Text.Display>
             <List.ul>
               <li>Display</li>
@@ -319,12 +319,12 @@ export default function () {
           </Text.Small>
         </div>
 
-        <div class="col-h-full md:col-full mt-2/1">
+        <div class='col-h-full md:col-full mt-2/1'>
           <Text.Title>Misc</Text.Title>
           <Text.Subhead>Separator</Text.Subhead>
           <Separator />
-          <div class="flex gap-1/1 flex-wrap mt-2/1">
-            <Text.Subhead class="w-full">Buttons</Text.Subhead>
+          <div class='flex gap-1/1 flex-wrap mt-2/1'>
+            <Text.Subhead class='w-full'>Buttons</Text.Subhead>
             <div
               class={`${clr.page.bg} ${clr.neutral.border} p-1/2 rounded border-2 flex flex-col items-start gap-1/2`}
             >

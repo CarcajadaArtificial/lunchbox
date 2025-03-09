@@ -10,85 +10,85 @@ import {
   InputTextareaCombo,
   Page,
   Text,
-} from "lunchbox";
-import Navbar from "../components/Navbar.tsx";
-import Footer from "../components/Footer.tsx";
+} from 'lunchbox';
+import Navbar from '../components/Navbar.tsx';
+import Footer from '../components/Footer.tsx';
 
 export default function () {
   return (
     <>
       <Page.Header>
-        <div class="col-h-full md:col-full flex flex-col items-center justify-center">
+        <div class='col-h-full md:col-full flex flex-col items-center justify-center'>
           <Text.Title>Molecules</Text.Title>
           <Text.Base>
-            <span>The code for this page is located here</span>{" "}
+            <span>The code for this page is located here</span>{' '}
             <Code.Inline>
               <Code.Content>./routes/molecules.tsx</Code.Content>
-            </Code.Inline>{" "}
+            </Code.Inline>{' '}
             <span>and it is server side rendered.</span>
           </Text.Base>
         </div>
       </Page.Header>
       <Navbar />
-      <Page.Main class="gap-y-2/1">
-        <div class="col-h-full md:col-full">
+      <Page.Main class='gap-y-2/1'>
+        <div class='col-h-full md:col-full'>
           <Text.Title>Inputs</Text.Title>
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">InputField</Text.Head>
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>InputField</Text.Head>
           <InputFieldCombo />
-          <InputFieldCombo label="label" />
-          <InputFieldCombo error="error" />
+          <InputFieldCombo label='label' />
+          <InputFieldCombo error='error' />
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">Textarea</Text.Head>
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>Textarea</Text.Head>
           <InputTextareaCombo />
-          <InputTextareaCombo label="label" />
-          <InputTextareaCombo error="error" />
+          <InputTextareaCombo label='label' />
+          <InputTextareaCombo error='error' />
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">Select</Text.Head>
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>Select</Text.Head>
           <InputSelectCombo />
-          <InputSelectCombo label="label" />
-          <InputSelectCombo error="error" />
+          <InputSelectCombo label='label' />
+          <InputSelectCombo error='error' />
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">Check & Radio</Text.Head>
-          <InputCheckCombo label="check" />
-          <InputCheckCombo label="check" error="error" />
-          <InputRadioCombo label="radio" />
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>Check & Radio</Text.Head>
+          <InputCheckCombo label='check' />
+          <InputCheckCombo label='check' error='error' />
+          <InputRadioCombo label='radio' />
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">Fieldset</Text.Head>
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>Fieldset</Text.Head>
           <FieldsetCheck
-            values={["Foo", "Bar"]}
-            legend="Fieldset Check"
-            fwd={{ name: "fieldset_check_a" }}
+            values={['Foo', 'Bar']}
+            legend='Fieldset Check'
+            fwd={{ name: 'fieldset_check_a' }}
           />
           <FieldsetCheck
-            values={["Foo", "Bar"]}
-            legend="Fieldset Check"
-            error="error"
-            fwd={{ name: "fieldset_check_b" }}
+            values={['Foo', 'Bar']}
+            legend='Fieldset Check'
+            error='error'
+            fwd={{ name: 'fieldset_check_b' }}
           />
           <FieldsetRadio
-            values={["Foo", "Bar"]}
-            legend="Fieldset Radio"
-            fwd={{ name: "fieldset_radio_a" }}
+            values={['Foo', 'Bar']}
+            legend='Fieldset Radio'
+            fwd={{ name: 'fieldset_radio_a' }}
           />
           <FieldsetRadio
-            values={["Foo", "Bar"]}
-            legend="Fieldset Radio"
-            error="error"
-            fwd={{ name: "fieldset_radio_b" }}
+            values={['Foo', 'Bar']}
+            legend='Fieldset Radio'
+            error='error'
+            fwd={{ name: 'fieldset_radio_b' }}
           />
         </div>
-        <div class="col-h-full md:col-md">
-          <Text.Head class="mb-1/1">Accordion</Text.Head>
-          <Accordion open name="accordion" summary="Foo">
+        <div class='col-h-full md:col-md'>
+          <Text.Head class='mb-1/1'>Accordion</Text.Head>
+          <Accordion open name='accordion' summary='Foo'>
             <Text.Base>Example content</Text.Base>
           </Accordion>
-          <Accordion name="accordion" summary="Bar">
+          <Accordion name='accordion' summary='Bar'>
             <Text.Base>Example content</Text.Base>
           </Accordion>
         </div>

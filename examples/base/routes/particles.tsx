@@ -8,9 +8,9 @@ import {
   layout,
   Page,
   Text,
-} from "lunchbox";
-import Navbar from "../components/Navbar.tsx";
-import Footer from "../components/Footer.tsx";
+} from 'lunchbox';
+import Navbar from '../components/Navbar.tsx';
+import Footer from '../components/Footer.tsx';
 
 const BackgroundColor = (props: iAtom<HTMLDivElement>) => (
   <div {...props} class={`min-h-2/1 p-1/2 rounded ${props.class}`} />
@@ -20,23 +20,23 @@ export default function () {
   return (
     <>
       <Page.Header>
-        <div class="col-h-full md:col-full flex flex-col items-center justify-center">
+        <div class='col-h-full md:col-full flex flex-col items-center justify-center'>
           <Text.Title>Particles</Text.Title>
           <Text.Base>
-            <span>The code for this page is located here</span>{" "}
+            <span>The code for this page is located here</span>{' '}
             <Code.Inline>
               <Code.Content>./routes/particles.tsx</Code.Content>
-            </Code.Inline>{" "}
+            </Code.Inline>{' '}
             <span>and it is server side rendered.</span>
           </Text.Base>
         </div>
       </Page.Header>
       <Navbar />
       <Page.Main>
-        <div class="col-h-full md:col-full">
+        <div class='col-h-full md:col-full'>
           <Text.Title>Colors</Text.Title>
         </div>
-        <div class="col-h-full md:col-md flex flex-col gap-1/2">
+        <div class='col-h-full md:col-md flex flex-col gap-1/2'>
           <div>
             <Text.Base>Neutral</Text.Base>
             <BackgroundColor class={clr.neutral.bg} />
@@ -90,7 +90,7 @@ export default function () {
             <BackgroundColor class={clr.panel.bg_15} />
           </div>
           <BackgroundColor class={clr.panel.bg}>
-            <div class="mb-1/2">
+            <div class='mb-1/2'>
               <Text.Base>Page</Text.Base>
               <BackgroundColor class={clr.page.bg} />
             </div>
@@ -100,13 +100,13 @@ export default function () {
             </div>
           </BackgroundColor>
         </div>
-        <div class="col-h-full md:col-md flex flex-col gap-1/2">
-          <div class="flex flex-col">
+        <div class='col-h-full md:col-md flex flex-col gap-1/2'>
+          <div class='flex flex-col'>
             <Text.Base class={clr.neutral.txt}>Neutral</Text.Base>
             <Text.Base class={clr.neutral.txt_25}>Neutral 25%</Text.Base>
             <Text.Base class={clr.neutral.txt_10}>Neutral 10%</Text.Base>
           </div>
-          <div class="flex flex-col">
+          <div class='flex flex-col'>
             <Text.Base class={clr.brand.txt}>Brand</Text.Base>
             <Text.Base class={clr.brand.txt_25}>Brand 25%</Text.Base>
             <Text.Base class={clr.brand.txt_10}>Brand 15%</Text.Base>
@@ -118,7 +118,7 @@ export default function () {
           <BackgroundColor class={`border-2 ${clr.neutral.border_25}`}>
             <Text.Base>Neutral Border 25%</Text.Base>
           </BackgroundColor>
-          <Text.Head class="mt-2/1 mb-1/1">Misc.</Text.Head>
+          <Text.Head class='mt-2/1 mb-1/1'>Misc.</Text.Head>
           <Text.Base class={input.required}>
             Required input indicator as a pseudoelement:
           </Text.Base>
@@ -133,17 +133,17 @@ export default function () {
         </div>
       </Page.Main>
       <div class={`${area} ${layout}`}>
-        <div class="col-h-full md:col-full">
-          <Text.Head class="mb-1/1">Area</Text.Head>
+        <div class='col-h-full md:col-full'>
+          <Text.Head class='mb-1/1'>Area</Text.Head>
           <Text.Base>
-            This is an abstraction of a page section, it is used in the{" "}
-            <Code.Inline>{"<Header/>"}</Code.Inline>
-            and <Code.Inline>{"<Footer/>"}</Code.Inline> components.
+            This is an abstraction of a page section, it is used in the{' '}
+            <Code.Inline>{'<Header/>'}</Code.Inline>
+            and <Code.Inline>{'<Footer/>'}</Code.Inline> components.
           </Text.Base>
         </div>
       </div>
       <div class={`${layout} ${clr.page.bg} py-3/1 gap-y-1/1`}>
-        <div class="col-h-full md:col-full">
+        <div class='col-h-full md:col-full'>
           <Text.Head>Layout</Text.Head>
         </div>
         <BackgroundColor class={`col-h-full md:col-full ${clr.panel.bg}`}>

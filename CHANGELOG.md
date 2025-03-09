@@ -4,6 +4,13 @@
 
 - Finish documentation of `atom.tsx` and molecules.
 - Publish the package to jsr.
+- Create an `init` project example. This init will be what will be generated
+  using the lunchbox init command.
+  - Create a script that generates a `init.gen.ts` file with all the contents
+    inside of `examples/init` converted into constant strings. The pipeline
+    should include `deno fmt`.
+  - Create the script module `init.ts` at root that generates the initialization
+    files based on the `init.gen.ts` constants.
 
 ### Next up
 
@@ -12,6 +19,10 @@
 - Test generated jsr documentation (@see tag).
 
 ## Version History
+
+### v1.0.22
+
+- Formatted the base example project.
 
 ### v1.0.21
 
@@ -47,7 +58,8 @@
 ### v1.0.15
 
 - Removed the tailwind forms plugin from the base example.
-- Added the `input` atom group with the new `invalid`, `error`, and `abstract` input atoms.
+- Added the `input` atom group with the new `invalid`, `error`, and `abstract`
+  input atoms.
 
 ### v1.0.14
 
@@ -69,7 +81,8 @@
 
 ### v1.0.10
 
-- Added the `<Navbar/>`, `<Footer/>`, and `<Logo/>` components in the base example.
+- Added the `<Navbar/>`, `<Footer/>`, and `<Logo/>` components in the base
+  example.
 - Updated the 404 page.
 
 ### v1.0.9
@@ -84,7 +97,8 @@
 ### v1.0.7
 
 - Refactored the `resin` implementation in favor of pure tailwind.
-- Refactored components and islands into the `src` folder and organized them into an atomic hierarchy.
+- Refactored components and islands into the `src` folder and organized them
+  into an atomic hierarchy.
 - Added the official native tailwind plugin for a base configuration.
 - Removed the `deno-gfm` fork in favor of @tailwind/typography and prose styles.
 
@@ -112,7 +126,8 @@
 
 ### v1.0.2
 
-- Added the `Revealer` island for abstracting the common "See more..." functionality.
+- Added the `Revealer` island for abstracting the common "See more..."
+  functionality.
 
 ### v1.0.1
 

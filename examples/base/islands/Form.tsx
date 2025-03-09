@@ -7,14 +7,14 @@ import {
   InputRadioCombo,
   InputSelectCombo,
   InputTextareaCombo,
-} from "lunchbox";
+} from 'lunchbox';
 // import { useReducer } from "preact/hooks";
 
 export default function Form() {
   return (
     <form class={`p-1/1 my-1/1 rounded max-w-96 ${clr.panel.bg_50}`}>
       <InputFieldCombo
-        label="username"
+        label='username'
         fwd={{
           required: true,
         }}
@@ -22,16 +22,16 @@ export default function Form() {
       <Input.Fieldset required>
         <Input.Legend class={input.required}>Select your species</Input.Legend>
         <InputRadioCombo
-          label="human"
+          label='human'
           fwd={{
-            name: "species",
+            name: 'species',
             value: 1,
           }}
         />
         <InputRadioCombo
-          label="machine"
+          label='machine'
           fwd={{
-            name: "species",
+            name: 'species',
             value: 2,
           }}
         />
@@ -39,28 +39,28 @@ export default function Form() {
       <Input.Fieldset>
         <Input.Legend>Check</Input.Legend>
         <InputCheckCombo
-          label="human"
+          label='human'
           fwd={{
-            name: "species",
-            value: "h",
+            name: 'species',
+            value: 'h',
           }}
         />
         <InputCheckCombo
-          label="machine"
+          label='machine'
           fwd={{
-            name: "species",
-            value: "m",
+            name: 'species',
+            value: 'm',
           }}
         />
       </Input.Fieldset>
       <InputTextareaCombo
-        label="write about yourself"
+        label='write about yourself'
         fwd={{
           required: true,
         }}
       />
       <InputSelectCombo
-        label="username"
+        label='username'
         fwd={{
           required: true,
         }}
