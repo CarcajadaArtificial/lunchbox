@@ -3,22 +3,21 @@
 ## Working on
 
 - Finish documentation of `atom.tsx` and molecules.
-- Publish the package to jsr.
-- Create an `init` project example. This init will be what will be generated
-  using the lunchbox init command.
-  - Create a script that generates a `init.gen.ts` file with all the contents
-    inside of `examples/init` converted into constant strings. The pipeline
-    should include `deno fmt`.
-  - Create the script module `init.ts` at root that generates the initialization
-    files based on the `init.gen.ts` constants.
 
 ### Next up
 
 - Update base example's fresh and std dependencies to jsr and preact to npm.
 - Update tailwind to v4 and update the plugin colors.
 - Test generated jsr documentation (@see tag).
+- Deprecate `@lunchbox/plugins` and bring fresh and  here.
 
 ## Version History
+
+### v1.0.23
+
+- Added the `init` example project.
+- Added the `task.ts` module for `deno task` commands.
+- Added the `init.ts` module for initializing a lunchbox project.
 
 ### v1.0.22
 

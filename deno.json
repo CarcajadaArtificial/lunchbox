@@ -1,14 +1,20 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "license": "MIT",
   "exports": "./mod.ts",
   "tasks": {
-    "example:base": "deno run -A --watch=static/,routes/ examples/base/dev.ts"
+    "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",
+    "init:generate": "deno run -A src/tasks.ts init-generate",
+    "init:clean": "deno run -A src/tasks.ts init-clean",
+    "init:start": "deno run -A --watch=static/,routes/ examples/init/dev.ts"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
+    "@std/cli": "jsr:@std/cli@^1.0.14",
+    "@std/fmt": "jsr:@std/fmt@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.8",
     "preact": "npm:preact@^10.24.1",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2"
