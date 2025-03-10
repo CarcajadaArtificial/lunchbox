@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: denoland/setup-jsr@v0
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
 
-      - name: Publish package
-        uses: denoland/publish-jsr@v0
+      - name: Publish Lunchbox
+        run: deno publish
