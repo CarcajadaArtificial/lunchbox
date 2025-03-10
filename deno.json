@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "license": "MIT",
   "exports": "./mod.ts",
   "tasks": {
@@ -15,8 +15,9 @@
     "@std/cli": "jsr:@std/cli@^1.0.14",
     "@std/fmt": "jsr:@std/fmt@^1.0.6",
     "@std/path": "jsr:@std/path@^1.0.8",
-    "preact": "npm:preact@^10.24.1",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
-    "@vyn/cn": "jsr:@vyn/cn@^0.1.2"
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
+    "preact": "npm:preact@^10.24.1",
+    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
   }
 }
