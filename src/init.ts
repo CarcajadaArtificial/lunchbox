@@ -146,56 +146,90 @@ export async function init(
   };
 
   // Write root configuration files
-  await writeFile('.gitignore', gen.EXAMPLES_INIT_);
-  await writeFile('deno.json', gen.EXAMPLES_INIT_DENO);
-  await writeFile('dev.ts', gen.EXAMPLES_INIT_DEV);
-  await writeFile('main.ts', gen.EXAMPLES_INIT_MAIN);
-  await writeFile('tailwind.config.ts', gen.EXAMPLES_INIT_TAILWIND);
-  await writeFile('utils.ts', gen.EXAMPLES_INIT_UTILS);
+  await writeFile(
+    '.gitignore',
+    gen.EXAMPLES_INIT_,
+  );
+  await writeFile(
+    'deno.json',
+    gen.EXAMPLES_INIT_DENO,
+  );
+  await writeFile(
+    'dev.ts',
+    gen.EXAMPLES_INIT_DEV,
+  );
+  await writeFile(
+    'main.ts',
+    gen.EXAMPLES_INIT_MAIN,
+  );
+  await writeFile(
+    'tailwind.config.ts',
+    gen.EXAMPLES_INIT_TAILWIND,
+  );
+  await writeFile(
+    'utils.ts',
+    gen.EXAMPLES_INIT_UTILS,
+  );
 
   // Write routes
-  await writeFile('routes/_app.tsx', gen.EXAMPLES_INIT_ROUTES__APP);
-  await writeFile('routes/index.tsx', gen.EXAMPLES_INIT_ROUTES_INDEX);
+  await writeFile(
+    'routes/_app.tsx',
+    gen.EXAMPLES_INIT_ROUTES__APP,
+  );
+  await writeFile(
+    'routes/index.tsx',
+    gen.EXAMPLES_INIT_ROUTES_INDEX,
+  );
 
   // Write static files
-  await writeFile('static/styles.css', gen.EXAMPLES_INIT_STATIC_STYLES);
+  await writeFile(
+    'static/styles.css',
+    gen.EXAMPLES_INIT_STATIC_STYLES,
+  );
 
   // Write component files
-  await writeFile('components/lunchbox/atoms.tsx', gen.SRC_ATOMS);
   await writeFile(
-    'components/lunchbox/molecules/Accordion.tsx',
+    'components/lunchbox/atoms.tsx',
+    gen.SRC_ATOMS,
+  );
+  await writeFile(
+    'components/lunchbox/particles.ts',
+    gen.SRC_PARTICLES,
+  );
+  await writeFile(
+    'components/lunchbox/Accordion.tsx',
     gen.SRC_MOLECULES_ACCORDION,
   );
   await writeFile(
-    'components/lunchbox/molecules/FieldsetCheck.tsx',
+    'components/lunchbox/FieldsetCheck.tsx',
     gen.SRC_MOLECULES_FIELDSETCHECK,
   );
   await writeFile(
-    'components/lunchbox/molecules/FieldsetRadio.tsx',
+    'components/lunchbox/FieldsetRadio.tsx',
     gen.SRC_MOLECULES_FIELDSETRADIO,
   );
   await writeFile(
-    'components/lunchbox/molecules/InputCheckCombo.tsx',
+    'components/lunchbox/InputCheckCombo.tsx',
     gen.SRC_MOLECULES_INPUTCHECKCOMBO,
   );
   await writeFile(
-    'components/lunchbox/molecules/InputFieldCombo.tsx',
+    'components/lunchbox/InputFieldCombo.tsx',
     gen.SRC_MOLECULES_INPUTFIELDCOMBO,
   );
   await writeFile(
-    'components/lunchbox/molecules/InputRadioCombo.tsx',
+    'components/lunchbox/InputRadioCombo.tsx',
     gen.SRC_MOLECULES_INPUTRADIOCOMBO,
   );
   await writeFile(
-    'components/lunchbox/molecules/InputSelectCombo.tsx',
+    'components/lunchbox/InputSelectCombo.tsx',
     gen.SRC_MOLECULES_INPUTSELECTCOMBO,
   );
   await writeFile(
-    'components/lunchbox/molecules/InputTextareaCombo.tsx',
+    'components/lunchbox/InputTextareaCombo.tsx',
     gen.SRC_MOLECULES_INPUTTEXTAREACOMBO,
   );
   await writeFile(
-    'components/lunchbox/molecules/Markdown.tsx',
+    'components/lunchbox/Markdown.tsx',
     gen.SRC_MOLECULES_MARKDOWN,
   );
 

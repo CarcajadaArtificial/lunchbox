@@ -11,6 +11,7 @@
  */
 import plugin from 'tailwindcss/plugin';
 
+// =====================================================================================================
 /**
  * This plugin extends tailwind creating design tokens, these, seen through the Atomic Design
  * framework, are analouge to sub-atomic particles. The `font-family`, `colors`, and `screens` are the

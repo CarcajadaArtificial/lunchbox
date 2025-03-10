@@ -104,7 +104,14 @@ export async function initGenerate() {
 
   await out.write(encoder.encode(INIT_MODULE_COMMENTS));
 
-  await fileToConstant('SRC_ATOMS', await Deno.readTextFile('src/atoms.tsx'));
+  await fileToConstant(
+    'SRC_ATOMS',
+    await Deno.readTextFile('src/atoms.tsx'),
+  );
+  await fileToConstant(
+    'SRC_PARTICLES',
+    await Deno.readTextFile('src/particles.ts'),
+  );
 
   await directoryToConstants('src/molecules');
   await directoryToConstants('examples/init');

@@ -14,6 +14,11 @@
 
 ## Version History
 
+### v1.0.25
+
+- Updated the publishing action to generate provenance.
+- Moved the particles into their own module.
+
 ### v1.0.24
 
 - Added basic publishing CI/CD with GitHub Actions.
