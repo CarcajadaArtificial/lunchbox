@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: jsr/setup-action@v0
+      - uses: denoland/setup-jsr@v0
 
       - name: Publish package
-        uses: jsr/publish-action@v0
+        uses: denoland/publish-jsr@v0

@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.27
+
+- Added fixes for the publishing action.
+
 ### v1.0.26
 
 - Updated package version.
