@@ -1,8 +1,22 @@
+//     _                    _ _
+//    /_\  __ __ ___ _ _ __| (_)___ _ _
+//   / _ \/ _/ _/ _ \ '_/ _` | / _ \ ' \
+//  /_/ \_\__\__\___/_| \__,_|_\___/_||_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ * @module molecules/Accordion
+ */
 import { Details, type iAtom } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren } from 'preact';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetCheck {
   summary: string;
   name: string;
@@ -11,6 +25,10 @@ interface iFieldsetCheck {
   fwd: iAtom<HTMLDetailsElement>;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetCheck = {
   summary: '',
   open: false,
@@ -19,10 +37,12 @@ const d: iFieldsetCheck = {
   fwd: {},
 };
 
-const setup = (p: Partial<iFieldsetCheck>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetCheck>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Details.Container open={p.open} name={p.name} {...p.fwd}>

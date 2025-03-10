@@ -7,7 +7,7 @@
 /**
  * This module contains the tailwind configuration for the Lunchbox UI library.
  *
- * @module
+ * @module tailwind
  */
 import plugin from 'tailwindcss/plugin';
 

@@ -1,8 +1,23 @@
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___ _     _    _         _   ___         _ _
+//  | __(_)___| |__| |___ ___| |_| _ \__ _ __| (_)___
+//  | _|| / -_) / _` (_-</ -_)  _|   / _` / _` | / _ \
+//  |_| |_\___|_\__,_/__/\___|\__|_|_\__,_\__,_|_\___/
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ * @module molecules/FieldsetRadio
+ */
+import { input } from '../particles.ts';
+import { type iAtom, Input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetRadio {
   values: string[];
   legend: string;
@@ -10,6 +25,10 @@ interface iFieldsetRadio {
   fwd: iAtom<HTMLFieldSetElement>;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetRadio = {
   values: [],
   legend: '',
@@ -17,10 +36,12 @@ const d: iFieldsetRadio = {
   fwd: {},
 };
 
-const setup = (p: Partial<iFieldsetRadio>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetRadio>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>

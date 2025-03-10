@@ -6,7 +6,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * This module contains the project initialization functionality.
- * @module
+ *
+ * @module init
  */
 import * as colors from '@std/fmt/colors';
 import * as path from '@std/path';

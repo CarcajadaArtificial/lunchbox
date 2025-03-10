@@ -1,11 +1,8 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "license": "MIT",
   "exports": "./mod.ts",
-  "docs": {
-    "include": ["mod.ts", "src/**/*.ts", "src/**/*.tsx"]
-  },
   "tasks": {
     "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",
     "init:generate": "deno run -A src/tasks.ts init-generate",

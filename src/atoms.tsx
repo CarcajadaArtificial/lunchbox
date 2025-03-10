@@ -15,7 +15,7 @@
  * styles among atoms. These can easily be added to classes of user-created elements that aren't an
  * atom. Additionally, particles commonly come from tailwind theme settings.
  *
- * @module
+ * @module atoms
  */
 import type { JSX, Ref } from 'preact';
 import { cn } from '@vyn/cn';

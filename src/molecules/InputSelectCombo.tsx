@@ -1,7 +1,22 @@
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___                _   ___      _        _    ___           _
+//  |_ _|_ _  _ __ _  _| |_/ __| ___| |___ __| |_ / __|___ _ __ | |__  ___
+//   | || ' \| '_ \ || |  _\__ \/ -_) / -_) _|  _| (__/ _ \ '  \| '_ \/ _ \
+//  |___|_||_| .__/\_,_|\__|___/\___|_\___\__|\__|\___\___/_|_|_|_.__/\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ * @module molecules/InputSelectCombo
+ */
+import { input } from '../particles.ts';
+import { type iAtom, Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren, JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputFieldCombo {
   label: string;
   error: string;
@@ -9,6 +24,10 @@ interface iInputFieldCombo {
   fwd: iAtom<HTMLSelectElement>;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputFieldCombo = {
   label: '',
   error: '',
@@ -16,10 +35,12 @@ const d: iInputFieldCombo = {
   fwd: {},
 };
 
-const setup = (p: Partial<iInputFieldCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputFieldCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>

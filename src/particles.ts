@@ -7,7 +7,7 @@
 /**
  * This module contains the particles for the Lunchbox UI library.
  *
- * @module
+ * @module particles
  */
 import { cn } from '@vyn/cn';
 

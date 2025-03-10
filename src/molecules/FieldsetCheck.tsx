@@ -1,8 +1,23 @@
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___ _     _    _         _    ___ _           _
+//  | __(_)___| |__| |___ ___| |_ / __| |_  ___ __| |__
+//  | _|| / -_) / _` (_-</ -_)  _| (__| ' \/ -_) _| / /
+//  |_| |_\___|_\__,_/__/\___|\__|\___|_||_\___\__|_\_\
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ * @module molecules/FieldsetCheck
+ */
+import { input } from '../particles.ts';
+import { type iAtom, Input } from '../atoms.tsx';
 import InputCheckCombo from './InputCheckCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetCheck {
   values: string[];
   legend: string;
@@ -10,6 +25,10 @@ interface iFieldsetCheck {
   fwd: iAtom<HTMLFieldSetElement>;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetCheck = {
   values: [],
   legend: '',
@@ -17,10 +36,12 @@ const d: iFieldsetCheck = {
   fwd: {},
 };
 
-const setup = (p: Partial<iFieldsetCheck>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetCheck>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
