@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.26
+
+- Updated package version.
+
 ### v1.0.25
 
 - Updated the publishing action to generate provenance.
