@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.29
+
+- Added source modules to the package's documentation.
+
 ### v1.0.28
 
 - Added fixes for the publishing action.
