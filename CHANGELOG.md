@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.31
+
+- Removed the initialization module from the package export.
+
 ### v1.0.30
 
 - Updated documentation.

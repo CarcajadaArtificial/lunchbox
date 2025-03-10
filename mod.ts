@@ -1,5 +1,4 @@
 export * from './src/utils.ts';
-export * from './src/init.ts';
 export * from './src/particles.ts';
 export * from './src/atoms.tsx';
 export * from './src/tailwind.ts';
