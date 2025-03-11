@@ -8,14 +8,17 @@
   },
   "imports": {
     "@": "./",
-    "lunchbox": "./components/lunchbox/index.ts",
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",
     "@preact/signals": "npm:@preact/signals@^2.0.1",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "tailwindcss": "npm:tailwindcss@^3.4.3"
+    "tailwindcss": "npm:tailwindcss@^3.4.3",
+    "lunchbox/particles": "./components/lunchbox/particles.ts",
+    "lunchbox/atoms": "./components/lunchbox/atoms.tsx",
+    "lunchbox/molecules": "./components/lunchbox/molecules.ts",
+    "@lunchbox/ui": "jsr:@lunchbox/ui"
   },
   "compilerOptions": {
     "lib": [

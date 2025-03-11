@@ -246,11 +246,7 @@ export async function init(
   // Write static files
   await writeFile(
     'static/styles.css',
-    gen.EXAMPLES_INIT_STATIC_STYLES,
-  );
-  await writeFile(
-    'static/fonts.css',
-    gen.STATIC_FONTS,
+    gen.STATIC_STYLES,
   );
 
   // Write component files
@@ -305,13 +301,11 @@ export async function init(
     tty.log(
       `Enter your project directory using %ccd ${unresolvedDirectory}%c.`,
       'color: cyan',
-      '',
     );
   }
   tty.log(
     'Run %cdeno task dev%c to start the development server.',
     'color: cyan',
-    '',
   );
   tty.log();
   tty.log(

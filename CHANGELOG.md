@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.42
+
+- Added better import routes for the project initialization code.
+- Added font styles to the `static/styles.css` file and removed the `fonts.css` one.
+
 ### v1.0.41
 
 - Added better import routes for the project initialization code.

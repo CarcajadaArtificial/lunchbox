@@ -925,7 +925,11 @@ export const btn: string = cn(
 
 `;
 
-export const STATIC_FONTS = `
+export const STATIC_STYLES = `
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Fira Code';
   font-weight: 400;
@@ -1632,14 +1636,17 @@ export const EXAMPLES_INIT_DENO = `
   },
   "imports": {
     "@": "./",
-    "lunchbox": "./components/lunchbox/index.ts",
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",
     "@preact/signals": "npm:@preact/signals@^2.0.1",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "tailwindcss": "npm:tailwindcss@^3.4.3"
+    "tailwindcss": "npm:tailwindcss@^3.4.3",
+    "lunchbox/particles": "./components/lunchbox/particles.ts",
+    "lunchbox/atoms": "./components/lunchbox/atoms.tsx",
+    "lunchbox/molecules": "./components/lunchbox/molecules.ts",
+    "@lunchbox/ui": "jsr:@lunchbox/ui"
   },
   "compilerOptions": {
     "lib": [
@@ -1709,22 +1716,6 @@ _fresh/
 node_modules/
 vendor/
 
-
-`;
-
-export const EXAMPLES_INIT_STATIC_STYLES = `
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-.fresh-gradient {
-  background-color: rgb(134, 239, 172);
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(219, 234, 254),
-    rgb(187, 247, 208),
-    rgb(254, 249, 195)
-  );
-}
 
 `;
 
