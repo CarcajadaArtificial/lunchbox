@@ -64,7 +64,7 @@ export async function initGenerate() {
 
   /** Converts a file to a constant string and writes it to output. */
   const fileToConstant = async (name: string, value: string) => {
-    const content = `\nexport const ${name} = \`\n${
+    const content = `\nexport const ${name} = \`${
       value
         .replace(/\\/g, '\\\\')
         .replace(/\${/g, '\\${')
@@ -120,13 +120,6 @@ export async function initGenerate() {
 
   await directoryToConstants('src/molecules');
   await directoryToConstants('examples/init');
-
-  // try {
-  //   const res = await fetch('https://fresh.deno.dev/favicon.ico');
-  //   const buf = await res.arrayBuffer();
-  //   await Deno.writeFile('static/favicon.ico', new Uint8Array(buf));
-  // } catch {
-  // }
 }
 
 // =====================================================================================================

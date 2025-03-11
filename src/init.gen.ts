@@ -9,8 +9,7 @@
 |---------------------------------------------------------------|
 */
 
-export const SRC_ATOMS = `
-//     _  _
+export const SRC_ATOMS = `//     _  _
 //    /_\\| |_ ___ _ __  ___
 //   / _ \\  _/ _ \\ '  \\(_-<
 //  /_/ \\_\\__\\___/_|_|_/__/
@@ -731,8 +730,7 @@ export const KatexStyles = (p: iAtom<HTMLStyleElement>): JSX.Element => (
 
 `;
 
-export const SRC_PARTICLES = `
-//   ___          _   _    _
+export const SRC_PARTICLES = `//   ___          _   _    _
 //  | _ \\__ _ _ _| |_(_)__| |___ ___
 //  |  _/ _\` | '_|  _| / _| / -_|_-<
 //  |_| \\__,_|_|  \\__|_\\__|_\\___/__/
@@ -925,8 +923,7 @@ export const btn: string = cn(
 
 `;
 
-export const STATIC_STYLES = `
-@tailwind base;
+export const STATIC_STYLES = `@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -999,8 +996,8 @@ export const STATIC_STYLES = `
 
 `;
 
-export const SRC_MOLECULES_INPUTRADIOCOMBO = `
-//   ___                _   ___         _ _      ___           _
+export const SRC_MOLECULES_INPUTRADIOCOMBO =
+  `//   ___                _   ___         _ _      ___           _
 //  |_ _|_ _  _ __ _  _| |_| _ \\__ _ __| (_)___ / __|___ _ __ | |__  ___
 //   | || ' \\| '_ \\ || |  _|   / _\` / _\` | / _ \\ (__/ _ \\ '  \\| '_ \\/ _ \\
 //  |___|_||_| .__/\\_,_|\\__|_|_\\__,_\\__,_|_\\___/\\___\\___/_|_|_|_.__/\\___/
@@ -1054,8 +1051,8 @@ export default function (props: Partial<iInputRadioCombo>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_INPUTTEXTAREACOMBO = `
-//   ___                _  _____        _                      ___           _
+export const SRC_MOLECULES_INPUTTEXTAREACOMBO =
+  `//   ___                _  _____        _                      ___           _
 //  |_ _|_ _  _ __ _  _| ||_   _|____ _| |_ __ _ _ _ ___ __ _ / __|___ _ __ | |__  ___
 //   | || ' \\| '_ \\ || |  _|| |/ -_) \\ /  _/ _\` | '_/ -_) _\` | (__/ _ \\ '  \\| '_ \\/ _ \\
 //  |___|_||_| .__/\\_,_|\\__||_|\\___/_\\_\\\\__\\__,_|_| \\___\\__,_|\\___\\___/_|_|_|_.__/\\___/
@@ -1117,8 +1114,7 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_MARKDOWN = `
-//   __  __          _      _
+export const SRC_MOLECULES_MARKDOWN = `//   __  __          _      _
 //  |  \\/  |__ _ _ _| |____| |_____ __ ___ _
 //  | |\\/| / _\` | '_| / / _\` / _ \\ V  V / ' \\
 //  |_|  |_\\__,_|_| |_\\_\\__,_\\___/\\_/\\_/|_||_|
@@ -1179,8 +1175,7 @@ export default function (props: Partial<iMarkdown>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_ACCORDION = `
-//     _                    _ _
+export const SRC_MOLECULES_ACCORDION = `//     _                    _ _
 //    /_\\  __ __ ___ _ _ __| (_)___ _ _
 //   / _ \\/ _/ _/ _ \\ '_/ _\` | / _ \\ ' \\
 //  /_/ \\_\\__\\__\\___/_| \\__,_|_\\___/_||_|
@@ -1234,8 +1229,8 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_INPUTCHECKCOMBO = `
-//   ___                _    ___ _           _    ___           _
+export const SRC_MOLECULES_INPUTCHECKCOMBO =
+  `//   ___                _    ___ _           _    ___           _
 //  |_ _|_ _  _ __ _  _| |_ / __| |_  ___ __| |__/ __|___ _ __ | |__  ___
 //   | || ' \\| '_ \\ || |  _| (__| ' \\/ -_) _| / / (__/ _ \\ '  \\| '_ \\/ _ \\
 //  |___|_||_| .__/\\_,_|\\__|\\___|_||_\\___\\__|_\\_\\\\___\\___/_|_|_|_.__/\\___/
@@ -1291,8 +1286,8 @@ export default function (props: Partial<iInputCheckCombo>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_INPUTFIELDCOMBO = `
-//   ___                _   ___ _     _    _  ___           _
+export const SRC_MOLECULES_INPUTFIELDCOMBO =
+  `//   ___                _   ___ _     _    _  ___           _
 //  |_ _|_ _  _ __ _  _| |_| __(_)___| |__| |/ __|___ _ __ | |__  ___
 //   | || ' \\| '_ \\ || |  _| _|| / -_) / _\` | (__/ _ \\ '  \\| '_ \\/ _ \\
 //  |___|_||_| .__/\\_,_|\\__|_| |_\\___|_\\__,_|\\___\\___/_|_|_|_.__/\\___/
@@ -1361,8 +1356,8 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_FIELDSETCHECK = `
-//   ___ _     _    _         _    ___ _           _
+export const SRC_MOLECULES_FIELDSETCHECK =
+  `//   ___ _     _    _         _    ___ _           _
 //  | __(_)___| |__| |___ ___| |_ / __| |_  ___ __| |__
 //  | _|| / -_) / _\` (_-</ -_)  _| (__| ' \\/ -_) _| / /
 //  |_| |_\\___|_\\__,_/__/\\___|\\__|\\___|_||_\\___\\__|_\\_\\
@@ -1433,8 +1428,8 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_FIELDSETRADIO = `
-//   ___ _     _    _         _   ___         _ _
+export const SRC_MOLECULES_FIELDSETRADIO =
+  `//   ___ _     _    _         _   ___         _ _
 //  | __(_)___| |__| |___ ___| |_| _ \\__ _ __| (_)___
 //  | _|| / -_) / _\` (_-</ -_)  _|   / _\` / _\` | / _ \\
 //  |_| |_\\___|_\\__,_/__/\\___|\\__|_|_\\__,_\\__,_|_\\___/
@@ -1509,8 +1504,8 @@ export default function (props: Partial<iFieldsetRadio>): JSX.Element {
 
 `;
 
-export const SRC_MOLECULES_INPUTSELECTCOMBO = `
-//   ___                _   ___      _        _    ___           _
+export const SRC_MOLECULES_INPUTSELECTCOMBO =
+  `//   ___                _   ___      _        _    ___           _
 //  |_ _|_ _  _ __ _  _| |_/ __| ___| |___ __| |_ / __|___ _ __ | |__  ___
 //   | || ' \\| '_ \\ || |  _\\__ \\/ -_) / -_) _|  _| (__/ _ \\ '  \\| '_ \\/ _ \\
 //  |___|_||_| .__/\\_,_|\\__|___/\\___|_\\___\\__|\\__|\\___\\___/_|_|_|_.__/\\___/
@@ -1574,8 +1569,8 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
 
 `;
 
-export const EXAMPLES_INIT_MAIN = `
-import { App, fsRoutes, staticFiles } from 'fresh';
+export const EXAMPLES_INIT_MAIN =
+  `import { App, fsRoutes, staticFiles } from 'fresh';
 import { define, type State } from './utils.ts';
 
 export const app = new App<State>();
@@ -1608,8 +1603,8 @@ if (import.meta.main) {
 
 `;
 
-export const EXAMPLES_INIT_DEV = `
-#!/usr/bin/env -S deno run -A --watch=static/,routes/
+export const EXAMPLES_INIT_DEV =
+  `#!/usr/bin/env -S deno run -A --watch=static/,routes/
 import { tailwind } from '@fresh/plugin-tailwind';
 
 import { Builder } from 'fresh/dev';
@@ -1625,8 +1620,7 @@ if (Deno.args.includes('build')) {
 
 `;
 
-export const EXAMPLES_INIT_DENO = `
-{
+export const EXAMPLES_INIT_DENO = `{
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
     "dev": "deno run -A --watch=static/,routes/ dev.ts",
@@ -1681,8 +1675,7 @@ export const EXAMPLES_INIT_DENO = `
 
 `;
 
-export const EXAMPLES_INIT_UTILS = `
-import { createDefine } from 'fresh';
+export const EXAMPLES_INIT_UTILS = `import { createDefine } from 'fresh';
 
 // deno-lint-ignore no-empty-interface
 export interface State {}
@@ -1691,19 +1684,21 @@ export const define = createDefine<State>();
 
 `;
 
-export const EXAMPLES_INIT_TAILWIND = `
-import type { Config } from 'tailwindcss';
+export const EXAMPLES_INIT_TAILWIND =
+  `import type { Config } from "tailwindcss";
+import lunchboxPlugin from "@lunchbox/ui/tailwind";
+import typographyPlugin from "npm:/@tailwindcss/typography@0.5.15";
 
 export default {
   content: [
-    '{routes,islands,components}/**/*.{ts,tsx}',
+    "{routes,islands,components}/**/*.{ts,tsx}",
   ],
+  plugins: [lunchboxPlugin(), typographyPlugin],
 } satisfies Config;
 
 `;
 
-export const EXAMPLES_INIT_ = `
-# dotenv environment variable files
+export const EXAMPLES_INIT_ = `# dotenv environment variable files
 .env
 .env.development.local
 .env.test.local
@@ -1719,8 +1714,7 @@ vendor/
 
 `;
 
-export const EXAMPLES_INIT_ROUTES_INDEX = `
-import { define } from '../utils.ts';
+export const EXAMPLES_INIT_ROUTES_INDEX = `import { define } from '../utils.ts';
 
 export default define.page(function Home() {
   return (
@@ -1731,22 +1725,22 @@ export default define.page(function Home() {
 
 `;
 
-export const EXAMPLES_INIT_ROUTES__APP = `
-import type { PageProps } from 'fresh';
+export const EXAMPLES_INIT_ROUTES__APP =
+  `import type { PageProps } from "fresh";
+import { Page } from "lunchbox/molecules";
 
 export default function App({ Component }: PageProps) {
   return (
     <html>
       <head>
-        <meta charset='utf-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>init</title>
-        <link rel='stylesheet' href='/styles.css' />
-        <link rel='stylesheet' href='/fonts.css' />
+        <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
+      <Page.Body>
         <Component />
-      </body>
+      </Page.Body>
     </html>
   );
 }

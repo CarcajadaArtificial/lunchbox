@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
@@ -12,7 +12,7 @@
   },
   "tasks": {
     "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",
-    "init:generate": "deno run -A src/tasks.ts init-generate",
+    "init:generate": "deno run -A src/tasks.ts init-generate; deno fmt",
     "init:clean": "deno run -A src/tasks.ts init-clean",
     "init:start": "deno run -A --watch=static/,routes/ examples/init/dev.ts"
   },

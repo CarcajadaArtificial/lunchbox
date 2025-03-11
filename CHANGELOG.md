@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.43
+
+- Added better import routes for the project initialization code.
+
 ### v1.0.42
 
 - Added better import routes for the project initialization code.
