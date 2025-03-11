@@ -16,6 +16,10 @@
 
 ### v1.0.32
 
+- Added a typing fix for the `iAtom` type.
+
+### v1.0.32
+
 - Removed the `fwd` forwarding concept because the new distribution method
   implies code generation into the user's app.
 

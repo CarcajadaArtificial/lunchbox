@@ -17,7 +17,7 @@
  *
  * @module atoms
  */
-import type { JSX, Ref } from 'preact';
+import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
 import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
@@ -26,13 +26,10 @@ import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
 /**
  * This type defines the extent of the parameters contained in an atom rendering function.
  */
-export type iAtom<T extends EventTarget = HTMLElement> =
-  & JSX.HTMLAttributes<T>
-  & Partial<ARIAMixin>
-  & Partial<GlobalEventHandlers>
-  & {
-    ref?: Ref<T>;
-  };
+export type iAtom<T extends EventTarget = HTMLElement> = JSX.DetailedHTMLProps<
+  JSX.HTMLAttributes<T>,
+  T
+>;
 
 // =====================================================================================================
 /**
