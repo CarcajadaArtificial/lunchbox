@@ -19,4 +19,4 @@ jobs:
         uses: denoland/setup-deno@v2
 
       - name: Publish Lunchbox
-        # run: deno publish
+        run: deno publish

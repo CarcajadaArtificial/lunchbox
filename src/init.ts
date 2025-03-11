@@ -125,6 +125,13 @@ async function writeProjectFile(
  * ├── tailwind.config.ts
  * └── utils.ts
  * ```
+ *
+ * @todo There is a discrepancy between `/examples/init/deno.json` and the `./deno.json` of the
+ *       initialized project. Both must be different to remove importing error messages. To solve
+ *       this, when generating the initialization code strings in `init.gen.ts`, ignore the
+ *       `/examples/init/deno.json` file in favor of a `/src/init.json`. The `init.json` file will
+ *       contain the generated initialization code, while `/examples/init/deno.json` will make
+ *       imports work locally.
  */
 export async function init(
   cwd: string = Deno.cwd(),

@@ -1,5 +1,5 @@
 import type { PageProps } from 'fresh';
-import { Page } from 'lunchbox/molecules';
+import { Page } from 'lunchbox/atoms';
 
 export default function App({ Component }: PageProps) {
   return (

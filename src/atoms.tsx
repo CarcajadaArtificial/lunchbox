@@ -557,7 +557,8 @@ export const Nav = {
 // =====================================================================================================
 /**
  * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be
- * built using this atoms, but for most cases the {@link Accordion} molecule is a standard solution.
+ * built using this atoms, but for most cases the [Accordion molecule]{@link molecules/Accordion} is
+ * a standard solution.
  *
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.

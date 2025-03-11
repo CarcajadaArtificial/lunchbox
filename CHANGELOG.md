@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.46
+
+- Restated the publishing Github action.
+- Added better import routes for the project initialization code.
+
 ### v1.0.45
 
 - Added the molecules module, previously removed.
@@ -27,7 +32,8 @@
 ### v1.0.42
 
 - Added better import routes for the project initialization code.
-- Added font styles to the `static/styles.css` file and removed the `fonts.css` one.
+- Added font styles to the `static/styles.css` file and removed the `fonts.css`
+  one.
 
 ### v1.0.41
 
@@ -35,7 +41,8 @@
 
 ### v1.0.40
 
-- Updated the init process to include static font files, types and better import routes.
+- Updated the init process to include static font files, types and better import
+  routes.
 - Renamed the Markdown atom to Prose to avoid ambiguities.
 
 ### v1.0.39
