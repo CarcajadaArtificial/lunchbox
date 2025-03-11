@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.35
+
+- Fixed package exporting settings.
+
 ### v1.0.34
 
 - Fixed package exporting settings.
