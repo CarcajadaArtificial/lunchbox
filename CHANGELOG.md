@@ -13,6 +13,10 @@
 
 ### v1.0.38
 
+- Updated package version.
+
+### v1.0.38
+
 - Added the package fonts.
 
 ### v1.0.37
