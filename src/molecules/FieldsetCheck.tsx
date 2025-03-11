@@ -6,10 +6,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/FieldsetCheck
  */
-import { input } from '../particles.ts';
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import InputCheckCombo from './InputCheckCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
@@ -22,7 +22,7 @@ interface iFieldsetCheck {
   values: string[];
   legend: string;
   error: string;
-  fwd: iAtom<HTMLFieldSetElement>;
+  name: string;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -33,7 +33,7 @@ const d: iFieldsetCheck = {
   values: [],
   legend: '',
   error: '',
-  fwd: {},
+  name: '',
 };
 
 // =====================================================================================================
@@ -45,11 +45,11 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
 
   return (
     <Input.Container>
-      <Input.Fieldset {...p.fwd}>
+      <Input.Fieldset>
         {p.legend
           ? (
             <Input.Legend>
-              <Input.Text class={p.fwd.required ? input.required : undefined}>
+              <Input.Text>
                 <>{p.legend}</>
               </Input.Text>
             </Input.Legend>
@@ -58,10 +58,7 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
         {p.values.map((value) => (
           <InputCheckCombo
             label={value}
-            fwd={{
-              value,
-              name: p.fwd.name,
-            }}
+            name={p.name}
           />
         ))}
       </Input.Fieldset>

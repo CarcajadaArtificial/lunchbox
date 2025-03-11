@@ -14,6 +14,11 @@
 
 ## Version History
 
+### v1.0.32
+
+- Removed the `fwd` forwarding concept because the new distribution method
+  implies code generation into the user's app.
+
 ### v1.0.31
 
 - Removed the initialization module from the package export.

@@ -6,10 +6,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/InputSelectCombo
  */
 import { input } from '../particles.ts';
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren, JSX } from 'preact';
 
@@ -21,7 +22,7 @@ interface iInputFieldCombo {
   label: string;
   error: string;
   children: ComponentChildren;
-  fwd: iAtom<HTMLSelectElement>;
+  required: boolean;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -32,7 +33,7 @@ const d: iInputFieldCombo = {
   label: '',
   error: '',
   children: undefined,
-  fwd: {},
+  required: false,
 };
 
 // =====================================================================================================
@@ -47,12 +48,12 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? input.required : undefined}>
+            <Input.Text class={p.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
-        <Input.Select {...p.fwd}>{props.children}</Input.Select>
+        <Input.Select required={p.required}>{props.children}</Input.Select>
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </Input.Container>

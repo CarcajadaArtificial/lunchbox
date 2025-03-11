@@ -6,9 +6,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/Markdown
+ *
+ * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
  */
-import { type iAtom, Markdown } from '../atoms.tsx';
+import { Markdown } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import { render, type RenderOptions } from '@deno/gfm';
 import type { JSX } from 'preact';
@@ -20,7 +23,6 @@ import type { JSX } from 'preact';
 export type iMarkdown = {
   content: string;
   renderOptions: RenderOptions;
-  fwd: iAtom<HTMLDivElement>;
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -31,9 +33,8 @@ const d: iMarkdown = {
   content: '',
   renderOptions: {
     allowIframes: false,
-    allowMath: true,
+    allowMath: false,
   },
-  fwd: {},
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -53,10 +54,5 @@ function setup(props: Partial<iMarkdown>) {
 export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
-  return (
-    <Markdown
-      dangerouslySetInnerHTML={{ __html: p.content }}
-      {...p.fwd}
-    />
-  );
+  return <Markdown dangerouslySetInnerHTML={{ __html: p.content }} />;
 }

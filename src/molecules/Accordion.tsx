@@ -6,9 +6,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/Accordion
  */
-import { Details, type iAtom } from '../atoms.tsx';
+import { Details } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren } from 'preact';
 import type { JSX } from 'preact';
@@ -22,7 +23,6 @@ interface iFieldsetCheck {
   name: string;
   open: boolean;
   children: ComponentChildren;
-  fwd: iAtom<HTMLDetailsElement>;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,7 +34,6 @@ const d: iFieldsetCheck = {
   open: false,
   name: 'undefined',
   children: undefined,
-  fwd: {},
 };
 
 // =====================================================================================================
@@ -45,7 +44,7 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
   const p = apDef(d, props);
 
   return (
-    <Details.Container open={p.open} name={p.name} {...p.fwd}>
+    <Details.Container open={p.open} name={p.name}>
       <Details.Summary>{p.summary}</Details.Summary>
       {p.children}
     </Details.Container>

@@ -8,7 +8,7 @@
  * (description)
  * @module molecules/InputCheckCombo
  */
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
@@ -19,7 +19,8 @@ import type { JSX } from 'preact';
 interface iInputCheckCombo {
   label: string;
   error: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -29,7 +30,8 @@ interface iInputCheckCombo {
 const d: iInputCheckCombo = {
   label: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
 // =====================================================================================================
@@ -42,7 +44,7 @@ export default function (props: Partial<iInputCheckCombo>): JSX.Element {
   return (
     <div>
       <Input.Label class='items-center'>
-        <Input.Check {...p.fwd} />
+        <Input.Check name={p.name} required={p.required} />
         <Input.Text>{p.label}</Input.Text>
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}

@@ -6,10 +6,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/InputFieldCombo
  */
 import { input } from '../particles.ts';
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import { cn } from '@vyn/cn';
 import type { JSX } from 'preact';
@@ -21,7 +22,8 @@ import type { JSX } from 'preact';
 interface iInputFieldCombo {
   label: string;
   error: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -31,7 +33,8 @@ interface iInputFieldCombo {
 const d: iInputFieldCombo = {
   label: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
 // =====================================================================================================
@@ -46,14 +49,15 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? input.required : undefined}>
+            <Input.Text class={p.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
         <Input.Field
-          class={cn(p.error ? input.invalid : p.fwd.class)}
-          {...p.fwd}
+          name={p.name}
+          required={p.required}
+          class={cn(p.error ? input.invalid : null)}
         />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}

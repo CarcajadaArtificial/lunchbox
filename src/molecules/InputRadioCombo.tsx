@@ -6,9 +6,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/InputRadioCombo
  */
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
@@ -18,7 +19,8 @@ import type { JSX } from 'preact';
  */
 interface iInputRadioCombo {
   label: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -27,7 +29,8 @@ interface iInputRadioCombo {
  */
 const d: iInputRadioCombo = {
   label: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
 // =====================================================================================================
@@ -40,7 +43,7 @@ export default function (props: Partial<iInputRadioCombo>): JSX.Element {
   return (
     <div>
       <Input.Label class='items-center'>
-        <Input.Radio {...p.fwd} />
+        <Input.Radio name={p.name} required={p.required} />
         <Input.Text>{p.label}</Input.Text>
       </Input.Label>
     </div>

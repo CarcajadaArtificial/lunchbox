@@ -6,10 +6,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * (description)
+ *
  * @module molecules/FieldsetRadio
  */
 import { input } from '../particles.ts';
-import { type iAtom, Input } from '../atoms.tsx';
+import { Input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
@@ -22,7 +23,8 @@ interface iFieldsetRadio {
   values: string[];
   legend: string;
   error: string;
-  fwd: iAtom<HTMLFieldSetElement>;
+  name: string;
+  required: boolean;
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -33,7 +35,8 @@ const d: iFieldsetRadio = {
   values: [],
   legend: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
 // =====================================================================================================
@@ -45,23 +48,21 @@ export default function (props: Partial<iFieldsetRadio>): JSX.Element {
 
   return (
     <Input.Container>
-      <Input.Fieldset {...p.fwd}>
+      <Input.Fieldset>
         {p.legend
           ? (
             <Input.Legend>
-              <Input.Text class={p.fwd.required ? input.required : undefined}>
+              <Input.Text class={p.required ? input.required : undefined}>
                 <>{p.legend}</>
               </Input.Text>
             </Input.Legend>
           )
           : null}
-        {p.values.map((value) => (
+        {p.values.map((value, index) => (
           <InputRadioCombo
+            required={p.required && index === 0}
             label={value}
-            fwd={{
-              value,
-              name: p.fwd.name,
-            }}
+            name={p.name}
           />
         ))}
       </Input.Fieldset>
