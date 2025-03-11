@@ -8,11 +8,12 @@
 
 - Update base example's fresh and std dependencies to jsr and preact to npm.
 - Update tailwind to v4 and update the plugin colors.
-- Test generated jsr documentation (@see tag).
-- Deprecate `@lunchbox/plugins` and bring the fonts, the fresh plugin, and the
-  tailwind plugin here.
 
 ## Version History
+
+### v1.0.38
+
+- Added the package fonts.
 
 ### v1.0.37
 
