@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
@@ -28,7 +28,7 @@
     "@std/path": "jsr:@std/path@^1.0.8",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "preact": "npm:preact@^10.24.1",
+    "preact": "npm:preact@^10.25.4",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
   }
 }

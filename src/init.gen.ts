@@ -1685,13 +1685,13 @@ export const define = createDefine<State>();
 `;
 
 export const EXAMPLES_INIT_TAILWIND =
-  `import type { Config } from "tailwindcss";
-import lunchboxPlugin from "@lunchbox/ui/tailwind";
-import typographyPlugin from "npm:/@tailwindcss/typography@0.5.15";
+  `import type { Config } from 'tailwindcss';
+import lunchboxPlugin from '@lunchbox/ui/tailwind';
+import typographyPlugin from 'npm:/@tailwindcss/typography@0.5.15';
 
 export default {
   content: [
-    "{routes,islands,components}/**/*.{ts,tsx}",
+    '{routes,islands,components}/**/*.{ts,tsx}',
   ],
   plugins: [lunchboxPlugin(), typographyPlugin],
 } satisfies Config;
@@ -1726,17 +1726,17 @@ export default define.page(function Home() {
 `;
 
 export const EXAMPLES_INIT_ROUTES__APP =
-  `import type { PageProps } from "fresh";
-import { Page } from "lunchbox/molecules";
+  `import type { PageProps } from 'fresh';
+import { Page } from 'lunchbox/molecules';
 
 export default function App({ Component }: PageProps) {
   return (
     <html>
       <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>init</title>
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel='stylesheet' href='/styles.css' />
       </head>
       <Page.Body>
         <Component />

@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.44
+
+- Updated the preact dependency version.
+
 ### v1.0.43
 
 - Added better import routes for the project initialization code.
