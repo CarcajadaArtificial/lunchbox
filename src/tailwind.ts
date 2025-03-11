@@ -122,7 +122,7 @@ import plugin from 'tailwindcss/plugin';
  * This settings are for the tailwind `typography` plugin. These can be used with the `prose` class and
  * the `<Markdown/>` lunchbox component.
  */
-export default function () {
+export default function (): ReturnType<typeof plugin> {
   return plugin(
     function () {},
     {

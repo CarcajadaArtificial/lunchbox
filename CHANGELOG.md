@@ -14,6 +14,10 @@
 
 ## Version History
 
+### v1.0.36
+
+- Added explicit typing to the tailwind plugin.
+
 ### v1.0.35
 
 - Fixed package exporting settings.
