@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",

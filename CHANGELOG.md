@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.45
+
+- Added the molecules module, previously removed.
+
 ### v1.0.44
 
 - Updated the preact dependency version.
