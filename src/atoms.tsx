@@ -557,15 +557,18 @@ export const Nav = {
 // =====================================================================================================
 /**
  * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be
- * built using this atoms, but for most cases the [Accordion molecule]{@link molecules/Accordion} is
- * a standard solution.
+ * built using this atoms, but for most cases the Accordion molecule is a standard solution.
+ *
+ * @see {@link molecules/Accordion}
  *
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
  * - `Summary`: The summary element that prompts the user to click to show/hide a container atom.
  *
  * ```tsx
- * (example code)
+ * <Details.Container open={p.open}>
+ *   <Details.Summary>{p.summary}</Details.Summary>
+ * </Details.Container>
  * ```
  *
  * @todo Finish documentation

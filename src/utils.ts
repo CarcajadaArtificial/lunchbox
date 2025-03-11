@@ -7,7 +7,7 @@
 /**
  * General and global utility functions.
  *
- * @module utils
+ * @module
  */
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

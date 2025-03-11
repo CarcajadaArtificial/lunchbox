@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.47
+
+- Updated the package documentation.
+
 ### v1.0.46
 
 - Restated the publishing Github action.
