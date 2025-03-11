@@ -8,10 +8,16 @@
 
 - Update base example's fresh and std dependencies to jsr and preact to npm.
 - Update tailwind to v4 and update the plugin colors.
+- Initialize standard SEO files.
 
 ## Version History
 
-### v1.0.38
+### v1.0.40
+
+- Updated the init process to include static font files, types and better import routes.
+- Renamed the Markdown atom to Prose to avoid ambiguities.
+
+### v1.0.39
 
 - Updated package version.
 

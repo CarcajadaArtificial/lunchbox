@@ -113,6 +113,14 @@ export async function initGenerate() {
     'SRC_PARTICLES',
     await Deno.readTextFile('src/particles.ts'),
   );
+  await fileToConstant(
+    'SRC_TYPES',
+    await Deno.readTextFile('src/types.ts'),
+  );
+  await fileToConstant(
+    'STATIC_FONTS',
+    await Deno.readTextFile('static/fonts.css'),
+  );
 
   await directoryToConstants('src/molecules');
   await directoryToConstants('examples/init');

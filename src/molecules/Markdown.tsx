@@ -11,7 +11,7 @@
  *
  * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
  */
-import { Markdown } from '../atoms.tsx';
+import { Prose } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import { render, type RenderOptions } from '@deno/gfm';
 import type { JSX } from 'preact';
@@ -54,5 +54,5 @@ function setup(props: Partial<iMarkdown>) {
 export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
-  return <Markdown dangerouslySetInnerHTML={{ __html: p.content }} />;
+  return <Prose dangerouslySetInnerHTML={{ __html: p.content }} />;
 }

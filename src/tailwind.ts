@@ -42,7 +42,7 @@ import plugin from 'tailwindcss/plugin';
  *
  * ### `colors`
  *
- * The color selection consideres text-to-background contrast for accessibility. Color names are not absolute color names (e.g. "red" or "blue") nor are they semantic (e.g. "primary" or "secondary"). This allows for colors to have specific roles in the interface. The only "quasi-exception" to this is the `error` color, that due to human psychology should be a redish tone. Also, colors have a dark mode variant by prefixing the color with "-d", (e.g. `dark:bg-d-neutral`), dynamic color settings are already created at the @see clr particle, removing the need for two colors and the "dark:" prefix.
+ * The color selection consideres text-to-background contrast for accessibility. Color names are not absolute color names (e.g. "red" or "blue") nor are they semantic (e.g. "primary" or "secondary"). This allows for colors to have specific roles in the interface. The only "quasi-exception" to this is the `error` color, that due to human psychology should be a redish tone. Also, colors have a dark mode variant by prefixing the color with "-d", (e.g. `dark:bg-d-neutral`), dynamic color settings are already created at the {@link clr} particle, removing the need for two colors and the "dark:" prefix.
  *
  * - `neutral`: This is the default color for text, border, and outline. Things that use this color
  *    will have high contrast with a `page` and `panel` backgrounds. This is the darkest color in light

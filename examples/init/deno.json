@@ -18,6 +18,8 @@
     "**/_fresh/*"
   ],
   "imports": {
+    "@": "./",
+    "lunchbox": "./components/lunchbox/index.ts",
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",

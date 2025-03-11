@@ -1,4 +1,3 @@
-
 /*
 |----------------------------------|
 | DO NOT MANUALLY CHANGE THIS FILE |
@@ -9,7 +8,7 @@
 | module.                                                       |
 |---------------------------------------------------------------|
 */
-  
+
 export const SRC_ATOMS = `
 //     _  _
 //    /_\\| |_ ___ _ __  ___
@@ -20,7 +19,7 @@ export const SRC_ATOMS = `
 /**
  * This is module manages the base of the hierarchy of the components of this library. The definition
  * of an Atom is a component made up of a 1/1 HTML element, because of this, they must be declared
- * using the type @see iAtom that links them to the properties of a 1/1 HTML element. The rendered
+ * using the type iAtom that links them to the properties of a 1/1 HTML element. The rendered
  * element will contain a list of tailwind classes that give the element it's style.
  *
  * Some atoms are made up of "particles" that are smaller and more abstract things. These particles
@@ -28,36 +27,13 @@ export const SRC_ATOMS = `
  * styles among atoms. These can easily be added to classes of user-created elements that aren't an
  * atom. Additionally, particles commonly come from tailwind theme settings.
  *
- * @module
+ * @module atoms
  */
-import type { JSX, Ref } from 'preact';
+import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
 import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
-
-// =====================================================================================================
-/**
- * This type defines the extent of the parameters contained in an atom rendering function.
- */
-export type iAtom<T extends EventTarget = HTMLElement> =
-  & JSX.HTMLAttributes<T>
-  & Partial<ARIAMixin>
-  & Partial<GlobalEventHandlers>
-  & {
-    ref?: Ref<T>;
-  };
-
-// =====================================================================================================
-/**
- * Defines an atom rendering function.
- */
-export type iAtomRender = (p: iAtom) => JSX.Element;
-
-// =====================================================================================================
-/**
- * Defines a dictionary of atom rendering functions.
- */
-export type iAtomRecord = Record<string, iAtomRender>;
+import type { iAtom, iAtomRecord } from './types.ts';
 
 // =====================================================================================================
 /**
@@ -290,7 +266,7 @@ export const Button = {
 
 // =====================================================================================================
 /**
- * description)
+ * (description)
  *
  * - \`ul\`: (description)
  * - \`ol\`: (description)
@@ -593,7 +569,7 @@ export const Nav = {
 // =====================================================================================================
 /**
  * This dictionary contains the atoms that make up the \`<details/>\` element. A custom one could be
- * built using this atoms, but for most cases the @see Accordion molecule is a standard solution.
+ * built using this atoms, but for most cases the {@link Accordion} molecule is a standard solution.
  *
  * - \`Container\`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
@@ -705,8 +681,8 @@ export const Kbd = (p: iAtom): JSX.Element => (
 // =====================================================================================================
 /**
  * This atom contains style settings for the \`@tailwind/typeography\` plugin and works with the
- * \`deno-gfm\` package to render markdown content. It can be used by itself, but using the @see Markdown
- * molecule is highly recommended to avoid redundancies.
+ * \`deno-gfm\` package to render markdown content. It can be used by itself, but using the
+ * {@link Markdown} molecule is highly recommended to avoid redundancies.
  *
  * \`\`\`tsx
  * (example code)
@@ -714,7 +690,7 @@ export const Kbd = (p: iAtom): JSX.Element => (
  *
  * @todo Finish documentation
  */
-export const Markdown = (p: iAtom<HTMLDivElement>): JSX.Element => (
+export const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
     {...p}
     class={cn(
@@ -765,7 +741,7 @@ export const SRC_PARTICLES = `
 /**
  * This module contains the particles for the Lunchbox UI library.
  *
- * @module
+ * @module particles
  */
 import { cn } from '@vyn/cn';
 
@@ -862,7 +838,7 @@ export const input: Record<string, string> = {
 // =====================================================================================================
 /**
  * This is a dictionary of particles that represent the different text sizes and line heights. These
- * are used in the @see Text atoms along with other standarized styles. In most cases, the
+ * are used in the {@link Text} atoms along with other standarized styles. In most cases, the
  * \`<Text.Base/>\` atom is recommended over the \`txt.base\` particle.
  *
  * \`\`\`tsx
@@ -949,30 +925,161 @@ export const btn: string = cn(
 
 `;
 
+export const SRC_TYPES = `
+//   _____
+//  |_   _|  _ _ __  ___ ___
+//    | || || | '_ \\/ -_|_-<
+//    |_| \\_, | .__/\\___/__/
+//        |__/|_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module types
+ */
+import type { JSX } from 'preact';
+
+// =====================================================================================================
+/**
+ * This type defines the extent of the parameters contained in an atom rendering function.
+ */
+export type iAtom<T extends EventTarget = HTMLElement> = JSX.DetailedHTMLProps<
+  JSX.HTMLAttributes<T>,
+  T
+>;
+
+// =====================================================================================================
+/**
+ * Defines an atom rendering function.
+ */
+export type iAtomRender = (p: iAtom) => JSX.Element;
+
+// =====================================================================================================
+/**
+ * Defines a dictionary of atom rendering functions.
+ */
+export type iAtomRecord = Record<string, iAtomRender>;
+
+`;
+
+export const STATIC_FONTS = `
+@font-face {
+  font-family: 'Fira Code';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/FiraCode/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/FiraCode/FiraCode-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-Regular.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-Italic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-700.woff2')
+    format('woff2');
+}
+
+`;
+
 export const SRC_MOLECULES_INPUTRADIOCOMBO = `
-import { type iAtom, Input } from '../atoms.tsx';
+//   ___                _   ___         _ _      ___           _
+//  |_ _|_ _  _ __ _  _| |_| _ \\__ _ __| (_)___ / __|___ _ __ | |__  ___
+//   | || ' \\| '_ \\ || |  _|   / _\` / _\` | / _ \\ (__/ _ \\ '  \\| '_ \\/ _ \\
+//  |___|_||_| .__/\\_,_|\\__|_|_\\__,_\\__,_|_\\___/\\___\\___/_|_|_|_.__/\\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/InputRadioCombo
+ */
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputRadioCombo {
   label: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputRadioCombo = {
   label: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
-const setup = (p: Partial<iInputRadioCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputRadioCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <div>
       <Input.Label class='items-center'>
-        <Input.Radio {...p.fwd} />
+        <Input.Radio name={p.name} required={p.required} />
         <Input.Text>{p.label}</Input.Text>
       </Input.Label>
     </div>
@@ -982,38 +1089,60 @@ export default function (props: Partial<iInputRadioCombo>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_INPUTTEXTAREACOMBO = `
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___                _  _____        _                      ___           _
+//  |_ _|_ _  _ __ _  _| ||_   _|____ _| |_ __ _ _ _ ___ __ _ / __|___ _ __ | |__  ___
+//   | || ' \\| '_ \\ || |  _|| |/ -_) \\ /  _/ _\` | '_/ -_) _\` | (__/ _ \\ '  \\| '_ \\/ _ \\
+//  |___|_||_| .__/\\_,_|\\__||_|\\___/_\\_\\\\__\\__,_|_| \\___\\__,_|\\___\\___/_|_|_|_.__/\\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/InputTextareaCombo
+ */
+import { input } from '../particles.ts';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputFieldCombo {
   label: string;
   error: string;
-  fwd: iAtom<HTMLTextAreaElement>;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputFieldCombo = {
   label: '',
   error: '',
-  fwd: {},
+  required: false,
 };
 
-const setup = (p: Partial<iInputFieldCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputFieldCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? input.required : undefined}>
+            <Input.Text class={p.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
-        <Input.Textarea {...p.fwd} />
+        <Input.Textarea required={p.required} />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </Input.Container>
@@ -1023,74 +1152,115 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_MARKDOWN = `
-import { type iAtom, Markdown } from '../atoms.tsx';
+//   __  __          _      _
+//  |  \\/  |__ _ _ _| |____| |_____ __ ___ _
+//  | |\\/| / _\` | '_| / / _\` / _ \\ V  V / ' \\
+//  |_|  |_\\__,_|_| |_\\_\\__,_\\___/\\_/\\_/|_||_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/Markdown
+ *
+ * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
+ */
+import { Prose } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import { render, type RenderOptions } from '@deno/gfm';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 export type iMarkdown = {
   content: string;
   renderOptions: RenderOptions;
-  fwd: iAtom<HTMLDivElement>;
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iMarkdown = {
   content: '',
   renderOptions: {
     allowIframes: false,
-    allowMath: true,
+    allowMath: false,
   },
-  fwd: {},
 };
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 function setup(props: Partial<iMarkdown>) {
   const p = apDef<iMarkdown>(d, props);
   p.content = render(p.content, p.renderOptions);
   return p;
 }
 
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);
 
-  return (
-    <Markdown
-      dangerouslySetInnerHTML={{ __html: p.content }}
-      {...p.fwd}
-    />
-  );
+  return <Prose dangerouslySetInnerHTML={{ __html: p.content }} />;
 }
 
 `;
 
 export const SRC_MOLECULES_ACCORDION = `
-import { Details, type iAtom } from '../atoms.tsx';
+//     _                    _ _
+//    /_\\  __ __ ___ _ _ __| (_)___ _ _
+//   / _ \\/ _/ _/ _ \\ '_/ _\` | / _ \\ ' \\
+//  /_/ \\_\\__\\__\\___/_| \\__,_|_\\___/_||_|
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/Accordion
+ */
+import { Details } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren } from 'preact';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetCheck {
   summary: string;
   name: string;
   open: boolean;
   children: ComponentChildren;
-  fwd: iAtom<HTMLDetailsElement>;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetCheck = {
   summary: '',
   open: false,
   name: 'undefined',
   children: undefined,
-  fwd: {},
 };
 
-const setup = (p: Partial<iFieldsetCheck>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetCheck>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
-    <Details.Container open={p.open} name={p.name} {...p.fwd}>
+    <Details.Container open={p.open} name={p.name}>
       <Details.Summary>{p.summary}</Details.Summary>
       {p.children}
     </Details.Container>
@@ -1100,31 +1270,53 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_INPUTCHECKCOMBO = `
-import { type iAtom, Input } from '../atoms.tsx';
+//   ___                _    ___ _           _    ___           _
+//  |_ _|_ _  _ __ _  _| |_ / __| |_  ___ __| |__/ __|___ _ __ | |__  ___
+//   | || ' \\| '_ \\ || |  _| (__| ' \\/ -_) _| / / (__/ _ \\ '  \\| '_ \\/ _ \\
+//  |___|_||_| .__/\\_,_|\\__|\\___|_||_\\___\\__|_\\_\\\\___\\___/_|_|_|_.__/\\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ * @module molecules/InputCheckCombo
+ */
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputCheckCombo {
   label: string;
   error: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputCheckCombo = {
   label: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
-const setup = (p: Partial<iInputCheckCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputCheckCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <div>
       <Input.Label class='items-center'>
-        <Input.Check {...p.fwd} />
+        <Input.Check name={p.name} required={p.required} />
         <Input.Text>{p.label}</Input.Text>
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
@@ -1135,41 +1327,66 @@ export default function (props: Partial<iInputCheckCombo>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_INPUTFIELDCOMBO = `
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___                _   ___ _     _    _  ___           _
+//  |_ _|_ _  _ __ _  _| |_| __(_)___| |__| |/ __|___ _ __ | |__  ___
+//   | || ' \\| '_ \\ || |  _| _|| / -_) / _\` | (__/ _ \\ '  \\| '_ \\/ _ \\
+//  |___|_||_| .__/\\_,_|\\__|_| |_\\___|_\\__,_|\\___\\___/_|_|_|_.__/\\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/InputFieldCombo
+ */
+import { input } from '../particles.ts';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import { cn } from '@vyn/cn';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputFieldCombo {
   label: string;
   error: string;
-  fwd: iAtom<HTMLInputElement>;
+  name: string;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputFieldCombo = {
   label: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
-const setup = (p: Partial<iInputFieldCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputFieldCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? input.required : undefined}>
+            <Input.Text class={p.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
         <Input.Field
-          class={cn(p.error ? input.invalid : p.fwd.class)}
-          {...p.fwd}
+          name={p.name}
+          required={p.required}
+          class={cn(p.error ? input.invalid : null)}
         />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
@@ -1180,37 +1397,58 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_FIELDSETCHECK = `
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___ _     _    _         _    ___ _           _
+//  | __(_)___| |__| |___ ___| |_ / __| |_  ___ __| |__
+//  | _|| / -_) / _\` (_-</ -_)  _| (__| ' \\/ -_) _| / /
+//  |_| |_\\___|_\\__,_/__/\\___|\\__|\\___|_||_\\___\\__|_\\_\\
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/FieldsetCheck
+ */
+import { Input } from '../atoms.tsx';
 import InputCheckCombo from './InputCheckCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetCheck {
   values: string[];
   legend: string;
   error: string;
-  fwd: iAtom<HTMLFieldSetElement>;
+  name: string;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetCheck = {
   values: [],
   legend: '',
   error: '',
-  fwd: {},
+  name: '',
 };
 
-const setup = (p: Partial<iFieldsetCheck>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetCheck>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
-      <Input.Fieldset {...p.fwd}>
+      <Input.Fieldset>
         {p.legend
           ? (
             <Input.Legend>
-              <Input.Text class={p.fwd.required ? input.required : undefined}>
+              <Input.Text>
                 <>{p.legend}</>
               </Input.Text>
             </Input.Legend>
@@ -1219,10 +1457,7 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
         {p.values.map((value) => (
           <InputCheckCombo
             label={value}
-            fwd={{
-              value,
-              name: p.fwd.name,
-            }}
+            name={p.name}
           />
         ))}
       </Input.Fieldset>
@@ -1234,49 +1469,71 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_FIELDSETRADIO = `
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___ _     _    _         _   ___         _ _
+//  | __(_)___| |__| |___ ___| |_| _ \\__ _ __| (_)___
+//  | _|| / -_) / _\` (_-</ -_)  _|   / _\` / _\` | / _ \\
+//  |_| |_\\___|_\\__,_/__/\\___|\\__|_|_\\__,_\\__,_|_\\___/
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/FieldsetRadio
+ */
+import { input } from '../particles.ts';
+import { Input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
 import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iFieldsetRadio {
   values: string[];
   legend: string;
   error: string;
-  fwd: iAtom<HTMLFieldSetElement>;
+  name: string;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iFieldsetRadio = {
   values: [],
   legend: '',
   error: '',
-  fwd: {},
+  name: '',
+  required: false,
 };
 
-const setup = (p: Partial<iFieldsetRadio>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iFieldsetRadio>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
-      <Input.Fieldset {...p.fwd}>
+      <Input.Fieldset>
         {p.legend
           ? (
             <Input.Legend>
-              <Input.Text class={p.fwd.required ? input.required : undefined}>
+              <Input.Text class={p.required ? input.required : undefined}>
                 <>{p.legend}</>
               </Input.Text>
             </Input.Legend>
           )
           : null}
-        {p.values.map((value) => (
+        {p.values.map((value, index) => (
           <InputRadioCombo
+            required={p.required && index === 0}
             label={value}
-            fwd={{
-              value,
-              name: p.fwd.name,
-            }}
+            name={p.name}
           />
         ))}
       </Input.Fieldset>
@@ -1288,40 +1545,62 @@ export default function (props: Partial<iFieldsetRadio>): JSX.Element {
 `;
 
 export const SRC_MOLECULES_INPUTSELECTCOMBO = `
-import { type iAtom, Input, input } from '../atoms.tsx';
+//   ___                _   ___      _        _    ___           _
+//  |_ _|_ _  _ __ _  _| |_/ __| ___| |___ __| |_ / __|___ _ __ | |__  ___
+//   | || ' \\| '_ \\ || |  _\\__ \\/ -_) / -_) _|  _| (__/ _ \\ '  \\| '_ \\/ _ \\
+//  |___|_||_| .__/\\_,_|\\__|___/\\___|_\\___\\__|\\__|\\___\\___/_|_|_|_.__/\\___/
+//           |_|
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * (description)
+ *
+ * @module molecules/InputSelectCombo
+ */
+import { input } from '../particles.ts';
+import { Input } from '../atoms.tsx';
 import { apDef } from '../utils.ts';
 import type { ComponentChildren, JSX } from 'preact';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 interface iInputFieldCombo {
   label: string;
   error: string;
   children: ComponentChildren;
-  fwd: iAtom<HTMLSelectElement>;
+  required: boolean;
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/**
+ * (description)
+ */
 const d: iInputFieldCombo = {
   label: '',
   error: '',
   children: undefined,
-  fwd: {},
+  required: false,
 };
 
-const setup = (p: Partial<iInputFieldCombo>) => apDef(d, p);
-
+// =====================================================================================================
+/**
+ * (description)
+ */
 export default function (props: Partial<iInputFieldCombo>): JSX.Element {
-  const p = setup(props);
+  const p = apDef(d, props);
 
   return (
     <Input.Container>
       <Input.Label class='flex-col'>
         {p.label
           ? (
-            <Input.Text class={p.fwd.required ? input.required : undefined}>
+            <Input.Text class={p.required ? input.required : undefined}>
               <>{p.label}</>
             </Input.Text>
           )
           : null}
-        <Input.Select {...p.fwd}>{props.children}</Input.Select>
+        <Input.Select required={p.required}>{props.children}</Input.Select>
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </Input.Container>
@@ -1402,6 +1681,7 @@ export const EXAMPLES_INIT_DENO = `
     "**/_fresh/*"
   ],
   "imports": {
+    "@": "./",
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",
@@ -1507,6 +1787,7 @@ export default function App({ Component }: PageProps) {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>init</title>
         <link rel='stylesheet' href='/styles.css' />
+        <link rel='stylesheet' href='/fonts.css' />
       </head>
       <body>
         <Component />

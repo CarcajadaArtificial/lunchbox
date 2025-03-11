@@ -8,8 +8,6 @@
  * This module contains the project initialization functionality.
  *
  * @module init
- *
- * @todo Add a step that asks the user
  */
 import * as colors from '@std/fmt/colors';
 import * as path from '@std/path';
@@ -89,11 +87,44 @@ async function writeProjectFile(
 
 // =====================================================================================================
 /**
- * Initializes a new Lunchbox UI project.
- *
- * @param cwd - The current working directory.
- * @param input - Command line arguments.
- * @param tty - TTY interface for user interaction.
+ * ```txt
+ * .
+ * ├── components/
+ * │   ├── lunchbox/
+ * │   │   ├── molecules/
+ * │   │   │   └── {Lunchbox Molecules}.tsx
+ * │   │   ├── index.ts
+ * │   │   ├── atoms.tsx
+ * │   │   ├── particles.ts
+ * │   │   └── molecules.ts
+ * │   └── {Other Components}.tsx
+ * │
+ * ├── routes/
+ * │   ├── _app.tsx
+ * │   └── index.tsx
+ * │
+ * ├── static/
+ * │   ├── Figtree/
+ * │   │   ├── Figtree-Bold.woff2
+ * │   │   ├── Figtree-Regular.woff2
+ * │   │   └── Figtree-Italic.woff2
+ * │   ├── FiraCode/
+ * │   │   ├── FiraCode-Bold.woff2
+ * │   │   ├── FiraCode-Regular.woff2
+ * │   ├── LibreCaslonText/
+ * │   │   ├── LibreCaslonText-Bold.woff2
+ * │   │   ├── LibreCaslonText-Regular.woff2
+ * │   │   └── LibreCaslonText-Italic.woff2
+ * │   ├── fonts.css
+ * │   └── styles.css
+ * │
+ * ├── .gitignore
+ * ├── deno.json
+ * ├── dev.ts
+ * ├── main.ts
+ * ├── tailwind.config.ts
+ * └── utils.ts
+ * ```
  */
 export async function init(
   cwd: string = Deno.cwd(),
@@ -148,6 +179,34 @@ export async function init(
     await writeProjectFile(projectDir, pathname, content);
   };
 
+  // Download font files from CDN
+  const fonts = [
+    'Figtree/Figtree-Bold.woff2',
+    'Figtree/Figtree-Regular.woff2',
+    'Figtree/Figtree-Italic.woff2',
+    'FiraCode/FiraCode-Bold.woff2',
+    'FiraCode/FiraCode-Regular.woff2',
+    'LibreCaslonText/LibreCaslonText-Bold.woff2',
+    'LibreCaslonText/LibreCaslonText-Regular.woff2',
+    'LibreCaslonText/LibreCaslonText-Italic.woff2',
+  ];
+
+  /**
+   * @todo Download favicon.ico from CDN.
+   */
+
+  for (const font of fonts) {
+    try {
+      const url =
+        `https://cdn.jsdelivr.net/gh/CarcajadaArtificial/lunchbox/static/${font}`;
+      const res = await fetch(url);
+      const buf = await res.arrayBuffer();
+      await writeFile(`static/${font}`, new Uint8Array(buf));
+    } catch {
+      console.error(`Failed to download font: ${font}`);
+    }
+  }
+
   // Write root configuration files
   await writeFile(
     '.gitignore',
@@ -189,6 +248,10 @@ export async function init(
     'static/styles.css',
     gen.EXAMPLES_INIT_STATIC_STYLES,
   );
+  await writeFile(
+    'static/fonts.css',
+    gen.STATIC_FONTS,
+  );
 
   // Write component files
   await writeFile(
@@ -200,39 +263,43 @@ export async function init(
     gen.SRC_PARTICLES,
   );
   await writeFile(
-    'components/lunchbox/Accordion.tsx',
+    'components/lunchbox/types.ts',
+    gen.SRC_TYPES,
+  );
+  await writeFile(
+    'components/lunchbox/molecules/Accordion.tsx',
     gen.SRC_MOLECULES_ACCORDION,
   );
   await writeFile(
-    'components/lunchbox/FieldsetCheck.tsx',
+    'components/lunchbox/molecules/FieldsetCheck.tsx',
     gen.SRC_MOLECULES_FIELDSETCHECK,
   );
   await writeFile(
-    'components/lunchbox/FieldsetRadio.tsx',
+    'components/lunchbox/molecules/FieldsetRadio.tsx',
     gen.SRC_MOLECULES_FIELDSETRADIO,
   );
   await writeFile(
-    'components/lunchbox/InputCheckCombo.tsx',
+    'components/lunchbox/molecules/InputCheckCombo.tsx',
     gen.SRC_MOLECULES_INPUTCHECKCOMBO,
   );
   await writeFile(
-    'components/lunchbox/InputFieldCombo.tsx',
+    'components/lunchbox/molecules/InputFieldCombo.tsx',
     gen.SRC_MOLECULES_INPUTFIELDCOMBO,
   );
   await writeFile(
-    'components/lunchbox/InputRadioCombo.tsx',
+    'components/lunchbox/molecules/InputRadioCombo.tsx',
     gen.SRC_MOLECULES_INPUTRADIOCOMBO,
   );
   await writeFile(
-    'components/lunchbox/InputSelectCombo.tsx',
+    'components/lunchbox/molecules/InputSelectCombo.tsx',
     gen.SRC_MOLECULES_INPUTSELECTCOMBO,
   );
   await writeFile(
-    'components/lunchbox/InputTextareaCombo.tsx',
+    'components/lunchbox/molecules/InputTextareaCombo.tsx',
     gen.SRC_MOLECULES_INPUTTEXTAREACOMBO,
   );
   await writeFile(
-    'components/lunchbox/Markdown.tsx',
+    'components/lunchbox/molecules/Markdown.tsx',
     gen.SRC_MOLECULES_MARKDOWN,
   );
 

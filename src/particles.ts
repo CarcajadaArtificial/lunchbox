@@ -104,7 +104,7 @@ export const input: Record<string, string> = {
 // =====================================================================================================
 /**
  * This is a dictionary of particles that represent the different text sizes and line heights. These
- * are used in the @see Text atoms along with other standarized styles. In most cases, the
+ * are used in the {@link Text} atoms along with other standarized styles. In most cases, the
  * `<Text.Base/>` atom is recommended over the `txt.base` particle.
  *
  * ```tsx

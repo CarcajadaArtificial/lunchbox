@@ -21,27 +21,7 @@ import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
 import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
-
-// =====================================================================================================
-/**
- * This type defines the extent of the parameters contained in an atom rendering function.
- */
-export type iAtom<T extends EventTarget = HTMLElement> = JSX.DetailedHTMLProps<
-  JSX.HTMLAttributes<T>,
-  T
->;
-
-// =====================================================================================================
-/**
- * Defines an atom rendering function.
- */
-export type iAtomRender = (p: iAtom) => JSX.Element;
-
-// =====================================================================================================
-/**
- * Defines a dictionary of atom rendering functions.
- */
-export type iAtomRecord = Record<string, iAtomRender>;
+import type { iAtom, iAtomRecord } from './types.ts';
 
 // =====================================================================================================
 /**
@@ -577,7 +557,7 @@ export const Nav = {
 // =====================================================================================================
 /**
  * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be
- * built using this atoms, but for most cases the @see Accordion molecule is a standard solution.
+ * built using this atoms, but for most cases the {@link Accordion} molecule is a standard solution.
  *
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
@@ -689,8 +669,8 @@ export const Kbd = (p: iAtom): JSX.Element => (
 // =====================================================================================================
 /**
  * This atom contains style settings for the `@tailwind/typeography` plugin and works with the
- * `deno-gfm` package to render markdown content. It can be used by itself, but using the @see Markdown
- * molecule is highly recommended to avoid redundancies.
+ * `deno-gfm` package to render markdown content. It can be used by itself, but using the
+ * {@link Markdown} molecule is highly recommended to avoid redundancies.
  *
  * ```tsx
  * (example code)
@@ -698,7 +678,7 @@ export const Kbd = (p: iAtom): JSX.Element => (
  *
  * @todo Finish documentation
  */
-export const Markdown = (p: iAtom<HTMLDivElement>): JSX.Element => (
+export const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
     {...p}
     class={cn(
