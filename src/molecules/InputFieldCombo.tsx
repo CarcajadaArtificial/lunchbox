@@ -9,11 +9,11 @@
  *
  * @module molecules/InputFieldCombo
  */
+import type { JSX } from 'preact';
+import { cn } from '@vyn/cn';
+import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import { cn } from '@vyn/cn';
-import type { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

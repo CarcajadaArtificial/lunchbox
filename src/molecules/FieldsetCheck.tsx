@@ -10,9 +10,9 @@
  * @module molecules/FieldsetCheck
  */
 import { Input } from '../atoms.tsx';
-import InputCheckCombo from './InputCheckCombo.tsx';
-import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import InputCheckCombo from './InputCheckCombo.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

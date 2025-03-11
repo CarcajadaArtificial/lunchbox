@@ -32,8 +32,8 @@ export const SRC_ATOMS = `
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
+import type { iAtom, iAtomRecord } from '@lunchbox/ui';
 import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
-import type { iAtom, iAtomRecord } from './types.ts';
 
 // =====================================================================================================
 /**
@@ -925,44 +925,6 @@ export const btn: string = cn(
 
 `;
 
-export const SRC_TYPES = `
-//   _____
-//  |_   _|  _ _ __  ___ ___
-//    | || || | '_ \\/ -_|_-<
-//    |_| \\_, | .__/\\___/__/
-//        |__/|_|
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * (description)
- *
- * @module types
- */
-import type { JSX } from 'preact';
-
-// =====================================================================================================
-/**
- * This type defines the extent of the parameters contained in an atom rendering function.
- */
-export type iAtom<T extends EventTarget = HTMLElement> = JSX.DetailedHTMLProps<
-  JSX.HTMLAttributes<T>,
-  T
->;
-
-// =====================================================================================================
-/**
- * Defines an atom rendering function.
- */
-export type iAtomRender = (p: iAtom) => JSX.Element;
-
-// =====================================================================================================
-/**
- * Defines a dictionary of atom rendering functions.
- */
-export type iAtomRecord = Record<string, iAtomRender>;
-
-`;
-
 export const STATIC_FONTS = `
 @font-face {
   font-family: 'Fira Code';
@@ -1045,9 +1007,9 @@ export const SRC_MOLECULES_INPUTRADIOCOMBO = `
  *
  * @module molecules/InputRadioCombo
  */
-import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1100,10 +1062,10 @@ export const SRC_MOLECULES_INPUTTEXTAREACOMBO = `
  *
  * @module molecules/InputTextareaCombo
  */
+import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import type { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1165,10 +1127,10 @@ export const SRC_MOLECULES_MARKDOWN = `
  *
  * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
  */
-import { Prose } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import { render, type RenderOptions } from '@deno/gfm';
 import type { JSX } from 'preact';
+import { render, type RenderOptions } from '@deno/gfm';
+import { apDef } from '@lunchbox/ui';
+import { Prose } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1226,9 +1188,8 @@ export const SRC_MOLECULES_ACCORDION = `
  * @module molecules/Accordion
  */
 import { Details } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import type { ComponentChildren } from 'preact';
-import type { JSX } from 'preact';
+import type { ComponentChildren, JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1280,9 +1241,9 @@ export const SRC_MOLECULES_INPUTCHECKCOMBO = `
  * (description)
  * @module molecules/InputCheckCombo
  */
-import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1338,11 +1299,11 @@ export const SRC_MOLECULES_INPUTFIELDCOMBO = `
  *
  * @module molecules/InputFieldCombo
  */
+import type { JSX } from 'preact';
+import { cn } from '@vyn/cn';
+import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import { cn } from '@vyn/cn';
-import type { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1409,9 +1370,9 @@ export const SRC_MOLECULES_FIELDSETCHECK = `
  * @module molecules/FieldsetCheck
  */
 import { Input } from '../atoms.tsx';
-import InputCheckCombo from './InputCheckCombo.tsx';
-import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import InputCheckCombo from './InputCheckCombo.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1480,11 +1441,11 @@ export const SRC_MOLECULES_FIELDSETRADIO = `
  *
  * @module molecules/FieldsetRadio
  */
+import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
-import { apDef } from '../utils.ts';
-import type { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1556,10 +1517,10 @@ export const SRC_MOLECULES_INPUTSELECTCOMBO = `
  *
  * @module molecules/InputSelectCombo
  */
-import { input } from '../particles.ts';
-import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
 import type { ComponentChildren, JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import { Input } from '../atoms.tsx';
+import { input } from '../particles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -1669,23 +1630,15 @@ export const EXAMPLES_INIT_DENO = `
     "start": "deno run -A main.ts",
     "update": "deno run -A -r jsr:@fresh/update ."
   },
-  "lint": {
-    "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
-    }
-  },
-  "exclude": [
-    "**/_fresh/*"
-  ],
   "imports": {
     "@": "./",
+    "lunchbox": "./components/lunchbox/index.ts",
     "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",
     "@preact/signals": "npm:@preact/signals@^2.0.1",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
     "tailwindcss": "npm:tailwindcss@^3.4.3"
   },
   "compilerOptions": {
@@ -1705,7 +1658,18 @@ export const EXAMPLES_INIT_DENO = `
       "html",
       "head"
     ]
-  }
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
+  "exclude": [
+    "**/_fresh/*"
+  ]
 }
 
 `;

@@ -6,17 +6,6 @@
     "start": "deno run -A main.ts",
     "update": "deno run -A -r jsr:@fresh/update ."
   },
-  "lint": {
-    "rules": {
-      "tags": [
-        "fresh",
-        "recommended"
-      ]
-    }
-  },
-  "exclude": [
-    "**/_fresh/*"
-  ],
   "imports": {
     "@": "./",
     "lunchbox": "./components/lunchbox/index.ts",
@@ -24,6 +13,8 @@
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "preact": "npm:preact@^10.25.4",
     "@preact/signals": "npm:@preact/signals@^2.0.1",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
     "tailwindcss": "npm:tailwindcss@^3.4.3"
   },
   "compilerOptions": {
@@ -43,5 +34,16 @@
       "html",
       "head"
     ]
-  }
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
+  "exclude": [
+    "**/_fresh/*"
+  ]
 }

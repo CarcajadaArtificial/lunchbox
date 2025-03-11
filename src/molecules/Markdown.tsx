@@ -11,10 +11,10 @@
  *
  * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
  */
-import { Prose } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import { render, type RenderOptions } from '@deno/gfm';
 import type { JSX } from 'preact';
+import { render, type RenderOptions } from '@deno/gfm';
+import { apDef } from '@lunchbox/ui';
+import { Prose } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

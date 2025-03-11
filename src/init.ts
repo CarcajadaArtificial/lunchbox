@@ -263,10 +263,6 @@ export async function init(
     gen.SRC_PARTICLES,
   );
   await writeFile(
-    'components/lunchbox/types.ts',
-    gen.SRC_TYPES,
-  );
-  await writeFile(
     'components/lunchbox/molecules/Accordion.tsx',
     gen.SRC_MOLECULES_ACCORDION,
   );

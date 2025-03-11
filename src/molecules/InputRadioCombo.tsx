@@ -9,9 +9,9 @@
  *
  * @module molecules/InputRadioCombo
  */
-import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
 import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

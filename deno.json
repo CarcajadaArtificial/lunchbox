@@ -1,10 +1,9 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
-    "./utils": "./src/utils.ts",
     "./init": "./src/init.ts",
     "./tailwind": "./src/tailwind.ts",
     "./particles": "./src/particles.ts",
@@ -23,6 +22,7 @@
   },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
+    "@lunchbox/ui": "./mod.ts",
     "@std/cli": "jsr:@std/cli@^1.0.14",
     "@std/fmt": "jsr:@std/fmt@^1.0.6",
     "@std/path": "jsr:@std/path@^1.0.8",

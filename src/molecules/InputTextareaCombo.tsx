@@ -9,10 +9,10 @@
  *
  * @module molecules/InputTextareaCombo
  */
+import type { JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import type { JSX } from 'preact';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

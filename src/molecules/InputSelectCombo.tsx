@@ -9,10 +9,10 @@
  *
  * @module molecules/InputSelectCombo
  */
-import { input } from '../particles.ts';
-import { Input } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
 import type { ComponentChildren, JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
+import { Input } from '../atoms.tsx';
+import { input } from '../particles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

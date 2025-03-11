@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.41
+
+- Added better import routes for the project initialization code.
+
 ### v1.0.40
 
 - Updated the init process to include static font files, types and better import routes.

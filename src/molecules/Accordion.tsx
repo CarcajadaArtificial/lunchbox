@@ -10,9 +10,8 @@
  * @module molecules/Accordion
  */
 import { Details } from '../atoms.tsx';
-import { apDef } from '../utils.ts';
-import type { ComponentChildren } from 'preact';
-import type { JSX } from 'preact';
+import type { ComponentChildren, JSX } from 'preact';
+import { apDef } from '@lunchbox/ui';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**

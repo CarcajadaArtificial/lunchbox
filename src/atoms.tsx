@@ -20,8 +20,8 @@
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import { KATEX_CSS } from '@deno/gfm';
+import type { iAtom, iAtomRecord } from '@lunchbox/ui';
 import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
-import type { iAtom, iAtomRecord } from './types.ts';
 
 // =====================================================================================================
 /**
