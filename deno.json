@@ -1,22 +1,15 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
     "./utils": "./src/utils.ts",
+    "./init": "./src/init.ts",
     "./tailwind": "./src/tailwind.ts",
     "./particles": "./src/particles.ts",
     "./atoms": "./src/atoms.tsx",
-    "./molecules/Accordion": "./src/molecules/Accordion.tsx",
-    "./molecules/FieldsetCheck": "./src/molecules/FieldsetCheck.tsx",
-    "./molecules/FieldsetRadio": "./src/molecules/FieldsetRadio.tsx",
-    "./molecules/InputCheckCombo": "./src/molecules/InputCheckCombo.tsx",
-    "./molecules/InputFieldCombo": "./src/molecules/InputFieldCombo.tsx",
-    "./molecules/InputRadioCombo": "./src/molecules/InputRadioCombo.tsx",
-    "./molecules/InputSelectCombo": "./src/molecules/InputSelectCombo.tsx",
-    "./molecules/InputTextareaCombo": "./src/molecules/InputTextareaCombo.tsx",
-    "./molecules/Markdown": "./src/molecules/Markdown.tsx"
+    "./molecules": "./src/molecules.ts"
   },
   "tasks": {
     "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",

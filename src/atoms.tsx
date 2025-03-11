@@ -7,7 +7,7 @@
 /**
  * This is module manages the base of the hierarchy of the components of this library. The definition
  * of an Atom is a component made up of a 1/1 HTML element, because of this, they must be declared
- * using the type @see iAtom that links them to the properties of a 1/1 HTML element. The rendered
+ * using the type {@link iAtom} that links them to the properties of a 1/1 HTML element. The rendered
  * element will contain a list of tailwind classes that give the element it's style.
  *
  * Some atoms are made up of "particles" that are smaller and more abstract things. These particles

@@ -96,7 +96,7 @@ async function writeProjectFile(
  * @param tty - TTY interface for user interaction.
  */
 export async function init(
-  cwd = Deno.cwd(),
+  cwd: string = Deno.cwd(),
   input: string[] = [],
   tty: MockTTY = realTTY,
 ): Promise<void> {

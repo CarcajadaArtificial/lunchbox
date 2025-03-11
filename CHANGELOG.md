@@ -14,6 +14,11 @@
 
 ## Version History
 
+### v1.0.37
+
+- Added explicit typing to the init module.
+- Added changes for package exporting and documentation.
+
 ### v1.0.36
 
 - Added explicit typing to the tailwind plugin.
