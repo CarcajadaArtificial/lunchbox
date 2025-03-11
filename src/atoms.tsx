@@ -274,7 +274,7 @@ export const Button = {
 
 // =====================================================================================================
 /**
- * description)
+ * (description)
  *
  * - `ul`: (description)
  * - `ol`: (description)

@@ -8,6 +8,8 @@
  * This module contains the project initialization functionality.
  *
  * @module init
+ *
+ * @todo Add a step that asks the user
  */
 import * as colors from '@std/fmt/colors';
 import * as path from '@std/path';

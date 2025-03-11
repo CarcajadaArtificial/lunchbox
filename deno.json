@@ -1,15 +1,31 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "license": "MIT",
-  "exports": "./mod.ts",
+  "exports": {
+    ".": "./mod.ts",
+    "./particles": "./src/particles.ts",
+    "./atoms": "./src/atoms.tsx",
+    "./molecules/Accordion": "./src/molecules/Accordion.tsx",
+    "./molecules/FieldsetCheck": "./src/molecules/FieldsetCheck.tsx",
+    "./molecules/FieldsetRadio": "./src/molecules/FieldsetRadio.tsx",
+    "./molecules/InputCheckCombo": "./src/molecules/InputCheckCombo.tsx",
+    "./molecules/InputFieldCombo": "./src/molecules/InputFieldCombo.tsx",
+    "./molecules/InputRadioCombo": "./src/molecules/InputRadioCombo.tsx",
+    "./molecules/InputSelectCombo": "./src/molecules/InputSelectCombo.tsx",
+    "./molecules/InputTextareaCombo": "./src/molecules/InputTextareaCombo.tsx",
+    "./molecules/Markdown": "./src/molecules/Markdown.tsx"
+  },
   "tasks": {
     "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",
     "init:generate": "deno run -A src/tasks.ts init-generate",
     "init:clean": "deno run -A src/tasks.ts init-clean",
     "init:start": "deno run -A --watch=static/,routes/ examples/init/dev.ts"
   },
-  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
     "@std/cli": "jsr:@std/cli@^1.0.14",

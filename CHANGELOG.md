@@ -14,7 +14,12 @@
 
 ## Version History
 
-### v1.0.32
+### v1.0.34
+
+- Fixed package exporting settings.
+- Removed the GitHub Actions CI/CD publishing step.
+
+### v1.0.33
 
 - Added a typing fix for the `iAtom` type.
 
