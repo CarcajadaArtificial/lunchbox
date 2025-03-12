@@ -5,15 +5,15 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * This is module manages the base of the hierarchy of the components of this library. The definition
- * of an Atom is a component made up of a 1/1 HTML element, because of this, they must be declared
- * using the type iAtom that links them to the properties of a 1/1 HTML element. The rendered
+ * This module manages the base of the hierarchy of the components of this library. The definition
+ * of an Atom is a component made up of an HTMLElement, because of this, they must be declared
+ * using the type iAtom that links them to the properties of an HTMLElement. The rendered
  * element will contain a list of tailwind classes that give the element it's style.
  *
- * Some atoms are made up of "particles" that are smaller and more abstract things. These particles
- * don't even represent an HTML element in particular. They are a list of classes that group common
- * styles among atoms. These can easily be added to classes of user-created elements that aren't an
- * atom. Additionally, particles commonly come from tailwind theme settings.
+ * Atoms use {@linkcode /particles | "Particles"}  to style themselves. Particles are smaller and more
+ * abstract things that don't represent HTML elements, they are lists of classes that group common
+ * styles. These particle classes can also be used directly in user-created elements that aren't atoms.
+ * The particles module contains these style definitions which commonly come from tailwind theme settings.
  *
  * @module atoms
  */
@@ -122,15 +122,13 @@ export const Text: iAtomRecord = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render the page's main semantic sections.
+ * This dictionary provides semantic HTML elements for structuring a page's layout. These atoms help
+ * maintain consistent styling and proper document structure while following web standards. Each
+ * element maps to its corresponding HTML5 semantic tag:
  *
- * - `Body`: The entire page's content.
- * - `Main`: The main content section of the page.
- * - `Header`: The page's header.
- * - `Footer`: The page's footer.
- *
- * ```tsx
- * import { Page } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { Page } from 'lunchbox/atoms';
  *
  * <Page.Body>
  *  <Page.Header>{...}</Page.Header>
@@ -140,6 +138,12 @@ export const Text: iAtomRecord = {
  * ```
  */
 export const Page = {
+  /**
+   * The Body atom is essential for establishing a consistent theming foundation across your app.
+   * Without it, you'd need to manually handle dark mode transitions, font inheritance, and color
+   * schemes on every page. By using this atom at your app's root, you ensure all nested components
+   * inherit the correct theme context and base styles.
+   */
   Body: (p: iAtom<HTMLBodyElement>): JSX.Element => (
     <body
       {...p}
@@ -152,6 +156,11 @@ export const Page = {
       )}
     />
   ),
+  /**
+   * The Main atom enforces a consistent content structure across your application. Rather than
+   * letting each page define its own layout rules, this atom ensures your primary content always
+   * follows accessibility best practices and maintains visual consistency with the rest of the app.
+   */
   Main: (p: iAtom): JSX.Element => (
     <main
       {...p}
@@ -164,6 +173,11 @@ export const Page = {
       )}
     />
   ),
+  /**
+   * The Header atom standardizes navigation placement and branding across your app. Instead of
+   * building custom headers for each page, this atom provides a semantic container that maintains
+   * your app's visual hierarchy and ensures consistent user navigation patterns.
+   */
   Header: (p: iAtom): JSX.Element => (
     <header
       {...p}
@@ -174,6 +188,11 @@ export const Page = {
       )}
     />
   ),
+  /**
+   * The Footer atom creates a predictable location for important site-wide information and secondary
+   * navigation. By using this atom instead of a generic container, you maintain semantic HTML structure
+   * while ensuring footer content is consistently positioned and styled across all pages.
+   */
   Footer: (p: iAtom): JSX.Element => (
     <footer
       {...p}
@@ -188,20 +207,32 @@ export const Page = {
 
 // =====================================================================================================
 /**
- * (description)
+ * This dictionary contains contextual button variations that adapt their visual hierarchy based on
+ * their surroundings rather than fixed primary/secondary patterns. Each button's prominence shifts
+ * naturally  through color relationships with its container.
  *
- * - `Brand`: (description)
- * - `Page`: (description)
- * - `Panel`: (description)
- * - `Error`: (description)
+ * The buttons use semantic color palettes to communicate purpose - Brand buttons drive primary actions,
+ * Page/Panel buttons handle navigation and secondary actions, and Error buttons signal destructive
+ * operations.
  *
+ * @example Usage
  * ```tsx
- * (example code)
- * ```
+ * import { Button } from 'lunchbox/atoms';
  *
- * @todo Finish documentation
+ * <Button.Brand onClick={handleClick}>
+ *   Primary Action
+ * </Button.Brand>
+ *
+ * <Button.Error onClick={handleDelete}>
+ *   Delete Item
+ * </Button.Error>
+ * ```
  */
 export const Button = {
+  /**
+   * Primary call-to-action button using brand colors. Use for main form submissions, key conversion
+   * points, and primary user flows where you want to direct user attention.
+   */
   Brand: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
@@ -214,6 +245,10 @@ export const Button = {
       )}
     />
   ),
+  /**
+   * Contextual button that provides subtle contrast on pages but stands out on panels. Perfect for
+   * secondary actions, navigation elements, and interactive components within panel containers.
+   */
   Page: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
@@ -226,6 +261,10 @@ export const Button = {
       )}
     />
   ),
+  /**
+   * Contextual button that blends with panels but contrasts against pages. Ideal for toolbar actions,
+   * filter controls, and situations where multiple buttons need to work together visually.
+   */
   Panel: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
@@ -238,6 +277,10 @@ export const Button = {
       )}
     />
   ),
+  /**
+   * Warning button using error colors for destructive or irreversible actions. Essential for account
+   * deletion, permanent data removal, or any action requiring explicit user caution.
+   */
   Error: (p: iAtom<HTMLButtonElement>): JSX.Element => (
     <button
       {...p}
@@ -254,18 +297,30 @@ export const Button = {
 
 // =====================================================================================================
 /**
- * (description)
+ * A collection of semantic list components for organizing hierarchical content. Provides both
+ * marker-based and numerical list variants while maintaining proper HTML semantics and accessibility.
+ * Extends with custom classes through the standard atom interface.
  *
- * - `ul`: (description)
- * - `ol`: (description)
- *
+ * @example Usage
  * ```tsx
- * (example code)
- * ```
+ * import { List } from 'lunchbox/atoms';
  *
- * @todo Finish documentation
+ * <List.ul>
+ *   <li>First bullet point</li>
+ *   <li>Second bullet point</li>
+ * </List.ul>
+ *
+ * <List.ol>
+ *   <li>First numbered item</li>
+ *   <li>Second numbered item</li>
+ * </List.ol>
+ * ```
  */
 export const List = {
+  /**
+   * Unordered list component that uses bullet points. Essential for presenting related items where
+   * order doesn't matter. Commonly used in feature lists, navigation menus, and content hierarchies.
+   */
   ul: (p: iAtom<HTMLUListElement>): JSX.Element => (
     <ul
       {...p}
@@ -276,6 +331,10 @@ export const List = {
       )}
     />
   ),
+  /**
+   * Ordered list component that uses numbers. Critical for sequences, instructions, and prioritized
+   * content where order matters.
+   */
   ol: (p: iAtom<HTMLUListElement>): JSX.Element => (
     <ul
       {...p}
@@ -290,24 +349,43 @@ export const List = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render codeblocks. This component is usually made up of two
- * atoms, a content atom and a container atom.
+ * A specialized component system for displaying code with proper syntax highlighting and formatting.
+ * The architecture enforces semantic structure through required parent-child relationships.
  *
- * - `Content`: The content part of the codeblock. Must be a child of the container atom.
- * - `Inline`: The container part of an inline codeblock, used inside of a paragraph. It must contain
- *    a content atom.
- * - `Block`: (IN PROGRESS) The container part of a block codeblock, not to be used inside of a
- *    paragraph because it occupies the full width of the parent element. It must contain a content
- *    atom.
- *
+ * @example Usage (Inline)
  * ```tsx
- * (example code)
+ * import { Code } from 'lunchbox/atoms';
+ *
+ * <p>
+ *   Use the{" "}
+ *   <Code.Inline>
+ *     <Code.Content>
+ *       npm install
+ *     </Code.Content>
+ *   </Code.Inline>
+ *   {" "}command.
+ * </p>
  * ```
  *
- * @todo Finish documentation
- * @todo Implement the `<Code.Block/>` atom. (ignore this for now)
+ * @example Usage (Block) - WIP
+ * ```tsx
+ * import { Code } from 'lunchbox/atoms';
+ *
+ * <Code.Block>
+ *   <Code.Content>
+ *     const greeting = 'Hello World';
+ *     console.log(greeting);
+ *   </Code.Content>
+ * </Code.Block>
+ * ```
+ *
+ * @todo Implement the `<Code.Block/>` atom.
  */
 export const Code = {
+  /**
+   * The innermost component that holds the actual code. It requires a container parent component to
+   * function properly.
+   */
   Content: (p: iAtom): JSX.Element => (
     <code
       {...p}
@@ -318,6 +396,10 @@ export const Code = {
       )}
     />
   ),
+  /**
+   * Creates a single-line code display optimized for technical terms and commands within flowing text.
+   * Provides the styling context that Content components need for inline presentation.
+   */
   Inline: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       {...p}
@@ -331,6 +413,10 @@ export const Code = {
       )}
     />
   ),
+  /**
+   * Creates a multi-line code display with features like line numbers and copy buttons. Like Inline,
+   * provides styling context for Content, but with additional functionality for larger code samples.
+   */
   Block: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       class={cn(
@@ -343,31 +429,30 @@ export const Code = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render inputs. Using this atoms as building blocks one
- * could build any type of customized input component. It is recommended to check out the input
- * molecules as they are standard components that are built using these atoms.
+ * This dictionary contains atoms designed to build input components in a standardized way. Each atom
+ * represents a fundamental piece that, when combined, allows the creation of any type of input
+ * interface - from simple text fields to complex multi-select forms.
  *
- * - `Field`:  (description)
- * - `Label`:  (description)
- * - `Container`:  (description)
- * - `Text`:  (description)
- * - `Error`:  (description)
- * - `Required`:  (description)
- * - `Radio`:  (description)
- * - `Fieldset`:  (description)
- * - `Legend`:  (description)
- * - `Check`:  (description)
- * - `Textarea`:  (description)
- * - `Select`:  (description)
- * - `Submit`:  (description)
+ * The atoms handle core styling concerns like focus states, error highlighting, and spacing
+ * consistency, while remaining flexible enough to be customized through class props.
  *
- * ```tsx
- * (example code)
+ * @example Usage
+ * ```ts
+ * import { Input } from 'lunchbox/atoms';
+ *
+ * <Input.Container>
+ *   <Input.Label>
+ *     <Input.Text>Username</Input.Text>
+ *     <Input.Field type="text" required />
+ *   </Input.Label>
+ *   <Input.Error>This field is required</Input.Error>
+ * </Input.Container>
  * ```
- *
- * @todo Finish documentation
  */
 export const Input = {
+  /**
+   * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode /molecules/~/InputFieldCombo | InputFieldCombo} molecule.
+   */
   Field: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       {...p}
@@ -381,18 +466,27 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Container that wraps an input and its label text, ensuring proper semantic HTML by creating the necessary association between them. This is crucial for accessibility as screen readers will announce the label when the input is focused.
+   */
   Label: (p: iAtom<HTMLLabelElement>): JSX.Element => (
     <label
       {...p}
       class={cn('w-full flex', p.class)}
     />
   ),
+  /**
+   * A wrapper component that maintains consistent vertical spacing between input groups. This helps create visual hierarchy and improves form readability by ensuring inputs don't feel cramped or too spread out.
+   */
   Container: (p: iAtom<HTMLDivElement>): JSX.Element => (
     <div
       {...p}
       class={cn('mb-1/2', p.class)}
     />
   ),
+  /**
+   * Renders text content specifically styled for form contexts like labels, help text, and descriptions. Uses standardized styling to maintain consistency across all text elements in forms.
+   */
   Text: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
@@ -402,12 +496,18 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Displays validation error messages with distinct error styling (typically red text/borders). Positioned below the input field to provide clear feedback when form validation fails.
+   */
   Error: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
       class={cn(clr.error.txt, 'pl-1/2', p.class)}
     />
   ),
+  /**
+   * Styled radio button input for single-choice selections. For a complete radio input group, use the {@linkcode /molecules/~/FieldsetRadio | FieldsetRadio} molecule, or for a single radio button with label use {@linkcode /molecules/~/InputRadioCombo | InputRadioCombo}
+   */
   Radio: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='radio'
@@ -425,6 +525,8 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Groups related form controls together both semantically and visually. Adds a subtle border and background to create visual separation between different sections of a form. Essential for organizing complex forms with multiple related inputs. For complete fieldset components, see {@linkcode /molecules/~/FieldsetCheck | FieldsetCheck} for checkboxes or {@linkcode /molecules/~/FieldsetRadio | FieldsetRadio} for radio buttons. */
   Fieldset: (p: iAtom<HTMLFieldSetElement>): JSX.Element => (
     <fieldset
       {...p}
@@ -435,12 +537,18 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Provides a title or description for a fieldset, helping users understand the purpose of grouped form controls. Styled to stand out from regular labels while maintaining visual harmony.
+   */
   Legend: (p: iAtom<HTMLLegendElement>): JSX.Element => (
     <legend
       {...p}
       class={cn(p.class)}
     />
   ),
+  /**
+   * Styled checkbox input for multi-choice selections. For a complete checkbox group, use the {@linkcode /molecules/~/FieldsetCheck | FieldsetCheck} molecule, or for a single checkbox with label use {@linkcode /molecules/~/InputCheckCombo | InputCheckCombo}
+   */
   Check: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='checkbox'
@@ -458,6 +566,9 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Multi-line text input for longer form content. For a complete textarea with label and error handling, use the {@linkcode /molecules/~/InputTextareaCombo | InputTextareaCombo} molecule.
+   */
   Textarea: (p: iAtom<HTMLTextAreaElement>): JSX.Element => (
     <textarea
       {...p}
@@ -470,6 +581,9 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Dropdown select input for choosing from predefined options. For a complete select input with label and error handling, use the {@linkcode /molecules/~/InputSelectCombo | InputSelectCombo} molecule.
+   */
   Select: (p: iAtom<HTMLSelectElement>): JSX.Element => (
     <select
       {...p}
@@ -483,6 +597,9 @@ export const Input = {
       )}
     />
   ),
+  /**
+   * Submit button with brand styling that looks like {@linkcode /atoms/~/Button | Button.Brand} while maintaining the functionality of an `<input type="submit">` element.
+   */
   Submit: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
       type='submit'
@@ -557,21 +674,21 @@ export const Nav = {
 // =====================================================================================================
 /**
  * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be
- * built using this atoms, but for most cases the Accordion molecule is a standard solution.
- *
- * @see {@link molecules/Accordion}
+ * built using this atoms, but for most cases the {@linkcode /molecules/~/Accordion | Accordion
+ * molecule} is a standard solution.
  *
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
  * - `Summary`: The summary element that prompts the user to click to show/hide a container atom.
  *
- * ```tsx
+ * @example Usage
+ * ```ts
+ * import { Details } from 'lunchbox/atoms';
+ *
  * <Details.Container open={p.open}>
  *   <Details.Summary>{p.summary}</Details.Summary>
  * </Details.Container>
  * ```
- *
- * @todo Finish documentation
  */
 export const Details = {
   Container: (p: iAtom<HTMLDetailsElement>): JSX.Element => (
