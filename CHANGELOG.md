@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.49
+
+- Updated the package documentation.
+
 ### v1.0.48
 
 - Updated the package documentation.

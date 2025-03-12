@@ -24,14 +24,15 @@ import { cn } from '@vyn/cn';
  * - `page`: The default background of the page.
  * - `panel`: A background that feels as a physical section for panels.
  *
- * ```tsx
- * import { clr } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { clr } from 'lunchbox/particles';
  *
  * <div class={clr.neutral.bg}>Example background</div>
  * <div class={clr.neutral.txt}>Example text</div>
  * ```
  *
- * @todo Update to new shading syntax in the new tailwind version.
+ * @todo Update to new shading syntax in the tailwind v4 version.
  */
 export const clr = {
   neutral: {
@@ -80,8 +81,9 @@ export const clr = {
  * - `invalid`: The background of an invalid input.
  * - `abstract`: An abstract particle shared in many input atoms.
  *
- * ```tsx
- * import { input } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { input } from 'lunchbox/particles';
  *
  * // Required input label
  * <label class={input.required}>Label text</label>
@@ -104,11 +106,12 @@ export const input: Record<string, string> = {
 // =====================================================================================================
 /**
  * This is a dictionary of particles that represent the different text sizes and line heights. These
- * are used in the {@link Text} atoms along with other standarized styles. In most cases, the
+ * are used in the Text atoms along with other standarized styles. In most cases, the
  * `<Text.Base/>` atom is recommended over the `txt.base` particle.
  *
- * ```tsx
- * import { txt } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { txt } from 'lunchbox/particles';
  *
  * <span class={txt.base}>Base text</span>
  * ```
@@ -126,8 +129,9 @@ export const txt: Record<string, string> = {
  * This particle contains the styles that are common between the `<Page.Header/>` and
  * `<Page.Footer/>` atoms.
  *
- * ```tsx
- * import { area } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { area } from 'lunchbox/particles';
  *
  * <section class={area}>...</section>
  * ```
@@ -142,8 +146,9 @@ export const area: string = cn(
  * This is particle contains the styles for the library's grid system container. Children of elements
  * containing this styles should use the extended tailwind `gridColumn` settings.
  *
- * ```tsx
- * import { layout } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { layout } from 'lunchbox/particles';
  *
  * <div class={layout}>
  *  <div class="grid-cols-12">...</div>
@@ -162,8 +167,9 @@ export const layout: string = cn(
 /**
  * This particle contains the styles for any element's focus state.
  *
- * ```tsx
- * import { focus } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { focus } from 'lunchbox/particles';
  *
  * <div tabIndex={0} class={focus}>{...</div>
  * ```
@@ -178,8 +184,9 @@ export const focus: string = cn(
 /**
  * This particle contains the styles that are common in button atoms.
  *
- * ```tsx
- * import { btn } from '@lunchbox/ui';
+ * @example Usage
+ * ```ts
+ * import { btn } from 'lunchbox/particles';
  *
  * <button class={btn}>Button</button>
  * ```

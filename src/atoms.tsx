@@ -216,7 +216,7 @@ export const Page = {
  * operations.
  *
  * @example Usage
- * ```tsx
+ * ```ts
  * import { Button } from 'lunchbox/atoms';
  *
  * <Button.Brand onClick={handleClick}>
@@ -302,7 +302,7 @@ export const Button = {
  * Extends with custom classes through the standard atom interface.
  *
  * @example Usage
- * ```tsx
+ * ```ts
  * import { List } from 'lunchbox/atoms';
  *
  * <List.ul>
@@ -353,7 +353,7 @@ export const List = {
  * The architecture enforces semantic structure through required parent-child relationships.
  *
  * @example Usage (Inline)
- * ```tsx
+ * ```ts
  * import { Code } from 'lunchbox/atoms';
  *
  * <p>
@@ -368,7 +368,7 @@ export const List = {
  * ```
  *
  * @example Usage (Block) - WIP
- * ```tsx
+ * ```ts
  * import { Code } from 'lunchbox/atoms';
  *
  * <Code.Block>
@@ -621,15 +621,22 @@ export const Input = {
  * This dictionary contains the atoms that render secondary sections of content made using the
  * `<aside/>` element, usually for types of sidebars.
  *
- * - `Sticky`: (description)
+ * @example Usage
+ * ```ts
+ * import { Aside } from 'lunchbox/atoms';
  *
- * ```tsx
- * (example code)
+ * <Aside.Sticky>
+ *   <p>Hello</p>
+ * </Aside.Sticky>
  * ```
- *
- * @todo Finish documentation
  */
 export const Aside = {
+  /**
+   * A sticky sidebar component optimized for desktop layouts, commonly used for page-level navigation
+   * like tables of contents that follow the user's scroll position. While it can be used on mobile,
+   * the limited horizontal space often makes this pattern less practical on smaller screens. The
+   * sticky behavior keeps the content accessible while scrolling through the main content area.
+   */
   Sticky: (p: iAtom): JSX.Element => (
     <aside
       {...p}
@@ -644,17 +651,31 @@ export const Aside = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that render different types of navigation components.
+ * This dictionary contains atoms for building consistent navigation structures across your application.
+ * Navigation is a critical part of any web application's information architecture, and these atoms
+ * ensure users can always find their way around, regardless of viewport size or scroll position.
  *
- * - `Sticky`: The sticky navbar stays on the top of the page when scrolling.
+ * The navigation components are designed to work seamlessly with the {@linkcode /atoms/~/Page | Page}
+ * atoms, particularly within the `Page.Header` component for site-wide navigation.
  *
+ * @example Usage
  * ```tsx
- * (example code)
- * ```
+ * import { Nav, Page } from '@lunchbox/ui';
  *
- * @todo Finish documentation
+ * <Page.Header>
+ *   <Nav.Sticky>
+ *     <a href="/">Home</a>
+ *     <a href="/about">About</a>
+ *   </Nav.Sticky>
+ * </Page.Header>
+ * ```
  */
 export const Nav = {
+  /**
+   * A navigation container that maintains its position at the top of the viewport while scrolling.
+   * Essential for ensuring critical navigation links remain accessible throughout the user's journey,
+   * particularly on longer pages or in single-page applications.
+   */
   Sticky: (p: iAtom): JSX.Element => (
     <nav
       {...p}
@@ -716,15 +737,15 @@ export const Details = {
 
 // =====================================================================================================
 /**
- * This atom renders a horizontal rule, replacing the `<hr/>` element.
+ * Creates visual separation between content sections with a neutral-colored horizontal line. Useful for
+ * breaking up long content into logical segments while maintaining visual hierarchy.
  *
- * ```tsx
+ * @example Usage
+ * ```ts
  * import { Separator } from '@lunchbox/ui';
  *
  * <Separator />
  * ```
- *
- * @todo Finish documentation
  */
 export const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
   <hr
@@ -740,13 +761,15 @@ export const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
 
 // =====================================================================================================
 /**
- * This atom renders a link element, replacing the `<a/>` element.
+ * Provides consistent link styling and behavior across the application, with built-in hover states and
+ * focus indicators. Essential for navigation and content references.
  *
- * ```tsx
- * (example code)
+ * @example Usage
+ * ```ts
+ * import { Link } from '@lunchbox/ui';
+ *
+ * <Link href="/about">About Us</Link>
  * ```
- *
- * @todo Finish documentation
  */
 export const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
   <a
@@ -764,13 +787,15 @@ export const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
 
 // =====================================================================================================
 /**
- * This atom renders a keyboard key, replacing the `<kbd/>` element.
+ * Displays keyboard shortcuts and key combinations in a visually distinct way. Particularly useful in
+ * documentation, tutorials, and command references.
  *
- * ```tsx
- * (example code)
+ * @example Usage
+ * ```ts
+ * import { Kbd } from '@lunchbox/ui';
+ *
+ * <p>Press <Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy</p>
  * ```
- *
- * @todo Finish documentation
  */
 export const Kbd = (p: iAtom): JSX.Element => (
   <kbd
@@ -791,13 +816,16 @@ export const Kbd = (p: iAtom): JSX.Element => (
 /**
  * This atom contains style settings for the `@tailwind/typeography` plugin and works with the
  * `deno-gfm` package to render markdown content. It can be used by itself, but using the
- * {@link Markdown} molecule is highly recommended to avoid redundancies.
+ * {@linkcode /molecules/~/Markdown | Markdown} molecule is highly recommended to avoid redundancies.
  *
- * ```tsx
- * (example code)
+ * @example Usage
+ * ```ts
+ * import { Prose } from 'lunchbox/atoms';
+ *
+ * <Prose>
+ *   <p>Hello</p>
+ * </Prose>
  * ```
- *
- * @todo Finish documentation
  */
 export const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
@@ -826,13 +854,23 @@ export const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
 
 // =====================================================================================================
 /**
- * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX.
+ * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX equations in
+ * markdown content. Works in conjunction with the {@linkcode /atoms/~/Prose | Prose} atom which
+ * handles the actual markdown rendering.
  *
- * ```tsx
- * (example code)
+ * @example Usage
+ * ```ts
+ * import { KatexStyles, Prose } from 'lunchbox/atoms';
+ *
+ * <head>
+ *   <KatexStyles />
+ * </head>
+ * <body>
+ *   <Prose>
+ *     {LaTeX content}
+ *   </Prose>
+ * </body>
  * ```
- *
- * @todo Finish documentation
  */
 export const KatexStyles = (p: iAtom<HTMLStyleElement>): JSX.Element => (
   <style {...p}>{KATEX_CSS}</style>
