@@ -5,11 +5,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
- *
+ * Module for the `Markdown` molecule.
  * @module molecules/Markdown
- *
- * @todo Add the KatexStyles atom to the page's head when the allowMath option is true.
  */
 import type { JSX } from 'preact';
 import { render, type RenderOptions } from '@deno/gfm';
@@ -17,18 +14,13 @@ import { apDef } from '@lunchbox/ui';
 import { Prose } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
+/** Property interface for the `Markdown` molecule. */
 export type iMarkdown = {
   content: string;
   renderOptions: RenderOptions;
 };
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
+/** Default properties of the `Markdown` molecule. */
 const d: iMarkdown = {
   content: '',
   renderOptions: {
@@ -37,10 +29,7 @@ const d: iMarkdown = {
   },
 };
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
+/** Setup function of the `Markdown` molecule. */
 function setup(props: Partial<iMarkdown>) {
   const p = apDef<iMarkdown>(d, props);
   p.content = render(p.content, p.renderOptions);
@@ -50,6 +39,16 @@ function setup(props: Partial<iMarkdown>) {
 // =====================================================================================================
 /**
  * (description)
+ *
+ * @todo [DOC] Add a description and code example of how to propertly use this component.
+ * @todo [DEV] Add the KatexStyles atom to the page's head when the allowMath option is true.
+ *
+ * @example
+ * ```ts
+ * import { Markdown } from 'lunchbox/molecules';
+ *
+ * (example code)
+ * ```
  */
 export default function (props: Partial<iMarkdown>): JSX.Element {
   const p = setup(props);

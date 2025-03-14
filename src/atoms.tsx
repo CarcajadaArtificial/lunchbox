@@ -34,7 +34,7 @@ import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
  * - `Base`: The standard text for paragraphs, labels, and other body text.
  * - `Small`: The smallest text size, is slightly less accessible and can be used for subtle details.
  *
- * ```tsx
+ * ```ts
  * import { Text } from '@lunchbox/ui';
  *
  * <Text.Display>Display text</Text.Display>
@@ -659,7 +659,7 @@ export const Aside = {
  * atoms, particularly within the `Page.Header` component for site-wide navigation.
  *
  * @example Usage
- * ```tsx
+ * ```ts
  * import { Nav, Page } from '@lunchbox/ui';
  *
  * <Page.Header>

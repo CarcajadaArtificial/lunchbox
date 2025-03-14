@@ -5,8 +5,7 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
- *
+ * Module for the `InputSelectCombo` molecule.
  * @module molecules/InputSelectCombo
  */
 import type { ComponentChildren, JSX } from 'preact';
@@ -15,21 +14,33 @@ import { Input } from '../atoms.tsx';
 import { input } from '../particles.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-interface iInputFieldCombo {
+/** Property interface for the `InputSelectCombo` molecule. */
+export interface iInputSelectCombo {
+  /**
+   * The input's title. It is built using the `<label/>` element already without the need of linking
+   * them with the ids.
+   */
   label: string;
+
+  /**
+   * An error message to be displayed relative to this input. It also alters the appearance of the
+   * component, giving it contrast against other parts of the form.
+   */
   error: string;
-  children: ComponentChildren;
+
+  /**
+   * Makes this input required during form submission.
+   */
   required: boolean;
+
+  /**
+   * This property helps add options to the select field.
+   */
+  children: ComponentChildren;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-const d: iInputFieldCombo = {
+/** Default properties of the `InputSelectCombo` molecule. */
+const d: iInputSelectCombo = {
   label: '',
   error: '',
   children: undefined,
@@ -39,8 +50,20 @@ const d: iInputFieldCombo = {
 // =====================================================================================================
 /**
  * (description)
+ *
+ * @todo [DOC] Add a description and code example of how to propertly use this component.
+ * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ * @todo [DEV] Implement the special functionality for `default` and `placeholder` properties.
+ * @todo [DEV] Implement an `<Input.Option>` atom for this molecule's children.
+ *
+ * @example
+ * ```ts
+ * import { InputSelectCombo } from 'lunchbox/molecules';
+ *
+ * (example code)
+ * ```
  */
-export default function (props: Partial<iInputFieldCombo>): JSX.Element {
+export default function (props: Partial<iInputSelectCombo>): JSX.Element {
   const p = apDef(d, props);
 
   return (
@@ -49,7 +72,7 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
         {p.label
           ? (
             <Input.Text class={p.required ? input.required : undefined}>
-              <>{p.label}</>
+              {p.label}
             </Input.Text>
           )
           : null}

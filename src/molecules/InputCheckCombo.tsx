@@ -5,7 +5,7 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
+ * Module is for the `InputCheckCombo` molecule.
  * @module molecules/InputCheckCombo
  */
 import type { JSX } from 'preact';
@@ -13,20 +13,33 @@ import { apDef } from '@lunchbox/ui';
 import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-interface iInputCheckCombo {
+/** Property interface for the `InputCheckCombo` molecule. */
+export interface iInputCheckCombo {
+  /**
+   * The input's title. It is built using the `<label/>` element already without the need of linking
+   * them with the ids.
+   */
   label: string;
+
+  /**
+   * An error message to be displayed relative to this input. It also alters the appearance of the
+   * component, giving it contrast against other parts of the form.
+   */
   error: string;
+
+  /**
+   * The identifier that must be shared by other checkbox inputs inside so that they're related in the
+   * form's context.
+   */
   name: string;
+
+  /**
+   * Makes this input required during form submission.
+   */
   required: boolean;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
+/** Default properties of the `InputCheckCombo` molecule. */
 const d: iInputCheckCombo = {
   label: '',
   error: '',
@@ -37,6 +50,16 @@ const d: iInputCheckCombo = {
 // =====================================================================================================
 /**
  * (description)
+ *
+ * @todo [DOC] Add a description and code example of how to propertly use this component.
+ * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ *
+ * @example
+ * ```ts
+ * import { InputCheckCombo } from 'lunchbox/molecules';
+ *
+ * (example code)
+ * ```
  */
 export default function (props: Partial<iInputCheckCombo>): JSX.Element {
   const p = apDef(d, props);

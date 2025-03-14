@@ -5,8 +5,7 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
- *
+ * Module for the `InputRadioCombo` molecule.
  * @module molecules/InputRadioCombo
  */
 import type { JSX } from 'preact';
@@ -14,19 +13,27 @@ import { apDef } from '@lunchbox/ui';
 import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-interface iInputRadioCombo {
+/** Property interface for the `InputRadioCombo` molecule. */
+export interface iInputRadioCombo {
+  /**
+   * The input's title. It is built using the `<label/>` element already without the need of linking
+   * them with the ids.
+   */
   label: string;
+
+  /**
+   * The identifier that must be shared by other radio inputs inside so that they're related in the
+   * form's context.
+   */
   name: string;
+
+  /**
+   * Makes this input required during form submission.
+   */
   required: boolean;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
+/** Default properties of the `InputRadioCombo` molecule. */
 const d: iInputRadioCombo = {
   label: '',
   name: '',
@@ -36,6 +43,15 @@ const d: iInputRadioCombo = {
 // =====================================================================================================
 /**
  * (description)
+ *
+ * @todo [DOC] Add a description and code example of how to propertly use this component.
+ * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ *
+ * ```ts
+ * import { InputRadioCombo } from 'lunchbox/molecules';
+ *
+ * (example code)
+ * ```
  */
 export default function (props: Partial<iInputRadioCombo>): JSX.Element {
   const p = apDef(d, props);

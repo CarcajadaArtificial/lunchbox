@@ -5,8 +5,7 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
- *
+ * Module for the `InputTextareaCombo` molecule.
  * @module molecules/InputTextareaCombo
  */
 import type { JSX } from 'preact';
@@ -15,20 +14,28 @@ import { input } from '../particles.ts';
 import { Input } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-interface iInputFieldCombo {
+/** Property interface for the `InputTextareaCombo` molecule. */
+export interface iInputTextareaCombo {
+  /**
+   * The input's title. It is built using the `<label/>` element already without the need of linking
+   * them with the ids.
+   */
   label: string;
+
+  /**
+   * An error message to be displayed relative to this input. It also alters the appearance of the
+   * component, giving it contrast against other parts of the form.
+   */
   error: string;
+
+  /**
+   * Makes this input required during form submission.
+   */
   required: boolean;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/**
- * (description)
- */
-const d: iInputFieldCombo = {
+/** Default properties of the `InputTextareaCombo` molecule. */
+const d: iInputTextareaCombo = {
   label: '',
   error: '',
   required: false,
@@ -37,8 +44,18 @@ const d: iInputFieldCombo = {
 // =====================================================================================================
 /**
  * (description)
+ *
+ * @todo [DOC] Add a description and code example of how to propertly use this component.
+ * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ *
+ * @example
+ * ```ts
+ * import { InputTextareaCombo } from 'lunchbox/molecules';
+ *
+ * (example code)
+ * ```
  */
-export default function (props: Partial<iInputFieldCombo>): JSX.Element {
+export default function (props: Partial<iInputTextareaCombo>): JSX.Element {
   const p = apDef(d, props);
 
   return (
@@ -47,7 +64,7 @@ export default function (props: Partial<iInputFieldCombo>): JSX.Element {
         {p.label
           ? (
             <Input.Text class={p.required ? input.required : undefined}>
-              <>{p.label}</>
+              {p.label}
             </Input.Text>
           )
           : null}
