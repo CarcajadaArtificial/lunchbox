@@ -11,7 +11,7 @@
 import type { JSX } from 'preact';
 import { render, type RenderOptions } from '@deno/gfm';
 import { apDef } from '@lunchbox/ui';
-import { Prose } from '../atoms.tsx';
+import Prose from '../atoms/Prose.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `Markdown` molecule. */

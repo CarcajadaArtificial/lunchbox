@@ -8,7 +8,7 @@
  * Module for the `FieldsetCheck` molecule
  * @module molecules/FieldsetCheck
  */
-import { Input } from '../atoms.tsx';
+import Input from '../atoms/Input.tsx';
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import InputCheckCombo from './InputCheckCombo.tsx';

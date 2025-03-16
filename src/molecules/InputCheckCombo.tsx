@@ -10,7 +10,7 @@
  */
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
-import { Input } from '../atoms.tsx';
+import Input from '../atoms/Input.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `InputCheckCombo` molecule. */

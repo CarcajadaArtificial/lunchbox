@@ -11,7 +11,7 @@
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import { input } from '../particles.ts';
-import { Input } from '../atoms.tsx';
+import Input from '../atoms/Input.tsx';
 import InputRadioCombo from './InputRadioCombo.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

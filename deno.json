@@ -1,13 +1,13 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
     "./init": "./src/init.ts",
     "./tailwind": "./src/tailwind.ts",
     "./particles": "./src/particles.ts",
-    "./atoms": "./src/atoms.tsx",
+    "./atoms": "./src/atoms.ts",
     "./molecules": "./src/molecules.ts"
   },
   "tasks": {

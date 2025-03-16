@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.52
+
+- Moved atoms and particles to their own file while maintaining the module exporting for documentation.
+
 ### v1.0.51
 
 - Added new initialization functions.
