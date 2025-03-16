@@ -1,21 +1,22 @@
-//   ___                _  _____        _                      ___           _
-//  |_ _|_ _  _ __ _  _| ||_   _|____ _| |_ __ _ _ _ ___ __ _ / __|___ _ __ | |__  ___
-//   | || ' \| '_ \ || |  _|| |/ -_) \ /  _/ _` | '_/ -_) _` | (__/ _ \ '  \| '_ \/ _ \
-//  |___|_||_| .__/\_,_|\__||_|\___/_\_\\__\__,_|_| \___\__,_|\___\___/_|_|_|_.__/\___/
+//   ___                _   ___ _     _    _  ___           _
+//  |_ _|_ _  _ __ _  _| |_| __(_)___| |__| |/ __|___ _ __ | |__  ___
+//   | || ' \| '_ \ || |  _| _|| / -_) / _` | (__/ _ \ '  \| '_ \/ _ \
+//  |___|_||_| .__/\_,_|\__|_| |_\___|_\__,_|\___\___/_|_|_|_.__/\___/
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Module for the `InputTextareaCombo` molecule.
- * @module molecules/InputTextareaCombo
+ * Module is for the `InputField` molecule.
+ * @module molecules/InputField
  */
 import type { JSX } from 'preact';
+import { cn } from '@vyn/cn';
 import { apDef } from '@lunchbox/ui';
-import { input } from '../particles.ts';
+import input from '../particles/input.ts';
 import Input from '../atoms/Input.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property interface for the `InputTextareaCombo` molecule. */
-export interface iInputTextareaCombo {
+/** Property interface for the `InputField` molecule. */
+export interface iInputField {
   /**
    * The input's title. It is built using the `<label/>` element already without the need of linking
    * them with the ids.
@@ -34,8 +35,8 @@ export interface iInputTextareaCombo {
   required: boolean;
 }
 
-/** Default properties of the `InputTextareaCombo` molecule. */
-const d: iInputTextareaCombo = {
+/** Default properties of the `InputField` molecule. */
+const d: iInputField = {
   label: '',
   error: '',
   required: false,
@@ -47,15 +48,16 @@ const d: iInputTextareaCombo = {
  *
  * @todo [DOC] Add a description and code example of how to propertly use this component.
  * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ * @todo [DEV] Handle dates an times in useful notations.
  *
  * @example
  * ```ts
- * import { InputTextareaCombo } from 'lunchbox/molecules';
+ * import { InputField } from 'lunchbox/molecules';
  *
  * (example code)
  * ```
  */
-export default function (props: Partial<iInputTextareaCombo>): JSX.Element {
+export default function (props: Partial<iInputField>): JSX.Element {
   const p = apDef(d, props);
 
   return (
@@ -68,7 +70,10 @@ export default function (props: Partial<iInputTextareaCombo>): JSX.Element {
             </Input.Text>
           )
           : null}
-        <Input.Textarea required={p.required} />
+        <Input.Field
+          required={p.required}
+          class={cn(p.error ? input.invalid : null)}
+        />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
     </Input.Container>

@@ -5,16 +5,16 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Module for the `InputRadioCombo` molecule.
- * @module molecules/InputRadioCombo
+ * Module for the `InputRadio` molecule.
+ * @module molecules/InputRadio
  */
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import Input from '../atoms/Input.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property interface for the `InputRadioCombo` molecule. */
-export interface iInputRadioCombo {
+/** Property interface for the `InputRadio` molecule. */
+export interface iInputRadio {
   /**
    * The input's title. It is built using the `<label/>` element already without the need of linking
    * them with the ids.
@@ -33,8 +33,8 @@ export interface iInputRadioCombo {
   required: boolean;
 }
 
-/** Default properties of the `InputRadioCombo` molecule. */
-const d: iInputRadioCombo = {
+/** Default properties of the `InputRadio` molecule. */
+const d: iInputRadio = {
   label: '',
   name: '',
   required: false,
@@ -48,12 +48,12 @@ const d: iInputRadioCombo = {
  * @todo [DOC] Explain the relationship this molecule has with the Input atom.
  *
  * ```ts
- * import { InputRadioCombo } from 'lunchbox/molecules';
+ * import { InputRadio } from 'lunchbox/molecules';
  *
  * (example code)
  * ```
  */
-export default function (props: Partial<iInputRadioCombo>): JSX.Element {
+export default function (props: Partial<iInputRadio>): JSX.Element {
   const p = apDef(d, props);
 
   return (

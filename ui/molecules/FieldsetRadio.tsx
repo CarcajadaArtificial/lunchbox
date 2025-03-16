@@ -10,9 +10,9 @@
  */
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
-import { input } from '../particles.ts';
+import input from '../particles/input.ts';
 import Input from '../atoms/Input.tsx';
-import InputRadioCombo from './InputRadioCombo.tsx';
+import InputRadio from './InputRadio.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `FieldsetRadio` molecule. */
@@ -61,7 +61,7 @@ const d: iFieldsetRadio = {
  *
  * @todo [DOC] Add a description and code example of how to propertly use this component.
  * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- * @todo [DOC] Explain the relationship this molecule has with the InputRadioCombo molecule.
+ * @todo [DOC] Explain the relationship this molecule has with the InputRadio molecule.
  * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
  *
  * @example
@@ -87,7 +87,7 @@ export default function (props: Partial<iFieldsetRadio>): JSX.Element {
           )
           : null}
         {p.values.map((value, index) => (
-          <InputRadioCombo
+          <InputRadio
             required={p.required && index === 0}
             label={value}
             name={p.name}

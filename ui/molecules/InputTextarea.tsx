@@ -1,20 +1,21 @@
-//   ___                _    ___ _           _    ___           _
-//  |_ _|_ _  _ __ _  _| |_ / __| |_  ___ __| |__/ __|___ _ __ | |__  ___
-//   | || ' \| '_ \ || |  _| (__| ' \/ -_) _| / / (__/ _ \ '  \| '_ \/ _ \
-//  |___|_||_| .__/\_,_|\__|\___|_||_\___\__|_\_\\___\___/_|_|_|_.__/\___/
+//   ___                _  _____        _                      ___           _
+//  |_ _|_ _  _ __ _  _| ||_   _|____ _| |_ __ _ _ _ ___ __ _ / __|___ _ __ | |__  ___
+//   | || ' \| '_ \ || |  _|| |/ -_) \ /  _/ _` | '_/ -_) _` | (__/ _ \ '  \| '_ \/ _ \
+//  |___|_||_| .__/\_,_|\__||_|\___/_\_\\__\__,_|_| \___\__,_|\___\___/_|_|_|_.__/\___/
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Module is for the `InputCheckCombo` molecule.
- * @module molecules/InputCheckCombo
+ * Module for the `InputTextarea` molecule.
+ * @module molecules/InputTextarea
  */
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
+import input from '../particles/input.ts';
 import Input from '../atoms/Input.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property interface for the `InputCheckCombo` molecule. */
-export interface iInputCheckCombo {
+/** Property interface for the `InputTextarea` molecule. */
+export interface iInputTextarea {
   /**
    * The input's title. It is built using the `<label/>` element already without the need of linking
    * them with the ids.
@@ -28,22 +29,15 @@ export interface iInputCheckCombo {
   error: string;
 
   /**
-   * The identifier that must be shared by other checkbox inputs inside so that they're related in the
-   * form's context.
-   */
-  name: string;
-
-  /**
    * Makes this input required during form submission.
    */
   required: boolean;
 }
 
-/** Default properties of the `InputCheckCombo` molecule. */
-const d: iInputCheckCombo = {
+/** Default properties of the `InputTextarea` molecule. */
+const d: iInputTextarea = {
   label: '',
   error: '',
-  name: '',
   required: false,
 };
 
@@ -56,21 +50,27 @@ const d: iInputCheckCombo = {
  *
  * @example
  * ```ts
- * import { InputCheckCombo } from 'lunchbox/molecules';
+ * import { InputTextarea } from 'lunchbox/molecules';
  *
  * (example code)
  * ```
  */
-export default function (props: Partial<iInputCheckCombo>): JSX.Element {
+export default function (props: Partial<iInputTextarea>): JSX.Element {
   const p = apDef(d, props);
 
   return (
-    <div>
-      <Input.Label class='items-center'>
-        <Input.Check name={p.name} required={p.required} />
-        <Input.Text>{p.label}</Input.Text>
+    <Input.Container>
+      <Input.Label class='flex-col'>
+        {p.label
+          ? (
+            <Input.Text class={p.required ? input.required : undefined}>
+              {p.label}
+            </Input.Text>
+          )
+          : null}
+        <Input.Textarea required={p.required} />
       </Input.Label>
       {p.error ? <Input.Error>{p.error}</Input.Error> : null}
-    </div>
+    </Input.Container>
   );
 }

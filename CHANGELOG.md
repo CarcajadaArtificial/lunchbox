@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.55
+
+- Updated the initialization process by refactoring the file generating process.
+- Removed the word "Combo" from molecule names. InputRadioCombo -> InputRadio.
+
 ### v1.0.54
 
 - Updated the package documentation.

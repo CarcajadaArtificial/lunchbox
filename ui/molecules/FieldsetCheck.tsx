@@ -11,7 +11,7 @@
 import Input from '../atoms/Input.tsx';
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
-import InputCheckCombo from './InputCheckCombo.tsx';
+import InputCheck from './InputCheck.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `FieldsetCheck` molecule. */
@@ -53,7 +53,7 @@ const d: iFieldsetCheck = {
  *
  * @todo [DOC] Add a description and code example of how to propertly use this component.
  * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- * @todo [DOC] Explain the relationship this molecule has with the InputCheckCombo molecule.
+ * @todo [DOC] Explain the relationship this molecule has with the InputCheck molecule.
  * @todo [DOC] Explain that there isn't a "required" prop because there aren't native HTML behaviors that allow for a fieldset of checkboxes to "be required" in a form.
  * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
  *
@@ -78,7 +78,7 @@ export default function (props: Partial<iFieldsetCheck>): JSX.Element {
           )
           : null}
         {p.values.map((value) => (
-          <InputCheckCombo
+          <InputCheck
             label={value}
             name={p.name}
           />

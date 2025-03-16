@@ -5,17 +5,17 @@
 //           |_|
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * Module for the `InputSelectCombo` molecule.
- * @module molecules/InputSelectCombo
+ * Module for the `InputSelect` molecule.
+ * @module molecules/InputSelect
  */
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import Input from '../atoms/Input.tsx';
-import { input } from '../particles.ts';
+import input from '../particles/input.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/** Property interface for the `InputSelectCombo` molecule. */
-export interface iInputSelectCombo {
+/** Property interface for the `InputSelect` molecule. */
+export interface iInputSelect {
   /**
    * The input's title. It is built using the `<label/>` element already without the need of linking
    * them with the ids.
@@ -39,8 +39,8 @@ export interface iInputSelectCombo {
   children: ComponentChildren;
 }
 
-/** Default properties of the `InputSelectCombo` molecule. */
-const d: iInputSelectCombo = {
+/** Default properties of the `InputSelect` molecule. */
+const d: iInputSelect = {
   label: '',
   error: '',
   children: undefined,
@@ -58,12 +58,12 @@ const d: iInputSelectCombo = {
  *
  * @example
  * ```ts
- * import { InputSelectCombo } from 'lunchbox/molecules';
+ * import { InputSelect } from 'lunchbox/molecules';
  *
  * (example code)
  * ```
  */
-export default function (props: Partial<iInputSelectCombo>): JSX.Element {
+export default function (props: Partial<iInputSelect>): JSX.Element {
   const p = apDef(d, props);
 
   return (
