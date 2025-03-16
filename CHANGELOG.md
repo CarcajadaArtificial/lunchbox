@@ -12,6 +12,10 @@
 
 ## Version History
 
+### v1.0.53
+
+- Moved parts of the package to their own directory /ui /init.
+
 ### v1.0.52
 
 - Moved atoms and particles to their own file while maintaining the module exporting for documentation.

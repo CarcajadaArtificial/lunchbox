@@ -12,3 +12,4 @@
 
 export * from './src/types.ts';
 export * from './src/utils.ts';
+export { default as lunchboxPlugin } from './src/tailwind.ts';
