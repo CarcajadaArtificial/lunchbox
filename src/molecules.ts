@@ -5,7 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * (description)
+ * This module contains the molecules for the Lunchbox UI library.
  * @module
  */
 
@@ -25,29 +25,29 @@ export {
 } from '../ui/molecules/FieldsetRadio.tsx';
 
 export {
-  default as InputCheckCombo,
-  type iInputCheckCombo,
-} from '../ui/molecules/InputCheckCombo.tsx';
+  default as InputCheck,
+  type iInputCheck,
+} from '../ui/molecules/InputCheck.tsx';
 
 export {
-  default as InputFieldCombo,
-  type iInputFieldCombo,
-} from '../ui/molecules/InputFieldCombo.tsx';
+  default as InputField,
+  type iInputField,
+} from '../ui/molecules/InputField.tsx';
 
 export {
-  default as InputRadioCombo,
-  type iInputRadioCombo,
-} from '../ui/molecules/InputRadioCombo.tsx';
+  default as InputRadio,
+  type iInputRadio,
+} from '../ui/molecules/InputRadio.tsx';
 
 export {
-  default as InputSelectCombo,
-  type iInputSelectCombo,
-} from '../ui/molecules/InputSelectCombo.tsx';
+  default as InputSelect,
+  type iInputSelect,
+} from '../ui/molecules/InputSelect.tsx';
 
 export {
-  default as InputTextareaCombo,
-  type iInputTextareaCombo,
-} from '../ui/molecules/InputTextareaCombo.tsx';
+  default as InputTextarea,
+  type iInputTextarea,
+} from '../ui/molecules/InputTextarea.tsx';
 
 export {
   default as Markdown,

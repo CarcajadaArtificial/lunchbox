@@ -7,5 +7,10 @@
 
 # Fresh build directory
 _fresh/
-# npm dependencies
+# npm + other dependencies
 node_modules/
+vendor/
+
+# Lunchbox
+components/lunchbox/
+islands/lunchbox/

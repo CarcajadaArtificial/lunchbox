@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.56
+
+- Updated the initialization process by refactoring the file generating process.
+- Removed "examples" and left only the init base fresh boilerplate code.
+
 ### v1.0.55
 
 - Updated the initialization process by refactoring the file generating process.

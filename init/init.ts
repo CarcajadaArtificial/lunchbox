@@ -9,53 +9,9 @@
  *
  * @module init
  */
-import * as colors from '@std/fmt/colors';
+import * as c from '@std/fmt/colors';
 import * as path from '@std/path';
-
-// =====================================================================================================
-/**
- * Enum representing the different steps in the project initialization process.
- */
-export const enum InitStep {
-  /** Step for getting the project name from user. */
-  ProjectName = 'ProjectName',
-  /** Step for confirming whether to force overwrite existing files. */
-  Force = 'Force',
-}
-
-// =====================================================================================================
-/**
- * Interface representing a mock TTY (Teletypewriter) for testing purposes.
- */
-export interface MockTTY {
-  /** Function to prompt the user for input. */
-  prompt(step: InitStep, message?: string, _default?: string): string | null;
-  /** Function to confirm user's input. */
-  confirm(step: InitStep, message?: string): boolean;
-  /** Function to log messages. */
-  log(...args: unknown[]): void;
-  /** Function to log error messages. */
-  logError(...args: unknown[]): void;
-}
-
-// =====================================================================================================
-/**
- * MockTTY implementation for testing purposes.
- */
-const realTTY: MockTTY = {
-  prompt(_step, message, _default) {
-    return prompt(message, _default);
-  },
-  confirm(_step, message) {
-    return confirm(message);
-  },
-  log(...args) {
-    console.log(...args);
-  },
-  logError(...args) {
-    console.error(...args);
-  },
-};
+import { pipe } from '@gordonb/pipe';
 
 // =====================================================================================================
 interface FileEntry {
@@ -126,64 +82,69 @@ export async function initFiles(
  *       contain the generated initialization code, while `/examples/init/deno.json` will make
  *       imports work locally.
  */
-export async function init(
-  input: string[] = [],
-  tty: MockTTY = realTTY,
-): Promise<void> {
-  tty.log(
-    colors.bgRgb8(
-      colors.rgb8(' 🍱 @lunchbox/ui ', 0),
-      121,
-    ),
+export async function init(): Promise<void> {
+  console.log();
+  pipe(
+    ' 🍱 @lunchbox/ui ',
+    c.bgBrightGreen,
+    c.black,
+    c.bold,
+    console.log,
+  );
+  console.log();
+  pipe(
+    'Hello ( ´ ω ` )ノﾞ',
+    c.italic,
+    c.brightGreen,
+    console.log,
   );
 
-  let unresolvedDirectory = input[0];
-  if (!unresolvedDirectory) {
-    const userInput = tty.prompt(
-      InitStep.ProjectName,
+  console.log(`
+You are about to create a project with:
+- Deno (Typescript)
+- Fresh + Preact (Web framework)
+- Tailwind + TypographyPlugin (Styles)
+- Lunchbox (UI Components)
+- Deno GFM (Markdown support)
+    `);
+  // - Zod (Schema validation)
+  // - Teclas (Keyboard handling)
+
+  const projectName = prompt(
+    pipe(
       'Project Name:',
-      'lunchbox-project',
-    );
-    if (!userInput) {
-      tty.logError('Project name is required');
-      return;
-    }
-    unresolvedDirectory = userInput!;
+      c.brightGreen,
+      c.italic,
+    ),
+    'fresh-lunchbox',
+  );
+  if (!projectName) {
+    console.error('Project name is required');
+    return;
   }
 
   await initFiles(
-    unresolvedDirectory,
+    projectName,
     3,
     await collectFiles('init/examples/init', ['deno.lock']),
   );
   await initFiles(
-    path.join(unresolvedDirectory, 'components/lunchbox'),
+    path.join(projectName, 'components/lunchbox'),
     1,
     await collectFiles('ui/', ['icons']),
   );
   await initFiles(
-    path.join(unresolvedDirectory, 'static'),
+    path.join(projectName, 'static'),
     1,
     await collectFiles('static/', []),
   );
 
   // Write success message
-  tty.log('\n%cProject initialized!\n', 'color: green; font-weight: bold');
-  if (unresolvedDirectory !== '.') {
-    tty.log(
-      `Enter your project directory using %ccd ${unresolvedDirectory}%c.`,
-      'color: cyan',
-    );
-  }
-  tty.log(
-    'Run %cdeno task dev%c to start the development server.',
-    'color: cyan',
+  console.log();
+  console.log(
+    'Thank you and enjoy!',
   );
-  tty.log();
-  tty.log(
-    '%cHappy coding! 🎁',
-    'color: gray',
-  );
+  console.log();
 }
 
 init();
