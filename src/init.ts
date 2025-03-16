@@ -86,17 +86,64 @@ async function writeProjectFile(
 }
 
 // =====================================================================================================
+interface FileEntry {
+  path: string;
+  content: string;
+}
+
+export async function collectFiles(
+  dir: string,
+  except: string[] = [],
+): Promise<FileEntry[]> {
+  const files: FileEntry[] = [];
+
+  for await (const entry of Deno.readDir(dir)) {
+    const entityDirectory = path.join(dir, entry.name);
+    if (entry.isDirectory) await collectFiles(entityDirectory);
+    else if (except.includes(entry.name)) continue;
+    else {
+      files.push({
+        path: entityDirectory,
+        content: (await Deno.readTextFile(entityDirectory))
+          .replace(/\\/g, '\\\\')
+          .replace(/\${/g, '\\${')
+          .replace(/`/g, '\\`'),
+      });
+    }
+  }
+
+  return files;
+}
+
+export async function initFiles(targetDir: string, files: FileEntry[]) {
+  await Promise.all(
+    files.map(async (file) => {
+      const filePath = path.join(
+        targetDir,
+        ...file.path.split('/').splice(2),
+      );
+      await Deno.mkdir(path.dirname(filePath), { recursive: true });
+      await Deno.writeTextFile(filePath, file.content);
+    }),
+  );
+}
+
+// =====================================================================================================
 /**
  * ```txt
  * .
  * ├── components/
  * │   ├── lunchbox/
+ * │   │   ├── atoms/
+ * │   │   │   ├── _mod.ts
+ * │   │   │   └── ...atoms.tsx
  * │   │   ├── molecules/
- * │   │   │   └── {Lunchbox Molecules}.tsx
- * │   │   ├── index.ts
- * │   │   ├── atoms.tsx
- * │   │   ├── particles.ts
- * │   │   └── molecules.ts
+ * │   │   │   ├── _mod.ts
+ * │   │   │   └── ...molecules.tsx
+ * │   │   ├── particles/
+ * │   │   │   ├── _mod.ts
+ * │   │   │   └── ...particles.ts
+ * │   │   └── _mod.ts
  * │   └── {Other Components}.tsx
  * │
  * ├── routes/

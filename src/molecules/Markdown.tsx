@@ -15,10 +15,10 @@ import { Prose } from '../atoms.tsx';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `Markdown` molecule. */
-export type iMarkdown = {
+export interface iMarkdown {
   content: string;
   renderOptions: RenderOptions;
-};
+}
 
 /** Default properties of the `Markdown` molecule. */
 const d: iMarkdown = {

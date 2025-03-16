@@ -49,15 +49,11 @@ const d: iAccordion = {
 
 // =====================================================================================================
 /**
- * A a visual container for content segments that typically expands and collapses vertically, one at a
- * time. Often used for FAQs, information sections, settings/preferences, or any situation where
- * presenting information in a manageable, space-saving way is desired.
+ * A a visual container for content segments that typically expands and collapses vertically, one at a time. Often used for FAQs, information sections, settings/preferences, or any situation where presenting information in a manageable, space-saving way is desired.
  *
- * @see {@linkcode iAccordion}
+ * It relies on the {@linkcode Details} atom for building it, providing a higher level abstraction with a more specific usage for building expand/collapse patterns. You may directly use the  {@linkcode Details} atom to create custom accordions, or use this pre-built
  *
- * @todo [DOC] Mention the relationship this molecule has with the Details atoms.
- * @todo [TST] Make sure the component is keyboard accessible.
- * @todo [DEV] Manage appropriate aria roles for the parts of this molecule.
+ * @todo [DEV] Manage appropriate aria roles for the parts of this molecule. Client reactivity?
  * @todo [DEV] Implement additional visual hierarchies in the component's design.
  * @todo [DEV] Add simple CSS animations that improve the feeling of use.
  *

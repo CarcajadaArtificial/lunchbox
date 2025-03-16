@@ -10,7 +10,7 @@
  * using the type iAtom that links them to the properties of an HTMLElement. The rendered
  * element will contain a list of tailwind classes that give the element it's style.
  *
- * Atoms use {@linkcode /particles | "Particles"}  to style themselves. Particles are smaller and more
+ * Atoms use {@linkcode /@lunchbox/ui/doc/particles | "Particles"}  to style themselves. Particles are smaller and more
  * abstract things that don't represent HTML elements, they are lists of classes that group common
  * styles. These particle classes can also be used directly in user-created elements that aren't atoms.
  * The particles module contains these style definitions which commonly come from tailwind theme settings.
@@ -45,8 +45,8 @@ import { area, btn, clr, focus, input, layout, txt } from './particles.ts';
  * <Text.Small>Small text</Text.Small>
  * ```
  *
- * @todo Why where these the selection for text types?
- * @todo Remove the `Text` dictionary in favor of individual atoms for non base text, include h1,
+ * @todo [DOC] Why where these the selection for text types?
+ * @todo [DEV] Remove the `Text` dictionary in favor of individual atoms for non base text, include h1,
  *    h2, and h3 for the Title, Head, and Subhead atoms.
  */
 export const Text: iAtomRecord = {
@@ -379,7 +379,7 @@ export const List = {
  * </Code.Block>
  * ```
  *
- * @todo Implement the `<Code.Block/>` atom.
+ * @todo [DEV] Implement the `<Code.Block/>` atom.
  */
 export const Code = {
   /**
@@ -451,7 +451,7 @@ export const Code = {
  */
 export const Input = {
   /**
-   * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode /molecules/~/InputFieldCombo | InputFieldCombo} molecule.
+   * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode InputFieldCombo} molecule.
    */
   Field: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
@@ -506,7 +506,7 @@ export const Input = {
     />
   ),
   /**
-   * Styled radio button input for single-choice selections. For a complete radio input group, use the {@linkcode /molecules/~/FieldsetRadio | FieldsetRadio} molecule, or for a single radio button with label use {@linkcode /molecules/~/InputRadioCombo | InputRadioCombo}
+   * Styled radio button input for single-choice selections. For a complete radio input group, use the {@linkcode FieldsetRadio} molecule, or for a single radio button with label use {@linkcode InputRadioCombo}
    */
   Radio: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
@@ -526,7 +526,7 @@ export const Input = {
     />
   ),
   /**
-   * Groups related form controls together both semantically and visually. Adds a subtle border and background to create visual separation between different sections of a form. Essential for organizing complex forms with multiple related inputs. For complete fieldset components, see {@linkcode /molecules/~/FieldsetCheck | FieldsetCheck} for checkboxes or {@linkcode /molecules/~/FieldsetRadio | FieldsetRadio} for radio buttons. */
+   * Groups related form controls together both semantically and visually. Adds a subtle border and background to create visual separation between different sections of a form. Essential for organizing complex forms with multiple related inputs. For complete fieldset components, see {@linkcode FieldsetCheck} for checkboxes or {@linkcode FieldsetRadio} for radio buttons. */
   Fieldset: (p: iAtom<HTMLFieldSetElement>): JSX.Element => (
     <fieldset
       {...p}
@@ -547,7 +547,7 @@ export const Input = {
     />
   ),
   /**
-   * Styled checkbox input for multi-choice selections. For a complete checkbox group, use the {@linkcode /molecules/~/FieldsetCheck | FieldsetCheck} molecule, or for a single checkbox with label use {@linkcode /molecules/~/InputCheckCombo | InputCheckCombo}
+   * Styled checkbox input for multi-choice selections. For a complete checkbox group, use the {@linkcode FieldsetCheck} molecule, or for a single checkbox with label use {@linkcode InputCheckCombo}
    */
   Check: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
@@ -567,7 +567,7 @@ export const Input = {
     />
   ),
   /**
-   * Multi-line text input for longer form content. For a complete textarea with label and error handling, use the {@linkcode /molecules/~/InputTextareaCombo | InputTextareaCombo} molecule.
+   * Multi-line text input for longer form content. For a complete textarea with label and error handling, use the {@linkcode InputTextareaCombo} molecule.
    */
   Textarea: (p: iAtom<HTMLTextAreaElement>): JSX.Element => (
     <textarea
@@ -582,7 +582,7 @@ export const Input = {
     />
   ),
   /**
-   * Dropdown select input for choosing from predefined options. For a complete select input with label and error handling, use the {@linkcode /molecules/~/InputSelectCombo | InputSelectCombo} molecule.
+   * Dropdown select input for choosing from predefined options. For a complete select input with label and error handling, use the {@linkcode InputSelectCombo} molecule.
    */
   Select: (p: iAtom<HTMLSelectElement>): JSX.Element => (
     <select
@@ -598,7 +598,7 @@ export const Input = {
     />
   ),
   /**
-   * Submit button with brand styling that looks like {@linkcode /atoms/~/Button | Button.Brand} while maintaining the functionality of an `<input type="submit">` element.
+   * Submit button with brand styling that looks like {@linkcode /@lunchbox/ui/doc/atoms/~/Button | Button.Brand} while maintaining the functionality of an `<input type="submit">` element.
    */
   Submit: (p: iAtom<HTMLInputElement>): JSX.Element => (
     <input
@@ -655,8 +655,7 @@ export const Aside = {
  * Navigation is a critical part of any web application's information architecture, and these atoms
  * ensure users can always find their way around, regardless of viewport size or scroll position.
  *
- * The navigation components are designed to work seamlessly with the {@linkcode /atoms/~/Page | Page}
- * atoms, particularly within the `Page.Header` component for site-wide navigation.
+ * The navigation components are designed to work seamlessly with the {@linkcode Page} atoms, particularly within the `Page.Header` component for site-wide navigation.
  *
  * @example Usage
  * ```ts
@@ -694,9 +693,7 @@ export const Nav = {
 
 // =====================================================================================================
 /**
- * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be
- * built using this atoms, but for most cases the {@linkcode /molecules/~/Accordion | Accordion
- * molecule} is a standard solution.
+ * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be built using this atoms, but for most cases the {@linkcode Accordion} molecule is a standard solution.
  *
  * - `Container`: The container for the details element that is shown/hidden when a summary atom is
  *    clicked.
@@ -814,9 +811,7 @@ export const Kbd = (p: iAtom): JSX.Element => (
 
 // =====================================================================================================
 /**
- * This atom contains style settings for the `@tailwind/typeography` plugin and works with the
- * `deno-gfm` package to render markdown content. It can be used by itself, but using the
- * {@linkcode /molecules/~/Markdown | Markdown} molecule is highly recommended to avoid redundancies.
+ * This atom contains style settings for the `@tailwind/typeography` plugin and works with the `deno-gfm` package to render markdown content. It can be used by itself, but using the {@linkcode Markdown} molecule is highly recommended to avoid redundancies.
  *
  * @example Usage
  * ```ts
@@ -854,9 +849,7 @@ export const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
 
 // =====================================================================================================
 /**
- * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX equations in
- * markdown content. Works in conjunction with the {@linkcode /atoms/~/Prose | Prose} atom which
- * handles the actual markdown rendering.
+ * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX equations in markdown content. Works in conjunction with the {@linkcode Prose} atom which handles the actual markdown rendering.
  *
  * @example Usage
  * ```ts

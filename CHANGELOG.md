@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.51
+
+- Added new initialization functions.
+- Updated the package documentation.
+
 ### v1.0.50
 
 - Updated the package documentation.
