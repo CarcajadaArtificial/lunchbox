@@ -21,6 +21,8 @@ import type { iAtom } from '@lunchbox/ui';
  * </body>
  * ```
  */
-export default (p: iAtom<HTMLStyleElement>): JSX.Element => (
+const KatexStyles = (p: iAtom<HTMLStyleElement>): JSX.Element => (
   <style {...p}>{KATEX_CSS}</style>
 );
+
+export default KatexStyles;

@@ -11,7 +11,9 @@ import { cn } from '@vyn/cn';
  * <button class={btn}>Button</button>
  * ```
  */
-export default cn(
+const btn = cn(
   'px-3/4 py-1/4',
   'rounded',
 );
+
+export default btn;

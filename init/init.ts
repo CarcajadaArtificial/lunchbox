@@ -115,12 +115,16 @@ export async function collectFiles(
   return files;
 }
 
-export async function initFiles(targetDir: string, files: FileEntry[]) {
+export async function initFiles(
+  targetDir: string,
+  spliceStart: number,
+  files: FileEntry[],
+) {
   await Promise.all(
     files.map(async (file) => {
       const filePath = path.join(
         targetDir,
-        ...file.path.split('/').splice(2),
+        ...file.path.split('/').splice(spliceStart),
       );
       await Deno.mkdir(path.dirname(filePath), { recursive: true });
       await Deno.writeTextFile(filePath, file.content);
@@ -372,4 +376,10 @@ export async function init(
   );
 }
 
-init();
+// init();
+
+await initFiles(
+  'test',
+  3,
+  await collectFiles('init/examples/init', ['deno.lock']),
+);

@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.54
+
+- Updated the package documentation.
+- Added better component exports.
+
 ### v1.0.53
 
 - Moved parts of the package to their own directory /ui /init.

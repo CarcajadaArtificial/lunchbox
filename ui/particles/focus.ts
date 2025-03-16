@@ -12,8 +12,10 @@ import { cn } from '@vyn/cn';
  * <div tabIndex={0} class={focus}>{...</div>
  * ```
  */
-export default cn(
+const focus = cn(
   clr.neutral.outline,
   'focus:outline-1',
   'outline-offset-2',
 );
+
+export default focus;

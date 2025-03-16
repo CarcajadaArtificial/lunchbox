@@ -1,13 +1,13 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
     "./init": "./init/init.ts",
-    "./particles": "./ui/particles.ts",
-    "./atoms": "./ui/atoms.ts",
-    "./molecules": "./ui/molecules.ts"
+    "./particles": "./src/particles.ts",
+    "./atoms": "./src/atoms.ts",
+    "./molecules": "./src/molecules.ts"
   },
   "tasks": {
     "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",

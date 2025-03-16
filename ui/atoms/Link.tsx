@@ -14,7 +14,7 @@ import focus from '../particles/focus.ts';
  * <Link href="/about">About Us</Link>
  * ```
  */
-export default (p: iAtom<HTMLAnchorElement>): JSX.Element => (
+const Link = (p: iAtom<HTMLAnchorElement>): JSX.Element => (
   <a
     class={cn(
       'text-[inherit]',
@@ -27,3 +27,5 @@ export default (p: iAtom<HTMLAnchorElement>): JSX.Element => (
     {...p}
   />
 );
+
+export default Link;

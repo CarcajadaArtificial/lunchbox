@@ -13,7 +13,9 @@ import { cn } from '@vyn/cn';
  * <section class={area}>...</section>
  * ```
  */
-export default cn(
+const area = cn(
   clr.panel.bg,
   'py-3/1',
 );
+
+export default area;

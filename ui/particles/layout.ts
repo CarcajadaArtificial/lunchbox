@@ -14,10 +14,12 @@ import { cn } from '@vyn/cn';
  * </div>
  * ```
  */
-export default cn(
+const layout = cn(
   'grid',
   'grid-cols-6 md:grid-cols-12',
   'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',
   'w-auto lg:min-w-min',
   'px-[0.8503100088rem] md:px-[calc(23.13871222%-134.488008342px)] lg:px-auto',
 );
+
+export default layout;

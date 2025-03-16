@@ -21,7 +21,7 @@
  *
  * @todo Update to new shading syntax in the tailwind v4 version.
  */
-export default {
+const clr = {
   neutral: {
     txt: 'text-neutral dark:text-d-neutral',
     txt_10: 'text-neutral-10 dark:text-d-neutral-10',
@@ -58,3 +58,5 @@ export default {
     bg_15: 'bg-panel-15 dark:bg-d-panel-15',
   },
 } as Record<string, Record<string, string>>;
+
+export default clr;

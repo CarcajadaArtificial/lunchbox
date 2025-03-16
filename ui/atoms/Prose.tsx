@@ -14,7 +14,7 @@ import type { iAtom } from '@lunchbox/ui';
  * </Prose>
  * ```
  */
-export default (p: iAtom<HTMLDivElement>): JSX.Element => (
+const Prose = (p: iAtom<HTMLDivElement>): JSX.Element => (
   <div
     {...p}
     class={cn(
@@ -38,3 +38,5 @@ export default (p: iAtom<HTMLDivElement>): JSX.Element => (
     )}
   />
 );
+
+export default Prose;

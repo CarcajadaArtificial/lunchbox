@@ -21,7 +21,7 @@ import { cn } from '@vyn/cn';
  * <input class={input.invalid} />
  * ```
  */
-export default {
+const input = {
   required: cn(),
   invalid: cn(
     'invalid:bg-error-lc-50 invalid:dark:bg-d-error-lc-50',
@@ -30,3 +30,5 @@ export default {
     'border-none',
   ),
 } as Record<string, string>;
+
+export default input;

@@ -30,7 +30,7 @@ import txt from '../particles/txt.ts';
  * @todo [DEV] Remove the `Text` dictionary in favor of individual atoms for non base text, include h1,
  *    h2, and h3 for the Title, Head, and Subhead atoms.
  */
-export default {
+const Heading = {
   Display: (p: iAtom<HTMLSpanElement>): JSX.Element => (
     <span
       {...p}
@@ -80,3 +80,5 @@ export default {
     />
   ),
 };
+
+export default Heading;

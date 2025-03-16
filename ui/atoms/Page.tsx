@@ -21,7 +21,7 @@ import layout from '../particles/layout.ts';
  * </Page.Body>
  * ```
  */
-export default {
+const Page = {
   /**
    * The Body atom is essential for establishing a consistent theming foundation across your app.
    * Without it, you'd need to manually handle dark mode transitions, font inheritance, and color
@@ -88,3 +88,5 @@ export default {
     />
   ),
 };
+
+export default Page;

@@ -14,7 +14,7 @@ import clr from '../particles/clr.ts';
  * <Separator />
  * ```
  */
-export default (p: iAtom<HTMLHRElement>): JSX.Element => (
+const Separator = (p: iAtom<HTMLHRElement>): JSX.Element => (
   <hr
     class={cn(
       clr.neutral.border,
@@ -25,3 +25,5 @@ export default (p: iAtom<HTMLHRElement>): JSX.Element => (
     {...p}
   />
 );
+
+export default Separator;

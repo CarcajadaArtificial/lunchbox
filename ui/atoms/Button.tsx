@@ -26,7 +26,7 @@ import clr from '../particles/clr.ts';
  * </Button.Error>
  * ```
  */
-export default {
+const Button = {
   /**
    * Primary call-to-action button using brand colors. Use for main form submissions, key conversion
    * points, and primary user flows where you want to direct user attention.
@@ -92,3 +92,5 @@ export default {
     />
   ),
 };
+
+export default Button;

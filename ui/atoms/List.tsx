@@ -22,7 +22,7 @@ import type { iAtom } from '@lunchbox/ui';
  * </List.ol>
  * ```
  */
-export default {
+const List = {
   /**
    * Unordered list component that uses bullet points. Essential for presenting related items where
    * order doesn't matter. Commonly used in feature lists, navigation menus, and content hierarchies.
@@ -52,3 +52,5 @@ export default {
     />
   ),
 };
+
+export default List;

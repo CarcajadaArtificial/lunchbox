@@ -15,7 +15,7 @@ import type { iAtom } from '@lunchbox/ui';
  * </Aside.Sticky>
  * ```
  */
-export default {
+const Aside = {
   /**
    * A sticky sidebar component optimized for desktop layouts, commonly used for page-level navigation
    * like tables of contents that follow the user's scroll position. While it can be used on mobile,
@@ -33,3 +33,5 @@ export default {
     />
   ),
 };
+
+export default Aside;

@@ -27,7 +27,7 @@ import focus from '../particles/focus.ts';
  * </Input.Container>
  * ```
  */
-export default {
+const Input = {
   /**
    * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode InputFieldCombo} molecule.
    */
@@ -193,3 +193,5 @@ export default {
     />
   ),
 };
+
+export default Input;

@@ -14,7 +14,7 @@ import clr from '../particles/clr.ts';
  * <p>Press <Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy</p>
  * ```
  */
-export default (p: iAtom): JSX.Element => (
+const Kbd = (p: iAtom): JSX.Element => (
   <kbd
     {...p}
     class={cn(
@@ -28,3 +28,5 @@ export default (p: iAtom): JSX.Element => (
     )}
   />
 );
+
+export default Kbd;

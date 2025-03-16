@@ -24,7 +24,7 @@ import layout from '../particles/layout.ts';
  * </Page.Header>
  * ```
  */
-export default {
+const Nav = {
   /**
    * A navigation container that maintains its position at the top of the viewport while scrolling.
    * Essential for ensuring critical navigation links remain accessible throughout the user's journey,
@@ -45,3 +45,5 @@ export default {
     />
   ),
 };
+
+export default Nav;

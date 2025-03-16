@@ -36,7 +36,7 @@ import clr from '../particles/clr.ts';
  *
  * @todo [DEV] Implement the `<Code.Block/>` atom.
  */
-export default {
+const Code = {
   /**
    * The innermost component that holds the actual code. It requires a container parent component to
    * function properly.
@@ -81,3 +81,5 @@ export default {
     />
   ),
 };
+
+export default Code;

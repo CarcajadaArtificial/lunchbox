@@ -11,10 +11,12 @@
  * <span class={txt.base}>Base text</span>
  * ```
  */
-export default {
+const txt = {
   display: 'text-[3.8146972656rem]/[4.5rem]',
   title: 'text-[3.0517578125rem]/[4.5rem]',
   head: 'text-[2.44140625rem]/[3rem]',
   subhead: 'text-[1.5625rem]/[3rem]',
   base: 'text-[1rem]/[1.5rem]',
 } as Record<string, string>;
+
+export default txt;

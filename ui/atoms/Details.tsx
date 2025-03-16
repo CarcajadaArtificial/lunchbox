@@ -19,7 +19,7 @@ import clr from '../particles/clr.ts';
  * </Details.Container>
  * ```
  */
-export default {
+const Details = {
   Container: (p: iAtom<HTMLDetailsElement>): JSX.Element => (
     <details
       {...p}
@@ -42,3 +42,5 @@ export default {
     />
   ),
 };
+
+export default Details;
