@@ -8,7 +8,7 @@
  * Module for the `Accordion` molecule
  * @module molecules/Accordion
  */
-import Details from '../atoms/Details.tsx';
+import * as Details from '../atoms/Details.tsx';
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 

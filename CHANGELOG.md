@@ -12,6 +12,11 @@
 
 ## Version History
 
+### v1.0.57
+
+- Updated the package documentation.
+- Added better component exports.
+
 ### v1.0.56
 
 - Updated the initialization process by refactoring the file generating process.

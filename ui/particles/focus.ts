@@ -12,7 +12,7 @@ import { cn } from '@vyn/cn';
  * <div tabIndex={0} class={focus}>{...</div>
  * ```
  */
-const focus = cn(
+const focus: string = cn(
   clr.neutral.outline,
   'focus:outline-1',
   'outline-offset-2',

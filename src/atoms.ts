@@ -17,17 +17,17 @@
  *
  * @module atoms
  */
-export { default as Aside } from '../ui/atoms/Aside.tsx';
-export { default as Button } from '../ui/atoms/Button.tsx';
-export { default as Code } from '../ui/atoms/Code.tsx';
-export { default as Details } from '../ui/atoms/Details.tsx';
-export { default as Heading } from '../ui/atoms/Heading.tsx';
-export { default as Input } from '../ui/atoms/Input.tsx';
+export * as Aside from '../ui/atoms/Aside.tsx';
+export * as Button from '../ui/atoms/Button.tsx';
+export * as Code from '../ui/atoms/Code.tsx';
+export * as Details from '../ui/atoms/Details.tsx';
+export * as Input from '../ui/atoms/Input.tsx';
+export * as List from '../ui/atoms/List.tsx';
+export * as Nav from '../ui/atoms/Nav.tsx';
+export * as Page from '../ui/atoms/Page.tsx';
+export { H0, H1, H2, H3 } from '../ui/atoms/Heading.tsx';
 export { default as KatexStyles } from '../ui/atoms/KatexStyles.tsx';
 export { default as Kbd } from '../ui/atoms/Kbd.tsx';
 export { default as Link } from '../ui/atoms/Link.tsx';
-export { default as List } from '../ui/atoms/List.tsx';
-export { default as Nav } from '../ui/atoms/Nav.tsx';
-export { default as Page } from '../ui/atoms/Page.tsx';
 export { default as Prose } from '../ui/atoms/Prose.tsx';
 export { default as Separator } from '../ui/atoms/Separator.tsx';

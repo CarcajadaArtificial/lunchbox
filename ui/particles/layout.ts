@@ -14,7 +14,7 @@ import { cn } from '@vyn/cn';
  * </div>
  * ```
  */
-const layout = cn(
+const layout: string = cn(
   'grid',
   'grid-cols-6 md:grid-cols-12',
   'gap-x-[0.8503100088rem] md:gap-x-[2.1257750221%] lg:gap-x-[1.5rem]',

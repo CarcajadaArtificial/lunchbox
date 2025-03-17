@@ -13,7 +13,7 @@ import { cn } from '@vyn/cn';
  * <section class={area}>...</section>
  * ```
  */
-const area = cn(
+const area: string = cn(
   clr.panel.bg,
   'py-3/1',
 );

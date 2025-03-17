@@ -10,7 +10,7 @@
  */
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
-import Input from '../atoms/Input.tsx';
+import * as Input from '../atoms/Input.tsx';
 import input from '../particles/input.ts';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

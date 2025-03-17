@@ -16,7 +16,7 @@ import type { JSX } from 'preact';
 /**
  * This type defines the extent of the parameters contained in an atom rendering function.
  */
-export type iAtom<T extends EventTarget = HTMLElement> = JSX.AllHTMLAttributes<
+export type iAtom<T extends EventTarget = EventTarget> = JSX.AllHTMLAttributes<
   T
 >;
 
@@ -24,7 +24,9 @@ export type iAtom<T extends EventTarget = HTMLElement> = JSX.AllHTMLAttributes<
 /**
  * Defines an atom rendering function.
  */
-export type iAtomRender = (p: iAtom) => JSX.Element;
+export type iAtomRender<T extends EventTarget = EventTarget> = (
+  p: iAtom<T>,
+) => JSX.Element;
 
 // =====================================================================================================
 /**

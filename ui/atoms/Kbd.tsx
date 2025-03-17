@@ -1,3 +1,7 @@
+/**
+ * Module for the {@linkcode Kbd} atom.
+ * @module atoms/Kbd
+ */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';
@@ -14,7 +18,7 @@ import clr from '../particles/clr.ts';
  * <p>Press <Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy</p>
  * ```
  */
-const Kbd = (p: iAtom): JSX.Element => (
+const Kbd = (p: iAtom<HTMLElement>): JSX.Element => (
   <kbd
     {...p}
     class={cn(
