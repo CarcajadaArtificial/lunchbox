@@ -19,17 +19,3 @@ import type { JSX } from 'preact';
 export type iAtom<T extends EventTarget = EventTarget> = JSX.AllHTMLAttributes<
   T
 >;
-
-// =====================================================================================================
-/**
- * Defines an atom rendering function.
- */
-export type iAtomRender<T extends EventTarget = EventTarget> = (
-  p: iAtom<T>,
-) => JSX.Element;
-
-// =====================================================================================================
-/**
- * Defines a dictionary of atom rendering functions.
- */
-export type iAtomRecord = Record<string, iAtomRender>;
