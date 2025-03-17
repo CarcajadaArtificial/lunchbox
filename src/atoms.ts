@@ -20,6 +20,7 @@
 
 /**
  * This collection of atoms contains the ones that render secondary sections of content made using the `<aside/>` element, usually for types of sidebars.
+ * @namespace Aside
  */
 export * as Aside from '../ui/atoms/Aside.tsx';
 

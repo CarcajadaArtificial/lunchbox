@@ -2,15 +2,34 @@
 
 ## Working on
 
-- Finish documentation of `atom.tsx` and molecules.
+- Find how to add documentation description to atom collection namespaces.
+- Finish documenting Heading atoms.
+- Finish documenting molecules.
+- Finish documenting init functions.
+- Develop a function that updates all init components.
+- Develop an individual component init/update function.
+- Update Readme with new init instructions.
 
 ### Next up
 
-- Update base example's fresh and std dependencies to jsr and preact to npm.
 - Update tailwind to v4 and update the plugin colors.
-- Initialize standard SEO files.
+- Initialize standard SEO files (favicon, etc.).
+- Future components:
+  - Input.ContentEditable (Atom)
+  - Key (Organism)
+  - Form (Organism)
+  - LazyImage (Atom)
+  - Table (Atom & Molecules)
+  - Input.File (Atom)
+  - Input.Date (Atom)
+  - Input.Slider (Atom)
+  - Input.Switch (Atom)
 
 ## Version History
+
+### v1.0.60
+
+- Updated the package documentation.
 
 ### v1.0.59
 
