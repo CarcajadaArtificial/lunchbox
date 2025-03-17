@@ -7,7 +7,7 @@ import type { iAtom } from '@lunchbox/ui';
  *
  * @example Usage
  * ```ts
- * import { Prose } from 'lunchbox/atoms';
+ * import Prose from 'lunchbox/atoms/Prose.tsx';
  *
  * <Prose>
  *   <p>Hello</p>

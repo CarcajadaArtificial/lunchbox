@@ -9,14 +9,12 @@ import layout from '../particles/layout.ts';
  *
  * @example Usage
  * ```ts
- * import { Nav, Page } from '@lunchbox/ui';
+ * import * as Nav from 'lunchbox/atoms/Nav.tsx';
  *
- * <Page.Header>
- *   <Nav.Sticky>
- *     <a href="/">Home</a>
- *     <a href="/about">About</a>
- *   </Nav.Sticky>
- * </Page.Header>
+ * <Nav.Sticky>
+ *   <a href="/">Home</a>
+ *   <a href="/about">About</a>
+ * </Nav.Sticky>
  * ```
  */
 export const Sticky = (p: iAtom<HTMLElement>): JSX.Element => (

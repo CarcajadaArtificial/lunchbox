@@ -2,16 +2,20 @@
 
 ## Working on
 
-- Find how to add documentation description to atom collection namespaces.
 - Finish documenting Heading atoms.
 - Finish documenting molecules.
 - Finish documenting init functions.
 - Develop a function that updates all init components.
 - Develop an individual component init/update function.
 - Update Readme with new init instructions.
+- Find how to add documentation description to atom collection namespaces.
 
 ### Next up
 
+- Add package version as a top comment to all components.
+  - Create a script that automatically changes all components comment version based on deno.json.
+  - Create a pipeline rule that verifies if all component versions are up to date.
+- Creating testing routes that can be initialized in a special testing project.
 - Update tailwind to v4 and update the plugin colors.
 - Initialize standard SEO files (favicon, etc.).
 - Future components:
@@ -26,6 +30,10 @@
   - Input.Switch (Atom)
 
 ## Version History
+
+### v1.0.61
+
+- Updated the package documentation.
 
 ### v1.0.60
 

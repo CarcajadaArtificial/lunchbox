@@ -9,7 +9,7 @@ import focus from '../particles/focus.ts';
  *
  * @example Usage
  * ```ts
- * import { Link } from '@lunchbox/ui';
+ * import Link from 'lunchbox/atoms';
  *
  * <Link href="/about">About Us</Link>
  * ```

@@ -1,6 +1,5 @@
 import { cn } from '@vyn/cn';
 
-// =====================================================================================================
 /**
  * This is a dictionary of particles that represent parts of inputs that repeat accross multiple atoms
  * or molecules.
@@ -11,7 +10,7 @@ import { cn } from '@vyn/cn';
  *
  * @example Usage
  * ```ts
- * import { input } from 'lunchbox/particles';
+ * import input from 'lunchbox/particles/input.ts';
  *
  * // Required input label
  * <label class={input.required}>Label text</label>

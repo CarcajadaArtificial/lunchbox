@@ -1,4 +1,3 @@
-// =====================================================================================================
 /**
  * This is a dictionary of particles that represent the different text sizes and line heights. These
  * are used in the Text atoms along with other standarized styles. In most cases, the
@@ -6,7 +5,7 @@
  *
  * @example Usage
  * ```ts
- * import { txt } from 'lunchbox/particles';
+ * import txt from 'lunchbox/particles/txt.ts';
  *
  * <span class={txt.base}>Base text</span>
  * ```

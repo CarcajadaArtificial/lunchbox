@@ -8,7 +8,7 @@ import type { iAtom } from '@lunchbox/ui';
  *
  * @example Usage
  * ```ts
- * import * as List from 'lunchbox/atoms';
+ * import * as List from 'lunchbox/atoms/List.tsx';
  *
  * <List.ul>
  *   <li>First bullet point</li>
@@ -32,7 +32,7 @@ export const ul = (p: iAtom<HTMLUListElement>): JSX.Element => (
  *
  * @example Usage
  * ```ts
- * import * as List from 'lunchbox/atoms';
+ * import * as List from 'lunchbox/atoms/List.tsx';
  *
  * <List.ol>
  *   <li>First numbered item</li>

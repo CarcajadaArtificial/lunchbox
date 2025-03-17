@@ -22,7 +22,7 @@ export const Content = (p: iAtom<HTMLSpanElement>): JSX.Element => (
  *
  * @example Usage
  * ```ts
- * import Code from 'lunchbox/atoms/Code.tsx';
+ * import * as Code from 'lunchbox/atoms/Code.tsx';
  *
  * <p>
  *   Use the{" "}
@@ -54,7 +54,7 @@ export const Inline = (p: iAtom<HTMLSpanElement>): JSX.Element => (
  *
  * @example Usage - WIP
  * ```ts
- * import { Code } from 'lunchbox/atoms';
+ * import * as Code from 'lunchbox/atoms/Code.tsx';
  *
  * <Code.Block>
  *   <Code.Content>

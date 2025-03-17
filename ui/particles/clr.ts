@@ -1,4 +1,3 @@
-// =====================================================================================================
 /**
  * This is a dictionary of particles that represent color styles for text, background, border, and
  * outline. They already contain the dark mode classes, so you don't need to add `dark:` to the
@@ -13,7 +12,7 @@
  *
  * @example Usage
  * ```ts
- * import { clr } from 'lunchbox/particles';
+ * import clr from 'lunchbox/particles/clr.ts';
  *
  * <div class={clr.neutral.bg}>Example background</div>
  * <div class={clr.neutral.txt}>Example text</div>

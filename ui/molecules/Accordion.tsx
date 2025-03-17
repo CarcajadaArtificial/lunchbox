@@ -2,7 +2,6 @@ import * as Details from '../atoms/Details.tsx';
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /** Property interface for the `Accordion` molecule. */
 export interface iAccordion {
   /**
@@ -37,7 +36,6 @@ const d: iAccordion = {
   children: undefined,
 };
 
-// =====================================================================================================
 /**
  * A a visual container for content segments that typically expands and collapses vertically, one at a time. Often used for FAQs, information sections, settings/preferences, or any situation where presenting information in a manageable, space-saving way is desired.
  *
@@ -49,7 +47,7 @@ const d: iAccordion = {
  *
  * @example
  * ```ts
- * import { Accordion } from 'lunchbox/molecules';
+ * import Accordion from 'lunchbox/molecules/Accordion.tsx';
  *
  * <Accordion summary='Click me'>
  *   <p>Hello</p>

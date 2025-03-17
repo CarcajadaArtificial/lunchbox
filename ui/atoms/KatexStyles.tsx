@@ -7,7 +7,8 @@ import type { iAtom } from '@lunchbox/ui';
  *
  * @example Usage
  * ```ts
- * import { KatexStyles, Prose } from 'lunchbox/atoms';
+ * import KatexStyles from 'lunchbox/atoms/KatexStyles.tsx';
+ * import Prose from 'lunchbox/atoms/Prose.tsx';
  *
  * <head>
  *   <KatexStyles />

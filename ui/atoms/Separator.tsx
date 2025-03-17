@@ -9,7 +9,7 @@ import clr from '../particles/clr.ts';
  *
  * @example Usage
  * ```ts
- * import { Separator } from '@lunchbox/ui';
+ * import Separator from 'lunchbox/atoms/Separator.tsx';
  *
  * <Separator />
  * ```

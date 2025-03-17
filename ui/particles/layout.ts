@@ -1,13 +1,12 @@
 import { cn } from '@vyn/cn';
 
-// =====================================================================================================
 /**
  * This is particle contains the styles for the library's grid system container. Children of elements
  * containing this styles should use the extended tailwind `gridColumn` settings.
  *
  * @example Usage
  * ```ts
- * import { layout } from 'lunchbox/particles';
+ * import layout from 'lunchbox/particles/layout.ts';
  *
  * <div class={layout}>
  *  <div class="grid-cols-12">...</div>

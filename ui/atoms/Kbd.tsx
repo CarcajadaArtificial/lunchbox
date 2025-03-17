@@ -9,7 +9,7 @@ import clr from '../particles/clr.ts';
  *
  * @example Usage
  * ```ts
- * import { Kbd } from '@lunchbox/ui';
+ * import Kbd from 'lunchbox/atoms/Kbd.tsx';
  *
  * <p>Press <Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy</p>
  * ```

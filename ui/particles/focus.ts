@@ -1,13 +1,12 @@
 import clr from './clr.ts';
 import { cn } from '@vyn/cn';
 
-// =====================================================================================================
 /**
  * This particle contains the styles for any element's focus state.
  *
  * @example Usage
  * ```ts
- * import { focus } from 'lunchbox/particles';
+ * import focus from 'lunchbox/particles/focus.ts';
  *
  * <div tabIndex={0} class={focus}>{...</div>
  * ```
