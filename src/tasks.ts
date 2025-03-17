@@ -1,16 +1,9 @@
-//   _____        _
-//  |_   _|_ _ __| |__ ___
-//    | |/ _` (_-< / /(_-<
-//    |_|\__,_/__/_\_\/__/
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * This module contains scripts that can can be run with the `deno task` command.
  *
  * @module tasks
  */
 
-// =====================================================================================================
 /**
  * This is the CLI entry point for `deno task` commands. It is built to be an anonymous immediately
  * invoked function expression (IIFE) to avoid polluting the namespace.
@@ -20,22 +13,21 @@
 
   switch (command) {
     case 'init-generate': {
-      await initGenerate();
+      await initProject();
       break;
     }
 
     case 'init-clean': {
-      await initClean(
-        'init.gen.ts',
-        'examples/init/.vscode',
-        'examples/init/deno.lock',
-        'examples/init/node_modules',
-        'examples/init/README.md',
-        'examples/init/static/logo.svg',
-        'examples/init/static/favicon.ico',
-        'examples/init/routes/api',
-        'examples/init/components',
-        'examples/init/islands',
+      await removeFiles(
+        '/init/base/.vscode',
+        '/init/base/deno.lock',
+        '/init/base/node_modules',
+        '/init/base/README.md',
+        '/init/base/static/logo.svg',
+        '/init/base/static/favicon.ico',
+        '/init/base/routes/api',
+        '/init/base/components',
+        '/init/base/islands',
       );
       break;
     }
@@ -58,7 +50,7 @@
  * deno task init:generate
  * ```
  */
-export async function initGenerate() {
+export async function initProject() {
   const encoder = new TextEncoder();
   const out = await Deno.create('src/init.gen.ts');
 
@@ -128,13 +120,9 @@ export async function initGenerate() {
 
 // =====================================================================================================
 /**
- * This task cleans the `init.gen.ts` file and ignorable files in the `examples/init` directory.
- *
- * ```bash
- * deno task init:clean
- * ```
+ * (description)
  */
-export async function initClean(...files: string[]) {
+export async function removeFiles(...files: string[]) {
   for (const file of files) {
     try {
       await Deno.remove(file, { recursive: true });

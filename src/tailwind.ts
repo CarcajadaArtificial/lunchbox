@@ -5,7 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * This module contains the tailwind configuration for the Lunchbox UI library.
+ * This module contains the tailwind configuration a project using this package.
  *
  * @module tailwind
  */

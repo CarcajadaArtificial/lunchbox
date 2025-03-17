@@ -2,22 +2,24 @@
 
 ## Working on
 
-- Finish documenting Heading atoms.
 - Finish documenting molecules.
-- Finish documenting init functions.
-- Develop a function that updates all init components.
-- Develop an individual component init/update function.
+- Add code example snippets to Input atoms.
 - Update Readme with new init instructions.
 - Find how to add documentation description to atom collection namespaces.
+- Update Contributing.md
+- Move the task module to the root dir and the removeFiles() function to init/utils.
 
 ### Next up
 
 - Add package version as a top comment to all components.
+  - Develop an individual component init/update function.
   - Create a script that automatically changes all components comment version based on deno.json.
   - Create a pipeline rule that verifies if all component versions are up to date.
 - Creating testing routes that can be initialized in a special testing project.
 - Update tailwind to v4 and update the plugin colors.
 - Initialize standard SEO files (favicon, etc.).
+- Reimplement icons into the package.
+- Export a "palette" module in mod.ts where all colors of the palette can be accessed in TS.
 - Future components:
   - Input.ContentEditable (Atom)
   - Key (Organism)
@@ -28,8 +30,17 @@
   - Input.Date (Atom)
   - Input.Slider (Atom)
   - Input.Switch (Atom)
+  - IntersectionObserver (Organism)
+  - Modal (Atom & Molecules)
 
 ## Version History
+
+### v1.0.62
+
+- Added docs for the Heading atoms.
+- Added docs for example snippets for the Page atoms.
+- Added better component exports.
+- Added the `upgrade` function.
 
 ### v1.0.61
 

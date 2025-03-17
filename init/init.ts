@@ -1,64 +1,22 @@
-//   ___      _ _
-//  |_ _|_ _ (_) |_
-//   | || ' \| |  _|
-//  |___|_||_|_|\__|
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * This module contains the project initialization functionality.
  *
  * @module init
  */
+import pkgJson from '../deno.json' with { type: 'json' };
 import * as c from '@std/fmt/colors';
-import * as path from '@std/path';
+import { join } from '@std/path';
 import { pipe } from '@gordonb/pipe';
+import { collectFiles, initFiles } from './utils.ts';
 
-// =====================================================================================================
-interface FileEntry {
-  path: string;
-  content: Uint8Array<ArrayBuffer>;
-}
-
-export async function collectFiles(
-  dir: string,
-  except: string[] = [],
-): Promise<FileEntry[]> {
-  const files: FileEntry[] = [];
-
-  for await (const entry of Deno.readDir(dir)) {
-    const entityDirectory = path.join(dir, entry.name);
-    if (except.includes(entry.name)) continue;
-    else if (entry.isDirectory) {
-      files.push(...(await collectFiles(entityDirectory, except)));
-    } else {
-      files.push({
-        path: entityDirectory,
-        content: await Deno.readFile(entityDirectory),
-      });
-    }
-  }
-  return files;
-}
-
-export async function initFiles(
-  targetDir: string,
-  spliceStart: number,
-  files: FileEntry[],
-) {
-  await Promise.all(
-    files.map(async (file) => {
-      const filePath = path.join(
-        targetDir,
-        ...file.path.split('/').splice(spliceStart),
-      );
-      await Deno.mkdir(path.dirname(filePath), { recursive: true });
-      await Deno.writeFile(filePath, file.content);
-    }),
-  );
-}
-
-// =====================================================================================================
 /**
+ * Call this function through the JSR registry to initialize a Lunchbox project.
+ *
+ * @example Usage
+ * ```bash
+ * deno run -A jsr:@lunchbox/ui/init
+ * ```
+ * @example FileStructure
  * ```txt
  * .
  * ├── components/
@@ -85,7 +43,7 @@ export async function initFiles(
 export async function init(): Promise<void> {
   console.log();
   pipe(
-    ' 🍱 @lunchbox/ui ',
+    ` 🍱 @lunchbox/ui@${pkgJson.version} `,
     c.bgBrightGreen,
     c.black,
     c.bold,
@@ -99,8 +57,7 @@ export async function init(): Promise<void> {
     console.log,
   );
 
-  console.log(`
-You are about to create a project with:
+  console.log(`You are about to create a project with:
 - Deno (Typescript)
 - Fresh + Preact (Web framework)
 - Tailwind + TypographyPlugin (Styles)
@@ -129,12 +86,12 @@ You are about to create a project with:
     await collectFiles('init/examples/init', ['deno.lock']),
   );
   await initFiles(
-    path.join(projectName, 'components/lunchbox'),
+    join(projectName, 'components/lunchbox'),
     1,
     await collectFiles('ui/', ['icons']),
   );
   await initFiles(
-    path.join(projectName, 'static'),
+    join(projectName, 'static'),
     1,
     await collectFiles('static/', []),
   );

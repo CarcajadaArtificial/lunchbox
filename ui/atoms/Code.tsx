@@ -5,6 +5,21 @@ import clr from '../particles/clr.ts';
 
 /**
  * The innermost component that holds the actual code. It requires a container parent component to function properly.
+ *
+ * @example Usage
+ * ```ts
+ * import * as Code from 'lunchbox/atoms/Code.tsx';
+ *
+ * <p>
+ *   Use the{" "}
+ *   <Code.Inline>
+ *     <Code.Content>
+ *       npm install
+ *     </Code.Content>
+ *   </Code.Inline>
+ *   {" "}command.
+ * </p>
+ * ```
  */
 export const Content = (p: iAtom<HTMLSpanElement>): JSX.Element => (
   <code
