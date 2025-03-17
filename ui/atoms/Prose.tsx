@@ -3,7 +3,7 @@ import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';
 
 /**
- * This atom contains style settings for the `@tailwind/typeography` plugin and works with the `deno-gfm` package to render markdown content. It can be used by itself, but using the {@linkcode Markdown} molecule is highly recommended to avoid redundancies.
+ * This atom contains style settings for the `@tailwind/typeography` plugin and works with the `deno-gfm` package to render markdown content. It can be used by itself, but using the {@linkcode /@lunchbox/ui/doc/molecules/~/Markdown | Markdown} molecule is highly recommended to avoid redundancies.
  *
  * @example Usage
  * ```ts

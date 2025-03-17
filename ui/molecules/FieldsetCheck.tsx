@@ -1,13 +1,3 @@
-//   ___ _     _    _         _    ___ _           _
-//  | __(_)___| |__| |___ ___| |_ / __| |_  ___ __| |__
-//  | _|| / -_) / _` (_-</ -_)  _| (__| ' \/ -_) _| / /
-//  |_| |_\___|_\__,_/__/\___|\__|\___|_||_\___\__|_\_\
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * Module for the `FieldsetCheck` molecule
- * @module molecules/FieldsetCheck
- */
 import * as Input from '../atoms/Input.tsx';
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';

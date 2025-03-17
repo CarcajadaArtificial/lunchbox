@@ -1,26 +1,3 @@
-/**
- * This dictionary contains atoms designed to build input components in a standardized way. Each atom
- * represents a fundamental piece that, when combined, allows the creation of any type of input
- * interface - from simple text fields to complex multi-select forms.
- *
- * The atoms handle core styling concerns like focus states, error highlighting, and spacing
- * consistency, while remaining flexible enough to be customized through class props.
- *
- * @module atoms/Input
- *
- * @example Usage
- * ```ts
- * import { Input } from 'lunchbox/atoms';
- *
- * <Input.Container>
- *   <Input.Label>
- *     <Input.Text>Username</Input.Text>
- *     <Input.Field type="text" required />
- *   </Input.Label>
- *   <Input.Error>This field is required</Input.Error>
- * </Input.Container>
- * ```
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';
@@ -30,7 +7,7 @@ import btn from '../particles/btn.ts';
 import focus from '../particles/focus.ts';
 
 /**
- * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode InputFieldCombo} molecule.
+ * The standard single-line text input element that users are most familiar with. It represents the HTML `<input>` element for text, numbers, email, etc. For a complete input field with label and error handling, use the {@linkcode /@lunchbox/ui/doc/molecules/~/InputFieldCombo | InputFieldCombo} molecule.
  */
 export const Field = (p: iAtom<HTMLInputElement>): JSX.Element => (
   <input
@@ -90,7 +67,7 @@ export const Error = (p: iAtom<HTMLSpanElement>): JSX.Element => (
 );
 
 /**
- * Styled radio button input for single-choice selections. For a complete radio input group, use the {@linkcode FieldsetRadio} molecule, or for a single radio button with label use {@linkcode InputRadioCombo}
+ * Styled radio button input for single-choice selections. For a complete radio input group, use the {@linkcode /@lunchbox/ui/doc/molecules/~/FieldsetRadio | FieldsetRadio} molecule, or for a single radio button with label use {@linkcode /@lunchbox/ui/doc/molecules/~/InputRadioCombo | InputRadioCombo}
  */
 export const Radio = (p: iAtom<HTMLInputElement>): JSX.Element => (
   <input
@@ -111,7 +88,7 @@ export const Radio = (p: iAtom<HTMLInputElement>): JSX.Element => (
 );
 
 /**
- * Groups related form controls together both semantically and visually. Adds a subtle border and background to create visual separation between different sections of a form. Essential for organizing complex forms with multiple related inputs. For complete fieldset components, see {@linkcode FieldsetCheck} for checkboxes or {@linkcode FieldsetRadio} for radio buttons.
+ * Groups related form controls together both semantically and visually. Adds a subtle border and background to create visual separation between different sections of a form. Essential for organizing complex forms with multiple related inputs. For complete fieldset components, see {@linkcode /@lunchbox/ui/doc/molecules/~/FieldsetCheck | FieldsetCheck} for checkboxes or {@linkcode /@lunchbox/ui/doc/molecules/~/FieldsetRadio | FieldsetRadio} for radio buttons.
  */
 export const Fieldset = (p: iAtom<HTMLFieldSetElement>): JSX.Element => (
   <fieldset
@@ -135,7 +112,7 @@ export const Legend = (p: iAtom<HTMLLegendElement>): JSX.Element => (
 );
 
 /**
- * Styled checkbox input for multi-choice selections. For a complete checkbox group, use the {@linkcode FieldsetCheck} molecule, or for a single checkbox with label use {@linkcode InputCheckCombo}
+ * Styled checkbox input for multi-choice selections. For a complete checkbox group, use the {@linkcode /@lunchbox/ui/doc/molecules/~/FieldsetCheck | FieldsetCheck} molecule, or for a single checkbox with label use {@linkcode /@lunchbox/ui/doc/molecules/~/InputCheckCombo | InputCheckCombo}
  */
 export const Check = (p: iAtom<HTMLInputElement>): JSX.Element => (
   <input
@@ -156,7 +133,7 @@ export const Check = (p: iAtom<HTMLInputElement>): JSX.Element => (
 );
 
 /**
- * Multi-line text input for longer form content. For a complete textarea with label and error handling, use the {@linkcode InputTextareaCombo} molecule.
+ * Multi-line text input for longer form content. For a complete textarea with label and error handling, use the {@linkcode /@lunchbox/ui/doc/molecules/~/InputTextareaCombo | InputTextareaCombo} molecule.
  */
 export const Textarea = (p: iAtom<HTMLTextAreaElement>): JSX.Element => (
   <textarea
@@ -172,7 +149,7 @@ export const Textarea = (p: iAtom<HTMLTextAreaElement>): JSX.Element => (
 );
 
 /**
- * Dropdown select input for choosing from predefined options. For a complete select input with label and error handling, use the {@linkcode InputSelectCombo} molecule.
+ * Dropdown select input for choosing from predefined options. For a complete select input with label and error handling, use the {@linkcode /@lunchbox/ui/doc/molecules/~/InputSelectCombo | InputSelectCombo} molecule.
  */
 export const Select = (p: iAtom<HTMLSelectElement>): JSX.Element => (
   <select
@@ -189,7 +166,7 @@ export const Select = (p: iAtom<HTMLSelectElement>): JSX.Element => (
 );
 
 /**
- * Submit button with brand styling that looks like {@linkcode /@lunchbox/ui/doc/atoms/~/Button | Button.Brand} while maintaining the functionality of an `<input type="submit">` element.
+ * Submit button with brand styling that looks like {@linkcode /@lunchbox/ui/doc/atoms/~/Button.Brand | Button.Brand} while maintaining the functionality of an `<input type="submit">` element.
  */
 export const Submit = (p: iAtom<HTMLInputElement>): JSX.Element => (
   <input

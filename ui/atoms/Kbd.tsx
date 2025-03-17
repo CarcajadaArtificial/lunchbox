@@ -1,7 +1,3 @@
-/**
- * Module for the {@linkcode Kbd} atom.
- * @module atoms/Kbd
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

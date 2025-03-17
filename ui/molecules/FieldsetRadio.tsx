@@ -1,13 +1,3 @@
-//   ___ _     _    _         _   ___         _ _
-//  | __(_)___| |__| |___ ___| |_| _ \__ _ __| (_)___
-//  | _|| / -_) / _` (_-</ -_)  _|   / _` / _` | / _ \
-//  |_| |_\___|_\__,_/__/\___|\__|_|_\__,_\__,_|_\___/
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * Module for the `FieldsetRadio` molecule.
- * @module molecules/FieldsetRadio
- */
 import type { JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import input from '../particles/input.ts';

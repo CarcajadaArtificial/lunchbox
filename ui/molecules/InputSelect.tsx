@@ -1,13 +1,3 @@
-//   ___                _   ___      _        _    ___           _
-//  |_ _|_ _  _ __ _  _| |_/ __| ___| |___ __| |_ / __|___ _ __ | |__  ___
-//   | || ' \| '_ \ || |  _\__ \/ -_) / -_) _|  _| (__/ _ \ '  \| '_ \/ _ \
-//  |___|_||_| .__/\_,_|\__|___/\___|_\___\__|\__|\___\___/_|_|_|_.__/\___/
-//           |_|
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * Module for the `InputSelect` molecule.
- * @module molecules/InputSelect
- */
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
 import * as Input from '../atoms/Input.tsx';

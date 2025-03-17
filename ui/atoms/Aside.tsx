@@ -1,8 +1,3 @@
-/**
- * This collection of atoms contains the ones that render secondary sections of content made using the `<aside/>` element, usually for types of sidebars.
- *
- * @module atoms/Aside
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

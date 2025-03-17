@@ -1,14 +1,3 @@
-/**
- * This dictionary contains contextual button variations that adapt their visual hierarchy based on
- * their surroundings rather than fixed primary/secondary patterns. Each button's prominence shifts
- * naturally  through color relationships with its container.
- *
- * The buttons use semantic color palettes to communicate purpose - Brand buttons drive primary actions,
- * Page/Panel buttons handle navigation and secondary actions, and Error buttons signal destructive
- * operations.
- *
- * @module atoms/Button
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

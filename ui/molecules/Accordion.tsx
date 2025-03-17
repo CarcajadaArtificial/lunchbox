@@ -1,13 +1,3 @@
-//     _                    _ _
-//    /_\  __ __ ___ _ _ __| (_)___ _ _
-//   / _ \/ _/ _/ _ \ '_/ _` | / _ \ ' \
-//  /_/ \_\__\__\___/_| \__,_|_\___/_||_|
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * Module for the `Accordion` molecule
- * @module molecules/Accordion
- */
 import * as Details from '../atoms/Details.tsx';
 import type { ComponentChildren, JSX } from 'preact';
 import { apDef } from '@lunchbox/ui';
@@ -51,7 +41,7 @@ const d: iAccordion = {
 /**
  * A a visual container for content segments that typically expands and collapses vertically, one at a time. Often used for FAQs, information sections, settings/preferences, or any situation where presenting information in a manageable, space-saving way is desired.
  *
- * It relies on the {@linkcode Details} atom for building it, providing a higher level abstraction with a more specific usage for building expand/collapse patterns. You may directly use the  {@linkcode Details} atom to create custom accordions, or use this pre-built
+ * It relies on the {@linkcode /@lunchbox/ui/doc/atoms/~/Details | Details} atom for building it, providing a higher level abstraction with a more specific usage for building expand/collapse patterns. You may directly use the  {@linkcode /@lunchbox/ui/doc/atoms/~/Details | Details} atom to create custom accordions, or use this pre-built
  *
  * @todo [DEV] Manage appropriate aria roles for the parts of this molecule. Client reactivity?
  * @todo [DEV] Implement additional visual hierarchies in the component's design.

@@ -1,9 +1,3 @@
-/**
- * A specialized component system for displaying code with proper syntax highlighting and formatting.
- * The architecture enforces semantic structure through required parent-child relationships.
- *
- * @module atoms/Code
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

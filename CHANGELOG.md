@@ -12,9 +12,13 @@
 
 ## Version History
 
+### v1.0.59
+
+- Updated the package documentation.
+
 ### v1.0.58
 
-- Updated the package documentation.}
+- Updated the package documentation.
 - Removed deprecated types.
 
 ### v1.0.57

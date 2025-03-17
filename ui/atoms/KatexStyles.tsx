@@ -1,13 +1,9 @@
-/**
- * Module for the {@linkcode KatexStyles} atom.
- * @module atoms/KatexStyles
- */
 import type { JSX } from 'preact';
 import { KATEX_CSS } from '@deno/gfm';
 import type { iAtom } from '@lunchbox/ui';
 
 /**
- * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX equations in markdown content. Works in conjunction with the {@linkcode Prose} atom which handles the actual markdown rendering.
+ * This atom renders the CSS styles necessary for the `deno-gfm` package to render LaTeX equations in markdown content. Works in conjunction with the {@linkcode /@lunchbox/ui/doc/atoms/~/Prose | Prose} atom which handles the actual markdown rendering.
  *
  * @example Usage
  * ```ts

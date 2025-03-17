@@ -1,6 +1,3 @@
-/**
- * This collection contains atoms for building consistent navigation structures across your application.
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

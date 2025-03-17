@@ -1,13 +1,3 @@
-//   __  __          _      _
-//  |  \/  |__ _ _ _| |____| |_____ __ ___ _
-//  | |\/| / _` | '_| / / _` / _ \ V  V / ' \
-//  |_|  |_\__,_|_| |_\_\__,_\___/\_/\_/|_||_|
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * Module for the `Markdown` molecule.
- * @module molecules/Markdown
- */
 import type { JSX } from 'preact';
 import { render, type RenderOptions } from '@deno/gfm';
 import { apDef } from '@lunchbox/ui';

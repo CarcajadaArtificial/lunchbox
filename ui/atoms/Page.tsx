@@ -1,19 +1,3 @@
-/**
- * This dictionary provides semantic HTML elements for structuring a page's layout. These atoms help
- * maintain consistent styling and proper document structure while following web standards. Each
- * element maps to its corresponding HTML5 semantic tag:
- *
- * @example Usage
- * ```ts
- * import * as Page from 'lunchbox/atoms';
- *
- * <Page.Body>
- *  <Page.Header>{...}</Page.Header>
- *  <Page.Main>{...}</Page.Main>
- *  <Page.Footer>{...}</Page.Footer>
- * </Page.Body>
- * ```
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';

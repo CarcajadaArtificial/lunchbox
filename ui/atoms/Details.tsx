@@ -1,8 +1,3 @@
-/**
- * This dictionary contains the atoms that make up the `<details/>` element. A custom one could be built using this atoms, but for most cases the {@linkcode Accordion} molecule is a standard solution.
- *
- * @module atoms/Details
- */
 import type { JSX } from 'preact';
 import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';
