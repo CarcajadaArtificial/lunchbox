@@ -42,3 +42,17 @@ export async function initFiles(
     }),
   );
 }
+
+export async function removeFiles(...files: string[]) {
+  for (const file of files) {
+    try {
+      await Deno.remove(file, { recursive: true });
+    } catch (error) {
+      if (error instanceof Deno.errors.NotFound) {
+        console.log(`Entity ${file} already removed.`);
+      } else {
+        console.error(error);
+      }
+    }
+  }
+}

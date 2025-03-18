@@ -34,17 +34,23 @@ const d: iInputField = {
 
 // =====================================================================================================
 /**
- * (description)
- *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- * @todo [DEV] Handle dates an times in useful notations.
+ * A molecule component that renders an input field with a label and optional error message. This component is designed to be used in forms where user input is required. It integrates with the `Input` atom to provide a consistent styling and behavior for input elements. The `InputField` allows you to specify a label, an error message, and whether the input is required. If an error message is provided, the input field will visually indicate an error state.
  *
  * @example
  * ```ts
  * import { InputField } from 'lunchbox/molecules';
  *
- * (example code)
+ * function MyForm() {
+ *   return (
+ *     <form>
+ *       <InputField
+ *         label="Username"
+ *         error="This field is required."
+ *         required={true}
+ *       />
+ *     </form>
+ *   );
+ * }
  * ```
  */
 export default function (props: Partial<iInputField>): JSX.Element {

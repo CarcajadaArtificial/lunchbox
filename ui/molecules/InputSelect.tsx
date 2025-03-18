@@ -39,10 +39,8 @@ const d: iInputSelect = {
 
 // =====================================================================================================
 /**
- * (description)
+ * The `InputSelect` molecule is a customizable select input component that allows users to choose from a list of options. It integrates with the `Input` atom to provide a consistent styling and behavior across form elements. This component accepts a label, an error message, and a required flag to enhance user experience and form validation. The `InputSelect` molecule utilizes the `Input` atom for rendering the label, select, and error message. This ensures that the styling and functionality are consistent with other input components in the library.
  *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
  * @todo [DEV] Implement the special functionality for `default` and `placeholder` properties.
  * @todo [DEV] Implement an `<Input.Option>` atom for this molecule's children.
  *
@@ -50,7 +48,12 @@ const d: iInputSelect = {
  * ```ts
  * import { InputSelect } from 'lunchbox/molecules';
  *
- * (example code)
+ * const MyForm = () => (
+ *   <InputSelect label="Choose an option" error="This field is required" required>
+ *     <option value="option1">Option 1</option>
+ *     <option value="option2">Option 2</option>
+ *   </InputSelect>
+ * );
  * ```
  */
 export default function (props: Partial<iInputSelect>): JSX.Element {

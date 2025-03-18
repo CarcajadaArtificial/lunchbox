@@ -5,7 +5,7 @@
  */
 import type { JSX } from 'preact';
 
-// =====================================================================================================
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
  * This type defines the extent of the parameters contained in an atom rendering function.
  */

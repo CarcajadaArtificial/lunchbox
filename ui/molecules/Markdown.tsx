@@ -28,16 +28,17 @@ function setup(props: Partial<iMarkdown>) {
 
 // =====================================================================================================
 /**
- * (description)
+ * The `Markdown` component renders markdown content as HTML using the specified render options. It allows for customization of rendering behavior through the `renderOptions` property. This component is useful for displaying formatted text, such as documentation or articles, that is written in markdown syntax. It leverages the `@deno/gfm` library for rendering.
  *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
  * @todo [DEV] Add the KatexStyles atom to the page's head when the allowMath option is true.
  *
  * @example
  * ```ts
  * import { Markdown } from 'lunchbox/molecules';
  *
- * (example code)
+ * const markdownContent = '# Hello World\nThis is a markdown example.';
+ *
+ * <Markdown content={markdownContent} />
  * ```
  */
 export default function (props: Partial<iMarkdown>): JSX.Element {

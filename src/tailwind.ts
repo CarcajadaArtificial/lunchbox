@@ -1,9 +1,3 @@
-//   _____     _ _        _         _
-//  |_   _|_ _(_) |_ __ _(_)_ _  __| |
-//    | |/ _` | | \ V  V / | ' \/ _` |
-//    |_|\__,_|_|_|\_/\_/|_|_||_\__,_|
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * This module contains the tailwind configuration a project using this package.
  *
@@ -11,7 +5,6 @@
  */
 import plugin from 'tailwindcss/plugin';
 
-// =====================================================================================================
 /**
  * This plugin extends tailwind creating design tokens, these, seen through the Atomic Design
  * framework, are analouge to sub-atomic particles. The `font-family`, `colors`, and `screens` are the

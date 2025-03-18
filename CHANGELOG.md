@@ -2,15 +2,12 @@
 
 ## Working on
 
-- Finish documenting molecules.
-- Add code example snippets to Input atoms.
 - Update Readme with new init instructions.
-- Find how to add documentation description to atom collection namespaces.
 - Update Contributing.md
-- Move the task module to the root dir and the removeFiles() function to init/utils.
 
 ### Next up
 
+- Find how to add documentation description to atom collection namespaces.
 - Add package version as a top comment to all components.
   - Develop an individual component init/update function.
   - Create a script that automatically changes all components comment version based on deno.json.
@@ -34,6 +31,11 @@
   - Modal (Atom & Molecules)
 
 ## Version History
+
+### v1.0.63
+
+- Refactored the tasks module.
+- Added documentation to the remaining molecules.
 
 ### v1.0.62
 

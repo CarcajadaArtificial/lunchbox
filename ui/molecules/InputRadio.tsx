@@ -32,15 +32,20 @@ const d: iInputRadio = {
 
 // =====================================================================================================
 /**
- * (description)
+ * A radio input component that allows users to select one option from a set of related options. This component is built using the `<Input.Radio/>` atom and is designed to be used within a form. The `InputRadio` component requires a `label` for display, a `name` to group related radio inputs, and a `required` flag to enforce validation during form submission. The `name` prop ensures that all radio buttons with the same name are treated as a single group, allowing only one selection at a time. This component is closely related to the `Input` atom, which provides the underlying structure and functionality for the radio input and label elements.
  *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- *
+ * @example Usage
  * ```ts
  * import { InputRadio } from 'lunchbox/molecules';
  *
- * (example code)
+ * function MyForm() {
+ *   return (
+ *     <form>
+ *       <InputRadio label="Option 1" name="options" required={true} />
+ *       <InputRadio label="Option 2" name="options" required={true} />
+ *     </form>
+ *   );
+ * }
  * ```
  */
 export default function (props: Partial<iInputRadio>): JSX.Element {

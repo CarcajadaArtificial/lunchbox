@@ -33,16 +33,17 @@ const d: iInputTextarea = {
 
 // =====================================================================================================
 /**
- * (description)
- *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
+ * A textarea input component that allows users to enter multi-line text. This component is built using the `Input` atom, which provides the basic structure and styling for input elements. The `InputTextarea` molecule enhances the `Input` atom by adding features such as a label, error messaging, and required field validation. The `InputTextarea` is designed to be flexible and can be used in various forms where multi-line text input is needed. It automatically handles the display of error messages and can indicate whether the field is required for form submission.
  *
  * @example
  * ```ts
  * import { InputTextarea } from 'lunchbox/molecules';
  *
- * (example code)
+ * <InputTextarea
+ *   label="Description"
+ *   error="This field is required."
+ *   required={true}
+ * />
  * ```
  */
 export default function (props: Partial<iInputTextarea>): JSX.Element {

@@ -47,19 +47,21 @@ const d: iFieldsetRadio = {
 
 // =====================================================================================================
 /**
- * (description)
- *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- * @todo [DOC] Explain the relationship this molecule has with the InputRadio molecule.
- * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
+ * The `FieldsetRadio` component is a wrapper for a group of radio inputs, allowing users to select one option from a set.It is designed to enhance accessibility and usability by grouping related radio buttons under a common legend. This component utilizes the `Input` atom for styling and structure, ensuring a consistent look and feel across forms.The `InputRadio` molecule is used for each individual radio button, which allows for easy customization and management of radio inputs.
  *
  * @example
  * ```ts
  * import { FieldsetRadio } from 'lunchbox/molecules';
  *
- * (example code)
+ * <FieldsetRadio
+ *   values={['Option 1', 'Option 2', 'Option 3']}
+ *   legend="Choose an option"
+ *   error="This field is required"
+ *   name="options"
+ *   required={true}
+ * />
  * ```
+ * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
  */
 export default function (props: Partial<iFieldsetRadio>): JSX.Element {
   const p = apDef(d, props);

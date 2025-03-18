@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
@@ -11,11 +11,7 @@
     "./molecules": "./src/molecules.ts"
   },
   "tasks": {
-    "base:start": "deno run -A --watch=static/,routes/ examples/base/dev.ts",
-    "init:generate": "deno run -A src/tasks.ts init-generate; deno fmt",
-    "init:clean": "deno run -A src/tasks.ts init-clean",
-    "init:test": "deno run -A src/tasks.ts init-test",
-    "init:start": "deno run -A --watch=static/,routes/ examples/init/dev.ts"
+    "init:clean": "deno run -A tasks.ts init-clean"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

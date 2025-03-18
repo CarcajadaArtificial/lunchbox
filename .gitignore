@@ -3,6 +3,7 @@ deno.lock
 .DS_Store
 .obsidian
 .vscode
+.cursor/
 _fresh/
 docs/
 node_modules/

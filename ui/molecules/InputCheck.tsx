@@ -39,16 +39,18 @@ const d: iInputCheck = {
 
 // =====================================================================================================
 /**
- * (description)
+ * A checkbox input component that allows users to select one or more options. This component is built using the `<Input />` atom, which provides the underlying functionality for the checkbox and its label. The `InputCheck` molecule manages the relationship between multiple checkboxes through the `name` property, ensuring that they are grouped correctly in the form's context.
  *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- *
- * @example
+ * @example Usage
  * ```ts
  * import { InputCheck } from 'lunchbox/molecules';
  *
- * (example code)
+ * <InputCheck
+ *   label="Accept Terms and Conditions"
+ *   error="You must accept the terms."
+ *   name="terms"
+ *   required={true}
+ * />
  * ```
  */
 export default function (props: Partial<iInputCheck>): JSX.Element {

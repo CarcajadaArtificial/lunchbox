@@ -39,20 +39,21 @@ const d: iFieldsetCheck = {
 
 // =====================================================================================================
 /**
- * (description)
- *
- * @todo [DOC] Add a description and code example of how to propertly use this component.
- * @todo [DOC] Explain the relationship this molecule has with the Input atom.
- * @todo [DOC] Explain the relationship this molecule has with the InputCheck molecule.
- * @todo [DOC] Explain that there isn't a "required" prop because there aren't native HTML behaviors that allow for a fieldset of checkboxes to "be required" in a form.
- * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
+ * The `FieldsetCheck` molecule renders a group of checkboxes within a fieldset, allowing users to select multiple options. This component is designed to work with the `Input` atom and the `InputCheck` molecule, providing a structured way to present checkbox inputs in a form. Each checkbox is associated with a shared name, which is crucial for form submission and accessibility. Note that there isn't a "required" prop for this component because native HTML behaviors do not support marking a fieldset of
+ * checkboxes as required. Instead, validation should be handled externally.
  *
  * @example
  * ```ts
  * import { FieldsetCheck } from 'lunchbox/molecules';
  *
- * (example code)
+ * <FieldsetCheck
+ *   values={['Option 1', 'Option 2']}
+ *   legend="Select Options"
+ *   error="Please select at least one option."
+ *   name="options"
+ * />
  * ```
+ * @todo [DEV] Add errors if values.length is 0 or if name is an empty string.
  */
 export default function (props: Partial<iFieldsetCheck>): JSX.Element {
   const p = apDef(d, props);
