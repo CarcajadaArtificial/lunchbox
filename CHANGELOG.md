@@ -2,7 +2,9 @@
 
 ## Working on
 
-- Update Readme with new init instructions.
+- Create an exposition site for the package.
+  - Site is a single landing page.
+  - Showcases particles, atoms and molecules.
 
 ### Next up
 
@@ -34,6 +36,11 @@
   - Modal (Atom & Molecules)
 
 ## Version History
+
+### v2.0.2
+
+- Added the `www` module with an exposition page for the package.
+- Added a project initialization process fix.
 
 ### v2.0.1
 

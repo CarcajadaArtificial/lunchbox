@@ -1,0 +1,35 @@
+{
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "dev": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "start": "deno run -A main.ts",
+    "update": "deno run -A -r jsr:@fresh/update ."
+  },
+  "imports": {
+    "@": "./",
+    "preact": "npm:preact@^10.25.4",
+    "@preact/signals": "npm:@preact/signals@^2.0.1",
+    "tailwindcss": "npm:tailwindcss@^3.4.3",
+    "fresh": "jsr:@fresh/core@^2.0.0-alpha.29",
+    "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
+    "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
+    "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
+    "lunchbox/particles/": "./components/lunchbox/particles/",
+    "lunchbox/atoms/": "./components/lunchbox/atoms/",
+    "lunchbox/molecules/": "./components/lunchbox/molecules/",
+    "@lunchbox/ui": "jsr:@lunchbox/ui"
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.asynciterable", "dom.iterable", "deno.ns"],
+    "jsx": "precompile",
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
+  },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"]
+    }
+  },
+  "exclude": ["**/_fresh/*"]
+}

@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Fira Code';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/FiraCode/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/FiraCode/FiraCode-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/Figtree/Figtree-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-Regular.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-Italic.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Libre Caslon Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/LibreCaslonText/Libre-Caslon-Text-700.woff2')
+    format('woff2');
+}
