@@ -27,15 +27,21 @@
   - Key (Organism)
   - Form (Organism)
   - LazyImage (Atom)
-  - Table (Atom & Molecules)
+  - Table (Atoms & Molecules)
   - Input.File (Atom)
   - Input.Date (Atom)
   - Input.Slider (Atom)
   - Input.Switch (Atom)
   - IntersectionObserver (Organism)
-  - Modal (Atom & Molecules)
+  - Modal (Atoms & Molecules)
+  - GridModule (Atoms)
 
 ## Version History
+
+### v2.0.3
+
+- Added a project initialization process fix.
+- Removed grid template cols and col spans from the tailwind plugin.
 
 ### v2.0.2
 

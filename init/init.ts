@@ -39,6 +39,8 @@ import { collectFiles, initFiles } from './utils.ts';
  *       `/examples/init/deno.json` file in favor of a `/src/init.json`. The `init.json` file will
  *       contain the generated initialization code, while `/examples/init/deno.json` will make
  *       imports work locally.
+ * @todo [DEV] Add package version to the top comment of every ui component. This can be done after
+ *       file generation to avoid having to stage the changes of actually adding the comments.
  */
 export async function init(): Promise<void> {
   console.log();

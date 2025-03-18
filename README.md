@@ -137,7 +137,7 @@ do:
 
    ```typescript:init/base/routes/_app.tsx
     import type { PageProps } from "fresh";
-    import Page from "lunchbox/atoms/Page.tsx";
+    import { Body } from "lunchbox/atoms/Page.tsx";
 
     export default function App({ Component }: PageProps) {
       return (
@@ -146,9 +146,9 @@ do:
             {/* ... */}
             <link rel="stylesheet" href="/styles.css" />
           </head>
-          <Page.Body>
+          <Body>
             <Component />
-          </Page.Body>
+          </Body>
         </html>
       );
     }

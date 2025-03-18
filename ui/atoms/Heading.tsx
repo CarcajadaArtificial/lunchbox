@@ -13,6 +13,8 @@ import txt from '../particles/txt.ts';
  *
  * <H0>Decorative text</H0>
  * ```
+ *
+ * @todo [DEV] Adjust size for small screens.
  */
 export function H0(p: iAtom<HTMLSpanElement>): JSX.Element {
   return (

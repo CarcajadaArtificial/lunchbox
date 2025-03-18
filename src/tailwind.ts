@@ -101,15 +101,6 @@ import plugin from 'tailwindcss/plugin';
  *
  * ---
  *
- * ### `gridTemplateColumns` and `gridColumn`
- *
- * @todo Implement nested grids.
- * @todo Implement 6 and 18 column grids for sm and lg screens.
- * @todo Rename grid column shortcuts.
- * @todo Finish documentation.
- *
- * ---
- *
  * ### `typography`
  *
  * This settings are for the tailwind `typography` plugin. These can be used with the `prose` class and
@@ -251,24 +242,6 @@ export default function (): ReturnType<typeof plugin> {
             '4/1': '4em',
             '15/1': '15em',
             'banner': '90dvh',
-          },
-          gridTemplateColumns: {
-            md: 'repeat(12, minmax(4.5rem, 4.5rem))',
-            lg: 'repeat(12, 1fr)',
-          },
-          gridColumn: {
-            full: 'span 12 / span 12',
-            xl: 'span 10 / span 10',
-            lg: 'span 8 / span 8',
-            md: 'span 6 / span 6',
-            sm: 'span 4 / span 4',
-            xs: 'span 2 / span 2',
-            'h-full': 'span 6 / span 6',
-            'h-xl': 'span 5 / span 5',
-            'h-lg': 'span 4 / span 4',
-            'h-md': 'span 3 / span 3',
-            'h-sm': 'span 2 / span 2',
-            'h-xs': 'span 1 / span 1',
           },
           typography: {
             DEFAULT: {
