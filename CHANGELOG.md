@@ -35,6 +35,10 @@
 
 ## Version History
 
+### v2.0.1
+
+- Fixed project initialization process.
+
 ### v2.0.0
 
 This is the first major release for Lunchbox since launch. It has come a long

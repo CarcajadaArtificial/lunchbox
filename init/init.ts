@@ -82,8 +82,8 @@ export async function init(): Promise<void> {
 
   await initFiles(
     projectName,
-    3,
-    await collectFiles('init/examples/init', ['deno.lock']),
+    2,
+    await collectFiles('init/base/', ['deno.lock']),
   );
   await initFiles(
     join(projectName, 'components/lunchbox'),
