@@ -19,8 +19,21 @@ of work. A popular concept about modularity in design systems is to consider
 them inherently hierarchical. In this, I strongly disagree because atoms are of
 no less importance than organisms. But I do agree that they have one
 fundamentally different characteristic. Atoms are components only made by
-nature's _subatomic particles_ a.k.a. pure HTML Elements. Am I stretching too
+nature's _subatomic particles_ a.k.a. pure Tailwind Classes. Am I stretching too
 far with the atomic analogy?
+
+- [Particles](https://jsr.io/@lunchbox/ui/doc/particles) are the fundamental
+  design tokens of your UI, represented as Tailwind styles. They help maintain
+  consistency and flexibility in your design system.
+
+- [Atoms](https://jsr.io/@lunchbox/ui/doc/atoms) are the basic building blocks
+  of your components, made up of HTML elements styled with Particles. They
+  encapsulate the simplest UI elements, ensuring a clean and modular design.
+
+- [Molecules](https://jsr.io/@lunchbox/ui/doc/molecules) are composed of Atoms
+  and sometimes Particles, serving as the standard unit of interface. They
+  strike a balance between simplicity and complexity, making them essential for
+  building cohesive UI components.
 
 ### Trivial HTML good practices
 
@@ -31,127 +44,115 @@ depending on a prop. "Or was it something else? Wait, what was the name of the
 class that changes when it's a TextArea?" Having it closer to the HTML Element
 logic makes the inner logic of the components really obvious and apparent.
 
-Let's take as an example the `<Input>` component. When using it you're expected
-to use the best practices with it, plus additional features. These best
-practices are multidisciplinary. The field of UX foments the use of a label and
-a contextual error message to guide the user. That gives us the props
-`<Input label="" error="" />`. These features are not native to the simple
-`<input />` HTEML element, it must work together with other elements. It is in
-this next area where the good practices aren't forgotten. Like nesting the input
-inside a label element (`<label><input /></label>`). Finally, every visual
-element inside the component was designed to maintain a perfect vertical rhythm
-for good aesthetic practices even in the aesthetics of the interface.
+Let's take as an example the `<InputField>` molecule. When using it, you're
+expected to follow best practices that enhance user experience (UX). This
+includes providing a label and a contextual error message to guide the user. The
+props for `<InputField>` are `label`, `error`, and `required`, which ensure that
+the input is both informative and accessible.
 
-### Configure anything easily
+The `InputField` molecule integrates a label with the input element, ensuring
+that the input is nested within a label element for better semantics and
+usability. This design choice not only improves accessibility but also maintains
+a consistent visual rhythm across the interface, adhering to good aesthetic
+practices.
 
-Let us continue with the example of the `<Input />` component. As a very strict
-rule, all components must be able to render a useful default state without any
-defined prop. so simply using `<Input />` will create a functional input field
-even without a label or anything. Likewise, styles and CSS classes are optional
-and can be removed with the universal prop `nostyles`.
-
-Also, additional classes can be appended simply by adding a class to the
-component. Having `<Input class="x" />` will add the class `"x"` to the
-`<input />` element inside it. Every HTML Element and framework component that
-make up a particular component will be called a _"piece"_. Every piece of every
-component can be referenced using the universal component `fwd`. This is an
-oversimplified html code for the `<Input />` component:
-
-```jsx
-<div {...fwd.container}>
-  <label {...fwd.label}>
-    <Text {...fwd.text}>
-      <sup {...fwd.required} />
-    </Text>
-    <input {...params} /> {/* Component's main element */}
-  </label>
-  <Text {...fwd.error} />
-</div>
-```
-
-The piece name is used in the CSS classes and in the `fwd` prop
-(`<Input fwd={{ label: {class: 'x'} }}` will add the class `'x'` to the piece
-"label").
+By using the `<InputField>` component, you can create forms that are
+user-friendly and visually appealing, while also ensuring that users receive
+immediate feedback on their input.
 
 ---
 
 ## Getting started
 
-### Step 1: Importing Lunchbox
+Welcome aboard! Whether you're diving into a brand new project or integrating
+Lunchbox into an existing one, we've got you covered. Let’s break it down!
 
-Assuming you are using Deno Fresh, you could simply add lunchbox's root
-directory to your import section inside your project's `deno.json` file. I would
-recommend the usage of [Resin](https://github.com/yahiro07/resin) by
-[yahiro](https://github.com/yahiro07), it is an excellent CSS-in-JS library.
+### New Project
 
-```json
-{
-  "imports": {
-    "lunchbox/": "https://deno.land/x/lunchbox@vX.X.X/",
-    "resin": "https://deno.land/x/resin@vX.X.X/mod.ts"
-  }
-}
-```
+Starting fresh? Awesome! Here’s how to get Lunchbox up and running in no time:
 
-### Step 2: Add the Lunchbox plugin
+1. **Run the Initialization Command** Kick things off by running:
 
-Inside your `fresh.config.ts` file, you can add the Lunchbox plugin. It is fully
-compatible with Tailwind so you can run both without any issues:
+   ```bash
+   deno run -A jsr:@lunchbox/ui/init
+   ```
 
-```ts
-// ~/fresh.config.ts
-import { defineConfig } from "$fresh/server.ts";
-import tailwind from "$fresh/plugins/tailwind.ts";
-import lunchbox from "lunchbox/plugin.ts";
+2. **Imported Libraries** Your new project will come pre-loaded with some
+   fantastic libraries:
 
-export default defineConfig({
-  plugins: [tailwind(), lunchbox()],
-});
-```
+   - **Fresh** + **Preact**: For building your web app.
+   - **Tailwind**: For styling like a pro.
+   - **@vyn/cn**: For class name management.
+   - **@deno/gfm**: For Markdown support.
 
-### Step 3: Setup the `_app.tsx` file
+3. **Upgrade Your Components** After setting up, keep your components fresh by
+   running:
+   ```bash
+   deno run -A jsr:@lunchbox/ui/upgrade
+   ```
+   This ensures you’re always using the latest and greatest features!
 
-Finally, a few things must be added in the `_app.tsx` file:
+### Existing Project
 
-1. Add `class="lunchbox"` to the `<html/>` tag.
-2. Add `id="lunchbox-body"` to the `<body/>` tag. It should end up with this
-   modifications:
+Integrating Lunchbox into an existing project? No sweat! Here’s what you need to
+do:
 
----
+1. **Add Lunchbox Package** First, include Lunchbox in your project with:
 
-## Usage
+   ```bash
+   deno add jsr:@lunchbox/ui
+   ```
 
-After setting up Lunchbox in your project, simply import from the
-`lunchbox/components/` to start using any component. By being inside the
-`/components/`
+2. **Upgrade Components** Next, run the upgrade command to add the latest
+   components and static files:
 
-```tsx
-// ~/routes/example.tsx. OR  ~/components/example.tsx
-import Button from "lunchbox/components/Button/index.tsx";
+   ```bash
+   deno run -A jsr:@lunchbox/ui/upgrade
+   ```
 
-export default function () {
-  return <Button>Click me!</Button>;
-}
-```
+3. **Configure Tailwind** Import and install the `lunchboxPlugin` from
+   `@lunchbox/ui` and add it to your `tailwind.config.ts`. This step is crucial
+   for making the most out of your styling!
 
-### Using islands
+   ```typescript:init/base/tailwind.config.ts
+   import type { Config } from "tailwindcss";
+   import { lunchboxPlugin } from "@lunchbox/ui"; // Ensure this package is installed
+   import typographyPlugin from "npm:/@tailwindcss/typography@0.5.15";
 
-It is a little different for islands, for starters, you must import them from
-the `~/islands/` directory. This informs you that the imported component
-requires client-side javascript to function.
+    export default {
+      content: [
+        "{routes,islands,components}/**/*.{ts,tsx}", // Specify where to look for classes
+      ],
+      plugins: [lunchboxPlugin(), typographyPlugin], // Add Lunchbox and typography plugins
+    } satisfies Config;
+   ```
 
-```tsx
-// ~/islands/Menu.tsx
-export { default } from "lunchbox/islands/Menu/index.tsx";
-```
+4. **Fonts and Styles** Don’t forget to download and add the official fonts for
+   Lunchbox along with their styles. You can find these fonts in this same
+   repository in the `static` directory.
 
-After doing this now you can import it from a route or wherever:
+5. **Configure `_app.tsx`** Finally, make sure to include the the stylesheet and
+   the `<Page.Body/>` atom in your `_app.tsx` route. This is where the magic
+   happens!
 
-```tsx
-// ~/routes/example.tsx. OR  ~/components/example.tsx
-import Menu from "../islands/Menu.tsx";
+   ```typescript:init/base/routes/_app.tsx
+    import type { PageProps } from "fresh";
+    import Page from "lunchbox/atoms/Page.tsx";
 
-export default function () {
-  return <Menu>This is a menu!</Menu>;
-}
-```
+    export default function App({ Component }: PageProps) {
+      return (
+        <html>
+          <head>
+            {/* ... */}
+            <link rel="stylesheet" href="/styles.css" />
+          </head>
+          <Page.Body>
+            <Component />
+          </Page.Body>
+        </html>
+      );
+    }
+   ```
+
+And there you have it! You're all set to start building with Lunchbox. If you
+run into any hiccups, just holler!

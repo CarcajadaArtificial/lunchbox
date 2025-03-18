@@ -1,5 +1,9 @@
 /**
- * This module contains the molecules for the Lunchbox UI library.
+ * This module exports various Molecule components, which are essential building blocks in our UI library. Molecules are multi-element components composed of Atoms and, in some cases, Particles. They serve as a standard unit of interface, striking a balance between simplicity and complexity.
+ * - **Non-Reactive**: Molecules do not require client-side JavaScript to function, ensuring they are
+ *   lightweight and efficient.
+ * - **Simplicity**: Designed to be straightforward, Molecules should not have excessive configuration
+ *   options, making them easy to use and integrate.
  *
  * @module molecules
  */

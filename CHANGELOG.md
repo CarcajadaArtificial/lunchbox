@@ -3,20 +3,23 @@
 ## Working on
 
 - Update Readme with new init instructions.
-- Update Contributing.md
 
 ### Next up
 
+- Add Contributing.md
 - Find how to add documentation description to atom collection namespaces.
 - Add package version as a top comment to all components.
   - Develop an individual component init/update function.
-  - Create a script that automatically changes all components comment version based on deno.json.
-  - Create a pipeline rule that verifies if all component versions are up to date.
+  - Create a script that automatically changes all components comment version
+    based on deno.json.
+  - Create a pipeline rule that verifies if all component versions are up to
+    date.
 - Creating testing routes that can be initialized in a special testing project.
 - Update tailwind to v4 and update the plugin colors.
 - Initialize standard SEO files (favicon, etc.).
 - Reimplement icons into the package.
-- Export a "palette" module in mod.ts where all colors of the palette can be accessed in TS.
+- Export a "palette" module in mod.ts where all colors of the palette can be
+  accessed in TS.
 - Future components:
   - Input.ContentEditable (Atom)
   - Key (Organism)
@@ -31,6 +34,12 @@
   - Modal (Atom & Molecules)
 
 ## Version History
+
+### v1.0.64
+
+- Moved the static fonts to their own directory.
+- Added documentation to the molecules adn particles module.
+- Updated the README.md file.
 
 ### v1.0.63
 
@@ -87,7 +96,8 @@
 
 ### v1.0.52
 
-- Moved atoms and particles to their own file while maintaining the module exporting for documentation.
+- Moved atoms and particles to their own file while maintaining the module
+  exporting for documentation.
 
 ### v1.0.51
 
