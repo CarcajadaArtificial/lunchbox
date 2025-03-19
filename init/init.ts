@@ -4,10 +4,11 @@
  * @module init
  */
 import pkgJson from '../deno.json' with { type: 'json' };
+import initJson from './init.gen.json' with { type: 'json' };
 import * as c from '@std/fmt/colors';
 import { join } from '@std/path';
 import { pipe } from '@gordonb/pipe';
-import { collectFiles, initFiles } from './utils.ts';
+import { initFromUrl } from './utils.ts';
 
 /**
  * Call this function through the JSR registry to initialize a Lunchbox project.
@@ -42,7 +43,7 @@ import { collectFiles, initFiles } from './utils.ts';
  * @todo [DEV] Add package version to the top comment of every ui component. This can be done after
  *       file generation to avoid having to stage the changes of actually adding the comments.
  */
-export async function init(): Promise<void> {
+async function init(): Promise<void> {
   console.log();
   pipe(
     ` 🍱 @lunchbox/ui@${pkgJson.version} `,
@@ -82,23 +83,18 @@ export async function init(): Promise<void> {
     return;
   }
 
-  await initFiles(
-    projectName,
-    2,
-    await collectFiles('init/base/', ['deno.lock']),
-  );
-  await initFiles(
-    join(projectName, 'components/lunchbox'),
-    1,
-    await collectFiles('ui/', ['icons']),
-  );
-  await initFiles(
-    join(projectName, 'static'),
-    1,
-    await collectFiles('static/', []),
-  );
+  await Promise.all([
+    ...initJson.base.map((url) =>
+      initFromUrl(url, 'main/init/base/', projectName)
+    ),
+    ...initJson.ui.map((url) =>
+      initFromUrl(url, 'main/ui/', join(projectName, 'components/lunchbox'))
+    ),
+    ...initJson.static.map((url) =>
+      initFromUrl(url, 'main/static/', join(projectName, 'static'))
+    ),
+  ]);
 
-  // Write success message
   console.log();
   console.log(
     'Thank you and enjoy!',

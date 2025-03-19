@@ -38,6 +38,10 @@
 
 ## Version History
 
+### v2.0.4
+
+- Added a project initialization process fix.
+
 ### v2.0.3
 
 - Added a project initialization process fix.

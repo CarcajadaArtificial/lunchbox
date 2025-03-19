@@ -1,4 +1,5 @@
 import { dirname, join } from '@std/path';
+import { ensureDir } from 'https://deno.land/std/fs/mod.ts';
 
 export interface FileEntry {
   path: string;
@@ -55,4 +56,43 @@ export async function removeFiles(...files: string[]) {
       }
     }
   }
+}
+
+export async function createFetchSources(
+  url: string,
+  dir: string,
+  except: string = '',
+) {
+  const fetchTargets: string[] = [];
+  for await (const entry of Deno.readDir(dir)) {
+    if (entry.name === except) continue;
+    else if (entry.isDirectory) {
+      fetchTargets.push(
+        ...await createFetchSources(
+          url + entry.name + '/',
+          dir + '/' + entry.name,
+          except,
+        ),
+      );
+    } else {
+      fetchTargets.push(url + entry.name);
+    }
+  }
+  return fetchTargets;
+}
+
+export async function initFromUrl(
+  url: string,
+  separator: string,
+  targetDir: string,
+) {
+  const relativePath = url.split(separator)[1];
+  if (!relativePath) return;
+
+  const fullPath = join(targetDir, relativePath);
+  await ensureDir(dirname(fullPath));
+  const fileResponse = await fetch(url);
+  const fileContent = await fileResponse.text();
+
+  await Deno.writeTextFile(fullPath, fileContent);
 }

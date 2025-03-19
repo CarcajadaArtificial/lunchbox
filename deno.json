@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
@@ -11,7 +11,8 @@
     "./molecules": "./src/molecules.ts"
   },
   "tasks": {
-    "init:clean": "deno run -A tasks.ts init-clean"
+    "init:clean": "deno run -A tasks.ts init-clean",
+    "init:map": "deno run -A tasks.ts init-map"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

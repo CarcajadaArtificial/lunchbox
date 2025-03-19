@@ -3,7 +3,7 @@
  *
  * @module tasks
  */
-import { removeFiles } from './init/utils.ts';
+import { createFetchSources, removeFiles } from './init/utils.ts';
 
 /**
  * This is the CLI entry point for `deno task` commands. It is built to be an anonymous immediately
@@ -23,6 +23,29 @@ import { removeFiles } from './init/utils.ts';
         '/init/base/routes/api',
         '/init/base/components',
         '/init/base/islands',
+      );
+      break;
+    }
+
+    case 'init-map': {
+      await Deno.writeTextFile(
+        'init/init.gen.json',
+        JSON.stringify({
+          base: await createFetchSources(
+            'https://github.com/CarcajadaArtificial/lunchbox/blob/main/init/base/',
+            'init/base/',
+            'deno.lock',
+          ),
+          ui: await createFetchSources(
+            'https://github.com/CarcajadaArtificial/lunchbox/blob/main/ui/',
+            'ui/',
+            'icons',
+          ),
+          static: await createFetchSources(
+            'https://github.com/CarcajadaArtificial/lunchbox/blob/main/static/',
+            'static/',
+          ),
+        }),
       );
       break;
     }
