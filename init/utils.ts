@@ -1,5 +1,5 @@
 import { dirname, join } from '@std/path';
-import { ensureDir } from 'https://deno.land/std/fs/mod.ts';
+import { ensureDir } from '@std/fs';
 
 export interface FileEntry {
   path: string;

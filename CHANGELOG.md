@@ -38,6 +38,10 @@
 
 ## Version History
 
+### v2.0.5
+
+- Fixed the `@std/fs` package import.
+
 ### v2.0.4
 
 - Added a project initialization process fix.
