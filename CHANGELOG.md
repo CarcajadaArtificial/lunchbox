@@ -38,14 +38,23 @@
 
 ## Version History
 
+### v2.0.8
+
+- `www/`
+  - Added Chrome Lighthouse metric fixes.
+  - Added tabindex to atoms and particles.
+
 ### v2.0.7
 
-- Refactored the index page of the exposition site.
 - Added a deploy workflow.
+
+- `www/`
+  - Refactored the index page.
 
 ### v2.0.6
 
-- Added particle and atom visualization in the exposition site.
+- `www/`
+  - Added an particle and atom visualization.
 
 ### v2.0.5
 

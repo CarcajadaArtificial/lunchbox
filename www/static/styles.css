@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "Fira Code";
   font-weight: 400;
   font-style: normal;
@@ -66,4 +66,4 @@
   font-weight: 700;
   font-display: swap;
   src: url("./fonts/LibreCaslonText/LibreCaslonText-Bold.woff2") format("woff2");
-}
+} */

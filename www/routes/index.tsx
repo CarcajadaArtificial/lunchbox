@@ -3,6 +3,7 @@ import { Footer, Header, Main } from "lunchbox/atoms/Page.tsx";
 import { H0, H1, H2 } from "lunchbox/atoms/Heading.tsx";
 import Link from "lunchbox/atoms/Link.tsx";
 import Markdown from "lunchbox/molecules/Markdown.tsx";
+import focus from "lunchbox/particles/focus.ts";
 import pkgJson from "../../deno.json" with { type: "json" };
 import { define } from "../utils.ts";
 import {
@@ -18,13 +19,15 @@ const Particle = (props: { symbol: string; name: string; color: string }) => (
   <div class="particle-growth">
     <a
       class={cn(
-        "particle",
+        focus,
         props.color,
+        "particle",
         "pt-1/2 w-24 h-24 rounded-full",
         "flex flex-col items-center",
         "cursor-pointer",
       )}
       href={`https://jsr.io/@lunchbox/ui/doc/particles/~/${props.name}`}
+      tabIndex={0}
     >
       <div class="text-4xl mt-1/8">{props.symbol}</div>
       <div>{props.name}</div>
@@ -42,12 +45,14 @@ function PeriodicTable() {
             <a
               href={`https://jsr.io/@lunchbox/ui/doc/atoms/~/${atom.name}`}
               class={cn(
+                focus,
                 atomGroupColors[atom.group],
                 "aspect-square rounded",
                 "cursor-pointer",
                 "flex flex-col justify-center items-center",
                 "atom",
               )}
+              tabIndex={0}
             >
               <span>{atom.symbol}</span>
               {atom.name.split(".").map((name) => (
