@@ -1,5 +1,8 @@
 # 🍱 Lunchbox
 
+[![JSR](https://jsr.io/badges/@lunchbox/ui)](https://jsr.io/@lunchbox/ui)
+[![JSR](https://jsr.io/badges/@lunchbox/ui/score)](https://jsr.io/@lunchbox/ui)
+
 `` Hello ( ´ ω ` )ノﾞ `` Welcome to 🍱 Lunchbox. So... you're into Deno 🦕 Fresh
 🍋? Damn, me too. I've found myself using nothing but Fresh for most of my web
 dev projects. But I'm not that much of a user of existing web component

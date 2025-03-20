@@ -4,7 +4,8 @@
     "dev": "deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
     "start": "deno run -A main.ts",
-    "update": "deno run -A -r jsr:@fresh/update ."
+    "update": "deno run -A -r jsr:@fresh/update .",
+    "gen-docs": "mkdir data; deno doc --json ../src/particles.ts ../src/atoms.ts ../src/molecules.ts > data/doc.json"
   },
   "imports": {
     "@": "./",
@@ -15,6 +16,7 @@
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
+    "@carcajada/periodt": "jsr:@carcajada/periodt@^0.0.14",
     "lunchbox/particles/": "./components/lunchbox/particles/",
     "lunchbox/atoms/": "./components/lunchbox/atoms/",
     "lunchbox/molecules/": "./components/lunchbox/molecules/",

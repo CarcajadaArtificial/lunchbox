@@ -38,6 +38,10 @@
 
 ## Version History
 
+### v2.0.6
+
+- Added particle and atom visualization in the exposition site.
+
 ### v2.0.5
 
 - Fixed the `@std/fs` package import.

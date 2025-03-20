@@ -1,0 +1,27 @@
+.particle {
+  transition: transform 0.1s ease-out;
+}
+.particle:hover,
+.particle:focus {
+  transform: scale(1.2) translateY(-0.5em) rotate(3deg);
+}
+
+.atom {
+  transition: transform 0.2s ease-out;
+  backdrop-filter: blur(8px);
+}
+.atom:hover,
+.atom:focus {
+  transform: scale(2.5) translateY(-0.5em) rotate(3deg);
+  z-index: 1;
+}
+
+.atom-name {
+  display: none;
+  font-size: 0.4em;
+}
+
+.atom:focus > .atom-name,
+.atom:hover > .atom-name {
+  display: block;
+}
