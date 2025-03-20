@@ -16,7 +16,7 @@
     "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.7",
     "@deno/gfm": "jsr:@deno/gfm@^0.10.0",
     "@vyn/cn": "jsr:@vyn/cn@^0.1.2",
-    "@carcajada/periodt": "jsr:@carcajada/periodt@^0.0.14",
+    "@carcajada/periodt": "jsr:@carcajada/periodt@^0.0.15",
     "lunchbox/particles/": "./components/lunchbox/particles/",
     "lunchbox/atoms/": "./components/lunchbox/atoms/",
     "lunchbox/molecules/": "./components/lunchbox/molecules/",

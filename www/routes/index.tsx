@@ -1,113 +1,40 @@
 import { cn } from "@vyn/cn";
-import { periodt } from "@carcajada/periodt";
 import { Footer, Header, Main } from "lunchbox/atoms/Page.tsx";
 import { H0, H1, H2 } from "lunchbox/atoms/Heading.tsx";
 import Link from "lunchbox/atoms/Link.tsx";
-import clr from "lunchbox/particles/clr.ts";
 import Markdown from "lunchbox/molecules/Markdown.tsx";
 import pkgJson from "../../deno.json" with { type: "json" };
-import docJson from "../data/doc.json" with { type: "json" };
 import { define } from "../utils.ts";
+import {
+  atomDocs,
+  atomGroupColors,
+  moleculeDocs,
+  particleDocs,
+  particles,
+  periodicTable,
+} from "../data/atomic_system.ts";
 
-const particles = [
-  { symbol: "α", name: "area" },
-  { symbol: "β", name: "btn" },
-  { symbol: "γ", name: "clr" },
-  { symbol: "δ", name: "focus" },
-  { symbol: "ε", name: "input" },
-  { symbol: "ζ", name: "layout" },
-  { symbol: "ψ", name: "text" },
-];
-
-const atoms = [
-  { symbol: "As", name: "Aside.Sticky", group: "A" },
-  { symbol: "X", name: "KatexStyles", group: "X" },
-  { symbol: "K", name: "Kbd", group: "K" },
-  { symbol: "L", name: "Link", group: "L" },
-  { symbol: "Ns", name: "Nav.Sticky", group: "N" },
-  { symbol: "P", name: "Prose", group: "R" },
-  { symbol: "S", name: "Separator", group: "S" },
-
-  { symbol: "Cc", name: "Code.Content", group: "C" },
-  { symbol: "Ci", name: "Code.Inline", group: "C" },
-
-  { symbol: "Dt", name: "Details.Container", group: "D" },
-  { symbol: "Ds", name: "Details.Sumary", group: "D" },
-
-  { symbol: "Ul", name: "List.UL", group: "T" },
-  { symbol: "Ol", name: "List.OL", group: "T" },
-
-  { symbol: "B", name: "Body", group: "P" },
-  { symbol: "M", name: "Main", group: "P" },
-  { symbol: "H", name: "Header", group: "P" },
-  { symbol: "F", name: "Footer", group: "P" },
-
-  { symbol: "Bb", name: "Button.Brand", group: "B" },
-  { symbol: "Bp", name: "Button.Panel", group: "B" },
-  { symbol: "Bg", name: "Button.Page", group: "B" },
-  { symbol: "Be", name: "Button.Error", group: "B" },
-
-  { symbol: "H0", name: "H0", group: "H" },
-  { symbol: "H1", name: "H1", group: "H" },
-  { symbol: "H2", name: "H2", group: "H" },
-  { symbol: "H3", name: "H3", group: "H" },
-
-  { symbol: "Ib", name: "Input.Submit", group: "I" },
-  { symbol: "Ic", name: "Input.Container", group: "I" },
-  { symbol: "Ie", name: "Input.Error", group: "I" },
-  { symbol: "If", name: "Input.Fieldset", group: "I" },
-  { symbol: "Ig", name: "Input.Legend", group: "I" },
-  { symbol: "Ii", name: "Input.Field", group: "I" },
-  { symbol: "Ik", name: "Input.Check", group: "I" },
-  { symbol: "Il", name: "Input.Label", group: "I" },
-  { symbol: "Ir", name: "Input.Radio", group: "I" },
-  { symbol: "Is", name: "Input.Select", group: "I" },
-  { symbol: "It", name: "Input.Textarea", group: "I" },
-  { symbol: "Ix", name: "Input.Text", group: "I" },
-];
-
-const atomGroupColors: Record<string, string> = {
-  "A": clr.panel.bg,
-  "X": clr.panel.bg,
-  "K": clr.panel.bg,
-  "L": clr.panel.bg,
-  "N": clr.panel.bg,
-  "R": clr.panel.bg,
-  "S": clr.panel.bg,
-  "C": clr.brand.bg_30,
-  "D": clr.neutral.bg_10,
-  "T": clr.panel.bg_35,
-  "P": clr.error.bg_50,
-  "B": clr.brand.bg_60,
-  "H": clr.neutral.bg_25,
-  "I": clr.panel.bg_50,
-};
-
-const periodicTable = periodt<{ symbol: string; name: string; group: string }>(
-  atoms,
-  (atom) => atom.group,
-  () => ({ symbol: "", name: "", group: "" }),
-);
-
-const Particle = (props: { symbol: string; name: string }) => (
-  <a
-    class={cn(
-      "particle",
-      clr.panel.bg,
-      "pt-1/2 w-24 h-24 rounded-full",
-      "flex flex-col items-center",
-      "cursor-pointer",
-    )}
-    href={`https://jsr.io/@lunchbox/ui/doc/particles/~/${props.name}`}
-  >
-    <div class="text-4xl mt-1/8">{props.symbol}</div>
-    <div>{props.name}</div>
-  </a>
+const Particle = (props: { symbol: string; name: string; color: string }) => (
+  <div class="particle-growth">
+    <a
+      class={cn(
+        "particle",
+        props.color,
+        "pt-1/2 w-24 h-24 rounded-full",
+        "flex flex-col items-center",
+        "cursor-pointer",
+      )}
+      href={`https://jsr.io/@lunchbox/ui/doc/particles/~/${props.name}`}
+    >
+      <div class="text-4xl mt-1/8">{props.symbol}</div>
+      <div>{props.name}</div>
+    </a>
+  </div>
 );
 
 function PeriodicTable() {
   return (
-    <div class="grid grid-cols-12 gap-1/8">
+    <div class="grid grid-cols-12 gap-1/8 mt-2/1">
       {periodicTable.map((row) => (
         row.map((atom) =>
           // deno-lint-ignore jsx-key
@@ -135,17 +62,6 @@ function PeriodicTable() {
 }
 
 export default define.page(function Home() {
-  const moduleDocs = docJson.nodes.filter((node) => node.kind === "moduleDoc");
-  const particleDocs = moduleDocs.find((doc) =>
-    doc.location.filename.includes("particles.ts")
-  )?.jsDoc?.doc;
-  const atomDocs = moduleDocs.find((doc) =>
-    doc.location.filename.includes("atoms.ts")
-  )?.jsDoc?.doc;
-  const moleculeDocs = moduleDocs.find((doc) =>
-    doc.location.filename.includes("molecules.ts")
-  )?.jsDoc?.doc;
-
   return (
     <>
       <Header>

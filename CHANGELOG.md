@@ -38,6 +38,11 @@
 
 ## Version History
 
+### v2.0.7
+
+- Refactored the index page of the exposition site.
+- Added a deploy workflow.
+
 ### v2.0.6
 
 - Added particle and atom visualization in the exposition site.
