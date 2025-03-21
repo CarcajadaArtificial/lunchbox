@@ -38,6 +38,11 @@
 
 ## Version History
 
+### v2.0.18
+
+- Reset commits to v2.0.8.
+- Removed the deploy action.
+
 ### v2.0.8
 
 - `www/`
