@@ -25,7 +25,7 @@ jobs:
 
       - name: Installation step
         working-directory: ./www
-        run: "deno run -A jsr:@lunchbox/ui@2.0.18/upgrade"
+        run: "deno run -A jsr:@lunchbox/ui/upgrade"
 
       - name: Build step
         working-directory: ./www
