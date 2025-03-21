@@ -38,6 +38,10 @@
 
 ## Version History
 
+### v2.0.19
+
+- added the deploy action again.
+
 ### v2.0.18
 
 - Reset commits to v2.0.8.
