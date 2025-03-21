@@ -5,6 +5,7 @@
     "build": "deno run -A dev.ts build",
     "start": "deno run -A main.ts",
     "update": "deno run -A -r jsr:@fresh/update .",
+    "update:lunchbox": "deno run -A jsr:@lunchbox/ui/upgrade",
     "gen-docs": "mkdir data; deno doc --json ../src/particles.ts ../src/atoms.ts ../src/molecules.ts > data/doc.json"
   },
   "imports": {
@@ -21,12 +22,6 @@
     "lunchbox/atoms/": "./components/lunchbox/atoms/",
     "lunchbox/molecules/": "./components/lunchbox/molecules/",
     "@lunchbox/ui": "jsr:@lunchbox/ui"
-  },
-  "compilerOptions": {
-    "lib": ["dom", "dom.asynciterable", "dom.iterable", "deno.ns"],
-    "jsx": "precompile",
-    "jsxImportSource": "preact",
-    "jsxPrecompileSkipElements": ["a", "img", "source", "body", "html", "head"]
   },
   "lint": {
     "rules": {
