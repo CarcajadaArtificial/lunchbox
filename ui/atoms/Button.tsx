@@ -3,6 +3,7 @@ import { cn } from '@vyn/cn';
 import type { iAtom } from '@lunchbox/ui';
 import btn from '../particles/btn.ts';
 import clr from '../particles/clr.ts';
+import focus from '../particles/focus.ts';
 
 /**
  * Primary call-to-action button using brand colors. Use for main form submissions, key conversion points, and primary user flows where you want to direct user attention.
