@@ -38,6 +38,11 @@
 
 ## Version History
 
+### v2.0.26
+
+- Removed the GitHub actions entirely. The www folder will probably
+  go to another repository.
+
 ### v2.0.25
 
 - Commented out the main commands in the `deploy.yml` and `publish.yml`. In

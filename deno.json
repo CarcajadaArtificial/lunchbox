@@ -1,7 +1,7 @@
 {
   "workspace": ["./www"],
   "name": "@lunchbox/ui",
-  "version": "2.0.24",
+  "version": "2.0.26",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
