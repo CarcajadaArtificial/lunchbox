@@ -38,6 +38,11 @@
 
 ## Version History
 
+### v2.0.24
+
+- Removed `lunchbox` from the gitignore files.
+- Updated the deploy action.
+
 ### v2.0.19
 
 - added the deploy action again.
