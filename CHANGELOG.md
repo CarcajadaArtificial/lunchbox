@@ -38,6 +38,12 @@
 
 ## Version History
 
+### v2.0.25
+
+- Commented out the main commands in the `deploy.yml` and `publish.yml`. In
+  favor of manually doing both with the `deno publish` command and deno
+  deploy's bot after manual trigger.
+
 ### v2.0.24
 
 - Removed `lunchbox` from the gitignore files.

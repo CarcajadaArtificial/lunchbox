@@ -27,9 +27,9 @@ jobs:
         working-directory: ./www
         run: "deno task build"
 
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "lunchbox"
-          entrypoint: "./www/main.ts"
-          root: "."
+      # - name: Upload to Deno Deploy
+      #   uses: denoland/deployctl@v1
+      #   with:
+      #     project: "lunchbox"
+      #     entrypoint: "./www/main.ts"
+      #     root: "."
