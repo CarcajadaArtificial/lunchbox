@@ -1,42 +1,15 @@
-import { render, Renderer } from '@deno/gfm';
-import { DOMParser, Element } from 'jsr:@b-fuze/deno-dom';
-import { z } from 'zod/v4';
+import { render, type RenderOptions } from '@deno/gfm';
+import { DOMParser, Element } from '@b-fuze/deno-dom';
 
-export const MarkdownSchema = z.object({
-  focusable: z.boolean(),
-  content: z
-    .string(),
-  renderOptions: z
-    .object({
-      baseUrl: z
-        .string().optional(),
-      mediaBaseUrl: z
-        .string().optional(),
-      inline: z
-        .boolean().optional(),
-      allowIframes: z
-        .boolean().optional(),
-      allowMath: z
-        .boolean().optional(),
-      disableHtmlSanitization: z
-        .boolean().optional(),
-      renderer: z
-        .instanceof(Renderer).optional(),
-      allowedClasses: z
-        .object().optional(),
-      allowedTags: z
-        .array(z.string()).optional(),
-      allowedAttributes: z
-        .record(z.string(), z.array(z.string()))
-        .optional(),
-      breaks: z
-        .boolean().optional(),
-    }).optional(),
-});
+interface MarkdownProps {
+  content: string;
+  focusable?: boolean;
+  renderOptions: RenderOptions;
+}
 
-export type MarkdownProps = z.infer<typeof MarkdownSchema>;
-
-export default function (props: MarkdownProps) {
+export default function (
+  props: MarkdownProps,
+): { dangerouslySetInnerHTML: { __html: string } } {
   let content = render(props.content, props.renderOptions);
 
   if (props.focusable) {

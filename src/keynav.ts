@@ -80,7 +80,7 @@ export default function ({
   padding = 0,
 }: {
   padding?: number;
-} = {}) {
+} = {}): null {
   useEffect(() => {
     function handleKeyDown(this: HTMLElement, e: KeyboardEvent) {
       const key = e.key;

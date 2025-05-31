@@ -2,6 +2,10 @@
 
 ## Version History
 
+### 3.0.0-alpha.2
+
+- Added a fixes for publishing.
+
 ### 3.0.0-alpha.1
 
 - Removed everything in favor of a DasyUI base.
