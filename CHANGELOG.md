@@ -4,6 +4,10 @@
 
 ### 3.0.0-alpha.2
 
+- Replaced the `focusable` property for a `transfrom` function in the `<Markdown/>` component.
+
+### 3.0.0-alpha.2
+
 - Added a fixes for publishing.
 
 ### 3.0.0-alpha.1

@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts"
@@ -15,7 +15,6 @@
   },
   "fmt": { "exclude": [".github/dep", "*.md"], "singleQuote": true },
   "imports": {
-    "@b-fuze/deno-dom": "jsr:@b-fuze/deno-dom@^0.1.49",
     "@deno/gfm": "jsr:@deno/gfm@^0.11.0",
     "preact": "npm:preact@^10.26.6",
     "zod": "npm:zod@^3.25.36"
