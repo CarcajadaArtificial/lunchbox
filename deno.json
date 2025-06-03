@@ -23,7 +23,7 @@
     "include": [
       "mod.ts",
       "src/*.ts",
-      "static/styles.css"
+      "mod.css"
     ]
   },
   "nodeModulesDir": "auto",

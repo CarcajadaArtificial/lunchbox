@@ -6,6 +6,10 @@
 
 ## Version History
 
+### 3.0.0-alpha.5
+
+- Added another option for publishing `mod.css`.
+
 ### 3.0.0-alpha.4
 
 - Added the `styles.css` module to the publishing configuration.
