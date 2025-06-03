@@ -1,10 +1,19 @@
 # Changelog
 
+## Backglog
+
+- IntersectionObserver island.
+
 ## Version History
 
-### 3.0.0-alpha.2
+### 3.0.0-alpha.4
 
-- Replaced the `focusable` property for a `transfrom` function in the `<Markdown/>` component.
+- Added the `styles.css` module to the publishing configuration.
+
+### 3.0.0-alpha.3
+
+- Replaced the `focusable` property for a `transfrom` function in the
+  `<Markdown/>` component.
 
 ### 3.0.0-alpha.2
 
