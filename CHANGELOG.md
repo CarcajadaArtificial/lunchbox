@@ -6,6 +6,10 @@
 
 ## Version History
 
+### 3.0.0-alpha.6
+
+- Added a new version fix.
+
 ### 3.0.0-alpha.5
 
 - Added another option for publishing `mod.css`.
