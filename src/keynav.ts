@@ -96,6 +96,8 @@ export default function ({
         return;
       }
 
+      if (key === 'Esc') this.blur();
+
       if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
         return;
       }
@@ -110,9 +112,8 @@ export default function ({
         this.removeEventListener('keydown', handleKeyDown);
         candidate.focus();
       } else {
-        // No candidate found: ensure only one arrow shake class
         const dir = key.replace('Arrow', '').toLowerCase();
-        const shakeClass = `shake_${dir}`; // shake_up, shake_down, shake_left, shake_right
+        const shakeClass = `shake_${dir}`;
         const allShakeClasses = [
           'shake_up',
           'shake_down',
@@ -121,18 +122,14 @@ export default function ({
           'shake',
         ];
 
-        // Remove any existing shake classes except the one to add
         allShakeClasses.forEach((cls) => {
           if (cls !== shakeClass && this.classList.contains(cls)) {
             this.classList.remove(cls);
           }
         });
 
-        // If the same class already exists, remove it to replay animation
         if (this.classList.contains(shakeClass)) {
           this.classList.remove(shakeClass);
-          // Force reflow
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
           this.offsetWidth;
         }
 
@@ -157,7 +154,6 @@ export default function ({
         target.getAttribute('tabindex') === '0'
       ) {
         target.removeEventListener('keydown', handleKeyDown);
-        // Remove any shake classes on blur
         target.classList.remove(
           'shake_up',
           'shake_down',

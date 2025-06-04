@@ -1,6 +1,6 @@
 {
   "name": "@lunchbox/ui",
-  "version": "3.0.0-alpha.6",
+  "version": "3.0.0",
   "license": "MIT",
   "exports": {
     ".": "./mod.ts"
@@ -18,13 +18,6 @@
     "@deno/gfm": "jsr:@deno/gfm@^0.11.0",
     "preact": "npm:preact@^10.26.6",
     "zod": "npm:zod@^3.25.36"
-  },
-  "publish": {
-    "include": [
-      "mod.ts",
-      "src/*.ts",
-      "mod.css"
-    ]
   },
   "nodeModulesDir": "auto",
   "lock": false
