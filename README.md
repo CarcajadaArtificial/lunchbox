@@ -327,7 +327,13 @@ server components, and interactive islands.
   ```tsx
   // ./islands/Keynav.tsx
 
-  export { keynav as default } from "@lunchbox/ui";
+  import { keynav } from "@lunchbox/ui";
+
+  export default function () {
+    useEffect(keynav, []);
+
+    return null;
+  }
   ```
 
   ```tsx
@@ -349,9 +355,3 @@ server components, and interactive islands.
     );
   }
   ```
-
-### Coming soon
-
-- Island for the IntersectionObserver api.
-- Include a `daisyui-react` components wrapper.
-- Layouts inside of layouts.

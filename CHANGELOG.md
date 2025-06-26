@@ -1,6 +1,26 @@
 # Changelog
 
+## Backlog
+
+### New Features
+
+- An island for using the IntersectionObserver API.
+- Extend the `.layout` class for layouts inside layouts.
+- Keynav that keeps the scroll position consitent.
+- KeynavTutorial island that displays a `<kbd/>` element, a label and listens
+  for the first key press of that keys and visually marks the keys as completed.
+
+### JSR
+
+- Module documentation.
+- GitHub actions for publish.
+
 ## Version History
+
+### 3.0.1
+
+- Added an update to the `keynav` utility function where it outputs the effect
+  function and not the whole island.
 
 ### 3.0.0
 
